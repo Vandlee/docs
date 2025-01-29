@@ -1,0 +1,8 @@
+{
+  "name": "Yushii",
+  "short_name": "Yushii",
+  "display": "minimal-ui",
+  "start_url": "/",
+  "theme_color": "#007FFF",
+  "background_color": "#ffffff"
+}

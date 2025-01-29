@@ -1,0 +1,29 @@
+{
+  "name": "@yushii/internal-babel-plugin-minify-errors",
+  "version": "1.0.0",
+  "author": "Yushii",
+  "description": "This is an internal package not meant for general use.",
+  "license": "MIT",
+  "scripts": {
+    "test": "cd ../../ && cross-env NODE_ENV=test mocha 'packages-internal/babel-plugin-minify-errors/**/*.test.?(c|m)[jt]s?(x)'"
+  },
+  "dependencies": {
+    "@babel/helper-module-imports": "^7.25.9"
+  },
+  "devDependencies": {
+    "@types/babel__helper-module-imports": "^7.18.3",
+    "babel-plugin-tester": "^11.0.4",
+    "chai": "^4.5.0"
+  },
+  "sideEffects": false,
+  "type": "commonjs",
+  "exports": {
+    ".": "./index.js"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

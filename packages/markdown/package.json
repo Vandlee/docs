@@ -1,0 +1,35 @@
+{
+  "name": "@yushii/internal-markdown",
+  "version": "0.1.0",
+  "author": "Yushii",
+  "description": "",
+  "main": "./index.mjs",
+  "browser": "./index.mjs",
+  "types": "./index.d.mts",
+  "exports": {
+    ".": "./index.mjs",
+    "./loader": "./loader.mjs",
+    "./prism": {
+      "types": "./prism.d.mts",
+      "require": "./prism.cjs",
+      "import": "./prism.mjs"
+    }
+  },
+  "scripts": {
+    "release:publish": "pnpm publish --tag latest",
+    "release:publish:dry-run": "pnpm publish --tag latest --registry=\"http://localhost:4873/\""
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.26.0",
+    "lodash": "^4.17.21",
+    "marked": "^15.0.4",
+    "prismjs": "^1.29.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.20",
+    "chai": "^4.5.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

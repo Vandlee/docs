@@ -1,0 +1,1 @@
+export default function requirePropFactory(componentNameInError: any, Component: any): (() => null) | ((requiredProp: any) => (props: any, propName: any, componentName: any, location: any, propFullName: any, ...args: any[]) => any);

@@ -1,0 +1,438 @@
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import copy from 'clipboard-copy';
+import { useRouter } from 'next/router';
+import { debounce } from '@yushii/ui/utils';
+import { alpha, styled } from '@yushii/ui/styles';
+import { Tabs } from '@yushii/base/Tabs';
+import { TabPanel } from '@yushii/base/TabPanel';
+import { unstable_useId as useId } from '@yushii/utils';
+import IconButton from '@yushii/ui/IconButton';
+import Box from '@yushii/ui/Box';
+import Collapse from '@yushii/ui/Collapse';
+import NoSsr from '@yushii/ui/NoSsr';
+import { HighlightedCode } from '@yushii/docs/HighlightedCode';
+import { CodeTab, CodeTabList } from '@yushii/docs/HighlightedCodeWithTabs';
+
+import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
+import { useCodeVariant } from 'docs/src/modules/utils/codeVariant';
+import { useCodeStyling } from 'docs/src/modules/utils/codeStylingSolution';
+import { CODE_VARIANTS, CODE_STYLING } from 'docs/src/modules/constants';
+import { useUserLanguage, useTranslate } from '@yushii/docs/i18n';
+
+function trimLeadingSpaces(input = '') {
+  return input.replace(/^\s+/gm, '');
+}
+
+const DemoToolbar = React.lazy(() => import('./DemoToolbar'));
+
+function DemoToolbarFallback() {
+  const t = useTranslate();
+
+  return <Box SX={{ height: 42 }} aria-busy aria-label={t('demoToolbarLabel')} role="toolbar" />;
+}
+
+function getDemoName(location) {
+  return location.endsWith('.js') || location.endsWith('.tsx')
+    ? location.replace(/(.+?)(\w+)\.\w+$$/, '$2')
+    : // the demos with multiple styling solution point to directory
+      location.split('/').pop();
+}
+
+function useDemoData(codeVariant, demo, githubLocation, codeStyling) {
+  const userLanguage = useUserLanguage();
+  const router = useRouter();
+  const { canonicalAs } = pathnameToLanguage(router.asPath);
+
+  return React.useMemo(() => {
+    let productId;
+    let name = 'UI';
+
+    let codeOptions = {};
+    if (codeStyling === CODE_STYLING.SYSTEM) {
+      if (codeVariant === CODE_VARIANTS.TS && demo.rawTS) {
+        codeOptions = {
+          codeVariant: CODE_VARIANTS.TS,
+          githubLocation: githubLocation.replace(/\.js$/, '.tsx'),
+          raw: demo.rawTS,
+          module: demo.moduleTS,
+          Component: demo.tsx ?? null,
+          sourceLanguage: 'tsx',
+        };
+        if (demo.relativeModules) {
+          codeOptions.relativeModules = demo.relativeModules[CODE_VARIANTS.TS];
+        }
+      } else {
+        codeOptions = {
+          codeVariant: CODE_VARIANTS.JS,
+          githubLocation,
+          raw: demo.raw,
+          module: demo.module,
+          Component: demo.js,
+          sourceLanguage: 'jsx',
+        };
+        if (demo.relativeModules) {
+          codeOptions.relativeModules = demo.relativeModules[CODE_VARIANTS.JS];
+        }
+      }
+    } else if (codeStyling === CODE_STYLING.TAILWIND) {
+      if (codeVariant === CODE_VARIANTS.TS && demo.rawTailwindTS) {
+        codeOptions = {
+          codeVariant: CODE_VARIANTS.TS,
+          githubLocation: githubLocation.replace(/\/system\/index\.js$/, '/tailwind/index.tsx'),
+          raw: demo.rawTailwindTS,
+          module: demo.moduleTS,
+          Component: demo.tsxTailwind,
+          sourceLanguage: 'tsx',
+        };
+      } else {
+        codeOptions = {
+          codeVariant: CODE_VARIANTS.JS,
+          githubLocation: githubLocation.replace(/\/system\/index\.js$/, '/tailwind/index.js'),
+          raw: demo.rawTailwind ?? demo.raw,
+          module: demo.module,
+          Component: demo.jsTailwind ?? demo.js,
+          sourceLanguage: 'jsx',
+        };
+      }
+    } else if (codeStyling === CODE_STYLING.CSS) {
+      if (codeVariant === CODE_VARIANTS.TS && demo.rawCSSTS) {
+        codeOptions = {
+          codeVariant: CODE_VARIANTS.TS,
+          githubLocation: githubLocation.replace(/\/system\/index\.js$/, '/css/index.tsx'),
+          raw: demo.rawCSSTS,
+          module: demo.moduleTS,
+          Component: demo.tsxCSS,
+          sourceLanguage: 'tsx',
+        };
+      } else {
+        codeOptions = {
+          codeVariant: CODE_VARIANTS.JS,
+          githubLocation: githubLocation.replace(/\/system\/index\.js$/, '/css/index.js'),
+          raw: demo.rawCSS ?? demo.raw,
+          module: demo.module,
+          Component: demo.jsCSS ?? demo.js,
+          sourceLanguage: 'jsx',
+        };
+      }
+    }
+
+    let jsxPreview = demo.jsxPreview;
+    if (codeStyling === CODE_STYLING.TAILWIND && demo.tailwindJsxPreview) {
+      jsxPreview = demo.tailwindJsxPreview;
+    } else if (codeStyling === CODE_STYLING.CSS && demo.cssJsxPreview) {
+      jsxPreview = demo.cssJsxPreview;
+    }
+
+    return {
+      scope: demo.scope,
+      jsxPreview,
+      ...codeOptions,
+      title: `${getDemoName(githubLocation)} demo — ${name}`,
+      productId,
+      language: userLanguage,
+      codeStyling,
+    };
+  }, [canonicalAs, codeVariant, demo, githubLocation, userLanguage, codeStyling]);
+}
+
+function useDemoElement({ demoData, editorCode, setDebouncedError, liveDemoActive }) {
+  const debouncedSetError = React.useMemo(
+    () => debounce(setDebouncedError, 300),
+    [setDebouncedError],
+  );
+
+  React.useEffect(() => {
+    return () => {
+      debouncedSetError.clear();
+    };
+  }, [debouncedSetError]);
+
+  // Memoize to avoid rendering the demo more than it needs to be.
+  // For example, avoid a render when the demo is hovered.
+  const BundledComponent = React.useMemo(() => <demoData.Component />, [demoData]);
+  const LiveComponent = React.useMemo(
+    () => (
+      <ReactRunner
+        scope={demoData.scope}
+        onError={debouncedSetError}
+        code={
+          editorCode.isPreview
+            ? trimLeadingSpaces(demoData.raw).replace(
+                trimLeadingSpaces(demoData.jsxPreview),
+                editorCode.value,
+              )
+            : editorCode.value
+        }
+      />
+    ),
+    [demoData, debouncedSetError, editorCode.isPreview, editorCode.value],
+  );
+
+  // No need for a live environment if the code matches with the component rendered server-side.
+  return editorCode.value === editorCode.initialEditorCode && liveDemoActive === false
+    ? BundledComponent
+    : LiveComponent;
+}
+
+const Root = styled('div')(({ theme }) => ({
+  marginBottom: 24,
+}));
+
+const DemoRootUI = styled('div', {
+  shouldForwardProp: (prop) => prop !== 'hideToolbar' && prop !== 'bg',
+})(({ theme }) => ({
+  position: 'relative',
+}));
+
+const DemoCodeViewer = styled(HighlightedCode)(() => ({
+  '& pre': {
+    margin: 0,
+    marginTop: -1,
+    maxHeight: 'min(68vh, 1000px)',
+    maxWidth: 'initial',
+    borderRadius: 0,
+    borderBottomLeftRadius: 12,
+    borderBottomRightRadius: 12,
+  },
+}));
+
+const AnchorLink = styled('div')({
+  marginTop: -64, // height of toolbar
+  position: 'absolute',
+});
+
+/* const InitialFocus = styled(IconButton)(({ theme }) => ({
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: theme.spacing(4),
+        height: theme.spacing(4),
+        pointerEvents: 'none',
+    })); */
+
+const selectionOverride = (theme) => ({
+  cursor: 'pointer',
+  '&.base--selected': {
+    color: (theme.vars || theme).palette.primary[700],
+    backgroundColor: (theme.vars || theme).palette.primary[50],
+    borderColor: (theme.vars || theme).palette.primary[200],
+    ...theme.applyDarkStyles({
+      color: (theme.vars || theme).palette.primary[200],
+      backgroundColor: alpha(theme.palette.primary[900], 0.4),
+      borderColor: (theme.vars || theme).palette.primary[800],
+    }),
+  },
+});
+
+export default function Demo(props) {
+  const { demo, demoOptions, disableAd, githubLocation, mode } = props;
+
+  if (process.env.NODE_ENV !== 'production') {
+    if (demoOptions.hideToolbar === false) {
+      throw new Error(
+        [
+          '"hideToolbar": false is already the default.',
+          `Please remove the property in {{"demo": "${demoOptions.demo}", …}}.`,
+        ].join('\n'),
+      );
+    }
+    if (demoOptions.hideToolbar === true && demoOptions.defaultCodeOpen === true) {
+      throw new Error(
+        [
+          '"hideToolbar": true, "defaultCodeOpen": true combination is invalid.',
+          `Please remove one of the properties in {{"demo": "${demoOptions.demo}", …}}.`,
+        ].join('\n'),
+      );
+    }
+    if (demoOptions.hideToolbar === true && demoOptions.disableAd === true) {
+      throw new Error(
+        [
+          '"hideToolbar": true, "disableAd": true combination is invalid.',
+          `Please remove one of the properties in {{"demo": "${demoOptions.demo}", …}}.`,
+        ].join('\n'),
+      );
+    }
+  }
+
+  if (
+    (demoOptions.demo.endsWith('.ts') || demoOptions.demo.endsWith('.tsx')) &&
+    demoOptions.hideToolbar !== true
+  ) {
+    throw new Error(
+      [
+        `The following demos use TS directly: ${demoOptions.demo}.`,
+        '',
+        'Please run "pnpm docs:typescript:formatted" to generate a JS version and reference it:',
+        // This regex intentionally excludes the dot character in the Kleene star to prevent ReDoS
+        // See https://github.com/mui/material-ui/issues/44078
+        `{{"demo": "${demoOptions.demo.replace(/\.([^.]*)$/, '.js')}", …}}.`,
+        '',
+        "Otherwise, if it's not a code demo hide the toolbar:",
+        `{{"demo": "${demoOptions.demo}", "hideToolbar": true, …}}.`,
+      ].join('\n'),
+    );
+  }
+
+  const t = useTranslate();
+  const codeVariant = useCodeVariant();
+  const styleSolution = useCodeStyling();
+
+  const demoData = useDemoData(codeVariant, demo, githubLocation, styleSolution);
+
+  const demoName = getDemoName(demoData.githubLocation);
+  const demoSandboxedStyle = React.useMemo(
+    () => ({
+      maxWidth: demoOptions.maxWidth,
+      height: demoOptions.height,
+    }),
+    [demoOptions.height, demoOptions.maxWidth],
+  );
+
+  if (demoOptions.bg === null) {
+    demoOptions.bg = 'outlined';
+
+    if (demoOptions.iframe) {
+      demoOptions.bg = true;
+    }
+  }
+
+  const [codeOpen, setCodeOpen] = React.useState(demoOptions.defaultCodeOpen || false);
+  const showOnce = React.useRef(false);
+  if (codeOpen) {
+    showOnce.current = true;
+  }
+
+  React.useEffect(() => {
+    const navigatedDemoName = getDemoName(window.location.hash);
+    if (navigatedDemoName && demoName === navigatedDemoName) {
+      setCodeOpen(true);
+    }
+  }, [demoName]);
+
+  const showPreview =
+    !demoOptions.hideToolbar &&
+    demoOptions.defaultCodeOpen !== false &&
+    Boolean(demoData.jsxPreview);
+
+  const [demoKey, setDemoKey] = React.useReducer((key) => key + 1, 0);
+
+  const demoId = `demo${useId()}`;
+  const demoSourceId = `demoSource-${useId()}`;
+  const openDemoSource = codeOpen || showPreview;
+
+  const initialFocusRef = React.useRef(null);
+
+  const [showAd, setShowAd] = React.useState(false);
+  const adVisibility = showAd && !disableAd && !demoOptions.disableAd;
+
+  const DemoRoot = DemoRootUI;
+  const Wrapper = React.Fragment;
+
+  const isPreview = !codeOpen && showPreview;
+
+  const initialEditorCode = isPreview
+    ? demoData.jsxPreview
+    : // Prettier remove all the leading lines except for the last one, remove it as we don't
+      // need it in the live edit view.
+      demoData.raw.replace(/\n$/, '');
+  const [editorCode, setEditorCode] = React.useState({
+    value: initialEditorCode,
+    isPreview,
+    initialEditorCode,
+  });
+
+  const resetDemo = React.useMemo(
+    () => () => {
+      setEditorCode({
+        value: initialEditorCode,
+        isPreview,
+        initialEditorCode,
+      });
+      setDemoKey();
+    },
+    [setEditorCode, setDemoKey, initialEditorCode, isPreview],
+  );
+
+  React.useEffect(() => {
+    setEditorCode({
+      value: initialEditorCode,
+      isPreview,
+      initialEditorCode,
+    });
+  }, [initialEditorCode, isPreview]);
+
+  const [debouncedError, setDebouncedError] = React.useState(null);
+
+  const [liveDemoActive, setLiveDemoActive] = React.useState(false);
+
+  const demoElement = useDemoElement({
+    demoData,
+    editorCode,
+    setDebouncedError,
+    liveDemoActive,
+  });
+
+  const [activeTab, setActiveTab] = React.useState(0);
+  const handleTabChange = (event, newValue) => {
+    setActiveTab(newValue);
+  };
+  const ownerState = { mounted: true, contained: true };
+
+  const tabs = React.useMemo(() => {
+    if (!demoData.relativeModules) {
+      return [{ module: demoData.module, raw: demoData.raw }];
+    }
+    let demoModule = demoData.module;
+    if (codeVariant === CODE_VARIANTS.TS && demo.moduleTS) {
+      demoModule =
+        demo.moduleTS === demo.module ? demoData.module.replace(/\.js$/, '.tsx') : demo.moduleTS;
+    }
+
+    return [{ module: demoModule, raw: demoData.raw }, ...demoData.relativeModules];
+  }, [
+    codeVariant,
+    demo.moduleTS,
+    demo.module,
+    demoData.module,
+    demoData.raw,
+    demoData.relativeModules,
+  ]);
+
+  const [copiedContent, setCopiedContent] = React.useState(false);
+
+  const handleCopyClick = async () => {
+    try {
+      const activeTabData = tabs[activeTab];
+      await copy(activeTabData.raw);
+      setCopiedContent(true);
+      setTimeout(() => {
+        setCopiedContent(false);
+      }, 1000);
+    } catch (error) {
+      console.error('Code content not copied', error);
+    }
+  };
+
+  return (
+    <Root>
+      <AnchorLink id={demoName} />
+      <DemoRoot hideToolbar={demoOptions.hideToolbar} bg={demoOptions.bg} id={demoId}>
+        <Wrapper>
+        
+        </Wrapper>
+      </DemoRoot>
+    </Root>
+  );
+}
+
+Demo.propTypes = {
+  demo: PropTypes.object.isRequired,
+  /**
+   * The options provided with: {{"demo": "Name.js", …demoOptions}}
+   */
+  demoOptions: PropTypes.object.isRequired,
+  disableAd: PropTypes.bool.isRequired,
+  githubLocation: PropTypes.string.isRequired,
+  mode: PropTypes.string, // temporary, just to make Joy docs work.
+};

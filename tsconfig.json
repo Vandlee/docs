@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    // aligning with Node18 recommendation: https://www.npmjs.com/package/@tsconfig/node18
+    "target": "es2022",
+    "lib": ["es2020", "dom", "dom.iterable"],
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noEmit": true,
+    "experimentalDecorators": true,
+    "baseUrl": "./",
+    "allowSyntheticDefaultImports": true,
+    "noErrorTruncation": false,
+    "allowJs": true,
+    "paths": {
+      "@yushii/ui": ["./packages/yushii-ui/src"],
+      "@yushii/ui/*": ["./packages/yushii-ui/src/*"],
+      "@yushii/internal-markdown": ["./packages/markdown"],
+      "@yushii/internal-markdown/*": ["./packages/markdown/*"],
+      "@yushii/styled-engine": ["./packages/yushii-styled-engine/src"],
+      "@yushii/styled-engine/*": ["./packages/yushii-styled-engine/src/*"],
+      "@yushii/system": ["./packages/yushii-system/src"],
+      "@yushii/system/*": ["./packages/yushii-system/src/*"],
+      "@yushii/base": ["./packages/yushii-base/src"],
+      "@yushii/base/*": ["./packages/yushii-base/src/*"],
+      "@yushii/utils": ["./packages/yushii-utils/src"],
+      "@yushii/utils/*": ["./packages/yushii-utils/src/*"],
+      "@yushii/docs": ["./packages/yushii-docs/src"],
+      "@yushii/docs/*": ["./packages/yushii-docs/src/*"],
+      "@yushii/ui-nextjs": ["./packages/yushii-ui-nextjs/src"],
+      "@yushii/ui-nextjs/*": ["./packages/yushii-ui-nextjs/src/*"],
+      "@yushii/internal-docs-utils": ["./packages-internal/docs-utils/src"],
+      "@yushii/internal-scripts/typescript-to-proptypes": [
+        "./packages-internal/scripts/typescript-to-proptypes/src"
+      ],
+    },
+    // Otherwise we get react-native typings which conflict with dom.lib.
+    "types": ["node", "react", "mocha"]
+  },
+  "exclude": ["**/.*/", "**/build", "**/node_modules", "docs/export"]
+}
