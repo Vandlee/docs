@@ -4,7 +4,7 @@ title: Overview
 
 # Yushii UI - Overview
 
-<p class="description">Yushii UI is a library for react components, and It is open source what implements design from google, it use as a basis MUI.</p>
+<p class="description">Yushii UI is a library for react components, and It is open source what implements Google's Material Design, it use as a base MUI.</p>
 
 # Introdution 
 
