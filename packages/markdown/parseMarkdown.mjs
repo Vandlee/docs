@@ -183,9 +183,6 @@ function getContents(markdown) {
     .flatMap((text) => text.split(/^(<codeblock.*?<\/codeblock>)$/gmsu))
     .flatMap((text) => text.split(/^(<featureList.*?<\/featureList>)$/gmsu))
     .filter((content) => !emptyRegExp.test(content)); // Remove empty lines
-
-    console.log('🔍 Contenido procesado:', rep);
-  
     return rep;
 }
 
@@ -224,8 +221,6 @@ function getCodeblock(content) {
   const blocksData = blocks.filter(
     (block) => block.tab !== undefined && !emptyRegExp.test(block.code),
   );
-
-  console.log('✅ Bloques detectados:', blocksData);
 
   return {
     type: 'codeblock',
@@ -286,7 +281,8 @@ const noSEOadvantage = [
   'https://marmelab.com/',
   'https://framesxdesign.com/',
   'https://github.com/',
-  'https://mui.com/'
+  'https://mui.com/',
+  'https://nodejs.org/'
 ];
 
 /**

@@ -117,13 +117,16 @@ const ButtonRoot = styled(ButtonBase, {
       '&:hover': {
         textDecoration: 'none',
       },
-      '.YushiiButton-endIcon': {
+      '.YushiiButton-endIcon, .YushiiButton-startIcon': {
         transition: theme.transitions.create(
           ['transform'],
           {
             duration: theme.transitions.duration.short
           }
         )
+      },
+      '&:hover .YushiiButton-startIcon': {
+        transform: 'translateX(-3px)',
       },
       '&:hover .YushiiButton-endIcon': {
         transform: 'translateX(3px)',
