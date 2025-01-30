@@ -14,11 +14,15 @@ import NoSsr from '@yushii/ui/NoSsr';
 import { HighlightedCode } from '@yushii/docs/HighlightedCode';
 import { CodeTab, CodeTabList } from '@yushii/docs/HighlightedCodeWithTabs';
 
+import DemoSandbox from 'docs/src/modules/components/DemoSandbox';
+import ReactRunner from 'docs/src/modules/components/ReactRunner';
+
 import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
 import { useCodeVariant } from 'docs/src/modules/utils/codeVariant';
 import { useCodeStyling } from 'docs/src/modules/utils/codeStylingSolution';
 import { CODE_VARIANTS, CODE_STYLING } from 'docs/src/modules/constants';
 import { useUserLanguage, useTranslate } from '@yushii/docs/i18n';
+import { borderRadius } from '@yushii/system';
 
 function trimLeadingSpaces(input = '') {
   return input.replace(/^\s+/gm, '');
@@ -177,12 +181,129 @@ function useDemoElement({ demoData, editorCode, setDebouncedError, liveDemoActiv
 
 const Root = styled('div')(({ theme }) => ({
   marginBottom: 24,
+  marginLeft: theme.spacing(-2),
+  marginRight: theme.spacing(-2),
+  [theme.breakpoints.up('sm')]: {
+    marginLeft: 0,
+    marginRight: 0
+  }
 }));
 
 const DemoRootUI = styled('div', {
   shouldForwardProp: (prop) => prop !== 'hideToolbar' && prop !== 'bg',
 })(({ theme }) => ({
   position: 'relative',
+  margin: 'auto',
+  display: 'flex',
+  justifyContent: 'center',
+  variants: [
+    {
+      props: ({ hideToolbar }) => hideToolbar,
+      style: {
+        [theme.breakpoints.up('sm')]: {
+          borderRadius: 12,
+        },
+      },
+    },
+    {
+      props: ({ hideToolbar }) => !hideToolbar,
+      style: {
+        [theme.breakpoints.up('sm')]: {
+          borderRadius: '12px 12px 0 0',
+        },
+      },
+    },
+    {
+      props: {
+        bg: 'outlined',
+      },
+      style: {
+        [theme.breakpoints.up('sm')]: {
+          borderLeftWidth: 1,
+          borderRightWidth: 1,
+        },
+      },
+    },
+    {
+      props: {
+        bg: 'inline',
+      },
+      style: {
+        [theme.breakpoints.up('sm')]: {
+          padding: theme.spacing(0),
+        },
+      },
+    },
+    {
+      props: {
+        bg: 'gradient',
+      },
+      style: {
+        [theme.breakpoints.up('sm')]: {
+          padding: theme.spacing(12, 8),
+          borderLeftWidth: 1,
+          borderRightWidth: 1,
+        },
+      },
+    },
+    {
+      props: {
+        bg: 'outlined',
+      },
+      style: {
+        padding: theme.spacing(3),
+        backgroundColor: (theme.vars || theme).palette.background.paper,
+        border: `1px solid ${(theme.vars || theme).palette.divider}`,
+        borderLeftWidth: 0,
+        borderRightWidth: 0,
+        ...theme.applyDarkStyles({
+          backgroundColor: alpha(theme.palette.primaryDark[700], 0.1),
+        }),
+      },
+    },
+    {
+      props: {
+        bg: 'playground',
+      },
+      style: {
+        backgroundColor: (theme.vars || theme).palette.background.paper,
+        border: `1px solid ${(theme.vars || theme).palette.divider}`,
+        overflow: 'auto',
+      },
+    },
+    {
+      props: {
+        bg: true,
+      },
+      style: {
+        padding: theme.spacing(3),
+        backgroundColor: alpha(theme.palette.grey[50], 0.5),
+        border: `1px solid ${(theme.vars || theme).palette.divider}`,
+        ...theme.applyDarkStyles({
+          backgroundColor: alpha(theme.palette.primaryDark[700], 0.4),
+        }),
+      },
+    },
+    {
+      props: {
+        bg: 'gradient',
+      },
+      style: {
+        overflow: 'auto',
+        padding: theme.spacing(4, 2),
+        border: `1px solid ${(theme.vars || theme).palette.divider}`,
+        borderLeftWidth: 0,
+        borderRightWidth: 0,
+        backgroundClip: 'padding-box',
+        backgroundColor: alpha(theme.palette.primary[50], 0.2),
+        backgroundImage: `radial-gradient(120% 140% at 50% 10%, transparent 40%, ${alpha(theme.palette.primary[100], 0.2)} 70%)`,
+        ...theme.applyDarkStyles({
+          backgroundColor: (theme.vars || theme).palette.primaryDark[900],
+          backgroundImage: `radial-gradient(120% 140% at 50% 10%, transparent 30%, ${alpha(theme.palette.primary[900], 0.3)} 80%)`,
+        }),
+      },
+    },
+  ],
 }));
 
 const DemoCodeViewer = styled(HighlightedCode)(() => ({
@@ -202,14 +323,14 @@ const AnchorLink = styled('div')({
   position: 'absolute',
 });
 
-/* const InitialFocus = styled(IconButton)(({ theme }) => ({
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: theme.spacing(4),
-        height: theme.spacing(4),
-        pointerEvents: 'none',
-    })); */
+const InitialFocus = styled(IconButton)(({ theme }) => ({
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: theme.spacing(4),
+  height: theme.spacing(4),
+  pointerEvents: 'none',
+}));
 
 const selectionOverride = (theme) => ({
   cursor: 'pointer',
@@ -419,8 +540,22 @@ export default function Demo(props) {
       <AnchorLink id={demoName} />
       <DemoRoot hideToolbar={demoOptions.hideToolbar} bg={demoOptions.bg} id={demoId}>
         <Wrapper>
-        
+          <InitialFocus
+            aria-label={t('initialFocusLabel')}
+            action={initialFocusRef}
+            tabIndex={-1}
+          />
         </Wrapper>
+        <DemoSandbox
+          key={demoKey}
+          style={demoSandboxedStyle}
+          iframe={demoOptions.iframe}
+          usesCssVarsTheme={demoData.productId === 'joy-ui'}
+          name={demoName}
+          onResetDemoClick={resetDemo}
+        >
+          {demoElement}
+        </DemoSandbox>
       </DemoRoot>
     </Root>
   );
