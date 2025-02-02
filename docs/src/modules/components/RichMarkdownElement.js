@@ -76,7 +76,7 @@ export default function RichMarkdownElement(props) {
       Object.keys(demos),
     ].join('\n');
 
-    if (userLanguage === 'en') {
+    if (userLanguage === 'es') {
       throw new Error(errorMessage);
     }
 

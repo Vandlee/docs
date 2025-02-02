@@ -21,6 +21,7 @@ import {
     FormatTextdirectionRToLRounded, 
     LightModeRounded 
 } from '@mui/icons-material';
+import { useRouter } from 'next/router';
 
 const Heading = styled(Typography)(({ theme }) => ({
     margin: '16px 0 8px',
@@ -45,6 +46,7 @@ export default function AppSettingsDrawer(props) {
     const t = useTranslate();
     const upperTheme = useTheme();
     const changeTheme = useChangeTheme();
+    const router = useRouter();
 
     // TODO replace with useColorScheme once all pages support css vars
     const { mode, setMode } = useColorSchemeShim();
@@ -53,10 +55,18 @@ export default function AppSettingsDrawer(props) {
     const setUserLanguage = useSetUserLanguage();
 
     const handleChangeLanguage = (event, language) => {
-        if (language === null) {
-            return;
+        if (!language) return;
+
+        const currentPath = router.pathname;
+
+        let newPath = `/${language}${currentPath}`;
+
+        if (language === 'es') {
+            newPath = currentPath;
         }
+
         setUserLanguage(language);
+        router.push(newPath);
     };
 
     const handleChangeThemeMode = (event, paletteMode) => {

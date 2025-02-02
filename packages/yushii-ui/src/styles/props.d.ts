@@ -1,4 +1,5 @@
-/* import { AlertProps } from '../Alert';
+import { AlertProps } from '../Alert';
+/*
 import { AlertTitleProps } from '../AlertTitle';
 */
 import { AppBarProps } from '../AppBar';
@@ -21,8 +22,10 @@ import { ButtonProps } from '../Button';
 import { CardActionsProps } from '../CardActions';
 import { CardContentProps } from '../CardContent';
 import { CardHeaderProps } from '../CardHeader';
+*/
 import { CardMediaProps } from '../CardMedia';
 import { CardProps } from '../Card';
+/*
 import { CheckboxProps } from '../Checkbox';
 */
 import { ChipProps } from '../Chip';
@@ -74,7 +77,9 @@ import { ListItemProps } from '../ListItem';
 import { ListItemButtonProps } from '../ListItemButton';
 import { ListItemSecondaryActionProps } from '../ListItemSecondaryAction';
 import { ListItemTextProps } from '../ListItemText';
+*/
 import { ListProps } from '../List';
+/*
 import { ListSubheaderProps } from '../ListSubheader';
 */
 import { MenuItemProps } from '../MenuItem';
@@ -151,7 +156,8 @@ export type ComponentsProps = {
 };
 
 export interface ComponentsPropsList {
-  /* YushiiAlert: AlertProps;
+  YushiiAlert: AlertProps;
+  /* 
   YushiiAlertTitle: AlertTitleProps;
   */
   YushiiAppBar: AppBarProps;
@@ -170,13 +176,15 @@ export interface ComponentsPropsList {
   YushiiButton: ButtonProps;
   YushiiButtonBase: ButtonBaseProps;
   YushiiButtonGroup: ButtonGroupProps;
-  /* 
   YushiiCard: CardProps;
+  /* 
   YushiiCardActionArea: CardActionAreaProps;
   YushiiCardActions: CardActionsProps;
   YushiiCardContent: CardContentProps;
   YushiiCardHeader: CardHeaderProps;
+  */ 
   YushiiCardMedia: CardMediaProps;
+  /*
   YushiiCheckbox: CheckboxProps;
   */
   YushiiChip: ChipProps;
@@ -223,8 +231,8 @@ export interface ComponentsPropsList {
   YushiiLinearProgress: LinearProgressProps;
   */
   YushiiLink: LinkProps;
-  /*
   YushiiList: ListProps;
+  /*
   YushiiListItem: ListItemProps;
   YushiiListItemButton: ListItemButtonProps;
   YushiiListItemAvatar: ListItemAvatarProps;

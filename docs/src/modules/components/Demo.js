@@ -13,16 +13,20 @@ import Collapse from '@yushii/ui/Collapse';
 import NoSsr from '@yushii/ui/NoSsr';
 import { HighlightedCode } from '@yushii/docs/HighlightedCode';
 import { CodeTab, CodeTabList } from '@yushii/docs/HighlightedCodeWithTabs';
-
+import { ContentCopyRounded } from '@mui/icons-material';
+import { LibraryAddCheckRounded } from '@mui/icons-material';
 import DemoSandbox from 'docs/src/modules/components/DemoSandbox';
 import ReactRunner from 'docs/src/modules/components/ReactRunner';
-
+import DemoEditor from 'docs/src/modules/components/DemoEditor';
+import DemoEditorError from 'docs/src/modules/components/DemoEditorError';
 import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
 import { useCodeVariant } from 'docs/src/modules/utils/codeVariant';
 import { useCodeStyling } from 'docs/src/modules/utils/codeStylingSolution';
 import { CODE_VARIANTS, CODE_STYLING } from 'docs/src/modules/constants';
 import { useUserLanguage, useTranslate } from '@yushii/docs/i18n';
-import { borderRadius } from '@yushii/system';
+import stylingSolutionMapping from 'docs/src/modules/utils/stylingSolutionMapping';
+import DemoToolbarRoot from 'docs/src/modules/components/DemoToolbarRoot';
+import { grey } from '@yushii/docs/branding';
 
 function trimLeadingSpaces(input = '') {
   return input.replace(/^\s+/gm, '');
@@ -33,7 +37,7 @@ const DemoToolbar = React.lazy(() => import('./DemoToolbar'));
 function DemoToolbarFallback() {
   const t = useTranslate();
 
-  return <Box SX={{ height: 42 }} aria-busy aria-label={t('demoToolbarLabel')} role="toolbar" />;
+  return <Box sx={{ height: 42 }} aria-busy aria-label={t('demoToolbarLabel')} role="toolbar" />;
 }
 
 function getDemoName(location) {
@@ -50,7 +54,11 @@ function useDemoData(codeVariant, demo, githubLocation, codeStyling) {
 
   return React.useMemo(() => {
     let productId;
-    let name = 'UI';
+    let name = 'ui';
+    if (canonicalAs.startsWith('/base-ui/')) {
+      productId = 'base-ui';
+      name = 'Yushii Base'
+    }
 
     let codeOptions = {};
     if (codeStyling === CODE_STYLING.SYSTEM) {
@@ -401,6 +409,8 @@ export default function Demo(props) {
 
   const demoData = useDemoData(codeVariant, demo, githubLocation, styleSolution);
 
+  const hasNonSystemDemos = demo.rawTailwind || demo.rawTailwindTS || demo.rawCSS || demo.rawCSSTs;
+
   const demoName = getDemoName(demoData.githubLocation);
   const demoSandboxedStyle = React.useMemo(
     () => ({
@@ -535,6 +545,8 @@ export default function Demo(props) {
     }
   };
 
+  console.log('demoOptions', demoOptions)
+
   return (
     <Root>
       <AnchorLink id={demoName} />
@@ -557,6 +569,114 @@ export default function Demo(props) {
           {demoElement}
         </DemoSandbox>
       </DemoRoot>
+      {/* TODO: Wrapper shouldn't be needed, it should already be at the top of the docs page */}
+      {demoOptions.hideToolbar ? null : (
+        <Wrapper>
+          {Object.keys(stylingSolutionMapping).map((key) => (
+            <React.Fragment key={key}>
+              <AnchorLink id={`${stylingSolutionMapping[key]}-${demoName}.js`} />
+              <AnchorLink id={`${stylingSolutionMapping[key]}-${demoName}.tsx`} />
+            </React.Fragment>
+          ))}
+          <AnchorLink id={`${demoName}.js`} />
+          <AnchorLink id={`${demoName}.tsx`} />
+          <DemoToolbarRoot demoOptions={demoOptions} openDemoSource={openDemoSource}>
+            <NoSsr fallback={<DemoToolbarFallback />}>
+              <React.Suspense fallback={<DemoToolbarFallback />}>
+                <DemoToolbar 
+                  codeOpen={codeOpen}
+                  codeVariant={codeVariant}
+                  copyIcon={
+                    copiedContent ? <LibraryAddCheckRounded /> : <ContentCopyRounded />
+                  }
+                  copyButtonOnClick={handleCopyClick}
+                  hasNonSystemDemos={hasNonSystemDemos}
+                  demo={demo}
+                  demoData={demoData}
+                  demoId={demoId}
+                  demoName={demoName}
+                  demoOptions={demoOptions}
+                  demoSourceId={demoSourceId}
+                  initialFocusRef={initialFocusRef}
+                  onCodeOpenChange={() => {
+                    setCodeOpen((open) => !open);
+                    setShowAd(true);
+                  }}
+                  onResetDemoClick={resetDemo}
+                  openDemoSource={openDemoSource}
+                  showPreview={showPreview}
+                />
+              </React.Suspense>
+            </NoSsr>
+          </DemoToolbarRoot>
+          <Tabs value={activeTab} onChange={handleTabChange}>
+            {demoData.relativeModules && openDemoSource && !editorCode.isPreview ? (
+              <CodeTabList ownerState={ownerState}>
+                {tabs.map((tab, index) => (
+                  <CodeTab
+                    sx={selectionOverride}
+                    ownerState={ownerState}
+                    key={tab.module}
+                    value={index}
+                  >
+                    {tab.module}
+                  </CodeTab>
+                ))}
+              </CodeTabList>
+            ) : null}
+            <Collapse in={openDemoSource} unmountOnExit timeout={150}>
+              {/* A limitation from https://github.com/nihgwu/react-runner,
+                we can't inject the `window` of the iframe so we need a disableLiveEdit option. */}
+              {tabs.map((tab, index) => (
+                <TabPanel value={index} index={index} key={index}>
+                  {demoOptions.disableLiveEdit || index > 0 ? (
+                    <DemoCodeViewer 
+                      key={index}
+                      code={tab.raw}
+                      id={demoSourceId}
+                      language={demoData.sourceLanguage}
+                      copyButtonProps={{
+                        'data-ga-event-category': codeOpen ? 'demo-expand' : 'demo',
+                        'data-ga-event-label': demo.gaLabel,
+                        'data-ga-event-action': 'copy-click',
+                      }}
+                      sx={{
+                        '& .YushiiCode-copy': {
+                          display: 'none',
+                        },
+                      }}
+                    />
+                  ) : (
+                    <DemoEditor
+                      // Mount a new text editor when the preview mode change to reset the undo/redo history.
+                      key={editorCode.isPreview}
+                      value={editorCode.value}
+                      onChange={(value) => {
+                        setEditorCode({
+                          ...editorCode,
+                          value,
+                        });
+                      }}
+                      onFocus={() => {
+                        setLiveDemoActive(true);
+                      }}
+                      id={demoSourceId}
+                      language={demoData.sourceLanguage}
+                      copyButtonProps={{
+                        'data-ga-event-category': codeOpen ? 'demo-expand' : 'demo',
+                        'data-ga-event-label': demo.gaLabel,
+                        'data-ga-event-action': 'copy-click',
+                      }}
+                    >
+                      <DemoEditorError>{debouncedError}</DemoEditorError>
+                    </DemoEditor>
+                  )}
+                </TabPanel>
+              ))}
+            </Collapse>
+          </Tabs>
+        </Wrapper>
+      )}
     </Root>
   );
 }

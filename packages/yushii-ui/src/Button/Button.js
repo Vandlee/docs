@@ -181,6 +181,12 @@ const ButtonRoot = styled(ButtonBase, {
           },
         },
         {
+          props: { variant: 'outlined', color: 'neutral' },
+          style: {
+            color: `var(--textNeutralColor)`,
+          }
+        },
+        {
           props: { variant: 'text' },
           style: {
             padding: '6px 8px',
@@ -194,6 +200,7 @@ const ButtonRoot = styled(ButtonBase, {
             props: { color },
             style: {
               '--variant-textColor': (theme.vars || theme).palette[color].main,
+              '--variant-textNeutralColor': 'currentColor',
               '--variant-outlinedColor': (theme.vars || theme).palette[color].main,
               '--variant-outlinedBorder': theme.vars
                 ? `rgba(${theme.vars.palette[color].mainChannel} / 0.5)`

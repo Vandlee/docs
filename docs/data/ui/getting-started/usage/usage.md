@@ -7,7 +7,7 @@
 Despues de la [instalación](/ui/getting-started/installation/), puedes importar cualquier componente de Yushii UI y empezar a jugar.
 Por ejemplo, prueba a cambiar la `variant` del [Button](/ui/react-button/) a `outlined` para ver cómo cambia el estilo:
 
-{{"demo": "ButtonUsage.js", "defaultCodeOpen": true}}
+{{"demo": "ButtonUsage.js", "defaultCodeOpen": true, "bg": "outlined" }}
 
 ## Globales
 
