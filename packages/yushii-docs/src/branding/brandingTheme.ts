@@ -450,94 +450,94 @@ export const getDesignTokens = (mode: 'light' | 'dark') =>
 export function getThemedComponents(): ThemeOptions {
   return {
     components: {
-      /* YushiiAlert: {
-          styleOverrides: {
-            root: {
-              padding: '16px',
-              gap: '12px',
-              fontSize: '1rem',
-              '& * ul': { paddingLeft: '24px !important', marginBottom: '0 !important' }, // !important is used here to override the anchor tag color coming from MarkdownElement
-              '& .YushiiAlert-icon': {
-                margin: 0,
-                marginTop: '2px',
-                padding: 0,
-              },
-              '& .YushiiAlert-message': { padding: 0 },
+      YushiiAlert: {
+        styleOverrides: {
+          root: {
+            padding: '16px',
+            gap: '8px',
+            fontSize: '1rem',
+            '& * ul': { paddingLeft: '24px !important', marginBottom: '0 !important' }, // !important is used here to override the anchor tag color coming from MarkdownElement
+            '& .YushiiAlert-icon': {
+              margin: 0,
+              marginTop: '2px',
+              padding: 0,
             },
-            icon: {
-              paddingTop: 10,
-              paddingBottom: 0,
-            },
-            standardWarning: ({ theme }) => [
-              // same styles from the MarkdownElement callout
-              {
-                backgroundColor: alpha(theme.palette.warning[50], 0.5),
-                color: (theme.vars || theme).palette.grey[900],
-                border: '1px solid',
-                borderColor: alpha(theme.palette.warning[700], 0.15),
-                '& .YushiiAlert-icon': {
-                  color: (theme.vars || theme).palette.warning[600],
-                },
-                '& * a': {
-                  // !important is used here to override the anchor tag color coming from MarkdownElement
-                  color: `${(theme.vars || theme).palette.warning[900]} !important`,
-                  textDecorationColor: `${alpha(theme.palette.warning.main, 0.4)} !important`,
-                  '&:hover': {
-                    textDecorationColor: `${(theme.vars || theme).palette.warning[900]} !important`,
-                  },
-                },
-              },
-              theme.applyDarkStyles({
-                backgroundColor: alpha(theme.palette.warning[700], 0.12),
-                color: (theme.vars || theme).palette.warning[50],
-                '& .YushiiAlert-icon': {
-                  color: (theme.vars || theme).palette.warning[400],
-                },
-                '& * a': {
-                  color: `${(theme.vars || theme).palette.warning[100]} !important`,
-                  textDecorationColor: `${alpha(theme.palette.warning[600], 0.4)} !important`,
-                  '&:hover': {
-                    textDecorationColor: `${(theme.vars || theme).palette.warning[600]} !important`,
-                  },
-                },
-              }),
-            ],
-            standardSuccess: ({ theme }) => [
-              // same styles from the MarkdownElement callout
-              {
-                backgroundColor: alpha(theme.palette.success[50], 0.5),
-                color: (theme.vars || theme).palette.success[900],
-                border: `1px solid ${(theme.vars || theme).palette.success[100]}`,
-                '& .YushiiAlert-icon': {
-                  color: (theme.vars || theme).palette.success[600],
-                },
-                '& * a': {
-                  // !important is used here to override the anchor tag color coming from MarkdownElement
-                  color: `${(theme.vars || theme).palette.success[900]} !important`,
-                  textDecorationColor: `${alpha(theme.palette.success.main, 0.4)} !important`,
-                  '&:hover': {
-                    textDecorationColor: `${(theme.vars || theme).palette.success[900]} !important`,
-                  },
-                },
-              },
-              theme.applyDarkStyles({
-                backgroundColor: alpha(theme.palette.success[700], 0.12),
-                color: (theme.vars || theme).palette.success[50],
-                borderColor: alpha(theme.palette.success[400], 0.1),
-                '& .YushiiAlert-icon': {
-                  color: (theme.vars || theme).palette.success[500],
-                },
-                '& * a': {
-                  color: `${(theme.vars || theme).palette.success[100]} !important`,
-                  textDecorationColor: `${alpha(theme.palette.success[600], 0.4)} !important`,
-                  '&:hover': {
-                    textDecorationColor: `${(theme.vars || theme).palette.success[600]} !important`,
-                  },
-                },
-              }),
-            ],
+            '& .YushiiAlert-message': { padding: 0 },
           },
-        }, */
+          icon: {
+            paddingTop: 10,
+            paddingBottom: 0,
+          },
+          standardWarning: ({ theme }) => [
+            // same styles from the MarkdownElement callout
+            {
+              backgroundColor: alpha(theme.palette.warning[50], 0.5),
+              color: (theme.vars || theme).palette.grey[900],
+              border: '1px solid',
+              borderColor: alpha(theme.palette.warning[700], 0.15),
+              '& .YushiiAlert-icon': {
+                color: (theme.vars || theme).palette.warning[600],
+              },
+              '& * a': {
+                // !important is used here to override the anchor tag color coming from MarkdownElement
+                color: `${(theme.vars || theme).palette.warning[900]} !important`,
+                textDecorationColor: `${alpha(theme.palette.warning.main, 0.4)} !important`,
+                '&:hover': {
+                  textDecorationColor: `${(theme.vars || theme).palette.warning[900]} !important`,
+                },
+              },
+            },
+            theme.applyDarkStyles({
+              backgroundColor: alpha(theme.palette.warning[700], 0.12),
+              color: (theme.vars || theme).palette.warning[50],
+              '& .YushiiAlert-icon': {
+                color: (theme.vars || theme).palette.warning[400],
+              },
+              '& * a': {
+                color: `${(theme.vars || theme).palette.warning[100]} !important`,
+                textDecorationColor: `${alpha(theme.palette.warning[600], 0.4)} !important`,
+                '&:hover': {
+                  textDecorationColor: `${(theme.vars || theme).palette.warning[600]} !important`,
+                },
+              },
+            }),
+          ],
+          standardSuccess: ({ theme }) => [
+            // same styles from the MarkdownElement callout
+            {
+              backgroundColor: alpha(theme.palette.success[50], 0.5),
+              color: (theme.vars || theme).palette.success[900],
+              border: `1px solid ${(theme.vars || theme).palette.success[100]}`,
+              '& .YushiiAlert-icon': {
+                color: (theme.vars || theme).palette.success[600],
+              },
+              '& * a': {
+                // !important is used here to override the anchor tag color coming from MarkdownElement
+                color: `${(theme.vars || theme).palette.success[900]} !important`,
+                textDecorationColor: `${alpha(theme.palette.success.main, 0.4)} !important`,
+                '&:hover': {
+                  textDecorationColor: `${(theme.vars || theme).palette.success[900]} !important`,
+                },
+              },
+            },
+            theme.applyDarkStyles({
+              backgroundColor: alpha(theme.palette.success[700], 0.12),
+              color: (theme.vars || theme).palette.success[50],
+              borderColor: alpha(theme.palette.success[400], 0.1),
+              '& .YushiiAlert-icon': {
+                color: (theme.vars || theme).palette.success[500],
+              },
+              '& * a': {
+                color: `${(theme.vars || theme).palette.success[100]} !important`,
+                textDecorationColor: `${alpha(theme.palette.success[600], 0.4)} !important`,
+                '&:hover': {
+                  textDecorationColor: `${(theme.vars || theme).palette.success[600]} !important`,
+                },
+              },
+            }),
+          ],
+        },
+      },
       YushiiButtonBase: {
         defaultProps: {
           disableTouchRipple: false,
@@ -683,7 +683,7 @@ export function getThemedComponents(): ThemeOptions {
             },
           ],
       },
-      /* YushiiMenu: {
+      YushiiMenu: {
           styleOverrides: {
             paper: ({ theme }) => [
               {
@@ -736,8 +736,8 @@ export function getThemedComponents(): ThemeOptions {
               }),
             ],
           },
-        }, */
-      /* YushiiPopover: {
+        },
+      YushiiPopover: {
           styleOverrides: {
             paper: ({ theme }) => ({
               boxShadow: '0px 4px 20px rgba(170, 180, 190, 0.3)',
@@ -746,7 +746,7 @@ export function getThemedComponents(): ThemeOptions {
               }),
             }),
           },
-        }, */
+        },
       YushiiDivider: {
           styleOverrides: {
             root: ({ theme }) => ({
@@ -928,13 +928,13 @@ export function getThemedComponents(): ThemeOptions {
           }),
         },
       },
-      /* YushiiList: {
+      YushiiList: {
           styleOverrides: {
             root: {
               padding: 0,
             },
           },
-        }, */
+        },
       /* YushiiListItemButton: {
           styleOverrides: {
             root: ({ theme }) => [

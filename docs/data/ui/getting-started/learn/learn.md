@@ -7,7 +7,7 @@
 La siguiente demo muestra una app básica de Yushii UI que incluye un componente `<Button>`.
 Prueba a cambiar `variant` en el [Button](/ui/react-button/) a `outlined` para ver cómo cambia el estilo:
 
-{{"demo": "../usage/ButtonUsage.js", "defaultCodeOpen": true}}
+{{"demo": "../usage/ButtonUsage.js", "defaultCodeOpen": true, "bg": "outlined" }}
 
 ## Proyectos de ejemplo
 

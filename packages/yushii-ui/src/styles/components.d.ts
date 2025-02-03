@@ -3,11 +3,12 @@ import { ComponentsOverrides } from './overrides';
 import { ComponentsVariants } from './variants';
 
 export interface Components<Theme = unknown> {
-  /* YushiiAlert?: {
+  YushiiAlert?: {
     defaultProps?: ComponentsProps['YushiiAlert'];
     styleOverrides?: ComponentsOverrides<Theme>['YushiiAlert'];
     variants?: ComponentsVariants<Theme>['YushiiAlert'];
   };
+  /*
   YushiiAlertTitle?: {
     defaultProps?: ComponentsProps['YushiiAlertTitle'];
     styleOverrides?: ComponentsOverrides<Theme>['YushiiAlertTitle'];
@@ -78,12 +79,12 @@ export interface Components<Theme = unknown> {
     styleOverrides?: ComponentsOverrides<Theme>['YushiiButtonGroup'];
     variants?: ComponentsVariants<Theme>['YushiiButtonGroup'];
   };
-  /*
   YushiiCard?: {
     defaultProps?: ComponentsProps['YushiiCard'];
     styleOverrides?: ComponentsOverrides<Theme>['YushiiCard'];
     variants?: ComponentsVariants<Theme>['YushiiCard'];
   };
+  /*
   YushiiCardActionArea?: {
     defaultProps?: ComponentsProps['YushiiCardActionArea'];
     styleOverrides?: ComponentsOverrides<Theme>['YushiiCardActionArea'];
@@ -104,11 +105,13 @@ export interface Components<Theme = unknown> {
     styleOverrides?: ComponentsOverrides<Theme>['YushiiCardHeader'];
     variants?: ComponentsVariants<Theme>['YushiiCardHeader'];
   };
+  */
   YushiiCardMedia?: {
     defaultProps?: ComponentsProps['YushiiCardMedia'];
     styleOverrides?: ComponentsOverrides<Theme>['YushiiCardMedia'];
     variants?: ComponentsVariants<Theme>['YushiiCardMedia'];
   };
+  /*
   YushiiCheckbox?: {
     defaultProps?: ComponentsProps['YushiiCheckbox'];
     styleOverrides?: ComponentsOverrides<Theme>['YushiiCheckbox'];
@@ -305,12 +308,12 @@ export interface Components<Theme = unknown> {
     styleOverrides?: ComponentsOverrides<Theme>['YushiiLink'];
     variants?: ComponentsVariants<Theme>['YushiiLink'];
   };
-  /*
   YushiiList?: {
     defaultProps?: ComponentsProps['YushiiList'];
     styleOverrides?: ComponentsOverrides<Theme>['YushiiList'];
     variants?: ComponentsVariants<Theme>['YushiiList'];
   };
+  /*
   YushiiListItem?: {
     defaultProps?: ComponentsProps['YushiiListItem'];
     styleOverrides?: ComponentsOverrides<Theme>['YushiiListItem'];

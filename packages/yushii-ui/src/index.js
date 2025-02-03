@@ -4,6 +4,9 @@ import * as colors from './colors';
 export { colors };
 export * from './styles';
 
+export { default as Alert } from './Alert';
+export * from './Alert';
+
 export { default as AppBar } from './AppBar';
 export * from './AppBar';
 
@@ -21,6 +24,12 @@ export * from './ButtonBase';
 
 export { default as ButtonGroup } from './ButtonGroup';
 export * from './ButtonGroup';
+
+export { default as Card } from './Card';
+export * from './Card';
+
+export { default as CardMedia } from './CardMedia';
+export * from './CardMedia';
 
 export { default as Chip } from './Chip';
 export * from './Chip';

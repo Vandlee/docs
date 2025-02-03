@@ -166,7 +166,7 @@ export default withDocsInfra({
   env: {
     // docs-infra
     LIB_VERSION: pkg.version,
-    SOURCE_CODE_REPO: 'https://github.com/mui/material-ui',
+    SOURCE_CODE_REPO: 'https://github.com/yugashiki/yushii',
     SOURCE_GITHUB_BRANCH: 'master', // #default-branch-switch
     GITHUB_TEMPLATE_DOCS_FEEDBACK: '4.docs-feedback.yml',
     BUILD_ONLY_SPANISH_LOCALE: String(buildOnlySpanishLocale),

@@ -12,14 +12,17 @@ import { BrandingProvider } from '@yushii/docs/branding';
 import Box from '@yushii/ui/Box';
 import { styled } from '@yushii/ui/styles';
 
-const LoadingBox = styled(Box)(({ theme }) => ({
-  width: '100vw',
-  height: '100vh',
-  backgroundColor: theme.palette.background,
-  ...theme.applyDarkStyles({
-    backgroundColor: (theme.vars || theme).palette.primaryDark[900],
-  }),
-}));
+
+
+
+
+
+
+
+
+
+
+
 
 export default function MarkdownDocs(props) {
   const theme = useTheme();

@@ -149,7 +149,7 @@ function getDefaultAccent(mode = 'light') {
 function getDefaultNeutral(mode = 'light') {
   if (mode === 'dark') {
     return {
-      main: grey[900],
+      main: grey[800],
       light: grey[50],
       dark: grey[800],
     };

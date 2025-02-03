@@ -5,7 +5,9 @@ import { ComponentsPropsList } from './props';
 import { AccordionClassKey } from '../Accordion';
 import { AccordionDetailsClassKey } from '../AccordionDetails';
 import { AccordionSummaryClassKey } from '../AccordionSummary';
+*/
 import { AlertClassKey } from '../Alert';
+/*
 import { AlertTitleClassKey } from '../AlertTitle';
 */
 import { AppBarClassKey } from '../AppBar';
@@ -27,10 +29,14 @@ import { ButtonGroupClassKey } from '../ButtonGroup';
 /*
 import { CardActionAreaClassKey } from '../CardActionArea';
 import { CardActionsClassKey } from '../CardActions';
+*/
 import { CardClassKey } from '../Card';
+/*
 import { CardContentClassKey } from '../CardContent';
 import { CardHeaderClassKey } from '../CardHeader';
+*/
 import { CardMediaClassKey } from '../CardMedia';
+/*
 import { CheckboxClassKey } from '../Checkbox';
 */
 import { ChipClassKey } from '../Chip';
@@ -70,8 +76,8 @@ import { InputLabelClassKey } from '../InputLabel';
 import { LinearProgressClassKey } from '../LinearProgress';
 */
 import { LinkClassKey } from '../Link';
-/*
 import { ListClassKey } from '../List';
+/*
 import { ListItemAvatarClassKey } from '../ListItemAvatar';
 import { ListItemClassKey } from '../ListItem';
 import { ListItemButtonClassKey } from '../ListItemButton';
@@ -173,7 +179,8 @@ export type ComponentsOverrides<Theme = unknown> = {
 };
 
 export interface ComponentNameToClassKey {
-  /* YushiiAlert: AlertClassKey;
+  YushiiAlert: AlertClassKey;
+  /*
   YushiiAlertTitle: AlertTitleClassKey;
   */
   YushiiAppBar: AppBarClassKey;
@@ -192,13 +199,15 @@ export interface ComponentNameToClassKey {
   YushiiButton: ButtonClassKey;
   YushiiButtonBase: ButtonBaseClassKey;
   YushiiButtonGroup: ButtonGroupClassKey;
-  /*
   YushiiCard: CardClassKey;
+  /*
   YushiiCardActionArea: CardActionAreaClassKey;
   YushiiCardActions: CardActionsClassKey;
   YushiiCardContent: CardContentClassKey;
   YushiiCardHeader: CardHeaderClassKey;
+  */
   YushiiCardMedia: CardMediaClassKey;
+  /*
   YushiiCheckbox: CheckboxClassKey;
   */
   YushiiChip: ChipClassKey;
@@ -244,8 +253,8 @@ export interface ComponentNameToClassKey {
   YushiiLinearProgress: LinearProgressClassKey;
   */
   YushiiLink: LinkClassKey;
-  /*
   YushiiList: ListClassKey;
+  /*
   YushiiListItem: ListItemClassKey;
   YushiiListItemButton: ListItemButtonClassKey;
   YushiiListItemAvatar: ListItemAvatarClassKey;
