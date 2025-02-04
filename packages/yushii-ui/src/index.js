@@ -13,6 +13,9 @@ export * from './AppBar';
 export { default as Backdrop } from './Backdrop';
 export * from './Backdrop';
 
+export { default as Badge } from './Badge';
+export * from './Badge';
+
 export { default as Box } from './Box';
 export * from './Box';
 

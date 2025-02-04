@@ -545,8 +545,6 @@ export default function Demo(props) {
     }
   };
 
-  console.log('demoOptions', demoOptions)
-
   return (
     <Root>
       <AnchorLink id={demoName} />

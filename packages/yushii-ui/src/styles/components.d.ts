@@ -42,12 +42,12 @@ export interface Components<Theme = unknown> {
     styleOverrides?: ComponentsOverrides<Theme>['YushiiBackdrop'];
     variants?: ComponentsVariants<Theme>['YushiiBackdrop'];
   };
-  /*
   YushiiBadge?: {
     defaultProps?: ComponentsProps['YushiiBadge'];
     styleOverrides?: ComponentsOverrides<Theme>['YushiiBadge'];
     variants?: ComponentsVariants<Theme>['YushiiBadge'];
   };
+  /*
   YushiiBottomNavigation?: {
     defaultProps?: ComponentsProps['YushiiBottomNavigation'];
     styleOverrides?: ComponentsOverrides<Theme>['YushiiBottomNavigation'];

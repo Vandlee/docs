@@ -142,6 +142,17 @@ const ButtonRoot = styled(ButtonBase, {
           },
         },
         {
+          props: { disableIconAnimation: true },
+          style: {
+            '&:hover .YushiiButton-startIcon': {
+              transform: 'unset',
+            },
+            '&:hover .YushiiButton-endIcon': {
+              transform: 'unset',
+            },
+          }
+        },
+        {
           props: { variant: 'contained' },
           style: {
             color: `var(--variant-containedColor)`,
@@ -179,12 +190,6 @@ const ButtonRoot = styled(ButtonBase, {
               border: `1px solid ${(theme.vars || theme).palette.action.disabledBackground}`,
             },
           },
-        },
-        {
-          props: { variant: 'outlined', color: 'neutral' },
-          style: {
-            color: `var(--textNeutralColor)`,
-          }
         },
         {
           props: { variant: 'text' },
@@ -245,6 +250,12 @@ const ButtonRoot = styled(ButtonBase, {
               },
             },
           },
+        },
+        {
+          props: { color: 'neutral' },
+          style: {
+            color: `var(--textNeutralColor)`,
+          }
         },
         {
           props: {
@@ -332,22 +343,6 @@ const ButtonRoot = styled(ButtonBase, {
         },
         {
           props: {
-            loadingPosition: 'center',
-          },
-          style: {
-            transition: theme.transitions.create(
-              ['background-color', 'box-shadow', 'border-color'],
-              {
-                duration: theme.transitions.duration.short,
-              },
-            ),
-            [`&.${buttonClasses.loading}`]: {
-              color: 'transparent',
-            },
-          },
-        },
-        {
-          props: {
             justify: 'center',
           },
           style: {
@@ -369,6 +364,22 @@ const ButtonRoot = styled(ButtonBase, {
           },
           style: {
             justifyContent: 'flex-end',
+          },
+        },
+        {
+          props: {
+            loadingPosition: 'center',
+          },
+          style: {
+            transition: theme.transitions.create(
+              ['background-color', 'box-shadow', 'border-color'],
+              {
+                duration: theme.transitions.duration.short,
+              },
+            ),
+            [`&.${buttonClasses.loading}`]: {
+              color: 'transparent !important',
+            },
           },
         },
       ],
@@ -648,7 +659,7 @@ const Button = React.forwardRef(function Button(inProps, ref) {
       ownerState={ownerState}
       className={clsx(contextProps.className, classes.root, className, positionClassName)}
       component={component}
-      disabled={disabled}
+      disabled={disabled || loading}
       focusRipple={!disableFocusRipple}
       focusVisibleClassName={clsx(classes.focusVisible, focusVisibleClassName)}
       ref={ref}

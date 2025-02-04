@@ -66,7 +66,7 @@ export default function MarkdownDocsV2(props) {
       setActiveTab(router.query.docsTab ?? '');
     }, [router.query.docsTab]);
   
-    const localizedDoc = docs[userLanguage] || docs.en;
+    const localizedDoc = docs[userLanguage] || docs.es;
     // Generate the TOC based on the tab
     const demosToc = localizedDoc.toc;
   

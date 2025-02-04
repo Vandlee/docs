@@ -1,8 +1,8 @@
 export { unstable_ClassNameGenerator } from '@yushii/utils';
 export { default as capitalize } from './capitalize';
 /* export { default as createChainedFunction } from './createChainedFunction';
-export { default as createSvgIcon } from './createSvgIcon';
 */
+export { default as createSvgIcon } from './createSvgIcon';
 export { default as debounce } from './debounce';
 /*
 export { default as deprecatedPropType } from './deprecatedPropType';

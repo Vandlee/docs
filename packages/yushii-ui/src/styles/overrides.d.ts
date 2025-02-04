@@ -17,8 +17,8 @@ import { AvatarClassKey } from '../Avatar';
 import { AvatarGroupClassKey } from '../AvatarGroup';
 */
 import { BackdropClassKey } from '../Backdrop';
-/*
 import { BadgeClassKey } from '../Badge';
+/*
 import { BottomNavigationActionClassKey } from '../BottomNavigationAction';
 import { BottomNavigationClassKey } from '../BottomNavigation';
 import { BreadcrumbsClassKey } from '../Breadcrumbs';
@@ -190,8 +190,8 @@ export interface ComponentNameToClassKey {
   YushiiAvatarGroup: AvatarGroupClassKey;
   */
   YushiiBackdrop: BackdropClassKey;
-  /*
   YushiiBadge: BadgeClassKey;
+  /*
   YushiiBottomNavigation: BottomNavigationClassKey;
   YushiiBottomNavigationAction: BottomNavigationActionClassKey;
   YushiiBreadcrumbs: BreadcrumbsClassKey;

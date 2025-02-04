@@ -1,4 +1,4 @@
-# Usage
+# Uso
 
 <p class="description">Aprende los conceptos básicos para trabajar con componentes Yushii UI.</p>
 

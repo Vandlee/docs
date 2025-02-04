@@ -2,7 +2,7 @@ import { YushiiPage } from 'docs/src/YushiiPage';
 
 const pages: YushiiPage[] = [
   {
-    pathname: '/ui/getting-started-group/',
+    pathname: '/ui/getting-started-group',
     title: 'Getting started',
     children: [
       { pathname: '/ui/getting-started', title: 'Overview' },

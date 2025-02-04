@@ -9,8 +9,8 @@ import { AvatarProps } from '../Avatar';
 import { AvatarGroupProps } from '../AvatarGroup';
 */
 import { BackdropProps } from '../Backdrop';
-/*
 import { BadgeProps } from '../Badge';
+/*
 import { BottomNavigationActionProps } from '../BottomNavigationAction';
 import { BottomNavigationProps } from '../BottomNavigation';
 import { BreadcrumbsProps } from '../Breadcrumbs';
@@ -167,8 +167,8 @@ export interface ComponentsPropsList {
   YushiiAvatarGroup: AvatarGroupProps;
   */
   YushiiBackdrop: BackdropProps;
-  /*
   YushiiBadge: BadgeProps;
+  /*
   YushiiBottomNavigation: BottomNavigationProps;
   YushiiBottomNavigationAction: BottomNavigationActionProps;
   YushiiBreadcrumbs: BreadcrumbsProps;
