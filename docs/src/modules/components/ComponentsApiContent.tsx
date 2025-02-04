@@ -216,16 +216,16 @@ export default function ComponentsApiContent(props: ComponentsApiContentProps) {
                     {pageContent.themeDefaultProps && (
                     <React.Fragment>
                         <Heading
-                        title="theme-default-props"
-                        hash={`${componentName}-theme-default-props`}
-                        level="h4"
+                          title="theme-default-props"
+                          hash={`${componentName}-theme-default-props`}
+                          level="h4"
                         />
                         <span
-                        dangerouslySetInnerHTML={{
-                            __html: t('api-docs.themeDefaultPropsDescription')
-                            .replace(/{{yushiiName}}/, pageContent.yushiiName)
-                            .replace(/{{defaultPropsLink}}/, defaultPropsLink),
-                        }}
+                          dangerouslySetInnerHTML={{
+                              __html: t('api-docs.themeDefaultPropsDescription')
+                              .replace(/{{yushiiName}}/, pageContent.yushiiName)
+                              .replace(/{{defaultPropsLink}}/, defaultPropsLink),
+                          }}
                         />
                     </React.Fragment>
                     )}

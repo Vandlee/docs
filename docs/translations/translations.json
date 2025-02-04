@@ -1,5 +1,13 @@
 {
   "pages": {
+    "/ui/getting-started-group": "Primeros pasos",
+    "/ui/getting-started": "Resumen",
+    "/ui/getting-started/installation": "Instalación",
+    "/ui/getting-started/usage": "Uso",
+    "/ui/getting-started/learn": "Aprende",
+    "/ui/getting-started/faq": "FAQs",
+    "/ui/getting-started/supported-platforms": "Plataformas soportadas",
+    "/ui/react-": "Componentes",
     "/ui/react-button": "Botón"
   }
 }

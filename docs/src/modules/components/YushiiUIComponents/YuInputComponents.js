@@ -5,9 +5,9 @@ import ComponentShowcaseCard from 'docs/src/components/action/ComponentShowcaseC
 const inputComponents = [
   {
     name: 'Button',
-    srcLight: '/static/material-ui/react-components/button-light.png',
-    srcDark: '/static/material-ui/react-components/button-dark.png',
-    link: '/material-ui/react-button/',
+    srcLight: '/static/ui/react-components/button-light.png',
+    srcDark: '/static/ui/react-components/button-dark.png',
+    link: '/ui/react-button/',
     md1: false,
     md2: true,
     md3: false,

@@ -11,7 +11,7 @@ import memoTheme from '../utils/memoTheme';
 import createSimplePaletteValueFilter from '../utils/createSimplePaletteValueFilter';
 import { useDefaultProps } from '../DefaultPropsProvider';
 import ButtonBase from '../ButtonBase';
-
+import CircularProgress from '../CircularProgress';
 import capitalize from '../utils/capitalize';
 import iconButtonClasses, { getIconButtonUtilityClass } from './iconButtonClasses';
 
@@ -28,6 +28,7 @@ const useUtilityClasses = (ownerState) => {
             `size${capitalize(size)}`,
         ],
         loadingIndicator: ['loadingIndicator'],
+        loadingWrapper: ['loadingWrapper'],
     };
 
     return composeClasses(slots, getIconButtonUtilityClass, classes);
@@ -126,6 +127,12 @@ const IconButtonRoot = styled(ButtonBase, {
                 },
                 })),
             {
+                props: { color: 'neutral' },
+                style: {
+                    color: 'inherit',
+                },
+            },
+            {
                 props: { size: 'small' },
                 style: {
                     padding: 5,
@@ -155,9 +162,20 @@ const IconButtonLoadingIndicator = styled('span', {
     slot: 'LoadingIndicator',
     overridesResolver: (props, styles) => styles.loadingIndicator,
 })(({ theme }) => ({
-
+    display: 'none',
+    position: 'absolute',
+    visibility: 'visible',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    color: (theme.vars || theme).palette.action.disabled,
+    variants: [{ props: { loading: true }, style: { display: 'flex' } }],
 }))
 
+/**
+ * Refer to the [Icons](/ui/icons/) section of the documentation
+ * regarding the available icon options.
+ */
 const IconButton = React.forwardRef(function IconButton(inProps, ref) {
     const props = useDefaultProps({ props: inProps, name: 'YushiiIconButton' });
     const {
@@ -176,8 +194,8 @@ const IconButton = React.forwardRef(function IconButton(inProps, ref) {
 
     const id = useId(idProp);
     const loadingIndicator = loadingIndicatorProp ?? (
-        <div>Cargando</div>
-    )
+        <CircularProgress aria-labelledby={id} color="inherit" size={16} />
+    );
 
     const ownerState = {
         ...props,
@@ -203,6 +221,14 @@ const IconButton = React.forwardRef(function IconButton(inProps, ref) {
             {...other}
             ownerState={ownerState}
         >
+            {typeof loading === 'boolean' && (
+                // use plain HTML span to minimize the runtime overhead
+                <span className={classes.loadingWrapper} style={{ display: 'contents' }}>
+                    <IconButtonLoadingIndicator className={classes.loadingIndicator} ownerState={ownerState}>
+                        {loading && loadingIndicator}
+                    </IconButtonLoadingIndicator>
+                </span>
+            )}
             {children}
         </IconButtonRoot>
     )
