@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import resolveProps from '@yushii/utils/resolveProps';
 import composeClasses from '@yushii/utils/composeClasses';
 import { alpha } from '@yushii/system/colorManipulator';
-import { unstable_useId as useId } from '@yushii/ui/utils';
+import { unstable_useId as useId } from '@yushii/u-ui/utils';
 import rootShouldForwardProp from '../styles/rootShouldForwardProp';
 import { styled } from '../zero-styled';
 import memoTheme from '../utils/memoTheme';

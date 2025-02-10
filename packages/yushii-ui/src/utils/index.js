@@ -31,9 +31,9 @@ export const unstable_ClassNameGenerator = {
     if (process.env.NODE_ENV !== 'production') {
       console.warn(
         [
-          'Yushii: `ClassNameGenerator` import from `@yushii/ui/utils` is outdated and might cause unexpected issues.',
+          'Yushii: `ClassNameGenerator` import from `@yushii/u-ui/utils` is outdated and might cause unexpected issues.',
           '',
-          "You should use `import { unstable_ClassNameGenerator } from '@yushii/ui/className'` instead",
+          "You should use `import { unstable_ClassNameGenerator } from '@yushii/u-ui/className'` instead",
           '',
           'The detail of the issue: https://github.com/mui/material-ui/issues/30011#issuecomment-1024993401',
           '',

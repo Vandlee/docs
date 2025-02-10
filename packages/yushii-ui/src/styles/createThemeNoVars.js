@@ -133,7 +133,7 @@ export function createYushiiTheme(...args) {
         [
           'Yushii: the createYushiiTheme function was renamed to createTheme.',
           '',
-          "You should use `import { createTheme } from '@yushii/ui/styles'`",
+          "You should use `import { createTheme } from '@yushii/u-ui/styles'`",
         ].join('\n'),
       );
     }

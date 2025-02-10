@@ -1,10 +1,10 @@
 import * as React from 'react';
 import clsx from 'clsx';
-import { alpha, styled, SxProps } from '@yushii/ui/styles';
+import { alpha, styled, SxProps } from '@yushii/u-ui/styles';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import Divider from '@yushii/ui/Divider';
-import IconButton from '@yushii/ui/IconButton';
+import Divider from '@yushii/u-ui/Divider';
+import IconButton from '@yushii/u-ui/IconButton';
 import {
   brandingDarkTheme as darkTheme,
   brandingLightTheme as lightTheme,

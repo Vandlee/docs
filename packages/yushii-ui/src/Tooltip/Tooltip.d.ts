@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { YushiiStyledCommonProps, SxProps } from '@yushii/system';
-import { PopperProps } from '@yushii/ui/Popper';
+import { PopperProps } from '@yushii/u-ui/Popper';
 import { InternalStandardProps as StandardProps, Theme } from '..';
 import { CreateSlotsAndSlotProps, SlotProps } from '../utils/types';
 import { TransitionProps } from '../transitions/transition';

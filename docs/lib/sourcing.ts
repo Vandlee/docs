@@ -37,7 +37,7 @@ const ALLOWED_TAGS = [
   'Guide',
   'Product',
   // Product tags
-  'UI',
+  'U-Ui',
   'Base UI',
   'Pigment CSS',
   'Joy UI',

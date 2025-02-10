@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Portal from '@yushii/ui/Portal';
+import Portal from '@yushii/u-ui/Portal';
 import { AdContext } from './AdManager';
 
 export interface AdGuestProps {

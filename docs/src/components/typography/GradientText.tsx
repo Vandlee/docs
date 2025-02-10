@@ -1,4 +1,4 @@
-import { styled } from '@yushii/ui/styles';
+import { styled } from '@yushii/u-ui/styles';
 
 const GradientText = styled('span')<{
   color?: 'primary' | 'accent' | 'error' | 'success' | 'warning';

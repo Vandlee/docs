@@ -1,7 +1,7 @@
 import * as React from 'react';
 import copy from 'clipboard-copy';
-import Box, { BoxProps } from '@yushii/ui/Box';
-import Button from '@yushii/ui/Button';
+import Box, { BoxProps } from '@yushii/u-ui/Box';
+import Button from '@yushii/u-ui/Button';
 import KeyboardArrowRightRounded from '@mui/icons-material/KeyboardArrowRightRounded';
 import ContentCopyRounded from '@mui/icons-material/ContentCopyRounded';
 import CheckRounded from '@mui/icons-material/CheckRounded';

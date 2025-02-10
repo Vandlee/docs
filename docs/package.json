@@ -36,7 +36,7 @@
     "@yushii/internal-markdown": "workspace:^",
     "@yushii/styled-engine": "workspace:^",
     "@yushii/system": "workspace:^",
-    "@yushii/ui": "workspace:^",
+    "@yushii/u-ui": "workspace:^",
     "@mui/types": "^7.2.21",
     "@yushii/utils": "workspace:^",
     "autoprefixer": "10.4.20",

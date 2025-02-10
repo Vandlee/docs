@@ -79,7 +79,7 @@ export { default as useTheme } from './useTheme';
 // export * from './useThemeProps';
 export { default as styled } from './styled';
 /**
- * @deprecated will be removed in v5.beta, please use styled from @yushii/ui/styles instead
+ * @deprecated will be removed in v5.beta, please use styled from @yushii/u-ui/styles instead
  */
 export { default as experimentalStyled } from './styled';
 export { default as ThemeProvider } from './ThemeProvider';

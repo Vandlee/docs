@@ -8,7 +8,7 @@ import systemPkgJson from 'packages/yushii-system/package.json';
 import basePkgJson from 'packages/yushii-base/package.json';
 import generalDocsPages from 'docs/data/docs/pages';
 
-import uiPages from 'docs/data/ui/pages';
+import uUiPages from 'docs/data/u-ui/pages';
 
 import PageContext from 'docs/src/modules/components/PageContext';
 
@@ -27,6 +27,7 @@ import SvgYushiiLogomark, { yushiiSvgWordmarkString } from 'docs/src/icons/SvgYu
 import './global.css';
 import '../public/static/components-gallery/base-theme.css';
 import * as config from '../config';
+import SvgU_UiLogomark, { U_UiSvgLogoString, U_UiSvgWordmarkString } from 'docs/src/icons/SvgU-Ui';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -143,12 +144,14 @@ function AppWrapper(props) {
   const productIdentifier = React.useMemo(() => {
     const languagePrefix = pageProps.userLanguage === 'es' ? '' : `/${pageProps.userLanguage}`;
 
-    if (productId === 'ui') {
+    if (productId === 'u-ui') {
       return {
         metadata: '',
-        name: 'Yushii UI',
-        logo: SvgYushiiLogomark,
-        wordmarkSvg: yushiiSvgWordmarkString,
+        name: 'U-Ui',
+        url: "/u-ui/",
+        logo: SvgU_UiLogomark,
+        logoSvg: U_UiSvgLogoString,
+        wordmarkSvg: U_UiSvgWordmarkString,
         versions: [{ text: `v${uiPkgJson.version}`, current: true }],
       };
     }
@@ -158,8 +161,8 @@ function AppWrapper(props) {
 
   const pageContextValue = React.useMemo(() => {
     let pages = generalDocsPages;
-    if (productId === 'ui') {
-      pages = uiPages;
+    if (productId === 'u-ui') {
+      pages = uUiPages;
     }
 
     const { activePage, activePageParents } = findActivePage(pages, router.pathname);

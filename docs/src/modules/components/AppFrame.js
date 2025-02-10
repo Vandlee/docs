@@ -1,17 +1,17 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
-import GlobalStyles from '@yushii/ui/GlobalStyles';
-import { styled, alpha } from '@yushii/ui/styles';
+import GlobalStyles from '@yushii/u-ui/GlobalStyles';
+import { styled, alpha } from '@yushii/u-ui/styles';
 import NProgress from 'nprogress';
-import CssBaseline from '@yushii/ui/CssBaseline';
-import AppBar from '@yushii/ui/AppBar';
-import Stack from '@yushii/ui/Stack';
-import IconButton from '@yushii/ui/IconButton';
-import Tooltip from '@yushii/ui/Tooltip';
-import Box from '@yushii/ui/Box';
+import CssBaseline from '@yushii/u-ui/CssBaseline';
+import AppBar from '@yushii/u-ui/AppBar';
+import Stack from '@yushii/u-ui/Stack';
+import IconButton from '@yushii/u-ui/IconButton';
+import Tooltip from '@yushii/u-ui/Tooltip';
+import Box from '@yushii/u-ui/Box';
 import NProgressBar from '@yushii/docs/NProgressBar';
-import { debounce } from '@yushii/ui/utils';
+import { debounce } from '@yushii/u-ui/utils';
 import AppNavDrawer from 'docs/src/modules/components/AppNavDrawer';
 import AppSettingsDrawer from 'docs/src/modules/components/AppSettingsDrawer';
 import MarkdownLinks from 'docs/src/modules/components/MarkdownLinks';
@@ -21,6 +21,7 @@ import { useTranslate } from '@yushii/docs/i18n';
 import LogoWithCopyMenu from 'docs/src/components/action/LogoWithCopyMenu';
 import AppFrameBanner from 'docs/src/components/banner/AppFrameBanner';
 import { GitHub, MenuRounded, SettingsRounded } from '@mui/icons-material';
+import { Divider } from '@yushii/u-ui';
 
 const nProgressStart = debounce(() => {
   NProgress.start();
@@ -202,9 +203,14 @@ export default function AppFrame(props) {
             <MenuRounded />
           </NavIconButton>
           <Box sx={{ display: { md: 'flex', lg: 'none' } }}>
+            <LogoWithCopyMenu />
+          </Box>
+          <Divider orientation='vertical' sx={{ height: 24}} />
+          <Box sx={{ display: { md: 'flex', lg: 'none' } }}>
             <LogoWithCopyMenu 
               logo={productIdentifier.logo}
               logoSvgString={productIdentifier.logoSvg}
+              url={productIdentifier.url}
               wordmarkSvgString={productIdentifier.wordmarkSvg}
               marginLeft
             />

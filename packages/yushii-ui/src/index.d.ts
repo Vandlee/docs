@@ -23,7 +23,7 @@ export type StandardProps<
   
 /**
  * @internal
- * ONLY USE FROM WITHIN yushii/ui
+ * ONLY USE FROM WITHIN yushii/u-ui
  *
  * Internal helper type for conform (describeConformance) components
  * However, we don't declare classes on this type.
@@ -158,6 +158,12 @@ export * from './Portal';
 
 export { default as Slide } from './Slide';
 export * from './Slide';
+
+export { default as Snackbar } from './Snackbar';
+export * from './Snackbar';
+
+export { default as SnackbarContent } from './SnackbarContent';
+export * from './SnackbarContent';
 
 export { default as Stack } from './Stack';
 export * from './Stack';

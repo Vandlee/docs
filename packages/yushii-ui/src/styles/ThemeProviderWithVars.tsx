@@ -47,7 +47,7 @@ function Experimental_CssVarsProvider(props: any) {
         [
           'Yushii: The Experimental_CssVarsProvider component has been ported into ThemeProvider.',
           '',
-          "You should use `import { ThemeProvider } from '@yushii/ui/styles` instead.",
+          "You should use `import { ThemeProvider } from '@yushii/u-ui/styles` instead.",
         ].join('\n'),
       );
 
@@ -67,7 +67,7 @@ const getInitColorSchemeScript: typeof deprecatedGetInitColorSchemeScript = (par
       [
         'Yushii: The getInitColorSchemeScript function has been deprecated.',
         '',
-        "You should use `import InitColorSchemeScript from '@yushii/ui/InitColorSchemeScript'`",
+        "You should use `import InitColorSchemeScript from '@yushii/u-ui/InitColorSchemeScript'`",
         'and replace the function call with `<InitColorSchemeScript />` instead.',
       ].join('\n'),
     );
@@ -85,8 +85,8 @@ const getInitColorSchemeScript: typeof deprecatedGetInitColorSchemeScript = (par
  * You should use `ThemeProvider` and `createTheme()` instead:
  *
  * ```diff
- * - import { CssVarsProvider, extendTheme } from '@yushii/ui/styles';
- * + import { ThemeProvider, createTheme } from '@yushii/ui/styles';
+ * - import { CssVarsProvider, extendTheme } from '@yushii/u-ui/styles';
+ * + import { ThemeProvider, createTheme } from '@yushii/u-ui/styles';
  *
  * - const theme = extendTheme();
  * + const theme = createTheme({

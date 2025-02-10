@@ -1,9 +1,9 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
-import { styled } from '@yushii/ui/styles';
+import { styled } from '@yushii/u-ui/styles';
 import { exactProp } from '@yushii/utils';
-import GlobalStyles from '@yushii/ui/GlobalStyles';
+import GlobalStyles from '@yushii/u-ui/GlobalStyles';
 import {
   AdManager,
   AD_MARGIN_TOP,
@@ -140,7 +140,7 @@ export default function AppLayoutDocs(props) {
   if (!productName) {
     console.error('productName mapping missing for', router.asPath);
   }
-
+  
   const Layout = disableLayout ? React.Fragment : AppFrame;
   const layoutProps = disableLayout ? {} : { BannerComponent };
 

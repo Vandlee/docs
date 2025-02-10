@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { alpha } from '@yushii/ui/styles';
+import { alpha } from '@yushii/u-ui/styles';
 import { Link } from '@yushii/docs/Link';
 import FEATURE_TOGGLE from 'docs/src/featureToggle';
 import PageContext from 'docs/src/modules/components/PageContext';

@@ -47,7 +47,7 @@
     "@babel/register": "^7.25.9",
     "@yushii/internal-docs-utils": "workspace:^",
     "@yushii/internal-scripts": "workspace:^",
-    "@yushii/ui": "workspace:^",
+    "@yushii/u-ui": "workspace:^",
     "@yushii/utils": "workspace:^",
     "@next/eslint-plugin-next": "^15.1.2",
     "@octokit/rest": "^21.0.2",

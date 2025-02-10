@@ -20,7 +20,7 @@ function isSerializable(val: any) {
  *
  * ```js
  * // next.config.js
- * const { extendTheme } = require('@yushii/ui/styles');
+ * const { extendTheme } = require('@yushii/u-ui/styles');
  *
  * const theme = extendTheme();
  * // `.toRuntimeSource` is Pigment CSS specific to create a theme that is available at runtime.
@@ -50,7 +50,7 @@ export function stringifyTheme(baseTheme: Record<string, any> = {}) {
 
   serializeTheme(serializableTheme);
 
-  return `import { unstable_createBreakpoints as createBreakpoints, createTransitions } from '@yushii/ui/styles';
+  return `import { unstable_createBreakpoints as createBreakpoints, createTransitions } from '@yushii/u-ui/styles';
 
 const theme = ${JSON.stringify(serializableTheme, null, 2)};
 

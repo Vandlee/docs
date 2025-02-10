@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Typography from '@yushii/ui/Typography';
+import Typography from '@yushii/u-ui/Typography';
 import { Link } from '@yushii/docs/Link';
 import ROUTES from 'docs/src/route';
 import FEATURE_TOGGLE from 'docs/src/featureToggle';

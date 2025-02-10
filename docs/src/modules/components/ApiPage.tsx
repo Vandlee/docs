@@ -3,8 +3,8 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { ComponentApiContent, PropsTranslations } from '@yushii-internal/api-docs-builder';
 import exactProp from '@yushii/utils/exactProp';
-import Typography from '@yushii/ui/Typography';
-/* import Alert from '@yushii/ui/Alert'; */
+import Typography from '@yushii/u-ui/Typography';
+/* import Alert from '@yushii/u-ui/Alert'; */
 import { TableOfContentsEntry } from '@yushii/internal-markdown';
 import { Ad, AdGuest } from '@yushii/docs/Ad';
 /* import VerifiedRoundedIcon from '@mui/icons-material/VerifiedRounded';

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { styled } from '@yushii/ui/styles';
-import Container from '@yushii/ui/Container';
+import { styled } from '@yushii/u-ui/styles';
+import Container from '@yushii/u-ui/Container';
 
 const StyledAppContainer = styled(Container)(({ theme }) => {
   return {

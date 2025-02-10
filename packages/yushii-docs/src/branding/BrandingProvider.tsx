@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ThemeProvider, useTheme } from '@yushii/ui/styles';
+import { ThemeProvider, useTheme } from '@yushii/u-ui/styles';
 import { brandingDarkTheme, brandingLightTheme } from './brandingTheme';
 
 export interface BrandingProviderProps {

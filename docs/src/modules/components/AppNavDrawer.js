@@ -1,20 +1,20 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import Button from '@yushii/ui/Button';
-import Divider from '@yushii/ui/Divider';
-import { styled, alpha, ThemeProvider } from '@yushii/ui/styles';
-import List from '@yushii/ui/List';
-import Drawer from '@yushii/ui/Drawer';
-import Typography from '@yushii/ui/Typography';
-import SwipeableDrawer from '@yushii/ui/SwipeableDrawer';
-import ClickAwayListener from '@yushii/ui/ClickAwayListener';
-import Fade from '@yushii/ui/Fade';
-import Paper from '@yushii/ui/Paper';
-import Popper from '@yushii/ui/Popper';
-import Menu from '@yushii/ui/Menu';
-import MenuItem from '@yushii/ui/MenuItem';
-import useMediaQuery from '@yushii/ui/useMediaQuery';
-import Box from '@yushii/ui/Box';
+import Button from '@yushii/u-ui/Button';
+import Divider from '@yushii/u-ui/Divider';
+import { styled, alpha, ThemeProvider } from '@yushii/u-ui/styles';
+import List from '@yushii/u-ui/List';
+import Drawer from '@yushii/u-ui/Drawer';
+import Typography from '@yushii/u-ui/Typography';
+import SwipeableDrawer from '@yushii/u-ui/SwipeableDrawer';
+import ClickAwayListener from '@yushii/u-ui/ClickAwayListener';
+import Fade from '@yushii/u-ui/Fade';
+import Paper from '@yushii/u-ui/Paper';
+import Popper from '@yushii/u-ui/Popper';
+import Menu from '@yushii/u-ui/Menu';
+import MenuItem from '@yushii/u-ui/MenuItem';
+import useMediaQuery from '@yushii/u-ui/useMediaQuery';
+import Box from '@yushii/u-ui/Box';
 import { unstable_useEnhancedEffect as useEnhancedEffect } from '@yushii/utils';
 import { ArrowDropDownRounded, 
     DoneRounded } from '@mui/icons-material';
@@ -156,7 +156,7 @@ function ProductIdentifier(props) {
             </Typography>
             <Box sx={{ display: 'flex' }}>
                 <ProductDrawerButton productName={name} />
-                {/* {versionSelector} */}
+                {versionSelector}
             </Box>
         </Box>
     );
@@ -357,7 +357,6 @@ export default function AppNavDrawer(props) {
     
           const currentVersion = versions.find((version) => version.current) || versions[0];
 
-          console.log(currentVersion)
             return (
                 <React.Fragment>
                     <Button
@@ -419,10 +418,14 @@ export default function AppNavDrawer(props) {
         return (
             <React.Fragment>
                 <ToolbarDiv>
-                    <LogoWithCopyMenu
+                    <LogoWithCopyMenu />
+                    <Divider orientation='vertical' sx={{ height: 24}} />
+                    <LogoWithCopyMenu 
                         logo={productIdentifier.logo}
                         logoSvgString={productIdentifier.logoSvg}
+                        url={productIdentifier.url}
                         wordmarkSvgString={productIdentifier.wordmarkSvg}
+                        marginLeft
                     />
                     <ProductIdentifier
                         name={productIdentifier.name}

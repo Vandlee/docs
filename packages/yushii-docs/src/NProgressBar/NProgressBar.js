@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import NProgress from 'nprogress';
 import { NoSsr } from '@yushii/base/NoSsr';
 import { exactProp } from '@yushii/utils';
-import GlobalStyles from '@yushii/ui/GlobalStyles';
-import { keyframes } from '@yushii/ui/styles';
+import GlobalStyles from '@yushii/u-ui/GlobalStyles';
+import { keyframes } from '@yushii/u-ui/styles';
 
 NProgress.configure({
   barSelector: '.nprogress-bar',

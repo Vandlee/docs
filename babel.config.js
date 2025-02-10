@@ -27,7 +27,7 @@ module.exports = function getBabelConfig(api) {
   const useESModules = api.env(['regressions', 'modern', 'stable']);
 
   const defaultAlias = {
-    '@yushii/ui': resolveAliasPath('./packages/yushii-ui/src'),
+    '@yushii/u-ui': resolveAliasPath('./packages/yushii-ui/src'),
     '@yushii/docs': resolveAliasPath('./packages/yushii-docs/src'),
     '@yushii/internal-markdown': resolveAliasPath('./packages/markdown'),
     '@yushii/styled-engine': resolveAliasPath('./packages/yushii-styled-engine/src'),

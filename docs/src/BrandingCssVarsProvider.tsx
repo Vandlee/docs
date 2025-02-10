@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { deepmerge } from '@yushii/utils';
-import { CssVarsProvider, extendTheme, PaletteColorOptions } from '@yushii/ui/styles';
-import CssBaseline from '@yushii/ui/CssBaseline';
+import { CssVarsProvider, extendTheme, PaletteColorOptions } from '@yushii/u-ui/styles';
+import CssBaseline from '@yushii/u-ui/CssBaseline';
 import { NextNProgressBar } from 'docs/src/modules/components/AppFrame';
 import { getDesignTokens, getThemedComponents } from '@yushii/docs/branding';
 import SkipLink from 'docs/src/modules/components/SkipLink';
 import MarkdownLinks from 'docs/src/modules/components/MarkdownLinks';
 
-declare module '@yushii/ui/styles' {
+declare module '@yushii/u-ui/styles' {
   interface PaletteOptions {
     primaryDark?: PaletteColorOptions;
   }

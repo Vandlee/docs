@@ -105,7 +105,7 @@ ReactDOM.createRoot(document.querySelector("#root")${type}).render(
   }
   return `import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
-import { StyledEngineProvider } from '@yushii/ui/styles';
+import { StyledEngineProvider } from '@yushii/u-ui/styles';
 import Demo from './Demo';
 
 ReactDOM.createRoot(document.querySelector("#root")${type}).render(

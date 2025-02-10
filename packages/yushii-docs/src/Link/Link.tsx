@@ -2,8 +2,8 @@ import * as React from 'react';
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
 import NextLink, { LinkProps as NextLinkProps } from 'next/link';
-import YushiiLink, { LinkProps as YushiiLinkProps } from '@yushii/ui/Link';
-import { styled } from '@yushii/ui/styles';
+import YushiiLink, { LinkProps as YushiiLinkProps } from '@yushii/u-ui/Link';
+import { styled } from '@yushii/u-ui/styles';
 import { useUserLanguage } from '../i18n';
 import { useDocsConfig } from '../DocsProvider';
 

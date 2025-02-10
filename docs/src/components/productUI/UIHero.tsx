@@ -1,13 +1,14 @@
 import * as React from 'react';
-import { extendTheme, CssVarsProvider } from '@yushii/ui/styles';
+import { extendTheme, CssVarsProvider } from '@yushii/u-ui/styles';
 import HeroContainer from 'docs/src/layouts/HeroContainer';
-import Box from '@yushii/ui/Box';
-import Paper from '@yushii/ui/Paper';
-import Typography from '@yushii/ui/Typography';
+import Box from '@yushii/u-ui/Box';
+import Paper from '@yushii/u-ui/Paper';
+import Typography from '@yushii/u-ui/Typography';
 import GradientText from 'docs/src/components/typography/GradientText';
 import GetStartedButtons from 'docs/src/components/home/GetStartedButtons';
 import ROUTES from 'docs/src/route';
 import { getDesignTokens } from '@yushii/docs/branding';
+import { Link } from '@yushii/docs/Link';
 
 const { palette: lightPalette } = getDesignTokens('light');
 const { palette: darkPalette } = getDesignTokens('dark');
@@ -58,12 +59,12 @@ export default function UIHero() {
             ]}
           >
             {/* <IconImage loading="eager" width={28} height={28} name="product-core" />{' '}
-                        <Link href={ROUTES.productCore}>MUI Core</Link>{' '} */}
-            <Typography component="span" variant="inherit" sx={{ color: 'divider' }}>
+            */}<Link href={ROUTES.productCore}>U-Core</Link>{' '}
+            <Typography component="span" variant="inherit" sx={{ color: 'grey.400' }}>
               /
             </Typography>
             <Typography component="span" variant="inherit" sx={{ color: 'text.primary' }}>
-              UI
+              U-Ui
             </Typography>
           </Typography>
           <Typography variant="h1" sx={{ my: 2, maxWidth: 500 }}>
@@ -73,10 +74,10 @@ export default function UIHero() {
             components
           </Typography>
           <GetStartedButtons
-            primaryUrl={ROUTES.uiDocs}
+            primaryUrl={ROUTES.uUiDocs}
             secondaryLabel="View templates"
             secondaryUrl={ROUTES.freeTemplates}
-            altInstallation="npm install @yushii/ui @emotion/react @emotion/styled"
+            altInstallation="npm install @yushii/u-ui @emotion/react @emotion/styled"
           />
         </Box>
       }

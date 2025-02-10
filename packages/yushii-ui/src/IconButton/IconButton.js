@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import chainPropTypes from '@yushii/utils/chainPropTypes';
 import composeClasses from '@yushii/utils/composeClasses';
-import { unstable_useId as useId } from '@yushii/ui/utils';
+import { unstable_useId as useId } from '@yushii/u-ui/utils';
 import { alpha } from '@yushii/system/colorManipulator';
 import { styled } from '../zero-styled';
 import memoTheme from '../utils/memoTheme';
@@ -126,6 +126,17 @@ const IconButtonRoot = styled(ButtonBase, {
                     : alpha((theme.vars || theme).palette[color].main, theme.palette.action.hoverOpacity),
                 },
                 })),
+            {
+                props: { color: 'accent' },
+                style: {
+                    backgroundColor: (theme.vars || theme).palette.text.primary,
+                    color: (theme.vars || theme).palette.background.default,
+                    '&:hover': {
+                        backgroundColor: (theme.vars || theme).palette.text.secondary,
+                        color: (theme.vars || theme).palette.background.paper,
+                    }
+                }
+            },
             {
                 props: { color: 'neutral' },
                 style: {

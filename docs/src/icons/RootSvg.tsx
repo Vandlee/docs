@@ -1,4 +1,4 @@
-import { styled, Theme } from '@yushii/ui/styles';
+import { styled, Theme } from '@yushii/u-ui/styles';
 import { SxProps } from '@yushii/system';
 
 export type RootSvgProps<P = unknown> = Omit<React.SVGProps<SVGSVGElement>, 'ref'> & {

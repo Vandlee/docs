@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Alert, { AlertProps } from '@yushii/ui/Alert';
+import Alert, { AlertProps } from '@yushii/u-ui/Alert';
 
 export default function DemoEditorError(props: AlertProps) {
   if (!props.children) {

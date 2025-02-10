@@ -3,7 +3,7 @@ import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
 export type YushiiProductId = 
   | 'null' 
   | 'base-ui'
-  | 'ui';
+  | 'u-ui';
 
 type YushiiProductCategoryId = 'null' | 'core';
 
@@ -20,10 +20,10 @@ export default function getProductInfoFromUrl(asPath: string): YushiiProductInfo
   let productId = 'null';
 
   if (
-    firstFolder === 'ui' ||
+    firstFolder === 'u-ui' ||
     firstFolder === 'base-ui'
   ) {
-    productCategoryId = 'core';
+    productCategoryId = 'u-core';
     productId = firstFolder;
   }
 

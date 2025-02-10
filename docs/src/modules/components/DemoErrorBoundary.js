@@ -1,8 +1,8 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import Typography from '@yushii/ui/Typography';
-import Link from '@yushii/ui/Link';
-import Button from '@yushii/ui/Button';
+import Typography from '@yushii/u-ui/Typography';
+import Link from '@yushii/u-ui/Link';
+import Button from '@yushii/u-ui/Button';
 
 /**
  * Based on https://github.com/sindresorhus/new-github-issue-url/blob/061fa0ddb7d51f3b96d3a0f6a6bebb196f105a7b/index.js

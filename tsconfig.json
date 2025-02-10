@@ -15,8 +15,8 @@
     "noErrorTruncation": false,
     "allowJs": true,
     "paths": {
-      "@yushii/ui": ["./packages/yushii-ui/src"],
-      "@yushii/ui/*": ["./packages/yushii-ui/src/*"],
+      "@yushii/u-ui": ["./packages/yushii-ui/src"],
+      "@yushii/u-ui/*": ["./packages/yushii-ui/src/*"],
       "@yushii/internal-markdown": ["./packages/markdown"],
       "@yushii/internal-markdown/*": ["./packages/markdown/*"],
       "@yushii/styled-engine": ["./packages/yushii-styled-engine/src"],
@@ -29,8 +29,8 @@
       "@yushii/utils/*": ["./packages/yushii-utils/src/*"],
       "@yushii/docs": ["./packages/yushii-docs/src"],
       "@yushii/docs/*": ["./packages/yushii-docs/src/*"],
-      "@yushii/ui-nextjs": ["./packages/yushii-ui-nextjs/src"],
-      "@yushii/ui-nextjs/*": ["./packages/yushii-ui-nextjs/src/*"],
+      "@yushii/u-ui-nextjs": ["./packages/yushii-ui-nextjs/src"],
+      "@yushii/u-ui-nextjs/*": ["./packages/yushii-ui-nextjs/src/*"],
       "@yushii/internal-docs-utils": ["./packages-internal/docs-utils/src"],
       "@yushii/internal-scripts/typescript-to-proptypes": [
         "./packages-internal/scripts/typescript-to-proptypes/src"

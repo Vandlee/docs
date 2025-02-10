@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Slide } from '@yushii/ui';
+import { Box, Slide } from '@yushii/u-ui';
 import { RootSvgProps } from 'docs/src/icons/RootSvg';
 import SvgYushiiLogomark from 'docs/src/icons/SvgYugashikiLogomark';
 import { ExpandMoreRounded, ExpandLessRounded } from '@mui/icons-material';

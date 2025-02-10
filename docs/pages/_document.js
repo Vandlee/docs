@@ -1,11 +1,11 @@
 import * as React from 'react';
 import Script from 'next/script';
-import { documentGetInitialProps } from '@yushii/ui-nextjs/v13-pagesRouter';
+import { documentGetInitialProps } from '@yushii/u-ui-nextjs/v13-pagesRouter';
 import { ServerStyleSheets as JSSServerStyleSheets } from '@mui/styles';
 import { ServerStyleSheet } from 'styled-components';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import GlobalStyles from '@yushii/ui/GlobalStyles';
-import YushiiInitColorSchemeScript from '@yushii/ui/InitColorSchemeScript';
+import GlobalStyles from '@yushii/u-ui/GlobalStyles';
+import YushiiInitColorSchemeScript from '@yushii/u-ui/InitColorSchemeScript';
 import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
 import createEmotionCache from 'docs/src/createEmotionCache';
 import { getMetaThemeColor } from '@yushii/docs/branding';

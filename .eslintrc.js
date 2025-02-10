@@ -17,7 +17,7 @@ const OneLevelImportMessage = [
   'See https://github.com/mui/material-ui/pull/24147 for the kind of win it can unlock.',
 ].join('\n');
 // This only applies to packages published from this monorepo.
-// If you build a library around `@yushii/ui` you can safely use `createStyles` without running into the same issue as we are.
+// If you build a library around `@yushii/u-ui` you can safely use `createStyles` without running into the same issue as we are.
 const forbidCreateStylesMessage =
   'Use `YushiiStyles<ClassKey, Props>` instead if the styles are exported. Otherwise use `as const` assertions. ' +
   '`createStyles` will lead to inlined, at-compile-time-resolved type-imports. ' +
@@ -27,7 +27,7 @@ const ENABLE_REACT_COMPILER_PLUGIN = false;
 
 const NO_RESTRICTED_IMPORTS_PATHS_TOP_LEVEL_PACKAGES = [
   {
-    name: '@yushii/ui',
+    name: '@yushii/u-ui',
     message: OneLevelImportMessage,
   },
   {
@@ -432,7 +432,7 @@ module.exports = /** @type {Config} */ ({
           {
             paths: [
               {
-                name: '@yushii/ui/styles',
+                name: '@yushii/u-ui/styles',
                 importNames: ['createStyles'],
                 message: forbidCreateStylesMessage,
               },

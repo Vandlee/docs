@@ -1,5 +1,5 @@
 {
-  "name": "@yushii/ui-pigment-css",
+  "name": "@yushii/u-ui-pigment-css",
   "version": "6.4.1",
   "author": "Yushii",
   "description": "A wrapper over Pigment CSS that provides the same styled and theming APIs as Material UI.",

@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Typography from '@yushii/ui/Typography';
-import Box from '@yushii/ui/Box';
-import Paper from '@yushii/ui/Paper';
+import Typography from '@yushii/u-ui/Typography';
+import Box from '@yushii/u-ui/Box';
+import Paper from '@yushii/u-ui/Paper';
 import { useTranslate } from '../i18n';
 import AdCarbon from './AdCarbon';
 import AdInHouse from './AdInHouse';

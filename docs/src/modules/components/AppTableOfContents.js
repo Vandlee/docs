@@ -2,9 +2,9 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import throttle from 'lodash/throttle';
-import { styled, alpha } from '@yushii/ui/styles';
-import Typography from '@yushii/ui/Typography';
-import NoSsr from '@yushii/ui/NoSsr';
+import { styled, alpha } from '@yushii/u-ui/styles';
+import Typography from '@yushii/u-ui/Typography';
+import NoSsr from '@yushii/u-ui/NoSsr';
 import { Link } from '@yushii/docs/Link';
 import { useTranslate } from '@yushii/docs/i18n';
 import { samePageLinkNavigation } from 'docs/src/modules/components/MarkdownLinks';

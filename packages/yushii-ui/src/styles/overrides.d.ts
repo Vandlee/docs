@@ -111,8 +111,10 @@ import { ScopedCssBaselineClassKey } from '../ScopedCssBaseline';
 import { SelectClassKey } from '../Select';
 import { SkeletonClassKey } from '../Skeleton';
 import { SliderClassKey } from '../Slider';
+*/
 import { SnackbarClassKey } from '../Snackbar';
 import { SnackbarContentClassKey } from '../SnackbarContent';
+/*
 import { SpeedDialClassKey } from '../SpeedDial';
 import { SpeedDialActionClassKey } from '../SpeedDialAction';
 import { SpeedDialIconClassKey } from '../SpeedDialIcon';
@@ -289,8 +291,10 @@ export interface ComponentNameToClassKey {
   YushiiSelect: SelectClassKey;
   YushiiSkeleton: SkeletonClassKey;
   YushiiSlider: SliderClassKey;
+  */
   YushiiSnackbar: SnackbarClassKey;
   YushiiSnackbarContent: SnackbarContentClassKey;
+  /*
   YushiiSpeedDial: SpeedDialClassKey;
   YushiiSpeedDialAction: SpeedDialActionClassKey;
   YushiiSpeedDialIcon: SpeedDialIconClassKey;

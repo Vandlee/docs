@@ -1,6 +1,6 @@
 declare module 'docs/src/modules/components/HighlightedCode' {
   import * as React from 'react';
-  import { StyledComponentProps } from '@yushii/ui/styles';
+  import { StyledComponentProps } from '@yushii/u-ui/styles';
 
   type ClassKey = 'root';
   export interface Props extends StyledComponentProps<ClassKey> {

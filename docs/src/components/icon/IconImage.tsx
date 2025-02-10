@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { useTheme, styled, Theme } from '@yushii/ui/styles';
-import Box from '@yushii/ui/Box';
+import { useTheme, styled, Theme } from '@yushii/u-ui/styles';
+import Box from '@yushii/u-ui/Box';
 import { SxProps } from '@yushii/system';
 
 export type IconImageProps = {

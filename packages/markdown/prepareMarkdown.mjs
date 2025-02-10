@@ -16,7 +16,7 @@ const BaseUIReexportedComponents = ['ClickAwayListener', 'NoSsr', 'Portal', 'Tex
 
 /**
  * @param {string} productId
- * @example 'ui'
+ * @example 'u-ui'
  * @param {string} componentPkg
  * @example 'yushii-base'
  * @param {string} component
@@ -114,39 +114,41 @@ function prepareMarkdown(config) {
       const contents = getContents(markdown);
 
       if (headers.unstyled) {
-        contents.push(`
-## Unstyled
-
-Use the [Base UI ${markdownH1}](${headers.unstyled}) for complete ownership of the component's design, with no UI styles to override.
-This unstyled version of the component is the ideal choice for heavy customization with a smaller bundle size.
-        `);
+        const unstyledTexts = {
+          es: `## Sin Estilos\n\nSi quiere controlar completamente el diseño del componente, sin estilos de interfaz de usuario que modificar, use [la versión U-Base](${headers.unstyled}).
+        Esta versión sin estilos del componente es la opción ideal para una gran personalización con un tamaño de paquete más pequeño.`,
+          en: `## Unstyled\n\nIf you want full control over the component’s design, without any UI styles to override, use [the U-Base version](${headers.unstyled}).
+        This unstyled version of the component is the best choice for extensive customization with a smaller package size.`
+        };
+        
+        contents.push(unstyledTexts[userLanguage] || unstyledTexts.es);
+        
       }
 
       if (headers.components.length > 0 && headers.productId !== 'base-ui') {
-        contents.push(`
-## API
-
-See the documentation below for a complete reference to all of the props and classes available to the components mentioned here.
-
-${headers.components
-  .map((component) => {
-    const componentPkgMap = componentPackageMapping[headers.productId];
-    const componentPkg = componentPkgMap ? componentPkgMap[component] : null;
-    return `- [\`<${component} />\`](${resolveComponentApiUrl(
-      headers.productId,
-      componentPkg,
-      component,
-    )})`;
-  })
-  .join('\n')}
-${headers.hooks
-  .map((hook) => {
-    const componentPkgMap = componentPackageMapping[headers.productId];
-    const componentPkg = componentPkgMap ? componentPkgMap[hook] : null;
-    return `- [\`${hook}\`](${resolveComponentApiUrl(headers.productId, componentPkg, hook)})`;
-  })
-  .join('\n')}
-  `);
+        const apiHeaders = {
+          es: "## API\n\nConsulte la siguiente documentación para obtener una referencia completa de todos los accesorios y clases disponibles para los componentes mencionados aquí.",
+          en: "## API\n\nRefer to the following documentation for a complete reference of all props and classes available for the mentioned components."
+        };
+        
+        const apiList = headers.components
+          .map((component) => {
+            const componentPkgMap = componentPackageMapping[headers.productId];
+            const componentPkg = componentPkgMap ? componentPkgMap[component] : null;
+            return `- [\`<${component} />\`](${resolveComponentApiUrl(headers.productId, componentPkg, component)})`;
+          })
+          .join("\n");
+        
+        const apiHooks = headers.hooks
+          .map((hook) => {
+            const componentPkgMap = componentPackageMapping[headers.productId];
+            const componentPkg = componentPkgMap ? componentPkgMap[hook] : null;
+            return `- [\`${hook}\`](${resolveComponentApiUrl(headers.productId, componentPkg, hook)})`;
+          })
+          .join("\n");
+        
+        contents.push(`${apiHeaders[userLanguage] || apiHeaders.es}\n\n${apiList}\n${apiHooks}`);
+        
       }
 
       const toc = [];

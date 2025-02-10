@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { unstable_useEnhancedEffect as useEnhancedEffect } from '@yushii/ui/utils';
+import { unstable_useEnhancedEffect as useEnhancedEffect } from '@yushii/u-ui/utils';
 
 type AdPortal = {
   placement: 'body-top';

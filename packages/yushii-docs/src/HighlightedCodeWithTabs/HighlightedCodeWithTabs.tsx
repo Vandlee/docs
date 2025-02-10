@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { styled, alpha } from '@yushii/ui/styles';
+import { styled, alpha } from '@yushii/u-ui/styles';
 import { Tabs, TabsOwnProps } from '@yushii/base/Tabs';
 import { TabsList as TabsListBase } from '@yushii/base/TabsList';
 import { TabPanel as TabPanelBase } from '@yushii/base/TabPanel';

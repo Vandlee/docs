@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { SxProps } from '@yushii/system';
 import { OverridableStringUnion } from '@mui/types';
-import { OverridableComponent, OverrideProps } from '@yushii/ui/OverridableComponent';
+import { OverridableComponent, OverrideProps } from '@yushii/u-ui/OverridableComponent';
 import { PropTypes, Theme } from '..';
 import { AppBarClasses } from './appBarClasses';
 import { ExtendPaperTypeMap } from '../Paper/Paper';

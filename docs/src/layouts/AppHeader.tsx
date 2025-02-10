@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { styled, alpha } from '@yushii/ui/styles';
-import GlobalStyles from '@yushii/ui/GlobalStyles';
-import Box from '@yushii/ui/Box';
-import Stack from '@yushii/ui/Stack';
-import Container from '@yushii/ui/Container';
-import Tooltip from '@yushii/ui/Tooltip';
-import IconButton from '@yushii/ui/IconButton';
+import { styled, alpha } from '@yushii/u-ui/styles';
+import GlobalStyles from '@yushii/u-ui/GlobalStyles';
+import Box from '@yushii/u-ui/Box';
+import Stack from '@yushii/u-ui/Stack';
+import Container from '@yushii/u-ui/Container';
+import Tooltip from '@yushii/u-ui/Tooltip';
+import IconButton from '@yushii/u-ui/IconButton';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LogoWithCopyMenu from 'docs/src/components/action/LogoWithCopyMenu';
 import HeaderNavBar from 'docs/src/components/header/HeaderNavBar';

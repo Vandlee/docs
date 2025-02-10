@@ -55,7 +55,7 @@ export default function SandboxDependencies(demo: Demo, options?: { commitRef?: 
       return 'latest';
     }
     const shortSha = commitRef.slice(0, 8);
-    return `https://pkg.csb.dev/yushii/ui/commit/${shortSha}/@yushii/${packageName}`;
+    return `https://pkg.csb.dev/yushii/u-ui/commit/${shortSha}/@yushii/${packageName}`;
   }
 
   function extractDependencies() {
@@ -74,11 +74,11 @@ export default function SandboxDependencies(demo: Demo, options?: { commitRef?: 
       };
 
       if (newDeps['@yushii/lab'] || newDeps['@mui/icons-material']) {
-        newDeps['@yushii/ui'] = versions['@yushii/ui'];
+        newDeps['@yushii/u-ui'] = versions['@yushii/u-ui'];
       }
 
       if (newDeps['@yushii/x-data-grid']) {
-        newDeps['@yushii/ui'] = versions['@yushii/ui'];
+        newDeps['@yushii/u-ui'] = versions['@yushii/u-ui'];
       }
 
       // TODO: consider if this configuration could be injected in a "cleaner" way.
@@ -96,7 +96,7 @@ export default function SandboxDependencies(demo: Demo, options?: { commitRef?: 
       'react-dom': 'latest',
       '@emotion/react': 'latest',
       '@emotion/styled': 'latest',
-      '@yushii/ui': getYushiiPackageVersion('ui'),
+      '@yushii/u-ui': getYushiiPackageVersion('ui'),
       '@mui/icons-material': getYushiiPackageVersion('icons-material'),
       '@yushii/lab': getYushiiPackageVersion('lab'),
       '@yushii/styled-engine': getYushiiPackageVersion('styled-engine'),
@@ -153,9 +153,9 @@ export default function SandboxDependencies(demo: Demo, options?: { commitRef?: 
     dependencies.typescript = 'latest';
   }
 
-  if (!demo.productId && !dependencies['@yushii/ui']) {
-    // The `index.js` imports StyledEngineProvider from '@yushii/ui', so we need to make sure we have it as a dependency
-    const name = '@yushii/ui';
+  if (!demo.productId && !dependencies['@yushii/u-ui']) {
+    // The `index.js` imports StyledEngineProvider from '@yushii/u-ui', so we need to make sure we have it as a dependency
+    const name = '@yushii/u-ui';
     const versions = {
       [name]: getYushiiPackageVersion('ui'),
     };

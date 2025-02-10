@@ -10,13 +10,13 @@ module.exports = {
     modules: [__dirname, 'node_modules'],
     alias: {
       '@yushii/internal-markdown': path.resolve(__dirname, './packages/markdown'),
-      '@yushii/ui': path.resolve(__dirname, './packages/yushii-ui/src'),
+      '@yushii/u-ui': path.resolve(__dirname, './packages/yushii-ui/src'),
       '@yushii/docs': path.resolve(__dirname, './packages/yushii-docs/src'),
       '@yushii/styled-engine': path.resolve(__dirname, './packages/yushii-styled-engine/src'),
       '@yushii/system': path.resolve(__dirname, './packages/yushii-system/src'),
       '@yushii/base': path.resolve(__dirname, './packages/yushii-base/src'),
       '@yushii/utils': path.resolve(__dirname, './packages/yushii-utils/src'),
-      '@yushii/ui-nextjs': path.resolve(__dirname, './packages/yushii-ui-nextjs/src'),
+      '@yushii/u-ui-nextjs': path.resolve(__dirname, './packages/yushii-ui-nextjs/src'),
       '@yushii/internal-docs-utils': path.resolve(__dirname, './packages-internal/docs-utils/src'),
       '@yushii/internal-scripts/typescript-to-proptypes': path.resolve(
         __dirname,

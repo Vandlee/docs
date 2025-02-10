@@ -1,5 +1,5 @@
 {
-  "name": "@yushii/ui",
+  "name": "@yushii/u-ui",
   "version": "1.0.0",
   "private": false,
   "author": "yugashiki",
@@ -60,7 +60,7 @@
   "peerDependencies": {
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
-    "@yushii/ui-pigment-css": "workspace:^",
+    "@yushii/u-ui-pigment-css": "workspace:^",
     "@types/react": "^17.0.0 || ^18.0.0 || ^19.0.0",
     "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
     "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"

@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { Translate, useTranslate } from '@yushii/docs/i18n';
 import { SectionTitle } from '@yushii/docs/SectionTitle';
-import Box from '@yushii/ui/Box';
+import Box from '@yushii/u-ui/Box';
 import ToggleDisplayOption, {
   ApiDisplayOptions,
   useApiPageOption,

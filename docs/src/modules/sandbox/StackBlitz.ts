@@ -115,7 +115,7 @@ function createMaterialTemplate(templateData: {
     }),
     [`index.${ext}`]: `import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
-import { StyledEngineProvider } from '@yushii/ui/styles';
+import { StyledEngineProvider } from '@yushii/u-ui/styles';
 import App from './App';
 
 ReactDOM.createRoot(document.querySelector("#root")${type}).render(

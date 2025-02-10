@@ -1,15 +1,17 @@
 import * as React from 'react';
 import NextLink from 'next/link';
-import { styled, alpha, Theme } from '@yushii/ui/styles';
-import Box from '@yushii/ui/Box';
-import Typography from '@yushii/ui/Typography';
-import Chip from '@yushii/ui/Chip';
-import Divider from '@yushii/ui/Divider';
-import MenuList, { MenuListProps } from '@yushii/ui/MenuList';
-import MenuItem, { MenuItemProps } from '@yushii/ui/MenuItem';
+import { styled, alpha, Theme } from '@yushii/u-ui/styles';
+import Box from '@yushii/u-ui/Box';
+import Typography from '@yushii/u-ui/Typography';
+import Chip from '@yushii/u-ui/Chip';
+import Divider from '@yushii/u-ui/Divider';
+import MenuList, { MenuListProps } from '@yushii/u-ui/MenuList';
+import MenuItem, { MenuItemProps } from '@yushii/u-ui/MenuItem';
 import ROUTES from 'docs/src/route';
 import PageContext from 'docs/src/modules/components/PageContext';
 import SvgYushiiLogomark from 'docs/src/icons/SvgYushiiLogomark';
+import { Link } from '@yushii/docs/Link';
+import SvgU_UiLogomark from 'docs/src/icons/SvgU-Ui';
 /* import SvgBaseUiLogo from 'docs/src/icons/SvgBaseUiLogo';
 import SvgToolpadCoreLogo from 'docs/src/icons/SvgToolpadCoreLogo'; */
 /* import BackupTableRoundedIcon from '@mui/icons-material/BackupTableRounded';
@@ -40,6 +42,9 @@ const NavLabel = styled(Typography)(({ theme }) => ({
     textTransform: 'uppercase',
     letterSpacing: '.1rem',
     color: (theme.vars || theme).palette.text.tertiary,
+    '&:hover': {
+      color: (theme.vars || theme).palette.text.primary
+    }
 }));
 
 interface ProductItemProps extends MenuItemProps {
@@ -133,11 +138,11 @@ function ProductItem({
 
 const coreProducts = [
   {
-    id: 'ui',
-    name: 'Yushii UI',
+    id: 'u-ui',
+    name: 'U-Ui',
     description: 'Comprehensive foundational components.',
-    icon: <SvgYushiiLogomark width={14} height={14} sx={logoColor} />,
-    href: ROUTES.uiDocs,
+    icon: <SvgU_UiLogomark height={24} sx={logoColor} />,
+    href: ROUTES.uUiDocs,
   },
 ];
 
@@ -162,6 +167,20 @@ const YushiiProductSelector = React.forwardRef(function YushiiProductSelector(
         gap: '4px',
       }}
     >
+      <Box
+        key="X components"
+        role="none"
+        sx={{
+          gridColumn: {
+            xs: '1 / span 1',
+            sm: '1 / span 2',
+          },
+        }}
+      >
+      <Link href="/u-core/">
+        <NavLabel>U-Core Components</NavLabel>
+      </Link>
+      </Box>
       {coreProducts.map((product) => (
         <ProductItem
           key={product.name}

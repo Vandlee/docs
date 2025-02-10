@@ -1,13 +1,14 @@
 {
   "pages": {
-    "/ui/getting-started-group": "Primeros pasos",
-    "/ui/getting-started": "Resumen",
-    "/ui/getting-started/installation": "Instalación",
-    "/ui/getting-started/usage": "Uso",
-    "/ui/getting-started/learn": "Aprende",
-    "/ui/getting-started/faq": "FAQs",
-    "/ui/getting-started/supported-platforms": "Plataformas soportadas",
-    "/ui/react-": "Componentes",
-    "/ui/react-button": "Botón"
+    "/u-ui/getting-started-group": "Primeros pasos",
+    "/u-ui/getting-started": "Resumen",
+    "/u-ui/getting-started/installation": "Instalación",
+    "/u-ui/getting-started/usage": "Uso",
+    "/u-ui/getting-started/learn": "Aprende",
+    "/u-ui/getting-started/faq": "FAQs",
+    "/u-ui/getting-started/supported-platforms": "Plataformas soportadas",
+    "/u-ui/react-": "Componentes",
+    "/u-ui/all-components": "Todos los componentes",
+    "/u-ui/react-button": "Botón"
   }
 }

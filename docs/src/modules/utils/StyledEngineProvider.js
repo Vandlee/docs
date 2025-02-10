@@ -5,7 +5,7 @@ import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import { prefixer } from 'stylis';
 import rtlPlugin from 'stylis-plugin-rtl';
-import { useTheme } from '@yushii/ui/styles';
+import { useTheme } from '@yushii/u-ui/styles';
 import globalSelector from './globalSelector';
 
 // Cache for the rtl version of the styles

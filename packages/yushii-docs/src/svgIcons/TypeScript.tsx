@@ -1,5 +1,5 @@
 import * as React from 'react';
-import SvgIcon, { SvgIconProps } from '@yushii/ui/SvgIcon';
+import SvgIcon, { SvgIconProps } from '@yushii/u-ui/SvgIcon';
 
 function TypeScript(props: SvgIconProps) {
   return (

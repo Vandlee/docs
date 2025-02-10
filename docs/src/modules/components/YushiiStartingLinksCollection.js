@@ -1,13 +1,13 @@
 import * as React from 'react';
-import Grid from '@yushii/ui/Grid2';
+import Grid from '@yushii/u-ui/Grid2';
 import { InstallDesktopRounded, WebRounded, DrawRounded, PlayCircleFilledWhiteRounded, DesignServicesRounded } from '@mui/icons-material';
 import { InfoCard } from '@yushii/docs/InfoCard';
 
 const content = [
     {
         title: "Installation",
-        description: "Add Yushii UI to your project with a few commands.",
-        link: '/ui/getting-started/installation/'
+        description: "Add u-ui to your project with a few commands.",
+        link: '/u-ui/getting-started/installation/'
     }
 ]
 

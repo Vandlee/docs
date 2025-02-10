@@ -111,7 +111,7 @@ importers:
       '@yushii/internal-scripts':
         specifier: workspace:^
         version: link:packages-internal/scripts
-      '@yushii/ui':
+      '@yushii/u-ui':
         specifier: workspace:^
         version: link:packages/yushii-ui/build
       '@yushii/utils':
@@ -354,7 +354,7 @@ importers:
       '@yushii/system':
         specifier: workspace:^
         version: link:../packages/yushii-system/build
-      '@yushii/ui':
+      '@yushii/u-ui':
         specifier: workspace:^
         version: link:../packages/yushii-ui/build
       '@yushii/utils':
@@ -964,7 +964,7 @@ importers:
       '@types/react':
         specifier: ^19.0.2
         version: 19.0.8
-      '@yushii/ui':
+      '@yushii/u-ui':
         specifier: workspace:*
         version: link:../yushii-ui/build
       next:
@@ -1110,7 +1110,7 @@ importers:
       '@yushii/system':
         specifier: workspace:^
         version: link:../yushii-system/build
-      '@yushii/ui-pigment-css':
+      '@yushii/u-ui-pigment-css':
         specifier: workspace:^
         version: link:../yushii-ui-pigment-css/build
       '@yushii/utils':

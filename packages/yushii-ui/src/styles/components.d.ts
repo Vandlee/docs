@@ -451,6 +451,7 @@ export interface Components<Theme = unknown> {
     styleOverrides?: ComponentsOverrides<Theme>['YushiiSlider'];
     variants?: ComponentsVariants<Theme>['YushiiSlider'];
   };
+  */
   YushiiSnackbar?: {
     defaultProps?: ComponentsProps['YushiiSnackbar'];
     styleOverrides?: ComponentsOverrides<Theme>['YushiiSnackbar'];
@@ -461,6 +462,7 @@ export interface Components<Theme = unknown> {
     styleOverrides?: ComponentsOverrides<Theme>['YushiiSnackbarContent'];
     variants?: ComponentsVariants<Theme>['YushiiSnackbarContent'];
   };
+  /*
   YushiiSpeedDial?: {
     defaultProps?: ComponentsProps['YushiiSpeedDial'];
     styleOverrides?: ComponentsOverrides<Theme>['YushiiSpeedDial'];

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { styled } from '@yushii/ui/styles';
+import { styled } from '@yushii/u-ui/styles';
 import loadScript from '../utils/loadScript';
 import AdDisplay from './AdDisplay';
 import { adBodyImageStyles } from './ad.styles';

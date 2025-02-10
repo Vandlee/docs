@@ -15,7 +15,7 @@ const $$ = $({ stdio: 'inherit' });
 function rewriteImportPath(importPath) {
   const coreSrcPath = path.posix.join('..', 'yushii-ui', 'src');
   if (importPath.startsWith(coreSrcPath)) {
-    return importPath.replace(coreSrcPath, '@yushii/ui');
+    return importPath.replace(coreSrcPath, '@yushii/u-ui');
   }
 
   const systemSrcPath = path.posix.join('..', 'yushii-system', 'src');
@@ -57,7 +57,7 @@ async function rewriteImportPaths(declarationFile, publishDir) {
     // First and last character are quotes.
     // TypeScript mixes single and double quotes.
     const importPath = importTypeMatch[1].slice(1, -1);
-    // In filesystem semantics `@yushii/ui` is a relative path.
+    // In filesystem semantics `@yushii/u-ui` is a relative path.
     // But when resolving imports these specifiers are considered "bare specifiers" and work differently.
     // We're only interested in imports that are considered "relative path imports".
     const isBareImportSpecifier = !importPath.startsWith('.');

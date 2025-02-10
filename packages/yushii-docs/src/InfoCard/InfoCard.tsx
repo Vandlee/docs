@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { alpha } from '@yushii/ui/styles';
-import Box from '@yushii/ui/Box';
-import Paper from '@yushii/ui/Paper';
-import Typography, { TypographyProps } from '@yushii/ui/Typography';
+import { alpha } from '@yushii/u-ui/styles';
+import Box from '@yushii/u-ui/Box';
+import Paper from '@yushii/u-ui/Paper';
+import Typography, { TypographyProps } from '@yushii/u-ui/Typography';
 import { Link, LinkProps } from '../Link';
 
 interface GlowingIconContainerProps {

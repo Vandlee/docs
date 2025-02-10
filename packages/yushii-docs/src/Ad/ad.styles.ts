@@ -1,4 +1,4 @@
-import { alpha, Theme } from '@yushii/ui/styles';
+import { alpha, Theme } from '@yushii/u-ui/styles';
 
 export const adBodyImageStyles = (theme: Theme) => ({
   root: {

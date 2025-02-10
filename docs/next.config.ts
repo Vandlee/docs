@@ -88,8 +88,8 @@ export default withDocsInfra({
           ...config.resolve.alias,
 
           // for 3rd party packages with dependencies in this repository
-          '@yushii/ui$': path.resolve(workspaceRoot, 'packages/yushii-ui/src/index.js'),
-          '@yushii/ui': path.resolve(workspaceRoot, 'packages/yushii-ui/src'),
+          '@yushii/u-ui$': path.resolve(workspaceRoot, 'packages/yushii-ui/src/index.js'),
+          '@yushii/u-ui': path.resolve(workspaceRoot, 'packages/yushii-ui/src'),
 
           '@yushii/docs': path.resolve(workspaceRoot, 'packages/yushii-docs/src'),
           '@yushii/styled-engine': path.resolve(workspaceRoot, 'packages/yushii-styled-engine/src'),

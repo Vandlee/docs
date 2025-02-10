@@ -1,5 +1,5 @@
 const productNameProductId = {
-  ui: 'Yushii UI',
+  'u-ui': 'U-Ui',
   'joy-ui': 'Joy UI',
   'base-ui': 'Base UI',
   x: 'MUI X',

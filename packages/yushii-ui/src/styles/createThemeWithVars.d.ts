@@ -16,7 +16,7 @@ export type DefaultColorScheme = 'light' | 'dark';
  * The application can add more color-scheme by extending this interface via module augmentation
  *
  * Ex.
- * declare module @yushii/ui/styles {
+ * declare module @yushii/u-ui/styles {
  *   interface ColorSchemeOverrides {
  *     foo: true;
  *   }

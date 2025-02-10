@@ -1,6 +1,6 @@
 /* eslint-disable react/no-danger */
 import * as React from 'react';
-import Box from '@yushii/ui/Box';
+import Box from '@yushii/u-ui/Box';
 import { useTranslate } from '@yushii/docs/i18n';
 import { SectionTitle } from '@yushii/docs/SectionTitle';
 import { ComponentApiContent } from '@yushii-internal/api-docs-builder';

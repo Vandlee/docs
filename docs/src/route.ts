@@ -1,11 +1,13 @@
 const ROUTES = {
-  productUi: '/ui/',
+  // Marketing pages
+  productCore: '/u-core/',
+  productuUi: '/u-ui/',
   about: '/about',
   careers: '/careers/',
   // Yushii UI doc pages
-  uiDocs: '/ui/getting-started/',
-  freeTemplates: '/ui/getting-started/templates/',
-  documentation: '/ui/getting-started/',
+  uUiDocs: '/u-ui/getting-started/',
+  freeTemplates: '/u-ui/getting-started/templates/',
+  documentation: '/u-ui/getting-started/',
 };
 
 export default ROUTES;

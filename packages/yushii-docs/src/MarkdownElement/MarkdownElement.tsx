@@ -1,6 +1,6 @@
 import * as React from 'react';
 import clsx from 'clsx';
-import { alpha, darken, styled } from '@yushii/ui/styles';
+import { alpha, darken, styled } from '@yushii/u-ui/styles';
 import useForkRef from '@yushii/utils/useForkRef';
 import { brandingDarkTheme as darkTheme, brandingLightTheme as lightTheme } from '../branding';
 

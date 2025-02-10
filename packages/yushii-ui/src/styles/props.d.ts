@@ -110,8 +110,10 @@ import { ScopedCssBaselineProps } from '../ScopedCssBaseline';
 import { SelectProps } from '../Select';
 import { SkeletonProps } from '../Skeleton';
 import { SliderProps } from '../Slider';
+*/
 import { SnackbarContentProps } from '../SnackbarContent';
 import { SnackbarProps } from '../Snackbar';
+/*
 import { SpeedDialProps } from '../SpeedDial';
 import { SpeedDialActionProps } from '../SpeedDialAction';
 import { SpeedDialIconProps } from '../SpeedDialIcon';
@@ -267,8 +269,10 @@ export interface ComponentsPropsList {
   YushiiSelect: SelectProps;
   YushiiSkeleton: SkeletonProps;
   YushiiSlider: SliderProps;
+  */
   YushiiSnackbar: SnackbarProps;
   YushiiSnackbarContent: SnackbarContentProps;
+  /*
   YushiiSpeedDial: SpeedDialProps;
   YushiiSpeedDialAction: SpeedDialActionProps;
   YushiiSpeedDialIcon: SpeedDialIconProps;

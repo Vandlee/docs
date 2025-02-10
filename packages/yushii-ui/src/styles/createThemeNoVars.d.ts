@@ -18,7 +18,7 @@ import { CssVarsTheme, CssVarsPalette, ColorSystemOptions } from './createThemeW
  * To disable custom properties, use module augmentation
  *
  * @example
- * declare module '@yushii/ui/styles' {
+ * declare module '@yushii/u-ui/styles' {
  *   interface CssThemeVariables {
  *     enabled: true;
  *   }
@@ -88,7 +88,7 @@ export interface Theme extends BaseTheme, CssVarsProperties {
 
 /**
  * @deprecated
- * Use `import { createTheme } from '@yushii/ui/styles'` instead.
+ * Use `import { createTheme } from '@yushii/u-ui/styles'` instead.
  */
 export function createYushiiTheme(options?: ThemeOptions, ...args: object[]): Theme;
 

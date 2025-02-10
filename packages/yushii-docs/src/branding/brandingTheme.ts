@@ -1,19 +1,19 @@
 import type { CSSObject } from '@yushii/system';
-import type {} from '@yushii/ui/themeCssVarsAugmentation';
+import type {} from '@yushii/u-ui/themeCssVarsAugmentation';
 /* import ArrowDropDownRounded from '@mui/icons-material/ArrowDropDownRounded'; */
-import { createTheme, ThemeOptions, Theme, alpha } from '@yushii/ui/styles';
+import { createTheme, ThemeOptions, Theme, alpha } from '@yushii/u-ui/styles';
 
 interface ApplyDarkStyles {
   (scheme: CSSObject): CSSObject;
 }
 
-declare module '@yushii/ui/styles' {
+declare module '@yushii/u-ui/styles' {
   interface Theme {
     applyDarkStyles: ApplyDarkStyles;
   }
 }
 
-declare module '@yushii/ui/styles/createPalette' {
+declare module '@yushii/u-ui/styles/createPalette' {
   interface ColorRange {
     50: string;
     100: string;
@@ -42,7 +42,7 @@ declare module '@yushii/ui/styles/createPalette' {
   }
 }
 
-declare module '@yushii/ui/styles/createTypography' {
+declare module '@yushii/u-ui/styles/createTypography' {
   interface TypographyOptions {
     fontWeightSemiBold?: number;
     fontWeightExtraBold?: number;
@@ -58,13 +58,13 @@ declare module '@yushii/ui/styles/createTypography' {
   }
 }
 
-declare module '@yushii/ui/Chip' {
+declare module '@yushii/u-ui/Chip' {
   interface ChipPropsColorOverrides {
     grey: true;
   }
 }
 
-declare module '@yushii/ui/SvgIcon' {
+declare module '@yushii/u-ui/SvgIcon' {
   interface SvgIconPropsColorOverrides {
     danger: true;
   }
@@ -242,7 +242,7 @@ export const getDesignTokens = (mode: 'light' | 'dark') =>
           dark: deepPurple[300],
         }),
       },
-      divider: mode === 'dark' ? alpha(blueDark[500], 0.3) : grey[100],
+      divider: mode === 'dark' ? alpha(grey[600], .4) : grey[100],
       primaryDark: blueDark,
       mode,
       ...(mode === 'dark' && {
@@ -1214,7 +1214,7 @@ export function getThemedComponents(): ThemeOptions {
             },
           },
         }, */
-      /* YushiiSnackbar: {
+      YushiiSnackbar: {
           styleOverrides: {
             root: ({ theme }) => ({
               '& .YushiiSnackbarContent-root': {
@@ -1230,7 +1230,7 @@ export function getThemedComponents(): ThemeOptions {
               },
             }),
           },
-        }, */
+        },
       /* YushiiPaginationItem: {
           styleOverrides: {
             root: ({ theme }) => [

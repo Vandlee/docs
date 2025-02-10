@@ -1,10 +1,10 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { KeyboardArrowRightRounded } from '@mui/icons-material';
-import { alpha, styled } from '@yushii/ui/styles';
-import Collapse from '@yushii/ui/Collapse';
-import Box from '@yushii/ui/Box';
-import Chip from '@yushii/ui/Chip';
+import { alpha, styled } from '@yushii/u-ui/styles';
+import Collapse from '@yushii/u-ui/Collapse';
+import Box from '@yushii/u-ui/Box';
+import Chip from '@yushii/u-ui/Chip';
 import { samePageLinkNavigation } from 'docs/src/modules/components/MarkdownLinks';
 import { Link } from '@yushii/docs/Link';
 import standardNavIcons from './AppNavIcons';
