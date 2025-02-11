@@ -1,0 +1,8 @@
+<ButtonGroup
+  disableElevation
+  variant="contained"
+  aria-label="Grupo de botones desactivados"
+>
+  <Button>Uno</Button>
+  <Button>Dos</Button>
+</ButtonGroup>

@@ -58,7 +58,7 @@ function prepareMarkdown(config) {
   const { fileRelativeContext, translations, componentPackageMapping = {}, options } = config;
 
   /**
-   * @type {Record<string, { rendered: Array<string | { component: string } | { demo:string }> }>}
+   * @type {Record<string, { rendered: Array<string | { component: string } | { demo:string } | { codesandbox:string }> }>}
    */
   const docs = {};
   const headingHashes = {};
@@ -161,7 +161,7 @@ function prepareMarkdown(config) {
       });
 
       const rendered = contents.map((content) => {
-        if (/^"(demo|component)": "(.*)"/.test(content)) {
+        if (/^"(demo|component|codesandbox)": "(.*)"/.test(content)) {
           try {
             return JSON.parse(`{${content}}`);
           } catch (err) {

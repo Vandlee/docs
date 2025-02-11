@@ -9,6 +9,7 @@
     "/u-ui/getting-started/supported-platforms": "Plataformas soportadas",
     "/u-ui/react-": "Componentes",
     "/u-ui/all-components": "Todos los componentes",
-    "/u-ui/react-button": "Botón"
+    "/u-ui/react-button": "Botón",
+    "/u-ui/react-button-group": "Grupo de botones"
   }
 }

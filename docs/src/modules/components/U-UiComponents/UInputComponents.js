@@ -13,6 +13,16 @@ const inputComponents = [
     md3: false,
     noGuidelines: false,
   },
+  {
+    name: 'Grupo de botones',
+    srcLight: '/static/u-ui/react-components/button-group-light.png',
+    srcDark: '/static/u-ui/react-components/button-group-dark.png',
+    link: '/u-ui/react-button-group/',
+    md1: false,
+    md2: false,
+    md3: false,
+    noGuidelines: true,
+  },
 ];
 
 export default function UInputComponents() {

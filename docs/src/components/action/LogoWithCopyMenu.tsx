@@ -13,7 +13,6 @@ import SvgYushiiLogomark, {
   yushiiSvgLogoString,
   yushiiSvgWordmarkString
 } from 'docs/src/icons/SvgYushiiLogomark';
-import { fontSize } from '@yushii/system';
 
 interface LogoWithCopyMenuProps {
   logo?: React.ComponentType<RootSvgProps>;

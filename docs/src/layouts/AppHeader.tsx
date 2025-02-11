@@ -34,7 +34,7 @@ interface AppHeaderProps {
 }
 
 export default function AppHeader(props: AppHeaderProps) {
-  const { gitHubRepository = 'https://github.com' } = props;
+  const { gitHubRepository = 'https://github.com/yugashiki' } = props;
   const t = useTranslate();
   return (
     <Header>

@@ -1,6 +1,7 @@
 const CODE_VARIANTS = {
   JS: 'JS',
   TS: 'TS',
+  HTML: 'HTML'
 };
 
 const CODE_STYLING = {

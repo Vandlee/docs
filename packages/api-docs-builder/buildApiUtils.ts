@@ -17,11 +17,11 @@ export type { ComponentInfo, HookInfo } from './types/utils.types';
 export function fixPathname(pathname: string): string {
   let fixedPathname;
 
-  if (pathname.startsWith('/material')) {
-    fixedPathname = replaceComponentLinks(`${pathname.replace(/^\/material/, '')}/`);
+  if (pathname.startsWith('/u-ui')) {
+    fixedPathname = replaceComponentLinks(`${pathname.replace(/^\/u-ui/, '')}/`);
   } else if (pathname.startsWith('/joy')) {
     fixedPathname = replaceComponentLinks(`${pathname.replace(/^\/joy/, '')}/`).replace(
-      'material-ui',
+      'u-ui',
       'joy-ui',
     );
   } else if (pathname.startsWith('/base')) {
