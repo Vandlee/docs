@@ -184,7 +184,7 @@ const IconButtonLoadingIndicator = styled('span', {
 }))
 
 /**
- * Refer to the [Icons](/ui/icons/) section of the documentation
+ * Refer to the [Icons](/u-ui/icons/) section of the documentation
  * regarding the available icon options.
  */
 const IconButton = React.forwardRef(function IconButton(inProps, ref) {

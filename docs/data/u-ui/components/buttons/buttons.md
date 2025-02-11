@@ -1,5 +1,5 @@
 ---
-productId: ui
+productId: u-ui
 title: Componente React Button
 components: Button, IconButton, ButtonBase
 materialDesign: https://m2.material.io/components/buttons
@@ -74,13 +74,13 @@ Todos los componentes aceptan un manejador `onClick` que se aplica al elemento D
 </Button>
 ```
 
-Ten en cuenta que la documentación [evita](/ui/guides/api/#native-properties) mencionar props nativos (hay muchos) en la sección API de los componentes.
+Ten en cuenta que la documentación [evita](/u-ui/guides/api/#native-properties) mencionar props nativos (hay muchos) en la sección API de los componentes.
 
 ## Color
 
 {{"demo": "ColorButtons.js", "bg": "outlined"}}
 
-Además de usar los colores por defecto de los botones, puedes añadir colores personalizados, o desactivar los que no necesites. Vea los ejemplos de [Añadir nuevos colores](/ui/customization/palette/#custom-colors) para más información.
+Además de usar los colores por defecto de los botones, puedes añadir colores personalizados, o desactivar los que no necesites. Vea los ejemplos de [Añadir nuevos colores](/u-ui/customization/palette/#custom-colors) para más información.
 
 ## Tamaños
 
@@ -140,7 +140,7 @@ A partir de v6.4.0, utilice `loading` prop para establecer botones de icono en u
 
 ### Insignia
 
-Puedes usar el componente [`Badge`](/ui/react-badge/) para añadir una insignia a un `IconButton`.
+Puedes usar el componente [`Badge`](/u-ui/react-badge/) para añadir una insignia a un `IconButton`.
 
 {{"demo": "IconButtonWithBadge.js", "bg": "outlined"}}
 

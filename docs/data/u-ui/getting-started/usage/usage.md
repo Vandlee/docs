@@ -26,4 +26,4 @@ Para garantizar una representación correcta y un zoom táctil en todos los disp
 
 ### CssBaseline
 
-U-Ui proporciona un componente opcional [CssBaseline](/ui/react-css-baseline/). Corrige algunas inconsistencias entre navegadores y dispositivos a la vez que proporciona reinicios que se adaptan mejor a U-Ui que las hojas de estilo globales alternativas como [normalize.css](https://github.com/necolas/normalize.css/).
+U-Ui proporciona un componente opcional [CssBaseline](/u-ui/react-css-baseline/). Corrige algunas inconsistencias entre navegadores y dispositivos a la vez que proporciona reinicios que se adaptan mejor a U-Ui que las hojas de estilo globales alternativas como [normalize.css](https://github.com/necolas/normalize.css/).

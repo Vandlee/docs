@@ -5,7 +5,7 @@
 ## Tu primer componente
 
 La siguiente demo muestra una app básica de U-Ui que incluye un componente `<Button>`.
-Prueba a cambiar `variant` en el [Button](/ui/react-button/) a `outlined` para ver cómo cambia el estilo:
+Prueba a cambiar `variant` en el [Button](/u-ui/react-button/) a `outlined` para ver cómo cambia el estilo:
 
 {{"demo": "../usage/es/ButtonUsage.js", "defaultCodeOpen": true, "bg": "outlined" }}
 

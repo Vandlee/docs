@@ -32,7 +32,7 @@ const Root = styled('ul')(({ theme }) => ({
 }));
 
 const defaultPackageNames: Record<string, string | undefined> = {
-  'ui': '@yushii/u-ui',
+  'u-ui': '@yushii/u-ui',
   'base-ui': '@yushii/base',
   system: '@yushii/system',
 };

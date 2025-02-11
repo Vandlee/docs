@@ -116,7 +116,7 @@ export default function ComponentsApiContent(props: ComponentsApiContentProps) {
       const isBaseComponent = filename.includes('yushii-base');
       const defaultPropsLink = isJoyComponent
         ? '/joy-ui/customization/themed-components/#theme-default-props'
-        : '/ui/customization/theme-components/#theme-default-props';
+        : '/u-ui/customization/theme-components/#theme-default-props';
       let slotGuideLink = '';
       if (isJoyComponent) {
         slotGuideLink = '/joy-ui/customization/overriding-component-structure/';

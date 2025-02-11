@@ -34,9 +34,9 @@ export const replaceComponentLinks = (url: string) => {
   if (url.startsWith('/customization')) {
     url = url.replace('customization', 'ui/customization');
   } else if (url.match(/components\/(icons|material-icons|transitions|pickers|about-the-lab)/)) {
-    url = url.replace(/\/components\/(.*)/, '/ui/$1');
+    url = url.replace(/\/components\/(.*)/, '/u-ui/$1');
   } else {
-    url = url.replace(/\/components\/(.*)/, '/ui/react-$1');
+    url = url.replace(/\/components\/(.*)/, '/u-ui/react-$1');
 
     // TODO remove, fix the markdown files to match the URLs
     if (!url.match(/\/react-(tabs|breadcrumbs)/)) {
@@ -72,14 +72,14 @@ export const replaceAPILinks = (url: string) => {
 
   url = url.replace(
     /\/api\/(loading-button|tab-list|tab-panel|date-picker|date-time-picker|time-picker|calendar-picker|calendar-picker-skeleton|desktop-picker|mobile-date-picker|month-picker|pickers-day|static-date-picker|year-picker|masonry|timeline|timeline-connector|timeline-content|timeline-dot|timeline-item|timeline-opposite-content|timeline-separator|unstable-trap-focus|tree-item|tree-view)(.*)/,
-    '/ui/api/$1$2',
+    '/u-ui/api/$1$2',
   );
 
   if (isNewLocation(url)) {
     return url;
   }
 
-  return url.replace(/\/api\/(.*)/, '/ui/api/$1');
+  return url.replace(/\/api\/(.*)/, '/u-ui/api/$1');
 };
 
 export default function replaceUrl(url: string, asPath: string) {

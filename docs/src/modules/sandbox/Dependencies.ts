@@ -96,7 +96,7 @@ export default function SandboxDependencies(demo: Demo, options?: { commitRef?: 
       'react-dom': 'latest',
       '@emotion/react': 'latest',
       '@emotion/styled': 'latest',
-      '@yushii/u-ui': getYushiiPackageVersion('ui'),
+      '@yushii/u-ui': getYushiiPackageVersion('u-ui'),
       '@mui/icons-material': getYushiiPackageVersion('icons-material'),
       '@yushii/lab': getYushiiPackageVersion('lab'),
       '@yushii/styled-engine': getYushiiPackageVersion('styled-engine'),
@@ -157,7 +157,7 @@ export default function SandboxDependencies(demo: Demo, options?: { commitRef?: 
     // The `index.js` imports StyledEngineProvider from '@yushii/u-ui', so we need to make sure we have it as a dependency
     const name = '@yushii/u-ui';
     const versions = {
-      [name]: getYushiiPackageVersion('ui'),
+      [name]: getYushiiPackageVersion('u-ui'),
     };
     dependencies[name] = versions[name] ? versions[name] : 'latest';
   }

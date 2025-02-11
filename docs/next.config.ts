@@ -122,7 +122,7 @@ export default withDocsInfra({
                       languagesInProgress: LANGUAGES_IN_PROGRESS,
                       packages: [
                         {
-                          productId: 'ui',
+                          productId: 'u-ui',
                           paths: [
                             path.join(workspaceRoot, 'packages/yushii-base/src'),
                             path.join(workspaceRoot, 'packages/yushii-ui/src'),

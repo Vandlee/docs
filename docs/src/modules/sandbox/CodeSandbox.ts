@@ -161,7 +161,7 @@ ReactDOM.createRoot(document.querySelector("#root")${type}).render(
     {
       codeVariant: templateData.codeVariant,
       raw: Object.entries(templateData.files).reduce((prev, curr) => `${prev}\n${curr}`, ''),
-      productId: 'ui',
+      productId: 'u-ui',
     },
     {
       commitRef: process.env.PULL_REQUEST_ID ? process.env.COMMIT_REF : undefined,

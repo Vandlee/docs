@@ -54,7 +54,7 @@ function useDemoData(codeVariant, demo, githubLocation, codeStyling) {
 
   return React.useMemo(() => {
     let productId;
-    let name = 'ui';
+    let name = 'u-ui';
     if (canonicalAs.startsWith('/base-ui/')) {
       productId = 'base-ui';
       name = 'Yushii Base'
