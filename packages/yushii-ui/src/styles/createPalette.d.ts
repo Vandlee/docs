@@ -101,7 +101,7 @@ export interface Palette {
   tonalOffset: PaletteTonalOffset;
   primary: PaletteColor;
   secondary: PaletteColor;
-  accent: PaletteColor;
+  contrast: PaletteColor;
   neutral: PaletteColor;
   error: PaletteColor;
   warning: PaletteColor;
@@ -128,7 +128,7 @@ export type PartialTypeObject = { [P in keyof TypeObject]?: Partial<TypeObject[P
 export interface PaletteOptions {
   primary?: PaletteColorOptions;
   secondary?: PaletteColorOptions;
-  accent?: PaletteColorOptions;
+  contrast?: PaletteColorOptions;
   neutral?: PaletteColorOptions;
   error?: PaletteColorOptions;
   warning?: PaletteColorOptions;

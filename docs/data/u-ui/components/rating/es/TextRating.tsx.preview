@@ -1,0 +1,8 @@
+<Rating
+  name="texto-de-respuesta"
+  value={value}
+  readOnly
+  precision={0.5}
+  emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+/>
+<Box sx={{ ml: 2 }}>{etiquetas[value]}</Box>

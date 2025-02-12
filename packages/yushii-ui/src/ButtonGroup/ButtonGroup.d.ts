@@ -28,7 +28,7 @@ export interface ButtonGroupOwnProps {
     | 'inherit'
     | 'primary'
     | 'secondary'
-    | 'accent'
+    | 'contrast'
     | 'neutral'
     | 'error'
     | 'info'

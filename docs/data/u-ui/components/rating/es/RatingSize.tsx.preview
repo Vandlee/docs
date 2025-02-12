@@ -1,0 +1,3 @@
+<Rating name="tamaño-pequeño" defaultValue={2} size="small" />
+<Rating name="tamaño-mediano" defaultValue={2} />
+<Rating name="tamaño-grande" defaultValue={2} size="large" />

@@ -40,7 +40,7 @@ export type InternalStandardProps<
   };
 
 export namespace PropTypes {
-  type Color = 'inherit' | 'primary' | 'secondary' | 'accent' | 'neutral' | 'default';
+  type Color = 'inherit' | 'primary' | 'secondary' | 'contrast' | 'neutral' | 'default';
 }
 
 import * as colors from './colors';

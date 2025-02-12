@@ -12,7 +12,7 @@ export default function IconButtonColors() {
       <IconButton aria-label="fingerprint" color="secondary">
         <Fingerprint />
       </IconButton>
-      <IconButton aria-label="fingerprint" color="accent">
+      <IconButton aria-label="fingerprint" color="contrast">
         <Fingerprint />
       </IconButton>
       <IconButton aria-label="fingerprint" color="neutral">

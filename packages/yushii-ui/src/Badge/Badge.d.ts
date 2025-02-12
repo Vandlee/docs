@@ -20,7 +20,7 @@ export type BadgeOwnerState = Simplify<
     showZero: boolean;
     anchorOrigin: BadgeOrigin;
     color: OverridableStringUnion<
-      'primary' | 'secondary' | 'default' | 'error' | 'info' | 'success' | 'warning',
+      'primary' | 'secondary' | 'contrast' | 'neutral' | 'default' | 'error' | 'info' | 'success' | 'warning',
       BadgePropsColorOverrides
     >;
     overlap: 'rectangular' | 'circular';
@@ -65,7 +65,7 @@ export interface BadgeOwnProps {
    * @default 'default'
    */
   color?: OverridableStringUnion<
-    'primary' | 'secondary' | 'default' | 'error' | 'info' | 'success' | 'warning',
+    'primary' | 'secondary' | 'contrast' | 'neutral' | 'default' | 'error' | 'info' | 'success' | 'warning',
     BadgePropsColorOverrides
   >;
   /**

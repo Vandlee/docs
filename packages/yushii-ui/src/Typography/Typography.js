@@ -13,7 +13,7 @@ import { getTypographyUtilityClass } from './typographyClasses';
 const v6Colors = {
   primary: true,
   secondary: true,
-  accent: true,
+  contrast: true,
   neutral: true,
   error: true,
   info: true,

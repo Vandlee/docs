@@ -1,0 +1,9 @@
+<ToggleButtonGroup size="small" {...control} aria-label="Tamaños pequeños">
+  {children}
+</ToggleButtonGroup>
+<ToggleButtonGroup {...control} aria-label="Tamaños medianos">
+  {children}
+</ToggleButtonGroup>
+<ToggleButtonGroup size="large" {...control} aria-label="Tamaños grandes">
+  {children}
+</ToggleButtonGroup>

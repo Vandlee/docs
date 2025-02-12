@@ -9,7 +9,12 @@
     "/u-ui/getting-started/supported-platforms": "Plataformas soportadas",
     "/u-ui/react-": "Componentes",
     "/u-ui/all-components": "Todos los componentes",
+    "inputs": "Entradas",
     "/u-ui/react-button": "Botón",
-    "/u-ui/react-button-group": "Grupo de botones"
+    "/u-ui/react-button-group": "Grupo de botones",
+    "/u-ui/react-rating": "Valoraciones",
+    "/u-ui/react-toggle-button": "Botón de alternancia",
+    "data-display": "Visualización de datos",
+    "/u-ui/react-badge": "Insignia"
   }
 }

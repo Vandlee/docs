@@ -1,7 +1,7 @@
 import { styled } from '@yushii/u-ui/styles';
 
 const GradientText = styled('span')<{
-  color?: 'primary' | 'accent' | 'error' | 'success' | 'warning';
+  color?: 'primary' | 'secondary' | 'contrast' | 'neutral' | 'error' | 'success' | 'warning';
 }>(({ theme }) => ({
   variants: [
     ...Object.entries((theme.vars || theme).palette as Record<string, any>)

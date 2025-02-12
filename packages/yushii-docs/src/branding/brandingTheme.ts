@@ -222,7 +222,7 @@ export const getDesignTokens = (mode: 'light' | 'dark') =>
           main: blue[200],
         }),
       },
-      accent: {
+      contrast: {
         ...grey,
         ...(mode === 'light' && {
           main: grey[300],

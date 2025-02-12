@@ -31,7 +31,7 @@ export interface ButtonOwnProps {
     | 'inherit'
     | 'primary'
     | 'secondary'
-    | 'accent'
+    | 'contrast'
     | 'neutral'
     | 'success'
     | 'error'

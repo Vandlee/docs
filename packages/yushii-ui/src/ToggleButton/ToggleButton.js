@@ -234,7 +234,7 @@ ToggleButton.propTypes /* remove-proptypes */ = {
      * @default 'standard'
      */
     color: PropTypes /* @typescript-to-proptypes-ignore */.oneOfType([
-        PropTypes.oneOf(['standard', 'primary', 'secondary', 'accent', 'neutral', 'error', 'info', 'success', 'warning']),
+        PropTypes.oneOf(['standard', 'primary', 'secondary', 'contrast', 'neutral', 'error', 'info', 'success', 'warning']),
         PropTypes.string,
     ]),
     /**

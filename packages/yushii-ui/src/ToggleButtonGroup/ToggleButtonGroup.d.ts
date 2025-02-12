@@ -26,7 +26,7 @@ export interface ToggleButtonGroupProps
    * @default 'standard'
    */
   color?: OverridableStringUnion<
-    'standard' | 'primary' | 'secondary' | 'accent' | 'neutral' | 'error' | 'info' | 'success' | 'warning',
+    'standard' | 'primary' | 'secondary' | 'contrast' | 'neutral' | 'error' | 'info' | 'success' | 'warning',
     ToggleButtonGroupPropsColorOverrides
   >;
   /**

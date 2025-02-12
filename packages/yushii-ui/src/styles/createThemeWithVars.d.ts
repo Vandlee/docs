@@ -94,7 +94,7 @@ export interface PaletteActionChannel {
 export interface PaletteTextChannel {
   primaryChannel: string;
   secondaryChannel: string;
-  accentChannel: string;
+  contrastChannel: string;
   neutralChannel: string;
 }
 
@@ -151,7 +151,7 @@ export interface PaletteFilledInput {
 export interface PaletteLinearProgress {
   primaryBg: string;
   secondaryBg: string;
-  accentBg: string;
+  contrastBg: string;
   neutraldaryBg: string;
   errorBg: string;
   infoBg: string;
@@ -166,7 +166,7 @@ export interface PaletteSkeleton {
 export interface PaletteSlider {
   primaryTrack: string;
   secondaryTrack: string;
-  accentTrack: string;
+  contrastTrack: string;
   neutralTrack: string;
   errorTrack: string;
   infoTrack: string;
@@ -196,7 +196,7 @@ export interface PaletteSwitch {
   defaultDisabledColor: string;
   primaryDisabledColor: string;
   secondaryDisabledColor: string;
-  accentDisabledColor: string;
+  contrastDisabledColor: string;
   neutralDisabledColor: string;
   errorDisabledColor: string;
   infoDisabledColor: string;
@@ -219,7 +219,7 @@ export interface ColorSystemOptions {
     common?: Partial<PaletteCommonChannel>;
     primary?: Partial<PaletteColorChannel>;
     secondary?: Partial<PaletteColorChannel>;
-    accent?: Partial<PaletteColorChannel>;
+    contrast?: Partial<PaletteColorChannel>;
     neutral?: Partial<PaletteColorChannel>;
     error?: Partial<PaletteColorChannel>;
     info?: Partial<PaletteColorChannel>;
@@ -252,7 +252,7 @@ export interface CssVarsPalette {
   common: PaletteCommonChannel;
   primary: PaletteColorChannel;
   secondary: PaletteColorChannel;
-  accent: PaletteColorChannel;
+  contrast: PaletteColorChannel;
   neutral: PaletteColorChannel;
   error: PaletteColorChannel;
   info: PaletteColorChannel;

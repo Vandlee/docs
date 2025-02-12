@@ -127,7 +127,7 @@ const IconButtonRoot = styled(ButtonBase, {
                 },
                 })),
             {
-                props: { color: 'accent' },
+                props: { color: 'contrast' },
                 style: {
                     backgroundColor: (theme.vars || theme).palette.text.primary,
                     color: (theme.vars || theme).palette.background.default,

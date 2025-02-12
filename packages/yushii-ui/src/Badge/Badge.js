@@ -78,8 +78,8 @@ const BadgeBadge = styled('span', {
     position: 'absolute',
     boxSizing: 'border-box',
     fontFamily: theme.typography.fontFamily,
-    fontWeight: theme.typography.fontWeightMedium,
-    fontSize: theme.typography.pxToRem(12),
+    fontWeight: theme.typography.fontWeightBold,
+    fontSize: theme.typography.pxToRem(14),
     minWidth: RADIUS_STANDARD * 2,
     lineHeight: 1,
     padding: '0 6px',
@@ -391,7 +391,7 @@ Badge.propTypes /* remove-proptypes */ = {
    * @default 'default'
    */
   color: PropTypes /* @typescript-to-proptypes-ignore */.oneOfType([
-    PropTypes.oneOf(['default', 'primary', 'secondary', 'accent', 'neutral', 'error', 'info', 'success', 'warning']),
+    PropTypes.oneOf(['default', 'primary', 'secondary', 'contrast', 'neutral', 'error', 'info', 'success', 'warning']),
     PropTypes.string,
   ]),
   /**

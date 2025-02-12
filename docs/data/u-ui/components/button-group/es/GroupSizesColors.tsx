@@ -27,7 +27,7 @@ export default function GroupSizesColors() {
       <ButtonGroup color="secondary" aria-label="Medium-sized button group">
         {buttons}
       </ButtonGroup>
-      <ButtonGroup color="accent" size="large" aria-label="Large button group">
+      <ButtonGroup color="contrast" size="large" aria-label="Large button group">
         {buttons}
       </ButtonGroup>
     </Box>

@@ -78,6 +78,17 @@ export default function RichMarkdownElement(props) {
     );
   }
 
+  
+  if (renderedMarkdownOrDemo.codesandbox) {
+    return (
+      <Wrapper {...wrapperProps}>
+        <iframe 
+          style={{ width: '100%', aspectRatio: '16 / 9', border: 0, borderRadius: 8, overflow: 'hidden'}} 
+          src={`https://codesandbox.io/embed/${renderedMarkdownOrDemo.codesandbox}?view=split+%2B+preview&hidenavigation=1`} />
+      </Wrapper>
+    )
+  }
+
   const name = renderedMarkdownOrDemo.demo;
   const demo = demos?.[name];
   if (demo === undefined) {

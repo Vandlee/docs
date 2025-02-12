@@ -409,20 +409,6 @@ export default function Demo(props) {
 
   const demoData = useDemoData(codeVariant, demo, githubLocation, styleSolution);
 
-  const getLanguage = (filename) => {
-    if (filename.endsWith('.html')) {
-      return 'html';
-    } else if (filename.endsWith('.css')) {
-      return 'css';
-    } else if (filename.endsWith('.js')) {
-      return 'javascript';
-    } else if (filename.endsWith('.tsx')) {
-      return 'typescript';
-    }
-    // Agrega más condiciones según sea necesario
-    return 'javascript'; // Lenguaje por defecto
-  };
-
   const hasNonSystemDemos = demo.rawTailwind || demo.rawTailwindTS || demo.rawCSS || demo.rawCSSTs;
 
   const demoName = getDemoName(demoData.githubLocation);
@@ -673,7 +659,7 @@ export default function Demo(props) {
                         setLiveDemoActive(true);
                       }}
                       id={demoSourceId}
-                      language={getLanguage(demoData.githubLocation)}
+                      language={demoData.sourceLanguage}
                       copyButtonProps={{
                         'data-ga-event-category': codeOpen ? 'demo-expand' : 'demo',
                         'data-ga-event-label': demo.gaLabel,

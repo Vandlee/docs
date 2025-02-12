@@ -18,10 +18,10 @@ export interface ButtonClasses {
    * @deprecated Combine the [.YushiiButton-text](/u-ui/api/button/#button-classes-text) and [.YushiiButton-colorSecondary](/u-ui/api/button/#button-classes-colorSecondary) classes instead. See [Migrating from deprecated APIs](/u-ui/migration/migrating-from-deprecated-apis/) for more details.
    */
   textSecondary: string;
-  /** Styles applied to the root element if `variant="text"` and `color="accent"`.
+  /** Styles applied to the root element if `variant="text"` and `color="contrast"`.
    * @deprecated Combine the [.YushiiButton-text](/u-ui/api/button/#button-classes-text) and [.YushiiButton-colorSuccess](/u-ui/api/button/#button-classes-colorSuccess) classes instead. See [Migrating from deprecated APIs](/u-ui/migration/migrating-from-deprecated-apis/) for more details.
    */
-  textAccent: string;
+  textContrast: string;
   /** Styles applied to the root element if `variant="text"` and `color="success"`.
    * @deprecated Combine the [.YushiiButton-text](/u-ui/api/button/#button-classes-text) and [.YushiiButton-colorSuccess](/u-ui/api/button/#button-classes-colorSuccess) classes instead. See [Migrating from deprecated APIs](/u-ui/migration/migrating-from-deprecated-apis/) for more details.
    */
@@ -216,7 +216,7 @@ const buttonClasses: ButtonClasses = generateUtilityClasses('YushiiButton', [
   'textInherit',
   'textPrimary',
   'textSecondary',
-  'textAccent',
+  'textContrast',
   'textNeutral',
   'textSuccess',
   'textError',

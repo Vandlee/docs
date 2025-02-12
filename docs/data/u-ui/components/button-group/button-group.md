@@ -1,6 +1,6 @@
 ---
 productId: u-ui
-title: Componente React Button Group
+title: Componente Grupo de botones de React
 components: Button, ButtonGroup
 githubLabel: 'componente: ButtonGroup'
 githubSource: packages/yushii-ui/src/ButtonGroup

@@ -44,7 +44,7 @@ export interface ChipOwnProps {
     | 'default'
     | 'primary'
     | 'secondary'
-    | 'accent'
+    | 'contrast'
     | 'neutral'
     | 'error'
     | 'info'

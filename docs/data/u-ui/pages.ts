@@ -22,24 +22,19 @@ const pages: YushiiPage[] = [
         pathname: '/u-ui/components/inputs',
         subheader: 'inputs',
         children: [
-          { pathname: '/u-ui/react-autocomplete' },
           { pathname: '/u-ui/react-button' },
           { pathname: '/u-ui/react-button-group', title: 'Button Group' },
-          { pathname: '/u-ui/react-checkbox' },
-          {
-            pathname: '/u-ui/react-floating-action-button',
-            title: 'Floating Action Button',
-          },
-          { pathname: '/u-ui/react-radio-button', title: 'Radio Group' },
           { pathname: '/u-ui/react-rating' },
-          { pathname: '/u-ui/react-select' },
-          { pathname: '/u-ui/react-slider' },
-          { pathname: '/u-ui/react-switch' },
-          { pathname: '/u-ui/react-text-field', title: 'Text Field' },
-          { pathname: '/u-ui/react-transfer-list', title: 'Transfer List' },
           { pathname: '/u-ui/react-toggle-button', title: 'Toggle Button' },
         ],
       },
+      {
+        pathname: "/u-ui/components/data-display",
+        subheader: 'data-display',
+        children: [
+          { pathname: '/u-ui/react-badge' }
+        ]
+      }
     ]
   }
 ];

@@ -18,7 +18,7 @@ import getTextDecoration from './getTextDecoration';
 const v6Colors = {
   primary: true,
   secondary: true,
-  accent: true,
+  contrast: true,
   neutral: true,
   error: true,
   info: true,
@@ -263,7 +263,7 @@ Link.propTypes /* remove-proptypes */ = {
     PropTypes.oneOf([
       'primary',
       'secondary',
-      'accent',
+      'contrast',
       'neutral',
       'success',
       'error',

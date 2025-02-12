@@ -568,7 +568,7 @@ Chip.propTypes /* remove-proptypes */ = {
       'default',
       'primary',
       'secondary',
-      'accent',
+      'contrast',
       'neutral',
       'error',
       'info',

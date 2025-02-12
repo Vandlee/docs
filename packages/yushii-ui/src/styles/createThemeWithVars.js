@@ -273,7 +273,7 @@ export default function createThemeWithVars(options = {}, ...args) {
       setColor(palette.FilledInput, 'disabledBg', 'rgba(0, 0, 0, 0.12)');
       setColor(palette.LinearProgress, 'primaryBg', safeLighten(palette.primary.main, 0.62));
       setColor(palette.LinearProgress, 'secondaryBg', safeLighten(palette.secondary.main, 0.62));
-      setColor(palette.LinearProgress, 'accentBg', safeLighten(palette.accent.main, 0.62));
+      setColor(palette.LinearProgress, 'contrastBg', safeLighten(palette.contrast.main, 0.62));
       setColor(palette.LinearProgress, 'neutralBg', safeLighten(palette.neutral.main, 0.62));
       setColor(palette.LinearProgress, 'errorBg', safeLighten(palette.error.main, 0.62));
       setColor(palette.LinearProgress, 'infoBg', safeLighten(palette.info.main, 0.62));
@@ -286,7 +286,7 @@ export default function createThemeWithVars(options = {}, ...args) {
       );
       setColor(palette.Slider, 'primaryTrack', safeLighten(palette.primary.main, 0.62));
       setColor(palette.Slider, 'secondaryTrack', safeLighten(palette.secondary.main, 0.62));
-      setColor(palette.Slider, 'accentTrack', safeLighten(palette.accent.main, 0.62));
+      setColor(palette.Slider, 'contrastTrack', safeLighten(palette.contrast.main, 0.62));
       setColor(palette.Slider, 'neutralTrack', safeLighten(palette.neutral.main, 0.62));
       setColor(palette.Slider, 'errorTrack', safeLighten(palette.error.main, 0.62));
       setColor(palette.Slider, 'infoTrack', safeLighten(palette.info.main, 0.62));
@@ -310,7 +310,7 @@ export default function createThemeWithVars(options = {}, ...args) {
       setColor(palette.Switch, 'defaultDisabledColor', setCssVarColor('palette-grey-100'));
       setColor(palette.Switch, 'primaryDisabledColor', safeLighten(palette.primary.main, 0.62));
       setColor(palette.Switch, 'secondaryDisabledColor', safeLighten(palette.secondary.main, 0.62));
-      setColor(palette.Switch, 'accentDisabledColor', safeLighten(palette.accent.main, 0.62));
+      setColor(palette.Switch, 'contrastDisabledColor', safeLighten(palette.contrast.main, 0.62));
       setColor(palette.Switch, 'neutralDisabledColor', safeLighten(palette.neutral.main, 0.62));
       setColor(palette.Switch, 'errorDisabledColor', safeLighten(palette.error.main, 0.62));
       setColor(palette.Switch, 'infoDisabledColor', safeLighten(palette.info.main, 0.62));
@@ -370,7 +370,7 @@ export default function createThemeWithVars(options = {}, ...args) {
       setColor(palette.FilledInput, 'disabledBg', 'rgba(255, 255, 255, 0.12)');
       setColor(palette.LinearProgress, 'primaryBg', safeDarken(palette.primary.main, 0.5));
       setColor(palette.LinearProgress, 'secondaryBg', safeDarken(palette.secondary.main, 0.5));
-      setColor(palette.LinearProgress, 'accentBg', safeDarken(palette.accent.main, 0.5));
+      setColor(palette.LinearProgress, 'contrastBg', safeDarken(palette.contrast.main, 0.5));
       setColor(palette.LinearProgress, 'neutralBg', safeDarken(palette.neutral.main, 0.5));
       setColor(palette.LinearProgress, 'errorBg', safeDarken(palette.error.main, 0.5));
       setColor(palette.LinearProgress, 'infoBg', safeDarken(palette.info.main, 0.5));
@@ -383,7 +383,7 @@ export default function createThemeWithVars(options = {}, ...args) {
       );
       setColor(palette.Slider, 'primaryTrack', safeDarken(palette.primary.main, 0.5));
       setColor(palette.Slider, 'secondaryTrack', safeDarken(palette.secondary.main, 0.5));
-      setColor(palette.Slider, 'accentTrack', safeDarken(palette.accent.main, 0.5));
+      setColor(palette.Slider, 'contrastTrack', safeDarken(palette.contrast.main, 0.5));
       setColor(palette.Slider, 'neutralTrack', safeDarken(palette.neutral.main, 0.5));
       setColor(palette.Slider, 'errorTrack', safeDarken(palette.error.main, 0.5));
       setColor(palette.Slider, 'infoTrack', safeDarken(palette.info.main, 0.5));
@@ -407,7 +407,7 @@ export default function createThemeWithVars(options = {}, ...args) {
       setColor(palette.Switch, 'defaultDisabledColor', setCssVarColor('palette-grey-600'));
       setColor(palette.Switch, 'primaryDisabledColor', safeDarken(palette.primary.main, 0.55));
       setColor(palette.Switch, 'secondaryDisabledColor', safeDarken(palette.secondary.main, 0.55));
-      setColor(palette.Switch, 'accentDisabledColor', safeDarken(palette.accent.main, 0.55));
+      setColor(palette.Switch, 'contrastDisabledColor', safeDarken(palette.contrast.main, 0.55));
       setColor(palette.Switch, 'neutralDisabledColor', safeDarken(palette.neutral.main, 0.55));
       setColor(palette.Switch, 'errorDisabledColor', safeDarken(palette.error.main, 0.55));
       setColor(palette.Switch, 'infoDisabledColor', safeDarken(palette.info.main, 0.55));
@@ -456,7 +456,7 @@ export default function createThemeWithVars(options = {}, ...args) {
           // Text colors: text.primary, text.secondary
           setColorChannel(palette[color], 'primary');
           setColorChannel(palette[color], 'secondary');
-          setColorChannel(palette[color], 'accent');
+          setColorChannel(palette[color], 'contrast');
           setColorChannel(palette[color], 'neutral');
         }
 

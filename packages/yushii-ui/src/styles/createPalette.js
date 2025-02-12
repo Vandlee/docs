@@ -131,7 +131,7 @@ function getDefaultSecondary(mode = 'light') {
   };
 }
 
-function getDefaultAccent(mode = 'light') {
+function getDefaultContrast(mode = 'light') {
   if (mode === 'dark') {
     return {
       main: grey[50],
@@ -226,7 +226,7 @@ export default function createPalette(palette) {
 
   const primary = palette.primary || getDefaultPrimary(mode);
   const secondary = palette.secondary || getDefaultSecondary(mode);
-  const accent = palette.accent || getDefaultAccent(mode);
+  const contrast = palette.contrast || getDefaultContrast(mode);
   const neutral = palette.neutral || getDefaultNeutral(mode);
   const error = palette.error || getDefaultError(mode);
   const info = palette.info || getDefaultInfo(mode);
@@ -328,9 +328,9 @@ export default function createPalette(palette) {
         lightShade: 'A200',
         darkShade: 'A700',
       }),
-      accent: augmentColor({
-        color: accent,
-        name: 'accent',
+      contrast: augmentColor({
+        color: contrast,
+        name: 'contrast',
       }),
       neutral: augmentColor({
         color: neutral,

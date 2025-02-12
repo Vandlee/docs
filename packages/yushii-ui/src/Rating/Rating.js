@@ -9,8 +9,8 @@ import composeClasses from '@yushii/utils/composeClasses';
 import { useRtl } from '@yushii/system/RtlProvider';
 import isFocusVisible from '@yushii/utils/isFocusVisible';
 import { capitalize, useForkRef, useControlled, unstable_useId as useId } from '../utils';
-/* import Star from '../internal/svg-icons/Star'; */
-/* import StarBorder from '../internal/svg-icons/StarBorder'; */
+import Star from '../internal/svg-icons/Star';
+import StarBorder from '../internal/svg-icons/StarBorder';
 import { styled } from '../zero-styled';
 import memoTheme from '../utils/memoTheme';
 import { useDefaultProps } from '../DefaultPropsProvider';
@@ -327,8 +327,8 @@ RatingItem.propTypes = {
   readOnly: PropTypes.bool.isRequired,
 };
 
-;/* const defaultIcon = <Star fontSize="inherit" />
-const defaultEmptyIcon = <StarBorder fontSize="inherit" />; */
+const defaultIcon = <Star fontSize="inherit" />
+const defaultEmptyIcon = <StarBorder fontSize="inherit" />;
 
 function defaultLabelText(value) {
   return `${value || '0'} Star${value !== 1 ? 's' : ''}`;
@@ -341,11 +341,11 @@ const Rating = React.forwardRef(function Rating(inProps, ref) {
     className,
     defaultValue = null,
     disabled = false,
-    emptyIcon, /* defaultEmptyIcon */
+    emptyIcon = defaultEmptyIcon,
     emptyLabelText = 'Empty',
     getLabelText = defaultLabelText,
     highlightSelectedOnly = false,
-    icon, /* defaultIcon */
+    icon = defaultIcon,
     IconContainerComponent = IconContainer,
     max = 5,
     name: nameProp,
