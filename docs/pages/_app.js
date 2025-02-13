@@ -9,6 +9,7 @@ import basePkgJson from 'packages/yushii-base/package.json';
 import generalDocsPages from 'docs/data/docs/pages';
 
 import uUiPages from 'docs/data/u-ui/pages';
+import phpPages from 'docs/data/php/pages';
 
 import PageContext from 'docs/src/modules/components/PageContext';
 
@@ -156,6 +157,18 @@ function AppWrapper(props) {
       };
     }
 
+    if (productId === 'php') {
+      return {
+        metadata: '',
+        name: 'PHP',
+        url: "/php/",
+        logo: SvgU_UiLogomark,
+        logoSvg: U_UiSvgLogoString,
+        wordmarkSvg: U_UiSvgWordmarkString,
+        versions: [{ text: `v${uiPkgJson.version}`, current: true }],
+      };
+    }
+
     return null;
   }, [pageProps.userLanguage, productId]);
 
@@ -163,6 +176,10 @@ function AppWrapper(props) {
     let pages = generalDocsPages;
     if (productId === 'u-ui') {
       pages = uUiPages;
+    }
+
+    if (productId === 'php') {
+      pages = phpPages;
     }
 
     const { activePage, activePageParents } = findActivePage(pages, router.pathname);

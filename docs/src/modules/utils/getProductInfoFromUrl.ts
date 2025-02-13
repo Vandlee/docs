@@ -27,6 +27,13 @@ export default function getProductInfoFromUrl(asPath: string): YushiiProductInfo
     productId = firstFolder;
   }
 
+  if (
+    firstFolder === 'php'
+   ) {
+    productCategoryId = 'docs';
+    productId = firstFolder;
+  }
+
   if (firstFolder === 'docs') {
     productId = firstFolder;
   }
