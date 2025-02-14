@@ -5,12 +5,12 @@ import Stack from '@yushii/u-ui/Stack';
 export default function ContainedButtons() {
   return (
     <Stack direction="row" spacing={2}>
-      <Button variant="contained">Contained</Button>
+      <Button variant="contained">Contenido</Button>
       <Button variant="contained" disabled>
-        Disabled
+        Deshabilitado
       </Button>
       <Button variant="contained" href="#contained-buttons">
-        Link
+        Enlace
       </Button>
     </Stack>
   );

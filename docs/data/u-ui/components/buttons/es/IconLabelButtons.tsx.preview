@@ -1,6 +1,6 @@
 <Button variant="outlined" startIcon={<DeleteIcon />}>
-  Delete
+  Eliminar
 </Button>
 <Button variant="contained" endIcon={<SendIcon />}>
-  Send
+  Enviar
 </Button>

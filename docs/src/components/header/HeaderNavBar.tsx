@@ -66,7 +66,10 @@ const Navigation = styled('nav')(({ theme }) => [
   }),
 ]);
 
-const PRODUCT_IDS = ['product-core'];
+const PRODUCT_IDS = [
+  'product-u-core',
+  'u-docs'
+];
 
 type ProductSubMenuProps = {
   icon: React.ReactElement<unknown>;
@@ -134,7 +137,7 @@ export default function HeaderNavBar() {
   const navRef = React.useRef<HTMLUListElement>(null);
   const productSelectorRef = React.useRef<HTMLDivElement>(null);
   const productsMenuRef = React.useRef<HTMLButtonElement>(null);
-  const docsMenuRef = React.useRef<HTMLButtonElement>(null);
+  const docsMenuRef = React.useRef<HTMLAnchorElement>(null);
 
   React.useEffect(() => {
     if (typeof subMenuIndex === 'number' && subMenuOpen === 'products') {
@@ -224,7 +227,7 @@ export default function HeaderNavBar() {
   return (
     <Navigation>
       <ul ref={navRef} onKeyDown={handleKeyDown}>
-        <li
+      <li
           onMouseEnter={setSubMenuOpenUndebounce('products')}
           onFocus={setSubMenuOpenUndebounce('products')}
           onMouseLeave={() => setSubMenuOpenDebounced(null)}
@@ -260,6 +263,87 @@ export default function HeaderNavBar() {
                     borderColor: 'grey.200',
                     bgcolor: 'background.paper',
                     boxShadow: `0px 4px 16px ${alpha(theme.palette.grey[200], 0.8)}`,
+                    '& ul': {
+                      margin: 0,
+                      padding: 0,
+                      listStyle: 'none'
+                    },
+                    '& li:not(:last-of-type)': {
+                      borderBottom: '1px solid',
+                      borderColor: 'grey.100',
+                    },
+                    '& a': { textDecoration: 'none' },
+                    ...theme.applyDarkStyles({
+                      borderColor: 'primaryDark.700',
+                      bgcolor: 'primaryDark.900',
+                      boxShadow: `0px 4px 16px ${alpha(theme.palette.common.black, 0.8)}`,
+                      '& li:not(:last-of-type)': {
+                        borderColor: 'primaryDark.700',
+                      },
+                    }),
+                  })}
+                >
+                  <YushiiProductSelector ref={productSelectorRef} />
+                  <ul>
+                    <li>
+                      <ProductSubMenu
+                        id={PRODUCT_IDS[0]}
+                        href={ROUTES.productCore}
+                        icon={<IconImage name="product-advanced" />}
+                        name="U Core"
+                        description="Componentes básicos de React listos para usar, gratis para siempre."
+                      />
+                    </li>
+                    <li>
+                      <ProductSubMenu
+                        id={PRODUCT_IDS[1]}
+                        href={ROUTES.productDocs}
+                        icon={<IconImage name="product-advanced" />}
+                        name="U Docs"
+                        description="Documentación para todo"
+                      />
+                    </li>
+                  </ul>
+                </Paper>
+              </Fade>
+            )}
+          </Popper>
+        </li>
+        <li
+          onMouseEnter={setSubMenuOpenUndebounce('docs')}
+          onFocus={setSubMenuOpenUndebounce('docs')}
+          onMouseLeave={() => setSubMenuOpenDebounced(null)}
+          onBlur={setSubMenuOpenUndebounce(null)}
+        >
+          <Link
+            ref={docsMenuRef}
+            href={ROUTES.productDocs}
+            aria-haspopup
+            aria-expanded={subMenuOpen === 'docs' ? 'true' : 'false'}
+            onClick={handleClickMenu('docs')}
+            aria-controls={subMenuOpen === 'docs' ? 'docs-popper' : undefined}
+          >
+            Documentación
+          </Link>
+          <Popper
+            id="docs-popper"
+            open={subMenuOpen === 'docs'}
+            anchorEl={docsMenuRef.current}
+            transition
+            placement="bottom-start"
+            style={{ zIndex: 1200, pointerEvents: subMenuOpen === 'docs' ? undefined : 'none' }}
+          >
+            {({ TransitionProps }) => (
+              <Fade {...TransitionProps} timeout={250}>
+                <Paper
+                  variant="outlined"
+                  sx={(theme) => ({
+                    mt: 1,
+                    overflow: 'hidden',
+                    maxWidth: 600,
+                    borderColor: 'grey.200',
+                    bgcolor: 'background.paper',
+                    boxShadow: `0px 4px 16px ${alpha(theme.palette.grey[200], 0.8)}`,
                     ...theme.applyDarkStyles({
                       borderColor: 'primaryDark.700',
                       bgcolor: 'primaryDark.900',
@@ -267,14 +351,14 @@ export default function HeaderNavBar() {
                     }),
                   })}
                 >
-                  <YushiiProductSelector ref={productSelectorRef} />
+                  <YushiiProductSelector type="docs" ref={productSelectorRef} />
                 </Paper>
               </Fade>
             )}
           </Popper>
         </li>
         <li>
-          <Link href={ROUTES.about}>About us</Link>
+          <Link href={ROUTES.about}>Nosotros</Link>
         </li>
       </ul>
     </Navigation>

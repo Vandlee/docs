@@ -3,15 +3,15 @@ import NextLink from 'next/link';
 import { styled, alpha, Theme } from '@yushii/u-ui/styles';
 import Box from '@yushii/u-ui/Box';
 import Typography from '@yushii/u-ui/Typography';
-import Chip from '@yushii/u-ui/Chip';
-import Divider from '@yushii/u-ui/Divider';
 import MenuList, { MenuListProps } from '@yushii/u-ui/MenuList';
 import MenuItem, { MenuItemProps } from '@yushii/u-ui/MenuItem';
 import ROUTES from 'docs/src/route';
 import PageContext from 'docs/src/modules/components/PageContext';
-import SvgYushiiLogomark from 'docs/src/icons/SvgYushiiLogomark';
 import { Link } from '@yushii/docs/Link';
 import SvgU_UiLogomark from 'docs/src/icons/SvgU-Ui';
+import SvgJavaScriptLogomark from 'docs/src/icons/SvgJavascript';
+import SvgPythonLogomark from 'docs/src/icons/SvgPython';
+import SvgPHPLogomark from 'docs/src/icons/SvgPHP';
 /* import SvgBaseUiLogo from 'docs/src/icons/SvgBaseUiLogo';
 import SvgToolpadCoreLogo from 'docs/src/icons/SvgToolpadCoreLogo'; */
 /* import BackupTableRoundedIcon from '@mui/icons-material/BackupTableRounded';
@@ -112,8 +112,7 @@ function ProductItem({
     >
         <Box
             sx={{
-            height: 21, // match the Typography line-height
-            width: 21,
+            height: 21,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -128,7 +127,7 @@ function ProductItem({
                 </Typography>
                 {chip}
             </Box>
-            <Typography color="text.secondary" fontSize=".813rem">
+            <Typography sx={{ textWrap: 'auto'}} color="text.secondary" fontSize=".813rem">
                 {description}
             </Typography>
         </div>
@@ -140,17 +139,63 @@ const coreProducts = [
   {
     id: 'u-ui',
     name: 'U-Ui',
-    description: 'Comprehensive foundational components.',
+    description: 'Estilo Material Design y sobrio.',
     icon: <SvgU_UiLogomark height={24} sx={logoColor} />,
     href: ROUTES.uUiDocs,
   },
 ];
 
+const docs = [
+  {
+    id: "javascript",
+    name: "JavaScript",
+    description: "Interactividad web.",
+    icon: <SvgJavaScriptLogomark height={21} />,
+    href: ROUTES.docsJavascript,
+  },
+  {
+    id: "php",
+    name: "PHP",
+    description: "Backend web dinámico.",
+    icon: <SvgPHPLogomark height={15} />,
+    href: ROUTES.docsPHP
+  },
+  {
+    id: "python",
+    name: "Python",
+    description: "Potencia y simplicidad. (IA)",
+    icon: <SvgPythonLogomark height={21} />,
+    href: ROUTES.docsPython
+  }
+]
+
 const YushiiProductSelector = React.forwardRef(function YushiiProductSelector(
-  props: MenuListProps<'div'>,
+  { type = 'products', ...props }: MenuListProps<'div'> & { type?: 'products' | 'docs'},
   forwardedRef: React.ForwardedRef<HTMLDivElement>,
 ) {
   const pageContext = React.useContext(PageContext);
+
+  const contentMap: Record<
+    string,
+    { label: string; href: string; content: any[] }[]
+  > = {
+    docs: [
+      {
+        label: "Lenguajes de programación",
+        href: "/u-docs/programming-languages/",
+        content: docs
+      }
+    ],
+    products: [
+      {
+        label: "U Core",
+        href: "/u-core/",
+        content: coreProducts
+      }
+    ]
+  }
+
+  const selectedContent = contentMap[type] || [];
 
   return (
     <MenuList
@@ -165,114 +210,43 @@ const YushiiProductSelector = React.forwardRef(function YushiiProductSelector(
           sm: 'repeat(2, minmax(0, 1fr))',
         },
         gap: '4px',
+        borderBottom: type === 'products' ? '1px solid' : undefined,
+        borderColor: type === 'products' ? 'divider' : undefined
       }}
     >
-      <Box
-        key="X components"
-        role="none"
-        sx={{
-          gridColumn: {
-            xs: '1 / span 1',
-            sm: '1 / span 2',
-          },
-        }}
-      >
-      <Link href="/u-core/">
-        <NavLabel>U-Core Components</NavLabel>
-      </Link>
-      </Box>
-      {coreProducts.map((product) => (
-        <ProductItem
-          key={product.name}
-          name={product.name}
-          description={product.description}
-          href={product.href}
-          icon={product.icon}
-          active={pageContext.productId === product.id}
-        />
-      ))}
-      <Divider
-        sx={{
-          mx: -1,
-          gridColumn: {
-            xs: '1 / span 1',
-            sm: '1 / span 2',
-          },
-        }}
-      />
-      <Box
-        key="X components"
-        role="none"
-        sx={{
-          gridColumn: {
-            xs: '1 / span 1',
-            sm: '1 / span 2',
-          },
-        }}
-      >
-        {/* eslint-disable-next-line material-ui/no-hardcoded-labels */}
-        <NavLabel>MUI X Components</NavLabel>
-      </Box>
-      {/* {advancedProducts.map((product) => (
-        <ProductItem
-          key={product.name}
-          name={product.name}
-          description={product.description}
-          icon={product.icon}
-          href={product.href}
-          active={pageContext.productId === product.id}
-        />
-      ))} */}
-      <Divider
-        sx={{
-          mx: -1,
-          gridColumn: {
-            xs: '1 / span 1',
-            sm: '1 / span 2',
-          },
-        }}
-      />
-      <Box
-        key="Toolpad"
-        role="none"
-        sx={{
-          gridColumn: {
-            xs: '1 / span 1',
-            sm: '1 / span 2',
-          },
-        }}
-      >
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: '1px' }}>
-          {/* eslint-disable-next-line material-ui/no-hardcoded-labels */}
-          <NavLabel> Toolpad </NavLabel>
-          <Chip
-            label="Beta"
-            size="small"
-            color="primary"
-            variant="outlined"
+      
+      {selectedContent.map(({ label, href, content}) => (
+        <React.Fragment key={label}> 
+          <Box
+            key="U-Core components"
+            role="none"
             sx={{
-              fontSize: '.625rem',
-              fontWeight: 'semiBold',
-              textTransform: 'uppercase',
-              letterSpacing: '.04rem',
-              height: '16px',
-              '& .YushiiChip-label': {
-                px: '4px',
+              gridColumn: {
+                xs: '1 / span 1',
+                sm: '1 / span 2',
               },
             }}
-          />
-        </Box>
-      </Box>
-      {/* {toolpadProducts.map((product) => (
-        <ProductItem
-          key={product.name}
-          name={product.name}
-          description={product.description}
-          icon={product.icon}
-          href={product.href}
-          active={pageContext.productId === product.id}
-        />
-      ))} */}
+          >
+            <Link href={href}>
+              <NavLabel>{label}</NavLabel>
+            </Link>
+          </Box>
+          {content.length > 0 && (
+            <React.Fragment>
+              {content.map((item) => (
+                <ProductItem
+                  key={item.name}
+                  name={item.name}
+                  description={item.description}
+                  href={item.href}
+                  icon={item.icon}
+                  active={pageContext.productId === item.id}
+                />
+              ))}
+            </React.Fragment>
+          )}
+        </React.Fragment>
+      ))}
     </MenuList>
   );
 });

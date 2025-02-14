@@ -15,6 +15,7 @@
     "/u-ui/react-rating": "Valoraciones",
     "/u-ui/react-toggle-button": "Botón de alternancia",
     "data-display": "Visualización de datos",
-    "/u-ui/react-badge": "Insignia"
+    "/u-ui/react-badge": "Insignia",
+    "/u-ui/react-chip": "Chip"
   }
 }

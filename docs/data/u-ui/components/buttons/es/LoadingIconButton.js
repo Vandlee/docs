@@ -12,7 +12,7 @@ export default function LoadingIconButton() {
     return () => clearTimeout(timeout);
   });
   return (
-    <Tooltip title="Click to see loading">
+    <Tooltip title="Haga clic para ver la carga">
       <IconButton onClick={() => setLoading(true)} loading={loading}>
         <ShoppingCartIcon />
       </IconButton>

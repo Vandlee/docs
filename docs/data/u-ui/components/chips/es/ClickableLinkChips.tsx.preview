@@ -1,0 +1,8 @@
+<Chip label="Enlace cliqueable" component="a" href="#chip-básico" clickable />
+<Chip
+  label="Enlace cliqueable"
+  component="a"
+  href="#chip-básico"
+  variant="outlined"
+  clickable
+/>

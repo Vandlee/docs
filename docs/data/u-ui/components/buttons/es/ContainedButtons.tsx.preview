@@ -1,7 +1,7 @@
-<Button variant="contained">Contained</Button>
+<Button variant="contained">Contenido</Button>
 <Button variant="contained" disabled>
-  Disabled
+  Deshabilitado
 </Button>
 <Button variant="contained" href="#contained-buttons">
-  Link
+  Enlace
 </Button>

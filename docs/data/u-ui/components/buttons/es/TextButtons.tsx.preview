@@ -1,3 +1,3 @@
-<Button>Primary</Button>
-<Button disabled>Disabled</Button>
-<Button href="#text-buttons">Link</Button>
+<Button>Primario</Button>
+<Button disabled>Deshabilitado</Button>
+<Button href="#text-buttons">Enlace</Button>

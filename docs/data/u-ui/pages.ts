@@ -32,7 +32,8 @@ const pages: YushiiPage[] = [
         pathname: "/u-ui/components/data-display",
         subheader: 'data-display',
         children: [
-          { pathname: '/u-ui/react-badge' }
+          { pathname: '/u-ui/react-badge' },
+          { pathname: '/u-ui/react-chip' },
         ]
       }
     ]

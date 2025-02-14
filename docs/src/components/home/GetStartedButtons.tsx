@@ -11,6 +11,7 @@ interface GetStartedButtonsProps extends BoxProps {
   primaryLabel?: string;
   primaryUrl: string;
   primaryUrlTarget?: string;
+  primaryColor?: 'primary' | 'inherit' | 'secondary' | 'success' | 'error' | 'info' | 'warning' | 'contrast' | 'neutral';
   secondaryLabel?: string;
   secondaryUrl?: string;
   secondaryUrlTarget?: string;
@@ -24,6 +25,7 @@ export default function GetStartedButtons(props: GetStartedButtonsProps) {
     primaryLabel = 'Get started',
     primaryUrl,
     primaryUrlTarget = '_self',
+    primaryColor = 'primary',
     secondaryLabel,
     secondaryUrl,
     secondaryUrlTarget = '_self',
@@ -56,7 +58,7 @@ export default function GetStartedButtons(props: GetStartedButtonsProps) {
         <Button
           component={Link}
           href={primaryUrl}
-          color="primary"
+          color={primaryColor}
           target={primaryUrlTarget}
           rel={primaryUrlTarget ? 'noopener' : ''}
           noLinkStyle

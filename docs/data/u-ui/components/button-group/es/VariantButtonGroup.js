@@ -15,12 +15,12 @@ export default function VariantButtonGroup() {
         },
       }}
     >
-      <ButtonGroup variant="outlined" aria-label="Basic button group">
+      <ButtonGroup variant="outlined" aria-label="Grupo de botones básico">
         <Button>Uno</Button>
         <Button>Dos</Button>
         <Button>Tres</Button>
       </ButtonGroup>
-      <ButtonGroup variant="text" aria-label="Basic button group">
+      <ButtonGroup variant="text" aria-label="Grupo de botones básico">
         <Button>Uno</Button>
         <Button>Dos</Button>
         <Button>Tres</Button>

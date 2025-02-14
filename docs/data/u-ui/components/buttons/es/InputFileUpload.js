@@ -25,7 +25,7 @@ export default function InputFileUpload() {
       startIcon={<CloudUploadIcon />}
       disableIconAnimation
     >
-      Upload files
+      Subir archivos
       <VisuallyHiddenInput
         type="file"
         onChange={(event) => console.log(event.target.files)}

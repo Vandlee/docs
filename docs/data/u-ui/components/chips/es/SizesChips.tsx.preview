@@ -1,0 +1,2 @@
+<Chip label="Pequeño" size="small" />
+<Chip label="Pequeño" size="small" variant="outlined" />

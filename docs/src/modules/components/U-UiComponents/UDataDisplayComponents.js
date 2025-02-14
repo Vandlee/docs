@@ -14,6 +14,15 @@ const dataDisplayComponents = [
         md3: false,
         noGuidelines: false,
     },
+    {
+        srcLight: '/static/u-ui/react-components/chip-light.png',
+        srcDark: '/static/u-ui/react-components/chip-dark.png',
+        link: '/u-ui/react-chip/',
+        md1: false,
+        md2: true,
+        md3: false,
+        noGuidelines: false,
+    },
 ]
 
 export default function MaterialDataDisplayComponents() {

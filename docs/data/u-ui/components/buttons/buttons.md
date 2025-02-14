@@ -142,6 +142,8 @@ Puedes usar el componente [`Badge`](/u-ui/react-badge/) para añadir una insigni
 
 {{"demo": "es/IconButtonWithBadge.js" }}
 
+***
+
 ## Subir fichero
 
 Para crear un botón de carga de archivos, convierta el botón en una etiqueta utilizando `component=«label»` y, a continuación, cree una entrada oculta visualmente con el tipo `file`.

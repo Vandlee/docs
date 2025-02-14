@@ -1,7 +1,7 @@
-<Button variant="outlined">Primary</Button>
+<Button variant="outlined">Primario</Button>
 <Button variant="outlined" disabled>
-  Disabled
+  Deshabilitado
 </Button>
 <Button variant="outlined" href="#outlined-buttons">
-  Link
+  Enlace
 </Button>

@@ -19,19 +19,19 @@ export default function GroupOrientation() {
         },
       }}
     >
-      <ButtonGroup orientation="vertical" aria-label="Vertical button group">
+      <ButtonGroup orientation="vertical" aria-label="Grupo de botones verticales">
         {buttons}
       </ButtonGroup>
       <ButtonGroup
         orientation="vertical"
-        aria-label="Vertical button group"
+        aria-label="Grupo de botones verticales"
         variant="contained"
       >
         {buttons}
       </ButtonGroup>
       <ButtonGroup
         orientation="vertical"
-        aria-label="Vertical button group"
+        aria-label="Grupo de botones verticales"
         variant="text"
       >
         {buttons}

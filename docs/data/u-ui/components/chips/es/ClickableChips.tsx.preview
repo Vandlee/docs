@@ -1,0 +1,2 @@
+<Chip label="Cliqueable" onClick={handleClick} />
+<Chip label="Cliqueable" variant="outlined" onClick={handleClick} />

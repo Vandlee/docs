@@ -8,10 +8,10 @@ export default function LoadingButtons() {
     <Stack spacing={2}>
       <Stack direction="row" spacing={2}>
         <Button loading variant="outlined">
-          Submit
+          Enviar
         </Button>
         <Button loading loadingIndicator="Loading…" variant="outlined">
-          Fetch data
+          Obtener datos
         </Button>
         <Button
           loading
@@ -19,7 +19,7 @@ export default function LoadingButtons() {
           startIcon={<SaveIcon />}
           variant="outlined"
         >
-          Save
+          Guardar
         </Button>
       </Stack>
       <Button
@@ -29,7 +29,7 @@ export default function LoadingButtons() {
         startIcon={<SaveIcon />}
         variant="outlined"
       >
-        Full width
+        Ancho completo
       </Button>
       <Button
         fullWidth
@@ -38,14 +38,14 @@ export default function LoadingButtons() {
         endIcon={<SaveIcon />}
         variant="outlined"
       >
-        Full width
+        Ancho completo
       </Button>
       <Stack direction="row" spacing={2}>
         <Button loading variant="outlined" loadingPosition="start">
-          Submit
+          Enviar
         </Button>
         <Button loading variant="outlined" loadingPosition="end">
-          Submit
+          Enviar
         </Button>
         <Button
           loading
@@ -53,7 +53,7 @@ export default function LoadingButtons() {
           loadingPosition="end"
           startIcon={<SaveIcon />}
         >
-          Save
+          Guardar
         </Button>
       </Stack>
     </Stack>

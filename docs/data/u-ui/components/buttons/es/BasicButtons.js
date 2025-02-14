@@ -5,9 +5,9 @@ import Button from '@yushii/u-ui/Button';
 export default function BasicButtons() {
   return (
     <Stack spacing={2} direction="row">
-      <Button variant="text">Text</Button>
-      <Button variant="contained">Contained</Button>
-      <Button variant="outlined">Outlined</Button>
+      <Button variant="text">Texto</Button>
+      <Button variant="contained">Contenido</Button>
+      <Button variant="outlined">Delineado</Button>
     </Stack>
   );
 }

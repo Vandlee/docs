@@ -6,19 +6,19 @@ import Fingerprint from '@mui/icons-material/Fingerprint';
 export default function IconButtonColors() {
   return (
     <Stack direction="row" spacing={1}>
-      <IconButton aria-label="fingerprint" color="primary">
+      <IconButton aria-label="huella dactilar" color="primary">
         <Fingerprint />
       </IconButton>
-      <IconButton aria-label="fingerprint" color="secondary">
+      <IconButton aria-label="huella dactilar" color="secondary">
         <Fingerprint />
       </IconButton>
-      <IconButton aria-label="fingerprint" color="contrast">
+      <IconButton aria-label="huella dactilar" color="contrast">
         <Fingerprint />
       </IconButton>
-      <IconButton aria-label="fingerprint" color="neutral">
+      <IconButton aria-label="huella dactilar" color="neutral">
         <Fingerprint />
       </IconButton>
-      <IconButton aria-label="fingerprint" color="success">
+      <IconButton aria-label="huella dactilar" color="success">
         <Fingerprint />
       </IconButton>
     </Stack>

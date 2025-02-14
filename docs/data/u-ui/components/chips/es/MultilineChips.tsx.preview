@@ -1,0 +1,10 @@
+<Chip
+  sx={{
+    height: 'auto',
+    '& .YushiiChip-label': {
+      display: 'block',
+      whiteSpace: 'normal',
+    },
+  }}
+  label="Este es un chip que tiene varias líneas."
+/>

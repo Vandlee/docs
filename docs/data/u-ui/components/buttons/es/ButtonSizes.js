@@ -6,30 +6,30 @@ export default function ButtonSizes() {
   return (
     <Box sx={{ '& button': { m: 1 } }}>
       <div>
-        <Button size="small">Small</Button>
-        <Button size="medium">Medium</Button>
-        <Button size="large">Large</Button>
+        <Button size="small">Pequeño</Button>
+        <Button size="medium">Mediano</Button>
+        <Button size="large">Grande</Button>
       </div>
       <div>
         <Button variant="outlined" size="small">
-          Small
+          Pequeño
         </Button>
         <Button variant="outlined" size="medium">
-          Medium
+          Mediana
         </Button>
         <Button variant="outlined" size="large">
-          Large
+          Grande
         </Button>
       </div>
       <div>
         <Button variant="contained" size="small">
-          Small
+          Pequeño
         </Button>
         <Button variant="contained" size="medium">
-          Medium
+          Mediana
         </Button>
         <Button variant="contained" size="large">
-          Large
+          Grande
         </Button>
       </div>
     </Box>

@@ -5,9 +5,9 @@ import Stack from '@yushii/u-ui/Stack';
 export default function TextButtons() {
   return (
     <Stack direction="row" spacing={2}>
-      <Button>Primary</Button>
-      <Button disabled>Disabled</Button>
-      <Button href="#text-buttons">Link</Button>
+      <Button>Primario</Button>
+      <Button disabled>Deshabilitado</Button>
+      <Button href="#text-buttons">Enlace</Button>
     </Stack>
   );
 }
