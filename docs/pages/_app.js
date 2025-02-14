@@ -9,6 +9,9 @@ import basePkgJson from 'packages/yushii-base/package.json';
 import generalDocsPages from 'docs/data/docs/pages';
 
 import uUiPages from 'docs/data/u-ui/pages';
+import javascriptPages from 'docs/data/javascript/pages';
+import phpPages from 'docs/data/php/pages';
+import pythonPages from 'docs/data/python/pages';
 
 import PageContext from 'docs/src/modules/components/PageContext';
 
@@ -28,6 +31,9 @@ import './global.css';
 import '../public/static/components-gallery/base-theme.css';
 import * as config from '../config';
 import SvgU_UiLogomark, { U_UiSvgLogoString, U_UiSvgWordmarkString } from 'docs/src/icons/SvgU-Ui';
+import SvgJavaScriptLogomark from 'docs/src/icons/SvgJavascript';
+import SvgPHPLogomark from 'docs/src/icons/SvgPHP';
+import SvgPythonLogomark from 'docs/src/icons/SvgPython';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -156,6 +162,42 @@ function AppWrapper(props) {
       };
     }
 
+    if (productCategoryId === 'u-docs') {
+      if (productId === 'javascript') {
+        return {
+          metadata: '',
+          name: 'JavaScript',
+          url: "/u-docs/javascript/",
+          logo: SvgJavaScriptLogomark,
+          logoSvg: U_UiSvgLogoString,
+          wordmarkSvg: U_UiSvgWordmarkString,
+          versions: [{ text: `v1`, current: true }],
+        };
+      }
+      if (productId === 'php') {
+        return {
+          metadata: '',
+          name: 'PHP',
+          url: "/u-docs/php/",
+          logo: SvgPHPLogomark,
+          logoSvg: U_UiSvgLogoString,
+          wordmarkSvg: U_UiSvgWordmarkString,
+          versions: [{ text: `v1`, current: true }],
+        };
+      }
+      if (productId === 'python') {
+        return {
+          metadata: '',
+          name: 'JavaScript',
+          url: "/u-docs/python/",
+          logo: SvgPythonLogomark,
+          logoSvg: U_UiSvgLogoString,
+          wordmarkSvg: U_UiSvgWordmarkString,
+          versions: [{ text: `v1`, current: true }],
+        };
+      }
+    }
+
     return null;
   }, [pageProps.userLanguage, productId]);
 
@@ -163,6 +205,18 @@ function AppWrapper(props) {
     let pages = generalDocsPages;
     if (productId === 'u-ui') {
       pages = uUiPages;
+    }
+
+    if (productCategoryId === 'u-docs') {
+      if (productId === 'javascript') {
+        pages = javascriptPages;
+      }
+      if (productId === 'php') {
+        pages = phpPages;
+      }
+      if (productId === 'python') {
+        pages = pythonPages;
+      }
     }
 
     const { activePage, activePageParents } = findActivePage(pages, router.pathname);

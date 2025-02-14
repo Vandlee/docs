@@ -121,6 +121,7 @@ function ProductDrawerButton(props) {
                 <ClickAwayListener onClickAway={handleClose}>
                   <YushiiProductSelector
                     autoFocusItem={open}
+                    type='docs'
                     id="yushii-product-menu"
                     aria-labelledby="yushii-product-selector"
                     onKeyDown={handleListKeyDown}

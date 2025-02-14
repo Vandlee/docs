@@ -13,6 +13,8 @@ import SvgYushiiLogomark, {
   yushiiSvgLogoString,
   yushiiSvgWordmarkString
 } from 'docs/src/icons/SvgYushiiLogomark';
+import { useRouter } from 'next/router';
+import getProductInfoFromUrl from 'docs/src/modules/utils/getProductInfoFromUrl';
 
 interface LogoWithCopyMenuProps {
   logo?: React.ComponentType<RootSvgProps>;
@@ -29,6 +31,8 @@ export default function LogoWithCopyMenu({
   url = '/',
   marginLeft,
 }: LogoWithCopyMenuProps) {
+  const router = useRouter();
+  const { productCategoryId } = getProductInfoFromUrl(router.asPath);
   const [contextMenu, setContextMenu] = React.useState<{
     mouseX: number;
     mouseY: number;
@@ -74,7 +78,7 @@ export default function LogoWithCopyMenu({
           '& > svg': { m: '0 !important' },
         }}
       >
-        <LogoSvg height={30} />
+        <LogoSvg height={productCategoryId === 'u-docs' && url !== '/' ? 21 : 30} />
       </Box>
       <Menu
         open={contextMenu !== null}

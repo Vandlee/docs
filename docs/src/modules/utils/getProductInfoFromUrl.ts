@@ -3,9 +3,12 @@ import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
 export type YushiiProductId = 
   | 'null' 
   | 'base-ui'
-  | 'u-ui';
+  | 'u-ui'
+  | 'javascript'
+  | 'php'
+  | 'python';
 
-type YushiiProductCategoryId = 'null' | 'core';
+type YushiiProductCategoryId = 'null' | 'u-docs' |'core';
 
 interface YushiiProductInfo {
   productId: YushiiProductId;
@@ -15,6 +18,8 @@ interface YushiiProductInfo {
 export default function getProductInfoFromUrl(asPath: string): YushiiProductInfo {
   const asPathWithoutLang = pathnameToLanguage(asPath).canonicalAsServer;
   const firstFolder = asPathWithoutLang.replace(/^\/+([^/]+)\/.*/, '$1');
+  const secondFolder = asPathWithoutLang.replace(/^\/+[^/]+\/([^/]+).*/, '$1');
+
 
   let productCategoryId = 'null';
   let productId = 'null';
@@ -25,6 +30,13 @@ export default function getProductInfoFromUrl(asPath: string): YushiiProductInfo
   ) {
     productCategoryId = 'u-core';
     productId = firstFolder;
+  }
+
+  if (firstFolder === 'u-docs') {
+    if (secondFolder) {
+      productCategoryId = 'u-docs';
+      productId = secondFolder;
+    }
   }
 
   if (firstFolder === 'docs') {
