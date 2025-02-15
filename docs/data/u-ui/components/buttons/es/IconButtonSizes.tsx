@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Stack from '@yushii/u-ui/Stack';
-import IconButton from '@yushii/u-ui/IconButton';
+import Stack from '@u-shii/u-ui/Stack';
+import IconButton from '@u-shii/u-ui/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 export default function IconButtonSizes() {

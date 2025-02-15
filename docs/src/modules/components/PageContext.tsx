@@ -1,11 +1,11 @@
 import * as React from 'react';
-import type { YushiiPage } from 'docs/src/YushiiPage';
-import type { YushiiProductId } from 'docs/src/modules/utils/getProductInfoFromUrl';
+import type { UshiiPage } from 'docs/src/u-shiiPage';
+import type { UshiiProductId } from 'docs/src/modules/utils/getProductInfoFromUrl';
 
 const PageContext = React.createContext<{
-  activePage: YushiiPage | null;
-  pages: YushiiPage[];
-  productId: YushiiProductId;
+  activePage: UshiiPage | null;
+  pages: UshiiPage[];
+  productId: UshiiProductId;
 }>(undefined!);
 
 if (process.env.NODE_ENV !== 'production') {

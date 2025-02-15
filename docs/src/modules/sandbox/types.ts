@@ -1,6 +1,6 @@
-import type { YushiiProductId } from 'docs/src/modules/utils/getProductInfoFromUrl';
+import type { UshiiProductId } from 'docs/src/modules/utils/getProductInfoFromUrl';
 
-export type CodeStyling = 'Tailwind' | 'Yushii System';
+export type CodeStyling = 'Tailwind' | 'Ushii System';
 export type CodeVariant = 'TS' | 'JS';
 
 type RelativeModule = {
@@ -13,7 +13,7 @@ export interface DemoData {
   raw: string;
   codeVariant: CodeVariant;
   githubLocation: string;
-  productId?: Exclude<YushiiProductId, 'null'>;
+  productId?: Exclude<UshiiProductId, 'null'>;
   codeStyling: CodeStyling;
   relativeModules?: RelativeModule[];
 }

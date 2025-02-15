@@ -4,14 +4,14 @@ title: Componente Insignia de React
 components: Badge
 githubLabel: 'component: badge'
 unstyled: /u-base/react-badge/
-githubSource: packages/yushii-ui/src/Badge
+githubSource: packages/u-shii-ui/src/Badge
 ---
 
 # Insignia
 
 <p class="description">Insignia genera una pequeña insignia en la parte superior derecha de su(s) hijo(s).</p>
 
-{{"component": "@yushii/docs/ComponentLinkHeader"}}
+{{"component": "@u-shii/docs/ComponentLinkHeader"}}
 
 ## Insignia básica
 

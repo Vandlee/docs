@@ -1,11 +1,11 @@
 import * as React from 'react';
-import Box from '@yushii/u-ui/Box';
-import Button from '@yushii/u-ui/Button';
-import Menu from '@yushii/u-ui/Menu';
-import MenuItem from '@yushii/u-ui/MenuItem';
+import Box from '@u-shii/u-ui/Box';
+import Button from '@u-shii/u-ui/Button';
+import Menu from '@u-shii/u-ui/Menu';
+import MenuItem from '@u-shii/u-ui/MenuItem';
 import CheckIcon from '@mui/icons-material/Check';
 import ArrowDropDownRoundedIcon from '@mui/icons-material/ArrowDropDownRounded';
-import useEnhancedEffect from '@yushii/utils/useEnhancedEffect';
+import useEnhancedEffect from '@u-shii/utils/useEnhancedEffect';
 
 export type ApiDisplayOptions = 'collapsed' | 'expanded' | 'table';
 
@@ -127,7 +127,7 @@ export default function ToggleDisplayOption(props: ToggleDisplayOptionProps) {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        sx={{ mt: 1, '.YushiiMenuItem-root': { pl: 1 } }}
+        sx={{ mt: 1, '.UshiiMenuItem-root': { pl: 1 } }}
       >
         <MenuItem
           value="table"

@@ -20,7 +20,7 @@ Los botones comunican acciones que los usuarios pueden realizar. Suelen colocars
 - Tarjetas
 - Barras de herramientas
 
-{{"component": "@yushii/docs/ComponentLinkHeader"}}
+{{"component": "@u-shii/docs/ComponentLinkHeader"}}
 
 ## Botón básico
 

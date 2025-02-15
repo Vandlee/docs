@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Rating from '@yushii/u-ui/Rating';
-import Stack from '@yushii/u-ui/Stack';
+import Rating from '@u-shii/u-ui/Rating';
+import Stack from '@u-shii/u-ui/Stack';
 
 export default function HalfRating() {
   return (

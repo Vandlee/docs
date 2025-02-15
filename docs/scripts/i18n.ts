@@ -3,7 +3,7 @@ import path from 'path';
 import fse from 'fs-extra';
 import { pageToTitle } from 'docs/src/modules/utils/helpers';
 import U_UiPages from 'docs/data/u-ui/pages';
-import { YushiiPage } from 'docs/src/YushiiPage';
+import { UshiiPage } from 'docs/src/u-shiiPage';
 
 const EXCLUDES = ['/api', '/blog', '/x/react-', '/toolpad'];
 
@@ -17,9 +17,9 @@ async function run() {
   output.pages = {};
 
   /**
-   * @param {readonly import('docs/src/YushiiPage').YushiiPage[]} pages
+   * @param {readonly import('docs/src/u-shiiPage').UshiiPage[]} pages
    */
-  const traverse = (pages: YushiiPage[]) => {
+  const traverse = (pages: UshiiPage[]) => {
     pages.forEach((page) => {
       if (
         (page.pathname !== '/' && page.pathname === '/api-docs') ||

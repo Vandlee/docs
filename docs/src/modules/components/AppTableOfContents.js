@@ -2,19 +2,19 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import throttle from 'lodash/throttle';
-import { styled, alpha } from '@yushii/u-ui/styles';
-import Typography from '@yushii/u-ui/Typography';
-import NoSsr from '@yushii/u-ui/NoSsr';
-import { Link } from '@yushii/docs/Link';
-import { useTranslate } from '@yushii/docs/i18n';
+import { styled, alpha } from '@u-shii/u-ui/styles';
+import Typography from '@u-shii/u-ui/Typography';
+import NoSsr from '@u-shii/u-ui/NoSsr';
+import { Link } from '@u-shii/docs/Link';
+import { useTranslate } from '@u-shii/docs/i18n';
 import { samePageLinkNavigation } from 'docs/src/modules/components/MarkdownLinks';
 
 const Nav = styled('nav')(({ theme }) => ({
-    top: 'var(--YushiiDocs-header-height)',
-    marginTop: 'var(--YushiiDocs-header-height)',
+    top: 'var(--UshiiDocs-header-height)',
+    marginTop: 'var(--UshiiDocs-header-height)',
     paddingLeft: 6, // Fix truncated focus outline style
     position: 'sticky',
-    height: 'calc(100vh - var(--YushiiDocs-header-height))',
+    height: 'calc(100vh - var(--UshiiDocs-header-height))',
     overflowY: 'auto',
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(7),

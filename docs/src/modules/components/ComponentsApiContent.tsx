@@ -3,12 +3,12 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import kebabCase from 'lodash/kebabCase';
 import { useRouter } from 'next/router';
-import exactProp from '@yushii/utils/exactProp';
-import { Translate, useTranslate, useUserLanguage } from '@yushii/docs/i18n';
-import { SectionTitle, SectionTitleProps } from '@yushii/docs/SectionTitle';
-import { HighlightedCode } from '@yushii/docs/HighlightedCode';
-import { MarkdownElement } from '@yushii/docs/MarkdownElement';
-import { ComponentApiContent, PropsTranslations } from '@yushii-internal/api-docs-builder';
+import exactProp from '@u-shii/utils/exactProp';
+import { Translate, useTranslate, useUserLanguage } from '@u-shii/docs/i18n';
+import { SectionTitle, SectionTitleProps } from '@u-shii/docs/SectionTitle';
+import { HighlightedCode } from '@u-shii/docs/HighlightedCode';
+import { MarkdownElement } from '@u-shii/docs/MarkdownElement';
+import { ComponentApiContent, PropsTranslations } from '@u-shii-internal/api-docs-builder';
 import PropertiesSection from 'docs/src/modules/components/ApiPage/sections/PropertiesSection';
 import ClassesSection from 'docs/src/modules/components/ApiPage/sections/ClassesSection';
 import SlotsSection from 'docs/src/modules/components/ApiPage/sections/SlotsSection';
@@ -112,8 +112,8 @@ export default function ComponentsApiContent(props: ComponentsApiContentProps) {
       const { classDescriptions, propDescriptions, slotDescriptions } =
         descriptions[key][userLanguage];
   
-      const isJoyComponent = filename.includes('yushii-joy');
-      const isBaseComponent = filename.includes('yushii-base');
+      const isJoyComponent = filename.includes('ushii-joy');
+      const isBaseComponent = filename.includes('ushii-base');
       const defaultPropsLink = isJoyComponent
         ? '/joy-ui/customization/themed-components/#theme-default-props'
         : '/u-ui/customization/theme-components/#theme-default-props';
@@ -187,7 +187,7 @@ export default function ComponentsApiContent(props: ComponentsApiContentProps) {
                     </React.Fragment>
                     )}
                     <div
-                    className="YushiiCallout-root YushiiCallout-info"
+                    className="UshiiCallout-root UshiiCallout-info"
                     dangerouslySetInnerHTML={{ __html: refHint }}
                     style={{
                         alignItems: 'baseline',
@@ -223,7 +223,7 @@ export default function ComponentsApiContent(props: ComponentsApiContentProps) {
                         <span
                           dangerouslySetInnerHTML={{
                               __html: t('api-docs.themeDefaultPropsDescription')
-                              .replace(/{{yushiiName}}/, pageContent.yushiiName)
+                              .replace(/{{ushiiName}}/, pageContent.ushiiName)
                               .replace(/{{defaultPropsLink}}/, defaultPropsLink),
                           }}
                         />

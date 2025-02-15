@@ -11,15 +11,15 @@ Ejecute uno de los siguientes comandos para añadir U-Ui a su proyecto:
 <codeblock storageKey="package-manager">
 
 ```bash npm
-npm install @yushii/u-ui @emotion/react @emotion/styled
+npm install @u-shii/u-ui @emotion/react @emotion/styled
 ```
 
 ```bash pnpm
-pnpm add @yushii/u-ui @emotion/react @emotion/styled
+pnpm add @u-shii/u-ui @emotion/react @emotion/styled
 ```
 
 ```bash yarn
-yarn add @yushii/u-ui @emotion/react @emotion/styled
+yarn add @u-shii/u-ui @emotion/react @emotion/styled
 ```
 
 </codeblock>

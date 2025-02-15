@@ -1,29 +1,29 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import Button from '@yushii/u-ui/Button';
-import Divider from '@yushii/u-ui/Divider';
-import { styled, alpha, ThemeProvider } from '@yushii/u-ui/styles';
-import List from '@yushii/u-ui/List';
-import Drawer from '@yushii/u-ui/Drawer';
-import Typography from '@yushii/u-ui/Typography';
-import SwipeableDrawer from '@yushii/u-ui/SwipeableDrawer';
-import ClickAwayListener from '@yushii/u-ui/ClickAwayListener';
-import Fade from '@yushii/u-ui/Fade';
-import Paper from '@yushii/u-ui/Paper';
-import Popper from '@yushii/u-ui/Popper';
-import Menu from '@yushii/u-ui/Menu';
-import MenuItem from '@yushii/u-ui/MenuItem';
-import useMediaQuery from '@yushii/u-ui/useMediaQuery';
-import Box from '@yushii/u-ui/Box';
-import { unstable_useEnhancedEffect as useEnhancedEffect } from '@yushii/utils';
+import Button from '@u-shii/u-ui/Button';
+import Divider from '@u-shii/u-ui/Divider';
+import { styled, alpha, ThemeProvider } from '@u-shii/u-ui/styles';
+import List from '@u-shii/u-ui/List';
+import Drawer from '@u-shii/u-ui/Drawer';
+import Typography from '@u-shii/u-ui/Typography';
+import SwipeableDrawer from '@u-shii/u-ui/SwipeableDrawer';
+import ClickAwayListener from '@u-shii/u-ui/ClickAwayListener';
+import Fade from '@u-shii/u-ui/Fade';
+import Paper from '@u-shii/u-ui/Paper';
+import Popper from '@u-shii/u-ui/Popper';
+import Menu from '@u-shii/u-ui/Menu';
+import MenuItem from '@u-shii/u-ui/MenuItem';
+import useMediaQuery from '@u-shii/u-ui/useMediaQuery';
+import Box from '@u-shii/u-ui/Box';
+import { unstable_useEnhancedEffect as useEnhancedEffect } from '@u-shii/utils';
 import { ArrowDropDownRounded, 
     DoneRounded } from '@mui/icons-material';
 import LogoWithCopyMenu from 'docs/src/components/action/LogoWithCopyMenu';
 import AppNavDrawerItem from 'docs/src/modules/components/AppNavDrawerItem';
 import { pageToTitleI18n } from '../utils/helpers';
 import PageContext from './PageContext';
-import { useTranslate } from '@yushii/docs/i18n';
-import YushiiProductSelector from 'docs/src/modules/components/YushiiProductSelector';
+import { useTranslate } from '@u-shii/docs/i18n';
+import UshiiProductSelector from 'docs/src/modules/components/u-shiiProductSelector';
 
 // TODO: Collapse should expose an API to customize the duration based on the height.
 function transitionTheme(theme) {
@@ -84,7 +84,7 @@ function ProductDrawerButton(props) {
       <React.Fragment>
         <Button
           size="small"
-          id="yushii-product-selector"
+          id="ushii-product-selector"
           ref={anchorRef}
           aria-haspopup="true"
           aria-controls={open ? 'drawer-open-button' : undefined}
@@ -119,11 +119,11 @@ function ProductDrawerButton(props) {
                 })}
               >
                 <ClickAwayListener onClickAway={handleClose}>
-                  <YushiiProductSelector
+                  <UshiiProductSelector
                     autoFocusItem={open}
                     type='docs'
-                    id="yushii-product-menu"
-                    aria-labelledby="yushii-product-selector"
+                    id="ushii-product-menu"
+                    aria-labelledby="ushii-product-selector"
                     onKeyDown={handleListKeyDown}
                   />
                 </ClickAwayListener>
@@ -212,7 +212,7 @@ const ToolbarDiv = styled('div')(({ theme }) => ({
     padding: theme.spacing(1.5),
     paddingRight: 0,
     flexShrink: 0,
-    height: 'var(--YushiiDocs-header-height)',
+    height: 'var(--UshiiDocs-header-height)',
     boxSizing: 'border-box', // TODO have CssBaseline in the Next.js layout
     display: 'flex',
     flexDirection: 'row',
@@ -233,7 +233,7 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
 
 const AppNavPaperComponent = styled('div')(() => {
     return {
-      width: 'var(--YushiiDocs-navDrawer-width)',
+      width: 'var(--UshiiDocs-navDrawer-width)',
       boxShadow: 'none',
       border: '0 !important', // TODO add a Paper slot
       overflowY: 'unset !important', // TODO add a Paper slot
@@ -251,7 +251,7 @@ function renderNavItems(options) {
 
 /**
  * @param {object} context 
- * @param {import('docs/src/pages').YushiiPage} context.page
+ * @param {import('docs/src/pages').UshiiPage} context.page
  */
 function reduceChildRoutes(context) {
     const { onClose, activePageParents, items, depth, t } = context;
@@ -364,7 +364,7 @@ export default function AppNavDrawer(props) {
                         variant="text"
                         color="secondary"
                         size="small"
-                        id="yushii-version-selector"
+                        id="ushii-version-selector"
                         onClick={(event) => {
                         setAnchorEl(event.currentTarget);
                         }}
@@ -378,7 +378,7 @@ export default function AppNavDrawer(props) {
                         {currentVersion.text}
                     </Button>
                     <Menu
-                        id="yushii-version-menu"
+                        id="ushii-version-menu"
                         anchorEl={anchorEl}
                         open={Boolean(anchorEl)}
                         onClose={() => setAnchorEl(null)}

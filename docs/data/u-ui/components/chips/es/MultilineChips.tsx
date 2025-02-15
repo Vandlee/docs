@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Chip from '@yushii/u-ui/Chip';
-import Box from '@yushii/u-ui/Box';
+import Chip from '@u-shii/u-ui/Chip';
+import Box from '@u-shii/u-ui/Box';
 
 export default function MultilineChips() {
   return (
@@ -8,7 +8,7 @@ export default function MultilineChips() {
       <Chip
         sx={{
           height: 'auto',
-          '& .YushiiChip-label': {
+          '& .UshiiChip-label': {
             display: 'block',
             whiteSpace: 'normal',
           },

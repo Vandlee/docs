@@ -1,11 +1,11 @@
 /* eslint-disable react/no-danger */
 import * as React from 'react';
-import { styled } from '@yushii/u-ui/styles';
-import { useTranslate } from '@yushii/docs/i18n';
+import { styled } from '@u-shii/u-ui/styles';
+import { useTranslate } from '@u-shii/docs/i18n';
 import {
   brandingDarkTheme as darkTheme,
   brandingLightTheme as lightTheme,
-} from '@yushii/docs/branding';
+} from '@u-shii/docs/branding';
 import ExpandableApiItem, {
   ApiItemContainer,
 } from 'docs/src/modules/components/ApiPage/list/ExpandableApiItem';
@@ -37,13 +37,13 @@ const StyledApiItem = styled(ExpandableApiItem)(
       },
     },
     '&.prop-list-deprecated-item': {
-      '& .YushiiApi-item-note': {
-        color: `var(--yushiidocs-palette-warning-700, ${lightTheme.palette.warning[700]})`,
+      '& .UshiiApi-item-note': {
+        color: `var(--ushiidocs-palette-warning-700, ${lightTheme.palette.warning[700]})`,
       },
     },
     '& .prop-list-alert': {
       marginBottom: 16,
-      '& .YushiiAlert-icon': {
+      '& .UshiiAlert-icon': {
         margin: 0,
       },
     },
@@ -67,28 +67,28 @@ const StyledApiItem = styled(ExpandableApiItem)(
         padding: 12,
         width: '100%',
         marginBottom: 8,
-        color: `var(--yushiidocs-palette-grey-900, ${lightTheme.palette.grey[50]})`,
+        color: `var(--ushiidocs-palette-grey-900, ${lightTheme.palette.grey[50]})`,
         border: '1px solid',
-        borderColor: `var(--yushiidocs-palette-primaryDark-700, ${lightTheme.palette.primaryDark[700]})`,
-        backgroundColor: `var(--yushiidocs-palette-primaryDark-800, ${lightTheme.palette.primaryDark[800]})`,
+        borderColor: `var(--ushiidocs-palette-primaryDark-700, ${lightTheme.palette.primaryDark[700]})`,
+        backgroundColor: `var(--ushiidocs-palette-primaryDark-800, ${lightTheme.palette.primaryDark[800]})`,
       },
     },
   }),
   ({ theme }) => ({
-    [`:where(${theme.vars ? '[data-yushii-color-scheme="dark"]' : '.mode-dark'}) &`]: {
+    [`:where(${theme.vars ? '[data-u-shii-color-scheme="dark"]' : '.mode-dark'}) &`]: {
       '& .prop-list-additional-info': {
         '& .prop-list-title': {
           p: {
-            color: `var(--yushiidocs-palette-grey-50, ${darkTheme.palette.grey[50]})`,
+            color: `var(--ushiidocs-palette-grey-50, ${darkTheme.palette.grey[50]})`,
           },
         },
       },
       '& .prop-list-default-props': {
-        color: `var(--yushiidocs-palette-grey-300, ${darkTheme.palette.grey[300]})`,
+        color: `var(--ushiidocs-palette-grey-300, ${darkTheme.palette.grey[300]})`,
       },
       '&.prop-list-deprecated-item': {
-        '& .YushiiApi-item-note': {
-          color: `var(--yushiidocs-palette-warning-400, ${darkTheme.palette.warning[400]})`,
+        '& .UshiiApi-item-note': {
+          color: `var(--ushiidocs-palette-warning-400, ${darkTheme.palette.warning[400]})`,
         },
       },
     },
@@ -178,7 +178,7 @@ export default function PropertiesList(props: PropertiesListProps) {
             {description && <PropDescription description={description} />}
             {seeMoreDescription && <p dangerouslySetInnerHTML={{ __html: seeMoreDescription }} />}
             {requiresRef && (
-              <ApiWarningAlert className="YushiiApi-collapsible prop-list-alert">
+              <ApiWarningAlert className="UshiiApi-collapsible prop-list-alert">
                 <span
                   dangerouslySetInnerHTML={{
                     __html: t('api-docs.requires-ref'),
@@ -188,7 +188,7 @@ export default function PropertiesList(props: PropertiesListProps) {
             )}
             {additionalInfo?.map((key) => (
               <p
-                className="prop-list-additional-description  YushiiApi-collapsible"
+                className="prop-list-additional-description  UshiiApi-collapsible"
                 key={key}
                 dangerouslySetInnerHTML={{
                   __html: t(`api-docs.additional-info.${key}`)!,
@@ -197,7 +197,7 @@ export default function PropertiesList(props: PropertiesListProps) {
             ))}
             <div className="prop-list-additional-info">
               {typeName && (
-                <p className="prop-list-type YushiiApi-collapsible">
+                <p className="prop-list-type UshiiApi-collapsible">
                   <span className="prop-list-title">{t('api-docs.type')}:</span>
                   <code
                     className="Api-code"
@@ -208,13 +208,13 @@ export default function PropertiesList(props: PropertiesListProps) {
                 </p>
               )}
               {propDefault && (
-                <p className="prop-list-default-props YushiiApi-collapsible">
+                <p className="prop-list-default-props UshiiApi-collapsible">
                   <span className="prop-list-title">{t('api-docs.default')}:</span>
                   <code className="default-value">{propDefault}</code>
                 </p>
               )}
               {signature && (
-                <div className="prop-list-signature YushiiApi-collapsible">
+                <div className="prop-list-signature UshiiApi-collapsible">
                   <span className="prop-list-title">{t('api-docs.signature')}:</span>
                   <div className="prop-list-content">
                     <code

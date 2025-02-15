@@ -2,22 +2,22 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
 import { kebabCase } from 'lodash';
-import { useTheme } from '@yushii/system';
-import { exactProp } from '@yushii/utils';
-import { Ad, AdGuest } from '@yushii/docs/Ad';
+import { useTheme } from '@u-shii/system';
+import { exactProp } from '@u-shii/utils';
+import { Ad, AdGuest } from '@u-shii/docs/Ad';
 import ComponentsApiContent from 'docs/src/modules/components/ComponentsApiContent';
 import HooksApiContent from 'docs/src/modules/components/HooksApiContent';
 import { getTranslatedHeader as getComponentTranslatedHeader } from 'docs/src/modules/components/ApiPage';
 import RichMarkdownElement from 'docs/src/modules/components/RichMarkdownElement';
 import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
 import AppLayoutDocs from 'docs/src/modules/components/AppLayoutDocs';
-import { useTranslate, useUserLanguage } from '@yushii/docs/i18n';
-import { BrandingProvider } from '@yushii/docs/branding';
+import { useTranslate, useUserLanguage } from '@u-shii/docs/i18n';
+import { BrandingProvider } from '@u-shii/docs/branding';
 import { HEIGHT as AppFrameHeight } from 'docs/src/modules/components/AppFrame';
 import { HEIGHT as TabsHeight } from 'docs/src/modules/components/ComponentPageTabs';
 import { getPropsToC } from 'docs/src/modules/components/ApiPage/sections/PropertiesSection';
 import { getClassesToC } from 'docs/src/modules/components/ApiPage/sections/ClassesSection';
-import YushiiBaseDeprecation from 'docs/src/components/productBaseUI/YushiiBaseDeprecation';
+import UshiiBaseDeprecation from 'docs/src/components/productBaseUI/u-shiiBaseDeprecation';
 
 function getHookTranslatedHeader(t, header) {
     const translations = {
@@ -247,7 +247,7 @@ export default function MarkdownDocsV2(props) {
       >
         <div
           style={{
-            '--YushiiDocs-header-height': hasTabs
+            '--UshiiDocs-header-height': hasTabs
               ? `${AppFrameHeight + TabsHeight}px`
               : `${AppFrameHeight}px`,
           }}
@@ -262,7 +262,7 @@ export default function MarkdownDocsV2(props) {
           <CssVarsProvider>
             {isJoy && <JoyModeObserver mode={theme.palette.mode} />}
             {isBase && (
-              <YushiiBaseDeprecation
+              <UshiiBaseDeprecation
                 newComponentUrl={localizedDoc.headers.newUrl}
                 newComponentName={localizedDoc.headers.newName}
               />

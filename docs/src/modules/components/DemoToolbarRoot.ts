@@ -1,4 +1,4 @@
-import { styled, alpha } from '@yushii/u-ui/styles';
+import { styled, alpha } from '@u-shii/u-ui/styles';
 
 interface DemoToolbarRootProps {
     demoOptions: any;

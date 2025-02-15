@@ -1,6 +1,6 @@
-import { YushiiPage } from 'docs/src/YushiiPage';
+import { UshiiPage } from 'docs/src/u-shiiPage';
 
-const pages: YushiiPage[] = [
+const pages: UshiiPage[] = [
   {
     pathname: '/u-docs/python/grupo-ejemplo',
     title: 'Grupo de ejemplo',

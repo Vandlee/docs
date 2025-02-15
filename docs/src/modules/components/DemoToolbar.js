@@ -1,24 +1,24 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import copy from 'clipboard-copy';
-import { useTheme, styled, alpha } from '@yushii/u-ui/styles';
-import IconButton from '@yushii/u-ui/IconButton';
-import Fade from '@yushii/u-ui/Fade';
-import YuButton from '@yushii/u-ui/Button';
-import Box from '@yushii/u-ui/Box';
-import YuToggleButton from '@yushii/u-ui/ToggleButton';
-import YuToggleButtonGroup, { toggleButtonGroupClasses } from '@yushii/u-ui/ToggleButtonGroup';
-import SvgIcon from '@yushii/u-ui/SvgIcon';
+import { useTheme, styled, alpha } from '@u-shii/u-ui/styles';
+import IconButton from '@u-shii/u-ui/IconButton';
+import Fade from '@u-shii/u-ui/Fade';
+import YuButton from '@u-shii/u-ui/Button';
+import Box from '@u-shii/u-ui/Box';
+import YuToggleButton from '@u-shii/u-ui/ToggleButton';
+import YuToggleButtonGroup, { toggleButtonGroupClasses } from '@u-shii/u-ui/ToggleButtonGroup';
+import SvgIcon from '@u-shii/u-ui/SvgIcon';
 
-import Menu from '@yushii/u-ui/Menu';
-import YuMenuItem, { menuItemClasses } from '@yushii/u-ui/MenuItem';
-import Tooltip from '@yushii/u-ui/Tooltip';
-import Divider from '@yushii/u-ui/Divider';
+import Menu from '@u-shii/u-ui/Menu';
+import YuMenuItem, { menuItemClasses } from '@u-shii/u-ui/MenuItem';
+import Tooltip from '@u-shii/u-ui/Tooltip';
+import Divider from '@u-shii/u-ui/Divider';
 import { useRouter } from 'next/router';
 import { CODE_VARIANTS, CODE_STYLING } from 'docs/src/modules/constants';
 import { useSetCodeVariant } from 'docs/src/modules/utils/codeVariant';
 import { useSetCodeStyling, useCodeStyling } from 'docs/src/modules/utils/codeStylingSolution';
-import { useTranslate } from '@yushii/docs/i18n';
+import { useTranslate } from '@u-shii/docs/i18n';
 import stylingSolutionMapping from 'docs/src/modules/utils/stylingSolutionMapping';
 import codeSandbox from '../sandbox/CodeSandbox';
 import stackBlitz from '../sandbox/StackBlitz';
@@ -32,23 +32,23 @@ const Root = styled('div')(({ theme }) => [
       alignItems: 'center',
       justifyContent: 'space-between'
     },
-    '& .YushiiIconButton-root, .MuiIconButton-root': {
+    '& .UshiiIconButton-root, .MuiIconButton-root': {
       '&:hover': {
         backgroundColor: (theme.vars || theme).palette.grey[100],
       },
     },
-    '& .YushiiSvgIcon-root, & .MuiSvgIcon-root': {
+    '& .UshiiSvgIcon-root, & .MuiSvgIcon-root': {
       fontSize: 16,
       color: (theme.vars || theme).palette.grey[900],
     },
   },
   theme.applyDarkStyles({
-    '& .YushiiIconButton-root, .MuiIconButton-root': {
+    '& .UshiiIconButton-root, .MuiIconButton-root': {
       '&:hover': {
         backgroundColor: (theme.vars || theme).palette.primaryDark[700],
       },
     },
-    '& .YushiiSvgIcon-root, & .MuiSvgIcon-root': {
+    '& .UshiiSvgIcon-root, & .MuiSvgIcon-root': {
       color: (theme.vars || theme).palette.grey[400],
     },
   }),
@@ -94,7 +94,7 @@ const Button = styled(YuButton)(({ theme }) => ({
   fontSize: theme.typography.pxToRem(13),
   fontWeight: theme.typography.fontWeightMedium,
   color: theme.palette.primary[600],
-  '& .YushiiSvgIcon-root, & .MuiSvgIcon-root': {
+  '& .UshiiSvgIcon-root, & .MuiSvgIcon-root': {
     color: theme.palette.primary.main,
   },
   '&:hover': {
@@ -108,7 +108,7 @@ const Button = styled(YuButton)(({ theme }) => ({
   ...theme.applyDarkStyles({
     color: theme.palette.primary[300],
     borderColor: alpha(theme.palette.primary[300], 0.2),
-    '& .YushiiSvgIcon-root, & .MuiSvgIcon-root': {
+    '& .UshiiSvgIcon-root, & .MuiSvgIcon-root': {
       color: theme.palette.primary[300],
     },
     '&:hover': {
@@ -136,7 +136,7 @@ const ToggleButton = styled(YuToggleButton)(({ theme }) => [
     p: 0,
     fontSize: theme.typography.pxToRem(13),
     borderRadius: '999px',
-    '&.Yushii-disabled': {
+    '&.Ushii-disabled': {
       opacity: 0.8,
       cursor: 'not-allowed',
     },

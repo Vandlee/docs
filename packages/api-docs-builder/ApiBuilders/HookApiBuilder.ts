@@ -24,7 +24,7 @@ async function annotateHookDefinition(
   hookJsdoc: Annotation,
   projectSettings: ProjectSettings,
 ) {
-  const HOST = projectSettings.baseApiUrl ?? 'https://yushii.yugacore.com';
+  const HOST = projectSettings.baseApiUrl ?? 'https://u-shii.yugacore.com';
 
   const typesFilename = api.filename.replace(/\.js$/, '.d.ts');
   const fileName = path.parse(api.filename).name;
@@ -42,7 +42,7 @@ async function annotateHookDefinition(
   let end = null;
   traverse(typesAST, {
     ExportDefaultDeclaration(babelPath) {
-      if (api.filename.includes('yushii-base')) {
+      if (api.filename.includes('ushii-base')) {
         // Base UI does not use default exports.
         return;
       }
@@ -100,7 +100,7 @@ async function annotateHookDefinition(
     },
 
     ExportNamedDeclaration(babelPath) {
-      if (!api.filename.includes('yushii-base')) {
+      if (!api.filename.includes('ushii-base')) {
         return;
       }
 
@@ -378,13 +378,13 @@ const generateApiJson = async (outputDirectory: string, reactApi: HookReactApi) 
 const defaultGetHookImports = (name: string, filename: string) => {
   const githubPath = toGitHubPath(filename);
   const rootImportPath = githubPath.replace(
-    /\/packages\/yushii(?:-(.+?))?\/src\/.*/,
-    (match, pkg) => `@yushii/${pkg}`,
+    /\/packages\/u-shii(?:-(.+?))?\/src\/.*/,
+    (match, pkg) => `@u-shii/${pkg}`,
   );
 
   const subdirectoryImportPath = githubPath.replace(
-    /\/packages\/yushii(?:-(.+?))?\/src\/([^\\/]+)\/.*/,
-    (match, pkg, directory) => `@yushii/${pkg}/${directory}`,
+    /\/packages\/u-shii(?:-(.+?))?\/src\/([^\\/]+)\/.*/,
+    (match, pkg, directory) => `@u-shii/${pkg}/${directory}`,
   );
 
   let namedImportName = name;
@@ -394,7 +394,7 @@ const defaultGetHookImports = (name: string, filename: string) => {
     namedImportName = `unstable_${name} as ${name}`;
   }
 
-  const useNamedImports = rootImportPath === '@yushii/base';
+  const useNamedImports = rootImportPath === '@u-shii/base';
 
   const subpathImport = useNamedImports
     ? `import { ${namedImportName} } from '${subdirectoryImportPath}';`

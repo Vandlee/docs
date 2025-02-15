@@ -2,17 +2,17 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import copy from 'clipboard-copy';
 import { useRouter } from 'next/router';
-import { debounce } from '@yushii/u-ui/utils';
-import { alpha, styled } from '@yushii/u-ui/styles';
-import { Tabs } from '@yushii/base/Tabs';
-import { TabPanel } from '@yushii/base/TabPanel';
-import { unstable_useId as useId } from '@yushii/utils';
-import IconButton from '@yushii/u-ui/IconButton';
-import Box from '@yushii/u-ui/Box';
-import Collapse from '@yushii/u-ui/Collapse';
-import NoSsr from '@yushii/u-ui/NoSsr';
-import { HighlightedCode } from '@yushii/docs/HighlightedCode';
-import { CodeTab, CodeTabList } from '@yushii/docs/HighlightedCodeWithTabs';
+import { debounce } from '@u-shii/u-ui/utils';
+import { alpha, styled } from '@u-shii/u-ui/styles';
+import { Tabs } from '@u-shii/base/Tabs';
+import { TabPanel } from '@u-shii/base/TabPanel';
+import { unstable_useId as useId } from '@u-shii/utils';
+import IconButton from '@u-shii/u-ui/IconButton';
+import Box from '@u-shii/u-ui/Box';
+import Collapse from '@u-shii/u-ui/Collapse';
+import NoSsr from '@u-shii/u-ui/NoSsr';
+import { HighlightedCode } from '@u-shii/docs/HighlightedCode';
+import { CodeTab, CodeTabList } from '@u-shii/docs/HighlightedCodeWithTabs';
 import { ContentCopyRounded } from '@mui/icons-material';
 import { LibraryAddCheckRounded } from '@mui/icons-material';
 import DemoSandbox from 'docs/src/modules/components/DemoSandbox';
@@ -23,10 +23,10 @@ import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
 import { useCodeVariant } from 'docs/src/modules/utils/codeVariant';
 import { useCodeStyling } from 'docs/src/modules/utils/codeStylingSolution';
 import { CODE_VARIANTS, CODE_STYLING } from 'docs/src/modules/constants';
-import { useUserLanguage, useTranslate } from '@yushii/docs/i18n';
+import { useUserLanguage, useTranslate } from '@u-shii/docs/i18n';
 import stylingSolutionMapping from 'docs/src/modules/utils/stylingSolutionMapping';
 import DemoToolbarRoot from 'docs/src/modules/components/DemoToolbarRoot';
-import { grey } from '@yushii/docs/branding';
+import { grey } from '@u-shii/docs/branding';
 
 function trimLeadingSpaces(input = '') {
   return input.replace(/^\s+/gm, '');
@@ -57,7 +57,7 @@ function useDemoData(codeVariant, demo, githubLocation, codeStyling) {
     let name = 'u-ui';
     if (canonicalAs.startsWith('/base-ui/')) {
       productId = 'base-ui';
-      name = 'Yushii Base'
+      name = 'u-shii Base'
     }
 
     let codeOptions = {};
@@ -639,7 +639,7 @@ export default function Demo(props) {
                         'data-ga-event-action': 'copy-click',
                       }}
                       sx={{
-                        '& .YushiiCode-copy': {
+                        '& .UshiiCode-copy': {
                           display: 'none',
                         },
                       }}

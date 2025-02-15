@@ -8,11 +8,11 @@ export default function JavaScript() {
   return (
     <BrandingCssVarsProvider>
       <Head
-        title="Yushii UI: React components"
-        description="Yushii UI is an open-source React component library"
+        title="Ushii: React components"
+        description="Ushii is an open-source React component library"
       />
       <AppHeaderBanner />
-      <AppHeader gitHubRepository="https://github.com/yugashiki/yushii" />
+      <AppHeader gitHubRepository="https://github.com/yugashiki/u-shii" />
       <main id="main-content">
         <JavaScriptHero />
       </main>

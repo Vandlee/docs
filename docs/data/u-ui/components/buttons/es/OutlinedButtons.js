@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Button from '@yushii/u-ui/Button';
-import Stack from '@yushii/u-ui/Stack';
+import Button from '@u-shii/u-ui/Button';
+import Stack from '@u-shii/u-ui/Stack';
 
 export default function OutlinedButtons() {
   return (

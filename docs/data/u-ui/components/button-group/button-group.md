@@ -3,14 +3,14 @@ productId: u-ui
 title: Componente Grupo de botones de React
 components: Button, ButtonGroup
 githubLabel: 'componente: ButtonGroup'
-githubSource: packages/yushii-ui/src/ButtonGroup
+githubSource: packages/u-shii-ui/src/ButtonGroup
 ---
 
 # Grupo de botones
 
 <p class="description">El componente ButtonGroup puede utilizarse para agrupar botones relacionados.</p>
 
-{{"component": "@yushii/docs/ComponentLinkHeader"}}
+{{"component": "@u-shii/docs/ComponentLinkHeader"}}
 
 ## Grupo de botones básico
 

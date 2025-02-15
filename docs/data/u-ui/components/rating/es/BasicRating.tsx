@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Box from '@yushii/u-ui/Box';
-import Rating from '@yushii/u-ui/Rating';
-import Typography from '@yushii/u-ui/Typography';
+import Box from '@u-shii/u-ui/Box';
+import Rating from '@u-shii/u-ui/Rating';
+import Typography from '@u-shii/u-ui/Typography';
 
 export default function BasicRating() {
   const [value, setValue] = React.useState<number | null>(2);

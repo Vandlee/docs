@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Button from '@yushii/u-ui/Button';
+import Button from '@u-shii/u-ui/Button';
 import SaveIcon from '@mui/icons-material/Save';
-import Stack from '@yushii/u-ui/Stack';
+import Stack from '@u-shii/u-ui/Stack';
 
 export default function LoadingButtons() {
   return (

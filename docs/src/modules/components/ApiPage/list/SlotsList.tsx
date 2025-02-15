@@ -1,11 +1,11 @@
 /* eslint-disable react/no-danger */
 import * as React from 'react';
-import { styled, alpha } from '@yushii/u-ui/styles';
+import { styled, alpha } from '@u-shii/u-ui/styles';
 import {
   brandingLightTheme as lightTheme,
   brandingDarkTheme as darkTheme,
-} from '@yushii/docs/branding';
-import { useTranslate } from '@yushii/docs/i18n';
+} from '@u-shii/docs/branding';
+import { useTranslate } from '@u-shii/docs/i18n';
 import ExpandableApiItem, {
   ApiItemContainer,
 } from 'docs/src/modules/components/ApiPage/list/ExpandableApiItem';
@@ -31,11 +31,11 @@ const StyledApiItem = styled(ExpandableApiItem)(
       fontFamily: theme.typography.fontFamilyCode,
       fontWeight: theme.typography.fontWeightRegular,
       borderColor: alpha(darkTheme.palette.primary[100], 0.5),
-      backgroundColor: `var(--yushiidocs-palette-primary-50, ${lightTheme.palette.primary[50]})`,
+      backgroundColor: `var(--ushiidocs-palette-primary-50, ${lightTheme.palette.primary[50]})`,
     },
   }),
   ({ theme }) => ({
-    [`:where(${theme.vars ? '[data-yushii-color-scheme="dark"]' : '.mode-dark'}) &`]: {
+    [`:where(${theme.vars ? '[data-u-shii-color-scheme="dark"]' : '.mode-dark'}) &`]: {
       '& .global-class-value': {
         borderColor: alpha(darkTheme.palette.primary[400], 0.1),
         backgroundColor: alpha(darkTheme.palette.primary[900], 0.4),
@@ -54,7 +54,7 @@ export default function SlotsList(props: SlotsListProps) {
   const t = useTranslate();
 
   return (
-    <ApiItemContainer className="YushiiApi-slot-list">
+    <ApiItemContainer className="UshiiApi-slot-list">
       {slots.map((params) => {
         const { description, className, name, defaultValue, hash } = params;
 

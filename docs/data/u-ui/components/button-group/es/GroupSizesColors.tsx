@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Button from '@yushii/u-ui/Button';
-import Box from '@yushii/u-ui/Box';
-import ButtonGroup from '@yushii/u-ui/ButtonGroup';
+import Button from '@u-shii/u-ui/Button';
+import Box from '@u-shii/u-ui/Box';
+import ButtonGroup from '@u-shii/u-ui/ButtonGroup';
 
 const buttons = [
   <Button key="uno">Uno</Button>,

@@ -4,14 +4,14 @@ title: Componente de Valoración de React
 components: Rating
 githubLabel: 'component: rating'
 waiAria: https://www.w3.org/WAI/tutorials/forms/custom-controls/#a-star-rating
-githubSource: packages/yushii-ui/src/Rating
+githubSource: packages/u-shii-ui/src/Rating
 ---
 
 # Valoración
 
 <p class="description">Las valoraciones proporcionan información sobre las opiniones y experiencias de los demás, y pueden permitir al usuario enviar su propia valoración.</p>
 
-{{"component": "@yushii/docs/ComponentLinkHeader"}}
+{{"component": "@u-shii/docs/ComponentLinkHeader"}}
 
 ## Valoración básica
 

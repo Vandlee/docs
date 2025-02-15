@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Box from '@yushii/u-ui/Box';
-import Button from '@yushii/u-ui/Button';
+import Box from '@u-shii/u-ui/Box';
+import Button from '@u-shii/u-ui/Button';
 
 export default function ButtonSizes() {
   return (

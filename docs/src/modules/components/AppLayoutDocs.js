@@ -1,16 +1,16 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
-import { styled } from '@yushii/u-ui/styles';
-import { exactProp } from '@yushii/utils';
-import GlobalStyles from '@yushii/u-ui/GlobalStyles';
+import { styled } from '@u-shii/u-ui/styles';
+import { exactProp } from '@u-shii/utils';
+import GlobalStyles from '@u-shii/u-ui/GlobalStyles';
 import {
   AdManager,
   AD_MARGIN_TOP,
   AD_HEIGHT,
   AD_HEIGHT_MOBILE,
   AD_MARGIN_BOTTOM,
-} from '@yushii/docs/Ad';
+} from '@u-shii/docs/Ad';
 import Head from 'docs/src/modules/components/Head';
 import AppFrame from 'docs/src/modules/components/AppFrame';
 import AppContainer from 'docs/src/modules/components/AppContainer';
@@ -82,14 +82,14 @@ const StyledAppContainer = styled(AppContainer, {
       {
         props: ({ disableAd, hasTabs }) => !disableAd && hasTabs,
         style: {
-          '&& .component-tabs .YushiiTabs-root': {
+          '&& .component-tabs .UshiiTabs-root': {
             // 40px matches MarkdownElement h2 margin-top.
             marginBottom: `calc(${theme.spacing(AD_MARGIN_TOP)} + ${AD_HEIGHT_MOBILE}px + 40px)`,
             [theme.breakpoints.up('sm')]: {
               marginBottom: `calc(${theme.spacing(AD_MARGIN_TOP)} + ${AD_HEIGHT}px + 40px)`,
             },
           },
-          '&& .component-tabs.ad .YushiiTabs-root': {
+          '&& .component-tabs.ad .UshiiTabs-root': {
             marginBottom: 0,
           },
         },
@@ -150,7 +150,7 @@ export default function AppLayoutDocs(props) {
       <GlobalStyles
         styles={{
           ':root': {
-            '--YushiiDocs-navDrawer-width': '300px',
+            '--UshiiDocs-navDrawer-width': '300px',
           },
         }}
       />

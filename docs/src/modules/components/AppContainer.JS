@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { styled } from '@yushii/u-ui/styles';
-import Container from '@yushii/u-ui/Container';
+import { styled } from '@u-shii/u-ui/styles';
+import Container from '@u-shii/u-ui/Container';
 
 const StyledAppContainer = styled(Container)(({ theme }) => {
   return {
-    paddingTop: `calc(var(--YushiiDocs-header-height) + ${theme.spacing(4)})`,
+    paddingTop: `calc(var(--UshiiDocs-header-height) + ${theme.spacing(4)})`,
     // We're mostly hosting text content so max-width by px does not make sense considering font-size is system-adjustable.
     // 105ch ≈ 930px
     fontFamily: 'Arial',

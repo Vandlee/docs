@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { styled } from '@yushii/u-ui/styles';
-import IconButton from '@yushii/u-ui/IconButton';
-import Badge, { badgeClasses } from '@yushii/u-ui/Badge';
+import { styled } from '@u-shii/u-ui/styles';
+import IconButton from '@u-shii/u-ui/IconButton';
+import Badge, { badgeClasses } from '@u-shii/u-ui/Badge';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 const CartBadge = styled(Badge)`

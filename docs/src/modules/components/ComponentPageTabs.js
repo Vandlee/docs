@@ -1,10 +1,10 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
-import { styled, alpha } from '@yushii/u-ui/styles';
-import Box from '@yushii/u-ui/Box';
-import { useTranslate } from '@yushii/docs/i18n';
-import { Link } from '@yushii/docs/Link';
+import { styled, alpha } from '@u-shii/u-ui/styles';
+import Box from '@u-shii/u-ui/Box';
+import { useTranslate } from '@u-shii/docs/i18n';
+import { Link } from '@u-shii/docs/Link';
 
 export const HEIGHT = 50;
 
@@ -29,7 +29,7 @@ const LinkTab = styled(Link)(({ theme }) => ({
       borderColor: (theme.vars || theme).palette.divider,
       background: (theme.vars || theme).palette.primaryDark[700],
     },
-    '&.Yushii-selected': {
+    '&.Ushii-selected': {
       color: (theme.vars || theme).palette.primary[300],
     },
   }),

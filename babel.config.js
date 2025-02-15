@@ -6,7 +6,7 @@ const path = require('path');
  */
 
 const errorCodesPath = path.resolve(__dirname, './docs/public/static/error-codes.json');
-const missingError = process.env.YUSHII_EXTRACT_ERROR_CODES === 'true' ? 'write' : 'annotate';
+const missingError = process.env.USHII_EXTRACT_ERROR_CODES === 'true' ? 'write' : 'annotate';
 
 /**
  * @param {string} relativeToBabelConf
@@ -19,7 +19,7 @@ function resolveAliasPath(relativeToBabelConf) {
 
 /** @type {babel.PluginItem[]} */
 const productionPlugins = [
-  ['babel-plugin-react-remove-properties', { properties: ['data-yushii-test'] }],
+  ['babel-plugin-react-remove-properties', { properties: ['data-u-shii-test'] }],
 ];
 
 /** @type {babel.ConfigFunction} */
@@ -27,14 +27,14 @@ module.exports = function getBabelConfig(api) {
   const useESModules = api.env(['regressions', 'modern', 'stable']);
 
   const defaultAlias = {
-    '@yushii/u-ui': resolveAliasPath('./packages/yushii-ui/src'),
-    '@yushii/docs': resolveAliasPath('./packages/yushii-docs/src'),
-    '@yushii/internal-markdown': resolveAliasPath('./packages/markdown'),
-    '@yushii/styled-engine': resolveAliasPath('./packages/yushii-styled-engine/src'),
-    '@yushii/system': resolveAliasPath('./packages/yushii-system/src'),
-    '@yushii/base': resolveAliasPath('./packages/yushii-base/src'),
-    '@yushii/utils': resolveAliasPath('./packages/yushii-utils/src'),
-    '@yushii/internal-docs-utils': resolveAliasPath('./packages-internal/docs-utils/src'),
+    '@u-shii/u-ui': resolveAliasPath('./packages/u-shii-ui/src'),
+    '@u-shii/docs': resolveAliasPath('./packages/u-shii-docs/src'),
+    '@u-shii/internal-markdown': resolveAliasPath('./packages/markdown'),
+    '@u-shii/styled-engine': resolveAliasPath('./packages/u-shii-styled-engine/src'),
+    '@u-shii/system': resolveAliasPath('./packages/u-shii-system/src'),
+    '@u-shii/base': resolveAliasPath('./packages/u-shii-base/src'),
+    '@u-shii/utils': resolveAliasPath('./packages/u-shii-utils/src'),
+    '@u-shii/internal-docs-utils': resolveAliasPath('./packages-internal/docs-utils/src'),
     docs: resolveAliasPath('./docs'),
   };
 
@@ -44,7 +44,7 @@ module.exports = function getBabelConfig(api) {
       {
         bugfixes: true,
         browserslistEnv: process.env.BABEL_ENV || process.env.NODE_ENV,
-        debug: process.env.YUSHII_BUILD_VERBOSE === 'true',
+        debug: process.env.USHII_BUILD_VERBOSE === 'true',
         modules: useESModules ? false : 'commonjs',
         shippedProposals: api.env('modern'),
       },
@@ -72,7 +72,7 @@ module.exports = function getBabelConfig(api) {
       '@babel/plugin-transform-runtime',
       {
         useESModules,
-        version: process.env.YUSHII_BABEL_RUNTIME_VERSION || '^7.25.0',
+        version: process.env.USHII_BABEL_RUNTIME_VERSION || '^7.25.0',
       },
     ],
     [
@@ -85,11 +85,11 @@ module.exports = function getBabelConfig(api) {
       'transform-inline-environment-variables',
       {
         include: [
-          'YUSHII_VERSION',
-          'YUSHII_MAJOR_VERSION',
-          'YUSHII_MINOR_VERSION',
-          'YUSHII_PATCH_VERSION',
-          'YUSHII_PRERELEASE',
+          'USHII_VERSION',
+          'USHII_MAJOR_VERSION',
+          'USHII_MINOR_VERSION',
+          'USHII_PATCH_VERSION',
+          'USHII_PRERELEASE',
         ],
       },
     ],
@@ -103,7 +103,7 @@ module.exports = function getBabelConfig(api) {
     ...(useESModules
       ? [
           [
-            '@yushii/internal-babel-plugin-resolve-imports',
+            '@u-shii/internal-babel-plugin-resolve-imports',
             {
               outExtension: usesAliases ? null : outFileExtension,
             },
@@ -139,7 +139,7 @@ module.exports = function getBabelConfig(api) {
       },
       {
         test: /(\.test\.[^.]+$|\.test\/)/,
-        plugins: [['@yushii/internal-babel-plugin-resolve-imports', false]]
+        plugins: [['@u-shii/internal-babel-plugin-resolve-imports', false]]
       }
     ],
     env: {

@@ -7,15 +7,15 @@
 /examples/material-ui-preact/config
 /examples/material-ui-preact/scripts
 /examples/material-ui-nextjs/src
-/packages/yushii-codemod/lib
-/packages/yushii-codemod/src/*/*.test/*
-/packages/yushii-codemod/src/**/test-cases/*
-/packages/yushii-icons-material/fixtures
-/packages/yushii-icons-material/legacy
-/packages/yushii-icons-material/lib
-/packages/yushii-icons-material/material-icons/
-/packages/yushii-icons-material/src/*.js
-/packages/yushii-icons-material/templateSvgIcon.js
+/packages/u-shii-codemod/lib
+/packages/u-shii-codemod/src/*/*.test/*
+/packages/u-shii-codemod/src/**/test-cases/*
+/packages/u-shii-icons-material/fixtures
+/packages/u-shii-icons-material/legacy
+/packages/u-shii-icons-material/lib
+/packages/u-shii-icons-material/material-icons/
+/packages/u-shii-icons-material/src/*.js
+/packages/u-shii-icons-material/templateSvgIcon.js
 # Ignore fixtures
 /packages-internal/scripts/typescript-to-proptypes/test/*/*
 /test/bundling/fixtures/**/*.fixture.js

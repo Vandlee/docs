@@ -1,27 +1,27 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
-import GlobalStyles from '@yushii/u-ui/GlobalStyles';
-import { styled, alpha } from '@yushii/u-ui/styles';
+import GlobalStyles from '@u-shii/u-ui/GlobalStyles';
+import { styled, alpha } from '@u-shii/u-ui/styles';
 import NProgress from 'nprogress';
-import CssBaseline from '@yushii/u-ui/CssBaseline';
-import AppBar from '@yushii/u-ui/AppBar';
-import Stack from '@yushii/u-ui/Stack';
-import IconButton from '@yushii/u-ui/IconButton';
-import Tooltip from '@yushii/u-ui/Tooltip';
-import Box from '@yushii/u-ui/Box';
-import NProgressBar from '@yushii/docs/NProgressBar';
-import { debounce } from '@yushii/u-ui/utils';
+import CssBaseline from '@u-shii/u-ui/CssBaseline';
+import AppBar from '@u-shii/u-ui/AppBar';
+import Stack from '@u-shii/u-ui/Stack';
+import IconButton from '@u-shii/u-ui/IconButton';
+import Tooltip from '@u-shii/u-ui/Tooltip';
+import Box from '@u-shii/u-ui/Box';
+import NProgressBar from '@u-shii/docs/NProgressBar';
+import { debounce } from '@u-shii/u-ui/utils';
 import AppNavDrawer from 'docs/src/modules/components/AppNavDrawer';
 import AppSettingsDrawer from 'docs/src/modules/components/AppSettingsDrawer';
 import MarkdownLinks from 'docs/src/modules/components/MarkdownLinks';
 import SkipLink from 'docs/src/modules/components/SkipLink';
 import PageContext from 'docs/src/modules/components/PageContext';
-import { useTranslate } from '@yushii/docs/i18n';
+import { useTranslate } from '@u-shii/docs/i18n';
 import LogoWithCopyMenu from 'docs/src/components/action/LogoWithCopyMenu';
 import AppFrameBanner from 'docs/src/components/banner/AppFrameBanner';
 import { GitHub, MenuRounded, SettingsRounded } from '@mui/icons-material';
-import { Divider } from '@yushii/u-ui';
+import { Divider } from '@u-shii/u-ui';
 
 const nProgressStart = debounce(() => {
   NProgress.start();
@@ -117,7 +117,7 @@ const StyledAppBar = styled(AppBar, {
         props: ({ disablePermanent }) => !disablePermanent,
         style: {
           [theme.breakpoints.up('lg')]: {
-            width: 'calc(100% - var(-YushiiDocs-navDrawer-width))',
+            width: 'calc(100% - var(--UshiiDocs-navDrawer-width))',
           },
         },
       },
@@ -151,7 +151,7 @@ const StyledAppNavDrawer = styled(AppNavDrawer)(({ theme }) => ({
       style: {
         [theme.breakpoints.up('lg')]: {
           flexShrink: 0,
-          width: 'var(--YushiiDocs-navDrawer-width)',
+          width: 'var(--UshiiDocs-navDrawer-width)',
         },
       },
     },
@@ -182,12 +182,12 @@ export default function AppFrame(props) {
       <MarkdownLinks />
       <StyledAppBar
         disablePermanent={disablePermanent}
-        sx={{ minHeight: 'var(--YushiiDocs-header-height)' }}
+        sx={{ minHeight: 'var(--UshiiDocs-header-height)' }}
       >
         <GlobalStyles
           styles={{
             ':root': {
-              '--YushiiDocs-header-height': `${HEIGHT}px`,
+              '--UshiiDocs-header-height': `${HEIGHT}px`,
             },
           }}
         />

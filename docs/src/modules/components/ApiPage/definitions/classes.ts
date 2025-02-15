@@ -1,5 +1,5 @@
-import { PropsTranslations, ComponentApiContent } from '@yushii-internal/api-docs-builder';
-import { Translate } from '@yushii/docs/i18n';
+import { PropsTranslations, ComponentApiContent } from '@u-shii-internal/api-docs-builder';
+import { Translate } from '@u-shii/docs/i18n';
 import kebabCase from 'lodash/kebabCase';
 import type { TableOfContentsParams } from 'docs/src/modules/components/ApiPage';
 

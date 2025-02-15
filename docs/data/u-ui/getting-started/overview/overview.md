@@ -25,4 +25,4 @@ A pesar de ser un "Fork", el código está escrito desde cero debido a que quier
 
 Empieza a utilizar U-Ui hoy mismo con algunos de estos útiles recursos:
 
-{{"component": "modules/components/YushiiStartingLinksCollection.js"}}
+{{"component": "modules/components/u-shiiStartingLinksCollection.js"}}

@@ -1,6 +1,6 @@
-# @yushii-internal/markdown
+# @u-shii-internal/markdown
 
-Yushii markdown parser and webpack loader.
+u-shii markdown parser and webpack loader.
 This is an internal package not meant for general use.
 
 ## Release

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { styled } from '@yushii/u-ui/styles';
-import { Box, Button, createTheme, ThemeProvider, Typography } from '@yushii/u-ui';
+import { styled } from '@u-shii/u-ui/styles';
+import { Box, Button, createTheme, ThemeProvider, Typography } from '@u-shii/u-ui';
 import { PortraitRounded } from '@mui/icons-material';
 
 const Dropdown = styled('div')(({ theme }) => [
@@ -18,7 +18,7 @@ const Dropdown = styled('div')(({ theme }) => [
       '&:hover': {
         backgroundColor: (theme.vars || theme).palette.neutral[50],
       },
-      '.YushiiTypography-root': {
+      '.UshiiTypography-root': {
         flex: 1,
       },
     },

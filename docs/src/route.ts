@@ -12,7 +12,7 @@ const ROUTES = {
   phpDocs: '/u-docs/php/getting-started',
   docsPython: '/u-docs/python/',
   pythonDocs: '/u-docs/python/getting-started',
-  // Yushii UI doc pages
+  // Ushii doc pages
   uUiDocs: '/u-ui/getting-started/',
   freeTemplates: '/u-ui/getting-started/templates/',
   documentation: '/u-ui/getting-started/',

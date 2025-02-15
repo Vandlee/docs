@@ -1,16 +1,16 @@
 import * as React from 'react';
-import { styled, alpha } from '@yushii/u-ui/styles';
-import GlobalStyles from '@yushii/u-ui/GlobalStyles';
-import Box from '@yushii/u-ui/Box';
-import Stack from '@yushii/u-ui/Stack';
-import Container from '@yushii/u-ui/Container';
-import Tooltip from '@yushii/u-ui/Tooltip';
-import IconButton from '@yushii/u-ui/IconButton';
+import { styled, alpha } from '@u-shii/u-ui/styles';
+import GlobalStyles from '@u-shii/u-ui/GlobalStyles';
+import Box from '@u-shii/u-ui/Box';
+import Stack from '@u-shii/u-ui/Stack';
+import Container from '@u-shii/u-ui/Container';
+import Tooltip from '@u-shii/u-ui/Tooltip';
+import IconButton from '@u-shii/u-ui/IconButton';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LogoWithCopyMenu from 'docs/src/components/action/LogoWithCopyMenu';
 import HeaderNavBar from 'docs/src/components/header/HeaderNavBar';
 import LogoWithDropdown from 'docs/src/components/action/LogoWithDropdown';
-import { useTranslate } from '@yushii/docs/i18n';
+import { useTranslate } from '@u-shii/docs/i18n';
 
 const Header = styled('header')(({ theme }) => [
   {
@@ -41,7 +41,7 @@ export default function AppHeader(props: AppHeaderProps) {
       <GlobalStyles
         styles={{
           ':root': {
-            '--YushiiDocs-header-height': `${HEIGHT}px`,
+            '--UshiiDocs-header-height': `${HEIGHT}px`,
           },
         }}
       />

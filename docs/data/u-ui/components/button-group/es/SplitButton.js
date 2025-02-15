@@ -1,13 +1,13 @@
 import * as React from 'react';
-import Button from '@yushii/u-ui/Button';
-import ButtonGroup from '@yushii/u-ui/ButtonGroup';
+import Button from '@u-shii/u-ui/Button';
+import ButtonGroup from '@u-shii/u-ui/ButtonGroup';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import ClickAwayListener from '@yushii/u-ui/ClickAwayListener';
-import Grow from '@yushii/u-ui/Grow';
-import Paper from '@yushii/u-ui/Paper';
-import Popper from '@yushii/u-ui/Popper';
-import MenuItem from '@yushii/u-ui/MenuItem';
-import MenuList from '@yushii/u-ui/MenuList';
+import ClickAwayListener from '@u-shii/u-ui/ClickAwayListener';
+import Grow from '@u-shii/u-ui/Grow';
+import Paper from '@u-shii/u-ui/Paper';
+import Popper from '@u-shii/u-ui/Popper';
+import MenuItem from '@u-shii/u-ui/MenuItem';
+import MenuList from '@u-shii/u-ui/MenuList';
 
 const options = ['Crear una confirmación de fusión', 'Aplastar y fusionar', 'Rebase y fusionar'];
 

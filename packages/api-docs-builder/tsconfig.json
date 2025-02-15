@@ -14,7 +14,7 @@
     "strict": true,
     "baseUrl": "./",
     "paths": {
-      "@yushii/internal-docs-utils": ["../../packages-internal/docs-utils/src"]
+      "@u-shii/internal-docs-utils": ["../../packages-internal/docs-utils/src"]
     }
   },
   "include": ["./**/*.ts", "./**/*.js"],

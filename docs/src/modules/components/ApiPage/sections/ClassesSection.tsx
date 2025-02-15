@@ -1,8 +1,8 @@
 /* eslint-disable react/no-danger */
 import * as React from 'react';
-import { Translate, useTranslate } from '@yushii/docs/i18n';
-import { SectionTitle } from '@yushii/docs/SectionTitle';
-import Box from '@yushii/u-ui/Box';
+import { Translate, useTranslate } from '@u-shii/docs/i18n';
+import { SectionTitle } from '@u-shii/docs/SectionTitle';
+import Box from '@u-shii/u-ui/Box';
 import ToggleDisplayOption, {
   ApiDisplayOptions,
   useApiPageOption,
@@ -13,7 +13,7 @@ import {
   ClassDefinition,
   getClassApiDefinitions,
 } from 'docs/src/modules/components/ApiPage/definitions/classes';
-import { PropsTranslations, ComponentClassDefinition } from '@yushii-internal/api-docs-builder';
+import { PropsTranslations, ComponentClassDefinition } from '@u-shii-internal/api-docs-builder';
 import kebabCase from 'lodash/kebabCase';
 
 export type GetCssToCParams = {

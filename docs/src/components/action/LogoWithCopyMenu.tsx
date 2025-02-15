@@ -1,18 +1,18 @@
 import * as React from 'react';
 import copy from 'clipboard-copy';
-import { Link } from '@yushii/docs/Link';
-import { Portal } from '@yushii/base/Portal';
-import Box from '@yushii/u-ui/Box';
-import Snackbar from '@yushii/u-ui/Snackbar';
-import Menu from '@yushii/u-ui/Menu';
-import MenuItem from '@yushii/u-ui/MenuItem';
-import Slide from '@yushii/u-ui/Slide';
+import { Link } from '@u-shii/docs/Link';
+import { Portal } from '@u-shii/base/Portal';
+import Box from '@u-shii/u-ui/Box';
+import Snackbar from '@u-shii/u-ui/Snackbar';
+import Menu from '@u-shii/u-ui/Menu';
+import MenuItem from '@u-shii/u-ui/MenuItem';
+import Slide from '@u-shii/u-ui/Slide';
 import { TextFieldsRounded, CheckCircleRounded } from '@mui/icons-material';
 import { RootSvgProps } from 'docs/src/icons/RootSvg';
-import SvgYushiiLogomark, {
-  yushiiSvgLogoString,
-  yushiiSvgWordmarkString
-} from 'docs/src/icons/SvgYushiiLogomark';
+import SvgUshiiLogomark, {
+  UshiiSvgLogoString,
+  UshiiSvgWordmarkString
+} from 'docs/src/icons/SvgUshiiLogomark';
 import { useRouter } from 'next/router';
 import getProductInfoFromUrl from 'docs/src/modules/utils/getProductInfoFromUrl';
 
@@ -25,9 +25,9 @@ interface LogoWithCopyMenuProps {
 }
 
 export default function LogoWithCopyMenu({
-  logo: LogoSvg = SvgYushiiLogomark,
-  logoSvgString = yushiiSvgLogoString,
-  wordmarkSvgString = yushiiSvgWordmarkString,
+  logo: LogoSvg = SvgUshiiLogomark,
+  logoSvgString = UshiiSvgLogoString,
+  wordmarkSvgString = UshiiSvgWordmarkString,
   url = '/',
   marginLeft,
 }: LogoWithCopyMenuProps) {
@@ -88,7 +88,7 @@ export default function LogoWithCopyMenu({
           contextMenu !== null ? { top: contextMenu.mouseY, left: contextMenu.mouseX } : undefined
         }
         sx={(theme) => ({
-          '& .YushiiMenuItem-root': {
+          '& .UshiiMenuItem-root': {
             gap: 1,
             '& path': {
               fill: (theme.vars || theme).palette.text.tertiary,

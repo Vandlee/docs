@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Box from '@yushii/u-ui/Box';
-import Badge from '@yushii/u-ui/Badge';
+import Box from '@u-shii/u-ui/Box';
+import Badge from '@u-shii/u-ui/Badge';
 import MailIcon from '@mui/icons-material/Mail';
 
 export default function DotBadge() {

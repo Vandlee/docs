@@ -1,5 +1,5 @@
 {
-  "name": "@yushii/monorepo",
+  "name": "@u-shii/monorepo",
   "version": "1.0.0",
   "private": true,
   "main": "index.js",
@@ -24,7 +24,7 @@
     "docs:typescript:check": "pnpm --filter docs typescript",
     "docs:typescript:formatted": "tsx ./docs/scripts/formattedTSDemos",
     "docs:mdicons:synonyms": "cross-env BABEL_ENV=development babel-node --extensions \".tsx,.ts,.js,.mjs\" ./docs/scripts/updateIconSynonyms && pnpm prettier",
-    "docs:zipRules": "cd docs && rm yushii-vale.zip && zip -r yushii-vale.zip yushii-vale && cd ../ && vale sync",
+    "docs:zipRules": "cd docs && rm u-shii-vale.zip && zip -r u-shii-vale.zip u-shii-vale && cd ../ && vale sync",
     "markdownlint": "markdownlint-cli2 \"**/*.md\"",
     "prettier": "pretty-quick --ignore-path .eslintignore --branch master",
     "prettier:all": "prettier --write . --ignore-path .eslintignore",
@@ -45,10 +45,10 @@
     "@babel/preset-react": "^7.26.3",
     "@babel/preset-typescript": "^7.26.0",
     "@babel/register": "^7.25.9",
-    "@yushii/internal-docs-utils": "workspace:^",
-    "@yushii/internal-scripts": "workspace:^",
-    "@yushii/u-ui": "workspace:^",
-    "@yushii/utils": "workspace:^",
+    "@u-shii/internal-docs-utils": "workspace:^",
+    "@u-shii/internal-scripts": "workspace:^",
+    "@u-shii/u-ui": "workspace:^",
+    "@u-shii/utils": "workspace:^",
     "@next/eslint-plugin-next": "^15.1.2",
     "@octokit/rest": "^21.0.2",
     "@pigment-css/react": "0.0.28",
@@ -86,7 +86,7 @@
     "eslint-plugin-filenames": "^1.3.2",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-yushii": "workspace:^",
+    "eslint-plugin-u-shii": "workspace:^",
     "eslint-plugin-mocha": "^10.5.0",
     "eslint-plugin-react": "^7.37.3",
     "eslint-plugin-react-compiler": "0.0.0-experimental-75b9fd4-20240912",
@@ -149,7 +149,7 @@
   },
   "nyc": {
     "include": [
-      "packages/yushii*/src/**/*.?(c|m)[jt]s?(x)"
+      "packages/u-shii*/src/**/*.?(c|m)[jt]s?(x)"
     ],
     "exclude": [
       "**/*.test.?(c|m)[jt]s?(x)",

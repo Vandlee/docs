@@ -1,21 +1,21 @@
 import * as React from 'react';
-import { extendTheme, CssVarsProvider } from '@yushii/u-ui/styles';
+import { extendTheme, CssVarsProvider } from '@u-shii/u-ui/styles';
 import HeroContainer from 'docs/src/layouts/HeroContainer';
-import Box from '@yushii/u-ui/Box';
-import Paper from '@yushii/u-ui/Paper';
-import Typography from '@yushii/u-ui/Typography';
+import Box from '@u-shii/u-ui/Box';
+import Paper from '@u-shii/u-ui/Paper';
+import Typography from '@u-shii/u-ui/Typography';
 import GradientText from 'docs/src/components/typography/GradientText';
 import GetStartedButtons from 'docs/src/components/home/GetStartedButtons';
 import ROUTES from 'docs/src/route';
-import { getDesignTokens } from '@yushii/docs/branding';
-import { Link } from '@yushii/docs/Link';
+import { getDesignTokens } from '@u-shii/docs/branding';
+import { Link } from '@u-shii/docs/Link';
 
 const { palette: lightPalette } = getDesignTokens('light');
 const { palette: darkPalette } = getDesignTokens('dark');
 
 const customTheme = extendTheme({
   cssVarPrefix: 'hero',
-  colorSchemeSelector: 'data-yushii-color-scheme',
+  colorSchemeSelector: 'data-u-shii-color-scheme',
   colorSchemes: {
     light: {
       palette: {
@@ -69,7 +69,7 @@ export default function UIHero() {
           </Typography>
           <Typography variant="h1" sx={{ my: 2, maxWidth: 500 }}>
             Ready to use <br />
-            <GradientText color="primary">Yushii UI</GradientText>
+            <GradientText color="primary">Ushii</GradientText>
             <br />
             components
           </Typography>
@@ -77,7 +77,7 @@ export default function UIHero() {
             primaryUrl={ROUTES.uUiDocs}
             secondaryLabel="View templates"
             secondaryUrl={ROUTES.freeTemplates}
-            altInstallation="npm install @yushii/u-ui @emotion/react @emotion/styled"
+            altInstallation="npm install @u-shii/u-ui @emotion/react @emotion/styled"
           />
         </Box>
       }

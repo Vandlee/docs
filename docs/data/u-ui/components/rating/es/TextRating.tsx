@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Box from '@yushii/u-ui/Box';
-import Rating from '@yushii/u-ui/Rating';
+import Box from '@u-shii/u-ui/Box';
+import Rating from '@u-shii/u-ui/Rating';
 import StarIcon from '@mui/icons-material/Star';
 
 const etiquetas: { [index: string]: string } = {

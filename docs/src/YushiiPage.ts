@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-export interface YushiiPage {
+export interface UshiiPage {
   pathname: string;
   query?: object;
-  children?: YushiiPage[];
+  children?: UshiiPage[];
   disableDrawer?: boolean;
   icon?: string | React.ComponentType;
   /**
@@ -63,6 +63,6 @@ export interface YushiiPage {
   deprecated?: boolean;
 }
 
-export interface OrderedMuiPage extends YushiiPage {
+export interface OrderedMuiPage extends UshiiPage {
   ordered?: true;
 }

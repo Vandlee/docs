@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Box, { BoxProps } from '@yushii/u-ui/Box';
-import Container from '@yushii/u-ui/Container';
-import { alpha } from '@yushii/u-ui/styles';
+import Box, { BoxProps } from '@u-shii/u-ui/Box';
+import Container from '@u-shii/u-ui/Container';
+import { alpha } from '@u-shii/u-ui/styles';
 
 interface SelectionProps extends BoxProps {
   bg?: 'white' | 'comfort' | 'dim' | 'gradient' | 'transparent';

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { styled } from '@yushii/u-ui/styles';
-import Button from '@yushii/u-ui/Button';
+import { styled } from '@u-shii/u-ui/styles';
+import Button from '@u-shii/u-ui/Button';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 
 const VisuallyHiddenInput = styled('input')({

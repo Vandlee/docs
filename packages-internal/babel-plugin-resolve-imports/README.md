@@ -1,4 +1,4 @@
-# @yushii/internal-babel-plugin-resolve-imports
+# @u-shii/internal-babel-plugin-resolve-imports
 
 A babel plugin that resolves import specifiers that are created under the Node.js resolution algorithm to specifiers that adhere to ESM resolution algorithm.
 
@@ -11,20 +11,20 @@ See https://nodejs.org/docs/v20.16.0/api/esm.html#mandatory-file-extensions
 This changes imports in the build output from
 
 ```tsx
-// packages/yushii-ui/build/index.js
+// packages/u-shii-ui/build/index.js
 export * from './Accordion';
 
-// packages/yushii-ui/build/Breadcrumbs/BreadcrumbCollapsed.js
+// packages/u-shii-ui/build/Breadcrumbs/BreadcrumbCollapsed.js
 import MoreHorizIcon from '../internal/svg-icons/MoreHoriz';
 ```
 
 to
 
 ```tsx
-// packages/yushii-ui/build/index.js
+// packages/u-shii-ui/build/index.js
 export * from './Accordion/index.js';
 
-// packages/yushii-ui/build/Breadcrumbs/BreadcrumbCollapsed.js
+// packages/u-shii-ui/build/Breadcrumbs/BreadcrumbCollapsed.js
 import MoreHorizIcon from '../internal/svg-icons/MoreHoriz.js';
 ```
 

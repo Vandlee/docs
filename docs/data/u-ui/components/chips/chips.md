@@ -4,7 +4,7 @@ title: Componente Chip de React
 components: Chip
 githubLabel: 'component: chip'
 materialDesign: https://m2.material.io/components/chips
-githubSource: packages/yushii-ui/src/Chip
+githubSource: packages/u-shii-ui/src/Chip
 ---
 
 # Chip
@@ -15,7 +15,7 @@ Los chips permiten a los usuarios introducir información, realizar selecciones,
 
 Aunque se incluyen aquí como un componente independiente, el uso más común será en alguna forma de entrada. más común será en alguna forma de entrada, por lo que algunos de los comportamientos no se muestra en contexto.
 
-{{"component": "@yushii/docs/ComponentLinkHeader"}}
+{{"component": "@u-shii/docs/ComponentLinkHeader"}}
 
 ## Chip básico
 

@@ -580,7 +580,7 @@ export default async function demoLoader() {
   );
 
   componentNames.forEach((componentName) => {
-    const moduleID = componentName.startsWith('@yushii/docs/')
+    const moduleID = componentName.startsWith('@u-shii/docs/')
       ? componentName
       : path.join(this.rootContext, 'src', componentName).replace(/\\/g, '/');
 

@@ -1,13 +1,13 @@
 import * as React from 'react';
-import { deepmerge } from '@yushii/utils';
-import { CssVarsProvider, extendTheme, PaletteColorOptions } from '@yushii/u-ui/styles';
-import CssBaseline from '@yushii/u-ui/CssBaseline';
+import { deepmerge } from '@u-shii/utils';
+import { CssVarsProvider, extendTheme, PaletteColorOptions } from '@u-shii/u-ui/styles';
+import CssBaseline from '@u-shii/u-ui/CssBaseline';
 import { NextNProgressBar } from 'docs/src/modules/components/AppFrame';
-import { getDesignTokens, getThemedComponents } from '@yushii/docs/branding';
+import { getDesignTokens, getThemedComponents } from '@u-shii/docs/branding';
 import SkipLink from 'docs/src/modules/components/SkipLink';
 import MarkdownLinks from 'docs/src/modules/components/MarkdownLinks';
 
-declare module '@yushii/u-ui/styles' {
+declare module '@u-shii/u-ui/styles' {
   interface PaletteOptions {
     primaryDark?: PaletteColorOptions;
   }
@@ -17,8 +17,8 @@ const { palette: lightPalette, typography, ...designTokens } = getDesignTokens('
 const { palette: darkPalette } = getDesignTokens('dark');
 
 const theme = extendTheme({
-  cssVarPrefix: 'yushiidocs',
-  colorSchemeSelector: 'data-yushii-color-scheme',
+  cssVarPrefix: 'ushiidocs',
+  colorSchemeSelector: 'data-u-shii-color-scheme',
   colorSchemes: {
     light: {
       palette: lightPalette,
@@ -30,18 +30,18 @@ const theme = extendTheme({
   ...designTokens,
   typography: deepmerge(typography, {
     h1: {
-      ':where([data-yushii-color-scheme="dark"]) &': {
-        color: 'var(--yushiidocs-palette-common-white)',
+      ':where([data-u-shii-color-scheme="dark"]) &': {
+        color: 'var(--ushiidocs-palette-common-white)',
       },
     },
     h2: {
-      ':where([data-yushii-color-scheme="dark"]) &': {
-        color: 'var(--yushiidocs-palette-grey-100)',
+      ':where([data-u-shii-color-scheme="dark"]) &': {
+        color: 'var(--ushiidocs-palette-grey-100)',
       },
     },
     h5: {
-      ':where([data-yushii-color-scheme="dark"]) &': {
-        color: 'var(--yushiidocs-palette-primary-300)',
+      ':where([data-u-shii-color-scheme="dark"]) &': {
+        color: 'var(--ushiidocs-palette-primary-300)',
       },
     },
   }),

@@ -1,18 +1,18 @@
-import type { YushiiPage } from 'docs/src/YushiiPage';
+import type { UshiiPage } from 'docs/src/u-shiiPage';
 
 export default function findActivePage(
-  currentPages: YushiiPage[],
+  currentPages: UshiiPage[],
   currentPathname: string,
-): { activePage: YushiiPage | null; activePageParents: YushiiPage[] } {
-  const map: Record<string, YushiiPage> = {};
-  const mapParent: Record<string, YushiiPage> = {};
+): { activePage: UshiiPage | null; activePageParents: UshiiPage[] } {
+  const map: Record<string, UshiiPage> = {};
+  const mapParent: Record<string, UshiiPage> = {};
 
   const pathname = currentPathname
     .replace('/[docsTab]', '')
     .replace('components-api', '')
     .replace('hooks-api', '');
 
-  const traverse = (parent: YushiiPage) => {
+  const traverse = (parent: UshiiPage) => {
     (parent.children || []).forEach((child) => {
       const childPathname = child.pathname
         .replace('/[docsTab]', '')

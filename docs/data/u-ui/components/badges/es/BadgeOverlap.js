@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Box from '@yushii/u-ui/Box';
-import Stack from '@yushii/u-ui/Stack';
-import Badge from '@yushii/u-ui/Badge';
+import Box from '@u-shii/u-ui/Box';
+import Stack from '@u-shii/u-ui/Stack';
+import Badge from '@u-shii/u-ui/Badge';
 
 const shapeStyles = { bgcolor: 'primary.main', width: 40, height: 40 };
 const shapeCircleStyles = { borderRadius: '50%' };

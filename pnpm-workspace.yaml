@@ -1,7 +1,7 @@
 packages:
   - 'benchmark'
   - 'packages/*'
-  - 'packages/yushii-envinfo/test'
+  - 'packages/u-shii-envinfo/test'
   - 'packages-internal/*'
   - 'docs'
   - 'test'

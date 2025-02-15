@@ -1,5 +1,5 @@
 import * as ts from 'typescript';
-import { ComponentClassDefinition } from '@yushii-internal/api-docs-builder';
+import { ComponentClassDefinition } from '@u-shii-internal/api-docs-builder';
 import { renderMarkdown } from '../buildApi';
 import { getSymbolDescription, getSymbolJSDocTags } from '../buildApiUtils';
 import { TypeScriptProject } from './createTypeScriptProject';
@@ -37,7 +37,7 @@ interface ParseSlotsAndClassesParameters {
   typescriptProject: TypeScriptProject;
   projectSettings: ProjectSettings;
   componentName: string;
-  yushiiName: string;
+  ushiiName: string;
   slotInterfaceName?: string;
 }
 
@@ -45,7 +45,7 @@ export default function parseSlotsAndClasses({
   typescriptProject,
   projectSettings,
   componentName,
-  yushiiName,
+  ushiiName,
   slotInterfaceName,
 }: ParseSlotsAndClassesParameters): {
   slots: Slot[];
@@ -56,7 +56,7 @@ export default function parseSlotsAndClasses({
     typescriptProject,
     projectSettings,
     componentName,
-    yushiiName,
+    ushiiName,
   );
   const slots = extractSlots(typescriptProject, componentName, classDefinitions, slotInterfaceName);
 
@@ -74,11 +74,11 @@ function extractClasses(
   typescriptProject: TypeScriptProject,
   projectSettings: ProjectSettings,
   componentName: string,
-  yushiiName: string,
+  ushiiName: string,
 ): ComponentClassDefinition[] {
   return (
-    extractClassesFromProps(typescriptProject, projectSettings, componentName, yushiiName) ??
-    extractClassesFromInterface(typescriptProject, projectSettings, componentName, yushiiName)
+    extractClassesFromProps(typescriptProject, projectSettings, componentName, ushiiName) ??
+    extractClassesFromInterface(typescriptProject, projectSettings, componentName, ushiiName)
   );
 }
 
@@ -89,7 +89,7 @@ function extractClassesFromInterface(
   typescriptProject: TypeScriptProject,
   projectSettings: ProjectSettings,
   componentName: string,
-  yushiiName: string,
+  ushiiName: string,
 ): ComponentClassDefinition[] {
   const result: ComponentClassDefinition[] = [];
 
@@ -112,7 +112,7 @@ function extractClassesFromInterface(
       }
       result.push({
         key: symbol.name,
-        className: projectSettings.generateClassName(yushiiName, symbol.name),
+        className: projectSettings.generateClassName(ushiiName, symbol.name),
         description: getSymbolDescription(symbol, typescriptProject),
         isGlobal: projectSettings.isGlobalClassName(symbol.name),
         ...getClassDeprecationObject(symbol),
@@ -127,7 +127,7 @@ function extractClassesFromProps(
   typescriptProject: TypeScriptProject,
   projectSettings: ProjectSettings,
   componentName: string,
-  yushiiName: string,
+  ushiiName: string,
 ): ComponentClassDefinition[] | null {
   const unstableName = `Unstable_${componentName}`;
   const exportedSymbol =
@@ -173,7 +173,7 @@ function extractClassesFromProps(
 
   return Object.keys(classes).map((name) => ({
     key: name,
-    className: projectSettings.generateClassName(yushiiName, name),
+    className: projectSettings.generateClassName(ushiiName, name),
     description: name !== classes[name].description ? classes[name].description : '',
     isGlobal: projectSettings.isGlobalClassName(name),
     isDeprecated: classes[name].isDeprecated,

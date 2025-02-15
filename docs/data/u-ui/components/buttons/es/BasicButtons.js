@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Stack from '@yushii/u-ui/Stack';
-import Button from '@yushii/u-ui/Button';
+import Stack from '@u-shii/u-ui/Stack';
+import Button from '@u-shii/u-ui/Button';
 
 export default function BasicButtons() {
   return (

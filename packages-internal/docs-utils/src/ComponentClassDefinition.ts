@@ -1,5 +1,5 @@
 /**
- * @deprecated Import if from '@yushii-internal/api-docs-builder'
+ * @deprecated Import if from '@u-shii-internal/api-docs-builder'
  */
 export interface ComponentClassDefinition {
   key: string;

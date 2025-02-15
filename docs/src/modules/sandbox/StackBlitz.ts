@@ -111,11 +111,11 @@ function createMaterialTemplate(templateData: {
     'index.html': CRA.getHtml({
       title: templateData.title,
       language: 'en',
-      codeStyling: templateData.codeStyling ?? 'Yushii System',
+      codeStyling: templateData.codeStyling ?? 'Ushii System',
     }),
     [`index.${ext}`]: `import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
-import { StyledEngineProvider } from '@yushii/u-ui/styles';
+import { StyledEngineProvider } from '@u-shii/u-ui/styles';
 import App from './App';
 
 ReactDOM.createRoot(document.querySelector("#root")${type}).render(

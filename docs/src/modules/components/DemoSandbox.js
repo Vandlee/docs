@@ -8,13 +8,13 @@ import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
 import { StyleSheetManager } from 'styled-components';
 import { jssPreset, StylesProvider } from '@mui/styles';
-import { useTheme, styled, createTheme, ThemeProvider } from '@yushii/u-ui/styles';
+import { useTheme, styled, createTheme, ThemeProvider } from '@u-shii/u-ui/styles';
 import rtl from 'jss-rtl';
 import DemoErrorBoundary from 'docs/src/modules/components/DemoErrorBoundary';
-import { useTranslate } from '@yushii/docs/i18n';
-import { getDesignTokens } from '@yushii/docs/branding';
+import { useTranslate } from '@u-shii/docs/i18n';
+import { getDesignTokens } from '@u-shii/docs/branding';
 import { highDensity } from 'docs/src/modules/components/ThemeContext';
-import { deepmerge, unstable_useEnhancedEffect as useEnhancedEffect } from '@yushii/utils';
+import { deepmerge, unstable_useEnhancedEffect as useEnhancedEffect } from '@u-shii/utils';
 
 let globalInjectThemeCache;
 
@@ -153,8 +153,8 @@ function getTheme(outerTheme, injectTheme) {
       },
     },
     // To make DensityTool playground works
-    // check from YushiiFormControl because brandingTheme does not customize this component
-    outerTheme.components?.YushiiFormControl?.defaultProps?.margin === 'dense' ? highDensity : {},
+    // check from shiiFormControl because brandingTheme does not customize this component
+    outerTheme.components?.UshiiFormControl?.defaultProps?.margin === 'dense' ? highDensity : {},
   );
   if (outerTheme.direction) {
     resultTheme.direction = outerTheme.direction;
@@ -202,7 +202,7 @@ function DemoSandbox(props) {
   const children = <Sandbox {...sandboxProps}>{childrenProp}</Sandbox>;
 
   useEnhancedEffect(() => {
-    async function setupYushiiUITheme() {
+    async function setupUshiiUITheme() {
       if (typeof window.getInjectTheme === 'function') {
         if (!globalInjectThemeCache) {
           window.React = React;
@@ -213,7 +213,7 @@ function DemoSandbox(props) {
         setInjectTheme(globalInjectThemeCache);
       }
     }
-    setupYushiiUITheme();
+    setupUshiiUITheme();
   }, []);
 
   return (

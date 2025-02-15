@@ -17,9 +17,9 @@ const OneLevelImportMessage = [
   'See https://github.com/mui/material-ui/pull/24147 for the kind of win it can unlock.',
 ].join('\n');
 // This only applies to packages published from this monorepo.
-// If you build a library around `@yushii/u-ui` you can safely use `createStyles` without running into the same issue as we are.
+// If you build a library around `@u-shii/u-ui` you can safely use `createStyles` without running into the same issue as we are.
 const forbidCreateStylesMessage =
-  'Use `YushiiStyles<ClassKey, Props>` instead if the styles are exported. Otherwise use `as const` assertions. ' +
+  'Use `u-shii Styles<ClassKey, Props>` instead if the styles are exported. Otherwise use `as const` assertions. ' +
   '`createStyles` will lead to inlined, at-compile-time-resolved type-imports. ' +
   'See https://github.com/microsoft/TypeScript/issues/36097#issuecomment-578324386 for more information';
 
@@ -27,11 +27,11 @@ const ENABLE_REACT_COMPILER_PLUGIN = false;
 
 const NO_RESTRICTED_IMPORTS_PATHS_TOP_LEVEL_PACKAGES = [
   {
-    name: '@yushii/u-ui',
+    name: '@u-shii/u-ui',
     message: OneLevelImportMessage,
   },
   {
-    name: '@yushii/lab',
+    name: '@u-shii/lab',
     message: OneLevelImportMessage,
   },
 ];
@@ -39,15 +39,15 @@ const NO_RESTRICTED_IMPORTS_PATHS_TOP_LEVEL_PACKAGES = [
 const NO_RESTRICTED_IMPORTS_PATTERNS_DEEPLY_NESTED = [
   {
     group: [
-      '@yushii/*/*/*',
+      '@u-shii/*/*/*',
       '@pigment-css/*/*/*',
       '@base-ui/*/*/*',
       // Allow any import depth with any internal packages
-      '!@yushii/internal-*/**',
+      '!@u-shii/internal-*/**',
       // TODO delete
       '@base-ui-components/*/*/*', // Wait for migration to @base-ui/
       '@base_ui/*/*/*', // Legacy, moved to @base-ui-components/
-      '!@yushii/docs/**', // @yushii/docs should be @yushii/internal-docs
+      '!@u-shii/docs/**', // @u-shii/docs should be @u-shii/internal-docs
     ],
     message: OneLevelImportMessage,
   },
@@ -72,7 +72,7 @@ module.exports = /** @type {Config} */ ({
     ecmaVersion: 7,
   },
   plugins: [
-    'eslint-plugin-yushii',
+    'eslint-plugin-u-shii',
     'eslint-plugin-react-hooks',
     '@typescript-eslint/eslint-plugin',
     'eslint-plugin-filenames',
@@ -351,7 +351,7 @@ module.exports = /** @type {Config} */ ({
       rules: {
         'material-ui/no-hardcoded-labels': [
           'error',
-          { allow: ['YUSHII', 'X', 'GitHub', 'Stack Overflow'] },
+          { allow: ['u-shii', 'X', 'GitHub', 'Stack Overflow'] },
         ],
       },
     },
@@ -414,10 +414,10 @@ module.exports = /** @type {Config} */ ({
         '*.spec.*',
         '*.test.*',
         // deprecated library
-        '**/yushii-base/**/*',
-        '**/yushii-joy/**/*',
+        '**/u-shii-base/**/*',
+        '**/u-shii-joy/**/*',
         // used internally, not used on app router yet
-        '**/yushii-docs/**/*',
+        '**/u-shii-docs/**/*',
       ],
       rules: {
         'material-ui/disallow-react-api-in-server-components': 'error',
@@ -432,23 +432,23 @@ module.exports = /** @type {Config} */ ({
           {
             paths: [
               {
-                name: '@yushii/u-ui/styles',
+                name: '@u-shii/u-ui/styles',
                 importNames: ['createStyles'],
                 message: forbidCreateStylesMessage,
               },
               {
-                name: '@yushii/styles',
+                name: '@u-shii/styles',
                 importNames: ['createStyles'],
                 message: forbidCreateStylesMessage,
               },
               {
-                name: '@yushii/styles/createStyles',
+                name: '@u-shii/styles/createStyles',
                 message: forbidCreateStylesMessage,
               },
             ],
             patterns: [
               // Allow deeper imports for TypeScript types. TODO?
-              '@yushii/*/*/*/*',
+              '@u-shii/*/*/*/*',
             ],
           },
         ],
@@ -513,7 +513,7 @@ module.exports = /** @type {Config} */ ({
       files: ['packages/*/src/**/*.?(c|m)[jt]s?(x)'],
       excludedFiles: ['*.d.ts', '*.spec.*'],
       rules: {
-        'yushii-ui/yushii-name-matches-component-name': 'error',
+        'u-shii-ui/u-shii-name-matches-component-name': 'error',
       },
     },
     {
@@ -530,7 +530,7 @@ module.exports = /** @type {Config} */ ({
       },
     },
     {
-      files: ['packages/yushii-base/src/**/**{.ts,.tsx}'],
+      files: ['packages/u-shii-base/src/**/**{.ts,.tsx}'],
       rules: {
         'import/no-default-export': 'error',
         'import/prefer-default-export': 'off',

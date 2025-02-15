@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { getHeaders } from '@yushii/internal-markdown';
+import { getHeaders } from '@u-shii/internal-markdown';
 
 const blogDir = path.join(process.cwd(), 'pages/blog');
 

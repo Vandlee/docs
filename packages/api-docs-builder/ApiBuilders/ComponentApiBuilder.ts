@@ -14,7 +14,7 @@ import escapeRegExp from 'lodash/escapeRegExp';
 import { renderCodeTags, renderMarkdown } from '../buildApi';
 import { ProjectSettings, SortingStrategiesType } from '../ProjectSettings';
 import { toGitHubPath, writePrettifiedFile } from '../buildApiUtils';
-import yushiiDefaultPropsHandler from '../utils/defaultPropsHandler';
+import ushiiDefaultPropsHandler from '../utils/defaultPropsHandler';
 import parseTest from '../utils/parseTest';
 import generatePropTypeDescription, { getChained } from '../utils/generatePropTypeDescription';
 import createDescribeableProp, {
@@ -40,7 +40,7 @@ const cssComponents = ['Box', 'Grid', 'Typography', 'Stack'];
 /**
  * Produces markdown of the description that can be hosted anywhere.
  *
- * By default we assume that the markdown is hosted on yushii.yugacore.com which is
+ * By default we assume that the markdown is hosted on docs.u-shii.com which is
  * why the source includes relative url. We transform them to absolute urls with
  * this method.
  */
@@ -70,7 +70,7 @@ async function annotateComponentDefinition(
   componentJsdoc: Annotation,
   projectSettings: ProjectSettings,
 ) {
-  const HOST = projectSettings.baseApiUrl ?? 'https://yushii.yugacore.com';
+  const HOST = projectSettings.baseApiUrl ?? 'https://u-shii.yugacore.com';
 
   const typesFilename = api.filename.replace(/\.js$/, '.d.ts');
   const fileName = path.parse(api.filename).name;
@@ -329,9 +329,9 @@ const generateApiPage = async (
     classes: reactApi.classes,
     spread: reactApi.spread,
     themeDefaultProps: reactApi.themeDefaultProps,
-    yushiiName: normalizedApiPathname.startsWith('/joy-ui')
-      ? reactApi.yushiiName.replace('Yushii', 'Joy')
-      : reactApi.yushiiName,
+    ushiiName: normalizedApiPathname.startsWith('/joy-ui')
+      ? reactApi.ushiiName.replace('Ushii', 'Joy')
+      : reactApi.ushiiName,
     forwardsRefTo: reactApi.forwardsRefTo,
     filename: toGitHubPath(reactApi.filename),
     inheritance: reactApi.inheritance
@@ -613,13 +613,13 @@ const attachPropsTable = (
 const defaultGetComponentImports = (name: string, filename: string) => {
   const githubPath = toGitHubPath(filename);
   const rootImportPath = githubPath.replace(
-    /\/packages\/yushii(?:-(.+?))?\/src\/.*/,
-    (match, pkg) => `@yushii/${pkg}`,
+    /\/packages\/u-shii(?:-(.+?))?\/src\/.*/,
+    (match, pkg) => `@u-shii/${pkg}`,
   );
 
   const subdirectoryImportPath = githubPath.replace(
-    /\/packages\/yushii(?:-(.+?))?\/src\/([^\\/]+)\/.*/,
-    (match, pkg, directory) => `@yushii/${pkg}/${directory}`,
+    /\/packages\/u-shii(?:-(.+?))?\/src\/([^\\/]+)\/.*/,
+    (match, pkg, directory) => `@u-shii/${pkg}/${directory}`,
   );
 
   let namedImportName = name;
@@ -629,7 +629,7 @@ const defaultGetComponentImports = (name: string, filename: string) => {
     namedImportName = `Unstable_${name} as ${name}`;
   }
 
-  const useNamedImports = rootImportPath === '@yushii/base';
+  const useNamedImports = rootImportPath === '@u-shii/base';
 
   const subpathImport = useNamedImports
     ? `import { ${namedImportName} } from '${subdirectoryImportPath}';`
@@ -723,7 +723,7 @@ export default async function generateComponentApi(
   let reactApi: ComponentReactApi;
 
   try {
-    reactApi = docgenParse(src, null, defaultHandlers.concat(yushiiDefaultPropsHandler), {
+    reactApi = docgenParse(src, null, defaultHandlers.concat(ushiiDefaultPropsHandler), {
       filename,
     });
   } catch (error) {
@@ -767,7 +767,7 @@ export default async function generateComponentApi(
 
           return node;
         },
-        defaultHandlers.concat(yushiiDefaultPropsHandler),
+        defaultHandlers.concat(ushiiDefaultPropsHandler),
         {
           filename,
         },
@@ -803,7 +803,7 @@ export default async function generateComponentApi(
   reactApi.filename = filename;
   reactApi.name = componentInfo.name;
   reactApi.imports = getComponentImports(componentInfo.name, filename);
-  reactApi.yushiiName = componentInfo.yushiiName;
+  reactApi.ushiiName = componentInfo.ushiiName;
   reactApi.apiPathname = componentInfo.apiPathname;
   reactApi.EOL = EOL;
   reactApi.slots = [];
@@ -839,7 +839,7 @@ export default async function generateComponentApi(
       typescriptProject: project,
       projectSettings,
       componentName: reactApi.name,
-      yushiiName: reactApi.yushiiName,
+      ushiiName: reactApi.ushiiName,
       slotInterfaceName: componentInfo.slotInterfaceName,
     });
 

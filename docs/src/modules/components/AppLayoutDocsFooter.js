@@ -2,22 +2,22 @@
 /* eslint-disable material-ui/no-hardcoded-labels */
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { styled, useTheme } from '@yushii/u-ui/styles';
+import { styled, useTheme } from '@u-shii/u-ui/styles';
 // Components
-import Collapse from '@yushii/u-ui/Collapse';
-import Button from '@yushii/u-ui/Button';
-import Divider from '@yushii/u-ui/Divider';
-import Typography from '@yushii/u-ui/Typography';
-import Tooltip from '@yushii/u-ui/Tooltip';
-import Stack from '@yushii/u-ui/Stack';
-import IconButton from '@yushii/u-ui/IconButton';
+import Collapse from '@u-shii/u-ui/Collapse';
+import Button from '@u-shii/u-ui/Button';
+import Divider from '@u-shii/u-ui/Divider';
+import Typography from '@u-shii/u-ui/Typography';
+import Tooltip from '@u-shii/u-ui/Tooltip';
+import Stack from '@u-shii/u-ui/Stack';
+import IconButton from '@u-shii/u-ui/IconButton';
 //
-import { Link } from '@yushii/docs/Link';
+import { Link } from '@u-shii/docs/Link';
 import PageContext from 'docs/src/modules/components/PageContext';
-import { useUserLanguage, useTranslate } from '@yushii/docs/i18n';
+import { useUserLanguage, useTranslate } from '@u-shii/docs/i18n';
 import { getCookie, pageToTitleI18n } from 'docs/src/modules/utils/helpers';
 import { ThumbUpAltRounded } from '@mui/icons-material';
-import { fontSize } from '@yushii/system';
+import { fontSize } from '@u-shii/system';
 import { ThumbDownAltRounded } from '@mui/icons-material';
 import { ChevronRightRounded } from '@mui/icons-material';
 import { ChevronLeftRounded } from '@mui/icons-material';
@@ -27,20 +27,20 @@ const FooterLink = styled(Link)(({ theme }) => {
 });
 
 /**
- * @typedef {import('docs/src/pages').YushiiPage} MuiPage
- * @typedef {import('docs/src/pages').OrderedYushiiPage} OrderedYushiiPage
+ * @typedef {import('docs/src/pages').UshiiPage} MuiPage
+ * @typedef {import('docs/src/pages').OrderedUshiiPage} OrderedUshiiPage
  */
 
 /**
  * This function is flattening the pages tree and extracts all the leaves that are internal pages.
  * To extract the leaves, it skips all the nodes that have at least one child.
- * @param {YushiiPage[]} pages
- * @param {YushiiPage[]} [current]
- * @returns {OrderedYushiiPage[]}
+ * @param {UshiiPage[]} pages
+ * @param {UshiiPage[]} [current]
+ * @returns {OrderedUshiiPage[]}
  */
 
 /**
- * @returns { { prevPage: OrderedYushiiPage | null; nextPage: OrderedYushiiPage | null } }
+ * @returns { { prevPage: OrderedUshiiPage | null; nextPage: OrderedUshiiPage | null } }
  */
 function usePageNeighbours() {
     const { activePage, pages } = React.useContext(PageContext);

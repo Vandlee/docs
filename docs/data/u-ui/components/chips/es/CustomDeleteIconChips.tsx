@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Chip from '@yushii/u-ui/Chip';
-import Stack from '@yushii/u-ui/Stack';
+import Chip from '@u-shii/u-ui/Chip';
+import Stack from '@u-shii/u-ui/Stack';
 import DoneIcon from '@mui/icons-material/Done';
 import DeleteIcon from '@mui/icons-material/Delete';
 

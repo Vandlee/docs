@@ -1,11 +1,11 @@
 import * as React from 'react';
 import copy from 'clipboard-copy';
-import Box, { BoxProps } from '@yushii/u-ui/Box';
-import Button from '@yushii/u-ui/Button';
+import Box, { BoxProps } from '@u-shii/u-ui/Box';
+import Button from '@u-shii/u-ui/Button';
 import KeyboardArrowRightRounded from '@mui/icons-material/KeyboardArrowRightRounded';
 import ContentCopyRounded from '@mui/icons-material/ContentCopyRounded';
 import CheckRounded from '@mui/icons-material/CheckRounded';
-import { Link } from '@yushii/docs/Link';
+import { Link } from '@u-shii/docs/Link';
 
 interface GetStartedButtonsProps extends BoxProps {
   primaryLabel?: string;

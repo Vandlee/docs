@@ -1,6 +1,6 @@
 import * as React from 'react';
-import IconButton from '@yushii/u-ui/IconButton';
-import Badge from '@yushii/u-ui/Badge';
+import IconButton from '@u-shii/u-ui/IconButton';
+import Badge from '@u-shii/u-ui/Badge';
 import MailIcon from '@mui/icons-material/Mail';
 
 function notificationsLabel(count) {

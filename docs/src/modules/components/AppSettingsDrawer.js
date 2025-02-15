@@ -1,16 +1,16 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { styled, useTheme } from '@yushii/u-ui/styles';
-import Drawer from '@yushii/u-ui/Drawer';
-import Box from '@yushii/u-ui/Box';
-import Button from '@yushii/u-ui/Button';
-import Typography from '@yushii/u-ui/Typography';
-import Divider from '@yushii/u-ui/Divider';
-import ToggleButtonGroup from '@yushii/u-ui/ToggleButtonGroup';
-import ToggleButton from '@yushii/u-ui/ToggleButton';
-import IconButton from '@yushii/u-ui/IconButton';
+import { styled, useTheme } from '@u-shii/u-ui/styles';
+import Drawer from '@u-shii/u-ui/Drawer';
+import Box from '@u-shii/u-ui/Box';
+import Button from '@u-shii/u-ui/Button';
+import Typography from '@u-shii/u-ui/Typography';
+import Divider from '@u-shii/u-ui/Divider';
+import ToggleButtonGroup from '@u-shii/u-ui/ToggleButtonGroup';
+import ToggleButton from '@u-shii/u-ui/ToggleButton';
+import IconButton from '@u-shii/u-ui/IconButton';
 import { useColorSchemeShim, useChangeTheme } from 'docs/src/modules/components/ThemeContext';
-import { UserLanguageProvider, useSetUserLanguage, useTranslate, useUserLanguage } from '@yushii/docs/i18n';
+import { UserLanguageProvider, useSetUserLanguage, useTranslate, useUserLanguage } from '@u-shii/docs/i18n';
 import { 
     Brightness6Rounded, 
     CloseRounded, 

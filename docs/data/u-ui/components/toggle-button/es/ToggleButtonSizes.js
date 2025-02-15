@@ -3,9 +3,9 @@ import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
 import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
 import FormatAlignRightIcon from '@mui/icons-material/FormatAlignRight';
 import FormatAlignJustifyIcon from '@mui/icons-material/FormatAlignJustify';
-import Stack from '@yushii/u-ui/Stack';
-import ToggleButton from '@yushii/u-ui/ToggleButton';
-import ToggleButtonGroup from '@yushii/u-ui/ToggleButtonGroup';
+import Stack from '@u-shii/u-ui/Stack';
+import ToggleButton from '@u-shii/u-ui/ToggleButton';
+import ToggleButtonGroup from '@u-shii/u-ui/ToggleButtonGroup';
 
 export default function ToggleButtonSizes() {
   const [alignment, setAlignment] = React.useState('izquierda');

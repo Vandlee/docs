@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Badge from '@yushii/u-ui/Badge';
-import Stack from '@yushii/u-ui/Stack';
+import Badge from '@u-shii/u-ui/Badge';
+import Stack from '@u-shii/u-ui/Stack';
 import MailIcon from '@mui/icons-material/Mail';
 
 export default function ColorBadge() {

@@ -84,7 +84,7 @@ export interface ComponentReactApi extends CommonReactApi {
    * @example 'Accordion'
    */
   name: string;
-  yushiiName: string;
+  ushiiName: string;
   spread: boolean | undefined;
   /**
    * If `true`, the component supports theme default props customization.
@@ -110,7 +110,7 @@ export interface ComponentApiContent {
   classes: ComponentClassDefinition[];
   spread: boolean | undefined;
   themeDefaultProps: boolean | null | undefined;
-  yushiiName: string;
+  ushiiName: string;
   forwardsRefTo: string | undefined;
   filename: string;
   inheritance: null | { component: string; pathname: string };

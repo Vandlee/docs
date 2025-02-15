@@ -7,13 +7,13 @@ function importMarkdown(lang: string, route: { product: string; path: string }) 
   
     try {
       // Carga estática en el idioma solicitado
-      const markdown = require(`docs/data/${route.product}/${route.path}/${lastSegment}_${lang}.md?yushiiMarkdown`);
+      const markdown = require(`docs/data/${route.product}/${route.path}/${lastSegment}_${lang}.md?ushiiMarkdown`);
       return markdown;
     } catch (error) {
       console.warn(`No se encontró el archivo en el idioma '${lang}'. Cargando idioma por defecto 'es'.`);
       try {
         // Carga estática en español si el idioma solicitado falla
-        const markdown = require(`docs/data/${route.product}/${route.path}/${lastSegment}_es.md?yushiiMarkdown`);
+        const markdown = require(`docs/data/${route.product}/${route.path}/${lastSegment}_es.md?ushiiMarkdown`);
         return markdown;
       } catch (defaultError) {
         throw new Error('Error al cargar el archivo markdown en ambos idiomas.');

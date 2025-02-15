@@ -1,10 +1,10 @@
-import type { YushiiPage } from 'docs/src/YushiiPage';
+import type { UshiiPage } from 'docs/src/u-shiiPage';
 import standardNavIcons from 'docs/src/modules/components/AppNavIcons';
 
-const pages: readonly YushiiPage[] = [
-  { pathname: 'https://yushii.yugacore.com/versions/' },
+const pages: readonly UshiiPage[] = [
+  { pathname: 'https://u-shii.yugacore.com/versions/' },
   {
-    pathname: 'https://yushii.yugacore.com/store/',
+    pathname: 'https://u-shii.yugacore.com/store/',
     title: 'Templates',
     icon: standardNavIcons.ReaderIcon,
     linkProps: {
@@ -13,7 +13,7 @@ const pages: readonly YushiiPage[] = [
       'data-ga-event-label': 'sidenav',
     },
   },
-  { pathname: 'https://yushii.yugacore.com/blog/', title: 'Blog', icon: standardNavIcons.BookIcon },
+  { pathname: 'https://u-shii.yugacore.com/blog/', title: 'Blog', icon: standardNavIcons.BookIcon },
 ];
 
 export default pages;

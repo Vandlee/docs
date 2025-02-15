@@ -1,4 +1,4 @@
-import { createRender } from '@yushii/internal-markdown';
+import { createRender } from '@u-shii/internal-markdown';
 import { LANGUAGES_IGNORE_PAGES } from '../../../config';
 
 const notSpanishJsonRegExp = /-([a-z]{2})\.json$/;

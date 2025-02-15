@@ -1,7 +1,7 @@
 {
-    "name": "@yushii/internal-babel-plugin-resolve-imports",
+    "name": "@u-shii/internal-babel-plugin-resolve-imports",
     "version": "1.0.0",
-    "author": "Yushii",
+    "author": "yugashiki",
     "description": "babel plugin that resolves import specifiers to their actual output file.",
     "main": "./index.js",
     "exports": {

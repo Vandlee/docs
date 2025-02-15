@@ -6,7 +6,7 @@ import AppHeader from 'docs/src/layouts/AppHeader';
 export default function Home() {
   return (
     <BrandingCssVarsProvider>
-      <Head title="Yushii" description="UWU">
+      <Head title="u-shii" description="UWU">
         <script
           type="application/ld+json"
           // eslint-disable-next-line react/no-danger
@@ -14,13 +14,13 @@ export default function Home() {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Organization',
-              name: 'Yushii',
-              url: 'https://yushii.yugacore.com/',
-              logo: 'https://yushii.yugacore.com/static/logo.png',
+              name: 'u-shii',
+              url: 'https://u-shii.yugacore.com/',
+              logo: 'https://u-shii.yugacore.com/static/logo.png',
               sameAs: [
-                'https://x.com/yushii',
-                'https://github.com/yushii/',
-                'https://opencollective.com/yushii',
+                'https://x.com/u-shii',
+                'https://github.com/u-shii/',
+                'https://opencollective.com/u-shii',
               ],
             }),
           }}

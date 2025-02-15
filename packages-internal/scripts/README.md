@@ -1,6 +1,6 @@
-# @yushii/internal-scripts
+# @u-shii/internal-scripts
 
-This is that code infra scripts for the Yushii organization repositories.
+This is that code infra scripts for the u-shii organization repositories.
 It is not meant for general use.
 
 ## Scripts

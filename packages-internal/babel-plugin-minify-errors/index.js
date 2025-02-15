@@ -10,7 +10,7 @@ const COMMENT_MARKER = 'minify-error';
  */
 
 /**
- * @typedef {{updatedErrorCodes?: boolean, formatYushiiErrorMessageIdentifier?: babel.types.Identifier}} PluginState
+ * @typedef {{updatedErrorCodes?: boolean, formatUshiiErrorMessageIdentifier?: babel.types.Identifier}} PluginState
  * @typedef {'annotate' | 'throw' | 'write'} MissingError
  * @typedef {{ errorCodesPath: string, missingError: MissingError }} Options
  */
@@ -170,13 +170,13 @@ module.exports = function plugin({ types: t }, { errorCodesPath, missingError = 
           }
         }
 
-        if (!state.formatYushiiErrorMessageIdentifier) {
+        if (!state.formatUshiiErrorMessageIdentifier) {
           // Outputs:
-          // import { formatYushiiErrorMessage } from '@yushii/utils';
-          state.formatYushiiErrorMessageIdentifier = helperModuleImports.addDefault(
+          // import { formatUshiiErrorMessage } from '@u-shii/utils';
+          state.formatUshiiErrorMessageIdentifier = helperModuleImports.addDefault(
             newExpressionPath,
-            '@yushii/utils/formatYushiiErrorMessage',
-            { nameHint: '_formatYushiiErrorMessage' },
+            '@u-shii/utils/formatUshiiErrorMessage',
+            { nameHint: '_formatUshiiErrorMessage' },
           );
         }
 
@@ -185,9 +185,9 @@ module.exports = function plugin({ types: t }, { errorCodesPath, missingError = 
         const devMessage = messageNode;
 
         // Outputs:
-        // formatYushiiErrorMessage(ERROR_CODE, adj, noun)
+        // formatUshiiErrorMessage(ERROR_CODE, adj, noun)
         const prodMessage = t.callExpression(
-          t.cloneNode(state.formatYushiiErrorMessageIdentifier, true),
+          t.cloneNode(state.formatUshiiErrorMessageIdentifier, true),
           [t.numericLiteral(errorCode), ...message.expressions],
         );
 

@@ -1,8 +1,8 @@
 import * as React from 'react';
-import Grid from '@yushii/u-ui/Grid';
+import Grid from '@u-shii/u-ui/Grid';
 import ComponentShowcaseCard from 'docs/src/components/action/ComponentShowcaseCard';
 import { pageToTitleI18n } from '../../utils/helpers';
-import { useTranslate } from '@yushii/docs/i18n';
+import { useTranslate } from '@u-shii/docs/i18n';
 
 const inputComponents = [
   {

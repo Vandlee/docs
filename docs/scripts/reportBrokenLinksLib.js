@@ -1,6 +1,6 @@
 import path from 'path';
 import fse from 'fs-extra';
-import { createRender } from '@yushii/internal-markdown';
+import { createRender } from '@u-shii/internal-markdown';
 import { marked } from 'marked';
 import { LANGUAGES_IGNORE_PAGES } from '../config';
 
@@ -33,7 +33,7 @@ function getJsFilesInFolder(folderPath) {
   }, []);
 }
 
-// Returns url assuming it's "./docs/pages/x/..." becomes  "yushii.yugacore.com/x/..."
+// Returns url assuming it's "./docs/pages/x/..." becomes  "docs.u-shii.com/x/..."
 const jsFilePathToUrl = (jsFilePath) => {
   const folder = path.dirname(jsFilePath);
   const file = path.basename(jsFilePath);
@@ -85,16 +85,16 @@ function getLinksAndAnchors(fileName) {
   };
 }
 
-const markdownImportRegExp = /'(.*)\?(yushiiMarkdown|@yushii\/markdown)'/g;
+const markdownImportRegExp = /'(.*)\?(ushiiMarkdown|@u-shii\/markdown)'/g;
 
 const getMdFilesImported = (jsPageFile) => {
   // For each JS file extract the markdown rendered if it exists
   const fileContent = fse.readFileSync(jsPageFile, 'utf8');
   /**
    * Content files can be represented by either:
-   * - 'docsx/data/advanced-components/overview.md?yushiiMarkdown'; (for yushii-x)
-   * - 'docs/data/advanced-components/overview.md?yushiiMarkdown';
-   * - './index.md?yushiiMarkdown';
+   * - 'docsx/data/advanced-components/overview.md?ushiiMarkdown'; (for ushii-x)
+   * - 'docs/data/advanced-components/overview.md?ushiiMarkdown';
+   * - './index.md?ushiiMarkdown';
    */
   const importPaths = fileContent.match(markdownImportRegExp);
 

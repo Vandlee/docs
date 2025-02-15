@@ -46,7 +46,7 @@ function escape(html, encode) {
 }
 
 function checkUrlHealth(href, linkText, context) {
-  const url = new URL(href, 'https://yushii.yugacore.com/');
+  const url = new URL(href, 'https://u-shii.yugacore.com/');
 
   if (/\/{2,}$/.test(url.pathname)) {
     throw new Error(
@@ -60,8 +60,8 @@ function checkUrlHealth(href, linkText, context) {
     );
   }
 
-  // External links to Yushii, ignore
-  if (url.host !== 'yushii.yugacore.com') {
+  // External links to Ushii, ignore
+  if (url.host !== 'docs.u-shii.com') {
     return;
   }
 
@@ -261,7 +261,7 @@ function renderMarkdown(markdown) {
     .replace(/\r?\n/g, ' ');
 }
 
-// Help rank yushii.yugacore.com on component searches first.
+// Help rank docs.u-shii.com on component searches first.
 const noSEOadvantage = [
   'https://m2.material.io/',
   'https://m3.material.io/',
@@ -402,9 +402,9 @@ function createRender(context) {
       }
 
       // This logic turns link like:
-      // https://github.com/yushii/material-ui/blob/-/packages/yushii-joy/src/styles/components.d.ts
+      // https://github.com/u-shii/material-ui/blob/-/packages/u-shii-joy/src/styles/components.d.ts
       // into a permalink:
-      // https://github.com/yushii/material-ui/blob/v5.11.15/packages/yushii-joy/src/styles/components.d.ts
+      // https://github.com/u-shii/material-ui/blob/v5.11.15/packages/u-shii-joy/src/styles/components.d.ts
       if (finalHref.startsWith(`${options.env.SOURCE_CODE_REPO}/blob/-/`)) {
         finalHref = finalHref.replace(
           `${options.env.SOURCE_CODE_REPO}/blob/-/`,
@@ -430,13 +430,13 @@ function createRender(context) {
         return `<pre><code>${escaped ? code : escape(code, true)}</code></pre>\n`;
       }
 
-      return `<div class="YushiiCode-root">${title ? `<div class="YushiiCode-title">${title}</div>` : ''}<pre><code class="language-${escape(lang, true)}">${
+      return `<div class="UshiiCode-root">${title ? `<div class="UshiiCode-title">${title}</div>` : ''}<pre><code class="language-${escape(lang, true)}">${
         escaped ? code : escape(code, true)
       }</code></pre>${[
-        '<button data-ga-event-category="code" data-ga-event-action="copy-click" aria-label="Copy the code" class="YushiiCode-copy">',
-        '<span class="YushiiCode-copy-label">Copy</span>',
-        '<span class="YushiiCode-copied-label">Copied</span>',
-        '<span class="YushiiCode-copyKeypress"><span>(or</span> $keyC<span>)</span></span></button></div>',
+        '<button data-ga-event-category="code" data-ga-event-action="copy-click" aria-label="Copy the code" class="UshiiCode-copy">',
+        '<span class="UshiiCode-copy-label">Copy</span>',
+        '<span class="UshiiCode-copied-label">Copied</span>',
+        '<span class="UshiiCode-copyKeypress"><span>(or</span> $keyC<span>)</span></span></button></div>',
       ].join('')}\n`;
     };
 
@@ -471,15 +471,15 @@ function createRender(context) {
               throw new Error(`docs-infra: Callout :::${token.severity} is not supported`);
             }
 
-            return `<aside class="YushiiCallout-root YushiiCallout-${token.severity}">${[
-              '<div class="YushiiCallout-icon-container">',
+            return `<aside class="UshiiCallout-root UshiiCallout-${token.severity}">${[
+              '<div class="UshiiCallout-icon-container">',
               '<svg focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ContentCopyRoundedIcon">',
-              `<use class="YushiiCode-copied-icon" xlink:href="#${token.severity}-icon" />`,
+              `<use class="UshiiCode-copied-icon" xlink:href="#${token.severity}-icon" />`,
               '</svg>',
               '</div>',
             ].join(
               '\n',
-            )}<div class="YushiiCallout-content">${this.parser.parse(token.tokens)}</div></aside>`;
+            )}<div class="UshiiCallout-content">${this.parser.parse(token.tokens)}</div></aside>`;
           },
         },
       ],

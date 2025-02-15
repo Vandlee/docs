@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { styled } from '@yushii/u-ui/styles';
+import { styled } from '@u-shii/u-ui/styles';
 import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
 import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
 import FormatAlignRightIcon from '@mui/icons-material/FormatAlignRight';
@@ -9,12 +9,12 @@ import FormatItalicIcon from '@mui/icons-material/FormatItalic';
 import FormatUnderlinedIcon from '@mui/icons-material/FormatUnderlined';
 import FormatColorFillIcon from '@mui/icons-material/FormatColorFill';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import Divider from '@yushii/u-ui/Divider';
-import Paper from '@yushii/u-ui/Paper';
-import ToggleButton from '@yushii/u-ui/ToggleButton';
+import Divider from '@u-shii/u-ui/Divider';
+import Paper from '@u-shii/u-ui/Paper';
+import ToggleButton from '@u-shii/u-ui/ToggleButton';
 import ToggleButtonGroup, {
   toggleButtonGroupClasses,
-} from '@yushii/u-ui/ToggleButtonGroup';
+} from '@u-shii/u-ui/ToggleButtonGroup';
 
 const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
   [`& .${toggleButtonGroupClasses.grouped}`]: {

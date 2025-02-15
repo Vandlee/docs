@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Button from '@yushii/u-ui/Button';
-import ButtonGroup from '@yushii/u-ui/ButtonGroup';
+import Button from '@u-shii/u-ui/Button';
+import ButtonGroup from '@u-shii/u-ui/ButtonGroup';
 
 export default function BasicButtonGroup() {
   return (

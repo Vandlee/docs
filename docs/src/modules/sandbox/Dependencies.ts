@@ -9,7 +9,7 @@ const packagesWithBundledTypes = [
   'clsx',
   '@react-spring/web',
 ];
-const yushiiNpmOrgs = ['@yushii', '@base_ui', '@pigment-css', '@toolpad'];
+const ushiiNpmOrgs = ['@u-shii', '@base_ui', '@pigment-css', '@toolpad'];
 
 /**
  * WARNING: Always uses `latest` typings.
@@ -22,8 +22,8 @@ const yushiiNpmOrgs = ['@yushii', '@base_ui', '@pigment-css', '@toolpad'];
 function addTypeDeps(deps: Record<string, string>): void {
   const packagesWithDTPackage = Object.keys(deps)
     .filter((name) => !packagesWithBundledTypes.includes(name))
-    // All the Yushii packages come with bundled types
-    .filter((name) => !yushiiNpmOrgs.some((org) => name.startsWith(org)));
+    // All the Ushii packages come with bundled types
+    .filter((name) => !ushiiNpmOrgs.some((org) => name.startsWith(org)));
 
   packagesWithDTPackage.forEach((name) => {
     let resolvedName = name;
@@ -46,20 +46,20 @@ export default function SandboxDependencies(demo: Demo, options?: { commitRef?: 
    * @param packageName - The name of a package living inside this repository.
    * @return string - A valid version for a dependency entry in a package.json
    */
-  function getYushiiPackageVersion(packageName: string): string {
+  function getUshiiPackageVersion(packageName: string): string {
     if (
       commitRef === undefined ||
-      process.env.SOURCE_CODE_REPO !== 'https://github.com/yugashiki/yushii'
+      process.env.SOURCE_CODE_REPO !== 'https://github.com/yugashiki/u-shii'
     ) {
       // #default-branch-switch
       return 'latest';
     }
     const shortSha = commitRef.slice(0, 8);
-    return `https://pkg.csb.dev/yushii/u-ui/commit/${shortSha}/@yushii/${packageName}`;
+    return `https://pkg.csb.dev/u-shii/u-ui/commit/${shortSha}/@u-shii/${packageName}`;
   }
 
   function extractDependencies() {
-    const yushiiDocConfig = (window as any).yushiiDocConfig;
+    const ushiiDocConfig = (window as any).ushiiDocConfig;
 
     function includePeerDependencies(
       deps: Record<string, string>,
@@ -73,17 +73,17 @@ export default function SandboxDependencies(demo: Demo, options?: { commitRef?: 
         '@emotion/styled': versions['@emotion/styled'],
       };
 
-      if (newDeps['@yushii/lab'] || newDeps['@mui/icons-material']) {
-        newDeps['@yushii/u-ui'] = versions['@yushii/u-ui'];
+      if (newDeps['@u-shii/lab'] || newDeps['@mui/icons-material']) {
+        newDeps['@u-shii/u-ui'] = versions['@u-shii/u-ui'];
       }
 
-      if (newDeps['@yushii/x-data-grid']) {
-        newDeps['@yushii/u-ui'] = versions['@yushii/u-ui'];
+      if (newDeps['@u-shii/x-data-grid']) {
+        newDeps['@u-shii/u-ui'] = versions['@u-shii/u-ui'];
       }
 
       // TODO: consider if this configuration could be injected in a "cleaner" way.
-      if (yushiiDocConfig && yushiiDocConfig.csbIncludePeerDependencies) {
-        newDeps = yushiiDocConfig.csbIncludePeerDependencies(newDeps, {
+      if (ushiiDocConfig && ushiiDocConfig.csbIncludePeerDependencies) {
+        newDeps = ushiiDocConfig.csbIncludePeerDependencies(newDeps, {
           versions,
         });
       }
@@ -96,23 +96,23 @@ export default function SandboxDependencies(demo: Demo, options?: { commitRef?: 
       'react-dom': 'latest',
       '@emotion/react': 'latest',
       '@emotion/styled': 'latest',
-      '@yushii/u-ui': getYushiiPackageVersion('u-ui'),
-      '@mui/icons-material': getYushiiPackageVersion('icons-material'),
-      '@yushii/lab': getYushiiPackageVersion('lab'),
-      '@yushii/styled-engine': getYushiiPackageVersion('styled-engine'),
-      '@yushii/styles': getYushiiPackageVersion('styles'),
-      '@yushii/system': getYushiiPackageVersion('system'),
-      '@yushii/private-theming': getYushiiPackageVersion('theming'),
-      '@yushii/private-classnames': getYushiiPackageVersion('classnames'),
-      '@yushii/base': getYushiiPackageVersion('base'),
-      '@yushii/utils': getYushiiPackageVersion('utils'),
-      '@yushii/ui-nextjs': getYushiiPackageVersion('ui-nextjs'),
-      '@yushii/joy': getYushiiPackageVersion('joy'),
+      '@u-shii/u-ui': getUshiiPackageVersion('u-ui'),
+      '@mui/icons-material': getUshiiPackageVersion('icons-material'),
+      '@u-shii/lab': getUshiiPackageVersion('lab'),
+      '@u-shii/styled-engine': getUshiiPackageVersion('styled-engine'),
+      '@u-shii/styles': getUshiiPackageVersion('styles'),
+      '@u-shii/system': getUshiiPackageVersion('system'),
+      '@u-shii/private-theming': getUshiiPackageVersion('theming'),
+      '@u-shii/private-classnames': getUshiiPackageVersion('classnames'),
+      '@u-shii/base': getUshiiPackageVersion('base'),
+      '@u-shii/utils': getUshiiPackageVersion('utils'),
+      '@u-shii/ui-nextjs': getUshiiPackageVersion('ui-nextjs'),
+      '@u-shii/joy': getUshiiPackageVersion('joy'),
     };
 
     // TODO: consider if this configuration could be injected in a "cleaner" way.
-    if (yushiiDocConfig && yushiiDocConfig.csbGetVersions) {
-      versions = yushiiDocConfig.csbGetVersions(versions, { yushiiDocConfig: commitRef });
+    if (ushiiDocConfig && ushiiDocConfig.csbGetVersions) {
+      versions = ushiiDocConfig.csbGetVersions(versions, { ushiiDocConfig: commitRef });
     }
 
     const re = /^import\s'([^']+)'|import\s[\s\S]*?\sfrom\s+'([^']+)/gm;
@@ -129,8 +129,8 @@ export default function SandboxDependencies(demo: Demo, options?: { commitRef?: 
           deps[name] = versions[name] ?? 'latest';
         }
 
-        if (yushiiDocConfig && yushiiDocConfig.postProcessImport) {
-          const resolvedDep = yushiiDocConfig.postProcessImport(fullName);
+        if (ushiiDocConfig && ushiiDocConfig.postProcessImport) {
+          const resolvedDep = ushiiDocConfig.postProcessImport(fullName);
           if (resolvedDep) {
             deps = { ...deps, ...resolvedDep };
           }
@@ -153,11 +153,11 @@ export default function SandboxDependencies(demo: Demo, options?: { commitRef?: 
     dependencies.typescript = 'latest';
   }
 
-  if (!demo.productId && !dependencies['@yushii/u-ui']) {
-    // The `index.js` imports StyledEngineProvider from '@yushii/u-ui', so we need to make sure we have it as a dependency
-    const name = '@yushii/u-ui';
+  if (!demo.productId && !dependencies['@u-shii/u-ui']) {
+    // The `index.js` imports StyledEngineProvider from '@u-shii/u-ui', so we need to make sure we have it as a dependency
+    const name = '@u-shii/u-ui';
     const versions = {
-      [name]: getYushiiPackageVersion('u-ui'),
+      [name]: getUshiiPackageVersion('u-ui'),
     };
     dependencies[name] = versions[name] ? versions[name] : 'latest';
   }

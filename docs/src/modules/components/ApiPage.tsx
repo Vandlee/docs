@@ -1,19 +1,19 @@
 /* eslint-disable react/no-danger */
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { ComponentApiContent, PropsTranslations } from '@yushii-internal/api-docs-builder';
-import exactProp from '@yushii/utils/exactProp';
-import Typography from '@yushii/u-ui/Typography';
-/* import Alert from '@yushii/u-ui/Alert'; */
-import { TableOfContentsEntry } from '@yushii/internal-markdown';
-import { Ad, AdGuest } from '@yushii/docs/Ad';
+import { ComponentApiContent, PropsTranslations } from '@u-shii-internal/api-docs-builder';
+import exactProp from '@u-shii/utils/exactProp';
+import Typography from '@u-shii/u-ui/Typography';
+/* import Alert from '@u-shii/u-ui/Alert'; */
+import { TableOfContentsEntry } from '@u-shii/internal-markdown';
+import { Ad, AdGuest } from '@u-shii/docs/Ad';
 /* import VerifiedRoundedIcon from '@mui/icons-material/VerifiedRounded';
 import WarningRoundedIcon from '@mui/icons-material/WarningRounded'; */
-import { Translate, useTranslate, useUserLanguage } from '@yushii/docs/i18n';
-import { HighlightedCode } from '@yushii/docs/HighlightedCode';
-import { BrandingProvider } from '@yushii/docs/branding';
-import { SectionTitle, SectionTitleProps } from '@yushii/docs/SectionTitle';
-import { MarkdownElement } from '@yushii/docs/MarkdownElement';
+import { Translate, useTranslate, useUserLanguage } from '@u-shii/docs/i18n';
+import { HighlightedCode } from '@u-shii/docs/HighlightedCode';
+import { BrandingProvider } from '@u-shii/docs/branding';
+import { SectionTitle, SectionTitleProps } from '@u-shii/docs/SectionTitle';
+import { MarkdownElement } from '@u-shii/docs/MarkdownElement';
 import AppLayoutDocs from 'docs/src/modules/components/AppLayoutDocs';
 import PropertiesSection from 'docs/src/modules/components/ApiPage/sections/PropertiesSection';
 import ClassesSection from 'docs/src/modules/components/ApiPage/sections/ClassesSection';
@@ -138,7 +138,7 @@ export default function ApiPage(props: ApiPageProps) {
     : [];
 
   const isJoyComponent = filename.includes('mui-joy');
-  const isBaseComponent = filename.includes('yushii-base');
+  const isBaseComponent = filename.includes('ushii-base');
   const defaultPropsLink = isJoyComponent
     ? '/joy-ui/customization/themed-components/#theme-default-props'
     : '/material-ui/customization/theme-components/#theme-default-props';
@@ -316,7 +316,7 @@ export default function ApiPage(props: ApiPageProps) {
           </React.Fragment>
         )}
         <div
-          className="YushiiCallout-root YushiiCallout-info"
+          className="UshiiCallout-root UshiiCallout-info"
           dangerouslySetInnerHTML={{ __html: refHint }}
           style={{
             alignItems: 'baseline',
@@ -344,7 +344,7 @@ export default function ApiPage(props: ApiPageProps) {
             <p
               dangerouslySetInnerHTML={{
                 __html: t('api-docs.themeDefaultPropsDescription')
-                  .replace(/{{yushiiName}}/, pageContent.yushiiName)
+                  .replace(/{{ushiiName}}/, pageContent.ushiiName)
                   .replace(/{{defaultPropsLink}}/, defaultPropsLink),
               }}
             />

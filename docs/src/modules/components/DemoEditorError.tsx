@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Alert, { AlertProps } from '@yushii/u-ui/Alert';
+import Alert, { AlertProps } from '@u-shii/u-ui/Alert';
 
 export default function DemoEditorError(props: AlertProps) {
   if (!props.children) {
@@ -18,13 +18,13 @@ export default function DemoEditorError(props: AlertProps) {
         transform: 'translateX(-50%) translateY(-50%)',
         py: '2px',
         px: '6px',
-        '& .YushiiAlert-icon': {
+        '& .UshiiAlert-icon': {
           fontSize: 14,
           mr: 0.5,
           mt: 0.25,
           py: 0,
         },
-        '& .YushiiAlert-message': {
+        '& .UshiiAlert-message': {
           fontSize: 12,
           py: 0,
         },

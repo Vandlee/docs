@@ -15,7 +15,7 @@ No es necesario proporcionar ningún polyfill de JavaScript, ya que gestiona int
 
 <!-- #default-branch-switch -->
 
-Puedes encontrar una extensa lista en nuestro [.browserlistrc](https://github.com/yugashiki/yushii/blob/-/.browserslistrc#L12-L27) (comprueba la entrada `stable`).
+Puedes encontrar una extensa lista en nuestro [.browserlistrc](https://github.com/yugashiki/u-shii/blob/-/.browserslistrc#L12-L27) (comprueba la entrada `stable`).
 
 Dado que Googlebot utiliza un servicio de renderizado web (WRS) para indexar el contenido de la página, es fundamental que U-Ui lo soporte.
 [WRS actualiza regularmente el motor de renderizado que utiliza](https://webmasters.googleblog.com/2019/05/the-new-evergreen-googlebot.html).
@@ -33,7 +33,7 @@ El objetivo es soportar Node.js hasta la [última versión en modo de mantenimie
 <!-- #react-peer-version -->
 
 U-Ui es compatible con las versiones más recientes de React, empezando por ^17.0.0 (la que tiene delegación de eventos en la raíz de React).
-Echa un vistazo a las [versiones anteriores](https://yushii.yugashiki.com/versions/) para compatibilidad con versiones anteriores.
+Echa un vistazo a las [versiones anteriores](https://u-shii.yugashiki.com/versions/) para compatibilidad con versiones anteriores.
 
 ## TypeScript
 

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import Button from '@yushii/u-ui/Button';
+import Button from '@u-shii/u-ui/Button';
 import { GitHub } from '@mui/icons-material';
-import { useUserLanguage, useTranslate } from '@yushii/docs/i18n';
+import { useUserLanguage, useTranslate } from '@u-shii/docs/i18n';
 
 export default function EditPage(props) {
     const { sourceLocation } = props;

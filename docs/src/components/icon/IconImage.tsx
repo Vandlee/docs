@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { useTheme, styled, Theme } from '@yushii/u-ui/styles';
-import Box from '@yushii/u-ui/Box';
-import { SxProps } from '@yushii/system';
+import { useTheme, styled, Theme } from '@u-shii/u-ui/styles';
+import Box from '@u-shii/u-ui/Box';
+import { SxProps } from '@u-shii/system';
 
 export type IconImageProps = {
   name: 'product-ui' | string;

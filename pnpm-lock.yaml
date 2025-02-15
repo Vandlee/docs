@@ -99,24 +99,24 @@ importers:
       '@typescript-eslint/parser':
         specifier: ^7.18.0
         version: 7.18.0(eslint@8.57.1)(typescript@5.7.3)
+      '@u-shii/internal-docs-utils':
+        specifier: workspace:^
+        version: link:packages-internal/docs-utils
+      '@u-shii/internal-scripts':
+        specifier: workspace:^
+        version: link:packages-internal/scripts
+      '@u-shii/u-ui':
+        specifier: workspace:^
+        version: link:packages/u-shii-ui/build
+      '@u-shii/utils':
+        specifier: workspace:^
+        version: link:packages/u-ushii-utils/build
       '@vitest/browser':
         specifier: ^2.1.8
         version: 2.1.8(@types/node@20.17.16)(playwright@1.50.0)(typescript@5.7.3)(vite@5.4.14(@types/node@20.17.16)(terser@5.37.0))(vitest@2.1.8)
       '@vitest/coverage-v8':
         specifier: ^2.1.8
         version: 2.1.8(@vitest/browser@2.1.8)(vitest@2.1.8)
-      '@yushii/internal-docs-utils':
-        specifier: workspace:^
-        version: link:packages-internal/docs-utils
-      '@yushii/internal-scripts':
-        specifier: workspace:^
-        version: link:packages-internal/scripts
-      '@yushii/u-ui':
-        specifier: workspace:^
-        version: link:packages/yushii-ui/build
-      '@yushii/utils':
-        specifier: workspace:^
-        version: link:packages/yushii-utils/build
       babel-loader:
         specifier: ^9.2.1
         version: 9.2.1(@babel/core@7.26.7)(webpack@5.97.1)
@@ -195,9 +195,9 @@ importers:
       eslint-plugin-react-hooks:
         specifier: ^4.3.0
         version: 4.6.2(eslint@8.57.1)
-      eslint-plugin-yushii:
+      eslint-plugin-u-shii:
         specifier: workspace:^
-        version: link:packages/eslint-plugin-yushii
+        version: link:packages/eslint-plugin-u-shii
       fast-glob:
         specifier: ^3.3.2
         version: 3.3.3
@@ -339,27 +339,27 @@ importers:
       '@toolpad/core':
         specifier: 0.11.0
         version: 0.11.0(h2haewhrquilyfrhgxmvys7m34)
-      '@yushii/base':
+      '@u-shii/base':
         specifier: workspace:^
-        version: link:../packages/yushii-base/build
-      '@yushii/docs':
+        version: link:../packages/u-shii-base/build
+      '@u-shii/docs':
         specifier: workspace:^
-        version: link:../packages/yushii-docs/build
-      '@yushii/internal-markdown':
+        version: link:../packages/u-shii-docs/build
+      '@u-shii/internal-markdown':
         specifier: workspace:^
         version: link:../packages/markdown
-      '@yushii/styled-engine':
+      '@u-shii/styled-engine':
         specifier: workspace:^
-        version: link:../packages/yushii-styled-engine/build
-      '@yushii/system':
+        version: link:../packages/u-shii-styled-engine/build
+      '@u-shii/system':
         specifier: workspace:^
-        version: link:../packages/yushii-system/build
-      '@yushii/u-ui':
+        version: link:../packages/u-shii-system/build
+      '@u-shii/u-ui':
         specifier: workspace:^
-        version: link:../packages/yushii-ui/build
-      '@yushii/utils':
+        version: link:../packages/u-shii-ui/build
+      '@u-shii/utils':
         specifier: workspace:^
-        version: link:../packages/yushii-utils/build
+        version: link:../packages/u-ushii-utils/build
       autoprefixer:
         specifier: 10.4.20
         version: 10.4.20(postcss@8.4.49)
@@ -577,13 +577,13 @@ importers:
       '@types/stylis':
         specifier: ^4.2.0
         version: 4.2.7
-      '@yushii-internal/api-docs-builder':
+      '@u-shii-internal/api-docs-builder':
         specifier: workspace:^
         version: link:../packages/api-docs-builder
-      '@yushii/internal-docs-utils':
+      '@u-shii/internal-docs-utils':
         specifier: workspace:^
         version: link:../packages-internal/docs-utils
-      '@yushii/internal-scripts':
+      '@u-shii/internal-scripts':
         specifier: workspace:^
         version: link:../packages-internal/scripts
       chai:
@@ -669,7 +669,7 @@ importers:
       '@babel/types':
         specifier: ^7.26.7
         version: 7.26.7
-      '@yushii/internal-docs-utils':
+      '@u-shii/internal-docs-utils':
         specifier: workspace:^
         version: link:../docs-utils
       doctrine:
@@ -733,10 +733,10 @@ importers:
       '@babel/traverse':
         specifier: ^7.26.4
         version: 7.26.7
-      '@yushii/internal-docs-utils':
+      '@u-shii/internal-docs-utils':
         specifier: workspace:^
         version: link:../../packages-internal/docs-utils
-      '@yushii/internal-markdown':
+      '@u-shii/internal-markdown':
         specifier: workspace:^
         version: link:../markdown
       ast-types:
@@ -807,7 +807,7 @@ importers:
         specifier: ^19.0.2
         version: 19.0.2
 
-  packages/eslint-plugin-yushii:
+  packages/eslint-plugin-u-shii:
     dependencies:
       emoji-regex:
         specifier: ^10.4.0
@@ -851,7 +851,7 @@ importers:
         specifier: 0.14.2
         version: 0.14.2
 
-  packages/yushii-base:
+  packages/u-shii-base:
     dependencies:
       '@babel/runtime':
         specifier: ^7.26.7
@@ -865,9 +865,9 @@ importers:
       '@popperjs/core':
         specifier: ^2.11.8
         version: 2.11.8
-      '@yushii/utils':
+      '@u-shii/utils':
         specifier: workspace:^
-        version: link:../yushii-utils/build
+        version: link:../u-ushii-utils/build
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -916,7 +916,7 @@ importers:
         version: 19.0.2
     publishDirectory: build
 
-  packages/yushii-docs:
+  packages/u-shii-docs:
     dependencies:
       '@babel/runtime':
         specifier: ^7.26.7
@@ -924,15 +924,15 @@ importers:
       '@mui/icons-material':
         specifier: ^5.0.0 || ^6.0.0
         version: 6.4.1(@mui/material@6.4.1(@emotion/react@11.13.5(@types/react@19.0.8)(react@19.0.0))(@emotion/styled@11.13.5(@emotion/react@11.13.5(@types/react@19.0.8)(react@19.0.0))(@types/react@19.0.8)(react@19.0.0))(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(@types/react@19.0.8)(react@19.0.0)
-      '@yushii/base':
+      '@u-shii/base':
         specifier: workspace:*
-        version: link:../yushii-base/build
-      '@yushii/internal-markdown':
+        version: link:../u-shii-base/build
+      '@u-shii/internal-markdown':
         specifier: workspace:^
         version: link:../markdown
-      '@yushii/system':
+      '@u-shii/system':
         specifier: workspace:^
-        version: link:../yushii-system/build
+        version: link:../u-shii-system/build
       chai:
         specifier: ^4.4.1
         version: 4.5.0
@@ -964,9 +964,9 @@ importers:
       '@types/react':
         specifier: ^19.0.2
         version: 19.0.8
-      '@yushii/u-ui':
+      '@u-shii/u-ui':
         specifier: workspace:*
-        version: link:../yushii-ui/build
+        version: link:../u-shii-ui/build
       next:
         specifier: ^15.1.2
         version: 15.1.4(@babel/core@7.26.7)(@playwright/test@1.48.2)(babel-plugin-macros@3.1.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -975,7 +975,7 @@ importers:
         version: 19.0.0
     publishDirectory: build
 
-  packages/yushii-styled-engine:
+  packages/u-shii-styled-engine:
     dependencies:
       '@babel/runtime':
         specifier: ^7.26.7
@@ -1008,7 +1008,7 @@ importers:
       '@types/react':
         specifier: ^19.0.2
         version: 19.0.8
-      '@yushii/styled-engine':
+      '@u-shii/styled-engine':
         specifier: workspace:*
         version: link:build
       chai:
@@ -1019,7 +1019,7 @@ importers:
         version: 19.0.0
     publishDirectory: build
 
-  packages/yushii-system:
+  packages/u-shii-system:
     dependencies:
       '@babel/runtime':
         specifier: ^7.26.7
@@ -1030,12 +1030,12 @@ importers:
       '@mui/types':
         specifier: ^7.2.20
         version: 7.2.21(@types/react@19.0.8)
-      '@yushii/styled-engine':
+      '@u-shii/styled-engine':
         specifier: workspace:^
-        version: link:../yushii-styled-engine/build
-      '@yushii/utils':
+        version: link:../u-shii-styled-engine/build
+      '@u-shii/utils':
         specifier: workspace:^
-        version: link:../yushii-utils/build
+        version: link:../u-ushii-utils/build
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -1064,7 +1064,7 @@ importers:
       '@types/sinon':
         specifier: ^17.0.3
         version: 17.0.3
-      '@yushii/system':
+      '@u-shii/system':
         specifier: workspace:*
         version: link:build
       chai:
@@ -1087,7 +1087,7 @@ importers:
         version: 6.1.13(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
     publishDirectory: build
 
-  packages/yushii-ui:
+  packages/u-shii-ui:
     dependencies:
       '@babel/runtime':
         specifier: ^7.26.7
@@ -1107,15 +1107,15 @@ importers:
       '@types/react-transition-group':
         specifier: ^4.4.12
         version: 4.4.12(@types/react@19.0.8)
-      '@yushii/system':
+      '@u-shii/system':
         specifier: workspace:^
-        version: link:../yushii-system/build
-      '@yushii/u-ui-pigment-css':
+        version: link:../u-shii-system/build
+      '@u-shii/u-ui-pigment-css':
         specifier: workspace:^
-        version: link:../yushii-ui-pigment-css/build
-      '@yushii/utils':
+        version: link:../u-shii-ui-pigment-css/build
+      '@u-shii/utils':
         specifier: workspace:^
-        version: link:../yushii-utils/build
+        version: link:../u-ushii-utils/build
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -1185,7 +1185,7 @@ importers:
         version: 19.0.2
     publishDirectory: build
 
-  packages/yushii-ui-nextjs:
+  packages/u-shii-ui-nextjs:
     dependencies:
       '@babel/runtime':
         specifier: ^7.26.7
@@ -1211,7 +1211,7 @@ importers:
         version: 19.0.0
     publishDirectory: build
 
-  packages/yushii-ui-pigment-css:
+  packages/u-shii-ui-pigment-css:
     dependencies:
       '@babel/runtime':
         specifier: ^7.26.7
@@ -1219,12 +1219,12 @@ importers:
       '@pigment-css/react':
         specifier: 0.0.30
         version: 0.0.30(@types/react@19.0.8)(react@19.0.0)(typescript@5.7.3)
-      '@yushii/system':
+      '@u-shii/system':
         specifier: workspace:*
-        version: link:../yushii-system/build
+        version: link:../u-shii-system/build
     publishDirectory: build
 
-  packages/yushii-utils:
+  packages/u-ushii-utils:
     dependencies:
       '@babel/runtime':
         specifier: ^7.26.7

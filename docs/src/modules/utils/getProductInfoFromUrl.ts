@@ -1,6 +1,6 @@
 import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
 
-export type YushiiProductId = 
+export type UshiiProductId = 
   | 'null' 
   | 'base-ui'
   | 'u-ui'
@@ -8,14 +8,14 @@ export type YushiiProductId =
   | 'php'
   | 'python';
 
-type YushiiProductCategoryId = 'null' | 'u-docs' |'core';
+type UshiiProductCategoryId = 'null' | 'u-docs' |'core';
 
-interface YushiiProductInfo {
-  productId: YushiiProductId;
-  productCategoryId: YushiiProductCategoryId;
+interface UshiiProductInfo {
+  productId: UshiiProductId;
+  productCategoryId: UshiiProductCategoryId;
 }
 
-export default function getProductInfoFromUrl(asPath: string): YushiiProductInfo {
+export default function getProductInfoFromUrl(asPath: string): UshiiProductInfo {
   const asPathWithoutLang = pathnameToLanguage(asPath).canonicalAsServer;
   const firstFolder = asPathWithoutLang.replace(/^\/+([^/]+)\/.*/, '$1');
   const secondFolder = asPathWithoutLang.replace(/^\/+[^/]+\/([^/]+).*/, '$1');
@@ -54,5 +54,5 @@ export default function getProductInfoFromUrl(asPath: string): YushiiProductInfo
   return {
     productCategoryId,
     productId,
-  } as YushiiProductInfo;
+  } as UshiiProductInfo;
 }

@@ -1,11 +1,11 @@
 /* eslint-disable react/no-danger */
 import * as React from 'react';
-import { useTranslate } from '@yushii/docs/i18n';
-import { styled, alpha } from '@yushii/u-ui/styles';
+import { useTranslate } from '@u-shii/docs/i18n';
+import { styled, alpha } from '@u-shii/u-ui/styles';
 import {
   brandingDarkTheme as darkTheme,
   brandingLightTheme as lightTheme,
-} from '@yushii/docs/branding';
+} from '@u-shii/docs/branding';
 import StyledTableContainer from 'docs/src/modules/components/ApiPage/table/StyledTableContainer';
 import { SlotDefinition } from 'docs/src/modules/components/ApiPage/definitions/slots';
 
@@ -20,29 +20,29 @@ const StyledTable = styled('table')(
       fontFamily: theme.typography.fontFamilyCode,
       fontWeight: theme.typography.fontWeightSemiBold,
       fontSize: theme.typography.pxToRem(13),
-      color: `var(--yushiidocs-palette-primary-600, ${lightTheme.palette.primary[600]})`,
+      color: `var(--ushiidocs-palette-primary-600, ${lightTheme.palette.primary[600]})`,
     },
     '& .class-name': {
       ...theme.typography.caption,
       fontFamily: theme.typography.fontFamilyCode,
       fontWeight: theme.typography.fontWeightRegular,
-      color: `var(--yushiidocs-palette-text-primary, ${lightTheme.palette.text.primary})`,
+      color: `var(--ushiidocs-palette-text-primary, ${lightTheme.palette.text.primary})`,
       padding: '1px 4px',
       borderRadius: 6,
       border: '1px solid',
       borderColor: alpha(darkTheme.palette.primary[100], 0.8),
-      backgroundColor: `var(--yushiidocs-palette-primary-50, ${lightTheme.palette.primary[50]})`,
+      backgroundColor: `var(--ushiidocs-palette-primary-50, ${lightTheme.palette.primary[50]})`,
     },
     '& .item-default': {
       ...theme.typography.caption,
       fontFamily: theme.typography.fontFamilyCode,
       fontWeight: theme.typography.fontWeightRegular,
-      color: `var(--yushiidocs-palette-text-primary, ${lightTheme.palette.text.primary})`,
+      color: `var(--ushiidocs-palette-text-primary, ${lightTheme.palette.text.primary})`,
       padding: '1px 4px',
       borderRadius: 6,
       border: '1px solid',
-      borderColor: `var(--yushiidocs-palette-grey-200, ${lightTheme.palette.grey[200]})`,
-      backgroundColor: `var(--yushiidocs-palette-grey-50, ${lightTheme.palette.grey[50]})`,
+      borderColor: `var(--ushiidocs-palette-grey-200, ${lightTheme.palette.grey[200]})`,
+      backgroundColor: `var(--ushiidocs-palette-grey-50, ${lightTheme.palette.grey[50]})`,
     },
     '& .description-column': {
       width: '40%',
@@ -50,19 +50,19 @@ const StyledTable = styled('table')(
     },
   }),
   ({ theme }) => ({
-    [`:where(${theme.vars ? '[data-yushii-color-scheme="dark"]' : '.mode-dark'}) &`]: {
+    [`:where(${theme.vars ? '[data-u-shii-color-scheme="dark"]' : '.mode-dark'}) &`]: {
       '& .slot-name': {
-        color: `var(--yushiidocs-palette-primary-200, ${darkTheme.palette.primary[200]})`,
+        color: `var(--ushiidocs-palette-primary-200, ${darkTheme.palette.primary[200]})`,
       },
       '& .class-name': {
-        color: `var(--yushiidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
-        borderColor: `var(--yushiidocs-palette-divider, ${darkTheme.palette.divider})`,
+        color: `var(--ushiidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
+        borderColor: `var(--ushiidocs-palette-divider, ${darkTheme.palette.divider})`,
         backgroundColor: alpha(darkTheme.palette.primary[900], 0.5),
       },
       '& .item-default': {
-        color: `var(--yushiidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
-        backgroundColor: `var(--yushiidocs-palette-grey-900, ${darkTheme.palette.grey[900]})`,
-        borderColor: `var(--yushiidocs-palette-divider, ${darkTheme.palette.divider})`,
+        color: `var(--ushiidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
+        backgroundColor: `var(--ushiidocs-palette-grey-900, ${darkTheme.palette.grey[900]})`,
+        borderColor: `var(--ushiidocs-palette-divider, ${darkTheme.palette.divider})`,
       },
     },
   }),
@@ -96,7 +96,7 @@ export default function SlotsTable(props: SlotsTableProps) {
                 <td className="slot-name" style={{ fontWeight: '600' }}>
                   {name}
                 </td>
-                <td className="YushiiApi-table-class-name">
+                <td className="UshiiApi-table-class-name">
                   {/* eslint-disable-next-line material-ui/no-hardcoded-labels */}
                   {className && <span className="class-name">{`.${className}`}</span>}
                 </td>

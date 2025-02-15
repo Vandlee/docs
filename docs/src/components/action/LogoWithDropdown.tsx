@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Box, Slide } from '@yushii/u-ui';
+import { Box, Slide } from '@u-shii/u-ui';
 import { RootSvgProps } from 'docs/src/icons/RootSvg';
-import SvgYushiiLogomark from 'docs/src/icons/SvgYugashikiLogomark';
+import SvgYugashikiLogomark from 'docs/src/icons/SvgYugashikiLogomark';
 import { ExpandMoreRounded, ExpandLessRounded } from '@mui/icons-material';
 import HeaderDropdown from 'docs/src/components/header/HeaderDropdown';
 
@@ -13,7 +13,7 @@ interface LogoWithDropdownProps {
 }
 
 export default function LogoWithDropdown({
-  logo: LogoSvg = SvgYushiiLogomark,
+  logo: LogoSvg = SvgYugashikiLogomark,
   marginLeft,
 }: LogoWithDropdownProps) {
   const [dropdown, setDropdown] = React.useState(false);

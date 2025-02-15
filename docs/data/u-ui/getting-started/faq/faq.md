@@ -6,4 +6,4 @@
 
 El desplazamiento se bloquea en cuanto se abre un modal.
 Esto impide interactuar con el fondo cuando el modal debería ser el único contenido interactivo. Sin embargo, eliminar la barra de desplazamiento puede hacer que tus **elementos posicionados fijos** se muevan.
-En esta situación, puedes aplicar un nombre de clase global `.yushii-fixed` para decirle a U-Ui que maneje esos elementos.
+En esta situación, puedes aplicar un nombre de clase global `.u-shii-fixed` para decirle a U-Ui que maneje esos elementos.

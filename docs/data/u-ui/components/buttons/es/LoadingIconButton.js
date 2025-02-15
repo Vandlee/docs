@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Tooltip from '@yushii/u-ui/Tooltip';
-import IconButton from '@yushii/u-ui/IconButton';
+import Tooltip from '@u-shii/u-ui/Tooltip';
+import IconButton from '@u-shii/u-ui/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 export default function LoadingIconButton() {

@@ -8,8 +8,8 @@ export default function Python() {
   return (
     <BrandingCssVarsProvider>
       <Head
-        title="Yushii UI: React components"
-        description="Yushii UI is an open-source React component library"
+        title="Ushii: React components"
+        description="Ushii is an open-source React component library"
       />
       <AppHeaderBanner />
       <AppHeader gitHubRepository="https://github.com" />

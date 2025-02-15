@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { styled } from '@yushii/u-ui/styles';
-import Chip from '@yushii/u-ui/Chip';
-import Paper from '@yushii/u-ui/Paper';
+import { styled } from '@u-shii/u-ui/styles';
+import Chip from '@u-shii/u-ui/Chip';
+import Paper from '@u-shii/u-ui/Paper';
 import TagFacesIcon from '@mui/icons-material/TagFaces';
 
 interface ChipData {

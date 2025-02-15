@@ -88,15 +88,15 @@ export default withDocsInfra({
           ...config.resolve.alias,
 
           // for 3rd party packages with dependencies in this repository
-          '@yushii/u-ui$': path.resolve(workspaceRoot, 'packages/yushii-ui/src/index.js'),
-          '@yushii/u-ui': path.resolve(workspaceRoot, 'packages/yushii-ui/src'),
+          '@u-shii/u-ui$': path.resolve(workspaceRoot, 'packages/u-shii-ui/src/index.js'),
+          '@u-shii/u-ui': path.resolve(workspaceRoot, 'packages/u-shii-ui/src'),
 
-          '@yushii/docs': path.resolve(workspaceRoot, 'packages/yushii-docs/src'),
-          '@yushii/styled-engine': path.resolve(workspaceRoot, 'packages/yushii-styled-engine/src'),
-          '@yushii/system': path.resolve(workspaceRoot, 'packages/yushii-system/src'),
-          '@yushii/utils': path.resolve(workspaceRoot, 'packages/yushii-utils/src'),
-          '@yushii/base': path.resolve(workspaceRoot, 'packages/yushii-base/src'),
-          '@yushii/ui-nextjs': path.resolve(workspaceRoot, 'packages/yushii-ui-nextjs/src'),
+          '@u-shii/docs': path.resolve(workspaceRoot, 'packages/u-shii-docs/src'),
+          '@u-shii/styled-engine': path.resolve(workspaceRoot, 'packages/u-shii-styled-engine/src'),
+          '@u-shii/system': path.resolve(workspaceRoot, 'packages/u-shii-system/src'),
+          '@u-shii/utils': path.resolve(workspaceRoot, 'packages/u-shii-utils/src'),
+          '@u-shii/base': path.resolve(workspaceRoot, 'packages/u-shii-base/src'),
+          '@u-shii/ui-nextjs': path.resolve(workspaceRoot, 'packages/u-shii-ui-nextjs/src'),
         },
         extensions: [
           '.tsx',
@@ -111,11 +111,11 @@ export default withDocsInfra({
             test: /\.md$/,
             oneOf: [
               {
-                resourceQuery: /yushiiMarkdown/,
+                resourceQuery: /u-shiiMarkdown/,
                 use: [
                   options.defaultLoaders.babel,
                   {
-                    loader: require.resolve('@yushii/internal-markdown/loader'),
+                    loader: require.resolve('@u-shii/internal-markdown/loader'),
                     options: {
                       workspaceRoot,
                       ignoreLanguagePages: LANGUAGES_IGNORE_PAGES,
@@ -124,13 +124,13 @@ export default withDocsInfra({
                         {
                           productId: 'u-ui',
                           paths: [
-                            path.join(workspaceRoot, 'packages/yushii-base/src'),
-                            path.join(workspaceRoot, 'packages/yushii-ui/src'),
+                            path.join(workspaceRoot, 'packages/u-shii-base/src'),
+                            path.join(workspaceRoot, 'packages/u-shii-ui/src'),
                           ],
                         },
                         {
                           productId: 'base-ui',
-                          paths: [path.join(workspaceRoot, 'packages/yushii-base/src')],
+                          paths: [path.join(workspaceRoot, 'packages/u-shii-base/src')],
                         },
                       ],
                       env: {
@@ -166,7 +166,7 @@ export default withDocsInfra({
   env: {
     // docs-infra
     LIB_VERSION: pkg.version,
-    SOURCE_CODE_REPO: 'https://github.com/yugashiki/yushii',
+    SOURCE_CODE_REPO: 'https://github.com/yugashiki/u-shii',
     SOURCE_GITHUB_BRANCH: 'master', // #default-branch-switch
     GITHUB_TEMPLATE_DOCS_FEEDBACK: '4.docs-feedback.yml',
     BUILD_ONLY_SPANISH_LOCALE: String(buildOnlySpanishLocale),

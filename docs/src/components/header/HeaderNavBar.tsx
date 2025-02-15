@@ -1,18 +1,18 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import * as React from 'react';
-import { styled, alpha } from '@yushii/u-ui/styles';
-import Box from '@yushii/u-ui/Box';
-import Chip from '@yushii/u-ui/Chip';
-import ButtonBase from '@yushii/u-ui/ButtonBase';
-import Popper from '@yushii/u-ui/Popper';
-import Paper from '@yushii/u-ui/Paper';
-import { unstable_debounce as debounce } from '@yushii/utils';
-import Fade from '@yushii/u-ui/Fade';
-import Typography from '@yushii/u-ui/Typography';
+import { styled, alpha } from '@u-shii/u-ui/styles';
+import Box from '@u-shii/u-ui/Box';
+import Chip from '@u-shii/u-ui/Chip';
+import ButtonBase from '@u-shii/u-ui/ButtonBase';
+import Popper from '@u-shii/u-ui/Popper';
+import Paper from '@u-shii/u-ui/Paper';
+import { unstable_debounce as debounce } from '@u-shii/utils';
+import Fade from '@u-shii/u-ui/Fade';
+import Typography from '@u-shii/u-ui/Typography';
 import IconImage from 'docs/src/components/icon/IconImage';
 import ROUTES from 'docs/src/route';
-import { Link } from '@yushii/docs/Link';
-import YushiiProductSelector from 'docs/src/modules/components/YushiiProductSelector';
+import { Link } from '@u-shii/docs/Link';
+import UshiiProductSelector from 'docs/src/modules/components/u-shiiProductSelector';
 
 const Navigation = styled('nav')(({ theme }) => [
   {
@@ -283,7 +283,7 @@ export default function HeaderNavBar() {
                     }),
                   })}
                 >
-                  <YushiiProductSelector ref={productSelectorRef} />
+                  <UshiiProductSelector ref={productSelectorRef} />
                   <ul>
                     <li>
                       <ProductSubMenu
@@ -351,7 +351,7 @@ export default function HeaderNavBar() {
                     }),
                   })}
                 >
-                  <YushiiProductSelector type="docs" ref={productSelectorRef} />
+                  <UshiiProductSelector type="docs" ref={productSelectorRef} />
                 </Paper>
               </Fade>
             )}

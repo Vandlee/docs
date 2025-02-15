@@ -1,14 +1,14 @@
 import * as React from 'react';
 import Script from 'next/script';
-import { documentGetInitialProps } from '@yushii/u-ui-nextjs/v13-pagesRouter';
+import { documentGetInitialProps } from '@u-shii/u-ui-nextjs/v13-pagesRouter';
 import { ServerStyleSheets as JSSServerStyleSheets } from '@mui/styles';
 import { ServerStyleSheet } from 'styled-components';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import GlobalStyles from '@yushii/u-ui/GlobalStyles';
-import YushiiInitColorSchemeScript from '@yushii/u-ui/InitColorSchemeScript';
+import GlobalStyles from '@u-shii/u-ui/GlobalStyles';
+import UshiiInitColorSchemeScript from '@u-shii/u-ui/InitColorSchemeScript';
 import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
 import createEmotionCache from 'docs/src/createEmotionCache';
-import { getMetaThemeColor } from '@yushii/docs/branding';
+import { getMetaThemeColor } from '@u-shii/docs/branding';
 
 // You can find a benchmark of the available CSS minifiers under
 // https://github.com/GoalSmashers/css-minification-benchmark
@@ -35,7 +35,7 @@ export default class MyDocument extends Document {
     const { canonicalAsServer, userLanguage } = this.props;
 
     return (
-      <Html lang={userLanguage} data-yushii-color-scheme="light">
+      <Html lang={userLanguage} data-u-shii-color-scheme="light">
         <Head>
           {/*
               manifest.json provides metadata used when your web app is added to the
@@ -136,10 +136,10 @@ export default class MyDocument extends Document {
                 display: 'block',
               },
               // TODO migrate to .only-dark-mode to .only-dark-mode-v2
-              '[data-yushii-color-scheme="light"] .only-dark-mode-v2': {
+              '[data-u-shii-color-scheme="light"] .only-dark-mode-v2': {
                 display: 'none',
               },
-              '[data-yushii-color-scheme="dark"] .only-light-mode-v2': {
+              '[data-u-shii-color-scheme="dark"] .only-light-mode-v2': {
                 display: 'none',
               },
               '.plan-pro, .plan-premium': {
@@ -157,7 +157,7 @@ export default class MyDocument extends Document {
           />
         </Head>
         <body>
-          <YushiiInitColorSchemeScript defaultMode="system" />
+          <UshiiInitColorSchemeScript defaultMode="system" />
           <Main />
           <NextScript />
         </body>

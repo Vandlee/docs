@@ -1,9 +1,9 @@
 import * as React from 'react';
-import YushiiLink from '@yushii/u-ui/Link';
-import { styled } from '@yushii/u-ui/styles';
-import { useTranslate } from '@yushii/docs/i18n';
+import UshiiLink from '@u-shii/u-ui/Link';
+import { styled } from '@u-shii/u-ui/styles';
+import { useTranslate } from '@u-shii/docs/i18n';
 
-const StyledLink = styled(YushiiLink)(({ theme }) => ({
+const StyledLink = styled(UshiiLink)(({ theme }) => ({
   position: 'fixed',
   padding: theme.spacing(1, 2),
   backgroundColor: (theme.vars || theme).palette.primary[50],

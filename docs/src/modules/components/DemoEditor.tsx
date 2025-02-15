@@ -1,13 +1,13 @@
 import * as React from 'react';
 import SimpleCodeEditor from 'react-simple-code-editor';
-import Box from '@yushii/u-ui/Box';
-import { NoSsr } from '@yushii/base/NoSsr';
-import { styled, alpha, useTheme } from '@yushii/u-ui/styles';
-import prism from '@yushii/internal-markdown/prism';
-import { MarkdownElement } from '@yushii/docs/MarkdownElement';
-import { CodeCopyButton, useCodeCopy } from '@yushii/docs/CodeCopy';
-import { useTranslate } from '@yushii/docs/i18n';
-import { blueDark } from '@yushii/docs/branding';
+import Box from '@u-shii/u-ui/Box';
+import { NoSsr } from '@u-shii/base/NoSsr';
+import { styled, alpha, useTheme } from '@u-shii/u-ui/styles';
+import prism from '@u-shii/internal-markdown/prism';
+import { MarkdownElement } from '@u-shii/docs/MarkdownElement';
+import { CodeCopyButton, useCodeCopy } from '@u-shii/docs/CodeCopy';
+import { useTranslate } from '@u-shii/docs/i18n';
+import { blueDark } from '@u-shii/docs/branding';
 
 const StyledMarkdownElement = styled(MarkdownElement)(({ theme }) => [
     {
@@ -37,7 +37,7 @@ const StyledMarkdownElement = styled(MarkdownElement)(({ theme }) => [
             maxWidth: 'initial',
             maxHeight: 'initial',
         },
-        '& .YushiiCode-copy': {
+        '& .UshiiCode-copy': {
             display: 'none',
         },
     }
@@ -107,7 +107,7 @@ export default function DemoEditor(props: DemoEditorProps) {
             }}
             {...other}
         >
-           <div className="YushiiCode-root" {...handlers}>
+           <div className="UshiiCode-root" {...handlers}>
                 <div className='scrollContainer'>
                     <NoSsr>
                         <CodeCopyButton {...copyButtonProps} code={value} />

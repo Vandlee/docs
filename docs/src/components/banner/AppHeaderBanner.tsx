@@ -1,13 +1,13 @@
 import * as React from 'react';
-import Typography from '@yushii/u-ui/Typography';
-import { Link } from '@yushii/docs/Link';
+import Typography from '@u-shii/u-ui/Typography';
+import { Link } from '@u-shii/docs/Link';
 import ROUTES from 'docs/src/route';
 import FEATURE_TOGGLE from 'docs/src/featureToggle';
 
 function getSurveyMessage() {
   return (
     <React.Fragment>
-      {`🚀 Influence Yushii's 2024 roadmap! Participate in the latest`}
+      {`🚀 Influence 's 2024 roadmap! Participate in the latest`}
       &nbsp;
       <Link
         href="https://tally.so/r/3Ex4PN?source=website"

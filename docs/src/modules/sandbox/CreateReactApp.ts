@@ -8,7 +8,7 @@ export const getHtml = ({
 }: {
   title: string;
   language: string;
-  codeStyling?: 'Tailwind' | 'Yushii System';
+  codeStyling?: 'Tailwind' | 'Ushii System';
   raw?: string;
 }) => {
   return `<!DOCTYPE html>
@@ -105,7 +105,7 @@ ReactDOM.createRoot(document.querySelector("#root")${type}).render(
   }
   return `import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
-import { StyledEngineProvider } from '@yushii/u-ui/styles';
+import { StyledEngineProvider } from '@u-shii/u-ui/styles';
 import Demo from './Demo';
 
 ReactDOM.createRoot(document.querySelector("#root")${type}).render(

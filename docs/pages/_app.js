@@ -3,9 +3,9 @@ import { loadCSS } from 'fg-loadcss/src/loadCSS';
 import NextHead from 'next/head';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
-import uiPkgJson from 'packages/yushii-ui/package.json';
-import systemPkgJson from 'packages/yushii-system/package.json';
-import basePkgJson from 'packages/yushii-base/package.json';
+import uiPkgJson from 'packages/u-shii-ui/package.json';
+import systemPkgJson from 'packages/u-shii-system/package.json';
+import basePkgJson from 'packages/u-shii-base/package.json';
 import generalDocsPages from 'docs/data/docs/pages';
 
 import uUiPages from 'docs/data/u-ui/pages';
@@ -15,7 +15,7 @@ import pythonPages from 'docs/data/python/pages';
 
 import PageContext from 'docs/src/modules/components/PageContext';
 
-import { CodeCopyProvider } from '@yushii/docs/CodeCopy';
+import { CodeCopyProvider } from '@u-shii/docs/CodeCopy';
 import { ThemeProvider } from 'docs/src/modules/components/ThemeContext';
 import { CodeVariantProvider } from 'docs/src/modules/utils/codeVariant';
 import { CodeStylingProvider } from 'docs/src/modules/utils/codeStylingSolution';
@@ -24,9 +24,9 @@ import createEmotionCache from 'docs/src/createEmotionCache';
 import findActivePage from 'docs/src/modules/utils/findActivePage';
 import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
 import getProductInfoFromUrl from 'docs/src/modules/utils/getProductInfoFromUrl';
-import { DocsProvider } from '@yushii/docs/DocsProvider';
-import { mapTranslations } from '@yushii/docs/i18n';
-import SvgYushiiLogomark, { yushiiSvgWordmarkString } from 'docs/src/icons/SvgYushiiLogomark';
+import { DocsProvider } from '@u-shii/docs/DocsProvider';
+import { mapTranslations } from '@u-shii/docs/i18n';
+import SvgUshiiLogomark, { UshiiSvgWordmarkString } from 'docs/src/icons/SvgUshiiLogomark';
 import './global.css';
 import '../public/static/components-gallery/base-theme.css';
 import * as config from '../config';
@@ -95,7 +95,7 @@ async function registerServiceWorker() {
   if (
     'serviceWorker' in navigator &&
     process.env.NODE_ENV === 'production' &&
-    window.location.host.includes('yushii.yugacore.com')
+    window.location.host.includes('docs.u-shii.com')
   ) {
     const registration = await navigator.serviceWorker.register('/sw.js');
 
@@ -245,8 +245,8 @@ function AppWrapper(props) {
         {fonts.map((font) => (
           <link rel="stylesheet" href={font} key={font} />
         ))}
-        <meta name="yushii:productId" content={productId} />
-        <meta name="yushii:productCategoryId" content={productCategoryId} />
+        <meta name="ushii:productId" content={productId} />
+        <meta name="ushii:productCategoryId" content={productCategoryId} />
       </NextHead>
       <DocsProvider
         config={config}

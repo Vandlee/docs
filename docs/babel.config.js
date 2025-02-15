@@ -26,7 +26,7 @@ module.exports = {
     [
       'babel-plugin-macros',
       {
-        yushiiError: {
+        ushiiError: {
           errorCodesPath,
         },
       },
@@ -38,7 +38,7 @@ module.exports = {
     production: {
       plugins: [
         '@babel/plugin-transform-react-constant-elements',
-        ['babel-plugin-react-remove-properties', { properties: ['data-yushii-test'] }],
+        ['babel-plugin-react-remove-properties', { properties: ['data-u-shii-test'] }],
         ['babel-plugin-transform-react-remove-prop-types', { mode: 'remove' }],
       ],
     },

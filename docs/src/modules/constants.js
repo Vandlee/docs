@@ -5,7 +5,7 @@ const CODE_VARIANTS = {
 };
 
 const CODE_STYLING = {
-  SYSTEM: 'Yushii System',
+  SYSTEM: 'u-shii System',
   TAILWIND: 'Tailwind',
   CSS: 'CSS',
 };

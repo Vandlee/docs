@@ -4,7 +4,7 @@ title: Componente Botón de alternancia de React
 components: ToggleButton, ToggleButtonGroup
 githubLabel: 'component: toggle button'
 materialDesign: https://m2.material.io/components/buttons#toggle-button
-githubSource: packages/yushii-ui/src/ToggleButton
+githubSource: packages/u-shii-ui/src/ToggleButton
 ---
 
 # Botón de alternancia
@@ -15,7 +15,7 @@ Para resaltar grupos de botones de alternancia relacionados,
 un grupo debe compartir un contenedor común.
 El `ToggleButtonGroup` controla el estado seleccionado de sus botones hijos cuando se le da su propio prop `value`.
 
-{{"component": "@yushii/docs/ComponentLinkHeader"}}
+{{"component": "@u-shii/docs/ComponentLinkHeader"}}
 
 ## Selección exclusiva
 

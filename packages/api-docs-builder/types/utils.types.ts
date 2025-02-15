@@ -22,9 +22,9 @@ export type ComponentInfo = {
    */
   name: string;
   /**
-   * Component name with `Yushii` prefix, in the global HTML page namespace.
+   * Component name with `Ushii` prefix, in the global HTML page namespace.
    */
-  yushiiName: string;
+  ushiiName: string;
   /**
    * The name of the slots interface. By default we consider `${componentName}Slots`.
    */
@@ -55,7 +55,7 @@ export type ComponentInfo = {
   layoutConfigPath?: string;
   skipApiGeneration?: boolean;
   /**
-   * If `true`, the component's name match one of the Yushii System components.
+   * If `true`, the component's name match one of the Ushii System components.
    */
   isSystemComponent?: boolean;
   /**
@@ -70,7 +70,7 @@ export type HookInfo = {
    */
   filename: string;
   /**
-   * Hook name as imported in the docs, in the global Yushii namespace.
+   * Hook name as imported in the docs, in the global Ushii namespace.
    */
   name: string;
   apiPathname: string;

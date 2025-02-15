@@ -4,8 +4,8 @@ import FormatItalicIcon from '@mui/icons-material/FormatItalic';
 import FormatUnderlinedIcon from '@mui/icons-material/FormatUnderlined';
 import FormatColorFillIcon from '@mui/icons-material/FormatColorFill';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import ToggleButton from '@yushii/u-ui/ToggleButton';
-import ToggleButtonGroup from '@yushii/u-ui/ToggleButtonGroup';
+import ToggleButton from '@u-shii/u-ui/ToggleButton';
+import ToggleButtonGroup from '@u-shii/u-ui/ToggleButtonGroup';
 
 export default function ToggleButtonsMultiple() {
   const [formats, setFormats] = React.useState(() => ['negrita', 'cursiva']);

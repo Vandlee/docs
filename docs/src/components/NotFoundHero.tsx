@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Box from '@yushii/u-ui/Box';
-import Typography from '@yushii/u-ui/Typography';
+import Box from '@u-shii/u-ui/Box';
+import Typography from '@u-shii/u-ui/Typography';
 import Section from 'docs/src/layouts/Section';
 import SectionHeadline from 'docs/src/components/typography/SectionHeadline';
 
@@ -15,7 +15,7 @@ export default function NotFoundHero() {
       sx={{
         display: 'flex',
         alignItems: 'center',
-        '& .YushiiContainer-root': {
+        '& .UshiiContainer-root': {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',

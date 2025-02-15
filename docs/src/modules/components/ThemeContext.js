@@ -1,18 +1,18 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import {
-  ThemeProvider as YushiiThemeProvider,
-  createTheme as createYushiiTheme,
-} from '@yushii/u-ui/styles';
-import { deepmerge } from '@yushii/utils';
-// import { enUS, zhCN, ptBR } from '@yushii/material/locale';
-import { unstable_useEnhancedEffect as useEnhancedEffect } from '@yushii/u-ui/utils';
+  ThemeProvider as UshiiThemeProvider,
+  createTheme as createUshiiTheme,
+} from '@u-shii/u-ui/styles';
+import { deepmerge } from '@u-shii/utils';
+// import { enUS, zhCN, ptBR } from '@u-shii/material/locale';
+import { unstable_useEnhancedEffect as useEnhancedEffect } from '@u-shii/u-ui/utils';
 import { getCookie } from 'docs/src/modules/utils/helpers';
 import useLazyCSS from 'docs/src/modules/utils/useLazyCSS';
-import { useUserLanguage } from '@yushii/docs/i18n';
-import { getDesignTokens, getThemedComponents, getMetaThemeColor } from '@yushii/docs/branding';
-import useMediaQuery from '@yushii/u-ui/useMediaQuery';
-import useLocalStorageState from '@yushii/utils/useLocalStorageState';
+import { useUserLanguage } from '@u-shii/docs/i18n';
+import { getDesignTokens, getThemedComponents, getMetaThemeColor } from '@u-shii/docs/branding';
+import useMediaQuery from '@u-shii/u-ui/useMediaQuery';
+import useLocalStorageState from '@u-shii/utils/useLocalStorageState';
 
 const themeInitialOptions = {
   dense: false,
@@ -24,67 +24,67 @@ const themeInitialOptions = {
 
 export const highDensity = {
   components: {
-    YushiiButton: {
+    UshiiButton: {
       defaultProps: {
         size: 'small',
       },
     },
-    YushiiFilledInput: {
+    UshiiFilledInput: {
       defaultProps: {
         margin: 'dense',
       },
     },
-    YushiiFormControl: {
+    UshiiFormControl: {
       defaultProps: {
         margin: 'dense',
       },
     },
-    YushiiFormHelperText: {
+    UshiiFormHelperText: {
       defaultProps: {
         margin: 'dense',
       },
     },
-    YushiiIconButton: {
+    UshiiIconButton: {
       defaultProps: {
         size: 'small',
       },
     },
-    YushiiInputBase: {
+    UshiiInputBase: {
       defaultProps: {
         margin: 'dense',
       },
     },
-    YushiiInputLabel: {
+    UshiiInputLabel: {
       defaultProps: {
         margin: 'dense',
       },
     },
-    YushiiListItem: {
+    UshiiListItem: {
       defaultProps: {
         dense: true,
       },
     },
-    YushiiOutlinedInput: {
+    UshiiOutlinedInput: {
       defaultProps: {
         margin: 'dense',
       },
     },
-    YushiiFab: {
+    UshiiFab: {
       defaultProps: {
         size: 'small',
       },
     },
-    YushiiTable: {
+    UshiiTable: {
       defaultProps: {
         size: 'small',
       },
     },
-    YushiiTextField: {
+    UshiiTextField: {
       defaultProps: {
         margin: 'dense',
       },
     },
-    YushiiToolbar: {
+    UshiiToolbar: {
       defaultProps: {
         variant: 'dense',
       },
@@ -207,7 +207,7 @@ export function ThemeProvider(props) {
   const theme = React.useMemo(() => {
     const brandingDesignTokens = getDesignTokens(paletteMode);
     const nextPalette = deepmerge(brandingDesignTokens.palette, paletteColors);
-    let nextTheme = createYushiiTheme(
+    let nextTheme = createUshiiTheme(
       {
         direction,
         ...brandingDesignTokens,
@@ -217,7 +217,7 @@ export function ThemeProvider(props) {
         },
         // v5 migration
         props: {
-          YushiiBadge: {
+          UshiiBadge: {
             overlap: 'rectangular',
           },
         },
@@ -226,7 +226,7 @@ export function ThemeProvider(props) {
       dense ? highDensity : null,
       {
         components: {
-          YushiiCssBaseline: {
+          UshiiCssBaseline: {
             defaultProps: {
               enableColorScheme: true,
             },
@@ -244,13 +244,13 @@ export function ThemeProvider(props) {
   React.useEffect(() => {
     // Expose the theme as a global variable so people can play with it.
     window.theme = theme;
-    window.createTheme = createYushiiTheme;
+    window.createTheme = createUshiiTheme;
   }, [theme]);
 
   return (
-    <YushiiThemeProvider theme={theme}>
+    <UshiiThemeProvider theme={theme}>
       <DispatchContext.Provider value={dispatch}>{children}</DispatchContext.Provider>
-    </YushiiThemeProvider>
+    </UshiiThemeProvider>
   );
 }
 
@@ -268,7 +268,7 @@ export function useChangeTheme() {
 
 // TODO: remove once all pages support css vars and replace call sites with useColorScheme()
 export function useColorSchemeShim() {
-  const [mode, setMode] = useLocalStorageState('yushii-mode', 'system');
+  const [mode, setMode] = useLocalStorageState('ushii-mode', 'system');
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)', { noSsr: true });
   const systemMode = prefersDarkMode ? 'dark' : 'light';
 

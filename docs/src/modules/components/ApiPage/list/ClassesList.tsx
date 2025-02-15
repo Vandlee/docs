@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import * as React from 'react';
-import { styled } from '@yushii/u-ui/styles';
-import { useTranslate } from '@yushii/docs/i18n';
+import { styled } from '@u-shii/u-ui/styles';
+import { useTranslate } from '@u-shii/docs/i18n';
 import ExpandableApiItem, {
   ApiItemContainer,
 } from 'docs/src/modules/components/ApiPage/list/ExpandableApiItem';
@@ -9,7 +9,7 @@ import { ClassDefinition } from 'docs/src/modules/components/ApiPage/definitions
 import {
   brandingLightTheme as lightTheme,
   brandingDarkTheme as darkTheme,
-} from '@yushii/docs/branding';
+} from '@u-shii/docs/branding';
 import ApiWarningAlert from 'docs/src/modules/components/ApiPage/ApiWarningAlert';
 
 const StyledApiItem = styled(ExpandableApiItem)(
@@ -29,19 +29,19 @@ const StyledApiItem = styled(ExpandableApiItem)(
       margin: 0,
     },
     '&.classes-list-deprecated-item': {
-      '& .YushiiApi-item-note': {
-        color: `var(--yushiidocs-palette-warning-700, ${lightTheme.palette.warning[700]})`,
+      '& .UshiiApi-item-note': {
+        color: `var(--ushiidocs-palette-warning-700, ${lightTheme.palette.warning[700]})`,
       },
     },
   }),
   ({ theme }) => ({
-    [`:where(${theme.vars ? '[data-yushii-color-scheme="dark"]' : '.mode-dark'}) &`]: {
+    [`:where(${theme.vars ? '[data-u-shii-color-scheme="dark"]' : '.mode-dark'}) &`]: {
       '& .prop-list-title': {
-        color: `var(--yushiidocs-palette-grey-50, ${darkTheme.palette.grey[50]})`,
+        color: `var(--ushiidocs-palette-grey-50, ${darkTheme.palette.grey[50]})`,
       },
       '&.classes-list-deprecated-item': {
-        '& .YushiiApi-item-note': {
-          color: `var(--yushiidocs-palette-warning-400, ${darkTheme.palette.warning[400]})`,
+        '& .UshiiApi-item-note': {
+          color: `var(--ushiidocs-palette-warning-400, ${darkTheme.palette.warning[400]})`,
         },
       },
     },

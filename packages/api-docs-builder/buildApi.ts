@@ -1,7 +1,7 @@
 import { mkdirSync } from 'fs';
 import path from 'path';
 import * as fse from 'fs-extra';
-import { renderMarkdown as _renderMarkdown } from '@yushii/internal-markdown';
+import { renderMarkdown as _renderMarkdown } from '@u-shii/internal-markdown';
 import findComponents from './utils/findComponents';
 import findHooks from './utils/findHooks';
 import { writePrettifiedFile } from './buildApiUtils';

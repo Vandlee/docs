@@ -1,8 +1,8 @@
 {
-    "name": "@yushii/internal-scripts",
+    "name": "@u-shii/internal-scripts",
     "version": "1.0.33",
-    "author": "Yushii",
-    "description": "Utilities supporting Yushii libraries build and docs generation. This is an internal package not meant for general use.",
+    "author": "yugashiki",
+    "description": "Utilities supporting u-shii libraries build and docs generation. This is an internal package not meant for general use.",
     "main": "build/index.js",
     "exports": {
       "./typescript-to-proptypes": {
@@ -25,7 +25,7 @@
       "@babel/plugin-syntax-jsx": "^7.25.9",
       "@babel/plugin-syntax-typescript": "^7.25.9",
       "@babel/types": "^7.26.5",
-      "@yushii/internal-docs-utils": "workspace:^",
+      "@u-shii/internal-docs-utils": "workspace:^",
       "doctrine": "^3.0.0",
       "lodash": "^4.17.21",
       "typescript": "^5.7.3",

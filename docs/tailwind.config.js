@@ -6,7 +6,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ['class', '[data-yushii-color-scheme="dark"]'],
+  darkMode: ['class', '[data-u-shii-color-scheme="dark"]'],
   content: [
     './data/**/*.{js,ts,jsx,tsx,mdx}',
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -73,9 +73,9 @@ module.exports = {
         'required',
         'selected',
       ].forEach((state) => {
-        addVariant(`ui-${state}`, [`&[class~="Yushii-${state}"]`, `&[class~="base--${state}"]`]);
+        addVariant(`ui-${state}`, [`&[class~="u-shii-${state}"]`, `&[class~="base--${state}"]`]);
         addVariant(`ui-not-${state}`, [
-          `&:not([class~="Yushii-${state}"])`,
+          `&:not([class~="u-shii-${state}"])`,
           `&:not([class~="base--${state}"])`,
         ]);
       });
@@ -83,12 +83,12 @@ module.exports = {
       // for focus-visible, use the same selector as headlessui
       // https://github.com/tailwindlabs/headlessui/blob/main/packages/%40headlessui-tailwindcss/src/index.ts#LL35C11-L35C11
       addVariant(`ui-focus-visible`, [
-        `&[class~="Yushii-focusVisible"]`,
+        `&[class~="u-shii-focusVisible"]`,
         `&[class~="base--focusVisible"]`,
         `&:focus-visible`,
       ]);
       addVariant(`ui-not-focus-visible`, [
-        `&:not([class~="Yushii-focusVisible"])`,
+        `&:not([class~="u-shii-focusVisible"])`,
         `&:not([class~="base--focusVisible"])`,
       ]);
     }),

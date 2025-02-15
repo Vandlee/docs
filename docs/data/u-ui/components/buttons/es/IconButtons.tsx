@@ -1,6 +1,6 @@
 import * as React from 'react';
-import IconButton from '@yushii/u-ui/IconButton';
-import Stack from '@yushii/u-ui/Stack';
+import IconButton from '@u-shii/u-ui/IconButton';
+import Stack from '@u-shii/u-ui/Stack';
 import DeleteIcon from '@mui/icons-material/Delete';
 import AlarmIcon from '@mui/icons-material/Alarm';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';

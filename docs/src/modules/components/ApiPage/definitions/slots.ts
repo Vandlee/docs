@@ -1,4 +1,4 @@
-import { PropsTranslations, ComponentApiContent } from '@yushii-internal/api-docs-builder';
+import { PropsTranslations, ComponentApiContent } from '@u-shii-internal/api-docs-builder';
 
 export type SlotDefinition = {
   className: string | null;

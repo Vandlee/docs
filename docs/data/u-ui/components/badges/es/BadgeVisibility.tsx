@@ -1,8 +1,8 @@
 import * as React from 'react';
-import Box from '@yushii/u-ui/Box';
-import Badge from '@yushii/u-ui/Badge';
-import ButtonGroup from '@yushii/u-ui/ButtonGroup';
-import Button from '@yushii/u-ui/Button';
+import Box from '@u-shii/u-ui/Box';
+import Badge from '@u-shii/u-ui/Badge';
+import ButtonGroup from '@u-shii/u-ui/ButtonGroup';
+import Button from '@u-shii/u-ui/Button';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import MailIcon from '@mui/icons-material/Mail';
@@ -19,7 +19,7 @@ export default function BadgeVisibility() {
         '& > *': {
           marginBottom: 2,
         },
-        '& .YushiiBadge-root': {
+        '& .UshiiBadge-root': {
           marginRight: 4,
         },
       }}

@@ -1,5 +1,5 @@
 import * as React from 'react';
-/* import Alert from '@yushii/u-ui/Alert'; */
+/* import Alert from '@u-shii/u-ui/Alert'; */
 /* import WarningRoundedIcon from '@mui/icons-material/WarningRounded';
  */
 interface ApiWarningAlertProps {

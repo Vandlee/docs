@@ -1,11 +1,11 @@
 /* eslint-disable react/no-danger */
 import * as React from 'react';
-import { styled, alpha } from '@yushii/u-ui/styles';
-import { useTranslate } from '@yushii/docs/i18n';
+import { styled, alpha } from '@u-shii/u-ui/styles';
+import { useTranslate } from '@u-shii/docs/i18n';
 import {
   brandingDarkTheme as darkTheme,
   brandingLightTheme as lightTheme,
-} from '@yushii/docs/branding';
+} from '@u-shii/docs/branding';
 import { PropertyDefinition } from 'docs/src/modules/components/ApiPage/definitions/properties';
 import StyledTableContainer from 'docs/src/modules/components/ApiPage/table/StyledTableContainer';
 import ApiWarningAlert from 'docs/src/modules/components/ApiPage/ApiWarningAlert';
@@ -23,36 +23,36 @@ const StyledTable = styled('table')(
     '& .default-column': {
       minWidth: '20%',
     },
-    '& .YushiiApi-table-item-title': {
+    '& .UshiiApi-table-item-title': {
       minWidth: '20%',
       fontFamily: theme.typography.fontFamilyCode,
       fontWeight: theme.typography.fontWeightSemiBold,
       fontSize: theme.typography.pxToRem(13),
-      color: `var(--yushiidocs-palette-primary-600, ${lightTheme.palette.primary[600]})`,
+      color: `var(--ushiidocs-palette-primary-600, ${lightTheme.palette.primary[600]})`,
     },
-    '& .YushiiApi-table-item-type': {
+    '& .UshiiApi-table-item-type': {
       ...theme.typography.caption,
       fontFamily: theme.typography.fontFamilyCode,
       fontWeight: theme.typography.fontWeightRegular,
-      color: `var(--yushiidocs-palette-text-primary, ${lightTheme.palette.text.primary})`,
+      color: `var(--ushiidocs-palette-text-primary, ${lightTheme.palette.text.primary})`,
       padding: '1px 4px',
       borderRadius: 6,
       border: '1px solid',
       borderColor: alpha(darkTheme.palette.primary[100], 0.8),
-      backgroundColor: `var(--yushiidocs-palette-primary-50, ${lightTheme.palette.primary[50]})`,
+      backgroundColor: `var(--ushiidocs-palette-primary-50, ${lightTheme.palette.primary[50]})`,
     },
-    '& .YushiiApi-table-item-default': {
+    '& .UshiiApi-table-item-default': {
       ...theme.typography.caption,
       fontFamily: theme.typography.fontFamilyCode,
       fontWeight: theme.typography.fontWeightRegular,
-      color: `var(--yushiidocs-palette-text-primary, ${lightTheme.palette.text.primary})`,
+      color: `var(--ushiidocs-palette-text-primary, ${lightTheme.palette.text.primary})`,
       padding: '1px 4px',
       borderRadius: 6,
       border: '1px solid',
-      borderColor: `var(--yushiidocs-palette-grey-200, ${lightTheme.palette.grey[200]})`,
-      backgroundColor: `var(--yushiidocs-palette-grey-50, ${lightTheme.palette.grey[50]})`,
+      borderColor: `var(--ushiidocs-palette-grey-200, ${lightTheme.palette.grey[200]})`,
+      backgroundColor: `var(--ushiidocs-palette-grey-50, ${lightTheme.palette.grey[50]})`,
     },
-    '& .YushiiPropTable-description-column': {
+    '& .UshiiPropTable-description-column': {
       width: '40%',
       paddingRight: 8,
       '& .prop-table-description': {
@@ -63,7 +63,7 @@ const StyledTable = styled('table')(
         marginBottom: 0,
       },
       '& .prop-table-alert': {
-        '& .YushiiAlert-icon': {
+        '& .UshiiAlert-icon': {
           margin: 0,
         },
       },
@@ -80,23 +80,23 @@ const StyledTable = styled('table')(
     },
   }),
   ({ theme }) => ({
-    [`:where(${theme.vars ? '[data-yushii-color-scheme="dark"]' : '.mode-dark'}) &`]: {
-      '& .YushiiApi-table-item-title': {
-        color: `var(--yushiidocs-palette-primary-200, ${darkTheme.palette.primary[200]})`,
+    [`:where(${theme.vars ? '[data-u-shii-color-scheme="dark"]' : '.mode-dark'}) &`]: {
+      '& .UshiiApi-table-item-title': {
+        color: `var(--ushiidocs-palette-primary-200, ${darkTheme.palette.primary[200]})`,
       },
-      '& .YushiiApi-table-item-type': {
-        color: `var(--yushiidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
-        borderColor: `var(--yushiidocs-palette-divider, ${darkTheme.palette.divider})`,
+      '& .UshiiApi-table-item-type': {
+        color: `var(--ushiidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
+        borderColor: `var(--ushiidocs-palette-divider, ${darkTheme.palette.divider})`,
         backgroundColor: alpha(darkTheme.palette.primary[900], 0.3),
       },
-      '& .YushiiApi-table-item-default': {
-        color: `var(--yushiidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
-        backgroundColor: `var(--yushiidocs-palette-grey-900, ${darkTheme.palette.grey[900]})`,
-        borderColor: `var(--yushiidocs-palette-divider, ${darkTheme.palette.divider})`,
+      '& .UshiiApi-table-item-default': {
+        color: `var(--ushiidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
+        backgroundColor: `var(--ushiidocs-palette-grey-900, ${darkTheme.palette.grey[900]})`,
+        borderColor: `var(--ushiidocs-palette-divider, ${darkTheme.palette.divider})`,
       },
       '& .prop-table-signature': {
         '& .prop-table-title': {
-          color: `var(--yushiidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
+          color: `var(--ushiidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
         },
       },
     },
@@ -165,7 +165,7 @@ export default function PropertiesTable(props: PropertiesTableProps) {
 
             return (
               <tr key={propName} id={hash}>
-                <td className="YushiiApi-table-item-title algolia-lvl3">
+                <td className="UshiiApi-table-item-title algolia-lvl3">
                   {propName}
                   {isRequired ? '*' : ''}
                   {isOptional ? '?' : ''}
@@ -185,7 +185,7 @@ export default function PropertiesTable(props: PropertiesTableProps) {
                 <td className="type-column">
                   {
                     <span
-                      className="YushiiApi-table-item-type"
+                      className="UshiiApi-table-item-type"
                       dangerouslySetInnerHTML={{
                         __html: typeName,
                       }}
@@ -195,13 +195,13 @@ export default function PropertiesTable(props: PropertiesTableProps) {
                 {hasDefaultColumn && (
                   <td className="default-column">
                     {propDefault ? (
-                      <span className="YushiiApi-table-item-default">{propDefault}</span>
+                      <span className="UshiiApi-table-item-default">{propDefault}</span>
                     ) : (
                       '-'
                     )}
                   </td>
                 )}
-                <td className="YushiiPropTable-description-column algolia-content">
+                <td className="UshiiPropTable-description-column algolia-content">
                   {description && <PropDescription description={description} />}
                   {seeMoreDescription && (
                     <p

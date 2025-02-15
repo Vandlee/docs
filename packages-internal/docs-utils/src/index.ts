@@ -21,17 +21,17 @@ export function fixLineEndings(source: string, target: string): string {
 
 /**
  * Converts styled or regular component d.ts file to unstyled d.ts
- * @param filename - the file of the styled or regular yushii component
+ * @param filename - the file of the styled or regular u-shii component
  */
 export function getUnstyledFilename(filename: string, definitionFile: boolean = false): string {
-  if (filename.includes('yushii-base')) {
+  if (filename.includes('u-shii-base')) {
     return filename;
   }
   let unstyledFile = '';
 
   const separator = filename.includes('/') ? '/' : '\\';
 
-  if (!filename.includes('yushii-base')) {
+  if (!filename.includes('u-shii-base')) {
     unstyledFile = filename
       .replace(/.d.ts$/, '')
       .replace(/.tsx?$/, '')
@@ -40,13 +40,13 @@ export function getUnstyledFilename(filename: string, definitionFile: boolean = 
 
     if (separator === '/') {
       unstyledFile = unstyledFile.replace(
-        /packages\/yushii-lab|packages\/yushii-ui/g,
-        'packages/yushii-base',
+        /packages\/u-shii-lab|packages\/u-shii-ui/g,
+        'packages/u-shii-base',
       );
     } else {
       unstyledFile = unstyledFile.replace(
-        /packages\\yushii-lab|packages\\yushii-ui/g,
-        'packages\\yushii-base',
+        /packages\\u-shii-lab|packages\\u-shii-ui/g,
+        'packages\\u-shii-base',
       );
     }
   }

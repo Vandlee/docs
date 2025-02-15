@@ -1,5 +1,5 @@
-import { styled, alpha } from '@yushii/u-ui/styles';
-import { brandingDarkTheme as darkTheme } from '@yushii/docs/branding';
+import { styled, alpha } from '@u-shii/u-ui/styles';
+import { brandingDarkTheme as darkTheme } from '@u-shii/docs/branding';
 
 const StyledTableContainer = styled('div')(
   ({ theme }) => ({
@@ -23,17 +23,17 @@ const StyledTableContainer = styled('div')(
       fontSize: theme.typography.pxToRem(14),
     },
     '& tr': {
-      scrollMarginTop: 'calc(var(--YushiiDocs-header-height) + 32px)',
+      scrollMarginTop: 'calc(var(--UshiiDocs-header-height) + 32px)',
       '&:hover': {
         backgroundColor: alpha(darkTheme.palette.grey[50], 0.5),
       },
-      '& .YushiiPropTable-description-column': {
+      '& .UshiiPropTable-description-column': {
         minWidth: 300,
       },
     },
   }),
   ({ theme }) => ({
-    [`:where(${theme.vars ? '[data-yushii-color-scheme="dark"]' : '.mode-dark'}) &`]: {
+    [`:where(${theme.vars ? '[data-u-shii-color-scheme="dark"]' : '.mode-dark'}) &`]: {
       '& table': {
         background: [
           `linear-gradient(to right, ${theme.palette.primaryDark[900]} 5%, transparent 80%) local`,
