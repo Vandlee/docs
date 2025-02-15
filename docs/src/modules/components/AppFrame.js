@@ -1,17 +1,17 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
-import GlobalStyles from '@u-shii/u-ui/GlobalStyles';
-import { styled, alpha } from '@u-shii/u-ui/styles';
+import GlobalStyles from '@u_ui/u-ui/GlobalStyles';
+import { styled, alpha } from '@u_ui/u-ui/styles';
 import NProgress from 'nprogress';
-import CssBaseline from '@u-shii/u-ui/CssBaseline';
-import AppBar from '@u-shii/u-ui/AppBar';
-import Stack from '@u-shii/u-ui/Stack';
-import IconButton from '@u-shii/u-ui/IconButton';
-import Tooltip from '@u-shii/u-ui/Tooltip';
-import Box from '@u-shii/u-ui/Box';
+import CssBaseline from '@u_ui/u-ui/CssBaseline';
+import AppBar from '@u_ui/u-ui/AppBar';
+import Stack from '@u_ui/u-ui/Stack';
+import IconButton from '@u_ui/u-ui/IconButton';
+import Tooltip from '@u_ui/u-ui/Tooltip';
+import Box from '@u_ui/u-ui/Box';
 import NProgressBar from '@u-shii/docs/NProgressBar';
-import { debounce } from '@u-shii/u-ui/utils';
+import { debounce } from '@u_ui/u-ui/utils';
 import AppNavDrawer from 'docs/src/modules/components/AppNavDrawer';
 import AppSettingsDrawer from 'docs/src/modules/components/AppSettingsDrawer';
 import MarkdownLinks from 'docs/src/modules/components/MarkdownLinks';
@@ -21,7 +21,7 @@ import { useTranslate } from '@u-shii/docs/i18n';
 import LogoWithCopyMenu from 'docs/src/components/action/LogoWithCopyMenu';
 import AppFrameBanner from 'docs/src/components/banner/AppFrameBanner';
 import { GitHub, MenuRounded, SettingsRounded } from '@mui/icons-material';
-import { Divider } from '@u-shii/u-ui';
+import { Divider } from '@u_ui/u-ui';
 
 const nProgressStart = debounce(() => {
   NProgress.start();

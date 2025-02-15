@@ -33,7 +33,7 @@
     "prop-types": "^15.8.1"
   },
   "devDependencies": {
-    "@u-shii/u-ui": "workspace:*",
+    "@u_ui/u-ui": "workspace:*",
     "@types/gtag.js": "^0.0.20",
     "@types/node": "^20.17.10",
     "@types/prop-types": "^15.7.14",
@@ -44,7 +44,7 @@
   "peerDependencies": {
     "@u-shii/base": "workspace:*",
     "@mui/icons-material": "^5.0.0 || ^6.0.0",
-    "@u-shii/u-ui": "workspace:^",
+    "@u_ui/u-ui": "workspace:^",
     "@u-shii/system": "workspace:^",
     "@types/react": "^17.0.0 || ^18.0.0 || ^19.0.0",
     "chai": "^4.4.1",

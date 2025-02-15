@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 import {
   ThemeProvider as UshiiThemeProvider,
   createTheme as createUshiiTheme,
-} from '@u-shii/u-ui/styles';
+} from '@u_ui/u-ui/styles';
 import { deepmerge } from '@u-shii/utils';
 // import { enUS, zhCN, ptBR } from '@u-shii/material/locale';
-import { unstable_useEnhancedEffect as useEnhancedEffect } from '@u-shii/u-ui/utils';
+import { unstable_useEnhancedEffect as useEnhancedEffect } from '@u_ui/u-ui/utils';
 import { getCookie } from 'docs/src/modules/utils/helpers';
 import useLazyCSS from 'docs/src/modules/utils/useLazyCSS';
 import { useUserLanguage } from '@u-shii/docs/i18n';
 import { getDesignTokens, getThemedComponents, getMetaThemeColor } from '@u-shii/docs/branding';
-import useMediaQuery from '@u-shii/u-ui/useMediaQuery';
+import useMediaQuery from '@u_ui/u-ui/useMediaQuery';
 import useLocalStorageState from '@u-shii/utils/useLocalStorageState';
 
 const themeInitialOptions = {

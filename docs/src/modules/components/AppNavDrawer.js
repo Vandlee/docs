@@ -1,20 +1,20 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import Button from '@u-shii/u-ui/Button';
-import Divider from '@u-shii/u-ui/Divider';
-import { styled, alpha, ThemeProvider } from '@u-shii/u-ui/styles';
-import List from '@u-shii/u-ui/List';
-import Drawer from '@u-shii/u-ui/Drawer';
-import Typography from '@u-shii/u-ui/Typography';
-import SwipeableDrawer from '@u-shii/u-ui/SwipeableDrawer';
-import ClickAwayListener from '@u-shii/u-ui/ClickAwayListener';
-import Fade from '@u-shii/u-ui/Fade';
-import Paper from '@u-shii/u-ui/Paper';
-import Popper from '@u-shii/u-ui/Popper';
-import Menu from '@u-shii/u-ui/Menu';
-import MenuItem from '@u-shii/u-ui/MenuItem';
-import useMediaQuery from '@u-shii/u-ui/useMediaQuery';
-import Box from '@u-shii/u-ui/Box';
+import Button from '@u_ui/u-ui/Button';
+import Divider from '@u_ui/u-ui/Divider';
+import { styled, alpha, ThemeProvider } from '@u_ui/u-ui/styles';
+import List from '@u_ui/u-ui/List';
+import Drawer from '@u_ui/u-ui/Drawer';
+import Typography from '@u_ui/u-ui/Typography';
+import SwipeableDrawer from '@u_ui/u-ui/SwipeableDrawer';
+import ClickAwayListener from '@u_ui/u-ui/ClickAwayListener';
+import Fade from '@u_ui/u-ui/Fade';
+import Paper from '@u_ui/u-ui/Paper';
+import Popper from '@u_ui/u-ui/Popper';
+import Menu from '@u_ui/u-ui/Menu';
+import MenuItem from '@u_ui/u-ui/MenuItem';
+import useMediaQuery from '@u_ui/u-ui/useMediaQuery';
+import Box from '@u_ui/u-ui/Box';
 import { unstable_useEnhancedEffect as useEnhancedEffect } from '@u-shii/utils';
 import { ArrowDropDownRounded, 
     DoneRounded } from '@mui/icons-material';
@@ -121,7 +121,7 @@ function ProductDrawerButton(props) {
                 <ClickAwayListener onClickAway={handleClose}>
                   <UshiiProductSelector
                     autoFocusItem={open}
-                    type='docs'
+                    type={props.productCategory}
                     id="ushii-product-menu"
                     aria-labelledby="ushii-product-selector"
                     onKeyDown={handleListKeyDown}
@@ -140,7 +140,8 @@ ProductDrawerButton.propTypes = {
 };
 
 function ProductIdentifier(props) {
-    const { name, metadata, versionSelector } = props;
+    const { name, metadata, versionSelector, productCategory } = props;
+
     return (
         <Box sx={{ flexGrow: 1 }}>
             <Typography
@@ -156,7 +157,7 @@ function ProductIdentifier(props) {
                 {metadata}
             </Typography>
             <Box sx={{ display: 'flex' }}>
-                <ProductDrawerButton productName={name} />
+                <ProductDrawerButton productName={name} productCategory={productCategory} />
                 {versionSelector}
             </Box>
         </Box>
@@ -429,6 +430,7 @@ export default function AppNavDrawer(props) {
                         marginLeft
                     />
                     <ProductIdentifier
+                        productCategory={productIdentifier.productCategory}
                         name={productIdentifier.name}
                         metadata={productIdentifier.metadata}
                         versionSelector={renderVersionSelector(productIdentifier.versions)}

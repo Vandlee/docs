@@ -1,6 +1,6 @@
 /* eslint-disable react/no-danger */
 import * as React from 'react';
-import { styled } from '@u-shii/u-ui/styles';
+import { styled } from '@u_ui/u-ui/styles';
 import { useTranslate } from '@u-shii/docs/i18n';
 import ExpandableApiItem, {
   ApiItemContainer,

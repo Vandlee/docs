@@ -1,7 +1,7 @@
 const ROUTES = {
   // Marketing pages
   productCore: '/u-core/',
-  productuUi: '/u-ui/',
+  productu_ui: '/u_ui/',
   productDocs: '/u-docs/',
   about: '/about',
   careers: '/careers/',
@@ -12,10 +12,11 @@ const ROUTES = {
   phpDocs: '/u-docs/php/getting-started',
   docsPython: '/u-docs/python/',
   pythonDocs: '/u-docs/python/getting-started',
-  // Ushii doc pages
-  uUiDocs: '/u-ui/getting-started/',
-  freeTemplates: '/u-ui/getting-started/templates/',
-  documentation: '/u-ui/getting-started/',
+  // U_Ui doc pages
+  'u_ui-u-ui': '/u_ui/u-ui/',
+  'docs-u_ui-u-ui': '/u_ui/u-ui/getting-started',
+  freeTemplates: '/u_ui/getting-started/templates/',
+  documentation: '/u_ui/getting-started/',
 };
 
 export default ROUTES;

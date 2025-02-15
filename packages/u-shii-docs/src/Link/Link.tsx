@@ -2,8 +2,8 @@ import * as React from 'react';
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
 import NextLink, { LinkProps as NextLinkProps } from 'next/link';
-import UshiiLink, { LinkProps as UshiiLinkProps } from '@u-shii/u-ui/Link';
-import { styled } from '@u-shii/u-ui/styles';
+import UshiiLink, { LinkProps as UshiiLinkProps } from '@u_ui/u-ui/Link';
+import { styled } from '@u_ui/u-ui/styles';
 import { useUserLanguage } from '../i18n';
 import { useDocsConfig } from '../DocsProvider';
 

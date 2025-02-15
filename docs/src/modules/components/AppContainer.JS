@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { styled } from '@u-shii/u-ui/styles';
-import Container from '@u-shii/u-ui/Container';
+import { styled } from '@u_ui/u-ui/styles';
+import Container from '@u_ui/u-ui/Container';
 
 const StyledAppContainer = styled(Container)(({ theme }) => {
   return {

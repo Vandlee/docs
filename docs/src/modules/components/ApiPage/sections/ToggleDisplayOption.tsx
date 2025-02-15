@@ -1,8 +1,8 @@
 import * as React from 'react';
-import Box from '@u-shii/u-ui/Box';
-import Button from '@u-shii/u-ui/Button';
-import Menu from '@u-shii/u-ui/Menu';
-import MenuItem from '@u-shii/u-ui/MenuItem';
+import Box from '@u_ui/u-ui/Box';
+import Button from '@u_ui/u-ui/Button';
+import Menu from '@u_ui/u-ui/Menu';
+import MenuItem from '@u_ui/u-ui/MenuItem';
 import CheckIcon from '@mui/icons-material/Check';
 import ArrowDropDownRoundedIcon from '@mui/icons-material/ArrowDropDownRounded';
 import useEnhancedEffect from '@u-shii/utils/useEnhancedEffect';

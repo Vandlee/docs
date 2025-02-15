@@ -3,15 +3,15 @@ import { loadCSS } from 'fg-loadcss/src/loadCSS';
 import NextHead from 'next/head';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
-import uiPkgJson from 'packages/u-shii-ui/package.json';
+import uiPkgJson from 'packages/u_ui-u-ui/package.json';
 import systemPkgJson from 'packages/u-shii-system/package.json';
 import basePkgJson from 'packages/u-shii-base/package.json';
 import generalDocsPages from 'docs/data/docs/pages';
 
-import uUiPages from 'docs/data/u-ui/pages';
-import javascriptPages from 'docs/data/javascript/pages';
-import phpPages from 'docs/data/php/pages';
-import pythonPages from 'docs/data/python/pages';
+import uUiPages from 'docs/data/u_ui/u-ui/pages';
+import javascriptPages from 'docs/data/u-docs/javascript/pages';
+import phpPages from 'docs/data/u-docs/php/pages';
+import pythonPages from 'docs/data/u-docs/python/pages';
 
 import PageContext from 'docs/src/modules/components/PageContext';
 
@@ -150,16 +150,19 @@ function AppWrapper(props) {
   const productIdentifier = React.useMemo(() => {
     const languagePrefix = pageProps.userLanguage === 'es' ? '' : `/${pageProps.userLanguage}`;
 
-    if (productId === 'u-ui') {
-      return {
-        metadata: '',
-        name: 'U-Ui',
-        url: "/u-ui/",
-        logo: SvgU_UiLogomark,
-        logoSvg: U_UiSvgLogoString,
-        wordmarkSvg: U_UiSvgWordmarkString,
-        versions: [{ text: `v${uiPkgJson.version}`, current: true }],
-      };
+    if (productCategoryId === 'u_ui') {
+      if (productId === 'u-ui') {
+        return {
+          metadata: '',
+          name: 'U-Ui',
+          url: "/u-ui/",
+          productCategory: productCategoryId,
+          logo: SvgU_UiLogomark,
+          logoSvg: U_UiSvgLogoString,
+          wordmarkSvg: U_UiSvgWordmarkString,
+          versions: [{ text: `v${uiPkgJson.version}`, current: true }],
+        };
+      }
     }
 
     if (productCategoryId === 'u-docs') {
@@ -168,6 +171,7 @@ function AppWrapper(props) {
           metadata: '',
           name: 'JavaScript',
           url: "/u-docs/javascript/",
+          productCategory: productCategoryId,
           logo: SvgJavaScriptLogomark,
           logoSvg: U_UiSvgLogoString,
           wordmarkSvg: U_UiSvgWordmarkString,
@@ -179,6 +183,7 @@ function AppWrapper(props) {
           metadata: '',
           name: 'PHP',
           url: "/u-docs/php/",
+          productCategory: productCategoryId,
           logo: SvgPHPLogomark,
           logoSvg: U_UiSvgLogoString,
           wordmarkSvg: U_UiSvgWordmarkString,
@@ -190,6 +195,7 @@ function AppWrapper(props) {
           metadata: '',
           name: 'JavaScript',
           url: "/u-docs/python/",
+          productCategory: productCategoryId,
           logo: SvgPythonLogomark,
           logoSvg: U_UiSvgLogoString,
           wordmarkSvg: U_UiSvgWordmarkString,
@@ -203,8 +209,10 @@ function AppWrapper(props) {
 
   const pageContextValue = React.useMemo(() => {
     let pages = generalDocsPages;
-    if (productId === 'u-ui') {
-      pages = uUiPages;
+    if (productCategoryId === 'u_ui') {
+      if (productId === 'u-ui') {
+        pages = uUiPages;
+      }
     }
 
     if (productCategoryId === 'u-docs') {

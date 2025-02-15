@@ -105,12 +105,12 @@ importers:
       '@u-shii/internal-scripts':
         specifier: workspace:^
         version: link:packages-internal/scripts
-      '@u-shii/u-ui':
-        specifier: workspace:^
-        version: link:packages/u-shii-ui/build
       '@u-shii/utils':
         specifier: workspace:^
-        version: link:packages/u-ushii-utils/build
+        version: link:packages/u-shii-utils/build
+      '@u_ui/u-ui':
+        specifier: workspace:^
+        version: link:packages/u_ui-u-ui/build
       '@vitest/browser':
         specifier: ^2.1.8
         version: 2.1.8(@types/node@20.17.16)(playwright@1.50.0)(typescript@5.7.3)(vite@5.4.14(@types/node@20.17.16)(terser@5.37.0))(vitest@2.1.8)
@@ -354,12 +354,12 @@ importers:
       '@u-shii/system':
         specifier: workspace:^
         version: link:../packages/u-shii-system/build
-      '@u-shii/u-ui':
-        specifier: workspace:^
-        version: link:../packages/u-shii-ui/build
       '@u-shii/utils':
         specifier: workspace:^
-        version: link:../packages/u-ushii-utils/build
+        version: link:../packages/u-shii-utils/build
+      '@u_ui/u-ui':
+        specifier: workspace:^
+        version: link:../packages/u_ui-u-ui/build
       autoprefixer:
         specifier: 10.4.20
         version: 10.4.20(postcss@8.4.49)
@@ -867,7 +867,7 @@ importers:
         version: 2.11.8
       '@u-shii/utils':
         specifier: workspace:^
-        version: link:../u-ushii-utils/build
+        version: link:../u-shii-utils/build
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -964,9 +964,9 @@ importers:
       '@types/react':
         specifier: ^19.0.2
         version: 19.0.8
-      '@u-shii/u-ui':
+      '@u_ui/u-ui':
         specifier: workspace:*
-        version: link:../u-shii-ui/build
+        version: link:../u_ui-u-ui/build
       next:
         specifier: ^15.1.2
         version: 15.1.4(@babel/core@7.26.7)(@playwright/test@1.48.2)(babel-plugin-macros@3.1.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -1035,7 +1035,7 @@ importers:
         version: link:../u-shii-styled-engine/build
       '@u-shii/utils':
         specifier: workspace:^
-        version: link:../u-ushii-utils/build
+        version: link:../u-shii-utils/build
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -1087,7 +1087,102 @@ importers:
         version: 6.1.13(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
     publishDirectory: build
 
-  packages/u-shii-ui:
+  packages/u-shii-ui-nextjs:
+    dependencies:
+      '@babel/runtime':
+        specifier: ^7.26.7
+        version: 7.26.7
+    devDependencies:
+      '@emotion/cache':
+        specifier: ^11.13.5
+        version: 11.14.0
+      '@emotion/react':
+        specifier: ^11.13.5
+        version: 11.13.5(@types/react@19.0.8)(react@19.0.0)
+      '@emotion/server':
+        specifier: ^11.11.0
+        version: 11.11.0(@emotion/css@11.13.5)
+      '@types/react':
+        specifier: ^19.0.8
+        version: 19.0.8
+      next:
+        specifier: ^15.1.6
+        version: 15.1.6(@babel/core@7.26.7)(@playwright/test@1.48.2)(babel-plugin-macros@3.1.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
+    publishDirectory: build
+
+  packages/u-shii-ui-pigment-css:
+    dependencies:
+      '@babel/runtime':
+        specifier: ^7.26.7
+        version: 7.26.7
+      '@pigment-css/react':
+        specifier: 0.0.30
+        version: 0.0.30(@types/react@19.0.8)(react@19.0.0)(typescript@5.7.3)
+      '@u-shii/system':
+        specifier: workspace:*
+        version: link:../u-shii-system/build
+    publishDirectory: build
+
+  packages/u-shii-utils:
+    dependencies:
+      '@babel/runtime':
+        specifier: ^7.26.7
+        version: 7.26.7
+      '@mui/types':
+        specifier: ^7.2.20
+        version: 7.2.21(@types/react@19.0.8)
+      '@types/prop-types':
+        specifier: ^15.7.14
+        version: 15.7.14
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      prop-types:
+        specifier: ^15.8.1
+        version: 15.8.1
+      react-is:
+        specifier: ^19.0.0
+        version: 19.0.0
+    devDependencies:
+      '@types/chai':
+        specifier: ^4.3.20
+        version: 4.3.20
+      '@types/mocha':
+        specifier: ^10.0.10
+        version: 10.0.10
+      '@types/node':
+        specifier: ^20.17.16
+        version: 20.17.16
+      '@types/react':
+        specifier: ^19.0.2
+        version: 19.0.8
+      '@types/react-dom':
+        specifier: ^19.0.2
+        version: 19.0.3(@types/react@19.0.8)
+      '@types/react-is':
+        specifier: ^19.0.0
+        version: 19.0.0
+      '@types/sinon':
+        specifier: ^17.0.3
+        version: 17.0.3
+      chai:
+        specifier: ^4.5.0
+        version: 4.5.0
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.0.0(react@19.0.0)
+      sinon:
+        specifier: ^19.0.2
+        version: 19.0.2
+    publishDirectory: build
+
+  packages/u_ui-u-ui:
     dependencies:
       '@babel/runtime':
         specifier: ^7.26.7
@@ -1110,12 +1205,12 @@ importers:
       '@u-shii/system':
         specifier: workspace:^
         version: link:../u-shii-system/build
-      '@u-shii/u-ui-pigment-css':
-        specifier: workspace:^
-        version: link:../u-shii-ui-pigment-css/build
       '@u-shii/utils':
         specifier: workspace:^
-        version: link:../u-ushii-utils/build
+        version: link:../u-shii-utils/build
+      '@u_ui/u-ui-pigment-css':
+        specifier: workspace:^
+        version: link:../u-shii-ui-pigment-css/build
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -1180,101 +1275,6 @@ importers:
       react-router:
         specifier: ^7.1.3
         version: 7.1.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      sinon:
-        specifier: ^19.0.2
-        version: 19.0.2
-    publishDirectory: build
-
-  packages/u-shii-ui-nextjs:
-    dependencies:
-      '@babel/runtime':
-        specifier: ^7.26.7
-        version: 7.26.7
-    devDependencies:
-      '@emotion/cache':
-        specifier: ^11.13.5
-        version: 11.14.0
-      '@emotion/react':
-        specifier: ^11.13.5
-        version: 11.13.5(@types/react@19.0.8)(react@19.0.0)
-      '@emotion/server':
-        specifier: ^11.11.0
-        version: 11.11.0(@emotion/css@11.13.5)
-      '@types/react':
-        specifier: ^19.0.8
-        version: 19.0.8
-      next:
-        specifier: ^15.1.6
-        version: 15.1.6(@babel/core@7.26.7)(@playwright/test@1.48.2)(babel-plugin-macros@3.1.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      react:
-        specifier: ^19.0.0
-        version: 19.0.0
-    publishDirectory: build
-
-  packages/u-shii-ui-pigment-css:
-    dependencies:
-      '@babel/runtime':
-        specifier: ^7.26.7
-        version: 7.26.7
-      '@pigment-css/react':
-        specifier: 0.0.30
-        version: 0.0.30(@types/react@19.0.8)(react@19.0.0)(typescript@5.7.3)
-      '@u-shii/system':
-        specifier: workspace:*
-        version: link:../u-shii-system/build
-    publishDirectory: build
-
-  packages/u-ushii-utils:
-    dependencies:
-      '@babel/runtime':
-        specifier: ^7.26.7
-        version: 7.26.7
-      '@mui/types':
-        specifier: ^7.2.20
-        version: 7.2.21(@types/react@19.0.8)
-      '@types/prop-types':
-        specifier: ^15.7.14
-        version: 15.7.14
-      clsx:
-        specifier: ^2.1.1
-        version: 2.1.1
-      prop-types:
-        specifier: ^15.8.1
-        version: 15.8.1
-      react-is:
-        specifier: ^19.0.0
-        version: 19.0.0
-    devDependencies:
-      '@types/chai':
-        specifier: ^4.3.20
-        version: 4.3.20
-      '@types/mocha':
-        specifier: ^10.0.10
-        version: 10.0.10
-      '@types/node':
-        specifier: ^20.17.16
-        version: 20.17.16
-      '@types/react':
-        specifier: ^19.0.2
-        version: 19.0.8
-      '@types/react-dom':
-        specifier: ^19.0.2
-        version: 19.0.3(@types/react@19.0.8)
-      '@types/react-is':
-        specifier: ^19.0.0
-        version: 19.0.0
-      '@types/sinon':
-        specifier: ^17.0.3
-        version: 17.0.3
-      chai:
-        specifier: ^4.5.0
-        version: 4.5.0
-      react:
-        specifier: ^19.0.0
-        version: 19.0.0
-      react-dom:
-        specifier: ^19.0.0
-        version: 19.0.0(react@19.0.0)
       sinon:
         specifier: ^19.0.2
         version: 19.0.2
@@ -16960,13 +16960,13 @@ snapshots:
   jake@10.9.2:
     dependencies:
       async: 3.2.6
-      chalk: 4.1.0
+      chalk: 4.1.2
       filelist: 1.0.4
       minimatch: 3.1.2
 
   jest-diff@29.7.0:
     dependencies:
-      chalk: 4.1.0
+      chalk: 4.1.2
       diff-sequences: 29.6.3
       jest-get-type: 29.6.3
       pretty-format: 29.7.0

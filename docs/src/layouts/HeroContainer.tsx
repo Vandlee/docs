@@ -1,9 +1,9 @@
 import * as React from 'react';
-import Box, { BoxProps } from '@u-shii/u-ui/Box';
-import Container from '@u-shii/u-ui/Container';
-import Grid from '@u-shii/u-ui/Grid';
+import Box, { BoxProps } from '@u_ui/u-ui/Box';
+import Container from '@u_ui/u-ui/Container';
+import Grid from '@u_ui/u-ui/Grid';
 import { unstable_useEnhancedEffect as useEnhancedEffect } from '@u-shii/utils';
-import { alpha } from '@u-shii/u-ui/styles';
+import { alpha } from '@u_ui/u-ui/styles';
 
 interface HeroContainerProps {
   disableMobileHidden?: boolean;

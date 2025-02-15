@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { styled, alpha } from '@u-shii/u-ui/styles';
+import { styled, alpha } from '@u_ui/u-ui/styles';
 import { Tabs, TabsOwnProps } from '@u-shii/base/Tabs';
 import { TabsList as TabsListBase } from '@u-shii/base/TabsList';
 import { TabPanel as TabPanelBase } from '@u-shii/base/TabPanel';

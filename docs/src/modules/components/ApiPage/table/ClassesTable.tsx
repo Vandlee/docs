@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import * as React from 'react';
 import { useTranslate } from '@u-shii/docs/i18n';
-import { styled, alpha } from '@u-shii/u-ui/styles';
+import { styled, alpha } from '@u_ui/u-ui/styles';
 import {
   brandingDarkTheme as darkTheme,
   brandingLightTheme as lightTheme,

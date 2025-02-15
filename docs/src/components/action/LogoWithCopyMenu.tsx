@@ -2,11 +2,11 @@ import * as React from 'react';
 import copy from 'clipboard-copy';
 import { Link } from '@u-shii/docs/Link';
 import { Portal } from '@u-shii/base/Portal';
-import Box from '@u-shii/u-ui/Box';
-import Snackbar from '@u-shii/u-ui/Snackbar';
-import Menu from '@u-shii/u-ui/Menu';
-import MenuItem from '@u-shii/u-ui/MenuItem';
-import Slide from '@u-shii/u-ui/Slide';
+import Box from '@u_ui/u-ui/Box';
+import Snackbar from '@u_ui/u-ui/Snackbar';
+import Menu from '@u_ui/u-ui/Menu';
+import MenuItem from '@u_ui/u-ui/MenuItem';
+import Slide from '@u_ui/u-ui/Slide';
 import { TextFieldsRounded, CheckCircleRounded } from '@mui/icons-material';
 import { RootSvgProps } from 'docs/src/icons/RootSvg';
 import SvgUshiiLogomark, {

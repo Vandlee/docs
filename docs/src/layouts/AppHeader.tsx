@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { styled, alpha } from '@u-shii/u-ui/styles';
-import GlobalStyles from '@u-shii/u-ui/GlobalStyles';
-import Box from '@u-shii/u-ui/Box';
-import Stack from '@u-shii/u-ui/Stack';
-import Container from '@u-shii/u-ui/Container';
-import Tooltip from '@u-shii/u-ui/Tooltip';
-import IconButton from '@u-shii/u-ui/IconButton';
+import { styled, alpha } from '@u_ui/u-ui/styles';
+import GlobalStyles from '@u_ui/u-ui/GlobalStyles';
+import Box from '@u_ui/u-ui/Box';
+import Stack from '@u_ui/u-ui/Stack';
+import Container from '@u_ui/u-ui/Container';
+import Tooltip from '@u_ui/u-ui/Tooltip';
+import IconButton from '@u_ui/u-ui/IconButton';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LogoWithCopyMenu from 'docs/src/components/action/LogoWithCopyMenu';
 import HeaderNavBar from 'docs/src/components/header/HeaderNavBar';

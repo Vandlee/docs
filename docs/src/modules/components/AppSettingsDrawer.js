@@ -1,14 +1,14 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { styled, useTheme } from '@u-shii/u-ui/styles';
-import Drawer from '@u-shii/u-ui/Drawer';
-import Box from '@u-shii/u-ui/Box';
-import Button from '@u-shii/u-ui/Button';
-import Typography from '@u-shii/u-ui/Typography';
-import Divider from '@u-shii/u-ui/Divider';
-import ToggleButtonGroup from '@u-shii/u-ui/ToggleButtonGroup';
-import ToggleButton from '@u-shii/u-ui/ToggleButton';
-import IconButton from '@u-shii/u-ui/IconButton';
+import { styled, useTheme } from '@u_ui/u-ui/styles';
+import Drawer from '@u_ui/u-ui/Drawer';
+import Box from '@u_ui/u-ui/Box';
+import Button from '@u_ui/u-ui/Button';
+import Typography from '@u_ui/u-ui/Typography';
+import Divider from '@u_ui/u-ui/Divider';
+import ToggleButtonGroup from '@u_ui/u-ui/ToggleButtonGroup';
+import ToggleButton from '@u_ui/u-ui/ToggleButton';
+import IconButton from '@u_ui/u-ui/IconButton';
 import { useColorSchemeShim, useChangeTheme } from 'docs/src/modules/components/ThemeContext';
 import { UserLanguageProvider, useSetUserLanguage, useTranslate, useUserLanguage } from '@u-shii/docs/i18n';
 import { 

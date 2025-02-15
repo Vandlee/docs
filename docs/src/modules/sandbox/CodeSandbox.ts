@@ -130,7 +130,7 @@ function createYuTemplate(templateData: {
     [`index.${ext}`]: {
       content: `import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
-import { StyledEngineProvider } from '@u-shii/u-ui/styles';
+import { StyledEngineProvider } from '@u_ui/u-ui/styles';
 import App from './App';
 
 ReactDOM.createRoot(document.querySelector("#root")${type}).render(

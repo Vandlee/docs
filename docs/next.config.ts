@@ -88,8 +88,8 @@ export default withDocsInfra({
           ...config.resolve.alias,
 
           // for 3rd party packages with dependencies in this repository
-          '@u-shii/u-ui$': path.resolve(workspaceRoot, 'packages/u-shii-ui/src/index.js'),
-          '@u-shii/u-ui': path.resolve(workspaceRoot, 'packages/u-shii-ui/src'),
+          '@u_ui/u-ui$': path.resolve(workspaceRoot, 'packages/u_ui-u-ui/src/index.js'),
+          '@u_ui/u-ui': path.resolve(workspaceRoot, 'packages/u_ui-u-ui/src'),
 
           '@u-shii/docs': path.resolve(workspaceRoot, 'packages/u-shii-docs/src'),
           '@u-shii/styled-engine': path.resolve(workspaceRoot, 'packages/u-shii-styled-engine/src'),
@@ -125,7 +125,7 @@ export default withDocsInfra({
                           productId: 'u-ui',
                           paths: [
                             path.join(workspaceRoot, 'packages/u-shii-base/src'),
-                            path.join(workspaceRoot, 'packages/u-shii-ui/src'),
+                            path.join(workspaceRoot, 'packages/u_ui-u-ui/src'),
                           ],
                         },
                         {

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { styled } from '@u-shii/u-ui/styles';
-import { Box, Button, createTheme, ThemeProvider, Typography } from '@u-shii/u-ui';
+import { styled } from '@u_ui/u-ui/styles';
+import { Box, Button, createTheme, ThemeProvider, Typography } from '@u_ui/u-ui';
 import { PortraitRounded } from '@mui/icons-material';
 
 const Dropdown = styled('div')(({ theme }) => [

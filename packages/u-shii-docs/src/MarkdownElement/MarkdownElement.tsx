@@ -1,6 +1,6 @@
 import * as React from 'react';
 import clsx from 'clsx';
-import { alpha, darken, styled } from '@u-shii/u-ui/styles';
+import { alpha, darken, styled } from '@u_ui/u-ui/styles';
 import useForkRef from '@u-shii/utils/useForkRef';
 import { brandingDarkTheme as darkTheme, brandingLightTheme as lightTheme } from '../branding';
 

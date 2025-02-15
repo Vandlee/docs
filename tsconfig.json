@@ -15,8 +15,8 @@
     "noErrorTruncation": false,
     "allowJs": true,
     "paths": {
-      "@u-shii/u-ui": ["./packages/u-shii-ui/src"],
-      "@u-shii/u-ui/*": ["./packages/u-shii-ui/src/*"],
+      "@u_ui/u-ui": ["./packages/u_ui-u-ui/src"],
+      "@u_ui/u-ui/*": ["./packages//u_ui-u-ui/src/*"],
       "@u-shii/internal-markdown": ["./packages/markdown"],
       "@u-shii/internal-markdown/*": ["./packages/markdown/*"],
       "@u-shii/styled-engine": ["./packages/u-shii-styled-engine/src"],
@@ -29,8 +29,8 @@
       "@u-shii/utils/*": ["./packages/u-shii-utils/src/*"],
       "@u-shii/docs": ["./packages/u-shii-docs/src"],
       "@u-shii/docs/*": ["./packages/u-shii-docs/src/*"],
-      "@u-shii/u-ui-nextjs": ["./packages/u-shii-ui-nextjs/src"],
-      "@u-shii/u-ui-nextjs/*": ["./packages/u-shii-ui-nextjs/src/*"],
+      "@u_ui/u-ui-nextjs": ["./packages/u-shii-ui-nextjs/src"],
+      "@u_ui/u-ui-nextjs/*": ["./packages/u-shii-ui-nextjs/src/*"],
       "@u-shii/internal-docs-utils": ["./packages-internal/docs-utils/src"],
       "@u-shii/internal-scripts/typescript-to-proptypes": [
         "./packages-internal/scripts/typescript-to-proptypes/src"

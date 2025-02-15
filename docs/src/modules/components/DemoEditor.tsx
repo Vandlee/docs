@@ -1,8 +1,8 @@
 import * as React from 'react';
 import SimpleCodeEditor from 'react-simple-code-editor';
-import Box from '@u-shii/u-ui/Box';
+import Box from '@u_ui/u-ui/Box';
 import { NoSsr } from '@u-shii/base/NoSsr';
-import { styled, alpha, useTheme } from '@u-shii/u-ui/styles';
+import { styled, alpha, useTheme } from '@u_ui/u-ui/styles';
 import prism from '@u-shii/internal-markdown/prism';
 import { MarkdownElement } from '@u-shii/docs/MarkdownElement';
 import { CodeCopyButton, useCodeCopy } from '@u-shii/docs/CodeCopy';

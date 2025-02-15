@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { extendTheme, CssVarsProvider } from '@u-shii/u-ui/styles';
+import { extendTheme, CssVarsProvider } from '@u_ui/u-ui/styles';
 import HeroContainer from 'docs/src/layouts/HeroContainer';
-import Box from '@u-shii/u-ui/Box';
-import Paper from '@u-shii/u-ui/Paper';
-import Typography from '@u-shii/u-ui/Typography';
+import Box from '@u_ui/u-ui/Box';
+import Paper from '@u_ui/u-ui/Paper';
+import Typography from '@u_ui/u-ui/Typography';
 import GradientText from 'docs/src/components/typography/GradientText';
 import GetStartedButtons from 'docs/src/components/home/GetStartedButtons';
 import ROUTES from 'docs/src/route';

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Grid from '@u-shii/u-ui/Grid2';
+import Grid from '@u_ui/u-ui/Grid2';
 import { InstallDesktopRounded, WebRounded, DrawRounded, PlayCircleFilledWhiteRounded, DesignServicesRounded } from '@mui/icons-material';
 import { InfoCard } from '@u-shii/docs/InfoCard';
 

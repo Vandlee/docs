@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Box from '@u-shii/u-ui/Box';
-import Typography from '@u-shii/u-ui/Typography';
+import Box from '@u_ui/u-ui/Box';
+import Typography from '@u_ui/u-ui/Typography';
 import Section from 'docs/src/layouts/Section';
 import SectionHeadline from 'docs/src/components/typography/SectionHeadline';
 

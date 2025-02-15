@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { alpha } from '@u-shii/u-ui/styles';
-import Stack from '@u-shii/u-ui/Stack';
-import Card from '@u-shii/u-ui/Card';
-import CardMedia from '@u-shii/u-ui/CardMedia';
-import Typography from '@u-shii/u-ui/Typography';
-import Chip from '@u-shii/u-ui/Chip';
+import { alpha } from '@u_ui/u-ui/styles';
+import Stack from '@u_ui/u-ui/Stack';
+import Card from '@u_ui/u-ui/Card';
+import CardMedia from '@u_ui/u-ui/CardMedia';
+import Typography from '@u_ui/u-ui/Typography';
+import Chip from '@u_ui/u-ui/Chip';
 import { Link } from '@u-shii/docs/Link';
 
 interface ComponentShowcaseCardProps {

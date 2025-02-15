@@ -1,8 +1,8 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
-import { styled, alpha } from '@u-shii/u-ui/styles';
-import Box from '@u-shii/u-ui/Box';
+import { styled, alpha } from '@u_ui/u-ui/styles';
+import Box from '@u_ui/u-ui/Box';
 import { useTranslate } from '@u-shii/docs/i18n';
 import { Link } from '@u-shii/docs/Link';
 

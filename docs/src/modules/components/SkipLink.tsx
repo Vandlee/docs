@@ -1,6 +1,6 @@
 import * as React from 'react';
-import UshiiLink from '@u-shii/u-ui/Link';
-import { styled } from '@u-shii/u-ui/styles';
+import UshiiLink from '@u_ui/u-ui/Link';
+import { styled } from '@u_ui/u-ui/styles';
 import { useTranslate } from '@u-shii/docs/i18n';
 
 const StyledLink = styled(UshiiLink)(({ theme }) => ({

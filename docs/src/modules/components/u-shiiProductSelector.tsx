@@ -1,10 +1,10 @@
 import * as React from 'react';
 import NextLink from 'next/link';
-import { styled, alpha, Theme } from '@u-shii/u-ui/styles';
-import Box from '@u-shii/u-ui/Box';
-import Typography from '@u-shii/u-ui/Typography';
-import MenuList, { MenuListProps } from '@u-shii/u-ui/MenuList';
-import MenuItem, { MenuItemProps } from '@u-shii/u-ui/MenuItem';
+import { styled, alpha, Theme } from '@u_ui/u-ui/styles';
+import Box from '@u_ui/u-ui/Box';
+import Typography from '@u_ui/u-ui/Typography';
+import MenuList, { MenuListProps } from '@u_ui/u-ui/MenuList';
+import MenuItem, { MenuItemProps } from '@u_ui/u-ui/MenuItem';
 import ROUTES from 'docs/src/route';
 import PageContext from 'docs/src/modules/components/PageContext';
 import { Link } from '@u-shii/docs/Link';
@@ -135,13 +135,13 @@ function ProductItem({
   );
 }
 
-const coreProducts = [
+const u_ui = [
   {
     id: 'u-ui',
     name: 'U-Ui',
-    description: 'Estilo Material Design y sobrio.',
+    description: 'Diseño original.',
     icon: <SvgU_UiLogomark height={24} sx={logoColor} />,
-    href: ROUTES.uUiDocs,
+    href: ROUTES['u_ui-u-ui'],
   },
 ];
 
@@ -170,7 +170,7 @@ const docs = [
 ]
 
 const UshiiProductSelector = React.forwardRef(function UshiiProductSelector(
-  { type = 'products', ...props }: MenuListProps<'div'> & { type?: 'products' | 'docs'},
+  { type = 'products', ...props }: MenuListProps<'div'> & { type?: 'products' | 'u_ui' | 'u-docs'},
   forwardedRef: React.ForwardedRef<HTMLDivElement>,
 ) {
   const pageContext = React.useContext(PageContext);
@@ -179,18 +179,18 @@ const UshiiProductSelector = React.forwardRef(function UshiiProductSelector(
     string,
     { label: string; href: string; content: any[] }[]
   > = {
-    docs: [
+    'u-docs': [
       {
         label: "Lenguajes de programación",
         href: "/u-docs/programming-languages/",
         content: docs
       }
     ],
-    products: [
+    u_ui: [
       {
-        label: "U Core",
-        href: "/u-core/",
-        content: coreProducts
+        label: "U_Ui",
+        href: "/u_ui/",
+        content: u_ui
       }
     ]
   }
@@ -218,7 +218,7 @@ const UshiiProductSelector = React.forwardRef(function UshiiProductSelector(
       {selectedContent.map(({ label, href, content}) => (
         <React.Fragment key={label}> 
           <Box
-            key="U-Core components"
+            key={`${label} Components`}
             role="none"
             sx={{
               gridColumn: {

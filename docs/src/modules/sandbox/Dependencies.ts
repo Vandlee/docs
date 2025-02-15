@@ -74,11 +74,11 @@ export default function SandboxDependencies(demo: Demo, options?: { commitRef?: 
       };
 
       if (newDeps['@u-shii/lab'] || newDeps['@mui/icons-material']) {
-        newDeps['@u-shii/u-ui'] = versions['@u-shii/u-ui'];
+        newDeps['@u_ui/u-ui'] = versions['@u_ui/u-ui'];
       }
 
       if (newDeps['@u-shii/x-data-grid']) {
-        newDeps['@u-shii/u-ui'] = versions['@u-shii/u-ui'];
+        newDeps['@u_ui/u-ui'] = versions['@u_ui/u-ui'];
       }
 
       // TODO: consider if this configuration could be injected in a "cleaner" way.
@@ -96,7 +96,7 @@ export default function SandboxDependencies(demo: Demo, options?: { commitRef?: 
       'react-dom': 'latest',
       '@emotion/react': 'latest',
       '@emotion/styled': 'latest',
-      '@u-shii/u-ui': getUshiiPackageVersion('u-ui'),
+      '@u_ui/u-ui': getUshiiPackageVersion('u-ui'),
       '@mui/icons-material': getUshiiPackageVersion('icons-material'),
       '@u-shii/lab': getUshiiPackageVersion('lab'),
       '@u-shii/styled-engine': getUshiiPackageVersion('styled-engine'),
@@ -153,9 +153,9 @@ export default function SandboxDependencies(demo: Demo, options?: { commitRef?: 
     dependencies.typescript = 'latest';
   }
 
-  if (!demo.productId && !dependencies['@u-shii/u-ui']) {
-    // The `index.js` imports StyledEngineProvider from '@u-shii/u-ui', so we need to make sure we have it as a dependency
-    const name = '@u-shii/u-ui';
+  if (!demo.productId && !dependencies['@u_ui/u-ui']) {
+    // The `index.js` imports StyledEngineProvider from '@u_ui/u-ui', so we need to make sure we have it as a dependency
+    const name = '@u_ui/u-ui';
     const versions = {
       [name]: getUshiiPackageVersion('u-ui'),
     };

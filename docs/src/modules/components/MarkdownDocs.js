@@ -9,8 +9,8 @@ import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
 import AppLayoutDocs from 'docs/src/modules/components/AppLayoutDocs';
 import { useUserLanguage } from '@u-shii/docs/i18n';
 import { BrandingProvider } from '@u-shii/docs/branding';
-import Box from '@u-shii/u-ui/Box';
-import { styled } from '@u-shii/u-ui/styles';
+import Box from '@u_ui/u-ui/Box';
+import { styled } from '@u_ui/u-ui/styles';
 
 
 

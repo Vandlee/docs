@@ -2,15 +2,15 @@
 /* eslint-disable material-ui/no-hardcoded-labels */
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { styled, useTheme } from '@u-shii/u-ui/styles';
+import { styled, useTheme } from '@u_ui/u-ui/styles';
 // Components
-import Collapse from '@u-shii/u-ui/Collapse';
-import Button from '@u-shii/u-ui/Button';
-import Divider from '@u-shii/u-ui/Divider';
-import Typography from '@u-shii/u-ui/Typography';
-import Tooltip from '@u-shii/u-ui/Tooltip';
-import Stack from '@u-shii/u-ui/Stack';
-import IconButton from '@u-shii/u-ui/IconButton';
+import Collapse from '@u_ui/u-ui/Collapse';
+import Button from '@u_ui/u-ui/Button';
+import Divider from '@u_ui/u-ui/Divider';
+import Typography from '@u_ui/u-ui/Typography';
+import Tooltip from '@u_ui/u-ui/Tooltip';
+import Stack from '@u_ui/u-ui/Stack';
+import IconButton from '@u_ui/u-ui/IconButton';
 //
 import { Link } from '@u-shii/docs/Link';
 import PageContext from 'docs/src/modules/components/PageContext';

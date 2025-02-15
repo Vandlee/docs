@@ -27,7 +27,7 @@ module.exports = function getBabelConfig(api) {
   const useESModules = api.env(['regressions', 'modern', 'stable']);
 
   const defaultAlias = {
-    '@u-shii/u-ui': resolveAliasPath('./packages/u-shii-ui/src'),
+    '@u_ui/u-ui': resolveAliasPath('./packages/u_ui-u-ui/src'),
     '@u-shii/docs': resolveAliasPath('./packages/u-shii-docs/src'),
     '@u-shii/internal-markdown': resolveAliasPath('./packages/markdown'),
     '@u-shii/styled-engine': resolveAliasPath('./packages/u-shii-styled-engine/src'),

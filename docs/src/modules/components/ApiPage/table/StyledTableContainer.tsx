@@ -1,4 +1,4 @@
-import { styled, alpha } from '@u-shii/u-ui/styles';
+import { styled, alpha } from '@u_ui/u-ui/styles';
 import { brandingDarkTheme as darkTheme } from '@u-shii/docs/branding';
 
 const StyledTableContainer = styled('div')(

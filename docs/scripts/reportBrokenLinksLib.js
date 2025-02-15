@@ -85,16 +85,16 @@ function getLinksAndAnchors(fileName) {
   };
 }
 
-const markdownImportRegExp = /'(.*)\?(ushiiMarkdown|@u-shii\/markdown)'/g;
+const markdownImportRegExp = /'(.*)\?(u-shiiMarkdown|@u-shii\/markdown)'/g;
 
 const getMdFilesImported = (jsPageFile) => {
   // For each JS file extract the markdown rendered if it exists
   const fileContent = fse.readFileSync(jsPageFile, 'utf8');
   /**
    * Content files can be represented by either:
-   * - 'docsx/data/advanced-components/overview.md?ushiiMarkdown'; (for ushii-x)
-   * - 'docs/data/advanced-components/overview.md?ushiiMarkdown';
-   * - './index.md?ushiiMarkdown';
+   * - 'docsx/data/advanced-components/overview.md?u-shiiMarkdown'; (for ushii-x)
+   * - 'docs/data/advanced-components/overview.md?u-shiiMarkdown';
+   * - './index.md?u-shiiMarkdown';
    */
   const importPaths = fileContent.match(markdownImportRegExp);
 

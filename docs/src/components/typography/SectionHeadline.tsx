@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Box from '@u-shii/u-ui/Box';
-import Typography from '@u-shii/u-ui/Typography';
+import Box from '@u_ui/u-ui/Box';
+import Typography from '@u_ui/u-ui/Typography';
 
 interface SectionHeadlineProps {
   alwaysCenter?: boolean;

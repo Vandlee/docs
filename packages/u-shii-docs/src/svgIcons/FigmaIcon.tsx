@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createSvgIcon } from '@u-shii/u-ui/utils';
+import { createSvgIcon } from '@u_ui/u-ui/utils';
 
 export default createSvgIcon(
   <g fillRule="nonzero" fill="none">

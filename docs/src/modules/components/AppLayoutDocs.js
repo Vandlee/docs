@@ -1,9 +1,9 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
-import { styled } from '@u-shii/u-ui/styles';
+import { styled } from '@u_ui/u-ui/styles';
 import { exactProp } from '@u-shii/utils';
-import GlobalStyles from '@u-shii/u-ui/GlobalStyles';
+import GlobalStyles from '@u_ui/u-ui/GlobalStyles';
 import {
   AdManager,
   AD_MARGIN_TOP,

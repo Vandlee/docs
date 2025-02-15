@@ -2,7 +2,7 @@
 import path from 'path';
 import fse from 'fs-extra';
 import { pageToTitle } from 'docs/src/modules/utils/helpers';
-import U_UiPages from 'docs/data/u-ui/pages';
+import U_UiPages from 'docs/data/u_ui/u-ui/pages';
 import { UshiiPage } from 'docs/src/u-shiiPage';
 
 const EXCLUDES = ['/api', '/blog', '/x/react-', '/toolpad'];

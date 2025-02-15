@@ -1,6 +1,6 @@
 import * as React from 'react';
 import MarkdownDocs from 'docs/src/modules/components/MarkdownDocs';
-import * as pageProps from 'docs/data/python/getting-started/overview/overview.md?ushiiMarkdown';
+import * as pageProps from 'docs/data/u-docs/python/getting-started/overview/overview.md?u-shiiMarkdown';
 
 export default function Page() {
   return <MarkdownDocs {...pageProps} disableAd />;

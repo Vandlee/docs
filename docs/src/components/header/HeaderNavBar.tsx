@@ -1,14 +1,14 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import * as React from 'react';
-import { styled, alpha } from '@u-shii/u-ui/styles';
-import Box from '@u-shii/u-ui/Box';
-import Chip from '@u-shii/u-ui/Chip';
-import ButtonBase from '@u-shii/u-ui/ButtonBase';
-import Popper from '@u-shii/u-ui/Popper';
-import Paper from '@u-shii/u-ui/Paper';
+import { styled, alpha } from '@u_ui/u-ui/styles';
+import Box from '@u_ui/u-ui/Box';
+import Chip from '@u_ui/u-ui/Chip';
+import ButtonBase from '@u_ui/u-ui/ButtonBase';
+import Popper from '@u_ui/u-ui/Popper';
+import Paper from '@u_ui/u-ui/Paper';
 import { unstable_debounce as debounce } from '@u-shii/utils';
-import Fade from '@u-shii/u-ui/Fade';
-import Typography from '@u-shii/u-ui/Typography';
+import Fade from '@u_ui/u-ui/Fade';
+import Typography from '@u_ui/u-ui/Typography';
 import IconImage from 'docs/src/components/icon/IconImage';
 import ROUTES from 'docs/src/route';
 import { Link } from '@u-shii/docs/Link';
@@ -67,7 +67,7 @@ const Navigation = styled('nav')(({ theme }) => [
 ]);
 
 const PRODUCT_IDS = [
-  'product-u-core',
+  'u_ui',
   'u-docs'
 ];
 
@@ -283,14 +283,14 @@ export default function HeaderNavBar() {
                     }),
                   })}
                 >
-                  <UshiiProductSelector ref={productSelectorRef} />
+                  <UshiiProductSelector type='u_ui' ref={productSelectorRef} />
                   <ul>
                     <li>
                       <ProductSubMenu
                         id={PRODUCT_IDS[0]}
-                        href={ROUTES.productCore}
+                        href={ROUTES.productu_ui}
                         icon={<IconImage name="product-advanced" />}
-                        name="U Core"
+                        name="U_Ui"
                         description="Componentes básicos de React listos para usar, gratis para siempre."
                       />
                     </li>
@@ -351,7 +351,7 @@ export default function HeaderNavBar() {
                     }),
                   })}
                 >
-                  <UshiiProductSelector type="docs" ref={productSelectorRef} />
+                  <UshiiProductSelector type="u-docs" ref={productSelectorRef} />
                 </Paper>
               </Fade>
             )}

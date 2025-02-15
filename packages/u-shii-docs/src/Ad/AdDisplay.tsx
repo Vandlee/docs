@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { styled } from '@u-shii/u-ui/styles';
+import { styled } from '@u_ui/u-ui/styles';
 import { useTranslate } from '../i18n';
 import { adShape } from './AdManager';
 import { adBodyImageStyles, adBodyInlineStyles } from './ad.styles';

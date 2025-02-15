@@ -8,7 +8,7 @@ import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
 import { StyleSheetManager } from 'styled-components';
 import { jssPreset, StylesProvider } from '@mui/styles';
-import { useTheme, styled, createTheme, ThemeProvider } from '@u-shii/u-ui/styles';
+import { useTheme, styled, createTheme, ThemeProvider } from '@u_ui/u-ui/styles';
 import rtl from 'jss-rtl';
 import DemoErrorBoundary from 'docs/src/modules/components/DemoErrorBoundary';
 import { useTranslate } from '@u-shii/docs/i18n';

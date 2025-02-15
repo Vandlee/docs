@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Box from '@u-shii/u-ui/Box';
+import Box from '@u_ui/u-ui/Box';
 import { MarkdownElement } from '@u-shii/docs/MarkdownElement';
 
 export default function UshiiBaseDeprecation(props: {

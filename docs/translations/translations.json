@@ -1,21 +1,21 @@
 {
   "pages": {
-    "/u-ui/getting-started-group": "Primeros pasos",
-    "/u-ui/getting-started": "Resumen",
-    "/u-ui/getting-started/installation": "Instalación",
-    "/u-ui/getting-started/usage": "Uso",
-    "/u-ui/getting-started/learn": "Aprende",
-    "/u-ui/getting-started/faq": "FAQs",
-    "/u-ui/getting-started/supported-platforms": "Plataformas soportadas",
-    "/u-ui/react-": "Componentes",
-    "/u-ui/all-components": "Todos los componentes",
+    "/u_ui/u-ui/getting-started-group": "Primeros pasos",
+    "/u_ui/u-ui/getting-started": "Resumen",
+    "/u_ui/u-ui/getting-started/installation": "Instalación",
+    "/u_ui/u-ui/getting-started/usage": "Uso",
+    "/u_ui/u-ui/getting-started/learn": "Aprende",
+    "/u_ui/u-ui/getting-started/faq": "FAQs",
+    "/u_ui/u-ui/getting-started/supported-platforms": "Plataformas soportadas",
+    "/u_ui/u-ui/react-": "Componentes",
+    "/u_ui/u-ui/all-components": "Todos los componentes",
     "inputs": "Entradas",
-    "/u-ui/react-button": "Botón",
-    "/u-ui/react-button-group": "Grupo de botones",
-    "/u-ui/react-rating": "Valoraciones",
-    "/u-ui/react-toggle-button": "Botón de alternancia",
+    "/u_ui/u-ui/react-button": "Botón",
+    "/u_ui/u-ui/react-button-group": "Grupo de botones",
+    "/u_ui/u-ui/react-rating": "Valoraciones",
+    "/u_ui/u-ui/react-toggle-button": "Botón de alternancia",
     "data-display": "Visualización de datos",
-    "/u-ui/react-badge": "Insignia",
-    "/u-ui/react-chip": "Chip"
+    "/u_ui/u-ui/react-badge": "Insignia",
+    "/u_ui/u-ui/react-chip": "Chip"
   }
 }

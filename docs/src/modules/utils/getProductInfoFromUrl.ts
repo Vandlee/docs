@@ -8,7 +8,7 @@ export type UshiiProductId =
   | 'php'
   | 'python';
 
-type UshiiProductCategoryId = 'null' | 'u-docs' |'core';
+type UshiiProductCategoryId = 'null' | 'u_ui' | 'u-docs' |'core';
 
 interface UshiiProductInfo {
   productId: UshiiProductId;
@@ -30,6 +30,11 @@ export default function getProductInfoFromUrl(asPath: string): UshiiProductInfo 
   ) {
     productCategoryId = 'u-core';
     productId = firstFolder;
+  }
+
+  if (firstFolder === 'u_ui') {
+    productCategoryId = 'u_ui';
+    productId = secondFolder;
   }
 
   if (firstFolder === 'u-docs') {

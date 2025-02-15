@@ -1,6 +1,6 @@
 /* eslint-disable react/no-danger */
 import * as React from 'react';
-import Box from '@u-shii/u-ui/Box';
+import Box from '@u_ui/u-ui/Box';
 import { Translate, useTranslate } from '@u-shii/docs/i18n';
 import { SectionTitle, SectionTitleProps } from '@u-shii/docs/SectionTitle';
 import ToggleDisplayOption, {

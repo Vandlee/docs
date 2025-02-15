@@ -1,9 +1,9 @@
 import * as React from 'react';
-import Chip from '@u-shii/u-ui/Chip';
-import Tooltip from '@u-shii/u-ui/Tooltip';
+import Chip from '@u_ui/u-ui/Chip';
+import Tooltip from '@u_ui/u-ui/Tooltip';
 import ChatRounded from '@mui/icons-material/ChatRounded';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { styled } from '@u-shii/u-ui/styles';
+import { styled } from '@u_ui/u-ui/styles';
 import { MarkdownHeaders } from '@u-shii/internal-markdown';
 import FigmaIcon from '../svgIcons/FigmaIcon';
 import BundleSizeIcon from '../svgIcons/BundleSizeIcon';
@@ -32,7 +32,7 @@ const Root = styled('ul')(({ theme }) => ({
 }));
 
 const defaultPackageNames: Record<string, string | undefined> = {
-  'u-ui': '@u-shii/u-ui',
+  'u-ui': '@u_ui/u-ui',
   'base-ui': '@u-shii/base',
   system: '@u-shii/system',
 };
@@ -52,7 +52,7 @@ export function ComponentLinkHeader(props: ComponentLinkHeaderProps) {
   const t = useTranslate();
 
   const packageName =
-    headers.packageName ?? defaultPackageNames[headers.productId] ?? '@u-shii/u-ui';
+    headers.packageName ?? defaultPackageNames[headers.productId] ?? '@u_ui/u-ui';
 
   return (
     <Root>

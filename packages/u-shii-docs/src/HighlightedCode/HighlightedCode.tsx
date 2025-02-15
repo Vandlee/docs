@@ -1,8 +1,8 @@
 import * as React from 'react';
 import prism from '@u-shii/internal-markdown/prism';
 import { NoSsr } from '@u-shii/base/NoSsr';
-import { ButtonProps } from '@u-shii/u-ui/Button';
-import { SxProps, styled } from '@u-shii/u-ui/styles';
+import { ButtonProps } from '@u_ui/u-ui/Button';
+import { SxProps, styled } from '@u_ui/u-ui/styles';
 import { useCodeCopy, CodeCopyButton } from '../CodeCopy';
 import { MarkdownElement } from '../MarkdownElement';
 

@@ -1,19 +1,19 @@
 import type { CSSObject } from '@u-shii/system';
-import type {} from '@u-shii/u-ui/themeCssVarsAugmentation';
+import type {} from '@u_ui/u-ui/themeCssVarsAugmentation';
 /* import ArrowDropDownRounded from '@mui/icons-material/ArrowDropDownRounded'; */
-import { createTheme, ThemeOptions, Theme, alpha } from '@u-shii/u-ui/styles';
+import { createTheme, ThemeOptions, Theme, alpha } from '@u_ui/u-ui/styles';
 
 interface ApplyDarkStyles {
   (scheme: CSSObject): CSSObject;
 }
 
-declare module '@u-shii/u-ui/styles' {
+declare module '@u_ui/u-ui/styles' {
   interface Theme {
     applyDarkStyles: ApplyDarkStyles;
   }
 }
 
-declare module '@u-shii/u-ui/styles/createPalette' {
+declare module '@u_ui/u-ui/styles/createPalette' {
   interface ColorRange {
     50: string;
     100: string;
@@ -42,7 +42,7 @@ declare module '@u-shii/u-ui/styles/createPalette' {
   }
 }
 
-declare module '@u-shii/u-ui/styles/createTypography' {
+declare module '@u_ui/u-ui/styles/createTypography' {
   interface TypographyOptions {
     fontWeightSemiBold?: number;
     fontWeightExtraBold?: number;
@@ -58,13 +58,13 @@ declare module '@u-shii/u-ui/styles/createTypography' {
   }
 }
 
-declare module '@u-shii/u-ui/Chip' {
+declare module '@u_ui/u-ui/Chip' {
   interface ChipPropsColorOverrides {
     grey: true;
   }
 }
 
-declare module '@u-shii/u-ui/SvgIcon' {
+declare module '@u_ui/u-ui/SvgIcon' {
   interface SvgIconPropsColorOverrides {
     danger: true;
   }
