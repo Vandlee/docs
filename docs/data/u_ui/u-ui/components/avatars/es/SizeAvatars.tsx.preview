@@ -1,0 +1,11 @@
+<Avatar
+  alt="elcheryu-u"
+  src="/static/images/avatar/1.jpg"
+  sx={{ width: 24, height: 24 }}
+/>
+<Avatar alt="elcheryu-u" src="/static/images/avatar/1.jpg" />
+<Avatar
+  alt="elcheryu-u"
+  src="/static/images/avatar/1.jpg"
+  sx={{ width: 56, height: 56 }}
+/>

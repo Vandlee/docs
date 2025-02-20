@@ -15,7 +15,10 @@
     "/u_ui/u-ui/react-rating": "Valoraciones",
     "/u_ui/u-ui/react-toggle-button": "Botón de alternancia",
     "data-display": "Visualización de datos",
+    "/u_ui/u-ui/react-avatar": "Avatar",
     "/u_ui/u-ui/react-badge": "Insignia",
-    "/u_ui/u-ui/react-chip": "Chip"
+    "/u_ui/u-ui/react-chip": "Chip",
+    "/u_ui/u-ui/react-divider": "Separador",
+    "/u_ui/u-ui/react-list": "Lista"
   }
 }

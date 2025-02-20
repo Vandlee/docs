@@ -21,6 +21,7 @@ const pages: UshiiPage[] = [
       {
         pathname: '/u_ui/u-ui/components/inputs',
         subheader: 'inputs',
+        newFeature: true,
         children: [
           { pathname: '/u_ui/u-ui/react-button' },
           { pathname: '/u_ui/u-ui/react-button-group', title: 'Button Group' },
@@ -31,9 +32,13 @@ const pages: UshiiPage[] = [
       {
         pathname: "/u-ui/components/data-display",
         subheader: 'data-display',
+        newFeature: true,
         children: [
+          { pathname: '/u_ui/u-ui/react-avatar' },
           { pathname: '/u_ui/u-ui/react-badge' },
           { pathname: '/u_ui/u-ui/react-chip' },
+          { pathname: '/u_ui/u-ui/react-divider' },
+          { pathname: '/u_ui/u-ui/react-list' },
         ]
       }
     ]

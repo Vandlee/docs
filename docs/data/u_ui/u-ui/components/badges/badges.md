@@ -4,7 +4,7 @@ title: Componente Insignia de React
 components: Badge
 githubLabel: 'component: badge'
 unstyled: /u-base/react-badge/
-githubSource: packages/u-shii-ui/src/Badge
+githubSource: packages/u_ui-u-ui/src/Badge
 ---
 
 # Insignia

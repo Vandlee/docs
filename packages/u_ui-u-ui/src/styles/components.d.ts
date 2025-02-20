@@ -26,6 +26,7 @@ export interface Components<Theme = unknown> {
     styleOverrides?: ComponentsOverrides<Theme>['UshiiAutocomplete'];
     variants?: ComponentsVariants<Theme>['UshiiAutocomplete'];
   };
+  */
   UshiiAvatar?: {
     defaultProps?: ComponentsProps['UshiiAvatar'];
     styleOverrides?: ComponentsOverrides<Theme>['UshiiAvatar'];
@@ -36,7 +37,6 @@ export interface Components<Theme = unknown> {
     styleOverrides?: ComponentsOverrides<Theme>['UshiiAvatarGroup'];
     variants?: ComponentsVariants<Theme>['UshiiAvatarGroup'];
   };
-  */
   UshiiBackdrop?: {
     defaultProps?: ComponentsProps['UshiiBackdrop'];
     styleOverrides?: ComponentsOverrides<Theme>['UshiiBackdrop'];
@@ -313,7 +313,6 @@ export interface Components<Theme = unknown> {
     styleOverrides?: ComponentsOverrides<Theme>['UshiiList'];
     variants?: ComponentsVariants<Theme>['UshiiList'];
   };
-  /*
   UshiiListItem?: {
     defaultProps?: ComponentsProps['UshiiListItem'];
     styleOverrides?: ComponentsOverrides<Theme>['UshiiListItem'];
@@ -329,6 +328,7 @@ export interface Components<Theme = unknown> {
     styleOverrides?: ComponentsOverrides<Theme>['UshiiListItemAvatar'];
     variants?: ComponentsVariants<Theme>['UshiiListItemAvatar'];
   };
+  /*
   UshiiListItemIcon?: {
     defaultProps?: ComponentsProps['UshiiListItemIcon'];
     styleOverrides?: ComponentsOverrides<Theme>['UshiiListItemIcon'];
@@ -339,6 +339,7 @@ export interface Components<Theme = unknown> {
     styleOverrides?: ComponentsOverrides<Theme>['UshiiListItemSecondaryAction'];
     variants?: ComponentsVariants<Theme>['UshiiListItemSecondaryAction'];
   };
+  */
   UshiiListItemText?: {
     defaultProps?: ComponentsProps['UshiiListItemText'];
     styleOverrides?: ComponentsOverrides<Theme>['UshiiListItemText'];
@@ -349,7 +350,6 @@ export interface Components<Theme = unknown> {
     styleOverrides?: ComponentsOverrides<Theme>['UshiiListSubheader'];
     variants?: ComponentsVariants<Theme>['UshiiListSubheader'];
   };
-  */
   UshiiMenu?: {
     defaultProps?: ComponentsProps['UshiiMenu'];
     styleOverrides?: ComponentsOverrides<Theme>['UshiiMenu'];

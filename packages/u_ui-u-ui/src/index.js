@@ -10,6 +10,12 @@ export * from './Alert';
 export { default as AppBar } from './AppBar';
 export * from './AppBar';
 
+export { default as Avatar } from './Avatar';
+export * from './Avatar';
+
+export { default as AvatarGroup } from './AvatarGroup';
+export * from './AvatarGroup';
+
 export { default as Backdrop } from './Backdrop';
 export * from './Backdrop';
 
@@ -75,8 +81,26 @@ export * from './Link';
 export { default as List } from './List';
 export * from './List';
 
+export { default as ListItem } from './ListItem';
+export * from './ListItem';
+
+export { default as ListItemAvatar } from './ListItemAvatar';
+export * from './ListItemAvatar';
+
+export { default as ListItemButton } from './ListItemButton';
+export * from './ListItemButton';
+
 export { default as ListItemIcon } from './ListItemIcon';
 export * from './ListItemIcon';
+
+export { default as ListItemSecondaryAction } from './ListItemSecondaryAction';
+export * from './ListItemSecondaryAction';
+
+export { default as ListItemText } from './ListItemText';
+export * from './ListItemText';
+
+export { default as ListSubheader } from './ListSubheader';
+export * from './ListSubheader';
 
 export { default as Menu } from './Menu';
 export * from './Menu';

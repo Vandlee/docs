@@ -5,9 +5,9 @@ import { AlertTitleProps } from '../AlertTitle';
 import { AppBarProps } from '../AppBar';
 /*
 import { AutocompleteProps } from '../Autocomplete';
+*/
 import { AvatarProps } from '../Avatar';
 import { AvatarGroupProps } from '../AvatarGroup';
-*/
 import { BackdropProps } from '../Backdrop';
 import { BadgeProps } from '../Badge';
 /*
@@ -70,18 +70,16 @@ import { InputProps } from '../Input';
 import { LinearProgressProps } from '../LinearProgress';
 */
 import { LinkProps } from '../Link';
-/*
 import { ListItemAvatarProps } from '../ListItemAvatar';
+/*
 import { ListItemIconProps } from '../ListItemIcon';
+*/
 import { ListItemProps } from '../ListItem';
 import { ListItemButtonProps } from '../ListItemButton';
 import { ListItemSecondaryActionProps } from '../ListItemSecondaryAction';
 import { ListItemTextProps } from '../ListItemText';
-*/
 import { ListProps } from '../List';
-/*
 import { ListSubheaderProps } from '../ListSubheader';
-*/
 import { MenuItemProps } from '../MenuItem';
 import { MenuListProps } from '../MenuList';
 import { MenuProps } from '../Menu';
@@ -165,9 +163,9 @@ export interface ComponentsPropsList {
   UshiiAppBar: AppBarProps;
   /*
   UshiiAutocomplete: AutocompleteProps<any, any, any, any>;
+  */
   UshiiAvatar: AvatarProps;
   UshiiAvatarGroup: AvatarGroupProps;
-  */
   UshiiBackdrop: BackdropProps;
   UshiiBadge: BadgeProps;
   /*
@@ -221,6 +219,7 @@ export interface ComponentsPropsList {
   /*
   UshiiImageList: ImageListProps;
   UshiiImageListItem: ImageListItemProps;
+  /*
   UshiiImageListItemBar: ImageListItemBarProps;
   UshiiIcon: IconProps;
   */
@@ -234,15 +233,15 @@ export interface ComponentsPropsList {
   */
   UshiiLink: LinkProps;
   UshiiList: ListProps;
-  /*
   UshiiListItem: ListItemProps;
   UshiiListItemButton: ListItemButtonProps;
   UshiiListItemAvatar: ListItemAvatarProps;
+  /*
   UshiiListItemIcon: ListItemIconProps;
+  */
   UshiiListItemSecondaryAction: ListItemSecondaryActionProps;
   UshiiListItemText: ListItemTextProps;
   UshiiListSubheader: ListSubheaderProps;
-  */
   UshiiMenu: MenuProps;
   UshiiMenuItem: MenuItemProps;
   UshiiMenuList: MenuListProps;

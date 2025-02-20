@@ -4,7 +4,7 @@ title: Componente Botón de alternancia de React
 components: ToggleButton, ToggleButtonGroup
 githubLabel: 'component: toggle button'
 materialDesign: https://m2.material.io/components/buttons#toggle-button
-githubSource: packages/u-shii-ui/src/ToggleButton
+githubSource: packages/u_ui-u-ui/src/ToggleButton
 ---
 
 # Botón de alternancia

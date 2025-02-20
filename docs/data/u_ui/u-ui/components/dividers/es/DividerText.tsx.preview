@@ -1,0 +1,13 @@
+<Root>
+  {content}
+  <Divider>CENTRO</Divider>
+  {content}
+  <Divider textAlign="left">IZQUIERDA</Divider>
+  {content}
+  <Divider textAlign="right">DERECHA</Divider>
+  {content}
+  <Divider>
+    <Chip label="Chip" size="small" />
+  </Divider>
+  {content}
+</Root>

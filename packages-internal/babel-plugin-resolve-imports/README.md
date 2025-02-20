@@ -11,20 +11,20 @@ See https://nodejs.org/docs/v20.16.0/api/esm.html#mandatory-file-extensions
 This changes imports in the build output from
 
 ```tsx
-// packages/u-shii-ui/build/index.js
+// packages/u_ui-u-ui/build/index.js
 export * from './Accordion';
 
-// packages/u-shii-ui/build/Breadcrumbs/BreadcrumbCollapsed.js
+// packages/u_ui-u-ui/build/Breadcrumbs/BreadcrumbCollapsed.js
 import MoreHorizIcon from '../internal/svg-icons/MoreHoriz';
 ```
 
 to
 
 ```tsx
-// packages/u-shii-ui/build/index.js
+// packages/u_ui-u-ui/build/index.js
 export * from './Accordion/index.js';
 
-// packages/u-shii-ui/build/Breadcrumbs/BreadcrumbCollapsed.js
+// packages/u_ui-u-ui/build/Breadcrumbs/BreadcrumbCollapsed.js
 import MoreHorizIcon from '../internal/svg-icons/MoreHoriz.js';
 ```
 

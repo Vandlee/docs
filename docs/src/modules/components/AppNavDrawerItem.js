@@ -375,8 +375,8 @@ export default function AppNavDrawerItem(props) {
                 {plan === 'pro' && <span className="plan-pro" title="Pro plan" />}
                 {plan === 'premium' && <span className="plan-premium" title="Premium plan" />}
                 {legacy && <Chip label="Legacy" sx={sxChip('warning')} />}
-                {newFeature && <Chip label="New" sx={sxChip('success')} />}
-                {planned && <Chip label="Planned" sx={sxChip('grey')} />}
+                {newFeature && <Chip label="Nuevo" sx={sxChip('success')} />}
+                {planned && <Chip label="Planeado" sx={sxChip('grey')} />}
                 {unstable && <Chip label="Preview" sx={sxChip('primary')} />}
                 {beta && <Chip label="Beta" sx={sxChip('primary')} />}
                 {deprecated && <Chip label="Deprecated" sx={sxChip('warning')} />}

@@ -3,7 +3,7 @@ productId: u-ui
 title: Componente Grupo de botones de React
 components: Button, ButtonGroup
 githubLabel: 'componente: ButtonGroup'
-githubSource: packages/u-shii-ui/src/ButtonGroup
+githubSource: packages/u_ui-u-ui/src/ButtonGroup
 ---
 
 # Grupo de botones

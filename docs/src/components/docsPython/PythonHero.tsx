@@ -167,7 +167,7 @@ export default function PythonHero() {
                             <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
                             <ListItem alignItems="flex-start">
                                 <ListItemAvatar>
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+                                <Avatar alt="elcheryu-u" src="/static/images/avatar/1.jpg" />
                                 </ListItemAvatar>
                                 <ListItemText
                                 primary="Brunch this weekend?"

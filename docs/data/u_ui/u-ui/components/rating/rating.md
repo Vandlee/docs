@@ -4,7 +4,7 @@ title: Componente de Valoración de React
 components: Rating
 githubLabel: 'component: rating'
 waiAria: https://www.w3.org/WAI/tutorials/forms/custom-controls/#a-star-rating
-githubSource: packages/u-shii-ui/src/Rating
+githubSource: packages/u_ui-u-ui/src/Rating
 ---
 
 # Valoración

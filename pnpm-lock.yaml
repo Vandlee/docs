@@ -1087,7 +1087,7 @@ importers:
         version: 6.1.13(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
     publishDirectory: build
 
-  packages/u-shii-ui-nextjs:
+  packages/u_ui-u-ui-nextjs:
     dependencies:
       '@babel/runtime':
         specifier: ^7.26.7
@@ -1113,7 +1113,7 @@ importers:
         version: 19.0.0
     publishDirectory: build
 
-  packages/u-shii-ui-pigment-css:
+  packages/u_ui-u-ui-pigment-css:
     dependencies:
       '@babel/runtime':
         specifier: ^7.26.7

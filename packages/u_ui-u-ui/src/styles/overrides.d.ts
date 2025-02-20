@@ -13,9 +13,9 @@ import { AlertTitleClassKey } from '../AlertTitle';
 import { AppBarClassKey } from '../AppBar';
 /*
 import { AutocompleteClassKey } from '../Autocomplete';
+*/
 import { AvatarClassKey } from '../Avatar';
 import { AvatarGroupClassKey } from '../AvatarGroup';
-*/
 import { BackdropClassKey } from '../Backdrop';
 import { BadgeClassKey } from '../Badge';
 /*
@@ -77,15 +77,16 @@ import { LinearProgressClassKey } from '../LinearProgress';
 */
 import { LinkClassKey } from '../Link';
 import { ListClassKey } from '../List';
-/*
 import { ListItemAvatarClassKey } from '../ListItemAvatar';
 import { ListItemClassKey } from '../ListItem';
 import { ListItemButtonClassKey } from '../ListItemButton';
+/*
 import { ListItemIconClassKey } from '../ListItemIcon';
+*/
 import { ListItemSecondaryActionClassKey } from '../ListItemSecondaryAction';
+
 import { ListItemTextClassKey } from '../ListItemText';
 import { ListSubheaderClassKey } from '../ListSubheader';
-*/
 import { MenuClassKey } from '../Menu';
 import { MenuItemClassKey } from '../MenuItem';
 import { MenuListClassKey } from '../MenuList';
@@ -188,9 +189,9 @@ export interface ComponentNameToClassKey {
   UshiiAppBar: AppBarClassKey;
   /*
   UshiiAutocomplete: AutocompleteClassKey;
+  */
   UshiiAvatar: AvatarClassKey;
   UshiiAvatarGroup: AvatarGroupClassKey;
-  */
   UshiiBackdrop: BackdropClassKey;
   UshiiBadge: BadgeClassKey;
   /*
@@ -256,15 +257,12 @@ export interface ComponentNameToClassKey {
   */
   UshiiLink: LinkClassKey;
   UshiiList: ListClassKey;
-  /*
   UshiiListItem: ListItemClassKey;
   UshiiListItemButton: ListItemButtonClassKey;
   UshiiListItemAvatar: ListItemAvatarClassKey;
-  UshiiListItemIcon: ListItemIconClassKey;
   UshiiListItemSecondaryAction: ListItemSecondaryActionClassKey;
   UshiiListItemText: ListItemTextClassKey;
   UshiiListSubheader: ListSubheaderClassKey;
-  */
   UshiiMenu: MenuClassKey;
   UshiiMenuItem: MenuItemClassKey;
   UshiiMenuList: MenuListClassKey;
