@@ -207,6 +207,9 @@ export * from './Typography';
 export { default as useMediaQuery } from './useMediaQuery';
 export * from './useMediaQuery';
 
+export { default as Zoom } from './Zoom';
+export * from './Zoom';
+
 export { default as GlobalStyles } from './GlobalStyles';
 export * from './GlobalStyles';
 

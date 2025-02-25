@@ -19,6 +19,7 @@
     "/u_ui/u-ui/react-badge": "Insignia",
     "/u_ui/u-ui/react-chip": "Chip",
     "/u_ui/u-ui/react-divider": "Separador",
-    "/u_ui/u-ui/react-list": "Lista"
+    "/u_ui/u-ui/react-list": "Lista",
+    "/u_ui/u-ui/react-tooltip": "Tooltip"
   }
 }

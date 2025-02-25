@@ -156,6 +156,9 @@ export * from './Typography';
 export { default as useMediaQuery } from './useMediaQuery';
 export * from './useMediaQuery';
 
+export { default as Zoom } from './Zoom';
+export * from './Zoom';
+
 // createFilterOptions is exported from Autocomplete
 
 

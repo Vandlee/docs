@@ -1,0 +1,5 @@
+<Tooltip title="No tienes permiso para hacer esto" followCursor>
+  <Box sx={{ bgcolor: 'text.disabled', color: 'background.paper', p: 2 }}>
+    Acción deshabilitada
+  </Box>
+</Tooltip>

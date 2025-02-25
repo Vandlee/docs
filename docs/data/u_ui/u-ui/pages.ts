@@ -39,6 +39,7 @@ const pages: UshiiPage[] = [
           { pathname: '/u_ui/u-ui/react-chip' },
           { pathname: '/u_ui/u-ui/react-divider' },
           { pathname: '/u_ui/u-ui/react-list' },
+          { pathname: '/u_ui/u-ui/react-tooltip' },
         ]
       }
     ]

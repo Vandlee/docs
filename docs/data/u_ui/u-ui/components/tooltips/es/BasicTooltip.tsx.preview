@@ -1,0 +1,5 @@
+<Tooltip title="Eliminar">
+  <IconButton>
+    <DeleteIcon />
+  </IconButton>
+</Tooltip>

@@ -1,0 +1,3 @@
+<Tooltip title="Añadir" disableInteractive>
+  <Button>No interactivo</Button>
+</Tooltip>
