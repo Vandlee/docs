@@ -72,6 +72,7 @@ export function DeferredAppSearch() {
     setMounted(true);
   }, []);
 
+  /* Suspense isn't supported for SSR yet */
   return mounted ? (
     <React.Suspense fallback={<Box sx={sx} />}>
       <AppSearch sx={sx} />
@@ -87,6 +88,7 @@ const RootDiv = styled('div')(({ theme }) => {
     ...theme.applyDarkStyles({
       background: (theme.vars || theme).palette.primaryDark[900],
     }),
+    // TODO: Should be handled by the main component
   };
 });
 

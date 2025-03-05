@@ -20,6 +20,11 @@
     "/u_ui/u-ui/react-chip": "Chip",
     "/u_ui/u-ui/react-divider": "Separador",
     "/u_ui/u-ui/react-list": "Lista",
-    "/u_ui/u-ui/react-tooltip": "Tooltip"
+    "/u_ui/u-ui/react-tooltip": "Tooltip",
+    "/u_ui/u-ui/react-typography": "Tipografía",
+    "feedback": "Retroalimentación",
+    "/u_ui/u-ui/react-alert": "Alerta",
+    "/u_ui/u-ui/react-backdrop": "Backdrop",
+    "/u_ui/u-ui/react-progress": "Progreso"
   }
 }

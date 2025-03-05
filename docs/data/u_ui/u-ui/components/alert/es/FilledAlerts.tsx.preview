@@ -1,0 +1,12 @@
+<Alert variant="filled" severity="success">
+  Esta es una Alerta de éxito.
+</Alert>
+<Alert variant="filled" severity="info">
+  Esta es una Alerta de información
+</Alert>
+<Alert variant="filled" severity="warning">
+  Esta es una Alerta de advertencia.
+</Alert>
+<Alert variant="filled" severity="error">
+  Esta es una Alerta de error.
+</Alert>

@@ -55,6 +55,25 @@ export default class MyDocument extends Document {
           />
           <link rel="shortcut icon" href="/static/favicon.ico" />
           {/* iOS Icon */}
+          {/* SEO */}
+          <link
+            rel="canonical"
+            href={`https://docs.u-shii.com${
+              userLanguage === 'es' ? '' : `/${userLanguage}`
+            }${canonicalAsServer}`}
+          />
+          <link rel="alternate" href={`https://docs.u-shii.com${canonicalAsServer}`} hrefLang="x-default" />
+          {/*
+            Preconnect allows the browser to setup early connections before an HTTP request
+            is actually sent to the server.
+            This includes DNS lookups, TLS negotiations, TCP handshakes.
+          */}
+          <link href="https://fonts.gstatic.com" rel="preconnect" crossOrigin="anonymous" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap"
+            rel="stylesheet"
+          />
           {/* =========== Font preload (prevent font flash) =========== */}
           <link
             rel="preload"

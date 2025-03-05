@@ -19,7 +19,7 @@ export interface CircularProgressProps
    * @default 'primary'
    */
   color?: OverridableStringUnion<
-    'primary' | 'secondary' | 'error' | 'info' | 'success' | 'warning' | 'inherit',
+    'primary' | 'secondary' | 'accent' | 'neutral' | 'error' | 'info' | 'success' | 'warning' | 'inherit',
     CircularProgressPropsColorOverrides
   >;
   /**
@@ -56,6 +56,11 @@ export interface CircularProgressProps
    * @default 'indeterminate'
    */
   variant?: 'determinate' | 'indeterminate';
+  /**
+   * If `false`, rounded corners are disabled.
+   * @default true
+   */
+  rounded?: boolean;
 }
 
 /**

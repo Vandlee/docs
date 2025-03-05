@@ -66,6 +66,7 @@ export default function RichMarkdownElement(props) {
   }
 
   if (renderedMarkdownOrDemo.type === 'codeblock') {
+    console.log(renderedMarkdownOrDemo.data)
     return (
       <Wrapper {...wrapperProps}>
         <HighlightedCodeWithTabs
@@ -76,17 +77,6 @@ export default function RichMarkdownElement(props) {
         />
       </Wrapper>
     );
-  }
-
-  
-  if (renderedMarkdownOrDemo.codesandbox) {
-    return (
-      <Wrapper {...wrapperProps}>
-        <iframe 
-          style={{ width: '100%', aspectRatio: '16 / 9', border: 0, borderRadius: 8, overflow: 'hidden'}} 
-          src={`https://codesandbox.io/embed/${renderedMarkdownOrDemo.codesandbox}?view=split+%2B+preview&hidenavigation=1`} />
-      </Wrapper>
-    )
   }
 
   const name = renderedMarkdownOrDemo.demo;

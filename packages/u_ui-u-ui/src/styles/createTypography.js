@@ -5,9 +5,10 @@ function round(value) {
 }
 
 const caseAllCaps = {
-  textTransform: 'initial',
+  textTransform: 'uppercase',
 };
 const defaultFontFamily = '"Quicksand", "Helvetica", "Arial", sans-serif';
+const robotoFontFamily = '"Roboto", "Helvetica", "Arial", sans-serif';
 
 /**
  * @see @link{https://m2.material.io/design/typography/the-type-system.html}
@@ -18,9 +19,9 @@ export default function createTypography(palette, typography) {
     fontFamily = defaultFontFamily,
     // The default font size of the Material Specification.
     fontSize = 14, // px
-    fontWeightLight = 400,
-    fontWeightRegular = 500,
-    fontWeightMedium = 600,
+    fontWeightLight = 300,
+    fontWeightRegular = 400,
+    fontWeightMedium = 500,
     fontWeightBold = 700,
     // Tell MUI what's the font-size on the html element.
     // 16px is the default font-size used by browsers.
@@ -43,8 +44,8 @@ export default function createTypography(palette, typography) {
 
   const coef = fontSize / 14;
   const pxToRem = pxToRem2 || ((size) => `${(size / htmlFontSize) * coef}rem`);
-  const buildVariant = (fontWeight, size, lineHeight, letterSpacing, casing) => ({
-    fontFamily,
+  const buildVariant = (fontWeight, size, lineHeight, letterSpacing, casing, fontFamily) => ({
+    fontFamily: fontFamily || defaultFontFamily,
     fontWeight,
     fontSize: pxToRem(size),
     // Unitless following https://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
@@ -59,19 +60,19 @@ export default function createTypography(palette, typography) {
   });
 
   const variants = {
-    h1: buildVariant(fontWeightLight, 96, 1.167, -1.5),
-    h2: buildVariant(fontWeightLight, 60, 1.2, -0.5),
-    h3: buildVariant(fontWeightRegular, 48, 1.167, 0),
-    h4: buildVariant(fontWeightRegular, 34, 1.235, 0.25),
+    h1: buildVariant(fontWeightLight, 98, 1.167, -1.5),
+    h2: buildVariant(fontWeightLight, 61, 1.2, -0.5),
+    h3: buildVariant(fontWeightRegular, 49, 1.167, 0),
+    h4: buildVariant(fontWeightRegular, 35, 1.235, 0.25),
     h5: buildVariant(fontWeightRegular, 24, 1.334, 0),
     h6: buildVariant(fontWeightMedium, 20, 1.6, 0.15),
     subtitle1: buildVariant(fontWeightRegular, 16, 1.75, 0.15),
     subtitle2: buildVariant(fontWeightMedium, 14, 1.57, 0.1),
-    body1: buildVariant(fontWeightRegular, 16, 1.5, 0.15),
-    body2: buildVariant(fontWeightRegular, 14, 1.43, 0.15),
-    button: buildVariant(fontWeightMedium, 14, 1.75, 0.4, caseAllCaps),
-    caption: buildVariant(fontWeightRegular, 12, 1.66, 0.4),
-    overline: buildVariant(fontWeightRegular, 12, 2.66, 1, caseAllCaps),
+    body1: buildVariant(fontWeightRegular, 16, 1.5, 0.5, undefined, robotoFontFamily),
+    body2: buildVariant(fontWeightRegular, 14, 1.43, 0.25, undefined, robotoFontFamily),
+    button: buildVariant(fontWeightMedium, 14, 1.75, 1.25, caseAllCaps, robotoFontFamily),
+    caption: buildVariant(fontWeightRegular, 12, 1.66, 0.4, undefined, robotoFontFamily),
+    overline: buildVariant(fontWeightRegular, 10, 2.66, 1.5, caseAllCaps, robotoFontFamily),
     // TODO v6: Remove handling of 'inherit' variant from the theme as it is already handled in Material UI's Typography component. Also, remember to remove the associated types.
     inherit: {
       fontFamily: 'inherit',

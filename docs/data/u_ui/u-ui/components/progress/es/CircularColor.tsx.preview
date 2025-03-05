@@ -1,0 +1,5 @@
+<CircularProgress color="secondary" />
+<CircularProgress color="accent" />
+<CircularProgress color="neutral" />
+<CircularProgress color="success" />
+<CircularProgress color="inherit" />

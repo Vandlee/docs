@@ -1,0 +1,3 @@
+<Alert severity="success" color="warning">
+  Esta es una Alerta de éxito con colores de advertencia.
+</Alert>

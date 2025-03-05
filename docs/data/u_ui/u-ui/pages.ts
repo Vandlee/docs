@@ -40,6 +40,17 @@ const pages: UshiiPage[] = [
           { pathname: '/u_ui/u-ui/react-divider' },
           { pathname: '/u_ui/u-ui/react-list' },
           { pathname: '/u_ui/u-ui/react-tooltip' },
+          { pathname: '/u_ui/u-ui/react-typography' },
+        ]
+      },
+      {
+        pathname: "/u_ui/u-ui/components/feedback",
+        subheader: 'feedback',
+        newFeature: true,
+        children: [
+          { pathname: '/u_ui/u-ui/react-alert' },
+          { pathname: '/u_ui/u-ui/react-backdrop' },
+          { pathname: '/u_ui/u-ui/react-progress' },
         ]
       }
     ]

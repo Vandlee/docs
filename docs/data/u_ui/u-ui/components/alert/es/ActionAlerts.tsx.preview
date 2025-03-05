@@ -1,0 +1,13 @@
+<Alert severity="warning" onClose={() => {}}>
+  Esta alerta muestra el icono de cierre predeterminado.
+</Alert>
+<Alert
+  severity="success"
+  action={
+    <Button color="inherit" size="small">
+      DESHACER
+    </Button>
+  }
+>
+  Esta Alerta usa un componente Button para su acción.
+</Alert>

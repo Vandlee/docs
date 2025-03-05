@@ -1,0 +1,13 @@
+<Alert icon={<CheckIcon fontSize="inherit" />} severity="success">
+  Esta es una Alerta de éxito con un icono personalizado.
+</Alert>
+<Alert icon={false} severity="success">
+  Esta es una Alerta de éxito sin icono.
+</Alert>
+<Alert
+  iconMapping={{
+    success: <CheckCircleOutlineIcon fontSize="inherit" />,
+  }}
+>
+  Esta es una Alerta de éxito que usa `iconMapping` para anular el icono predeterminado.
+</Alert>

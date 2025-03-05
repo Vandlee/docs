@@ -7,7 +7,7 @@ const content = [
     {
         title: "Installation",
         description: "Add u-ui to your project with a few commands.",
-        link: '/u-ui/getting-started/installation/'
+        link: '/u_ui/u-ui/getting-started/installation/'
     }
 ]
 

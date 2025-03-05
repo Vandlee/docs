@@ -173,6 +173,8 @@ function prepareMarkdown(config) {
         const codeblock = getCodeblock(content);
 
         if (codeblock) {
+          console.log('codeblock', content)
+          console.log('codeblock-cosnst', codeblock)
           return codeblock;
         }
 

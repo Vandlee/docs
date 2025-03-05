@@ -17,7 +17,6 @@ const circularRotateKeyframe = keyframes`
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }
@@ -25,18 +24,18 @@ const circularRotateKeyframe = keyframes`
 
 const circularDashKeyframe = keyframes`
   0% {
-    stroke-dasharray: 1px, 200px;
+    stroke-dasharray: 90px, 200px;
     stroke-dashoffset: 0;
   }
 
   50% {
-    stroke-dasharray: 100px, 200px;
-    stroke-dashoffset: -15px;
+    stroke-dasharray: 90px, 200px;
+    stroke-dashoffset: 0;
   }
 
   100% {
-    stroke-dasharray: 1px, 200px;
-    stroke-dashoffset: -126px;
+    stroke-dasharray: 90px, 200px;
+    stroke-dashoffset: 0;
   }
 `;
 
@@ -46,14 +45,14 @@ const circularDashKeyframe = keyframes`
 const rotateAnimation =
   typeof circularRotateKeyframe !== 'string'
     ? css`
-        animation: ${circularRotateKeyframe} 1.4s linear infinite;
+        animation: ${circularRotateKeyframe} .625s linear infinite;
       `
     : null;
 
 const dashAnimation =
   typeof circularDashKeyframe !== 'string'
     ? css`
-        animation: ${circularDashKeyframe} 1.4s ease-in-out infinite;
+        animation: ${circularDashKeyframe} .625s ease-in-out infinite;
       `
     : null;
 
@@ -145,6 +144,14 @@ const CircularProgressSVG = styled('svg', {
             transition: theme.transitions.create('stroke-dashoffset'),
           },
         },
+        { 
+          props: {
+            rounded: 'true',
+          },
+          style: {
+            strokeLinecap: 'round',
+          }
+        },
         {
           props: {
             variant: 'indeterminate',
@@ -185,6 +192,7 @@ const CircularProgressSVG = styled('svg', {
       thickness = 3.6,
       value = 0,
       variant = 'indeterminate',
+      rounded = 'true',
       ...other
     } = props;
   
@@ -196,6 +204,7 @@ const CircularProgressSVG = styled('svg', {
       thickness,
       value,
       variant,
+      rounded
     };
   
     const classes = useUtilityClasses(ownerState);
@@ -262,7 +271,7 @@ const CircularProgressSVG = styled('svg', {
      * @default 'primary'
      */
     color: PropTypes /* @typescript-to-proptypes-ignore */.oneOfType([
-      PropTypes.oneOf(['inherit', 'primary', 'secondary', 'error', 'info', 'success', 'warning']),
+      PropTypes.oneOf(['inherit', 'primary', 'secondary', 'accent', 'neutral', 'error', 'info', 'success', 'warning']),
       PropTypes.string,
     ]),
     /**
@@ -316,6 +325,11 @@ const CircularProgressSVG = styled('svg', {
      * @default 'indeterminate'
      */
     variant: PropTypes.oneOf(['determinate', 'indeterminate']),
+    /**
+     * If `false`, rounded corners are disabled.
+     * @default true
+     */
+    rounded: PropTypes.bool,
   };
   
   export default CircularProgress;

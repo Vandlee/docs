@@ -17,6 +17,9 @@ import createSimplePaletteValueFilter from '../utils/createSimplePaletteValueFil
 import buttonClasses, { getButtonUtilityClass } from './buttonClasses';
 import ButtonGroupContext from '../ButtonGroup/ButtonGroupContext';
 import ButtonGroupButtonContext from '../ButtonGroup/ButtonGroupButtonContext';
+import Collapse from '../Collapse';
+import Grow from '../Grow';
+import Zoom from '../Zoom';
 
 const useUtilityClasses = (ownerState) => {
   const { color, disableElevation, fullWidth, size, variant, loading, loadingPosition, classes } = 
@@ -476,7 +479,6 @@ const ButtonLoadingIndicator = styled('span', {
   slot: 'LoadingIndicator',
   overridesResolver: (props, styles) => styles.loadingIndicator,
 })(({ theme }) => ({
-  display: 'none',
   position: 'absolute',
   visibility: 'visible',
   variants: [
@@ -585,7 +587,7 @@ const Button = React.forwardRef(function Button(inProps, ref) {
     focusVisibleClassName,
     fullWidth = false,
     id: idProp,
-    loading = null,
+    loading = false,
     loadingIndicator: loadingIndicatorProp,
     loadingPosition = 'center',
     size = 'medium',
@@ -618,26 +620,30 @@ const Button = React.forwardRef(function Button(inProps, ref) {
 
   const classes = useUtilityClasses(ownerState);
 
-  const startIcon = (startIconProp || (loading && loadingPosition === 'start')) && (
-    <ButtonStartIcon className={classes.startIcon} ownerState={ownerState}>
-      {startIconProp || (
-        <ButtonLoadingIconPlaceholder
-          className={classes.loadingIconPlaceholder}
-          ownerState={ownerState}
-        />
-      )}
-    </ButtonStartIcon>
+  const startIcon = (
+    <Collapse timeout='auto' sx={{ height: '1.5em'}} orientation='horizontal' in={startIconProp || (loading && loadingPosition === 'start')} unmountOnExit>
+      <ButtonStartIcon className={classes.startIcon} ownerState={ownerState}>
+        {startIconProp || (
+          <ButtonLoadingIconPlaceholder
+            className={classes.loadingIconPlaceholder}
+            ownerState={ownerState}
+          />
+        )}
+      </ButtonStartIcon>
+    </Collapse>
   );
 
-  const endIcon = (endIconProp || (loading && loadingPosition === 'end')) && (
-    <ButtonEndIcon className={classes.endIcon} ownerState={ownerState}>
-      {endIconProp || (
-        <ButtonLoadingIconPlaceholder
-          className={classes.loadingIconPlaceholder}
-          ownerState={ownerState}
-        />
-      )}
-    </ButtonEndIcon>
+  const endIcon = (
+    <Collapse timeout='auto' sx={{ height: '1.5em' }} orientation='horizontal' in={endIconProp || (loading && loadingPosition === 'end')} unmountOnExit>
+      <ButtonEndIcon className={classes.endIcon} ownerState={ownerState}>
+        {endIconProp || (
+          <ButtonLoadingIconPlaceholder
+            className={classes.loadingIconPlaceholder}
+            ownerState={ownerState}
+          />
+        )}
+      </ButtonEndIcon>
+    </Collapse>
   );
 
   const positionClassName = buttonGroupButtonContextPositionClassName || '';
@@ -646,11 +652,11 @@ const Button = React.forwardRef(function Button(inProps, ref) {
     typeof loading === 'boolean' ? (
       // use plain HTML span to minimize the runtime overhead
       <span className={classes.loadingWrapper} style={{ display: 'contents' }}>
-        {loading && (
-          <ButtonLoadingIndicator className={classes.loadingIndicator} ownerState={ownerState}>
-            {loadingIndicator}
-          </ButtonLoadingIndicator>
-        )}
+        <ButtonLoadingIndicator className={classes.loadingIndicator} ownerState={ownerState}>
+          <Zoom in={loading} unmountOnExit>
+            <div style={{ display: 'flex', alignItems: 'center'}}>{loadingIndicator}</div>
+          </Zoom>
+        </ButtonLoadingIndicator>
       </span>
     ) : null;
   

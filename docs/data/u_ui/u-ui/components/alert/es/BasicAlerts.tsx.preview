@@ -1,0 +1,4 @@
+<Alert severity="success">Esta es una Alerta de éxito.</Alert>
+<Alert severity="info">Esta es una Alerta de información</Alert>
+<Alert severity="warning">Esta es una Alerta de advertencia.</Alert>
+<Alert severity="error">Esta es una Alerta de error.</Alert>

@@ -229,8 +229,6 @@ function getCodeblock(content) {
   };
 }
 
-
-
 function getFeatureList(content) {
   if (!content.startsWith('<featureList')) {
     return undefined;
