@@ -271,7 +271,7 @@ const CircularProgressSVG = styled('svg', {
      * @default 'primary'
      */
     color: PropTypes /* @typescript-to-proptypes-ignore */.oneOfType([
-      PropTypes.oneOf(['inherit', 'primary', 'secondary', 'accent', 'neutral', 'error', 'info', 'success', 'warning']),
+      PropTypes.oneOf(['inherit', 'primary', 'secondary', 'contrast', 'neutral', 'error', 'info', 'success', 'warning']),
       PropTypes.string,
     ]),
     /**

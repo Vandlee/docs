@@ -621,7 +621,7 @@ const Button = React.forwardRef(function Button(inProps, ref) {
   const classes = useUtilityClasses(ownerState);
 
   const startIcon = (
-    <Collapse timeout='auto' sx={{ height: '1.5em'}} orientation='horizontal' in={startIconProp || (loading && loadingPosition === 'start')} unmountOnExit>
+    <Collapse timeout='auto' sx={{ height: '1.25em'}} orientation='horizontal' in={startIconProp || (loading && loadingPosition === 'start')} unmountOnExit>
       <ButtonStartIcon className={classes.startIcon} ownerState={ownerState}>
         {startIconProp || (
           <ButtonLoadingIconPlaceholder
@@ -634,7 +634,7 @@ const Button = React.forwardRef(function Button(inProps, ref) {
   );
 
   const endIcon = (
-    <Collapse timeout='auto' sx={{ height: '1.5em' }} orientation='horizontal' in={endIconProp || (loading && loadingPosition === 'end')} unmountOnExit>
+    <Collapse timeout='auto' sx={{ height: '1.25em' }} orientation='horizontal' in={endIconProp || (loading && loadingPosition === 'end')} unmountOnExit>
       <ButtonEndIcon className={classes.endIcon} ownerState={ownerState}>
         {endIconProp || (
           <ButtonLoadingIconPlaceholder
