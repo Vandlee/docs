@@ -105,7 +105,7 @@ const NavItem = styled(Link, {
         theme.applyDarkStyles({
             '&:hover': {
                 borderLeftColor: (theme.vars || theme).palette.grey[500],
-                color: (theme.vars || theme).palette.grey[200],
+                color: (theme.vars || theme).palette.grey[100],
             },
             variants: [
                 {

@@ -1,6 +1,6 @@
 'use client';
 import PropTypes from "prop-types";
-import { createGrid as createGrid2 } from '@u-shii/system/Grid';
+import { createGrid as createGrid } from '@u-shii/system/Grid';
 import { SxProps, SystemProps } from '@u-shii/system';
 import { OverridableComponent, OverrideProps } from "@mui/types";
 import requirePropFactory from '../utils/requirePropFactory';
@@ -102,43 +102,43 @@ export interface GridBaseProps {
     wrap?: GridWrap;
   }
   
-  export interface Grid2TypeMap<P = {}, D extends React.ElementType = 'div'> {
+  export interface GridTypeMap<P = {}, D extends React.ElementType = 'div'> {
     props: P & GridBaseProps & { sx?: SxProps<Theme> } & SystemProps<Theme>;
     defaultComponent: D;
   }
   
-  export type Grid2Props<
-    D extends React.ElementType = Grid2TypeMap['defaultComponent'],
+  export type GridProps<
+    D extends React.ElementType = GridTypeMap['defaultComponent'],
     P = {
       component?: React.ElementType;
     },
-  > = OverrideProps<Grid2TypeMap<P, D>, D>;
+  > = OverrideProps<GridTypeMap<P, D>, D>;
   
   /**
    *
    * Demos:
    *
-   * - [Grid version 2](https://mui.com/material-ui/react-grid2/)
+   * - [Grid version 2](https://mui.com/material-ui/react-Grid/)
    *
    * API:
    *
-   * - [Grid2 API](https://mui.com/material-ui/api/grid-2/)
+   * - [Grid API](https://mui.com/material-ui/api/grid-2/)
    */
-  const Grid2 = createGrid2({
+  const Grid = createGrid({
     createStyledComponent: styled('div', {
-      name: 'UshiiGrid2',
+      name: 'UshiiGrid',
       slot: 'Root',
       overridesResolver: (props, styles) => {
         const { ownerState } = props;
         return [styles.root, ownerState.container && styles.container];
       },
     }),
-    componentname: 'UshiiGrid2',
-    useThemeProps: (inProps) => useDefaultProps({ props: inProps, name: 'UshiiGrid2' }),
+    componentName: 'UshiiGrid',
+    useThemeProps: (inProps) => useDefaultProps({ props: inProps, name: 'UshiiGrid' }),
     useTheme,
-  }) as OverridableComponent<Grid2TypeMap>;
+  }) as OverridableComponent<GridTypeMap>;
   
-  Grid2.propTypes /* remove-proptypes */ = {
+  Grid.propTypes /* remove-proptypes */ = {
     // ┌────────────────────────────── Warning ──────────────────────────────┐
     // │ These PropTypes are generated from the TypeScript type definitions. │
     // │ To update them, edit the TypeScript types and run `pnpm proptypes`. │
@@ -267,8 +267,8 @@ export interface GridBaseProps {
   } as any;
   
   if (process.env.NODE_ENV !== 'production') {
-    const Component = Grid2 as any;
-    const requireProp = requirePropFactory('Grid2', Component);
+    const Component = Grid as any;
+    const requireProp = requirePropFactory('Grid', Component);
     // eslint-disable-next-line no-useless-concat
     Component['propTypes' + ''] = {
       // eslint-disable-next-line react/forbid-foreign-prop-types
@@ -279,4 +279,4 @@ export interface GridBaseProps {
     };
 }
   
-export default Grid2;
+export default Grid;

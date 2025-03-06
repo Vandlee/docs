@@ -129,16 +129,17 @@ export const deepPurple = {
   900: '#311b92',
 };
 export const grey = {
-  50: 'hsl(215, 15%, 97%)',
-  100: 'hsl(215, 15%, 92%)',
-  200: 'hsl(215, 15%, 89%)',
-  300: 'hsl(215, 15%, 82%)',
-  400: 'hsl(215, 15%, 75%)',
-  500: 'hsl(215, 15%, 65%)',
-  600: 'hsl(215, 15%, 50%)',
-  700: 'hsl(215, 15%, 40%)',
-  800: 'hsl(215, 15%, 20%)',
-  900: 'hsl(225, 15%, 5%)',
+  50: 'hsl(0, 0%, 97%)',
+  100: 'hsl(0, 0%, 93%)',
+  200: 'hsl(0, 0%, 87%)',
+  300: 'hsl(0, 0%, 80%)',
+  main: 'hsl(0, 0%, 66%)',
+  400: 'hsl(0, 0%, 74%)',
+  500: 'hsl(0, 0%, 50%)',
+  600: 'hsl(0, 0%, 20%)',
+  700: 'hsl(0, 0%, 16%)',
+  800: 'hsl(0, 0%, 13%)',
+  900: 'hsl(0, 0%, 5%)',
 };
 export const error = {
   50: 'hsl(355, 98%, 97%)',
@@ -242,8 +243,8 @@ export const getDesignTokens = (mode: 'light' | 'dark') =>
           dark: deepPurple[300],
         }),
       },
-      divider: mode === 'dark' ? alpha(grey[600], .4) : grey[100],
-      primaryDark: blueDark,
+      divider: mode === 'dark' ? alpha(grey[400], .2) : grey[300],
+      primaryDark: grey,
       mode,
       ...(mode === 'dark' && {
         background: {
@@ -261,9 +262,9 @@ export const getDesignTokens = (mode: 'light' | 'dark') =>
           tertiary: grey[700],
         }),
         ...(mode === 'dark' && {
-          primary: '#fff',
-          secondary: grey[400],
-          tertiary: grey[500],
+          primary: grey[50],
+          secondary: grey[100],
+          tertiary: grey[200],
         }),
       },
       grey: {
@@ -374,6 +375,7 @@ export const getDesignTokens = (mode: 'light' | 'dark') =>
         letterSpacing: 0,
       },
       body2: {
+        fontFamily: ['"Quicksand"', ...systemFont].join(','),
         fontSize: defaultTheme.typography.pxToRem(14),
         lineHeight: 21 / 14,
         letterSpacing: 0,

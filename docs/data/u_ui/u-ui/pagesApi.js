@@ -48,7 +48,6 @@ module.exports = [
   { pathname: '/u_ui/u-ui/api/form-label' },
   { pathname: '/u_ui/u-ui/api/global-styles' },
   { pathname: '/u_ui/u-ui/api/grid' },
-  { pathname: '/u_ui/u-ui/api/grid-2' },
   { pathname: '/u_ui/u-ui/api/grow' },
   { pathname: '/u_ui/u-ui/api/hidden' },
   { pathname: '/u_ui/u-ui/api/icon' },

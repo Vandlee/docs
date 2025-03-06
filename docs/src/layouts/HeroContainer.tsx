@@ -103,10 +103,11 @@ export default function HeroContainer(props: HeroContainerProps) {
         >
           <Grid container sx={{ alignItems: 'center', height: '100%', mx: 'auto' }}>
             <Grid
-              item
-              xs={12}
-              md={7}
-              lg={6}
+              size={{
+                xs: 12,
+                md: 7,
+                lg: 6
+              }}
               sx={{
                 display: { xs: 'flex', md: 'block' },
                 minHeight: { xs: 500, sm: 700, md: 'initial' },
@@ -118,7 +119,14 @@ export default function HeroContainer(props: HeroContainerProps) {
             >
               {left}
             </Grid>
-            <Grid item xs={12} md={5} lg={6} sx={{ maxHeight: '100%' }}>
+            <Grid 
+              size={{
+                xs: 12,
+                md: 5,
+                lg: 6
+              }}
+              sx={{ maxHeight: '100%' }}
+            >
               {renderRightWrapper({
                 height: {
                   xs: 'initial',
@@ -150,13 +158,20 @@ export default function HeroContainer(props: HeroContainerProps) {
           container
           sx={{ alignItems: 'center', flexWrap: 'nowrap', height: '100%', mx: 'auto' }}
         >
-          <Grid item md={7} lg={6} sx={{ m: 'auto' }}>
+          <Grid 
+            size={{
+              md: 7,
+              lg:6
+            }} 
+            sx={{ m: 'auto' }}
+          >
             {left}
           </Grid>
           <Grid
-            item
-            md={5}
-            lg={6}
+            size={{
+              md: 5,
+              lg: 6,
+            }}
             sx={{ maxHeight: '100%', display: { xs: 'none', md: 'initial' } }}
           >
             {renderRightWrapper()}

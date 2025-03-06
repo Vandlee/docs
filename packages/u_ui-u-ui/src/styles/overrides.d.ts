@@ -62,7 +62,6 @@ import { FormHelperTextClassKey } from '../FormHelperText';
 import { FormLabelClassKey } from '../FormLabel';
 */
 import { GridClassKey } from '../Grid';
-import { Grid2ClassKey } from '../Grid2';
 import { IconButtonClassKey } from '../IconButton';
 /*
 import { IconClassKey } from '../Icon';
@@ -240,7 +239,6 @@ export interface ComponentNameToClassKey {
   UshiiFormLabel: FormLabelClassKey;
   */
   UshiiGrid: GridClassKey;
-  UshiiGrid2: Grid2ClassKey;
   /*
   UshiiIcon: IconClassKey;
   */

@@ -94,7 +94,7 @@ module.exports = function getBabelConfig(api) {
       },
     ],
     [
-      '@mui/internal-babel-plugin-minify-errors',
+      '@u-shii/internal-babel-plugin-minify-errors',
       {
         missingError,
         errorCodesPath,

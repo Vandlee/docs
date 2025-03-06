@@ -66,7 +66,6 @@ export default function RichMarkdownElement(props) {
   }
 
   if (renderedMarkdownOrDemo.type === 'codeblock') {
-    console.log(renderedMarkdownOrDemo.data)
     return (
       <Wrapper {...wrapperProps}>
         <HighlightedCodeWithTabs
@@ -118,6 +117,7 @@ export default function RichMarkdownElement(props) {
       mode={theme.palette.mode}
       demo={{
         raw: demo.raw,
+        type: demo.type,
         js: demoComponents[demo.module] ?? noComponent(demo.module),
         scope: demos.scope,
         jsxPreview: demo.jsxPreview,

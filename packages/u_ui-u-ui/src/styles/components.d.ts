@@ -244,11 +244,6 @@ export interface Components<Theme = unknown> {
     styleOverrides?: ComponentsOverrides<Theme>['UshiiGrid'];
     variants?: ComponentsVariants<Theme>['UshiiGrid'];
   };
-  UshiiGrid2?: {
-    defaultProps?: ComponentsProps['UshiiGrid2'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiGrid2'];
-    variants?: ComponentsVariants<Theme>['UshiiGrid2'];
-  };
   /*
   UshiiImageList?: {
     defaultProps?: ComponentsProps['UshiiImageList'];

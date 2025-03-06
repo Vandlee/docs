@@ -1,0 +1,7 @@
+<Button onClick={handleClick}>Abrir Snackbar</Button>
+<Snackbar
+  open={open}
+  autoHideDuration={5000}
+  onClose={handleClose}
+  message="Este Snackbar se cerrará en 5 segundos."
+/>

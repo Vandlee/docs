@@ -1,0 +1,11 @@
+<Button onClick={handleClick(GrowTransition)}>Transición de crecimiento</Button>
+<Button onClick={handleClick(Fade)}>Transición de desvanecimienton</Button>
+<Button onClick={handleClick(SlideTransition)}>Transición de deslizamiento</Button>
+<Snackbar
+  open={state.open}
+  onClose={handleClose}
+  TransitionComponent={state.Transition}
+  message="Me encantan los snacks"
+  key={state.Transition.name}
+  autoHideDuration={1200}
+/>

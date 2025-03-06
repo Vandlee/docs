@@ -56,7 +56,6 @@ import { FormHelperTextProps } from '../FormHelperText';
 import { FormLabelProps } from '../FormLabel';
 */
 import { GridProps } from '../Grid';
-import { Grid2Props } from '../Grid2';
 import { IconButtonProps } from '../IconButton';
 /*
 import { IconProps } from '../Icon';
@@ -215,7 +214,6 @@ export interface ComponentsPropsList {
   UshiiFormLabel: FormLabelProps;
   */
   UshiiGrid: GridProps;
-  UshiiGrid2: Grid2Props;
   /*
   UshiiImageList: ImageListProps;
   UshiiImageListItem: ImageListItemProps;

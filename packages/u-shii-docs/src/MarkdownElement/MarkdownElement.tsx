@@ -689,7 +689,7 @@ const Root = styled('div')(
         },
       },
       '& p, & ul, & ol': {
-        color: `var(--ushiidocs-palette-grey-400, ${darkTheme.palette.grey[400]})`,
+        color: `var(--ushiidocs-palette-grey-200, ${darkTheme.palette.grey[200]})`,
       },
       '& h1 code, & h2 code, & h3 code': {
         color: `var(--ushiidocs-palette-grey-100, ${darkTheme.palette.grey[100]})`,

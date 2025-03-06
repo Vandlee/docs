@@ -226,6 +226,11 @@ export default function DemoToolbar(props) {
     if (codeVariant === CODE_VARIANTS.TS && hasTSVariant) {
       return CODE_VARIANTS.TS;
     }
+
+    if (codeVariant === CODE_VARIANTS.HTML) {
+      return CODE_VARIANTS.HTML;
+    }
+
     return CODE_VARIANTS.JS;
   };
 
@@ -404,36 +409,38 @@ export default function DemoToolbar(props) {
             {hasNonSystemDemos && (
               <Divider orientation='vertical' variant='middle' sx={{ mx: 1, height: '24px' }} />
             )}
-            <ToggleButtonGroup
-              sx={{ margin: '8px 0' }}
-              exclusive
-              value={renderedCodeVariant()}
-              onChange={handleCodeLanguageClick}
-            >
-              <ToggleButton
-                value={CODE_VARIANTS.JS}
-                aria-label={t('showJSSource')}
-                data-ga-event-category="demo"
-                data-ga-event-action="source-js"
-                data-ga-event-label={demo.gaLabel}
-                {...getControlProps(1)}
-                // eslint-disable-next-line material-ui/no-hardcoded-labels
-              >
-                JS
-              </ToggleButton>
-              <ToggleButton
-                value={CODE_VARIANTS.TS}
-                disabled={!hasTSVariant}
-                aria-label={t('showTSSource')}
-                data-ga-event-category="demo"
-                data-ga-event-action="source-ts"
-                data-ga-event-label={demo.gaLabel}
-                {...getControlProps(2)}
-                // eslint-disable-next-line material-ui/no-hardcoded-labels
-              >
-                TS
-              </ToggleButton>
-            </ToggleButtonGroup>
+              {codeVariant !== CODE_VARIANTS.HTML &&
+                <ToggleButtonGroup
+                  sx={{ margin: '8px 0' }}
+                  exclusive
+                  value={renderedCodeVariant()}
+                  onChange={handleCodeLanguageClick}
+                >
+                  <ToggleButton
+                    value={CODE_VARIANTS.JS}
+                    aria-label={t('showJSSource')}
+                    data-ga-event-category="demo"
+                    data-ga-event-action="source-js"
+                    data-ga-event-label={demo.gaLabel}
+                    {...getControlProps(1)}
+                    // eslint-disable-next-line material-ui/no-hardcoded-labels
+                  >
+                    JS
+                  </ToggleButton>
+                  <ToggleButton
+                    value={CODE_VARIANTS.TS}
+                    disabled={!hasTSVariant}
+                    aria-label={t('showTSSource')}
+                    data-ga-event-category="demo"
+                    data-ga-event-action="source-ts"
+                    data-ga-event-label={demo.gaLabel}
+                    {...getControlProps(2)}
+                    // eslint-disable-next-line material-ui/no-hardcoded-labels
+                  >
+                    TS
+                  </ToggleButton>
+                </ToggleButtonGroup>
+              }
           </Box>
         </Fade>
         <Box sx={{ ml: 'auto' }}>

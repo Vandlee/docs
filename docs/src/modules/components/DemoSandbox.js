@@ -82,6 +82,7 @@ FramedDemo.propTypes = {
 
 const Iframe = styled('iframe')(({ theme }) => ({
   backgroundColor: (theme.vars || theme).palette.background.default,
+  color: (theme.vars || theme).palette.text.primary,
   flexGrow: 1,
   height: 400,
   border: 0,

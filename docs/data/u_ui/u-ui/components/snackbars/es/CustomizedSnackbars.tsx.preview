@@ -1,0 +1,11 @@
+<Button onClick={handleClick}>Abrir Snackbar</Button>
+<Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+  <Alert
+    onClose={handleClose}
+    severity="success"
+    variant="filled"
+    sx={{ width: '100%' }}
+  >
+    ¡Esta es una Alerta de éxito dentro de un Snackbar!
+  </Alert>
+</Snackbar>

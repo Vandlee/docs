@@ -27,6 +27,7 @@ import { useUserLanguage, useTranslate } from '@u-shii/docs/i18n';
 import stylingSolutionMapping from 'docs/src/modules/utils/stylingSolutionMapping';
 import DemoToolbarRoot from 'docs/src/modules/components/DemoToolbarRoot';
 import { grey } from '@u-shii/docs/branding';
+import { useTheme } from '@u_ui/u-ui/styles';
 
 function trimLeadingSpaces(input = '') {
   return input.replace(/^\s+/gm, '');
@@ -41,7 +42,7 @@ function DemoToolbarFallback() {
 }
 
 function getDemoName(location) {
-  return location.endsWith('.js') || location.endsWith('.tsx')
+  return location.endsWith('.js') || location.endsWith('.tsx') || location.endsWith('.html')
     ? location.replace(/(.+?)(\w+)\.\w+$$/, '$2')
     : // the demos with multiple styling solution point to directory
       location.split('/').pop();
@@ -61,7 +62,17 @@ function useDemoData(codeVariant, demo, githubLocation, codeStyling) {
     }
 
     let codeOptions = {};
-    if (codeStyling === CODE_STYLING.SYSTEM) {
+
+    if (demo.type === CODE_VARIANTS.HTML.toLowerCase()) {
+      codeOptions = {
+        codeVariant: CODE_VARIANTS.HTML,
+        raw: demo.raw,
+        module: demo.module,
+        githubLocation: githubLocation.replace(/\.js$/, '.html'),
+        Component: null,
+        sourceLanguage: 'html'
+      }
+    } else if (codeStyling === CODE_STYLING.SYSTEM) {
       if (codeVariant === CODE_VARIANTS.TS && demo.rawTS) {
         codeOptions = {
           codeVariant: CODE_VARIANTS.TS,
@@ -148,6 +159,65 @@ function useDemoData(codeVariant, demo, githubLocation, codeStyling) {
   }, [canonicalAs, codeVariant, demo, githubLocation, userLanguage, codeStyling]);
 }
 
+const Iframe = styled('iframe')(({ theme }) => ({
+  backgroundColor: (theme.vars || theme).palette.background.default,
+  color: (theme.vars || theme).palette.text.primary,
+  flexGrow: 1,
+  border: 0,
+  boxShadow: (theme.vars || theme)?.shadows?.[1],
+}));
+
+const IframeLayout = ({ editorCode }) => {
+  const frameRef = React.useRef(null);
+  const theme = useTheme();
+
+  const applyStyles = () => {
+    const doc = frameRef.current?.contentDocument;
+    if (!doc) return;
+
+    const head = doc.head || doc.getElementsByTagName('head')[0];
+
+    // Eliminar estilos previos
+    let style = doc.getElementById('injected-styles');
+    if (style) {
+      style.innerHTML = `
+        body {
+          background-color: ${theme.palette.background.default};
+          color: ${theme.palette.text.primary};
+          font-family: Arial, sans-serif;
+          padding: 16px;
+        }
+      `;
+    } else {
+      // Crear el nuevo estilo si no existe
+      style = doc.createElement('style');
+      style.id = 'injected-styles';
+      style.innerHTML = `
+        body {
+          background-color: ${theme.palette.background.default};
+          color: ${theme.palette.text.primary};
+          font-family: Arial, sans-serif;
+          padding: 16px;
+        }
+      `;
+      head.appendChild(style);
+    }
+  };
+
+  // Actualiza el contenido del iframe sin recrearlo
+  React.useEffect(() => {
+    const doc = frameRef.current?.contentDocument;
+    if (!doc) return;
+
+    doc.body.innerHTML = editorCode.value; // Solo actualiza el contenido, no el iframe
+
+    applyStyles(); // Reaplicar estilos en cada actualización
+  }, [editorCode.value, theme]);
+
+  return <Iframe ref={frameRef} onLoad={applyStyles} />;
+};
+
+
 function useDemoElement({ demoData, editorCode, setDebouncedError, liveDemoActive }) {
   const debouncedSetError = React.useMemo(
     () => debounce(setDebouncedError, 300),
@@ -180,6 +250,12 @@ function useDemoElement({ demoData, editorCode, setDebouncedError, liveDemoActiv
     ),
     [demoData, debouncedSetError, editorCode.isPreview, editorCode.value],
   );
+
+  console.log('demoData', demoData)
+
+  if (demoData.codeVariant === CODE_VARIANTS.HTML) {
+    return <IframeLayout editorCode={editorCode} />
+  }
 
   // No need for a live environment if the code matches with the component rendered server-side.
   return editorCode.value === editorCode.initialEditorCode && liveDemoActive === false
@@ -520,6 +596,10 @@ export default function Demo(props) {
         demo.moduleTS === demo.module ? demoData.module.replace(/\.js$/, '.tsx') : demo.moduleTS;
     }
 
+    if (codeVariant === CODE_VARIANTS.HTML) {
+      demoModule = demoData.module
+    }
+
     return [{ module: demoModule, raw: demoData.raw }, ...demoData.relativeModules];
   }, [
     codeVariant,
@@ -556,16 +636,21 @@ export default function Demo(props) {
             tabIndex={-1}
           />
         </Wrapper>
-        <DemoSandbox
-          key={demoKey}
-          style={demoSandboxedStyle}
-          iframe={demoOptions.iframe}
-          usesCssVarsTheme={demoData.productId === 'joy-ui'}
-          name={demoName}
-          onResetDemoClick={resetDemo}
-        >
-          {demoElement}
-        </DemoSandbox>
+        {demoData.codeVariant === CODE_VARIANTS.HTML ?
+          demoElement
+          :
+          <DemoSandbox
+            key={demoKey}
+            style={demoSandboxedStyle}
+            iframe={demoOptions.iframe}
+            usesCssVarsTheme={demoData.productId === 'joy-ui'}
+            name={demoName}
+            onResetDemoClick={resetDemo}
+            type={demo}
+          >
+            {demoElement}
+          </DemoSandbox>
+        }
       </DemoRoot>
       {/* TODO: Wrapper shouldn't be needed, it should already be at the top of the docs page */}
       {demoOptions.hideToolbar ? null : (

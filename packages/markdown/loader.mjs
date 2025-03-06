@@ -224,7 +224,7 @@ export default async function demoLoader() {
 
   await Promise.all(
     demoNames.map(async (demoName) => {
-      const multipleDemoVersionsUsed = !demoName.endsWith('.js');
+      const multipleDemoVersionsUsed = !demoName.endsWith('.js' || '.html');
 
       // TODO: const moduleID = demoName;
       // The import paths currently use a completely different format.
@@ -236,6 +236,21 @@ export default async function demoLoader() {
 
       if (multipleDemoVersionsUsed) {
         moduleID = `${moduleID}/system/index.js`;
+      }
+
+      if (demoName.endsWith('.html')) {
+        const moduleFilePath = path.join(path.dirname(this.resourcePath), demoName);
+        this.addDependency(moduleFilePath);
+
+        const rawHTML = await fs.readFile(moduleFilePath, { encoding: 'utf8' });
+
+        demos[demoName] = {
+          module: demoName,
+          raw: rawHTML,
+          type: 'html',
+        };
+
+        return;
       }
 
       const moduleFilepath = path.join(
@@ -599,6 +614,9 @@ export default async function demoLoader() {
 
     ${Array.from(demoModuleIDs)
       .map((moduleID) => {
+        if (moduleID.endsWith('.html')) {
+          return `demos["${moduleID}"] = { raw: \`${demos[moduleID].raw}\`, type: 'html' };`;
+        }
         return `import ${moduleIDToJSIdentifier(moduleID)} from '${moduleID}';`;
       })
       .join('\n')}

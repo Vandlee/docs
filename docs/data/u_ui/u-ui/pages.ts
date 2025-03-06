@@ -30,7 +30,7 @@ const pages: UshiiPage[] = [
         ],
       },
       {
-        pathname: "/u-ui/components/data-display",
+        pathname: "/u_ui/u-ui/components/data-display",
         subheader: 'data-display',
         newFeature: true,
         children: [
@@ -51,6 +51,15 @@ const pages: UshiiPage[] = [
           { pathname: '/u_ui/u-ui/react-alert' },
           { pathname: '/u_ui/u-ui/react-backdrop' },
           { pathname: '/u_ui/u-ui/react-progress' },
+          { pathname: '/u_ui/u-ui/react-snackbar' },
+        ]
+      },
+      {
+        pathname: "/u_ui/u-ui/components/surfaces",
+        subheader: 'surfaces',
+        newFeature: true,
+        children: [
+          { pathname: '/u_ui/u-ui/react-app-bar', title: 'App Bar'}
         ]
       }
     ]

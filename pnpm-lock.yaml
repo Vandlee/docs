@@ -99,6 +99,15 @@ importers:
       '@typescript-eslint/parser':
         specifier: ^7.18.0
         version: 7.18.0(eslint@8.57.1)(typescript@5.7.3)
+      '@u-shii-internal/api-docs-builder':
+        specifier: workspace:^
+        version: link:packages/api-docs-builder
+      '@u-shii/internal-babel-plugin-minify-errors':
+        specifier: workspace:^
+        version: link:packages-internal/babel-plugin-minify-errors
+      '@u-shii/internal-babel-plugin-resolve-imports':
+        specifier: workspace:^
+        version: link:packages-internal/babel-plugin-resolve-imports
       '@u-shii/internal-docs-utils':
         specifier: workspace:^
         version: link:packages-internal/docs-utils
@@ -1087,7 +1096,7 @@ importers:
         version: 6.1.13(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
     publishDirectory: build
 
-  packages/u_ui-u-ui-nextjs:
+  packages/u-shii-ui-nextjs:
     dependencies:
       '@babel/runtime':
         specifier: ^7.26.7
@@ -1113,7 +1122,7 @@ importers:
         version: 19.0.0
     publishDirectory: build
 
-  packages/u_ui-u-ui-pigment-css:
+  packages/u-shii-ui-pigment-css:
     dependencies:
       '@babel/runtime':
         specifier: ^7.26.7
@@ -12178,7 +12187,7 @@ snapshots:
       '@babel/runtime': 7.26.7
       '@floating-ui/react-dom': 2.1.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@mui/types': 7.2.21(@types/react@19.0.8)
-      '@mui/utils': 6.2.0(@types/react@19.0.8)(react@19.0.0)
+      '@mui/utils': 6.4.1(@types/react@19.0.8)(react@19.0.0)
       '@popperjs/core': 2.11.8
       clsx: 2.1.1
       prop-types: 15.8.1
@@ -12204,7 +12213,7 @@ snapshots:
       '@mui/material': 6.4.1(@emotion/react@11.13.5(@types/react@19.0.8)(react@19.0.0))(@emotion/styled@11.13.5(@emotion/react@11.13.5(@types/react@19.0.8)(react@19.0.0))(@types/react@19.0.8)(react@19.0.0))(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@mui/system': 6.4.1(@emotion/react@11.13.5(@types/react@19.0.8)(react@19.0.0))(@emotion/styled@11.13.5(@emotion/react@11.13.5(@types/react@19.0.8)(react@19.0.0))(@types/react@19.0.8)(react@19.0.0))(@types/react@19.0.8)(react@19.0.0)
       '@mui/types': 7.2.21(@types/react@19.0.8)
-      '@mui/utils': 6.2.0(@types/react@19.0.8)(react@19.0.0)
+      '@mui/utils': 6.4.1(@types/react@19.0.8)(react@19.0.0)
       clsx: 2.1.1
       prop-types: 15.8.1
       react: 19.0.0

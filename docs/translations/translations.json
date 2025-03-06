@@ -25,6 +25,9 @@
     "feedback": "Retroalimentación",
     "/u_ui/u-ui/react-alert": "Alerta",
     "/u_ui/u-ui/react-backdrop": "Backdrop",
-    "/u_ui/u-ui/react-progress": "Progreso"
+    "/u_ui/u-ui/react-progress": "Progreso",
+    "/u_ui/u-ui/react-snackbar": "Snackbar",
+    "surfaces": "Superficies",
+    "/u_ui/u-ui/react-app-bar": "Barra de aplicación"
   }
 }

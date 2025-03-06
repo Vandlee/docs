@@ -65,9 +65,7 @@ export { default as Fade } from './Fade';
 export * from './Fade';
 
 export { default as Grid } from './Grid';
-
-export { default as Grid2 } from './Grid2';
-export * from './Grid2';
+export * from './Grid';
 
 export { default as Grow } from './Grow';
 export * from './Grow';
@@ -155,6 +153,9 @@ export * from './Typography';
 
 export { default as useMediaQuery } from './useMediaQuery';
 export * from './useMediaQuery';
+
+export { default as useScrollTrigger } from './useScrollTrigger';
+export * from './useScrollTrigger';
 
 export { default as Zoom } from './Zoom';
 export * from './Zoom';
