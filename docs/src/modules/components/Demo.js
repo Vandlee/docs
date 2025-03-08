@@ -336,7 +336,7 @@ const DemoRootUI = styled('div', {
       },
       style: {
         padding: theme.spacing(3),
-        backgroundColor: (theme.vars || theme).palette.background.paper,
+        backgroundColor: (theme.vars || theme).palette.background,
         border: `1px solid ${(theme.vars || theme).palette.divider}`,
         borderLeftWidth: 0,
         borderRightWidth: 0,
@@ -357,6 +357,19 @@ const DemoRootUI = styled('div', {
     },
     {
       props: {
+        bg: 'blackout',
+      },
+      style: {
+        padding: theme.spacing(3),
+        backgroundColor: alpha(theme.palette.grey[100], 1),
+        border: `1px solid ${(theme.vars || theme).palette.divider}`,
+        ...theme.applyDarkStyles({
+          backgroundColor: alpha(theme.palette.primaryDark[900], 1),
+        }),
+      }
+    },
+    {
+      props: {
         bg: true,
       },
       style: {
@@ -364,7 +377,7 @@ const DemoRootUI = styled('div', {
         backgroundColor: alpha(theme.palette.grey[50], 0.5),
         border: `1px solid ${(theme.vars || theme).palette.divider}`,
         ...theme.applyDarkStyles({
-          backgroundColor: alpha(theme.palette.primaryDark[700], 0.4),
+          backgroundColor: alpha(theme.palette.primaryDark[800], 1),
         }),
       },
     },

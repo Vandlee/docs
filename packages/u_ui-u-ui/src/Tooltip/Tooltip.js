@@ -163,14 +163,14 @@ const TooltipTooltip = styled('div', {
   memoTheme(({ theme }) => ({
     backgroundColor: theme.vars
       ? theme.vars.palette.Tooltip.bg
-      : alpha(theme.palette.grey[900], 0.92),
+      : alpha(theme.palette.grey[700], 0.92),
     borderRadius: (theme.vars || theme).shape.borderRadius,
-    color: (theme.vars || theme).palette.common.white,
+    color: (theme.vars || theme).palette.common.whiteText,
     fontFamily: theme.typography.fontFamily,
     padding: '4px 8px',
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: alpha((theme.vars || theme).palette.grey[800], .5),
+    borderColor: alpha((theme.vars || theme).palette.grey[500], .3),
     fontSize: theme.typography.pxToRem(13),
     maxWidth: 300,
     margin: 2,
@@ -282,7 +282,7 @@ const TooltipArrow = styled('span', {
     width: '1em',
     height: '0.71em' /* = width / sqrt(2) = (length of the hypotenuse) */,
     boxSizing: 'border-box',
-    color: theme.vars ? theme.vars.palette.Tooltip.bg : alpha(theme.palette.grey[800], 0.9),
+    color: theme.vars ? theme.vars.palette.Tooltip.bg : alpha(theme.palette.grey[600], 1),
     '&::before': {
       content: '""',
       margin: 'auto',

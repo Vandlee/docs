@@ -1,0 +1,2 @@
+<DemoPaper square={false}>Equinas redondeadas</DemoPaper>
+<DemoPaper square>Esquinas cuadradas</DemoPaper>

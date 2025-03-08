@@ -33,15 +33,15 @@ declare const grey: {
   /**
    * Preview: ![grey 700](https://mui.com/static/colors-preview/grey-700-24x24.png)
    */
-  700: '#616161';
+  700: 'hsl(0, 0%, 10%)';
   /**
    * Preview: ![grey 800](https://mui.com/static/colors-preview/grey-800-24x24.png)
    */
-  800: '#424242';
+  800: 'hsl(0, 0%, 5%)';
   /**
    * Preview: ![grey 900](https://mui.com/static/colors-preview/grey-900-24x24.png)
    */
-  900: '#212121';
+  900: '#080808';
   /**
    * Preview: ![grey A100](https://mui.com/static/colors-preview/grey-A100-24x24.png)
    */

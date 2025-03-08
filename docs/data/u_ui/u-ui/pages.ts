@@ -59,7 +59,9 @@ const pages: UshiiPage[] = [
         subheader: 'surfaces',
         newFeature: true,
         children: [
-          { pathname: '/u_ui/u-ui/react-app-bar', title: 'App Bar'}
+          { pathname: '/u_ui/u-ui/react-app-bar', title: 'App Bar'},
+          { pathname: '/u_ui/u-ui/react-card' },
+          { pathname: '/u_ui/u-ui/react-paper' },
         ]
       }
     ]

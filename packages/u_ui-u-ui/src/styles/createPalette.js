@@ -22,7 +22,7 @@ function getLight() {
       disabled: 'rgba(0, 0, 0, 0.38)',
     },
     // The color used to divide different elements.
-    divider: 'rgba(0, 0, 0, 0.12)',
+    divider: 'rgba(189, 189, 189, 1)',
     // The background colors used to style the surfaces.
     // Consistency between these values is important.
     background: {
@@ -61,7 +61,7 @@ function getDark() {
       disabled: 'rgba(255, 255, 255, 0.5)',
       icon: 'rgba(255, 255, 255, 0.5)',
     },
-    divider: 'rgba(255, 255, 255, 0.12)',
+    divider: 'rgba(128, 128, 128, 0.33)',
     background: {
       paper: common.black,
       default: common.black,
@@ -69,8 +69,8 @@ function getDark() {
     action: {
       active: common.white,
       hover: 'rgba(255, 255, 255, 0.08)',
-      hoverOpacity: 0.08,
-      selected: 'rgba(255, 255, 255, 0.16)',
+      hoverOpacity: 0.06,
+      selected: 'rgba(255, 255, 255, 0.14)',
       selectedOpacity: 0.16,
       disabled: 'rgba(255, 255, 255, 0.3)',
       disabledBackground: 'rgba(255, 255, 255, 0.12)',
@@ -120,14 +120,12 @@ function getDefaultSecondary(mode = 'light') {
       main: blue[200],
       light: blue[50],
       dark: blue[300],
-      text: blue[200],
     };
   }
   return {
-    main: blue[50],
+    main: blue[200],
     light: blue[300],
     dark: blue[100],
-    text: blue[800],
   };
 }
 
@@ -155,7 +153,7 @@ function getDefaultNeutral(mode = 'light') {
     };
   }
   return {
-    main: grey[50],
+    main: grey[500],
     light: grey[50],
     dark: grey[100],
   };

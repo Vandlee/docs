@@ -1,0 +1,2 @@
+<DemoPaper variant="elevation">Variante por defecto</DemoPaper>
+<DemoPaper variant="outlined">Variante delineada</DemoPaper>

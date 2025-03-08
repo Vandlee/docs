@@ -68,7 +68,7 @@ const NavItem = styled(Link, {
             borderLeft: `1px solid transparent`,
             display: 'block',
             fontSize: theme.typography.pxToRem(13),
-            fontWeight: theme.typography.fontWeightMedium,
+            fontWeight: theme.typography.fontWeightSemiBold,
             textOverflow: 'ellipsis',
             overflow: 'hidden',
             '&:hover': {
@@ -105,7 +105,7 @@ const NavItem = styled(Link, {
         theme.applyDarkStyles({
             '&:hover': {
                 borderLeftColor: (theme.vars || theme).palette.grey[500],
-                color: (theme.vars || theme).palette.grey[100],
+                color: (theme.vars || theme).palette.grey[50],
             },
             variants: [
                 {
@@ -115,7 +115,7 @@ const NavItem = styled(Link, {
                 {
                 props: ({ active }) => !active,
                     style: {
-                        color: (theme.vars || theme).palette.grey[500],
+                        color: (theme.vars || theme).palette.grey[200],
                     },
                 },
             ],

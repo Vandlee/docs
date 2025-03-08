@@ -130,16 +130,16 @@ export const deepPurple = {
 };
 export const grey = {
   50: 'hsl(0, 0%, 97%)',
-  100: 'hsl(0, 0%, 93%)',
-  200: 'hsl(0, 0%, 87%)',
-  300: 'hsl(0, 0%, 80%)',
-  main: 'hsl(0, 0%, 66%)',
-  400: 'hsl(0, 0%, 74%)',
-  500: 'hsl(0, 0%, 50%)',
+  100: 'hsl(0, 0%, 80%)',
+  200: 'hsl(0, 0%, 70%)',
+  300: 'hsl(0, 0%, 50%)',
+  main: 'hsl(0, 0%, 50%)',
+  400: 'hsl(0, 0%, 40%)',
+  500: 'hsl(0, 0%, 30%)',
   600: 'hsl(0, 0%, 20%)',
   700: 'hsl(0, 0%, 16%)',
-  800: 'hsl(0, 0%, 13%)',
-  900: 'hsl(0, 0%, 5%)',
+  800: 'hsl(0, 0%, 5%)',
+  900: 'hsl(0, 0%, 3%)',
 };
 export const error = {
   50: 'hsl(355, 98%, 97%)',
@@ -243,7 +243,7 @@ export const getDesignTokens = (mode: 'light' | 'dark') =>
           dark: deepPurple[300],
         }),
       },
-      divider: mode === 'dark' ? alpha(grey[400], .2) : grey[300],
+      divider: mode === 'dark' ? alpha(grey[300], .325) : grey[100],
       primaryDark: grey,
       mode,
       ...(mode === 'dark' && {
@@ -1077,7 +1077,7 @@ export function getThemedComponents(): ThemeOptions {
               backgroundColor: (theme.vars || theme).palette.primaryDark[900],
               ...(ownerState.variant === 'outlined' && {
                 borderColor: (theme.vars || theme).palette.primaryDark[700],
-                backgroundColor: alpha(theme.palette.primaryDark[800], 0.6),
+                backgroundColor: alpha(theme.palette.primaryDark[800], 1),
                 '&[href]': {
                   textDecorationLine: 'none',
                   boxShadow: `${alpha(theme.palette.primaryDark[700], 0.4)} 0 2px 0 inset, ${(theme.vars || theme).palette.common.black} 0 -2px 0 inset, ${(theme.vars || theme).palette.common.black} 0 1px 2px 0`,

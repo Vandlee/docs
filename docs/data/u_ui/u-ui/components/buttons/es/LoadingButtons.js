@@ -10,7 +10,7 @@ export default function LoadingButtons() {
         <Button loading variant="outlined">
           Enviar
         </Button>
-        <Button loading loadingIndicator="Loading…" variant="outlined">
+        <Button loading loadingIndicator="Cargando..." variant="outlined">
           Obtener datos
         </Button>
         <Button

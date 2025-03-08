@@ -21,7 +21,7 @@ const Root = styled('div')(
       lineHeight: 1.5, // Developers like when the code is dense.
       margin: theme.spacing(2, 'auto'),
       padding: theme.spacing(2),
-      backgroundColor: 'hsl(210, 25%, 9%)', // a special, one-off, color tailored for the code blocks using U-Shii's branding theme blue palette as the starting point. It has a less saturaded color but still maintaining a bit of the blue tint.
+      backgroundColor: 'hsl(0, 0%, 10%)', // a special, one-off, color tailored for the code blocks using U-Shii's branding theme blue palette as the starting point. It has a less saturaded color but still maintaining a bit of the blue tint.
       color: 'hsl(60, 30%, 96%)',
       colorScheme: 'dark',
       borderRadius: `var(--ushiidocs-shape-borderRadius, ${
