@@ -744,7 +744,7 @@ const Root = styled('div')(
         },
         '&.UshiiCallout-info': {
           color: `var(--ushiidocs-palette-grey-50, ${darkTheme.palette.grey[50]})`,
-          backgroundColor: alpha(darkTheme.palette.grey[700], 0.15),
+          backgroundColor: alpha(darkTheme.palette.grey[600], 0.4),
           borderColor: alpha(darkTheme.palette.grey[800], 0.5),
           '& strong': {
             color: `var(--ushiidocs-palette-primary-200, ${darkTheme.palette.primary[200]})`,

@@ -23,7 +23,7 @@ export interface DrawerProps extends StandardProps<ModalProps, 'open' | 'childre
   classes?: Partial<DrawerClasses>;
   /**
    * The elevation of the drawer.
-   * @default 16
+   * @default 2
    */
   elevation?: number;
   /**

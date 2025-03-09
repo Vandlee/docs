@@ -63,6 +63,13 @@ const pages: UshiiPage[] = [
           { pathname: '/u_ui/u-ui/react-card' },
           { pathname: '/u_ui/u-ui/react-paper' },
         ]
+      },
+      {
+        pathname: '/u_ui/u-ui/components/navigation',
+        subheader: 'navigation',
+        children: [
+          { pathname: '/u_ui/u-ui/react-drawer' }
+        ]
       }
     ]
   }

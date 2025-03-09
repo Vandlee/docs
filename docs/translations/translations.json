@@ -30,6 +30,8 @@
     "surfaces": "Superficies",
     "/u_ui/u-ui/react-app-bar": "Barra de aplicación",
     "/u_ui/u-ui/react-card": "Tarjeta",
-    "/u_ui/u-ui/react-paper": "Papel"
+    "/u_ui/u-ui/react-paper": "Papel",
+    "navigation": "Navegación",
+    "/u_ui/u-ui/react-drawer": "Cajón"
   }
 }

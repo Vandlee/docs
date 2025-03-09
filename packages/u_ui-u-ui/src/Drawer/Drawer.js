@@ -199,7 +199,7 @@ const Drawer = React.forwardRef(function Drawer(inProps, ref) {
         BackdropProps,
         children,
         className,
-        elevation = 16,
+        elevation = 2,
         hideBackdrop = false,
         ModalProps: { BackdropProps: BackdropPropsProp, ...ModalProps } = {},
         onClose,
@@ -335,7 +335,7 @@ Drawer.propTypes /* remove-proptypes */ = {
     className: PropTypes.string,
     /**
      * The elevation of the drawer.
-     * @default 16
+     * @default 2
      */
     elevation: integerPropType,
     /**
