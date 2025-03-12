@@ -662,8 +662,8 @@ const Root = styled('div')(
       '& :not(pre) > code': {
         // inline code block
         color: `var(--ushiidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
-        borderColor: alpha(darkTheme.palette.primaryDark[600], 0.6),
-        backgroundColor: `var(--ushiidocs-palette-grey-900, ${darkTheme.palette.grey[900]})`,
+        borderColor: alpha(darkTheme.palette.primaryDark[500], 0.6),
+        backgroundColor: `var(--ushiidocs-palette-grey-900, ${darkTheme.palette.grey[700]})`,
       },
       '& strong': {
         color: `var(--ushiidocs-palette-grey-200, ${darkTheme.palette.grey[200]})`,
@@ -672,7 +672,7 @@ const Root = styled('div')(
         backgroundColor: `var(--ushiidocs-palette-divider, ${darkTheme.palette.divider})`,
       },
       '& a': {
-        color: `var(--ushiidocs-palette-primary-300, ${darkTheme.palette.primary[300]})`,
+        color: `var(--ushiidocs-palette-primary-300, ${darkTheme.palette.primary[200]})`,
       },
       '& a code': {
         color: `var(--ushiidocs-palette-primary-light, ${darkTheme.palette.primary.light})`,

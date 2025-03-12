@@ -52,8 +52,16 @@ export const MenuPaper = styled(PopoverPaper, {
     // height. This ensures a tappable area outside of the simple menu with which to dismiss
     // the menu.
     maxHeight: 'calc(100% - 96px)',
+    paddingInline: 8,
     // Add iOS momentum scrolling for iOS < 13.0
     WebkitOverflowScrolling: 'touch',
+    '& .UshiiListSubheader-root': {
+        marginInline: -8,
+        marginBlock: 8,
+        '&:nth-child(1)': {
+            marginTop: 0
+        }
+    }
 });
 
 const MenuMenuList = styled(MenuList, {

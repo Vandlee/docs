@@ -32,6 +32,12 @@
     "/u_ui/u-ui/react-card": "Tarjeta",
     "/u_ui/u-ui/react-paper": "Papel",
     "navigation": "Navegación",
-    "/u_ui/u-ui/react-drawer": "Cajón"
+    "/u_ui/u-ui/react-drawer": "Cajón",
+    "/u_ui/u-ui/react-link": "Enlace",
+    "/u_ui/u-ui/react-menu": "Menú",
+    "layout": "Maquetación",
+    "/u_ui/u-ui/react-box": "Caja",
+    "/u_ui/u-ui/react-container": "Contenedor",
+    "/u_ui/u-ui/react-grid": "Cuadrícula"
   }
 }

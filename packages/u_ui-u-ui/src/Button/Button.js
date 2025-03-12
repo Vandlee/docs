@@ -108,7 +108,7 @@ const ButtonRoot = styled(ButtonBase, {
     return {
       ...theme.typography.button,
       minWidth: 64,
-      padding: '6px 16px',
+      padding: '6px 16px 4px',
       border: 0,
       borderRadius: (theme.vars || theme).shape.borderRadius,
       transition: theme.transitions.create(
@@ -119,6 +119,9 @@ const ButtonRoot = styled(ButtonBase, {
       ),
       '&:hover': {
         textDecoration: 'none',
+      },
+      '.UshiiButton-icon': {
+        marginTop: -2
       },
       '.UshiiButton-endIcon, .UshiiButton-startIcon': {
         transition: theme.transitions.create(
@@ -197,7 +200,7 @@ const ButtonRoot = styled(ButtonBase, {
         {
           props: { variant: 'text' },
           style: {
-            padding: '6px 8px',
+            padding: '8px 8px 6px',
             color: `var(--variant-textColor)`,
             backgroundColor: `var(--variant-textBg)`,
           },

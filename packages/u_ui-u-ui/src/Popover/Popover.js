@@ -108,7 +108,7 @@ const Popover = React.forwardRef(function Popover(inProps, ref) {
     children,
     className,
     container: containerProp,
-    elevation = 8,
+    elevation = 2,
     marginThreshold = 16,
     open,
     PaperProps: PaperPropsProp = {},

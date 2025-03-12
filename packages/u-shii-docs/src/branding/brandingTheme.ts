@@ -541,14 +541,8 @@ export function getThemedComponents(): ThemeOptions {
         },
       },
       UshiiButtonBase: {
-        defaultProps: {
-          disableTouchRipple: false,
-          disableRipple: false,
-        },
         styleOverrides: {
           root: ({ theme }) => ({
-            transition: 'all 100ms ease-in',
-            '& > .UshiiTouchRipple-root': { marginLeft: '0px', marginRight: '0px', transform: 'unset !important' },
             '&:focus-visible': {
               outline: `3px solid ${alpha(theme.palette.primary[500], 0.5)}`,
               outlineOffset: 2,
@@ -567,22 +561,12 @@ export function getThemedComponents(): ThemeOptions {
             ...(ownerState.size === 'large' && {
               ...theme.typography.body1,
               fontWeight: theme.typography.fontWeightMedium,
-              padding: theme.spacing('8px', '12px', '8px', '14px'),
-              '& > span': { transition: '0.2s', marginLeft: 4 },
-              '&:hover > span': { transform: 'translateX(2px)' },
             }),
             ...(ownerState.size === 'medium' && {
-              fontSize: defaultTheme.typography.pxToRem(16),
               fontWeight: theme.typography.fontWeightMedium,
-              lineHeight: 1.25,
-              padding: theme.spacing('8px', '10px', '10px', '12px'),
-              '& > span': { transition: '0.2s', marginLeft: 4 },
-              '&:hover > span': { transform: 'translateX(2px)' },
             }),
             ...(ownerState.size === 'small' && {
-              padding: '6px 10px',
               fontFamily: theme.typography.fontFamily,
-              fontSize: defaultTheme.typography.pxToRem(13),
               fontWeight: theme.typography.fontWeightMedium,
             }),
           })

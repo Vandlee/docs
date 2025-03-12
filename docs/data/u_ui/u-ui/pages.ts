@@ -67,8 +67,21 @@ const pages: UshiiPage[] = [
       {
         pathname: '/u_ui/u-ui/components/navigation',
         subheader: 'navigation',
+        newFeature: true,
         children: [
-          { pathname: '/u_ui/u-ui/react-drawer' }
+          { pathname: '/u_ui/u-ui/react-drawer' },
+          { pathname: '/u_ui/u-ui/react-link' },
+          { pathname: '/u_ui/u-ui/react-menu' },
+        ]
+      },
+      {
+        pathname: '/u_ui/u-ui/components/layout',
+        subheader: 'layout',
+        newFeature: true,
+        children: [
+          { pathname: '/u_ui/u-ui/react-box' },
+          { pathname: '/u_ui/u-ui/react-container' },
+          { pathname: '/u_ui/u-ui/react-grid' },
         ]
       }
     ]

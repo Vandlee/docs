@@ -57,6 +57,17 @@ El componente Alerta viene con dos opciones de estilo alternativas—`relleno` y
 
 {{"demo": "es/OutlinedAlerts.js"}}
 
+:::warning
+Cuando se utiliza una Alerta perfilada con el componente [Snackbar](/u_ui/u-ui/react-snackbar/), el contenido de fondo será visible y traspasará la Alerta por defecto.
+Puede evitarlo añadiendo `bgcolor: 'background.paper'` a [la propiedad `sx`](/u_ui/u-ui/customization/how-to-customize/#the-sx-prop) en el componente Alerta (`Alert`):
+
+```jsx
+<Alert sx={{ bgcolor: 'background.paper' }} />
+```
+
+Consulta el documento [Snackbar—personalización](/u_ui/u-ui/react-snackbar/#personalización) para ver un ejemplo de cómo utilizar estos dos componentes juntos.
+:::
+
 ### Color
 
 Utilice la propiedad `color` para anular el color predeterminado para la [`severity`](#severidad) especificada; por ejemplo, para aplicar colores de `advertencia` a una alerta `success`:

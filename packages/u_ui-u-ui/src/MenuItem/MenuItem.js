@@ -14,7 +14,7 @@ import useEnhancedEffect from '../utils/useEnhancedEffect';
 import useForkRef from '../utils/useForkRef';
 import { dividerClasses } from '../Divider';
 import { listItemIconClasses } from '../ListItemIcon';
-/* import { listItemTextClasses } from '../ListItemText'; */
+import { listItemTextClasses } from '../ListItemText';
 import menuItemClasses, { getMenuItemUtilityClass } from './menuItemClasses';
 
 export const overridesResolver = (props, styles) => {
@@ -65,6 +65,7 @@ const MenuItemRoot = styled(ButtonBase, {
     minHeight: 48,
     paddingTop: 6,
     paddingBottom: 6,
+    borderRadius: theme.shape.borderRadius / 1.5,
     boxSizing: 'border-box',
     whiteSpace: 'nowrap',
     '&:hover': {
@@ -115,14 +116,14 @@ const MenuItemRoot = styled(ButtonBase, {
     [`& + .${dividerClasses.inset}`]: {
       marginLeft: 52,
     },
-    /* [`& .${listItemTextClasses.root}`]: {
+    [`& .${listItemTextClasses.root}`]: {
       marginTop: 0,
       marginBottom: 0,
     },
     [`& .${listItemTextClasses.inset}`]: {
       paddingLeft: 36,
     },
-    */
+   
     [`& .${listItemIconClasses.root}`]: {
       minWidth: 36,
     },
@@ -153,11 +154,12 @@ const MenuItemRoot = styled(ButtonBase, {
         props: ({ ownerState }) => ownerState.dense,
         style: {
           minHeight: 32, // https://m2.material.io/components/menus#specs > Dense
-          paddingTop: 4,
-          paddingBottom: 4,
+          paddingTop: 6,
+          paddingBottom: 2,
           ...theme.typography.body2,
           [`& .${listItemIconClasses.root} svg`]: {
             fontSize: '1.25rem',
+            marginTop: -2
           },
         },
       },

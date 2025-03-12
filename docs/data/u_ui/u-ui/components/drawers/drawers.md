@@ -21,7 +21,7 @@ Las [hojas laterales (Inglés)](https://m2.material.io/components/sheets-side) s
 
 Los cajones de navegación temporales pueden estar abiertos o cerrados. Cerrado por defecto, el cajón se abre temporalmente por encima de todos los demás contenidos hasta que se selecciona una sección.
 
-El cajón puede cancelarse haciendo clic en la superposición o pulsando la tecla `Esc`.
+El cajón puede cancelarse haciendo clic en la superposición o pulsando la tecla <kbd class="key">Esc</kbd>.
 Se cierra cuando se selecciona un elemento, lo que se consigue controlando la opción `open`.
 
 {{"demo": "es/TemporaryDrawer.js"}}
