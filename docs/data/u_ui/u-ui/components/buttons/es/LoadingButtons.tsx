@@ -2,19 +2,26 @@ import * as React from 'react';
 import Button from '@u_ui/u-ui/Button';
 import SaveIcon from '@mui/icons-material/Save';
 import Stack from '@u_ui/u-ui/Stack';
+import Divider from '@u_ui/u-ui/Divider';
 
 export default function LoadingButtons() {
+  const [loading, setLoading] = React.useState(false);
+  
   return (
     <Stack spacing={2}>
+      <Button color="contrast" variant="contained" onClick={() => setLoading((prev) => !prev)}>
+        {!loading ? 'Iniciar carga' : 'Cancelar carga'}
+      </Button>
+      <Divider />
       <Stack direction="row" spacing={2}>
-        <Button loading variant="outlined">
+        <Button loading={loading} variant="outlined">
           Enviar
         </Button>
-        <Button loading loadingIndicator="Cargando..." variant="outlined">
+        <Button loading={loading} loadingIndicator="Cargando..." variant="outlined">
           Obtener datos
         </Button>
         <Button
-          loading
+          loading={loading}
           loadingPosition="start"
           startIcon={<SaveIcon />}
           variant="outlined"
@@ -24,7 +31,7 @@ export default function LoadingButtons() {
       </Stack>
       <Button
         fullWidth
-        loading
+        loading={loading}
         loadingPosition="start"
         startIcon={<SaveIcon />}
         variant="outlined"
@@ -33,7 +40,7 @@ export default function LoadingButtons() {
       </Button>
       <Button
         fullWidth
-        loading
+        loading={loading}
         loadingPosition="end"
         endIcon={<SaveIcon />}
         variant="outlined"
@@ -41,14 +48,14 @@ export default function LoadingButtons() {
         Ancho completo
       </Button>
       <Stack direction="row" spacing={2}>
-        <Button loading variant="outlined" loadingPosition="start">
+        <Button loading={loading} variant="outlined" loadingPosition="start">
           Enviar
         </Button>
-        <Button loading variant="outlined" loadingPosition="end">
+        <Button loading={loading} variant="outlined" loadingPosition="end">
           Enviar
         </Button>
         <Button
-          loading
+          loading={loading}
           variant="outlined"
           loadingPosition="end"
           startIcon={<SaveIcon />}

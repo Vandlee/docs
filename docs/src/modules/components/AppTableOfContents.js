@@ -10,11 +10,11 @@ import { useTranslate } from '@u-shii/docs/i18n';
 import { samePageLinkNavigation } from 'docs/src/modules/components/MarkdownLinks';
 
 const Nav = styled('nav')(({ theme }) => ({
-    top: 'var(--UshiiDocs-header-height)',
-    marginTop: 'var(--UshiiDocs-header-height)',
+    top: 'var(--uidocs-header-height)',
+    marginTop: 'var(--uidocs-header-height)',
     paddingLeft: 6, // Fix truncated focus outline style
     position: 'sticky',
-    height: 'calc(100vh - var(--UshiiDocs-header-height))',
+    height: 'calc(100vh - var(--uidocs-header-height))',
     overflowY: 'auto',
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(7),

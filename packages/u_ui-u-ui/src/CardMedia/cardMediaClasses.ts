@@ -13,7 +13,7 @@ export interface CardMediaClasses {
 export type CardMediaClassKey = keyof CardMediaClasses;
 
 export function getCardMediaUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiCardMedia', slot);
+  return generateUtilityClass('uiCardMedia', slot);
 }
 
 const cardMediaClasses: CardMediaClasses = generateUtilityClasses('MuiCardMedia', [

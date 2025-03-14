@@ -19,8 +19,10 @@ export default function mapApiPageTranslations(req) {
   });
 
   filenames.forEach((filename) => {
+    console.log('filename', filename)
     const matchNotSpanishMarkdown = filename.match(notSpanishJsonRegExp);
-    const userLanguage = matchNotSpanishMarkdown !== null ? matchNotSpanishMarkdown[1] : 'en';
+    console.log('matchNotSpanishMarkdown', matchNotSpanishMarkdown)
+    const userLanguage = matchNotSpanishMarkdown !== null ? matchNotSpanishMarkdown[1] : 'es';
     const translation = req(filename) || null;
 
     if (translation !== null && translation.componentDescription) {
@@ -37,6 +39,9 @@ export default function mapApiPageTranslations(req) {
           },
         },
       });
+
+      console.log('translation', translation.componentDescription)
+
       translation.componentDescription = render(translation.componentDescription);
       translation.componentDescriptionToc = componentDescriptionToc;
     }

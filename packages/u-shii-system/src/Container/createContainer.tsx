@@ -19,7 +19,7 @@ interface StyleFnProps<Theme> extends ContainerProps {
 const defaultTheme = createTheme();
 
 const defaultCreateStyledComponent = systemStyled('div', {
-  name: 'UshiiContainer',
+  name: 'uiContainer',
   slot: 'Root',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -34,7 +34,7 @@ const defaultCreateStyledComponent = systemStyled('div', {
 });
 
 const useThemePropsDefault = (inProps: ContainerProps) =>
-  useThemePropsSystem({ props: inProps, name: 'UshiiContainer', defaultTheme });
+  useThemePropsSystem({ props: inProps, name: 'uiContainer', defaultTheme });
 
 const useUtilityClasses = (ownerState: ContainerProps, componentName: string) => {
   const getContainerUtilityClass = (slot: string) => {
@@ -69,7 +69,7 @@ export default function createContainer<Theme extends RequiredThemeStructure = D
     // This will allow adding custom styled fn (for example for custom sx style function)
     createStyledComponent = defaultCreateStyledComponent,
     useThemeProps = useThemePropsDefault,
-    componentName = 'UshiiContainer',
+    componentName = 'uiContainer',
   } = options;
 
   const ContainerRoot = createStyledComponent(

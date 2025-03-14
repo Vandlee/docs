@@ -15,10 +15,10 @@ export interface ToolbarClasses {
 export type ToolbarClassKey = keyof ToolbarClasses;
 
 export function getToolbarUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiToolbar', slot);
+  return generateUtilityClass('uiToolbar', slot);
 }
 
-const toolbarClasses: ToolbarClasses = generateUtilityClasses('UshiiToolbar', [
+const toolbarClasses: ToolbarClasses = generateUtilityClasses('uiToolbar', [
   'root',
   'gutters',
   'regular',

@@ -37,10 +37,10 @@ export interface AppBarClasses {
 export type AppBarClassKey = keyof AppBarClasses;
 
 export function getAppBarUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiAppBar', slot);
+  return generateUtilityClass('uiAppBar', slot);
 }
 
-const appBarClasses: AppBarClasses = generateUtilityClasses('UshiiAppBar', [
+const appBarClasses: AppBarClasses = generateUtilityClasses('uiAppBar', [
   'root',
   'positionFixed',
   'positionAbsolute',

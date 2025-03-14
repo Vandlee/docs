@@ -24,7 +24,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const SvgIconRoot = styled('svg', {
-  name: 'UshiiSvgIcon',
+  name: 'uiSvgIcon',
   slot: 'Root',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -94,7 +94,7 @@ const SvgIconRoot = styled('svg', {
 );
 
 const SvgIcon = React.forwardRef(function SvgIcon(inProps, ref) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiSvgIcon' });
+  const props = useDefaultProps({ props: inProps, name: 'uiSvgIcon' });
   const {
     children,
     className,
@@ -242,6 +242,6 @@ SvgIcon.propTypes /* remove-proptypes */ = {
   viewBox: PropTypes.string,
 };
 
-SvgIcon.ushiiName = 'SvgIcon';
+SvgIcon.uiName = 'SvgIcon';
 
 export default SvgIcon;

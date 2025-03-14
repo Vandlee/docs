@@ -27,7 +27,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const SnackbarRoot = styled('div', {
-  name: 'UshiiSnackbar',
+  name: 'uiSnackbar',
   slot: 'Root',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -94,7 +94,7 @@ const SnackbarRoot = styled('div', {
 );
 
 const Snackbar = React.forwardRef(function Snackbar(inProps, ref) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiSnackbar' });
+  const props = useDefaultProps({ props: inProps, name: 'uiSnackbar' });
   const theme = useTheme();
   const defaultTransitionDuration = {
     enter: theme.transitions.duration.enteringScreen,

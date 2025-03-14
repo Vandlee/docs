@@ -17,11 +17,11 @@ export interface CircularProgressClasses {
   /** Styles applied to the `circle` svg path. */
   circle: string;
   /** Styles applied to the `circle` svg path if `variant="determinate"`.
-   * @deprecated Combine the [.UshiiCircularProgress-circle](/material-ui/api/circular-progress/#circular-progress-classes-circle) and [.UshiiCircularProgress-determinate](/material-ui/api/circular-progress/#circular-progress-classes-determinate) classes instead. See [Migrating from deprecated APIs](/material-ui/migration/migrating-from-deprecated-apis/) for more details.
+   * @deprecated Combine the [.ui-CircularProgress-circle](/material-ui/api/circular-progress/#circular-progress-classes-circle) and [.ui-CircularProgress-determinate](/material-ui/api/circular-progress/#circular-progress-classes-determinate) classes instead. See [Migrating from deprecated APIs](/material-ui/migration/migrating-from-deprecated-apis/) for more details.
    */
   circleDeterminate: string;
   /** Styles applied to the `circle` svg path if `variant="indeterminate"`.
-   * @deprecated Combine the [.UshiiCircularProgress-circle](/material-ui/api/circular-progress/#circular-progress-classes-circle) and [.UshiiCircularProgress-indeterminate](/material-ui/api/circular-progress/#circular-progress-classes-indeterminate) classes instead. See [Migrating from deprecated APIs](/material-ui/migration/migrating-from-deprecated-apis/) for more details.
+   * @deprecated Combine the [.ui-CircularProgress-circle](/material-ui/api/circular-progress/#circular-progress-classes-circle) and [.ui-CircularProgress-indeterminate](/material-ui/api/circular-progress/#circular-progress-classes-indeterminate) classes instead. See [Migrating from deprecated APIs](/material-ui/migration/migrating-from-deprecated-apis/) for more details.
    */
   circleIndeterminate: string;
   /** Styles applied to the `circle` svg path if `disableShrink={true}`. */
@@ -31,11 +31,11 @@ export interface CircularProgressClasses {
 export type CircularProgressClassKey = keyof CircularProgressClasses;
 
 export function getCircularProgressUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiCircularProgress', slot);
+  return generateUtilityClass('uiCircularProgress', slot);
 }
 
 const circularProgressClasses: CircularProgressClasses = generateUtilityClasses(
-  'UshiiCircularProgress',
+  'uiCircularProgress',
   [
     'root',
     'determinate',

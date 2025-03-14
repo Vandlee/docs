@@ -35,7 +35,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const IconButtonRoot = styled(ButtonBase, {
-    name: 'UshiiIconButton',
+    name: 'uiIconButton',
     slot: 'Root',
     overridesResolver: (props, styles) => {
         const { ownerState } = props;
@@ -169,7 +169,7 @@ const IconButtonRoot = styled(ButtonBase, {
 );
 
 const IconButtonLoadingIndicator = styled('span', {
-    name: 'UshiiIconButton',
+    name: 'uiIconButton',
     slot: 'LoadingIndicator',
     overridesResolver: (props, styles) => styles.loadingIndicator,
 })(({ theme }) => ({
@@ -188,7 +188,7 @@ const IconButtonLoadingIndicator = styled('span', {
  * regarding the available icon options.
  */
 const IconButton = React.forwardRef(function IconButton(inProps, ref) {
-    const props = useDefaultProps({ props: inProps, name: 'UshiiIconButton' });
+    const props = useDefaultProps({ props: inProps, name: 'uiIconButton' });
     const {
         edge = false,
         children,

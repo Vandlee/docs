@@ -37,7 +37,7 @@ const StyledMarkdownElement = styled(MarkdownElement)(({ theme }) => [
             maxWidth: 'initial',
             maxHeight: 'initial',
         },
-        '& .UshiiCode-copy': {
+        '& .uiCode-copy': {
             display: 'none',
         },
     }
@@ -107,7 +107,7 @@ export default function DemoEditor(props: DemoEditorProps) {
             }}
             {...other}
         >
-           <div className="UshiiCode-root" {...handlers}>
+           <div className="uiCode-root" {...handlers}>
                 <div className='scrollContainer'>
                     <NoSsr>
                         <CodeCopyButton {...copyButtonProps} code={value} />

@@ -82,6 +82,7 @@ const pages: UshiiPage[] = [
           { pathname: '/u_ui/u-ui/react-box' },
           { pathname: '/u_ui/u-ui/react-container' },
           { pathname: '/u_ui/u-ui/react-grid' },
+          { pathname: '/u_ui/u-ui/react-stack' },
         ]
       }
     ]

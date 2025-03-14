@@ -41,7 +41,7 @@ export interface UseAutocompleteProps<
 > {
   /**
    * @internal The prefix of the state class name, temporary for Joy UI
-   * @default 'Ushii'
+   * @default 'ui'
    */
   unstable_classNamePrefix?: string;
   /**

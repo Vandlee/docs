@@ -18,7 +18,7 @@ const useUtilityClasses = (ownerState) => {
 }
 
 const CardACtionsRoot = styled('div', {
-    name: 'UshiiCardActions',
+    name: 'uiCardActions',
     slots: 'Root',
     overridesResolver: (props, styles) => {
         const { ownerState } = props;
@@ -44,7 +44,7 @@ const CardACtionsRoot = styled('div', {
 const CardActions = React.forwardRef(function CardActions(inProps, ref) {
     const props = useDefaultProps({
         props: inProps,
-        name: 'UshiiCardActions',
+        name: 'uirdActions',
     });
 
     const { disableSpacing = false, className, ...other } = props;

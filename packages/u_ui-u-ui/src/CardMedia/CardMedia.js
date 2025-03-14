@@ -19,7 +19,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const CardMediaRoot = styled('div', {
-  name: 'UshiiCardMedia',
+  name: 'uiCardMedia',
   slot: 'Root',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -52,7 +52,7 @@ const MEDIA_COMPONENTS = ['video', 'audio', 'picture', 'iframe', 'img'];
 const IMAGE_COMPONENTS = ['picture', 'img'];
 
 const CardMedia = React.forwardRef(function CardMedia(inProps, ref) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiCardMedia' });
+  const props = useDefaultProps({ props: inProps, name: 'uiCardMedia' });
   const { children, className, component = 'div', image, src, style, ...other } = props;
 
   const isMediaComponent = MEDIA_COMPONENTS.includes(component);

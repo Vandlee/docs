@@ -82,14 +82,14 @@ const StyledAppContainer = styled(AppContainer, {
       {
         props: ({ disableAd, hasTabs }) => !disableAd && hasTabs,
         style: {
-          '&& .component-tabs .UshiiTabs-root': {
+          '&& .component-tabs .uiTabs-root': {
             // 40px matches MarkdownElement h2 margin-top.
             marginBottom: `calc(${theme.spacing(AD_MARGIN_TOP)} + ${AD_HEIGHT_MOBILE}px + 40px)`,
             [theme.breakpoints.up('sm')]: {
               marginBottom: `calc(${theme.spacing(AD_MARGIN_TOP)} + ${AD_HEIGHT}px + 40px)`,
             },
           },
-          '&& .component-tabs.ad .UshiiTabs-root': {
+          '&& .component-tabs.ad .uiTabs-root': {
             marginBottom: 0,
           },
         },
@@ -150,7 +150,7 @@ export default function AppLayoutDocs(props) {
       <GlobalStyles
         styles={{
           ':root': {
-            '--UshiiDocs-navDrawer-width': '300px',
+            '--uidocs-navDrawer-width': '300px',
           },
         }}
       />

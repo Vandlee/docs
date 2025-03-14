@@ -21,7 +21,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const CardActionAreaRoot = styled(ButtonBase, {
-  name: 'UshiiCardActionArea',
+  name: 'uiCardActionArea',
   slot: 'Root',
   overridesResolver: (props, styles) => styles.root,
 })(
@@ -43,7 +43,7 @@ const CardActionAreaRoot = styled(ButtonBase, {
 );
 
 const CardActionAreaFocusHighlight = styled('span', {
-  name: 'UshiiCardActionArea',
+  name: 'uiCardActionArea',
   slot: 'FocusHighlight',
   overridesResolver: (props, styles) => styles.focusHighlight,
 })(
@@ -65,7 +65,7 @@ const CardActionAreaFocusHighlight = styled('span', {
 );
 
 const CardActionArea = React.forwardRef(function CardActionArea(inProps, ref) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiCardActionArea' });
+  const props = useDefaultProps({ props: inProps, name: 'uirdActionArea' });
   const { children, className, focusVisibleClassName, ...other } = props;
 
   const ownerState = props;

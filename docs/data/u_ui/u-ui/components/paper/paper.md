@@ -70,7 +70,7 @@ Añada la propiedad `square` para obtener esquinas cuadradas:
 El componente Papel esta compuesto por una única raíz `<div>` que envuelve su contenido:
 
 ```html
-<div class="UshiiPaper-root">
+<div class="uiPaper-root">
     <!-- Contenido del papel -->
 </div>
 ```

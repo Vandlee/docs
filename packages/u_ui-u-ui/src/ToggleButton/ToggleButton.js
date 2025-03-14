@@ -35,7 +35,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const ToggleButtonRoot = styled(ButtonBase, {
-    name: 'UshiiToggleButton',
+    name: 'uiToggleButton',
     slot: 'Root',
     overridesResolver: (props, styles) => {
         const { ownerState } = props;
@@ -150,7 +150,7 @@ const ToggleButton = React.forwardRef(function ToggleButton(inProps, ref) {
         { ...contextProps, selected: isValueSelected(inProps.value, contextValue) },
         inProps,
     );
-    const props = useDefaultProps({ props: resolvedProps, name: 'UshiiToggleButton' });
+    const props = useDefaultProps({ props: resolvedProps, name: 'uiToggleButton' });
     const {
         children,
         className,

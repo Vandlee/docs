@@ -38,6 +38,7 @@
     "layout": "Maquetación",
     "/u_ui/u-ui/react-box": "Caja",
     "/u_ui/u-ui/react-container": "Contenedor",
-    "/u_ui/u-ui/react-grid": "Cuadrícula"
+    "/u_ui/u-ui/react-grid": "Cuadrícula",
+    "/u_ui/u-ui/react-stack": "Pila"
   }
 }

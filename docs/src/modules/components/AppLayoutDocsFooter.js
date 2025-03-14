@@ -27,7 +27,7 @@ const FooterLink = styled(Link)(({ theme }) => {
 });
 
 /**
- * @typedef {import('docs/src/pages').UshiiPage} MuiPage
+ * @typedef {import('docs/src/pages').ui-Page} MuiPage
  * @typedef {import('docs/src/pages').OrderedUshiiPage} OrderedUshiiPage
  */
 
@@ -94,6 +94,20 @@ async function postFeedback(data) {
     }
 }
 
+function getCurrentRating(pathname) {
+    let userFeedback;
+    if (typeof window !== 'undefined') {
+      try {
+        userFeedback = getCookie('feedback');
+        userFeedback = userFeedback && JSON.parse(userFeedback);
+      } catch {
+        // For unknown reason the `userFeedback` can be uncomplet, leading the JSON.parse to crash the entire docs
+        return undefined;
+      }
+    }
+    return userFeedback && userFeedback[pathname] && userFeedback[pathname].rating;
+}
+
 export default function AppLayoutDocsFooter(props) {
     const { tableOfContents = [], location } = props;
 
@@ -104,6 +118,120 @@ export default function AppLayoutDocsFooter(props) {
     const [rating, setRating] = React.useState();
 
     const { nextPage, prevPage } = usePageNeighbours();
+    
+    const sectionOptions = React.useMemo(
+        () =>
+            tableOfContents.flatMap((section) => [
+                {
+                    hash: section.hash,
+                    text: section.text,
+                },
+                ...section.children.map(({ hash, text }) => ({ hash, text })),
+            ]),
+            [tableOfContents],
+    );
+        
+    const setCurrentRatingFromCookie = React.useCallback(() => {
+        if (activePage !== null) {
+            setRating(getCurrentRating(activePage.pathname));
+        }
+    }, [activePage]);
+        
+    React.useEffect(() => {
+        setCurrentRatingFromCookie();
+    }, [setCurrentRatingFromCookie]);
+    
+    async function processFeedback() {
+        if (activePage === null) {
+            setSnackbarMessage(t('feedbackFailed'));
+        }
+        
+        const result = await submitFeedback(
+            activePage.pathname,
+            rating,
+            comment,
+            userLanguage,
+            commentedSection,
+            productId,
+        );
+        if (result) {
+            setSnackbarMessage(t('feedbackSubmitted'));
+        } else {
+            setCurrentRatingFromCookie();
+            setSnackbarMessage(t('feedbackFailed'));
+        }
+        setSnackbarOpen(true);
+    }
+    
+    const handleClickThumb = (vote) => async () => {
+        if (vote !== rating) {
+            setRating(vote);
+            setCommentOpen(true);
+        }
+        
+        // Manually move focus if comment is already open.
+        // If the comment is closed, onEntered will call focus itself;
+        if (inputRef.current) {
+            inputRef.current.focus();
+        }
+    };
+    
+    const handleChangeTextfield = (event) => {
+        setComment(event.target.value);
+    };
+    
+    const handleSubmitComment = (event) => {
+        event.preventDefault();
+        setCommentOpen(false);
+        processFeedback();
+    };
+    
+    const handleKeyDownForm = (event) => {
+        const modifierKey = (event.metaKey || event.ctrlKey) && !event.shiftKey;
+        
+        if (event.key === 'Enter' && modifierKey) {
+            const submitButton = event.currentTarget.querySelector('[type="submit"]');
+            submitButton.click();
+        }
+    };
+    
+    const handleCancelComment = () => {
+        setCommentOpen(false);
+        setCurrentRatingFromCookie();
+        setCommentedSection(EMPTY_SECTION);
+    };
+    
+    const handleEntered = () => {
+        inputRef.current.focus();
+    };
+    
+    const handleCloseSnackbar = () => {
+        setSnackbarOpen(false);
+    };
+    
+    React.useEffect(() => {
+        const eventListener = (event) => {
+          const feedbackHash = event.target.getAttribute('data-feedback-hash');
+          if (feedbackHash) {
+              const section =
+              [...sectionOptions, ...SPEACIAL_FEEDBACK_HASH].find(
+                (item) => item.hash === feedbackHash,
+            ) || EMPTY_SECTION;
+            setCommentOpen(true);
+            setCommentedSection(section);
+    
+            // Manually move focus if comment is already open.
+            // If the comment is closed, onEntered will call focus itself;
+            if (inputRef.current) {
+                inputRef.current.focus();
+            }
+        }
+    };
+    document.addEventListener('click', eventListener);
+    return () => {
+        document.removeEventListener('click', eventListener);
+    };
+    }, [sectionOptions]);
 
     const hidePagePagination = activePage === null || activePage.ordered === false;
 
@@ -114,7 +242,7 @@ export default function AppLayoutDocsFooter(props) {
                     direction={{ xs: 'column', sm: 'row' }}
                     spacing={{ xs: 3, sm: 1 }}
                     sx={{ alignItems: 'center', justifyContent: 'space-between' }}
-                >
+                    >
                     <Stack direction='row' spacing={0.5} useFlexGap sx={{ alignItems: 'center' }}>
                         <Typography id="feedback-message" variant="body2" sx={{ color: 'text.secondary' }}>
                             {t('feedbackMessage')}

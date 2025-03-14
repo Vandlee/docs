@@ -148,7 +148,7 @@ const Item = styled(
                 background: (theme.vars || theme).palette.primary[400],
                 },
             },
-            '& .UshiiChip-root': {
+            '& .uiChip-root': {
                 marginTop: '2px',
             },
             [theme.breakpoints.up('md')]: {
@@ -265,7 +265,7 @@ export const sxChip = (color) => [
         '&:hover': {
           bgcolor: alpha(theme.palette[color][100], 0.5),
         },
-        '& .UshiiChip-label': {
+        '& .uiChip-label': {
           px: '4px',
         },
     }),

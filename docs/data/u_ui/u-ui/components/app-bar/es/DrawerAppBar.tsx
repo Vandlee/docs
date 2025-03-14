@@ -94,7 +94,7 @@ export default function DrawerAppBar(props: Props) {
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
-            '& .UshiiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            '& .uiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
           {drawer}

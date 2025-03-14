@@ -428,13 +428,13 @@ function createRender(context) {
         return `<pre><code>${escaped ? code : escape(code, true)}</code></pre>\n`;
       }
 
-      return `<div class="UshiiCode-root">${title ? `<div class="UshiiCode-title">${title}</div>` : ''}<pre><code class="language-${escape(lang, true)}">${
+      return `<div class="uiCode-root">${title ? `<div class="uiCode-title">${title}</div>` : ''}<pre><code class="language-${escape(lang, true)}">${
         escaped ? code : escape(code, true)
       }</code></pre>${[
-        '<button data-ga-event-category="code" data-ga-event-action="copy-click" aria-label="Copy the code" class="UshiiCode-copy">',
-        '<span class="UshiiCode-copy-label">Copy</span>',
-        '<span class="UshiiCode-copied-label">Copied</span>',
-        '<span class="UshiiCode-copyKeypress"><span>(or</span> $keyC<span>)</span></span></button></div>',
+        '<button data-ga-event-category="code" data-ga-event-action="copy-click" aria-label="Copy the code" class="uiCode-copy">',
+        '<span class="uiCode-copy-label">Copy</span>',
+        '<span class="uiCode-copied-label">Copied</span>',
+        '<span class="uiCode-copyKeypress"><span>(or</span> $keyC<span>)</span></span></button></div>',
       ].join('')}\n`;
     };
 
@@ -469,15 +469,15 @@ function createRender(context) {
               throw new Error(`docs-infra: Callout :::${token.severity} is not supported`);
             }
 
-            return `<aside class="UshiiCallout-root UshiiCallout-${token.severity}">${[
-              '<div class="UshiiCallout-icon-container">',
+            return `<aside class="uiCallout-root uiCallout-${token.severity}">${[
+              '<div class="uiCallout-icon-container">',
               '<svg focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ContentCopyRoundedIcon">',
-              `<use class="UshiiCode-copied-icon" xlink:href="#${token.severity}-icon" />`,
+              `<use class="uiCode-copied-icon" xlink:href="#${token.severity}-icon" />`,
               '</svg>',
               '</div>',
             ].join(
               '\n',
-            )}<div class="UshiiCallout-content">${this.parser.parse(token.tokens)}</div></aside>`;
+            )}<div class="uiCallout-content">${this.parser.parse(token.tokens)}</div></aside>`;
           },
         },
       ],

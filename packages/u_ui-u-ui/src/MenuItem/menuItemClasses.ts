@@ -21,10 +21,10 @@ export interface MenuItemClasses {
 export type MenuItemClassKey = keyof MenuItemClasses;
 
 export function getMenuItemUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiMenuItem', slot);
+  return generateUtilityClass('uiMenuItem', slot);
 }
 
-const menuItemClasses: MenuItemClasses = generateUtilityClasses('UshiiMenuItem', [
+const menuItemClasses: MenuItemClasses = generateUtilityClasses('uiMenuItem', [
   'root',
   'focusVisible',
   'dense',

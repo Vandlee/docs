@@ -31,10 +31,10 @@ export interface TooltipClasses {
 export type TooltipClassKey = keyof TooltipClasses;
 
 export function getTooltipUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiTooltip', slot);
+  return generateUtilityClass('uiTooltip', slot);
 }
 
-const tooltipClasses: TooltipClasses = generateUtilityClasses('UshiiTooltip', [
+const tooltipClasses: TooltipClasses = generateUtilityClasses('uiTooltip', [
   'popper',
   'popperInteractive',
   'popperArrow',

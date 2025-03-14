@@ -55,10 +55,10 @@ export interface DrawerClasses {
 export type DrawerClassKey = keyof DrawerClasses;
 
 export function getDrawerUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiDrawer', slot);
+  return generateUtilityClass('uiDrawer', slot);
 }
 
-const drawerClasses: DrawerClasses = generateUtilityClasses('UshiiDrawer', [
+const drawerClasses: DrawerClasses = generateUtilityClasses('uiDrawer', [
   'root',
   'docked',
   'paper',

@@ -213,7 +213,7 @@ const ToolbarDiv = styled('div')(({ theme }) => ({
     padding: theme.spacing(1.5),
     paddingRight: 0,
     flexShrink: 0,
-    height: 'var(--UshiiDocs-header-height)',
+    height: 'var(--uidocs-header-height)',
     boxSizing: 'border-box', // TODO have CssBaseline in the Next.js layout
     display: 'flex',
     flexDirection: 'row',
@@ -234,7 +234,7 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
 
 const AppNavPaperComponent = styled('div')(() => {
     return {
-      width: 'var(--UshiiDocs-navDrawer-width)',
+      width: 'var(--uidocs-navDrawer-width)',
       boxShadow: 'none',
       border: '0 !important', // TODO add a Paper slot
       overflowY: 'unset !important', // TODO add a Paper slot
@@ -252,7 +252,7 @@ function renderNavItems(options) {
 
 /**
  * @param {object} context 
- * @param {import('docs/src/pages').UshiiPage} context.page
+ * @param {import('docs/src/pages').ui-Page} context.page
  */
 function reduceChildRoutes(context) {
     const { onClose, activePageParents, items, depth, t } = context;

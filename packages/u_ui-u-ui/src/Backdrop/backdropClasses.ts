@@ -11,10 +11,10 @@ export interface BackdropClasses {
 export type BackdropClassKey = keyof BackdropClasses;
 
 export function getBackdropUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiBackdrop', slot);
+  return generateUtilityClass('uiBackdrop', slot);
 }
 
-const backdropClasses: BackdropClasses = generateUtilityClasses('UshiiBackdrop', [
+const backdropClasses: BackdropClasses = generateUtilityClasses('uiBackdrop', [
   'root',
   'invisible',
 ]);

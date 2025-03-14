@@ -135,7 +135,7 @@ function computeHasNativeHandler({ domTreeShapes, start, current, anchor }) {
 const iOS = typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
 const SwipeableDrawer = React.forwardRef(function SwipeableDrawer(inProps, ref) {
-  const props = useDefaultProps({ name: 'UshiiSwipeableDrawer', props: inProps });
+  const props = useDefaultProps({ name: 'uiSwipeableDrawer', props: inProps });
   const theme = useTheme();
   const transitionDurationDefault = {
     enter: theme.transitions.duration.enteringScreen,

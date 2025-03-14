@@ -13,9 +13,9 @@ export interface MenuClasses {
 export type MenuClassKey = keyof MenuClasses;
 
 export function getMenuUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiMenu', slot);
+  return generateUtilityClass('uiMenu', slot);
 }
 
-const menuClasses: MenuClasses = generateUtilityClasses('UshiiMenu', ['root', 'paper', 'list']);
+const menuClasses: MenuClasses = generateUtilityClasses('uiMenu', ['root', 'paper', 'list']);
 
 export default menuClasses;

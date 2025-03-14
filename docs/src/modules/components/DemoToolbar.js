@@ -32,23 +32,23 @@ const Root = styled('div')(({ theme }) => [
       alignItems: 'center',
       justifyContent: 'space-between'
     },
-    '& .UshiiIconButton-root, .MuiIconButton-root': {
+    '& .uiIconButton-root, .MuiIconButton-root': {
       '&:hover': {
         backgroundColor: (theme.vars || theme).palette.grey[100],
       },
     },
-    '& .UshiiSvgIcon-root, & .MuiSvgIcon-root': {
+    '& .uiSvgIcon-root, & .MuiSvgIcon-root': {
       fontSize: 16,
       color: (theme.vars || theme).palette.grey[900],
     },
   },
   theme.applyDarkStyles({
-    '& .UshiiIconButton-root, .MuiIconButton-root': {
+    '& .uiIconButton-root, .MuiIconButton-root': {
       '&:hover': {
         backgroundColor: (theme.vars || theme).palette.primaryDark[700],
       },
     },
-    '& .UshiiSvgIcon-root, & .MuiSvgIcon-root': {
+    '& .uiSvgIcon-root, & .MuiSvgIcon-root': {
       color: (theme.vars || theme).palette.grey[400],
     },
   }),
@@ -94,7 +94,7 @@ const Button = styled(YuButton)(({ theme }) => ({
   fontSize: theme.typography.pxToRem(13),
   fontWeight: theme.typography.fontWeightMedium,
   color: theme.palette.primary[600],
-  '& .UshiiSvgIcon-root, & .MuiSvgIcon-root': {
+  '& .uiSvgIcon-root, & .MuiSvgIcon-root': {
     color: theme.palette.primary.main,
   },
   '&:hover': {
@@ -108,7 +108,7 @@ const Button = styled(YuButton)(({ theme }) => ({
   ...theme.applyDarkStyles({
     color: theme.palette.primary[300],
     borderColor: alpha(theme.palette.primary[300], 0.2),
-    '& .UshiiSvgIcon-root, & .MuiSvgIcon-root': {
+    '& .uiSvgIcon-root, & .MuiSvgIcon-root': {
       color: theme.palette.primary[300],
     },
     '&:hover': {
@@ -136,7 +136,7 @@ const ToggleButton = styled(YuToggleButton)(({ theme }) => [
     p: 0,
     fontSize: theme.typography.pxToRem(13),
     borderRadius: '999px',
-    '&.Ushii-disabled': {
+    '&.ui-disabled': {
       opacity: 0.8,
       cursor: 'not-allowed',
     },

@@ -51,7 +51,7 @@ const useUtilityClasses = (ownerState) => {
 
 const MenuItemRoot = styled(ButtonBase, {
   shouldForwardProp: (prop) => rootShouldForwardProp(prop) || prop === 'classes',
-  name: 'UshiiMenuItem',
+  name: 'uiMenuItem',
   slot: 'Root',
   overridesResolver,
 })(
@@ -168,7 +168,7 @@ const MenuItemRoot = styled(ButtonBase, {
 );
 
 const MenuItem = React.forwardRef(function MenuItem(inProps, ref) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiMenuItem' });
+  const props = useDefaultProps({ props: inProps, name: 'uiMenuItem' });
   const {
     autoFocus = false,
     component = 'li',

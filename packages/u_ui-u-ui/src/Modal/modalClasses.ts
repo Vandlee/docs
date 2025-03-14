@@ -13,10 +13,10 @@ export interface ModalClasses {
 export type ModalClassKey = keyof ModalClasses;
 
 export function getModalUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiModal', slot);
+  return generateUtilityClass('uiModal', slot);
 }
 
-const modalClasses: ModalClasses = generateUtilityClasses('UshiiModal', [
+const modalClasses: ModalClasses = generateUtilityClasses('uiModal', [
   'root',
   'hidden',
   'backdrop',

@@ -23,7 +23,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const AvatarRoot = styled('div', {
-  name: 'UshiiAvatar',
+  name: 'uiAvatar',
   slot: 'Root',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -81,7 +81,7 @@ const AvatarRoot = styled('div', {
 );
 
 const AvatarImg = styled('img', {
-  name: 'UshiiAvatar',
+  name: 'uiAvatar',
   slot: 'Img',
   overridesResolver: (props, styles) => styles.img,
 })({
@@ -97,7 +97,7 @@ const AvatarImg = styled('img', {
 });
 
 const AvatarFallback = styled(Person, {
-  name: 'UshiiAvatar',
+  name: 'uiAvatar',
   slot: 'Fallback',
   overridesResolver: (props, styles) => styles.fallback,
 })({
@@ -145,7 +145,7 @@ function useLoaded({ crossOrigin, referrerPolicy, src, srcSet }) {
 }
 
 const Avatar = React.forwardRef(function Avatar(inProps, ref) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiAvatar' });
+  const props = useDefaultProps({ props: inProps, name: 'uiAvatar' });
   const {
     alt,
     children: childrenProp,

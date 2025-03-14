@@ -65,10 +65,10 @@ export interface PaperClasses {
 export type PaperClassKey = keyof PaperClasses;
 
 export function getPaperUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiPaper', slot);
+  return generateUtilityClass('uiPaper', slot);
 }
 
-const paperClasses: PaperClasses = generateUtilityClasses('UshiiPaper', [
+const paperClasses: PaperClasses = generateUtilityClasses('uiPaper', [
   'root',
   'rounded',
   'outlined',

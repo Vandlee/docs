@@ -29,7 +29,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const AvatarGroupRoot = styled('div', {
-  name: 'UshiiAvatarGroup',
+  name: 'uiAvatarGroup',
   slot: 'Root',
   overridesResolver: (props, styles) => {
     return [{ [`& .${avatarGroupClasses.avatar}`]: styles.avatar }, styles.root];
@@ -52,7 +52,7 @@ const AvatarGroupRoot = styled('div', {
 const AvatarGroup = React.forwardRef(function AvatarGroup(inProps, ref) {
   const props = useDefaultProps({
     props: inProps,
-    name: 'UshiiAvatarGroup',
+    name: 'uiAvatarGroup',
   });
 
   const {

@@ -19,7 +19,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const ListRoot = styled('ul', {
-    name: 'UshiiList',
+    name: 'uiList',
     slot: 'Root',
     overridesResolver: (props, styles) => {
       const { ownerState } = props;

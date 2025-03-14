@@ -123,7 +123,7 @@ export default function ResponsiveDrawer(props: Props) {
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
-            '& .UshiiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            '& .uiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
           {drawer}
@@ -132,7 +132,7 @@ export default function ResponsiveDrawer(props: Props) {
           variant="permanent"
           sx={{
             display: { xs: 'none', sm: 'block' },
-            '& .UshiiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            '& .uiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
           open
         >

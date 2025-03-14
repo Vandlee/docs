@@ -19,7 +19,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const ListItemSecondaryActionRoot = styled('div', {
-  name: 'UshiiListItemSecondaryAction',
+  name: 'uiListItemSecondaryAction',
   slot: 'Root',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -47,7 +47,7 @@ const ListItemSecondaryActionRoot = styled('div', {
  * @deprecated Use the `secondaryAction` prop in the `ListItem` component instead. This component will be removed in v7. See [Migrating from deprecated APIs](https://mui.com/material-ui/migration/migrating-from-deprecated-apis/) for more details.
  */
 const ListItemSecondaryAction = React.forwardRef(function ListItemSecondaryAction(inProps, ref) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiListItemSecondaryAction' });
+  const props = useDefaultProps({ props: inProps, name: 'uiListItemSecondaryAction' });
   const { className, ...other } = props;
   const context = React.useContext(ListContext);
   const ownerState = { ...props, disableGutters: context.disableGutters };
@@ -90,6 +90,6 @@ ListItemSecondaryAction.propTypes /* remove-proptypes */ = {
   ]),
 };
 
-ListItemSecondaryAction.ushiiName = 'ListItemSecondaryAction';
+ListItemSecondaryAction.uiName = 'ListItemSecondaryAction';
 
 export default ListItemSecondaryAction;

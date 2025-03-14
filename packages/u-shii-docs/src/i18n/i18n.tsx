@@ -2,6 +2,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { deepmerge } from '@u-shii/utils';
 import defaultTranslations from '../translations';
+import { useRouter } from 'next/router';
 
 const TranslationsContext = React.createContext(defaultTranslations);
 
@@ -59,16 +60,28 @@ export interface UserLanguageProviderProps {
   children: React.ReactNode;
   translations?: Translations;
   defaultUserLanguage: string;
+  LANGUAGES: [string];
 }
 
 export function UserLanguageProvider(props: UserLanguageProviderProps) {
-  const { children, translations, defaultUserLanguage } = props;
+  const { children, translations, defaultUserLanguage, LANGUAGES } = props;
+  const router = useRouter();
+
+  console.log('defaultUserLanguage', defaultUserLanguage)
 
   const [userLanguage, setUserLanguage] = React.useState(defaultUserLanguage);
 
   const contextValue = React.useMemo(() => {
     return { userLanguage, setUserLanguage };
   }, [userLanguage]);
+
+  React.useEffect(() => {
+    const currentPath = router.asPath;
+    const pathSegments = currentPath.split('/');
+    const currentLanguage = LANGUAGES.includes(pathSegments[1]) ? pathSegments[1] : 'es';
+
+    setUserLanguage(currentLanguage);
+  }, [])
 
   return (
     <TranslationsProvider translations={translations}>

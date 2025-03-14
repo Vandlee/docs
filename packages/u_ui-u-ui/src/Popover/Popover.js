@@ -71,13 +71,13 @@ const useUtilityClasses = (ownerState) => {
 };
 
 export const PopoverRoot = styled(Modal, {
-  name: 'UshiiPopover',
+  name: 'uiPopover',
   slot: 'Root',
   overridesResolver: (props, styles) => styles.root,
 })({});
 
 export const PopoverPaper = styled(PaperBase, {
-  name: 'UshiiPopover',
+  name: 'uiPopover',
   slot: 'Paper',
   overridesResolver: (props, styles) => styles.paper,
 })({
@@ -95,7 +95,7 @@ export const PopoverPaper = styled(PaperBase, {
 });
 
 const Popover = React.forwardRef(function Popover(inProps, ref) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiPopover' });
+  const props = useDefaultProps({ props: inProps, name: 'uiPopover' });
   const {
     action,
     anchorEl,
@@ -523,7 +523,7 @@ Popover.propTypes /* remove-proptypes */ = {
    * @deprecated Use `slotProps.root.slots.backdrop` instead. While this prop currently works, it will be removed in the next major version.
    * Use the `slotProps.root.slots.backdrop` prop to make your application ready for the next version of Material UI.
    * @default styled(Backdrop, {
-   *   name: 'UshiiModal',
+   *   name: 'uiModal',
    *   slot: 'Backdrop',
    *   overridesResolver: (props, styles) => {
    *     return styles.backdrop;

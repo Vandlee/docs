@@ -24,7 +24,7 @@ export function GlowingIconContainer({ icon }: GlowingIconContainerProps) {
         borderColor: 'primary.200',
         bgcolor: 'primary.50',
         boxShadow: `0px 0 0 2px ${alpha(theme.palette.primary[500], 0.1)}, 0px 2px 12px 0px rgba(234, 237, 241, 0.3) inset`,
-        '& .UshiiSvgIcon-root': {
+        '& .uiSvgIcon-root': {
           fontSize: theme.typography.pxToRem(18),
         },
         ...theme.applyDarkStyles({

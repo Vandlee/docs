@@ -31,7 +31,7 @@ const StyledApiItem = styled(ExpandableApiItem)(
       fontFamily: theme.typography.fontFamilyCode,
       fontWeight: theme.typography.fontWeightRegular,
       borderColor: alpha(darkTheme.palette.primary[100], 0.5),
-      backgroundColor: `var(--ushiidocs-palette-primary-50, ${lightTheme.palette.primary[50]})`,
+      backgroundColor: `var(--uidocs-palette-primary-50, ${lightTheme.palette.primary[50]})`,
     },
   }),
   ({ theme }) => ({
@@ -54,7 +54,7 @@ export default function SlotsList(props: SlotsListProps) {
   const t = useTranslate();
 
   return (
-    <ApiItemContainer className="UshiiApi-slot-list">
+    <ApiItemContainer className="uiApi-slot-list">
       {slots.map((params) => {
         const { description, className, name, defaultValue, hash } = params;
 

@@ -23,10 +23,10 @@ export interface ListItemClasses {
 export type ListItemClassKey = keyof ListItemClasses;
 
 export function getListItemUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiListItem', slot);
+  return generateUtilityClass('uiListItem', slot);
 }
 
-const listItemClasses: ListItemClasses = generateUtilityClasses('UshiiListItem', [
+const listItemClasses: ListItemClasses = generateUtilityClasses('uiListItem', [
   'root',
   'container',
   'dense',

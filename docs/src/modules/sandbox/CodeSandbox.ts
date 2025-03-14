@@ -124,7 +124,7 @@ function createYuTemplate(templateData: {
       content: CRA.getHtml({
         title: templateData.title,
         language: 'es',
-        codeStyling: templateData.codeStyling ?? 'Ushii System',
+        codeStyling: templateData.codeStyling ?? 'u_ui System',
       }),
     },
     [`index.${ext}`]: {

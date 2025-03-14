@@ -144,7 +144,7 @@ export default function MarkdownDocsV2(props) {
 
   if (componentsApiPageContents) {
     Object.keys(componentsApiPageContents).forEach((key) => {
-      const { componentDescriptionToc = [] } = componentsApiDescriptions[key][userLanguage];
+      const { componentDescriptionToc = [] } = componentsApiDescriptions[key][userLanguage] || componentsApiDescriptions[key].es;
       const {
         name: componentName,
         slots,
@@ -260,7 +260,7 @@ export default function MarkdownDocsV2(props) {
     >
       <div
         style={{
-          '--UshiiDocs-header-height': hasTabs
+          '--uidocs-header-height': hasTabs
             ? `${AppFrameHeight + TabsHeight}px`
             : `${AppFrameHeight}px`,
         }}

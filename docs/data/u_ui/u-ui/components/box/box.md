@@ -48,7 +48,7 @@ El demo de abajo muestra como aplicar colores del tema usando esta propiedad:
 El componente Box está compuesto por un único elemento raíz `<div>`:
 
 ```html
-<div className="UshiiBox-root">
+<div className="uiBox-root">
     <!-- Contenido de la caja> -->
 </div>
 ```

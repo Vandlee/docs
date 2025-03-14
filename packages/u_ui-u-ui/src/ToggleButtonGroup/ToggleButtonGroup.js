@@ -31,7 +31,7 @@ const useUtilityClasses = (ownerState) => {
 }
 
 const ToggleButtonGroupRoot = styled('div', {
-    name: 'UshiiToggleButtonGroup',
+    name: 'uiToggleButtonGroup',
     slot: 'Root',
     overridesResolver: (props, styles) => {
         const { ownerState } = props;
@@ -128,7 +128,7 @@ const ToggleButtonGroupRoot = styled('div', {
 );
 
 const ToggleButtonGroup = React.forwardRef(function ToggleButtonGroup(inProps, ref) {
-    const props = useDefaultProps({ props: inProps, name: 'UshiiToggleButtonGroup' });
+    const props = useDefaultProps({ props: inProps, name: 'uiToggleButtonGroup' });
     const {
         children,
         className,

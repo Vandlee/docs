@@ -17,6 +17,9 @@ const StyledApiItem = styled(ExpandableApiItem)(
     '& .prop-list-description': {
       marginBottom: 10,
     },
+    '& hr': {
+      marginTop: 16
+    },
     '& .prop-list-additional-info': {
       display: 'flex',
       flexDirection: 'column',
@@ -37,13 +40,13 @@ const StyledApiItem = styled(ExpandableApiItem)(
       },
     },
     '&.prop-list-deprecated-item': {
-      '& .UshiiApi-item-note': {
-        color: `var(--ushiidocs-palette-warning-700, ${lightTheme.palette.warning[700]})`,
+      '& .uiApi-item-note': {
+        color: `var(--uidocs-palette-warning-700, ${lightTheme.palette.warning[700]})`,
       },
     },
     '& .prop-list-alert': {
       marginBottom: 16,
-      '& .UshiiAlert-icon': {
+      '& .uiAlert-icon': {
         margin: 0,
       },
     },
@@ -67,10 +70,10 @@ const StyledApiItem = styled(ExpandableApiItem)(
         padding: 12,
         width: '100%',
         marginBottom: 8,
-        color: `var(--ushiidocs-palette-grey-900, ${lightTheme.palette.grey[50]})`,
+        color: `var(--uidocs-palette-grey-900, ${lightTheme.palette.grey[50]})`,
         border: '1px solid',
-        borderColor: `var(--ushiidocs-palette-primaryDark-700, ${lightTheme.palette.primaryDark[700]})`,
-        backgroundColor: `var(--ushiidocs-palette-primaryDark-800, ${lightTheme.palette.primaryDark[800]})`,
+        borderColor: `var(--uidocs-palette-primaryDark-700, ${lightTheme.palette.primaryDark[700]})`,
+        backgroundColor: `var(--uidocs-palette-primaryDark-800, ${lightTheme.palette.primaryDark[800]})`,
       },
     },
   }),
@@ -79,16 +82,16 @@ const StyledApiItem = styled(ExpandableApiItem)(
       '& .prop-list-additional-info': {
         '& .prop-list-title': {
           p: {
-            color: `var(--ushiidocs-palette-grey-50, ${darkTheme.palette.grey[50]})`,
+            color: `var(--uidocs-palette-grey-50, ${darkTheme.palette.grey[50]})`,
           },
         },
       },
       '& .prop-list-default-props': {
-        color: `var(--ushiidocs-palette-grey-300, ${darkTheme.palette.grey[300]})`,
+        color: `var(--uidocs-palette-grey-300, ${darkTheme.palette.grey[300]})`,
       },
       '&.prop-list-deprecated-item': {
-        '& .UshiiApi-item-note': {
-          color: `var(--ushiidocs-palette-warning-400, ${darkTheme.palette.warning[400]})`,
+        '& .uiApi-item-note': {
+          color: `var(--uidocs-palette-warning-400, ${darkTheme.palette.warning[400]})`,
         },
       },
     },
@@ -178,7 +181,7 @@ export default function PropertiesList(props: PropertiesListProps) {
             {description && <PropDescription description={description} />}
             {seeMoreDescription && <p dangerouslySetInnerHTML={{ __html: seeMoreDescription }} />}
             {requiresRef && (
-              <ApiWarningAlert className="UshiiApi-collapsible prop-list-alert">
+              <ApiWarningAlert className="uiApi-collapsible prop-list-alert">
                 <span
                   dangerouslySetInnerHTML={{
                     __html: t('api-docs.requires-ref'),

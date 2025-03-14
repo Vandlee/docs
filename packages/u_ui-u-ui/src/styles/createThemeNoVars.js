@@ -102,7 +102,7 @@ function createThemeNoVars(options = {}, ...args) {
     Object.keys(ushiiTheme.components).forEach((component) => {
       const styleOverrides = ushiiTheme.components[component].styleOverrides;
 
-      if (styleOverrides && component.startsWith('Ushii')) {
+      if (styleOverrides && component.startsWith('ui')) {
         traverse(styleOverrides, component);
       }
     });

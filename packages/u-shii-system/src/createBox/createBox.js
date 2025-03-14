@@ -6,7 +6,7 @@ import styleFunctionSx, { extendSxProp } from '../styleFunctionSx';
 import useTheme from '../useTheme';
 
 export default function createBox(options = {}) {
-  const { themeId, defaultTheme, defaultClassName = 'UshiiBox-root', generateClassName } = options;
+  const { themeId, defaultTheme, defaultClassName = 'uiBox-root', generateClassName } = options;
   const BoxRoot = styled('div', {
     shouldForwardProp: (prop) => prop !== 'theme' && prop !== 'sx' && prop !== 'as',
   })(styleFunctionSx);

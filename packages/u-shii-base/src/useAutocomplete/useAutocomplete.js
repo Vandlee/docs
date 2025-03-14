@@ -66,7 +66,7 @@ export function useAutocomplete(props) {
     // eslint-disable-next-line @typescript-eslint/naming-convention
     unstable_isActiveElementInListbox = defaultIsActiveElementInListbox,
     // eslint-disable-next-line @typescript-eslint/naming-convention
-    unstable_classNamePrefix = 'Ushii',
+    unstable_classNamePrefix = 'ui',
     autoComplete = false,
     autoHighlight = false,
     autoSelect = false,

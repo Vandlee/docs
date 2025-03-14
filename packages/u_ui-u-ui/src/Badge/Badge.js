@@ -38,7 +38,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const BadgeRoot = styled('span', {
-  name: 'UshiiBadge',
+  name: 'uiBadge',
   slot: 'Root',
   overridesResolver: (props, styles) => styles.root,
 })({
@@ -50,7 +50,7 @@ const BadgeRoot = styled('span', {
 });
 
 const BadgeBadge = styled('span', {
-  name: 'UshiiBadge',
+  name: 'uiBadge',
   slot: 'Badge',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -250,7 +250,7 @@ function getAnchorOrigin(anchorOrigin) {
 }
 
 const Badge = React.forwardRef(function Badge(inProps, ref) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiBadge' });
+  const props = useDefaultProps({ props: inProps, name: 'uiBadge' });
   const {
     anchorOrigin: anchorOriginProp,
     className,

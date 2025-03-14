@@ -58,7 +58,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const RatingRoot = styled('span', {
-  name: 'UshiiRating',
+  name: 'uiRating',
   slot: 'Root',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -107,7 +107,7 @@ const RatingRoot = styled('span', {
         },
       },
       {
-        // TODO v6: use the .Ushii-readOnly global state class
+        // TODO v6: use the .ui-readOnly global state class
         props: ({ ownerState }) => ownerState.readOnly,
         style: {
           pointerEvents: 'none',
@@ -118,7 +118,7 @@ const RatingRoot = styled('span', {
 );
 
 const RatingLabel = styled('label', {
-  name: 'UshiiRating',
+  name: 'uiRating',
   slot: 'Label',
   overridesResolver: ({ ownerState }, styles) => [
     styles.label,
@@ -141,7 +141,7 @@ const RatingLabel = styled('label', {
 });
 
 const RatingIcon = styled('span', {
-  name: 'UshiiRating',
+  name: 'uiRating',
   slot: 'Icon',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -183,7 +183,7 @@ const RatingIcon = styled('span', {
 );
 
 const RatingDecimal = styled('span', {
-  name: 'UshiiRating',
+  name: 'uiRating',
   slot: 'Decimal',
   shouldForwardProp: (prop) => slotShouldForwardProp(prop) && prop !== 'iconActive',
   overridesResolver: (props, styles) => {
@@ -335,7 +335,7 @@ function defaultLabelText(value) {
 }
 
 const Rating = React.forwardRef(function Rating(inProps, ref) {
-  const props = useDefaultProps({ name: 'UshiiRating', props: inProps });
+  const props = useDefaultProps({ name: 'uiRating', props: inProps });
   const {
     component = 'span',
     className,
@@ -534,7 +534,7 @@ const Rating = React.forwardRef(function Rating(inProps, ref) {
         classes.root,
         {
           // TODO v6: remove this class as it duplicates with the global state class Ushii-readOnly
-          'UshiiRating-readOnly': readOnly,
+          'uiRating-readOnly': readOnly,
         },
         className,
       )}

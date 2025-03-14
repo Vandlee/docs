@@ -17,7 +17,7 @@ const { palette: lightPalette, typography, ...designTokens } = getDesignTokens('
 const { palette: darkPalette } = getDesignTokens('dark');
 
 const theme = extendTheme({
-  cssVarPrefix: 'ushiidocs',
+  cssVarPrefix: 'uidocs',
   colorSchemeSelector: 'data-u-shii-color-scheme',
   colorSchemes: {
     light: {
@@ -31,17 +31,17 @@ const theme = extendTheme({
   typography: deepmerge(typography, {
     h1: {
       ':where([data-u-shii-color-scheme="dark"]) &': {
-        color: 'var(--ushiidocs-palette-common-white)',
+        color: 'var(--uidocs-palette-common-white)',
       },
     },
     h2: {
       ':where([data-u-shii-color-scheme="dark"]) &': {
-        color: 'var(--ushiidocs-palette-grey-100)',
+        color: 'var(--uidocs-palette-grey-100)',
       },
     },
     h5: {
       ':where([data-u-shii-color-scheme="dark"]) &': {
-        color: 'var(--ushiidocs-palette-primary-300)',
+        color: 'var(--uidocs-palette-primary-300)',
       },
     },
   }),

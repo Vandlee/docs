@@ -24,7 +24,7 @@ export type ComponentInfo = {
   /**
    * Component name with `Ushii` prefix, in the global HTML page namespace.
    */
-  ushiiName: string;
+  uiName: string;
   /**
    * The name of the slots interface. By default we consider `${componentName}Slots`.
    */

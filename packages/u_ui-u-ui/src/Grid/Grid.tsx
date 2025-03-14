@@ -126,15 +126,15 @@ export interface GridBaseProps {
    */
   const Grid = createGrid({
     createStyledComponent: styled('div', {
-      name: 'UshiiGrid',
+      name: 'uiGrid',
       slot: 'Root',
       overridesResolver: (props, styles) => {
         const { ownerState } = props;
         return [styles.root, ownerState.container && styles.container];
       },
     }),
-    componentName: 'UshiiGrid',
-    useThemeProps: (inProps) => useDefaultProps({ props: inProps, name: 'UshiiGrid' }),
+    componentName: 'uiGrid',
+    useThemeProps: (inProps) => useDefaultProps({ props: inProps, name: 'uiGrid' }),
     useTheme,
   }) as OverridableComponent<GridTypeMap>;
   

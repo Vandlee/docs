@@ -46,7 +46,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const ChipRoot = styled('div', {
-  name: 'UshiiChip',
+  name: 'uiChip',
   slot: 'Root',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -334,7 +334,7 @@ const ChipRoot = styled('div', {
 );
 
 const ChipLabel = styled('span', {
-  name: 'UshiiChip',
+  name: 'uiChip',
   slot: 'Label',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -381,7 +381,7 @@ function isDeleteKeyboardEvent(keyboardEvent) {
  * Chips represent complex entities in small blocks, such as a contact.
  */
 const Chip = React.forwardRef(function Chip(inProps, ref) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiChip' });
+  const props = useDefaultProps({ props: inProps, name: 'uiChip' });
   const {
     avatar: avatarProp,
     className,

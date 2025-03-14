@@ -55,7 +55,7 @@ export default function SwipeableEdgeDrawer(props: Props) {
       <CssBaseline />
       <Global
         styles={{
-          '.UshiiDrawer-root > .UshiiPaper-root': {
+          '.uiDrawer-root > .uiPaper-root': {
             height: `calc(50% - ${drawerBleeding}px)`,
             overflow: 'visible',
           },

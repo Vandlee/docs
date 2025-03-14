@@ -91,7 +91,7 @@ export interface PopoverProps
    * @deprecated Use `slotProps.root.slots.backdrop` instead. While this prop currently works, it will be removed in the next major version.
    * Use the `slotProps.root.slots.backdrop` prop to make your application ready for the next version of Material UI.
    * @default styled(Backdrop, {
-   *   name: 'UshiiModal',
+   *   name: 'uiModal',
    *   slot: 'Backdrop',
    *   overridesResolver: (props, styles) => {
    *     return styles.backdrop;

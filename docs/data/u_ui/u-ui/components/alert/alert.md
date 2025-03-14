@@ -119,12 +119,12 @@ Estos son algunos factores a tener en cuenta para garantizar que tu Alerta sea a
 El componente Alerta está compuesto por un componente raíz [Paper](/u_ui/u-ui/react-paper) (que se representa como un `<div>`) que contiene un icono, un mensaje y una [acción](#acciones) opcional.
 
 ```html
-<div class="UshiiPaper-root UshiiAlert-root" role="alert">
-  <div class="UshiiAlert-icon">
+<div class="uiPaper-root UshiiAlert-root" role="alert">
+  <div class="uiAlert-icon">
     <!-- icono svg aquí -->
   </div>
-  <div class="UshiiAlert-message">Esto es como una Alerta se renderiza en el DOM.</div>
-  <div class="UshiiAlert-action">
+  <div class="uiAlert-message">Esto es como una Alerta se renderiza en el DOM.</div>
+  <div class="uiAlert-action">
     <!-- Elemento de acción opcional aquí -->
   </div>
 </div>

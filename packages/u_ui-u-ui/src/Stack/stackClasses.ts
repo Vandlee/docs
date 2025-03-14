@@ -6,9 +6,9 @@ export type { StackClassKey } from '@u-shii/system';
 export type { StackClasses };
 
 export function getStackUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiStack', slot);
+  return generateUtilityClass('uiStack', slot);
 }
 
-const stackClasses: StackClasses = generateUtilityClasses('UshiiStack', ['root']);
+const stackClasses: StackClasses = generateUtilityClasses('uiStack', ['root']);
 
 export default stackClasses;

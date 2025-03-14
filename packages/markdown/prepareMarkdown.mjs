@@ -23,8 +23,8 @@ const BaseUIReexportedComponents = ['ClickAwayListener', 'NoSsr', 'Portal', 'Tex
  * @example 'Button'
  * @returns {string}
  */
-function resolveComponentApiUrl(productId, componentPkg, component) {
-  if (!productId) {
+function resolveComponentApiUrl(productId, categoryId, componentPkg, component) {
+  if (!productId || !categoryId) {
     return `/api/${kebabCase(component)}/`;
   }
   if (productId === 'x-date-pickers') {
@@ -45,7 +45,7 @@ function resolveComponentApiUrl(productId, componentPkg, component) {
   if (productId === 'toolpad-core') {
     return `/toolpad/core/api/${kebabCase(component)}/`;
   }
-  return `/${productId}/api/${kebabCase(component)}/`;
+  return `/${categoryId}/${productId}/react-${kebabCase(component)}/components-api/`;
 }
 
 /**
@@ -135,7 +135,7 @@ function prepareMarkdown(config) {
           .map((component) => {
             const componentPkgMap = componentPackageMapping[headers.productId];
             const componentPkg = componentPkgMap ? componentPkgMap[component] : null;
-            return `- [\`<${component} />\`](${resolveComponentApiUrl(headers.productId, componentPkg, component)})`;
+            return `- [\`<${component} />\`](${resolveComponentApiUrl(headers.productId, headers.categoryId, componentPkg, component)})`;
           })
           .join("\n");
         
@@ -143,7 +143,7 @@ function prepareMarkdown(config) {
           .map((hook) => {
             const componentPkgMap = componentPackageMapping[headers.productId];
             const componentPkg = componentPkgMap ? componentPkgMap[hook] : null;
-            return `- [\`${hook}\`](${resolveComponentApiUrl(headers.productId, componentPkg, hook)})`;
+            return `- [\`${hook}\`](${resolveComponentApiUrl(headers.productId, headers.categoryId, componentPkg, hook)})`;
           })
           .join("\n");
         

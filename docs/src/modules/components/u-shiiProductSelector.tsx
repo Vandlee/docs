@@ -89,7 +89,7 @@ function ProductItem({
                 backgroundColor: active ? alpha(theme.palette.primary[50], 0.8) : 'grey.50',
                 borderColor: 'divider',
             },
-            '&.Ushii-focusVisible': {
+            '&.ui-focusVisible': {
                 backgroundColor: active ? (theme.vars || theme).palette.primary[50] : 'transparent',
             },
             ...theme.applyDarkStyles({
@@ -100,7 +100,7 @@ function ProductItem({
                     ? alpha(theme.palette.primary[900], 0.3)
                     : alpha(theme.palette.primaryDark[700], 0.5),
                 },
-                '&.Ushii-focusVisible': {
+                '&.ui-focusVisible': {
                 backgroundColor: active ? alpha(theme.palette.primary[900], 0.5) : 'transparent',
                 },
             }),

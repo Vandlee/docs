@@ -17,6 +17,7 @@ export interface DocsProviderProps {
   defaultUserLanguage: string;
   children?: React.ReactNode;
   translations?: Translations;
+  LANGUAGES?: [string];
 }
 
 export function DocsProvider({
@@ -25,11 +26,12 @@ export function DocsProvider({
   defaultUserLanguage,
   translations,
   children,
+  LANGUAGES,
 }: DocsProviderProps) {
   return (
     <DocsConfigContext.Provider value={config}>
       <AdProvider config={adConfig}>
-        <UserLanguageProvider defaultUserLanguage={defaultUserLanguage} translations={translations}>
+        <UserLanguageProvider LANGUAGES={LANGUAGES || ['es']} defaultUserLanguage={defaultUserLanguage} translations={translations}>
           {children}
         </UserLanguageProvider>
       </AdProvider>

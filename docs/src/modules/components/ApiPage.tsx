@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import { ComponentApiContent, PropsTranslations } from '@u-shii-internal/api-docs-builder';
 import exactProp from '@u-shii/utils/exactProp';
 import Typography from '@u_ui/u-ui/Typography';
-/* import Alert from '@u_ui/u-ui/Alert'; */
+import Alert from '@u_ui/u-ui/Alert';
 import { TableOfContentsEntry } from '@u-shii/internal-markdown';
 import { Ad, AdGuest } from '@u-shii/docs/Ad';
-/* import VerifiedRoundedIcon from '@mui/icons-material/VerifiedRounded';
-import WarningRoundedIcon from '@mui/icons-material/WarningRounded'; */
+import VerifiedRoundedIcon from '@mui/icons-material/VerifiedRounded';
+import WarningRoundedIcon from '@mui/icons-material/WarningRounded';
 import { Translate, useTranslate, useUserLanguage } from '@u-shii/docs/i18n';
 import { HighlightedCode } from '@u-shii/docs/HighlightedCode';
 import { BrandingProvider } from '@u-shii/docs/branding';
@@ -242,20 +242,17 @@ export default function ApiPage(props: ApiPageProps) {
       <MarkdownElement>
         <h1>{pageContent.name} API</h1>
         {deprecated ? (
-          <>
-            {/* <Alert
-              severity="warning"
-              icon={<WarningRoundedIcon fontSize="small" />}
-              sx={{ mt: 1.5, mb: 3 }}
-            >
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: deprecationInfo || t('api-docs.defaultDeprecationMessage'),
-                }}
-              />
-            </Alert> */}
-            AlertTest
-          </>
+          <Alert
+            severity="warning"
+            icon={<WarningRoundedIcon fontSize="small" />}
+            sx={{ mt: 1.5, mb: 3 }}
+          >
+            <span
+              dangerouslySetInnerHTML={{
+                __html: deprecationInfo || t('api-docs.defaultDeprecationMessage'),
+              }}
+            />
+          </Alert>
         ) : null}
         <Typography variant="h5" component="p" className="description" gutterBottom>
           {description}
@@ -269,14 +266,14 @@ export default function ApiPage(props: ApiPageProps) {
         </Typography>
         <Heading hash="demos" />
         Alert Success
-        {/* <Alert severity="success" icon={<VerifiedRoundedIcon fontSize="small" />}>
+        <Alert severity="success" icon={<VerifiedRoundedIcon fontSize="small" />}>
           <span
             dangerouslySetInnerHTML={{
               __html: `<p>For examples and details on the usage of this React component, visit the component demo pages:</p>
               ${demos}`,
             }}
           />
-        </Alert> */}
+        </Alert>
         <Heading hash="import" />
         <HighlightedCode
           code={pageContent.imports.join(`
@@ -316,7 +313,7 @@ export default function ApiPage(props: ApiPageProps) {
           </React.Fragment>
         )}
         <div
-          className="UshiiCallout-root UshiiCallout-info"
+          className="uiCallout-root uiCallout-info"
           dangerouslySetInnerHTML={{ __html: refHint }}
           style={{
             alignItems: 'baseline',
@@ -344,7 +341,7 @@ export default function ApiPage(props: ApiPageProps) {
             <p
               dangerouslySetInnerHTML={{
                 __html: t('api-docs.themeDefaultPropsDescription')
-                  .replace(/{{ushiiName}}/, pageContent.ushiiName)
+                  .replace(/{{uiName}}/, pageContent.uiName)
                   .replace(/{{defaultPropsLink}}/, defaultPropsLink),
               }}
             />

@@ -11,7 +11,7 @@ export interface GridClasses {
 export type GridClassKey = keyof GridClasses;
 
 export function getGridUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiGrid', slot);
+  return generateUtilityClass('uiGrid', slot);
 }
 
 const SPACINGS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] as const;
@@ -19,7 +19,7 @@ const DIRECTIONS = ['column-reverse', 'column', 'row-reverse', 'row'] as const;
 const WRAPS = ['nowrap', 'wrap-reverse', 'wrap'] as const;
 const GRID_SIZES = ['auto', true, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] as const;
 
-const GridClasses: GridClasses = generateUtilityClasses('UshiiGrid', [
+const GridClasses: GridClasses = generateUtilityClasses('uiGrid', [
   'root',
   'container',
 

@@ -23,7 +23,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const SnackbarContentRoot = styled(Paper, {
-  name: 'UshiiSnackbarContent',
+  name: 'uiSnackbarContent',
   slot: 'Root',
   overridesResolver: (props, styles) => styles.root,
 })(
@@ -52,7 +52,7 @@ const SnackbarContentRoot = styled(Paper, {
 );
 
 const SnackbarContentMessage = styled('div', {
-  name: 'UshiiSnackbarContent',
+  name: 'uiSnackbarContent',
   slot: 'Message',
   overridesResolver: (props, styles) => styles.message,
 })({
@@ -60,7 +60,7 @@ const SnackbarContentMessage = styled('div', {
 });
 
 const SnackbarContentAction = styled('div', {
-  name: 'UshiiSnackbarContent',
+  name: 'uiSnackbarContent',
   slot: 'Action',
   overridesResolver: (props, styles) => styles.action,
 })({
@@ -72,7 +72,7 @@ const SnackbarContentAction = styled('div', {
 });
 
 const SnackbarContent = React.forwardRef(function SnackbarContent(inProps, ref) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiSnackbarContent' });
+  const props = useDefaultProps({ props: inProps, name: 'uiSnackbarContent' });
   const { action, className, message, role = 'alert', ...other } = props;
   const ownerState = props;
   const classes = useUtilityClasses(ownerState);

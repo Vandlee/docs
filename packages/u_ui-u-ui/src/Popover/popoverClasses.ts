@@ -11,9 +11,9 @@ export interface PopoverClasses {
 export type PopoverClassKey = keyof PopoverClasses;
 
 export function getPopoverUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiPopover', slot);
+  return generateUtilityClass('uiPopover', slot);
 }
 
-const popoverClasses: PopoverClasses = generateUtilityClasses('UshiiPopover', ['root', 'paper']);
+const popoverClasses: PopoverClasses = generateUtilityClasses('uiPopover', ['root', 'paper']);
 
 export default popoverClasses;

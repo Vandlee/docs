@@ -240,8 +240,8 @@ export default function createStyled(input = {}) {
       const expressions = [...expressionsHead, ...expressionsBody, ...expressionsTail];
 
       const Component = defaultStyledResolver(...expressions);
-      if (tag.ushiiName) {
-        Component.ushiiName = tag.ushiiName;
+      if (tag.uiName) {
+        Component.uiName = tag.uiName;
       }
       if (process.env.NODE_ENV !== 'production') {
         Component.displayName = generateDisplayName(componentName, componentSlot, tag);

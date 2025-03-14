@@ -737,7 +737,7 @@ export default function Demo(props) {
                         'data-ga-event-action': 'copy-click',
                       }}
                       sx={{
-                        '& .UshiiCode-copy': {
+                        '& .uiCode-copy': {
                           display: 'none',
                         },
                       }}

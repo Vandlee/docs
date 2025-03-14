@@ -9,9 +9,9 @@ export default function UshiiBaseDeprecation(props: {
   if (props.newComponentUrl && props.newComponentName) {
     return (
       <MarkdownElement>
-        <Box component="aside" className="UshiiCallout-root UshiiCallout-error">
+        <Box component="aside" className="uiCallout-root uiCallout-error">
           <Icon />
-          <Box className="UshiiCallout-content">
+          <Box className="uiCallout-content">
             @u-shii/base has been deprecated and has been replaced by Base UI. We strongly recommend
             using the Base UI <a href={props.newComponentUrl}>{props.newComponentName} component</a>{' '}
             instead.
@@ -22,9 +22,9 @@ export default function UshiiBaseDeprecation(props: {
   }
   return (
     <MarkdownElement>
-      <Box component="aside" className="UshiiCallout-root UshiiCallout-error">
+      <Box component="aside" className="uiCallout-root uiCallout-error">
         <Icon />
-        <Box className="UshiiCallout-content">
+        <Box className="uiCallout-content">
           @u-shii/base has been deprecated and has been replaced by{' '}
           <a href="https://www.base-ui.com">Base UI</a>. We strongly recommend using the new package
           instead.
@@ -36,14 +36,14 @@ export default function UshiiBaseDeprecation(props: {
 
 function Icon() {
   return (
-    <Box className="UshiiCallout-icon-container">
+    <Box className="uiCallout-icon-container">
       <svg
         focusable="false"
         aria-hidden="true"
         viewBox="0 0 24 24"
         data-testid="ContentCopyRoundedIcon"
       >
-        <use className="UshiiCode-copied-icon" xlinkHref="#error-icon" />
+        <use className="uiCode-copied-icon" xlinkHref="#error-icon" />
       </svg>
     </Box>
   );

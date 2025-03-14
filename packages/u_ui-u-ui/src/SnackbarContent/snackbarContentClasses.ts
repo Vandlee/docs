@@ -13,11 +13,11 @@ export interface SnackbarContentClasses {
 export type SnackbarContentClassKey = keyof SnackbarContentClasses;
 
 export function getSnackbarContentUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiSnackbarContent', slot);
+  return generateUtilityClass('uiSnackbarContent', slot);
 }
 
 const snackbarContentClasses: SnackbarContentClasses = generateUtilityClasses(
-  'UshiiSnackbarContent',
+  'uiSnackbarContent',
   ['root', 'message', 'action'],
 );
 

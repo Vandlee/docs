@@ -5,7 +5,7 @@
       "componentName": "Component name",
       "componentsApi": "Components API",
       "themeDefaultProps": "Theme default props",
-      "themeDefaultPropsDescription": "You can use <code>{{ushiiName}}</code> to change the default props of this component <a href={{defaultPropsLink}}>with the theme</a>.",
+      "themeDefaultPropsDescription": "You can use <code>{{uiName}}</code> to change the default props of this component <a href={{defaultPropsLink}}>with the theme</a>.",
       "classes": "CSS classes",
       "classesDescription": "These class names are useful for styling with CSS. They are applied to the component's slots when specific states are triggered.",
       "className": "Class name",

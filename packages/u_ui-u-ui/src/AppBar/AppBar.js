@@ -26,7 +26,7 @@ const useUtilityClasses = (ownerState) => {
 const joinVars = (var1, var2) => (var1 ? `${var1?.replace(')', '')}, ${var2})` : var2);
 
 const AppBarRoot = styled(Paper, {
-  name: 'UshiiAppBar',
+  name: 'uiAppBar',
   slot: 'Root',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -166,7 +166,7 @@ const AppBarRoot = styled(Paper, {
 );
 
 const AppBar = React.forwardRef(function AppBar(inProps, ref) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiAppBar' });
+  const props = useDefaultProps({ props: inProps, name: 'uiAppBar' });
   const {
     className,
     color = 'primary',

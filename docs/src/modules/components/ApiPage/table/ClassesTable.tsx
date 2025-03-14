@@ -7,7 +7,7 @@ import {
   brandingLightTheme as lightTheme,
 } from '@u-shii/docs/branding';
 import { ClassDefinition } from 'docs/src/modules/components/ApiPage/definitions/classes';
-import StyledTableContainer from 'docs/src/modules/components/ApiPage/table/StyledTableContainer';
+import StyledTableContainer, { StyledScrollTableContainer } from 'docs/src/modules/components/ApiPage/table/StyledTableContainer';
 import ApiWarningAlert from 'docs/src/modules/components/ApiPage/ApiWarningAlert';
 
 const StyledTable = styled('table')(
@@ -23,27 +23,27 @@ const StyledTable = styled('table')(
       fontWeight: theme.typography.fontWeightSemiBold,
       fontFamily: theme.typography.fontFamilyCode,
       fontSize: theme.typography.pxToRem(13),
-      color: `var(--ushiidocs-palette-primary-600, ${lightTheme.palette.primary[600]})`,
+      color: `var(--uidocs-palette-primary-600, ${lightTheme.palette.primary[600]})`,
     },
     '& .class-key': {
       ...theme.typography.caption,
       fontFamily: theme.typography.fontFamilyCode,
       fontWeight: theme.typography.fontWeightRegular,
-      color: `var(--ushiidocs-palette-text-primary, ${lightTheme.palette.text.primary})`,
+      color: `var(--uidocs-palette-text-primary, ${lightTheme.palette.text.primary})`,
       padding: '1px 4px',
       borderRadius: 6,
       border: '1px solid',
       borderColor: alpha(darkTheme.palette.primary[100], 0.8),
-      backgroundColor: `var(--ushiidocs-palette-primary-50, ${lightTheme.palette.primary[50]})`,
+      backgroundColor: `var(--uidocs-palette-primary-50, ${lightTheme.palette.primary[50]})`,
     },
   }),
   ({ theme }) => ({
     [`:where(${theme.vars ? '[data-u-shii-color-scheme="dark"]' : '.mode-dark'}) &`]: {
       '& .class-name': {
-        color: `var(--ushiidocs-palette-primary-200, ${darkTheme.palette.primary[200]})`,
+        color: `var(--uidocs-palette-primary-200, ${darkTheme.palette.primary[200]})`,
       },
       '& .class-key': {
-        color: `var(--ushiidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
+        color: `var(--uidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
         borderColor: alpha(darkTheme.palette.primary[400], 0.1),
         backgroundColor: alpha(darkTheme.palette.primary[900], 0.4),
       },
@@ -62,56 +62,58 @@ export default function ClassesTable(props: ClassesTableProps) {
 
   return (
     <StyledTableContainer>
-      <StyledTable>
-        <thead>
-          <tr>
-            {/* eslint-disable material-ui/no-hardcoded-labels */}
-            <th>{'Class name'}</th>
-            {displayClassKeys && <th>{'Rule name'}</th>}
-            <th>{'Description'}</th>
-            {/* eslint-enable material-ui/no-hardcoded-labels */}
-          </tr>
-        </thead>
-        <tbody>
-          {classes.map((params) => {
-            const { className, hash, key, description, isGlobal, isDeprecated, deprecationInfo } =
-              params;
+      <StyledScrollTableContainer>
+        <StyledTable>
+          <thead>
+            <tr>
+              {/* eslint-disable material-ui/no-hardcoded-labels */}
+              <th>{t('api-docs.className')}</th>
+              {displayClassKeys && <th>{t('api-docs.ruleName')}</th>}
+              <th>{t('api-docs.description')}</th>
+              {/* eslint-enable material-ui/no-hardcoded-labels */}
+            </tr>
+          </thead>
+          <tbody>
+            {classes.map((params) => {
+              const { className, hash, key, description, isGlobal, isDeprecated, deprecationInfo } =
+                params;
 
-            return (
-              <tr key={className} id={hash}>
-                <td className="algolia-lvl3">
-                  <span className="class-name">.{className}</span>
-                </td>
-                {displayClassKeys && (
-                  <td>{!isGlobal && <span className="class-key">{key}</span>}</td>
-                )}
-                <td className="algolia-content">
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: description || '',
-                    }}
-                  />
-                  {isDeprecated && (
-                    <ApiWarningAlert>
-                      <b>{t('api-docs.deprecated')}</b>
-                      {deprecationInfo && (
-                        <React.Fragment>
-                          {'－'}
-                          <span
-                            dangerouslySetInnerHTML={{
-                              __html: deprecationInfo,
-                            }}
-                          />
-                        </React.Fragment>
-                      )}
-                    </ApiWarningAlert>
+              return (
+                <tr key={className} id={hash}>
+                  <td className="algolia-lvl3">
+                    <span className="class-name">.{className}</span>
+                  </td>
+                  {displayClassKeys && (
+                    <td>{!isGlobal && <span className="class-key">{key}</span>}</td>
                   )}
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </StyledTable>
+                  <td className="algolia-content">
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: description || '',
+                      }}
+                    />
+                    {isDeprecated && (
+                      <ApiWarningAlert>
+                        <b>{t('api-docs.deprecated')}</b>
+                        {deprecationInfo && (
+                          <React.Fragment>
+                            {'－'}
+                            <span
+                              dangerouslySetInnerHTML={{
+                                __html: deprecationInfo,
+                              }}
+                            />
+                          </React.Fragment>
+                        )}
+                      </ApiWarningAlert>
+                    )}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </StyledTable>
+      </StyledScrollTableContainer>
     </StyledTableContainer>
   );
 }

@@ -41,7 +41,7 @@ export default function AppHeader(props: AppHeaderProps) {
       <GlobalStyles
         styles={{
           ':root': {
-            '--UshiiDocs-header-height': `${HEIGHT}px`,
+            '--uidocs-header-height': `${HEIGHT}px`,
           },
         }}
       />

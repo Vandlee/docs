@@ -44,7 +44,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 export const TypographyRoot = styled('span', {
-  name: 'UshiiTypography',
+  name: 'uiTypography',
   slot: 'Root',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -140,7 +140,7 @@ const defaultVariantMapping = {
 };
 
 const Typography = React.forwardRef(function Typography(inProps, ref) {
-  const { color, ...themeProps } = useDefaultProps({ props: inProps, name: 'UshiiTypography' });
+  const { color, ...themeProps } = useDefaultProps({ props: inProps, name: 'uiTypography' });
   const isSxColor = !v6Colors[color];
 
   const props = extendSxProp({

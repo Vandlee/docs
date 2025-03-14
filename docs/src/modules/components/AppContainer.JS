@@ -4,7 +4,7 @@ import Container from '@u_ui/u-ui/Container';
 
 const StyledAppContainer = styled(Container)(({ theme }) => {
   return {
-    paddingTop: `calc(var(--UshiiDocs-header-height) + ${theme.spacing(4)})`,
+    paddingTop: `calc(var(--uidocs-header-height) + ${theme.spacing(4)})`,
     // We're mostly hosting text content so max-width by px does not make sense considering font-size is system-adjustable.
     // 105ch ≈ 930px
     fontFamily: 'Arial',

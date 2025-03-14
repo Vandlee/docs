@@ -19,10 +19,10 @@ export interface CollapseClasses {
 export type CollapseClassKey = keyof CollapseClasses;
 
 export function getCollapseUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiCollapse', slot);
+  return generateUtilityClass('uiCollapse', slot);
 }
 
-const collapseClasses: CollapseClasses = generateUtilityClasses('UshiiCollapse', [
+const collapseClasses: CollapseClasses = generateUtilityClasses('uiCollapse', [
   'root',
   'horizontal',
   'vertical',

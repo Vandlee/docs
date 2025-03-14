@@ -22,7 +22,7 @@ import Grow from '../Grow';
 import Zoom from '../Zoom';
 
 const useUtilityClasses = (ownerState) => {
-  const { color, disableElevation, fullWidth, size, variant, loading, loadingPosition, classes } = 
+  const { color, enableElevation, fullWidth, size, variant, loading, loadingPosition, classes } = 
     ownerState;
 
   const slots = {
@@ -34,7 +34,7 @@ const useUtilityClasses = (ownerState) => {
       `size${capitalize(size)}`,
       `${variant}Size${capitalize(size)}`,
       `color${capitalize(color)}`,
-      disableElevation && 'disableElevation',
+      enableElevation && 'enableElevation',
       fullWidth && 'fullWidth',
       loading && `loadingPosition${capitalize(loadingPosition)}`,
     ],
@@ -81,7 +81,7 @@ const commonIconStyles = [
 
 const ButtonRoot = styled(ButtonBase, {
   shouldForwardProp: (prop) => rootShouldForwardProp(prop) || prop === 'classes',
-  name: 'UshiiButton',
+  name: 'uiButton',
   slot: 'Root',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -93,7 +93,7 @@ const ButtonRoot = styled(ButtonBase, {
       styles[`size${capitalize(ownerState.size)}`],
       styles[`${ownerState.variant}Size${capitalize(ownerState.size)}`],
       ownerState.color === 'inherit' && styles.colorInherit,
-      ownerState.disableElevation && styles.disableElevation,
+      ownerState.enableElevation && styles.enableElevation,
       ownerState.fullWidth && styles.fullWidth,
       ownerState.loading && styles.loading,
     ];
@@ -108,7 +108,7 @@ const ButtonRoot = styled(ButtonBase, {
     return {
       ...theme.typography.button,
       minWidth: 64,
-      padding: '6px 16px 4px',
+      padding: '8px 16px',
       border: 0,
       borderRadius: (theme.vars || theme).shape.borderRadius,
       transition: theme.transitions.create(
@@ -120,10 +120,10 @@ const ButtonRoot = styled(ButtonBase, {
       '&:hover': {
         textDecoration: 'none',
       },
-      '.UshiiButton-icon': {
+      '.uiButton-icon': {
         marginTop: -2
       },
-      '.UshiiButton-endIcon, .UshiiButton-startIcon': {
+      '.uiButton-endIcon, .uiButton-startIcon': {
         transition: theme.transitions.create(
           ['transform'],
           {
@@ -131,10 +131,10 @@ const ButtonRoot = styled(ButtonBase, {
           }
         )
       },
-      '&:hover .UshiiButton-startIcon': {
+      '&:hover .uiButton-startIcon': {
         transform: 'translateX(-3px)',
       },
-      '&:hover .UshiiButton-endIcon': {
+      '&:hover .uiButton-endIcon': {
         transform: 'translateX(3px)',
       },
       [`&.${buttonClasses.disabled}`]: {
@@ -150,10 +150,10 @@ const ButtonRoot = styled(ButtonBase, {
         {
           props: { disableIconAnimation: true },
           style: {
-            '&:hover .UshiiButton-startIcon': {
+            '&:hover .uiButton-startIcon': {
               transform: 'unset',
             },
-            '&:hover .UshiiButton-endIcon': {
+            '&:hover .uiButton-endIcon': {
               transform: 'unset',
             },
           }
@@ -325,7 +325,7 @@ const ButtonRoot = styled(ButtonBase, {
         },
         {
           props: {
-            disableElevation: true,
+            enableElevation: false,
           },
           style: {
             boxShadow: 'none',
@@ -394,7 +394,7 @@ const ButtonRoot = styled(ButtonBase, {
 );
 
 const ButtonStartIcon = styled('span', {
-  name: 'UshiiButton',
+  name: 'uiButton',
   slot: 'StartIcon',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -425,18 +425,12 @@ const ButtonStartIcon = styled('span', {
         opacity: 0,
       },
     },
-    {
-      props: { loadingPosition: 'start', loading: true, fullWidth: true },
-      style: {
-        marginRight: -8,
-      },
-    },
     ...commonIconStyles,
   ],
 }));
 
 const ButtonEndIcon = styled('span', {
-  name: 'UshiiButton',
+  name: 'uiButton',
   slot: 'EndIcon',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -467,18 +461,12 @@ const ButtonEndIcon = styled('span', {
         opacity: 0,
       },
     },
-    {
-      props: { loadingPosition: 'end', loading: true, fullWidth: true },
-      style: {
-        marginLeft: -8,
-      },
-    },
     ...commonIconStyles,
   ],
 }));
 
 const ButtonLoadingIndicator = styled('span', {
-  name: 'UshiiButton',
+  name: 'uiButton',
   slot: 'LoadingIndicator',
   overridesResolver: (props, styles) => styles.loadingIndicator,
 })(({ theme }) => ({
@@ -544,25 +532,11 @@ const ButtonLoadingIndicator = styled('span', {
         right: 6,
       },
     },
-    {
-      props: { loadingPosition: 'start', fullWidth: true },
-      style: {
-        position: 'relative',
-        left: -10,
-      },
-    },
-    {
-      props: { loadingPosition: 'end', fullWidth: true },
-      style: {
-        position: 'relative',
-        right: -10,
-      },
-    },
   ],
 }));
 
 const ButtonLoadingIconPlaceholder = styled('span', {
-  name: 'UshiiButton',
+  name: 'uiButton',
   slot: 'LoadingIconPlaceholder',
   overridesResolver: (props, styles) => styles.loadingIconPlaceholder,
 })({
@@ -576,7 +550,7 @@ const Button = React.forwardRef(function Button(inProps, ref) {
   const contextProps = React.useContext(ButtonGroupContext);
   const buttonGroupButtonContextPositionClassName = React.useContext(ButtonGroupButtonContext);
   const resolvedProps = resolveProps(contextProps, inProps);
-  const props = useDefaultProps({ props: resolvedProps, name: 'UshiiButton' });
+  const props = useDefaultProps({ props: resolvedProps, name: 'uiButton' });
   const {
     children,
     color = 'primary',
@@ -584,13 +558,13 @@ const Button = React.forwardRef(function Button(inProps, ref) {
     className,
     justify = 'center',
     disabled = false,
-    disableElevation = true,
+    enableElevation = false,
     disableFocusRipple = false,
     endIcon: endIconProp,
     focusVisibleClassName,
     fullWidth = false,
     id: idProp,
-    loading = false,
+    loading = null,
     loadingIndicator: loadingIndicatorProp,
     loadingPosition = 'center',
     size = 'medium',
@@ -610,7 +584,7 @@ const Button = React.forwardRef(function Button(inProps, ref) {
     color,
     component,
     disabled,
-    disableElevation,
+    enableElevation,
     disableFocusRipple,
     fullWidth,
     loading,
@@ -727,7 +701,7 @@ Button.propTypes /* remove-proptypes */ = {
    * If `true`, no elevation is used.
    * @default true
    */
-  disableElevation: PropTypes.bool,
+  enableElevation: PropTypes.bool,
   /**
    * If `true`, the  keyboard focus ripple is disabled.
    * @default false
@@ -737,7 +711,7 @@ Button.propTypes /* remove-proptypes */ = {
    * If `true`, the ripple effect is disabled.
    *
    * ⚠️ Without a ripple there is no styling for :focus-visible by default. Be sure
-   * to highlight the element by applying separate styles with the `.Ushii-focusVisible` class.
+   * to highlight the element by applying separate styles with the `.ui--focusVisible` class.
    * @default false
    */
   disableRipple: PropTypes.bool,

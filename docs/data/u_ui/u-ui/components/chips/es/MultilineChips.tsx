@@ -8,7 +8,7 @@ export default function MultilineChips() {
       <Chip
         sx={{
           height: 'auto',
-          '& .UshiiChip-label': {
+          '& .uiChip-label': {
             display: 'block',
             whiteSpace: 'normal',
           },

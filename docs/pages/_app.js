@@ -261,6 +261,7 @@ function AppWrapper(props) {
         adConfig={{ GADisplayRatio: 0.1 }}
         defaultUserLanguage={pageProps.userLanguage}
         translations={pageProps.translations}
+        LANGUAGES={config.LANGUAGES}
       >
           <CodeCopyProvider>
             <CodeStylingProvider>

@@ -50,10 +50,10 @@ export interface ButtonOwnProps {
    */
   disabled?: boolean;
   /**
-   * If `true`, no elevation is used.
+   * If `true`, elevation is used.
    * @default false
    */
-  disableElevation?: boolean;
+  enableElevation?: boolean;
   /**
    * If `true`, the  keyboard focus ripple is disabled.
    * @default false

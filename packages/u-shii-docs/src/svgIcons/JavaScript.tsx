@@ -9,6 +9,6 @@ function JavaScript(props: SvgIconProps) {
   );
 }
 
-JavaScript.ushiiName = 'SvgIcon';
+JavaScript.uiName = 'SvgIcon';
 
 export default JavaScript;

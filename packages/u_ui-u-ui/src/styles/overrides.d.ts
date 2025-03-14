@@ -177,154 +177,154 @@ export type ComponentsOverrides<Theme = unknown> = {
     OverridesStyleRules<ComponentNameToClassKey[Name], Name, Theme>
   >;
 } & {
-  UshiiCssBaseline?: CSSObject | string | ((theme: Theme) => CSSInterpolation);
+  uiCssBaseline?: CSSObject | string | ((theme: Theme) => CSSInterpolation);
 };
 
 export interface ComponentNameToClassKey {
-  UshiiAlert: AlertClassKey;
+  uiAlert: AlertClassKey;
   /*
-  UshiiAlertTitle: AlertTitleClassKey;
+  uiAlertTitle: AlertTitleClassKey;
   */
-  UshiiAppBar: AppBarClassKey;
+  uiAppBar: AppBarClassKey;
   /*
-  UshiiAutocomplete: AutocompleteClassKey;
+  uiAutocomplete: AutocompleteClassKey;
   */
-  UshiiAvatar: AvatarClassKey;
-  UshiiAvatarGroup: AvatarGroupClassKey;
-  UshiiBackdrop: BackdropClassKey;
-  UshiiBadge: BadgeClassKey;
+  uiAvatar: AvatarClassKey;
+  uiAvatarGroup: AvatarGroupClassKey;
+  uiBackdrop: BackdropClassKey;
+  uiBadge: BadgeClassKey;
   /*
-  UshiiBottomNavigation: BottomNavigationClassKey;
-  UshiiBottomNavigationAction: BottomNavigationActionClassKey;
-  UshiiBreadcrumbs: BreadcrumbsClassKey;
+  uiBottomNavigation: BottomNavigationClassKey;
+  uiBottomNavigationAction: BottomNavigationActionClassKey;
+  uiBreadcrumbs: BreadcrumbsClassKey;
   */
-  UshiiButton: ButtonClassKey;
-  UshiiButtonBase: ButtonBaseClassKey;
-  UshiiButtonGroup: ButtonGroupClassKey;
-  UshiiCard: CardClassKey;
+  uiButton: ButtonClassKey;
+  uiButtonBase: ButtonBaseClassKey;
+  uiButtonGroup: ButtonGroupClassKey;
+  uiCard: CardClassKey;
   /*
-  UshiiCardActionArea: CardActionAreaClassKey;
-  UshiiCardActions: CardActionsClassKey;
-  UshiiCardContent: CardContentClassKey;
-  UshiiCardHeader: CardHeaderClassKey;
+  uiCardActionArea: CardActionAreaClassKey;
+  uiCardActions: CardActionsClassKey;
+  uiCardContent: CardContentClassKey;
+  uiCardHeader: CardHeaderClassKey;
   */
-  UshiiCardMedia: CardMediaClassKey;
+  uiCardMedia: CardMediaClassKey;
   /*
-  UshiiCheckbox: CheckboxClassKey;
+  uiCheckbox: CheckboxClassKey;
   */
-  UshiiChip: ChipClassKey;
-  UshiiCircularProgress: CircularProgressClassKey;
-  UshiiCollapse: CollapseClassKey;
-  UshiiContainer: ContainerClassKey;
+  uiChip: ChipClassKey;
+  uiCircularProgress: CircularProgressClassKey;
+  uiCollapse: CollapseClassKey;
+  uiContainer: ContainerClassKey;
   /*
-  UshiiDialog: DialogClassKey;
-  UshiiDialogActions: DialogActionsClassKey;
-  UshiiDialogContent: DialogContentClassKey;
-  UshiiDialogContentText: DialogContentTextClassKey;
-  UshiiDialogTitle: DialogTitleClassKey;
+  uiDialog: DialogClassKey;
+  uiDialogActions: DialogActionsClassKey;
+  uiDialogContent: DialogContentClassKey;
+  uiDialogContentText: DialogContentTextClassKey;
+  uiDialogTitle: DialogTitleClassKey;
   */
-  UshiiDivider: DividerClassKey;
-  UshiiDrawer: DrawerClassKey;
+  uiDivider: DividerClassKey;
+  uiDrawer: DrawerClassKey;
   /*
-  UshiiAccordion: AccordionClassKey;
-  UshiiAccordionActions: AccordionActionsClassKey;
-  UshiiAccordionDetails: AccordionDetailsClassKey;
-  UshiiAccordionSummary: AccordionSummaryClassKey;
-  UshiiFab: FabClassKey;
-  UshiiFilledInput: FilledInputClassKey;
-  UshiiFormControl: FormControlClassKey;
-  UshiiFormControlLabel: FormControlLabelClassKey;
-  UshiiFormGroup: FormGroupClassKey;
-  UshiiFormHelperText: FormHelperTextClassKey;
-  UshiiFormLabel: FormLabelClassKey;
+  uiAccordion: AccordionClassKey;
+  uiAccordionActions: AccordionActionsClassKey;
+  uiAccordionDetails: AccordionDetailsClassKey;
+  uiAccordionSummary: AccordionSummaryClassKey;
+  uiFab: FabClassKey;
+  uiFilledInput: FilledInputClassKey;
+  uiFormControl: FormControlClassKey;
+  uiFormControlLabel: FormControlLabelClassKey;
+  uiFormGroup: FormGroupClassKey;
+  uiFormHelperText: FormHelperTextClassKey;
+  uiFormLabel: FormLabelClassKey;
   */
-  UshiiGrid: GridClassKey;
+  uiGrid: GridClassKey;
   /*
-  UshiiIcon: IconClassKey;
+  uiIcon: IconClassKey;
   */
-  UshiiIconButton: IconButtonClassKey;
+  uiIconButton: IconButtonClassKey;
   /*
-  UshiiImageList: ImageListClassKey;
-  UshiiImageListItem: ImageListItemClassKey;
-  UshiiImageListItemBar: ImageListItemBarClassKey;
-  UshiiInput: InputClassKey;
-  UshiiInputAdornment: InputAdornmentClassKey;
-  UshiiInputBase: InputBaseClassKey;
-  UshiiInputLabel: InputLabelClassKey;
-  UshiiLinearProgress: LinearProgressClassKey;
+  uiImageList: ImageListClassKey;
+  uiImageListItem: ImageListItemClassKey;
+  uiImageListItemBar: ImageListItemBarClassKey;
+  uiInput: InputClassKey;
+  uiInputAdornment: InputAdornmentClassKey;
+  uiInputBase: InputBaseClassKey;
+  uiInputLabel: InputLabelClassKey;
+  uiLinearProgress: LinearProgressClassKey;
   */
-  UshiiLink: LinkClassKey;
-  UshiiList: ListClassKey;
-  UshiiListItem: ListItemClassKey;
-  UshiiListItemButton: ListItemButtonClassKey;
-  UshiiListItemAvatar: ListItemAvatarClassKey;
-  UshiiListItemSecondaryAction: ListItemSecondaryActionClassKey;
-  UshiiListItemText: ListItemTextClassKey;
-  UshiiListSubheader: ListSubheaderClassKey;
-  UshiiMenu: MenuClassKey;
-  UshiiMenuItem: MenuItemClassKey;
-  UshiiMenuList: MenuListClassKey;
+  uiLink: LinkClassKey;
+  uiList: ListClassKey;
+  uiListItem: ListItemClassKey;
+  uiListItemButton: ListItemButtonClassKey;
+  uiListItemAvatar: ListItemAvatarClassKey;
+  uiListItemSecondaryAction: ListItemSecondaryActionClassKey;
+  uiListItemText: ListItemTextClassKey;
+  uiListSubheader: ListSubheaderClassKey;
+  uiMenu: MenuClassKey;
+  uiMenuItem: MenuItemClassKey;
+  uiMenuList: MenuListClassKey;
   /*
-  UshiiMobileStepper: MobileStepperClassKey;
+  uiMobileStepper: MobileStepperClassKey;
   */
-  UshiiModal: ModalClassKey;
+  uiModal: ModalClassKey;
   /*
-  UshiiNativeSelect: NativeSelectClassKey;
-  UshiiOutlinedInput: OutlinedInputClassKey;
-  UshiiPagination: PaginationClassKey;
-  UshiiPaginationItem: PaginationItemClassKey;
+  uiNativeSelect: NativeSelectClassKey;
+  uiOutlinedInput: OutlinedInputClassKey;
+  uiPagination: PaginationClassKey;
+  uiPaginationItem: PaginationItemClassKey;
   */
-  UshiiPaper: PaperClassKey;
-  UshiiPopover: PopoverClassKey;
-  UshiiPopper: PopperClassKey;
+  uiPaper: PaperClassKey;
+  uiPopover: PopoverClassKey;
+  uiPopper: PopperClassKey;
   /*
-  UshiiRadio: RadioClassKey;
-  UshiiRadioGroup: RadioGroupClassKey;
+  uiRadio: RadioClassKey;
+  uiRadioGroup: RadioGroupClassKey;
   */
-  UshiiRating: RatingClassKey;
+  uiRating: RatingClassKey;
   /*
-  UshiiScopedCssBaseline: ScopedCssBaselineClassKey;
-  UshiiSelect: SelectClassKey;
-  UshiiSkeleton: SkeletonClassKey;
-  UshiiSlider: SliderClassKey;
+  uiScopedCssBaseline: ScopedCssBaselineClassKey;
+  uiSelect: SelectClassKey;
+  uiSkeleton: SkeletonClassKey;
+  uiSlider: SliderClassKey;
   */
-  UshiiSnackbar: SnackbarClassKey;
-  UshiiSnackbarContent: SnackbarContentClassKey;
+  uiSnackbar: SnackbarClassKey;
+  uiSnackbarContent: SnackbarContentClassKey;
   /*
-  UshiiSpeedDial: SpeedDialClassKey;
-  UshiiSpeedDialAction: SpeedDialActionClassKey;
-  UshiiSpeedDialIcon: SpeedDialIconClassKey;
+  uiSpeedDial: SpeedDialClassKey;
+  uiSpeedDialAction: SpeedDialActionClassKey;
+  uiSpeedDialIcon: SpeedDialIconClassKey;
   */
-  UshiiStack: StackClassKey;
+  uiStack: StackClassKey;
   /*
-  UshiiStep: StepClasskey;
-  UshiiStepButton: StepButtonClasskey;
-  UshiiStepConnector: StepConnectorClasskey;
-  UshiiStepContent: StepContentClasskey;
-  UshiiStepIcon: StepIconClasskey;
-  UshiiStepLabel: StepLabelClasskey;
-  UshiiStepper: StepperClasskey;
+  uiStep: StepClasskey;
+  uiStepButton: StepButtonClasskey;
+  uiStepConnector: StepConnectorClasskey;
+  uiStepContent: StepContentClasskey;
+  uiStepIcon: StepIconClasskey;
+  uiStepLabel: StepLabelClasskey;
+  uiStepper: StepperClasskey;
   */
-  UshiiSvgIcon: SvgIconClassKey;
+  uiSvgIcon: SvgIconClassKey;
   /*
-  UshiiSwitch: SwitchClassKey;
-  UshiiTab: TabClassKey;
-  UshiiTable: TableClassKey;
-  UshiiTableBody: TableBodyClassKey;
-  UshiiTableCell: TableCellClassKey;
-  UshiiTableContainer: TableContainerClassKey;
-  UshiiTableFooter: TableFooterClassKey;
-  UshiiTableHead: TableHeadClassKey;
-  UshiiTablePagination: TablePaginationClassKey;
-  UshiiTableRow: TableRowClassKey;
-  UshiiTableSortLabel: TableSortLabelClassKey;
-  UshiiTabs: TabsClassKey;
-  UshiiTextField: TextFieldClassKey;
+  uiSwitch: SwitchClassKey;
+  uiTab: TabClassKey;
+  uiTable: TableClassKey;
+  uiTableBody: TableBodyClassKey;
+  uiTableCell: TableCellClassKey;
+  uiTableContainer: TableContainerClassKey;
+  uiTableFooter: TableFooterClassKey;
+  uiTableHead: TableHeadClassKey;
+  uiTablePagination: TablePaginationClassKey;
+  uiTableRow: TableRowClassKey;
+  uiTableSortLabel: TableSortLabelClassKey;
+  uiTabs: TabsClassKey;
+  uiTextField: TextFieldClassKey;
   */
-  UshiiToggleButton: ToggleButtonClassKey;
-  UshiiToggleButtonGroup: ToggleButtonGroupClassKey;
-  UshiiToolbar: ToolbarClassKey;
-  UshiiTooltip: TooltipClassKey;
-  UshiiTouchRipple: TouchRippleClassKey;
-  UshiiTypography: TypographyClassKey;
+  uiToggleButton: ToggleButtonClassKey;
+  uiToggleButtonGroup: ToggleButtonGroupClassKey;
+  uiToolbar: ToolbarClassKey;
+  uiTooltip: TooltipClassKey;
+  uiTouchRipple: TouchRippleClassKey;
+  uiTypography: TypographyClassKey;
 }

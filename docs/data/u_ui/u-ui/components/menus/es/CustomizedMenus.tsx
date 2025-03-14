@@ -24,17 +24,17 @@ const StyledMenu = styled((props: MenuProps) => (
     {...props}
   />
 ))(({ theme }) => ({
-  '& .UshiiPaper-root': {
+  '& .uiPaper-root': {
     borderRadius: 6,
     marginTop: theme.spacing(1),
     minWidth: 180,
     color: 'rgb(55, 65, 81)',
     boxShadow:
       'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
-    '& .UshiiMenu-list': {
+    '& .uiMenu-list': {
       padding: '4px 0',
     },
-    '& .UshiiMenuItem-root': {
+    '& .uiMenuItem-root': {
       '& .MuiSvgIcon-root': {
         fontSize: 18,
         color: theme.palette.text.secondary,
@@ -71,7 +71,6 @@ export default function CustomizedMenus() {
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         variant="contained"
-        disableElevation
         onClick={handleClick}
         endIcon={<KeyboardArrowDownIcon />}
       >

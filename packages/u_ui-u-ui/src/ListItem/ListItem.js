@@ -58,7 +58,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 export const ListItemRoot = styled('div', {
-  name: 'UshiiListItem',
+  name: 'uiListItem',
   slot: 'Root',
   overridesResolver,
 })(
@@ -153,7 +153,7 @@ export const ListItemRoot = styled('div', {
 );
 
 const ListItemContainer = styled('li', {
-  name: 'UshiiListItem',
+  name: 'uiListItem',
   slot: 'Container',
   overridesResolver: (props, styles) => styles.container,
 })({
@@ -164,7 +164,7 @@ const ListItemContainer = styled('li', {
  * Uses an additional container component if `ListItemSecondaryAction` is the last child.
  */
 const ListItem = React.forwardRef(function ListItem(inProps, ref) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiListItem' });
+  const props = useDefaultProps({ props: inProps, name: 'uiListItem' });
   const {
     alignItems = 'center',
     children: childrenProp,

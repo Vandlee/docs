@@ -27,7 +27,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const PaperRoot = styled('div', {
-  name: 'UshiiPaper',
+  name: 'uiPaper',
   slot: 'Root',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -73,7 +73,7 @@ const PaperRoot = styled('div', {
 );
 
 const Paper = React.forwardRef(function Paper(inProps, ref) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiPaper' });
+  const props = useDefaultProps({ props: inProps, name: 'uiPaper' });
   const theme = useTheme();
 
   const {

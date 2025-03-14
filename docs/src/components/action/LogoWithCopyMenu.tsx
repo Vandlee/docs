@@ -88,7 +88,7 @@ export default function LogoWithCopyMenu({
           contextMenu !== null ? { top: contextMenu.mouseY, left: contextMenu.mouseX } : undefined
         }
         sx={(theme) => ({
-          '& .UshiiMenuItem-root': {
+          '& .uiMenuItem-root': {
             gap: 1,
             '& path': {
               fill: (theme.vars || theme).palette.text.tertiary,

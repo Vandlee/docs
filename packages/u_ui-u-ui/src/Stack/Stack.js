@@ -6,11 +6,11 @@ import { useDefaultProps } from '../DefaultPropsProvider';
 
 const Stack = createStack({
   createStyledComponent: styled('div', {
-    name: 'UshiiStack',
+    name: 'uiStack',
     slot: 'Root',
     overridesResolver: (props, styles) => styles.root,
   }),
-  useThemeProps: (inProps) => useDefaultProps({ props: inProps, name: 'UshiiStack' }),
+  useThemeProps: (inProps) => useDefaultProps({ props: inProps, name: 'uiStack' }),
 });
 
 Stack.propTypes /* remove-proptypes */ = {

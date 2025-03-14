@@ -15,10 +15,10 @@ export interface ListClasses {
 export type ListClassKey = keyof ListClasses;
 
 export function getListUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiList', slot);
+  return generateUtilityClass('uiList', slot);
 }
 
-const listClasses: ListClasses = generateUtilityClasses('UshiiList', [
+const listClasses: ListClasses = generateUtilityClasses('uiList', [
   'root',
   'padding',
   'dense',

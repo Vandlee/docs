@@ -19,6 +19,15 @@ const LinkTab = styled(Link)(({ theme }) => ({
   fontSize: theme.typography.pxToRem(14),
   color: (theme.vars || theme).palette.text.secondary,
   borderRadius: '8px',
+  position: 'relative',
+  '&::before': {
+    content: "''",
+    position: 'absolute',
+    bottom: -8,
+    left: 0,
+    width: '100%',
+    height: '2px',
+  },
   '&:hover': {
     background: (theme.vars || theme).palette.grey[50],
     borderColor: (theme.vars || theme).palette.divider,
@@ -29,7 +38,7 @@ const LinkTab = styled(Link)(({ theme }) => ({
       borderColor: (theme.vars || theme).palette.divider,
       background: (theme.vars || theme).palette.primaryDark[700],
     },
-    '&.Ushii-selected': {
+    '&.ui-selected': {
       color: (theme.vars || theme).palette.primary[300],
     },
   }),
@@ -50,22 +59,6 @@ export default function ComponentPageTabs(props) {
   const apiPathname = `${demosHref.endsWith('/') ? demosHref : `${demosHref}/`}`;
   const componentsHref = `${apiPathname}components-api`;
   const hooksHref = `${apiPathname}hooks-api`;
-
-  const widthMap = {
-    '': '62px',
-    'components-api': '127px',
-    'hooks-api': '86px',
-  };
-
-  const width = widthMap[activeTab];
-
-  const leftMap = {
-    '': '1px',
-    'components-api': '67px',
-    'hooks-api': '198px',
-  };
-
-  const left = leftMap[activeTab];
 
   const linkTabData = [
     {
@@ -111,15 +104,6 @@ export default function ComponentPageTabs(props) {
           display: 'inline-flex',
           py: 1,
           gap: 0.5,
-          '&::before': {
-            content: "''",
-            position: 'absolute',
-            bottom: 0,
-            left,
-            width,
-            height: '2px',
-            backgroundColor: 'primary.light',
-          },
           ...theme.applyDarkStyles({
             backgroundColor: alpha(theme.palette.primaryDark[900], 0.7),
           }),
@@ -131,7 +115,7 @@ export default function ComponentPageTabs(props) {
             href={linkTab.href}
             aria-current={activeTab === linkTab.key ? 'page' : undefined}
             className={linkTab.key.includes('api') ? 'skip-algolia-crawler' : ''} // Details: https://github.com/mui/material-ui/pull/37539
-            sx={{ color: activeTab === linkTab.key ? 'primary.main' : 'inherit' }}
+            sx={{ color: activeTab === linkTab.key ? 'primary.main' : 'inherit', '&::before': { backgroundColor: activeTab === linkTab.key ? 'primary.light' : 'transparent' } }}
           >
             {linkTab.label}
           </LinkTab>

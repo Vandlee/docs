@@ -8,8 +8,8 @@ export default function uUi() {
   return (
     <BrandingCssVarsProvider>
       <Head
-        title="Ushii: React components"
-        description="Ushii is an open-source React component library"
+        title="ui: React components"
+        description="ui is an open-source React component library"
       />
       <AppHeaderBanner />
       <AppHeader gitHubRepository="https://github.com" />

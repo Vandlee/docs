@@ -29,7 +29,7 @@ const defaultTheme = createTheme();
 
 // widening Theme to any so that the consumer can own the theme structure.
 const defaultCreateStyledComponent = (systemStyled as CreateUshiiStyled<any>)('div', {
-  name: 'UshiiGrid',
+  name: 'uiGrid',
   slot: 'Root',
   overridesResolver: (props, styles) => styles.root,
 });
@@ -37,7 +37,7 @@ const defaultCreateStyledComponent = (systemStyled as CreateUshiiStyled<any>)('d
 function useThemePropsDefault<T extends {}>(props: T) {
   return useThemePropsSystem({
     props,
-    name: 'UshiiGrid',
+    name: 'uiGrid',
     defaultTheme,
   });
 }
@@ -55,7 +55,7 @@ export default function createGrid(
     createStyledComponent = defaultCreateStyledComponent,
     useThemeProps = useThemePropsDefault,
     useTheme = useThemeSystem,
-    componentName = 'UshiiGrid',
+    componentName = 'uiGrid',
   } = options;
 
   const useUtilityClasses = (ownerState: GridOwnerState, theme: typeof defaultTheme) => {
@@ -242,7 +242,7 @@ export default function createGrid(
   };
 
   // @ts-ignore internal logic for nested grid
-  Grid.ushiiName = 'Grid';
+  Grid.uiName = 'Grid';
 
   return Grid;
 }

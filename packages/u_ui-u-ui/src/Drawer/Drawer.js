@@ -43,7 +43,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const DrawerRoot = styled(Modal, {
-    name: 'UshiiDrawer',
+    name: 'uiDrawer',
     slot: 'Root',
     overridesResolver,
 })(
@@ -54,7 +54,7 @@ const DrawerRoot = styled(Modal, {
 
 const DrawerDockedRoot = styled('div', {
     shouldForwardProp: rootShouldForwardProp,
-    name: 'UshiiDrawer',
+    name: 'uiDrawer',
     slot: 'Docked',
     skipVariantsResolver: false,
     overridesResolver,
@@ -63,7 +63,7 @@ const DrawerDockedRoot = styled('div', {
 });
 
 const DrawerPaper = styled(Paper, {
-    name: 'UshiiDrawer',
+    name: 'uiDrawer',
     slot: 'Paper',
     overridesResolver: (props, styles) => {
         const { ownerState } = props;
@@ -186,7 +186,7 @@ export function getAnchor({ direction }, anchor) {
  * when `variant="temporary"` is set.
  */
 const Drawer = React.forwardRef(function Drawer(inProps, ref) {
-    const props = useDefaultProps({ props: inProps, name: 'UshiiDrawer' });
+    const props = useDefaultProps({ props: inProps, name: 'uiDrawer' });
     const theme = useTheme();
     const isRtl = useRtl();
     const defaultTransitionDuration = {

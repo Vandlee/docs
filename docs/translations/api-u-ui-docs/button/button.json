@@ -1,0 +1,177 @@
+{
+  "componentDescription": "",
+  "propDescriptions": {
+    "children": { "description": "El contenido del componente" },
+    "className": { "description": "Nombre de clase aplicado al elemento raíz." },
+    "color": {
+      "description": "El color del componente. Admite tanto colores de tema predeterminados como personalizados, que pueden añadirse como se muestra en la <a href=\"https://mui.com/material-ui/customization/palette/#custom-colors\">guía de personalización de la paleta</a>."
+    },
+    "component": {
+      "description": "El componente utilizado para el nodo raíz. Puede ser una cadena de texto para utilizar un elemento HTML o un componente."
+    },
+    "disabled": { "description": "Si es <code>true</code>, el componente está desactivado." },
+    "enableElevation": { "description": "Si es <code>true</code>, se utiliza la elevación." },
+    "disableFocusRipple": {
+      "description": "Si es <code>true</code>, se desactiva el efecto de ripple al enfocar con el teclado."
+    },
+    "disableRipple": {
+      "description": "Si es <code>true</code>, se desactiva el efecto de ripple.<br>⚠️ Sin un ripple, no hay estilos para :focus-visible por defecto. Asegúrese de resaltar el elemento aplicando estilos separados con la clase <code>.ui-bfocusVisible</code>."
+    },
+    "endIcon": { "description": "Elemento colocado después de los hijos." },
+    "fullWidth": {
+      "description": "Si es <code>true</code>, el botón ocupará todo el ancho de su contenedor."
+    },
+    "href": {
+      "description": "La URL a la que se enlaza cuando se hace clic en el botón. Si está definida, se utilizará un elemento <code>a</code> como nodo raíz."
+    },
+    "loading": {
+      "description": "Si es <code>true</code>, el indicador de carga es visible y el botón está desactivado. Si es <code>true \\| false</code>, el contenedor de carga siempre se renderiza antes de los hijos para evitar <a href=\"https://github.com/mui/material-ui/issues/27853\">el fallo de traducción de Google</a>."
+    },
+    "loadingIndicator": {
+      "description": "Elemento colocado antes de los hijos si el botón está en estado de carga. El nodo debe contener un elemento con <code>role=&quot;progressbar&quot;</code> con un nombre accesible. Por defecto, se renderiza un <code>CircularProgress</code> que está etiquetado por el propio botón."
+    },
+    "loadingPosition": {
+      "description": "El indicador de carga puede posicionarse al inicio, al final o en el centro del botón."
+    },
+    "size": {
+      "description": "El tamaño del componente. <code>small</code> es equivalente al estilo de botón denso."
+    },
+    "startIcon": { "description": "Elemento colocado antes de los hijos." },
+    "sx": {
+      "description": "La propiedad del sistema que permite definir anulaciones del sistema, así como estilos CSS adicionales."
+    },
+    "variant": { "description": "La variante a utilizar." }
+  },
+  "classDescriptions": {
+    "colorError": {
+      "description": "Estilos aplicados a {{nodeName}} si {{conditions}}.",
+      "nodeName": "el elemento raíz",
+      "conditions": "<code>color=\"error\"</code>"
+    },
+    "colorInfo": {
+      "description": "Estilos aplicados a {{nodeName}} si {{conditions}}.",
+      "nodeName": "el elemento raíz",
+      "conditions": "<code>color=\"info\"</code>"
+    },
+    "colorInherit": {
+      "description": "Estilos aplicados a {{nodeName}} si {{conditions}}.",
+      "nodeName": "el elemento raíz",
+      "conditions": "<code>color=\"inherit\"</code>"
+    },
+    "colorPrimary": {
+      "description": "Estilos aplicados a {{nodeName}} si {{conditions}}.",
+      "nodeName": "el elemento raíz",
+      "conditions": "<code>color=\"primary\"</code>"
+    },
+    "colorSecondary": {
+      "description": "Estilos aplicados a {{nodeName}} si {{conditions}}.",
+      "nodeName": "el elemento raíz",
+      "conditions": "<code>color=\"secondary\"</code>"
+    },
+    "colorSuccess": {
+      "description": "Estilos aplicados a {{nodeName}} si {{conditions}}.",
+      "nodeName": "el elemento raíz",
+      "conditions": "<code>color=\"success\"</code>"
+    },
+    "colorWarning": {
+      "description": "Estilos aplicados a {{nodeName}} si {{conditions}}.",
+      "nodeName": "el elemento raíz",
+      "conditions": "<code>color=\"warning\"</code>"
+    },
+    "contained": {
+      "description": "Estilos aplicados a {{nodeName}} si {{conditions}}.",
+      "nodeName": "el elemento raíz",
+      "conditions": "<code>variant=\"contained\"</code>"
+    },
+    
+    "disabled": {
+      "description": "Clase de estado aplicada a {{nodeName}} si {{conditions}}.",
+      "nodeName": "el elemento raíz",
+      "conditions": "<code>disabled={true}</code>"
+    },
+    "disableElevation": {
+      "description": "Estilos aplicados a {{nodeName}} si {{conditions}}.",
+      "nodeName": "el elemento raíz",
+      "conditions": "<code>disableElevation={true}</code>"
+    },
+    "endIcon": {
+      "description": "Estilos aplicados a {{nodeName}} si {{conditions}}.",
+      "nodeName": "el elemento endIcon",
+      "conditions": "proporcionado"
+    },
+    "focusVisible": {
+      "description": "Clase de estado aplicada a {{nodeName}} si {{conditions}}.",
+      "nodeName": "el elemento raíz de ButtonBase",
+      "conditions": "el botón está enfocado con el teclado"
+    },
+    "fullWidth": {
+      "description": "Estilos aplicados a {{nodeName}} si {{conditions}}.",
+      "nodeName": "el elemento raíz",
+      "conditions": "<code>fullWidth={true}</code>"
+    },
+    "icon": { "description": "Estilos aplicados al elemento icono si se proporciona" },
+    "loading": {
+      "description": "Estilos aplicados a {{nodeName}} si {{conditions}}.",
+      "nodeName": "el elemento raíz",
+      "conditions": "<code>loading={true}</code>"
+    },
+    "loadingIconPlaceholder": {
+      "description": "Estilos aplicados a {{nodeName}}.",
+      "nodeName": "el elemento loadingIconPlaceholder"
+    },
+    "loadingIndicator": {
+      "description": "Estilos aplicados a {{nodeName}}.",
+      "nodeName": "el elemento loadingIndicator"
+    },
+    "loadingPositionCenter": {
+      "description": "Estilos aplicados a {{nodeName}} si {{conditions}}.",
+      "nodeName": "el elemento raíz",
+      "conditions": "<code>loadingPosition=\"center\"</code>"
+    },
+    "loadingPositionEnd": {
+      "description": "Estilos aplicados a {{nodeName}} si {{conditions}}.",
+      "nodeName": "el elemento raíz",
+      "conditions": "<code>loadingPosition=\"end\"</code>"
+    },
+    "loadingPositionStart": {
+      "description": "Estilos aplicados a {{nodeName}} si {{conditions}}.",
+      "nodeName": "el elemento raíz",
+      "conditions": "<code>loadingPosition=\"start\"</code>"
+    },
+    "loadingWrapper": {
+      "description": "Estilos aplicados a {{nodeName}}.",
+      "nodeName": "el elemento loadingWrapper"
+    },
+    "outlined": {
+      "description": "Estilos aplicados a {{nodeName}} si {{conditions}}.",
+      "nodeName": "el elemento raíz",
+      "conditions": "<code>variant=\"outlined\"</code>"
+    },
+    "root": { "description": "Estilos aplicados al elemento raíz." },
+    "sizeLarge": {
+      "description": "Estilos aplicados a {{nodeName}} si {{conditions}}.",
+      "nodeName": "el elemento raíz",
+      "conditions": "<code>size=\"large\"</code>"
+    },
+    "sizeMedium": {
+      "description": "Estilos aplicados a {{nodeName}} si {{conditions}}.",
+      "nodeName": "el elemento raíz",
+      "conditions": "<code>size=\"medium\"</code>"
+    },
+    "sizeSmall": {
+      "description": "Estilos aplicados a {{nodeName}} si {{conditions}}.",
+      "nodeName": "el elemento raíz",
+      "conditions": "<code>size=\"small\"</code>"
+    },
+    "startIcon": {
+      "description": "Estilos aplicados a {{nodeName}} si {{conditions}}.",
+      "nodeName": "el elemento startIcon",
+      "conditions": "proporcionado"
+    },
+    "text": {
+      "description": "Estilos aplicados a {{nodeName}} si {{conditions}}.",
+      "nodeName": "el elemento raíz",
+      "conditions": "<code>variant=\"text\"</code>"
+    }
+  }
+}

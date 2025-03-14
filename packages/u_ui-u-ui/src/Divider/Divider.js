@@ -33,7 +33,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const DividerRoot = styled('div', {
-    name: 'UshiiDivider',
+    name: 'uiDivider',
     slot: 'Root',
     overridesResolver: (props, styles) => {
         const { ownerState } = props;
@@ -196,7 +196,7 @@ const DividerRoot = styled('div', {
 );
 
 const DividerWrapper = styled('span', {
-    name: 'UshiiDivider',
+    name: 'uiDivider',
     slot: 'Wrapper',
     overridesResolver: (props, styles) => {
         const { ownerState } = props;
@@ -224,7 +224,7 @@ const DividerWrapper = styled('span', {
 );
 
 const Divider = React.forwardRef(function Divider(inProps, ref) {
-    const props = useDefaultProps({ props: inProps, name: 'UshiiDivider' });
+    const props = useDefaultProps({ props: inProps, name: 'uiDivider' });
     const {
         absolute = false,
         children,

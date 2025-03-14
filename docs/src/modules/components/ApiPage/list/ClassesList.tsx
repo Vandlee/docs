@@ -17,6 +17,9 @@ const StyledApiItem = styled(ExpandableApiItem)(
     '& p': {
       margin: 0,
     },
+    '& hr': {
+      marginTop: 16
+    },
     '& .prop-list-title': {
       ...theme.typography.body2,
       fontWeight: theme.typography.fontWeightSemiBold,
@@ -29,19 +32,19 @@ const StyledApiItem = styled(ExpandableApiItem)(
       margin: 0,
     },
     '&.classes-list-deprecated-item': {
-      '& .UshiiApi-item-note': {
-        color: `var(--ushiidocs-palette-warning-700, ${lightTheme.palette.warning[700]})`,
+      '& .uiApi-item-note': {
+        color: `var(--uidocs-palette-warning-700, ${lightTheme.palette.warning[700]})`,
       },
     },
   }),
   ({ theme }) => ({
     [`:where(${theme.vars ? '[data-u-shii-color-scheme="dark"]' : '.mode-dark'}) &`]: {
       '& .prop-list-title': {
-        color: `var(--ushiidocs-palette-grey-50, ${darkTheme.palette.grey[50]})`,
+        color: `var(--uidocs-palette-grey-50, ${darkTheme.palette.grey[50]})`,
       },
       '&.classes-list-deprecated-item': {
-        '& .UshiiApi-item-note': {
-          color: `var(--ushiidocs-palette-warning-400, ${darkTheme.palette.warning[400]})`,
+        '& .uiApi-item-note': {
+          color: `var(--uidocs-palette-warning-400, ${darkTheme.palette.warning[400]})`,
         },
       },
     },

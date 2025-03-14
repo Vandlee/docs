@@ -38,7 +38,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const AlertRoot = styled(Paper, {
-  name: 'UshiiAlert',
+  name: 'uiAlert',
   slot: 'Root',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -119,7 +119,7 @@ const AlertRoot = styled(Paper, {
 );
 
 const AlertIcon = styled('div', {
-  name: 'UshiiAlert',
+  name: 'uiAlert',
   slot: 'Icon',
   overridesResolver: (props, styles) => styles.icon,
 })({
@@ -131,7 +131,7 @@ const AlertIcon = styled('div', {
 });
 
 const AlertMessage = styled('div', {
-  name: 'UshiiAlert',
+  name: 'uiAlert',
   slot: 'Message',
   overridesResolver: (props, styles) => styles.message,
 })({
@@ -141,7 +141,7 @@ const AlertMessage = styled('div', {
 });
 
 const AlertAction = styled('div', {
-  name: 'UshiiAlert',
+  name: 'uiAlert',
   slot: 'Action',
   overridesResolver: (props, styles) => styles.action,
 })({
@@ -160,7 +160,7 @@ const defaultIconMapping = {
 };
 
 const Alert = React.forwardRef(function Alert(inProps, ref) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiAlert' });
+  const props = useDefaultProps({ props: inProps, name: 'uiAlert' });
   const {
     action,
     children,

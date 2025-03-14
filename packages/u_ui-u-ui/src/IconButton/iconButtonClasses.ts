@@ -39,10 +39,10 @@ export interface IconButtonClasses {
 export type IconButtonClassKey = keyof IconButtonClasses;
 
 export function getIconButtonUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiIconButton', slot);
+  return generateUtilityClass('uiIconButton', slot);
 }
 
-const iconButtonClasses: IconButtonClasses = generateUtilityClasses('UshiiIconButton', [
+const iconButtonClasses: IconButtonClasses = generateUtilityClasses('uiIconButton', [
   'root',
   'disabled',
   'colorInherit',

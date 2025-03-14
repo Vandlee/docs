@@ -23,10 +23,10 @@ export interface ContainerClasses {
 export type ContainerClassKey = keyof ContainerClasses;
 
 export function getContainerUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiContainer', slot);
+  return generateUtilityClass('uiContainer', slot);
 }
 
-const containerClasses: ContainerClasses = generateUtilityClasses('UshiiContainer', [
+const containerClasses: ContainerClasses = generateUtilityClasses('uiContainer', [
   'root',
   'disableGutters',
   'fixed',

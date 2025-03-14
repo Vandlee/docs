@@ -1,5 +1,6 @@
 ---
 productId: u-ui
+categoryId: u_ui
 title: Componente Botón de React
 components: Button, IconButton, ButtonBase
 materialDesign: https://m2.material.io/components/buttons
@@ -21,6 +22,8 @@ Los botones comunican acciones que los usuarios pueden realizar. Suelen colocars
 - Barras de herramientas
 
 {{"component": "@u-shii/docs/ComponentLinkHeader"}}
+
+{{"component": "modules/components/ComponentPageTabs.js"}}
 
 ## Botón básico
 
@@ -44,9 +47,10 @@ Contienen acciones que son primarias para su aplicación.
 
 {{"demo": "es/ContainedButtons.js" }}
 
-Puedes eliminar la elevación con la prop `disableElevation`.
+Puedes agregar la elevación con la propiedad `enableElevation`.
+La elevación no tiene efecto alguno en el tema oscuro.
 
-{{"demo": "es/DisableElevation.js" }}
+{{"demo": "es/EnableElevation.js" }}
 
 ### Botón contorneado
 

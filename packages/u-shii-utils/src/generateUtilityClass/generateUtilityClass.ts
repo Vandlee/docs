@@ -20,7 +20,7 @@ export const globalStateClasses = {
 export default function generateUtilityClass(
   componentName: string,
   slot: string,
-  globalStatePrefix = 'Ushii',
+  globalStatePrefix = 'ui',
 ): string {
   const globalStateClass = globalStateClasses[slot as GlobalStateSlot];
   return globalStateClass

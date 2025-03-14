@@ -30,7 +30,7 @@ const Navigation = styled('nav')(({ theme }) => [
       color: (theme.vars || theme).palette.text.secondary,
       fontWeight: theme.typography.fontWeightSemiBold,
       '& > a, & > button': {
-        display: 'inline-bloc',
+        display: 'inline-block',
         color: 'inherit',
         font: (theme.vars || theme).font.button,
         fontSize: '1rem',

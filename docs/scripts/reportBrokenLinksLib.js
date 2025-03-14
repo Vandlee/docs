@@ -92,7 +92,7 @@ const getMdFilesImported = (jsPageFile) => {
   const fileContent = fse.readFileSync(jsPageFile, 'utf8');
   /**
    * Content files can be represented by either:
-   * - 'docsx/data/advanced-components/overview.md?u-shiiMarkdown'; (for ushii-x)
+   * - 'docsx/data/advanced-components/overview.md?u-shiiMarkdown'; (for -x)
    * - 'docs/data/advanced-components/overview.md?u-shiiMarkdown';
    * - './index.md?u-shiiMarkdown';
    */

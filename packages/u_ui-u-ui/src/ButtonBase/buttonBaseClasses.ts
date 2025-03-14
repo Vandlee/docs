@@ -13,10 +13,10 @@ export interface ButtonBaseClasses {
 export type ButtonBaseClassKey = keyof ButtonBaseClasses;
 
 export function getButtonBaseUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiButtonBase', slot);
+  return generateUtilityClass('uiButtonBase', slot);
 }
 
-const buttonBaseClasses: ButtonBaseClasses = generateUtilityClasses('UshiiButtonBase', [
+const buttonBaseClasses: ButtonBaseClasses = generateUtilityClasses('uiButtonBase', [
   'root',
   'disabled',
   'focusVisible',

@@ -44,7 +44,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const TooltipPopper = styled(Popper, {
-  name: 'UshiiTooltip',
+  name: 'uiTooltip',
   slot: 'Popper',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -147,7 +147,7 @@ const TooltipPopper = styled(Popper, {
 );
 
 const TooltipTooltip = styled('div', {
-  name: 'UshiiTooltip',
+  name: 'uiTooltip',
   slot: 'Tooltip',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -272,7 +272,7 @@ const TooltipTooltip = styled('div', {
 );
 
 const TooltipArrow = styled('span', {
-  name: 'UshiiTooltip',
+  name: 'uiTooltip',
   slot: 'Arrow',
   overridesResolver: (props, styles) => styles.arrow,
 })(
@@ -315,7 +315,7 @@ function composeEventHandler(handler, eventHandler) {
 
 // TODO v6: Remove PopperComponent, PopperProps, TransitionComponent and TransitionProps.
 const Tooltip = React.forwardRef(function Tooltip(inProps, ref) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiTooltip' });
+  const props = useDefaultProps({ props: inProps, name: 'uiTooltip' });
   const {
     arrow = false,
     children: childrenProp,

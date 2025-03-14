@@ -5,7 +5,7 @@ import IconButton from '@u_ui/u-ui/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
-  '& .UshiiBadge-badge': {
+  '& .uiBadge-badge': {
     right: -3,
     top: 13,
     border: `2px solid ${theme.palette.background.paper}`,

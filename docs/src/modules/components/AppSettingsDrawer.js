@@ -22,6 +22,7 @@ import {
     LightModeRounded 
 } from '@mui/icons-material';
 import { useRouter } from 'next/router';
+import { LANGUAGES } from 'docs/config';
 
 const Heading = styled(Typography)(({ theme }) => ({
     margin: '16px 0 8px',
@@ -56,19 +57,27 @@ export default function AppSettingsDrawer(props) {
 
     const handleChangeLanguage = (event, language) => {
         if (!language) return;
-
-        const currentPath = router.pathname;
-
-        let newPath = `/${language}${currentPath}`;
-
-        if (language === 'es') {
-            newPath = currentPath;
+    
+        const currentPath = router.asPath; // Ruta actual con parámetros
+        const pathSegments = currentPath.split('/');
+        const currentLanguage = LANGUAGES.includes(pathSegments[1]) ? pathSegments[1] : 'es';
+    
+        let newPath;
+    
+        if (currentLanguage !== 'es') {
+            // Si la URL ya tiene un idioma, lo reemplazamos con el nuevo idioma
+            newPath = language === 'es' 
+                ? currentPath.substring(currentLanguage.length + 1) // Quita el idioma
+                : `/${language}${currentPath.substring(currentLanguage.length + 1)}`;
+        } else {
+            // Si no tiene idioma, lo agregamos solo si no es 'es'
+            newPath = language === 'es' ? currentPath : `/${language}${currentPath}`;
         }
-
+    
         setUserLanguage(language);
         router.push(newPath);
     };
-
+    
     const handleChangeThemeMode = (event, paletteMode) => {
         if (paletteMode === null) {
             return;

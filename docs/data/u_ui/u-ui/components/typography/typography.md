@@ -136,7 +136,7 @@ Para cambiar el mapeo del elemento tipografía globalmente, [use el tema](/u_ui/
 ```js
 const theme = createTheme({
   components: {
-    UshiiTypography: {
+    uiTypography: {
       defaultProps: {
         variantMapping: {
           h1: 'h2',

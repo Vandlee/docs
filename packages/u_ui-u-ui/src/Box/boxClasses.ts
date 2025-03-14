@@ -6,6 +6,6 @@ export interface BoxClasses {
 
 export type BoxClassKey = keyof BoxClasses;
 
-const boxClasses: BoxClasses = generateUtilityClasses('UshiiBox', ['root']);
+const boxClasses: BoxClasses = generateUtilityClasses('uiBox', ['root']);
 
 export default boxClasses;

@@ -30,7 +30,7 @@ interface StyleFunctionProps {
 
 // widening Theme to any so that the consumer can own the theme structure.
 const defaultCreateStyledComponent = (systemStyled as CreateUshiiStyled<any>)('div', {
-  name: 'UshiiStack',
+  name: 'uiStack',
   slot: 'Root',
   overridesResolver: (props, styles) => styles.root,
 });
@@ -38,7 +38,7 @@ const defaultCreateStyledComponent = (systemStyled as CreateUshiiStyled<any>)('d
 function useThemePropsDefault<T extends {}>(props: T) {
   return useThemePropsSystem({
     props,
-    name: 'UshiiStack',
+    name: 'uiStack',
     defaultTheme,
   });
 }
@@ -164,7 +164,7 @@ export default function createStack(
     // This will allow adding custom styled fn (for example for custom sx style function)
     createStyledComponent = defaultCreateStyledComponent,
     useThemeProps = useThemePropsDefault,
-    componentName = 'UshiiStack',
+    componentName = 'uiStack',
   } = options;
 
   const useUtilityClasses = () => {

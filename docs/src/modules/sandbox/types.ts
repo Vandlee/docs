@@ -1,6 +1,6 @@
 import type { UshiiProductId } from 'docs/src/modules/utils/getProductInfoFromUrl';
 
-export type CodeStyling = 'Tailwind' | 'Ushii System';
+export type CodeStyling = 'Tailwind' | 'u_ui System';
 export type CodeVariant = 'TS' | 'JS';
 
 type RelativeModule = {

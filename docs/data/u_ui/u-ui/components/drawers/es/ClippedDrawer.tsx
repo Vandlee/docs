@@ -32,7 +32,7 @@ export default function ClippedDrawer() {
         sx={{
           width: drawerWidth,
           flexShrink: 0,
-          [`& .UshiiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
+          [`& .uiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
         }}
       >
         <Toolbar />

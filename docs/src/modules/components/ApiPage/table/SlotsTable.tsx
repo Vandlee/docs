@@ -6,7 +6,7 @@ import {
   brandingDarkTheme as darkTheme,
   brandingLightTheme as lightTheme,
 } from '@u-shii/docs/branding';
-import StyledTableContainer from 'docs/src/modules/components/ApiPage/table/StyledTableContainer';
+import StyledTableContainer, { StyledScrollTableContainer } from 'docs/src/modules/components/ApiPage/table/StyledTableContainer';
 import { SlotDefinition } from 'docs/src/modules/components/ApiPage/definitions/slots';
 
 const StyledTable = styled('table')(
@@ -20,29 +20,29 @@ const StyledTable = styled('table')(
       fontFamily: theme.typography.fontFamilyCode,
       fontWeight: theme.typography.fontWeightSemiBold,
       fontSize: theme.typography.pxToRem(13),
-      color: `var(--ushiidocs-palette-primary-600, ${lightTheme.palette.primary[600]})`,
+      color: `var(--uidocs-palette-primary-600, ${lightTheme.palette.primary[600]})`,
     },
     '& .class-name': {
       ...theme.typography.caption,
       fontFamily: theme.typography.fontFamilyCode,
       fontWeight: theme.typography.fontWeightRegular,
-      color: `var(--ushiidocs-palette-text-primary, ${lightTheme.palette.text.primary})`,
+      color: `var(--uidocs-palette-text-primary, ${lightTheme.palette.text.primary})`,
       padding: '1px 4px',
       borderRadius: 6,
       border: '1px solid',
       borderColor: alpha(darkTheme.palette.primary[100], 0.8),
-      backgroundColor: `var(--ushiidocs-palette-primary-50, ${lightTheme.palette.primary[50]})`,
+      backgroundColor: `var(--uidocs-palette-primary-50, ${lightTheme.palette.primary[50]})`,
     },
     '& .item-default': {
       ...theme.typography.caption,
       fontFamily: theme.typography.fontFamilyCode,
       fontWeight: theme.typography.fontWeightRegular,
-      color: `var(--ushiidocs-palette-text-primary, ${lightTheme.palette.text.primary})`,
+      color: `var(--uidocs-palette-text-primary, ${lightTheme.palette.text.primary})`,
       padding: '1px 4px',
       borderRadius: 6,
       border: '1px solid',
-      borderColor: `var(--ushiidocs-palette-grey-200, ${lightTheme.palette.grey[200]})`,
-      backgroundColor: `var(--ushiidocs-palette-grey-50, ${lightTheme.palette.grey[50]})`,
+      borderColor: `var(--uidocs-palette-grey-200, ${lightTheme.palette.grey[200]})`,
+      backgroundColor: `var(--uidocs-palette-grey-50, ${lightTheme.palette.grey[50]})`,
     },
     '& .description-column': {
       width: '40%',
@@ -52,17 +52,17 @@ const StyledTable = styled('table')(
   ({ theme }) => ({
     [`:where(${theme.vars ? '[data-u-shii-color-scheme="dark"]' : '.mode-dark'}) &`]: {
       '& .slot-name': {
-        color: `var(--ushiidocs-palette-primary-200, ${darkTheme.palette.primary[200]})`,
+        color: `var(--uidocs-palette-primary-200, ${darkTheme.palette.primary[200]})`,
       },
       '& .class-name': {
-        color: `var(--ushiidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
-        borderColor: `var(--ushiidocs-palette-divider, ${darkTheme.palette.divider})`,
+        color: `var(--uidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
+        borderColor: `var(--uidocs-palette-divider, ${darkTheme.palette.divider})`,
         backgroundColor: alpha(darkTheme.palette.primary[900], 0.5),
       },
       '& .item-default': {
-        color: `var(--ushiidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
-        backgroundColor: `var(--ushiidocs-palette-grey-900, ${darkTheme.palette.grey[900]})`,
-        borderColor: `var(--ushiidocs-palette-divider, ${darkTheme.palette.divider})`,
+        color: `var(--uidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
+        backgroundColor: `var(--uidocs-palette-grey-900, ${darkTheme.palette.grey[900]})`,
+        borderColor: `var(--uidocs-palette-divider, ${darkTheme.palette.divider})`,
       },
     },
   }),
@@ -78,41 +78,43 @@ export default function SlotsTable(props: SlotsTableProps) {
 
   return (
     <StyledTableContainer>
-      <StyledTable>
-        <thead>
-          <tr>
-            <th>{t('api-docs.slotName')}</th>
-            <th>{t('api-docs.className')}</th>
-            <th>{t('api-docs.defaultComponent')}</th>
-            <th>{t('api-docs.description')}</th>
-          </tr>
-        </thead>
-        <tbody>
-          {slots.map((params) => {
-            const { description, className, name, defaultValue, hash } = params;
+      <StyledScrollTableContainer>
+        <StyledTable>
+          <thead>
+            <tr>
+              <th>{t('api-docs.slotName')}</th>
+              <th>{t('api-docs.className')}</th>
+              <th>{t('api-docs.defaultComponent')}</th>
+              <th>{t('api-docs.description')}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {slots.map((params) => {
+              const { description, className, name, defaultValue, hash } = params;
 
-            return (
-              <tr key={`${className}-${hash}`} id={hash}>
-                <td className="slot-name" style={{ fontWeight: '600' }}>
-                  {name}
-                </td>
-                <td className="UshiiApi-table-class-name">
-                  {/* eslint-disable-next-line material-ui/no-hardcoded-labels */}
-                  {className && <span className="class-name">{`.${className}`}</span>}
-                </td>
-                <td>{defaultValue && <code className="item-default">{defaultValue}</code>}</td>
-                <td className="description-column">
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: description || '',
-                    }}
-                  />
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </StyledTable>
+              return (
+                <tr key={`${className}-${hash}`} id={hash}>
+                  <td className="slot-name" style={{ fontWeight: '600' }}>
+                    {name}
+                  </td>
+                  <td className="uiApi-table-class-name">
+                    {/* eslint-disable-next-line material-ui/no-hardcoded-labels */}
+                    {className && <span className="class-name">{`.${className}`}</span>}
+                  </td>
+                  <td>{defaultValue && <code className="item-default">{defaultValue}</code>}</td>
+                  <td className="description-column">
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: description || '',
+                      }}
+                    />
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </StyledTable>
+      </StyledScrollTableContainer>
     </StyledTableContainer>
   );
 }

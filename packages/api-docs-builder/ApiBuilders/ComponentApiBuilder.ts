@@ -329,9 +329,9 @@ const generateApiPage = async (
     classes: reactApi.classes,
     spread: reactApi.spread,
     themeDefaultProps: reactApi.themeDefaultProps,
-    ushiiName: normalizedApiPathname.startsWith('/joy-ui')
-      ? reactApi.ushiiName.replace('Ushii', 'Joy')
-      : reactApi.ushiiName,
+    uiName: normalizedApiPathname.startsWith('/joy-ui')
+      ? reactApi.uiName.replace('ui', 'Joy')
+      : reactApi.uiName,
     forwardsRefTo: reactApi.forwardsRefTo,
     filename: toGitHubPath(reactApi.filename),
     inheritance: reactApi.inheritance
@@ -803,7 +803,7 @@ export default async function generateComponentApi(
   reactApi.filename = filename;
   reactApi.name = componentInfo.name;
   reactApi.imports = getComponentImports(componentInfo.name, filename);
-  reactApi.ushiiName = componentInfo.ushiiName;
+  reactApi.uiName = componentInfo.uiName;
   reactApi.apiPathname = componentInfo.apiPathname;
   reactApi.EOL = EOL;
   reactApi.slots = [];
@@ -839,7 +839,7 @@ export default async function generateComponentApi(
       typescriptProject: project,
       projectSettings,
       componentName: reactApi.name,
-      ushiiName: reactApi.ushiiName,
+      uiName: reactApi.uiName,
       slotInterfaceName: componentInfo.slotInterfaceName,
     });
 

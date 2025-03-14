@@ -19,10 +19,10 @@ export interface LinkClasses {
 export type LinkClassKey = keyof LinkClasses;
 
 export function getLinkUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiLink', slot);
+  return generateUtilityClass('uiLink', slot);
 }
 
-const linkClasses: LinkClasses = generateUtilityClasses('UshiiLink', [
+const linkClasses: LinkClasses = generateUtilityClasses('uiLink', [
   'root',
   'underlineNone',
   'underlineHover',

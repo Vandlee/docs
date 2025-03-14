@@ -32,7 +32,7 @@ export interface ModalOwnProps {
      * @deprecated Use `slots.backdrop` instead. While this prop currently works, it will be removed in the next major version.
      * Use the `slots.backdrop` prop to make your application ready for the next version of Material UI.
      * @default styled(Backdrop, {
-     *   name: 'UshiiModal',
+     *   name: 'uiModal',
      *   slot: 'Backdrop',
      *   overridesResolver: (props, styles) => {
      *     return styles.backdrop;

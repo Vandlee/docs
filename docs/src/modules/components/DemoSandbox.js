@@ -155,7 +155,7 @@ function getTheme(outerTheme, injectTheme) {
     },
     // To make DensityTool playground works
     // check from shiiFormControl because brandingTheme does not customize this component
-    outerTheme.components?.UshiiFormControl?.defaultProps?.margin === 'dense' ? highDensity : {},
+    outerTheme.components?.uiFormControl?.defaultProps?.margin === 'dense' ? highDensity : {},
   );
   if (outerTheme.direction) {
     resultTheme.direction = outerTheme.direction;

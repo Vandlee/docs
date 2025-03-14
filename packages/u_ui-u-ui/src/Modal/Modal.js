@@ -28,7 +28,7 @@ const useUtilityClasses = (ownerState) => {
 }
 
 const ModalRoot = styled('div', {
-    name: 'UshiiModal',
+    name: 'uiModal',
     slot: 'Root',
     overridesResolver: (props, styles) => {
         const { ownerState } = props;
@@ -55,7 +55,7 @@ const ModalRoot = styled('div', {
 );
 
 const ModalBackdrop = styled(Backdrop, {
-    name: 'UshiiModal',
+    name: 'uiModal',
     slot: 'Backdrop',
     overridesResolver: (props, styles) => {
       return styles.backdrop;
@@ -78,7 +78,7 @@ const ModalBackdrop = styled(Backdrop, {
  * This component shares many concepts with [react-overlays](https://react-bootstrap.github.io/react-overlays/#modals).
  */
 const Modal = React.forwardRef(function Modal(inProps, ref) {
-    const props = useDefaultProps({ name: 'UshiiModal', props: inProps });
+    const props = useDefaultProps({ name: 'uiModal', props: inProps });
     const {
         BackdropComponent = ModalBackdrop,
         BackdropProps,
@@ -241,7 +241,7 @@ Modal.propTypes /* remove-proptypes */ = {
      * @deprecated Use `slots.backdrop` instead. While this prop currently works, it will be removed in the next major version.
      * Use the `slots.backdrop` prop to make your application ready for the next version of Material UI.
      * @default styled(Backdrop, {
-     *   name: 'UshiiModal',
+     *   name: 'uiModal',
      *   slot: 'Backdrop',
      *   overridesResolver: (props, styles) => {
      *     return styles.backdrop;

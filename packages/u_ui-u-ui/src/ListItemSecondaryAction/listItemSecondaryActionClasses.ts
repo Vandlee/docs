@@ -11,11 +11,11 @@ export interface ListItemSecondaryActionClasses {
 export type ListItemSecondaryActionClassKey = keyof ListItemSecondaryActionClasses;
 
 export function getListItemSecondaryActionClassesUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiListItemSecondaryAction', slot);
+  return generateUtilityClass('uiListItemSecondaryAction', slot);
 }
 
 const listItemSecondaryActionClasses: ListItemSecondaryActionClasses = generateUtilityClasses(
-  'UshiiListItemSecondaryAction',
+  'uiListItemSecondaryAction',
   ['root', 'disableGutters'],
 );
 

@@ -17,7 +17,7 @@ async function run() {
   output.pages = {};
 
   /**
-   * @param {readonly import('docs/src/u-shiiPage').UshiiPage[]} pages
+   * @param {readonly import('docs/src/u-shiiPage').ui-Page[]} pages
    */
   const traverse = (pages: UshiiPage[]) => {
     pages.forEach((page) => {

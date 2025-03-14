@@ -18,13 +18,13 @@ export default function DemoEditorError(props: AlertProps) {
         transform: 'translateX(-50%) translateY(-50%)',
         py: '2px',
         px: '6px',
-        '& .UshiiAlert-icon': {
+        '& .uiAlert-icon': {
           fontSize: 14,
           mr: 0.5,
           mt: 0.25,
           py: 0,
         },
-        '& .UshiiAlert-message': {
+        '& .uiAlert-message': {
           fontSize: 12,
           py: 0,
         },

@@ -20,7 +20,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const CardRoot = styled(Paper, {
-  name: 'UshiiCard',
+  name: 'uiCard',
   slot: 'Root',
   overridesResolver: (props, styles) => styles.root,
 })({
@@ -30,7 +30,7 @@ const CardRoot = styled(Paper, {
 const Card = React.forwardRef(function Card(inProps, ref) {
   const props = useDefaultProps({
     props: inProps,
-    name: 'UshiiCard',
+    name: 'uird',
   });
 
   const { className, raised = false, ...other } = props;

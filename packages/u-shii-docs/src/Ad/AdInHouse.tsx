@@ -4,5 +4,5 @@ import AdDisplay, { AdParameters } from './AdDisplay';
 export default function AdInHouse(props: { ad: Omit<AdParameters, 'poweredby' | 'label'> }) {
   const { ad } = props;
 
-  return <AdDisplay ad={{ poweredby: 'Ushii', label: `in-house-${ad.name}`, ...ad }} />;
+  return <AdDisplay ad={{ poweredby: 'ui', label: `in-house-${ad.name}`, ...ad }} />;
 }

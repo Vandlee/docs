@@ -21,10 +21,10 @@ export interface SnackbarClasses {
 export type SnackbarClassKey = keyof SnackbarClasses;
 
 export function getSnackbarUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiSnackbar', slot);
+  return generateUtilityClass('uiSnackbar', slot);
 }
 
-const snackbarClasses: SnackbarClasses = generateUtilityClasses('UshiiSnackbar', [
+const snackbarClasses: SnackbarClasses = generateUtilityClasses('uiSnackbar', [
   'root',
   'anchorOriginTopCenter',
   'anchorOriginBottomCenter',

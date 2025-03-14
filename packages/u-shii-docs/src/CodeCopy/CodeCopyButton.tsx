@@ -13,12 +13,12 @@ export function CodeCopyButton(props: CodeCopyButtonProps) {
   const key = macOS ? '⌘' : 'Ctrl + ';
 
   return (
-    <div className="UshiiCode-copy-container">
+    <div className="uiCode-copy-container">
       <button
         {...other}
         aria-label="Copiar el codigo"
         type="button"
-        className="UshiiCode-copy"
+        className="uiCode-copy"
         onClick={async () => {
           // event.stopPropagation();
           await copy(code);
@@ -26,7 +26,7 @@ export function CodeCopyButton(props: CodeCopyButtonProps) {
       >
         {/* ushii-ui/no-harcoded-labels */}
         {isCopied ? 'Copiado' : 'Copiar'}
-        <span className="UshiiCode-copyKeypress" style={{ opacity: isCopied ? 0 : 1 }}>
+        <span className="uiCode-copyKeypress" style={{ opacity: isCopied ? 0 : 1 }}>
           <span>(or</span> {key}C<span>)</span>
         </span>
       </button>

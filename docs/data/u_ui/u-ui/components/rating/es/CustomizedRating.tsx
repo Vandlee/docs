@@ -7,10 +7,10 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import Typography from '@u_ui/u-ui/Typography';
 
 const StyledRating = styled(Rating)({
-  '& .UshiiRating-iconFilled': {
+  '& .uiRating-iconFilled': {
     color: '#ff6d75',
   },
-  '& .UshiiRating-iconHover': {
+  '& .uiRating-iconHover': {
     color: '#ff3d47',
   },
 });

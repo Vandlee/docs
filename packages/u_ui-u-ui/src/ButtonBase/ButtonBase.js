@@ -30,7 +30,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 export const ButtonBaseRoot = styled('button', {
-  name: 'UshiiButtonBase',
+  name: 'uiButtonBase',
   slot: 'Root',
   overridesResolver: (props, styles) => styles.root,
 })({
@@ -71,7 +71,7 @@ export const ButtonBaseRoot = styled('button', {
  * It contains a load of style reset and some focus/ripple logic.
  */
 const ButtonBase = React.forwardRef(function ButtonBase(inProps, ref) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiButtonBase' });
+  const props = useDefaultProps({ props: inProps, name: 'uiButtonBase' });
   const {
     action,
     centerRipple = false,

@@ -130,8 +130,8 @@ export const deepPurple = {
 };
 export const grey = {
   50: 'hsl(0, 0%, 97%)',
-  100: 'hsl(0, 0%, 80%)',
-  200: 'hsl(0, 0%, 70%)',
+  100: 'hsl(0, 0%, 90%)',
+  200: 'hsl(0, 0%, 80%)',
   300: 'hsl(0, 0%, 50%)',
   main: 'hsl(0, 0%, 50%)',
   400: 'hsl(0, 0%, 40%)',
@@ -243,7 +243,7 @@ export const getDesignTokens = (mode: 'light' | 'dark') =>
           dark: deepPurple[300],
         }),
       },
-      divider: mode === 'dark' ? alpha(grey[300], .325) : grey[100],
+      divider: mode === 'dark' ? alpha(grey[300], .325) : grey[200],
       primaryDark: grey,
       mode,
       ...(mode === 'dark' && {
@@ -388,7 +388,7 @@ export const getDesignTokens = (mode: 'light' | 'dark') =>
         fontWeight: 700,
       },
       allVariants: {
-        scrollMarginTop: 'calc(var(--UshiiDocs-header-height) + 32px)',
+        scrollMarginTop: 'calc(var(--uidocs-header-height) + 32px)',
       },
     },
     /**
@@ -452,19 +452,19 @@ export const getDesignTokens = (mode: 'light' | 'dark') =>
 export function getThemedComponents(): ThemeOptions {
   return {
     components: {
-      UshiiAlert: {
+      uiAlert: {
         styleOverrides: {
           root: {
             padding: '16px',
             gap: '8px',
             fontSize: '1rem',
             '& * ul': { paddingLeft: '24px !important', marginBottom: '0 !important' }, // !important is used here to override the anchor tag color coming from MarkdownElement
-            '& .UshiiAlert-icon': {
+            '& .uiAlert-icon': {
               margin: 0,
               marginTop: '2px',
               padding: 0,
             },
-            '& .UshiiAlert-message': { padding: 0 },
+            '& .uiAlert-message': { padding: 0 },
           },
           icon: {
             paddingTop: 10,
@@ -477,7 +477,7 @@ export function getThemedComponents(): ThemeOptions {
               color: (theme.vars || theme).palette.grey[900],
               border: '1px solid',
               borderColor: alpha(theme.palette.warning[700], 0.15),
-              '& .UshiiAlert-icon': {
+              '& .uiAlert-icon': {
                 color: (theme.vars || theme).palette.warning[600],
               },
               '& * a': {
@@ -492,7 +492,7 @@ export function getThemedComponents(): ThemeOptions {
             theme.applyDarkStyles({
               backgroundColor: alpha(theme.palette.warning[700], 0.12),
               color: (theme.vars || theme).palette.warning[50],
-              '& .UshiiAlert-icon': {
+              '& .uiAlert-icon': {
                 color: (theme.vars || theme).palette.warning[400],
               },
               '& * a': {
@@ -510,7 +510,7 @@ export function getThemedComponents(): ThemeOptions {
               backgroundColor: alpha(theme.palette.success[50], 0.5),
               color: (theme.vars || theme).palette.success[900],
               border: `1px solid ${(theme.vars || theme).palette.success[100]}`,
-              '& .UshiiAlert-icon': {
+              '& .uiAlert-icon': {
                 color: (theme.vars || theme).palette.success[600],
               },
               '& * a': {
@@ -526,7 +526,7 @@ export function getThemedComponents(): ThemeOptions {
               backgroundColor: alpha(theme.palette.success[700], 0.12),
               color: (theme.vars || theme).palette.success[50],
               borderColor: alpha(theme.palette.success[400], 0.1),
-              '& .UshiiAlert-icon': {
+              '& .uiAlert-icon': {
                 color: (theme.vars || theme).palette.success[500],
               },
               '& * a': {
@@ -540,7 +540,7 @@ export function getThemedComponents(): ThemeOptions {
           ],
         },
       },
-      UshiiButtonBase: {
+      uiButtonBase: {
         styleOverrides: {
           root: ({ theme }) => ({
             '&:focus-visible': {
@@ -550,14 +550,11 @@ export function getThemedComponents(): ThemeOptions {
           }),
         },
       },
-      UshiiButton: {
-        defaultProps: {
-          disableElevation: true
-        },
+      uiButton: {
         styleOverrides: {
           root: ({ theme, ownerState }) => ({
             transition: 'all 120ms ease-in',
-            '& > .UshiiTouchRipple-root': { marginLeft: '0px', marginRight: '0px', transform: 'unset !important' },
+            '& > .uiTouchRipple-root': { marginLeft: '0px', marginRight: '0px', transform: 'unset !important' },
             ...(ownerState.size === 'large' && {
               ...theme.typography.body1,
               fontWeight: theme.typography.fontWeightMedium,
@@ -572,7 +569,7 @@ export function getThemedComponents(): ThemeOptions {
           })
         }
       },
-      UshiiIconButton: {
+      uiIconButton: {
           styleOverrides: {
             root: ({ theme, ownerState }) => ({
               borderRadius: theme.shape.borderRadius,
@@ -594,7 +591,7 @@ export function getThemedComponents(): ThemeOptions {
               ...(ownerState.size === 'small' && {
                 height: 32,
                 width: 32,
-                '& .UshiiSvgIcon-root': {
+                '& .uiSvgIcon-root': {
                   fontSize: defaultTheme.typography.pxToRem(18),
                 },
               }),
@@ -669,7 +666,7 @@ export function getThemedComponents(): ThemeOptions {
             },
           ],
       },
-      UshiiMenu: {
+      uiMenu: {
           styleOverrides: {
             paper: ({ theme }) => [
               {
@@ -680,15 +677,15 @@ export function getThemedComponents(): ThemeOptions {
                 border: '1px solid',
                 backgroundColor: (theme.vars || theme).palette.background.paper,
                 borderColor: (theme.vars || theme).palette.grey[200],
-                '& .UshiiMenu-list': {
+                '& .uiMenu-list': {
                   display: 'flex',
                   flexDirection: 'column',
                   gap: '2px',
-                  '& .UshiiDivider-root': {
+                  '& .uiDivider-root': {
                     margin: '4px -8px 4px -8px',
                   },
                 },
-                '& .UshiiMenuItem-root': {
+                '& .uiMenuItem-root': {
                   padding: '6px 8px',
                   borderRadius: '6px',
                   fontSize: theme.typography.pxToRem(14),
@@ -700,7 +697,7 @@ export function getThemedComponents(): ThemeOptions {
                   '&:focus-visible': {
                     outline: 'none',
                   },
-                  '&.Ushii-selected': {
+                  '&.ui-selected': {
                     fontWeight: 500,
                     color: (theme.vars || theme).palette.primary[600],
                     backgroundColor: alpha(theme.palette.primary[100], 0.6),
@@ -710,11 +707,11 @@ export function getThemedComponents(): ThemeOptions {
               theme.applyDarkStyles({
                 backgroundColor: (theme.vars || theme).palette.primaryDark[900],
                 borderColor: (theme.vars || theme).palette.primaryDark[700],
-                '& .UshiiMenuItem-root': {
+                '& .uiMenuItem-root': {
                   '&:hover': {
                     backgroundColor: (theme.vars || theme).palette.primaryDark[700],
                   },
-                  '&.Ushii-selected': {
+                  '&.ui-selected': {
                     color: (theme.vars || theme).palette.primary[200],
                     backgroundColor: alpha(theme.palette.primary[900], 0.4),
                   },
@@ -723,7 +720,7 @@ export function getThemedComponents(): ThemeOptions {
             ],
           },
         },
-      UshiiPopover: {
+      uiPopover: {
           styleOverrides: {
             paper: ({ theme }) => ({
               boxShadow: '0px 4px 20px rgba(170, 180, 190, 0.3)',
@@ -733,14 +730,14 @@ export function getThemedComponents(): ThemeOptions {
             }),
           },
         },
-      UshiiDivider: {
+      uiDivider: {
           styleOverrides: {
             root: ({ theme }) => ({
               borderColor: (theme.vars || theme).palette.divider,
             }),
           },
         },
-      UshiiLink: {
+      uiLink: {
         defaultProps: {
           underline: 'none',
         },
@@ -749,7 +746,7 @@ export function getThemedComponents(): ThemeOptions {
             display: 'inline-flex',
             alignItems: 'center',
             fontWeight: theme.typography.fontWeightSemiBold,
-            '&.UshiiTypography-body1 > svg': {
+            '&.uiTypography-body1 > svg': {
               marginTop: 2,
             },
             '& svg:last-child': {
@@ -781,7 +778,7 @@ export function getThemedComponents(): ThemeOptions {
           },
         ],
       },
-      UshiiChip: {
+      uiChip: {
         styleOverrides: {
           root: ({ ownerState: { color, variant }, theme }) => ({
             fontWeight: theme.typography.fontWeightSemiBold,
@@ -859,13 +856,13 @@ export function getThemedComponents(): ThemeOptions {
                 '&:hover': {
                   backgroundColor: (theme.vars || theme).palette.primary[100],
                 },
-                '& .UshiiChip-deleteIcon': {
+                '& .uiChip-deleteIcon': {
                   color: (theme.vars || theme).palette.primary[600],
                   '&:hover': {
                     color: (theme.vars || theme).palette.primary[700],
                   },
                 },
-                '&.Ushii-focusVisible': {
+                '&.ui-focusVisible': {
                   backgroundColor: (theme.vars || theme).palette.primary[200],
                 },
                 ...theme.applyDarkStyles({
@@ -874,7 +871,7 @@ export function getThemedComponents(): ThemeOptions {
                   '&:hover': {
                     backgroundColor: alpha(theme.palette.primary[900], 0.5),
                   },
-                  '& .UshiiChip-deleteIcon': {
+                  '& .uiChip-deleteIcon': {
                     color: (theme.vars || theme).palette.primary[100],
                     '&:hover': {
                       color: (theme.vars || theme).palette.primary[50],
@@ -914,14 +911,14 @@ export function getThemedComponents(): ThemeOptions {
           }),
         },
       },
-      UshiiList: {
+      uiList: {
           styleOverrides: {
             root: {
               padding: 0,
             },
           },
         },
-      /* UshiiListItemButton: {
+      /* uiListItemButton: {
           styleOverrides: {
             root: ({ theme }) => [
               {
@@ -934,7 +931,7 @@ export function getThemedComponents(): ThemeOptions {
                 '&:hover': {
                   backgroundColor: theme.palette.grey[50],
                 },
-                '&.Ushii-selected': {
+                '&.ui-selected': {
                   borderRadius: 10,
                   border: '1px solid',
                   color: (theme.vars || theme).palette.primary[500],
@@ -950,7 +947,7 @@ export function getThemedComponents(): ThemeOptions {
                 '&:hover': {
                   backgroundColor: alpha(theme.palette.primaryDark[700], 0.4),
                 },
-                '&.Ushii-selected': {
+                '&.ui-selected': {
                   color: '#fff',
                   borderColor: `${(theme.vars || theme).palette.primary[700]} !important`,
                   backgroundColor: (theme.vars || theme).palette.primaryDark[700],
@@ -962,7 +959,7 @@ export function getThemedComponents(): ThemeOptions {
             ],
           },
         }, */
-      /* UshiiSelect: {
+      /* uiSelect: {
           defaultProps: {
             IconComponent: ArrowDropDownRounded,
           },
@@ -976,13 +973,13 @@ export function getThemedComponents(): ThemeOptions {
                   props: { variant: 'outlined' },
                   style: {
                     backgroundColor: alpha(theme.palette.primaryDark[50], 0.1),
-                    '& .UshiiOutlinedInput-notchedOutline': {
+                    '& .uiOutlinedInput-notchedOutline': {
                       border: `1px solid ${(theme.vars || theme).palette.primaryDark[100]}`,
                       boxShadow: `#FFF 0 1px 0 inset, ${alpha(theme.palette.grey[200], 0.4)} 0 -1px 0 inset, ${alpha(theme.palette.grey[200], 0.5)} 0 1px 2px 0`,
                     },
-                    '&:not(.Ushii-focused):hover': {
+                    '&:not(.ui--focused):hover': {
                       background: (theme.vars || theme).palette.grey[50],
-                      '& .UshiiOutlinedInput-notchedOutline': {
+                      '& .uiOutlinedInput-notchedOutline': {
                         borderColor: (theme.vars || theme).palette.grey[300],
                         boxShadow: `${alpha(theme.palette.grey[200], 0.5)} 0 1px 2px 0`,
                       },
@@ -990,13 +987,13 @@ export function getThemedComponents(): ThemeOptions {
                     ...theme.applyDarkStyles({
                       color: (theme.vars || theme).palette.primary[300],
                       backgroundColor: alpha(theme.palette.primaryDark[700], 0.2),
-                      '& .UshiiOutlinedInput-notchedOutline': {
+                      '& .uiOutlinedInput-notchedOutline': {
                         borderColor: alpha(theme.palette.primaryDark[600], 0.5),
                         boxShadow: `${alpha(theme.palette.primaryDark[600], 0.3)} 0 1px 0 inset, ${(theme.vars || theme).palette.common.black} 0 -1px 0 inset, ${(theme.vars || theme).palette.common.black} 0 1px 2px 0`,
                       },
-                      '&:not(.Ushii-focused):hover': {
+                      '&:not(.ui--focused):hover': {
                         background: alpha(theme.palette.primaryDark[700], 0.8),
-                        '& .UshiiOutlinedInput-notchedOutline': {
+                        '& .uiOutlinedInput-notchedOutline': {
                           borderColor: (theme.vars || theme).palette.primaryDark[600],
                           boxShadow: `${(theme.vars || theme).palette.common.black} 0 1px 2px 0`,
                         },
@@ -1017,12 +1014,12 @@ export function getThemedComponents(): ThemeOptions {
             }),
           },
         }, */
-      /* UshiiTab: {
+      /* uiTab: {
           defaultProps: {
             disableTouchRipple: true,
           },
         }, */
-      UshiiPaper: {
+      uiPaper: {
         styleOverrides: {
           root: ({ theme, ownerState }) => [
             {
@@ -1080,7 +1077,7 @@ export function getThemedComponents(): ThemeOptions {
           ],
         },
       },
-      /* UshiiTableCell: {
+      /* uiTableCell: {
           styleOverrides: {
             root: ({ theme, ownerState }) => ({
               padding: theme.spacing(1, 2),
@@ -1095,7 +1092,7 @@ export function getThemedComponents(): ThemeOptions {
             }),
           },
         }, */
-      UshiiToggleButtonGroup: {
+      uiToggleButtonGroup: {
           styleOverrides: {
             root: ({ theme }) => ({
               backgroundColor: '#fff',
@@ -1105,7 +1102,7 @@ export function getThemedComponents(): ThemeOptions {
             }),
           },
         },
-      UshiiToggleButton: {
+      uiToggleButton: {
           styleOverrides: {
             root: ({ theme, ownerState }) => [
               {
@@ -1116,7 +1113,7 @@ export function getThemedComponents(): ThemeOptions {
                 ...(ownerState.size === 'small' && {
                   padding: '0.375rem 0.75rem',
                 }),
-                '&.Ushii-selected': {
+                '&.ui-selected': {
                   color: (theme.vars || theme).palette.primary[700],
                   borderColor: `${(theme.vars || theme).palette.primary[200]} !important`,
                   backgroundColor: (theme.vars || theme).palette.primary[50],
@@ -1130,7 +1127,7 @@ export function getThemedComponents(): ThemeOptions {
                 '&:hover': {
                   backgroundColor: alpha(theme.palette.primaryDark[600], 0.2),
                 },
-                '&.Ushii-selected': {
+                '&.ui-selected': {
                   color: (theme.vars || theme).palette.primary[200],
                   borderColor: `${(theme.vars || theme).palette.primary[800]} !important`,
                   backgroundColor: alpha(theme.palette.primary[900], 0.4),
@@ -1143,7 +1140,7 @@ export function getThemedComponents(): ThemeOptions {
             ],
           },
         },
-      UshiiTooltip: {
+      uiTooltip: {
         defaultProps: {
           arrow: true,
         },
@@ -1152,13 +1149,13 @@ export function getThemedComponents(): ThemeOptions {
             padding: '6px 8px',
             borderRadius: 6,
             backgroundColor: (theme.vars || theme).palette.grey[800],
-            '& .UshiiTooltip-arrow': {
+            '& .uiTooltip-arrow': {
               color: (theme.vars || theme).palette.grey[800],
             },
           }),
         },
       },
-      /* UshiiSwitch: {
+      /* uiSwitch: {
           styleOverrides: {
             root: ({ theme }) => ({
               width: 32,
@@ -1169,8 +1166,8 @@ export function getThemedComponents(): ThemeOptions {
                 outline: `3px solid ${alpha(theme.palette.primary[500], 0.5)}`,
                 outlineOffset: 2,
               },
-              '& .UshiiSwitch-switchBase': {
-                '&.Ushii-checked': {
+              '& .uiSwitch-switchBase': {
+                '&.ui-checked': {
                   transform: 'translateX(12px)',
                   color: '#fff',
                 },
@@ -1181,7 +1178,7 @@ export function getThemedComponents(): ThemeOptions {
               width: 20,
               padding: 0,
               color: '#fff',
-              '&.Ushii-checked + .UshiiSwitch-track': {
+              '&.ui-checked + .uiSwitch-track': {
                 opacity: 1,
               },
             },
@@ -1200,10 +1197,10 @@ export function getThemedComponents(): ThemeOptions {
             },
           },
         }, */
-      UshiiSnackbar: {
+      uiSnackbar: {
           styleOverrides: {
             root: ({ theme }) => ({
-              '& .UshiiSnackbarContent-root': {
+              '& .uiSnackbarContent-root': {
                 backgroundColor: '#FFF',
                 color: (theme.vars || theme).palette.text.primary,
                 fontWeight: theme.typography.fontWeightMedium,
@@ -1217,7 +1214,7 @@ export function getThemedComponents(): ThemeOptions {
             }),
           },
         },
-      /* UshiiPaginationItem: {
+      /* uiPaginationItem: {
           styleOverrides: {
             root: ({ theme }) => [
               {
@@ -1226,7 +1223,7 @@ export function getThemedComponents(): ThemeOptions {
                 color: theme.palette.grey[700],
                 borderColor: theme.palette.grey[200],
                 borderRadius: '8px',
-                '&.Ushii-selected': {
+                '&.ui-selected': {
                   color: (theme.vars || theme).palette.primary[500],
                   borderColor: `${(theme.vars || theme).palette.primary[500]} !important`,
                   backgroundColor: (theme.vars || theme).palette.primary[50],
@@ -1238,7 +1235,7 @@ export function getThemedComponents(): ThemeOptions {
               theme.applyDarkStyles({
                 color: theme.palette.grey[200],
                 borderColor: theme.palette.primaryDark[700],
-                '&.Ushii-selected': {
+                '&.ui-selected': {
                   color: theme.palette.primary[100],
                   borderColor: `${(theme.vars || theme).palette.primary[700]} !important`,
                   backgroundColor: alpha(theme.palette.primary[900], 0.5),
@@ -1250,7 +1247,7 @@ export function getThemedComponents(): ThemeOptions {
             ],
           },
         }, */
-      UshiiCssBaseline: {
+      uiCssBaseline: {
         defaultProps: {
           enableColorScheme: true,
         },
@@ -1263,7 +1260,7 @@ export function getThemedComponents(): ThemeOptions {
           },
         },
       },
-      /* UshiiCard: {
+      /* uiCard: {
           styleOverrides: {
             root: ({ theme, ownerState }) => ({
               ...(ownerState.variant === 'elevation' && {

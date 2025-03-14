@@ -19,12 +19,12 @@ const Root = styled('ul')(({ theme }) => ({
   display: 'flex',
   flexWrap: 'wrap',
   gap: 8,
-  '& .UshiiChip-root': {
+  '& .uiChip-root': {
     height: 26,
     padding: '0 8px',
     gap: 6,
-    '& .UshiiChip-label': { padding: 0 },
-    '& .UshiiChip-iconSmall': {
+    '& .uiChip-label': { padding: 0 },
+    '& .uiChip-iconSmall': {
       margin: 0,
       fontSize: 14,
     },

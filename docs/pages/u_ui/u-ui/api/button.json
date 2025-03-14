@@ -1,0 +1,239 @@
+{
+    "props": {
+      "children": { "type": { "name": "node" } },
+      "className": { "type": { "name": "string" } },
+      "color": {
+        "type": {
+          "name": "union",
+          "description": "'inherit'<br>&#124;&nbsp;'primary'<br>&#124;&nbsp;'secondary'<br>&#124;&nbsp;'contrast'<br>&#124;&nbsp;'neutral'<br>&#124;&nbsp;'success'<br>&#124;&nbsp;'error'<br>&#124;&nbsp;'info'<br>&#124;&nbsp;'warning'<br>&#124;&nbsp;string"
+        },
+        "default": "'primary'"
+      },
+      "component": { "type": { "name": "elementType" } },
+      "disabled": { "type": { "name": "bool" }, "default": "false" },
+      "disableFocusRipple": { "type": { "name": "bool" }, "default": "false" },
+      "disableRipple": { "type": { "name": "bool" }, "default": "false" },
+      "enableElevation": { "type": { "name": "bool" }, "default": "false" },
+      "endIcon": { "type": { "name": "node" } },
+      "fullWidth": { "type": { "name": "bool" }, "default": "false" },
+      "href": { "type": { "name": "string" } },
+      "loading": { "type": { "name": "bool" }, "default": "null" },
+      "loadingIndicator": {
+        "type": { "name": "node" },
+        "default": "<CircularProgress color=\"inherit\" size={16} />"
+      },
+      "loadingPosition": {
+        "type": {
+          "name": "enum",
+          "description": "'center'<br>&#124;&nbsp;'end'<br>&#124;&nbsp;'start'"
+        },
+        "default": "'center'"
+      },
+      "size": {
+        "type": {
+          "name": "union",
+          "description": "'small'<br>&#124;&nbsp;'medium'<br>&#124;&nbsp;'large'<br>&#124;&nbsp;string"
+        },
+        "default": "'medium'"
+      },
+      "startIcon": { "type": { "name": "node" } },
+      "sx": {
+        "type": {
+          "name": "union",
+          "description": "Array&lt;func<br>&#124;&nbsp;object<br>&#124;&nbsp;bool&gt;<br>&#124;&nbsp;func<br>&#124;&nbsp;object"
+        },
+        "additionalInfo": { "sx": true }
+      },
+      "variant": {
+        "type": {
+          "name": "union",
+          "description": "'contained'<br>&#124;&nbsp;'outlined'<br>&#124;&nbsp;'text'<br>&#124;&nbsp;string"
+        },
+        "default": "'text'"
+      }
+    },
+    "name": "Button",
+    "imports": [
+      "import { Button } from '@u_ui/u-ui/Button';", 
+      "import { Button } from '@u_ui/u-ui';"
+    ],
+    "classes": [
+      {
+        "key": "colorError",
+        "className": "uiButton-colorError",
+        "description": "Styles applied to the root element if `color=\"error\"`.",
+        "isGlobal": false
+      },
+      {
+        "key": "colorInfo",
+        "className": "uiButton-colorInfo",
+        "description": "Styles applied to the root element if `color=\"info\"`.",
+        "isGlobal": false
+      },
+      {
+        "key": "colorInherit",
+        "className": "uiButton-colorInherit",
+        "description": "Styles applied to the root element if `color=\"inherit\"`.",
+        "isGlobal": false
+      },
+      {
+        "key": "colorPrimary",
+        "className": "uiButton-colorPrimary",
+        "description": "Styles applied to the root element if `color=\"primary\"`.",
+        "isGlobal": false
+      },
+      {
+        "key": "colorSecondary",
+        "className": "uiButton-colorSecondary",
+        "description": "Styles applied to the root element if `color=\"secondary\"`.",
+        "isGlobal": false
+      },
+      {
+        "key": "colorSuccess",
+        "className": "uiButton-colorSuccess",
+        "description": "Styles applied to the root element if `color=\"success\"`.",
+        "isGlobal": false
+      },
+      {
+        "key": "colorWarning",
+        "className": "uiButton-colorWarning",
+        "description": "Styles applied to the root element if `color=\"warning\"`.",
+        "isGlobal": false
+      },
+      {
+        "key": "contained",
+        "className": "uiButton-contained",
+        "description": "Styles applied to the root element if `variant=\"contained\"`.",
+        "isGlobal": false
+      },
+      {
+        "key": "disabled",
+        "className": "ui-disabled",
+        "description": "State class applied to the root element if `disabled={true}`.",
+        "isGlobal": true
+      },
+      {
+        "key": "disableElevation",
+        "className": "uiButton-disableElevation",
+        "description": "Styles applied to the root element if `disableElevation={true}`.",
+        "isGlobal": false
+      },
+      {
+        "key": "endIcon",
+        "className": "uiButton-endIcon",
+        "description": "Styles applied to the endIcon element if supplied.",
+        "isGlobal": false
+      },
+      {
+        "key": "focusVisible",
+        "className": "ui-focusVisible",
+        "description": "State class applied to the ButtonBase root element if the button is keyboard focused.",
+        "isGlobal": true
+      },
+      {
+        "key": "fullWidth",
+        "className": "uiButton-fullWidth",
+        "description": "Styles applied to the root element if `fullWidth={true}`.",
+        "isGlobal": false
+      },
+      {
+        "key": "icon",
+        "className": "uiButton-icon",
+        "description": "Styles applied to the icon element if supplied",
+        "isGlobal": false
+      },
+      {
+        "key": "loading",
+        "className": "uiButton-loading",
+        "description": "Styles applied to the root element if `loading={true}`.",
+        "isGlobal": false
+      },
+      {
+        "key": "loadingIconPlaceholder",
+        "className": "uiButton-loadingIconPlaceholder",
+        "description": "Styles applied to the loadingIconPlaceholder element.",
+        "isGlobal": false
+      },
+      {
+        "key": "loadingIndicator",
+        "className": "uiButton-loadingIndicator",
+        "description": "Styles applied to the loadingIndicator element.",
+        "isGlobal": false
+      },
+      {
+        "key": "loadingPositionCenter",
+        "className": "uiButton-loadingPositionCenter",
+        "description": "Styles applied to the root element if `loadingPosition=\"center\"`.",
+        "isGlobal": false
+      },
+      {
+        "key": "loadingPositionEnd",
+        "className": "uiButton-loadingPositionEnd",
+        "description": "Styles applied to the root element if `loadingPosition=\"end\"`.",
+        "isGlobal": false
+      },
+      {
+        "key": "loadingPositionStart",
+        "className": "uiButton-loadingPositionStart",
+        "description": "Styles applied to the root element if `loadingPosition=\"start\"`.",
+        "isGlobal": false
+      },
+      {
+        "key": "loadingWrapper",
+        "className": "uiButton-loadingWrapper",
+        "description": "Styles applied to the loadingWrapper element.",
+        "isGlobal": false
+      },
+      {
+        "key": "outlined",
+        "className": "uiButton-outlined",
+        "description": "Styles applied to the root element if `variant=\"outlined\"`.",
+        "isGlobal": false
+      },
+      {
+        "key": "root",
+        "className": "uiButton-root",
+        "description": "Styles applied to the root element.",
+        "isGlobal": false
+      },
+      {
+        "key": "sizeLarge",
+        "className": "uiButton-sizeLarge",
+        "description": "Styles applied to the root element if `size=\"large\"`.",
+        "isGlobal": false
+      },
+      {
+        "key": "sizeMedium",
+        "className": "uiButton-sizeMedium",
+        "description": "Styles applied to the root element if `size=\"medium\"`.",
+        "isGlobal": false
+      },
+      {
+        "key": "sizeSmall",
+        "className": "uiButton-sizeSmall",
+        "description": "Styles applied to the root element if `size=\"small\"`.",
+        "isGlobal": false
+      },
+      {
+        "key": "startIcon",
+        "className": "uiButton-startIcon",
+        "description": "Styles applied to the startIcon element if supplied.",
+        "isGlobal": false
+      },
+      {
+        "key": "text",
+        "className": "uiButton-text",
+        "description": "Styles applied to the root element if `variant=\"text\"`.",
+        "isGlobal": false
+      }
+    ],
+    "spread": true,
+    "themeDefaultProps": true,
+    "uiName": "Button",
+    "forwardsRefTo": "HTMLButtonElement",
+    "filename": "/packages/u_ui-u-ui/src/Button/Button.tsx",
+    "inheritance": { "component": "ButtonBase", "pathname": "/u_ui/u-ui/react-button-base/components-api/" },
+    "demos": "<ul><li><a href=\"/u_ui/u-ui/react-button/\">Button</a></li></ul>",
+    "cssComponent": false
+  }
+  

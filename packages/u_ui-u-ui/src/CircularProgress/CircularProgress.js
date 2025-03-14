@@ -69,7 +69,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const CircularProgressRoot = styled('span', {
-    name: 'UshiiCircularProgress',
+    name: 'uiCircularProgress',
     slot: 'Root',
     overridesResolver: (props, styles) => {
         const { ownerState } = props;
@@ -113,7 +113,7 @@ const CircularProgressRoot = styled('span', {
 );
 
 const CircularProgressSVG = styled('svg', {
-    name: 'UshiiCircularProgress',
+    name: 'uiCircularProgress',
     slot: 'Svg',
     overridesResolver: (props, styles) => styles.svg,
   })({
@@ -121,7 +121,7 @@ const CircularProgressSVG = styled('svg', {
   });
 
   const CircularProgressCircle = styled('circle', {
-    name: 'UshiiCircularProgress',
+    name: 'uiCircularProgress',
     slot: 'Circle',
     overridesResolver: (props, styles) => {
       const { ownerState } = props;
@@ -182,7 +182,7 @@ const CircularProgressSVG = styled('svg', {
    * attribute to `true` on that region until it has finished loading.
    */
   const CircularProgress = React.forwardRef(function CircularProgress(inProps, ref) {
-    const props = useDefaultProps({ props: inProps, name: 'UshiiCircularProgress' });
+    const props = useDefaultProps({ props: inProps, name: 'uiCircularProgress' });
     const {
       className,
       color = 'primary',

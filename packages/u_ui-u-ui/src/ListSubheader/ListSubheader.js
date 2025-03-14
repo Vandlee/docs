@@ -26,7 +26,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const ListSubheaderRoot = styled('li', {
-  name: 'UshiiListSubheader',
+  name: 'uiListSubheader',
   slot: 'Root',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -92,7 +92,7 @@ const ListSubheaderRoot = styled('li', {
 );
 
 const ListSubheader = React.forwardRef(function ListSubheader(inProps, ref) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiListSubheader' });
+  const props = useDefaultProps({ props: inProps, name: 'uiListSubheader' });
   const {
     className,
     color = 'default',

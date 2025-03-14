@@ -24,7 +24,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const CardHeaderRoot = styled('div', {
-  name: 'UshiiCardHeader',
+  name: 'uiCardHeader',
   slot: 'Root',
   overridesResolver: (props, styles) => {
     return [
@@ -40,7 +40,7 @@ const CardHeaderRoot = styled('div', {
 });
 
 const CardHeaderAvatar = styled('div', {
-  name: 'UshiiCardHeader',
+  name: 'uiCardHeader',
   slot: 'Avatar',
   overridesResolver: (props, styles) => styles.avatar,
 })({
@@ -50,7 +50,7 @@ const CardHeaderAvatar = styled('div', {
 });
 
 const CardHeaderAction = styled('div', {
-  name: 'UshiiCardHeader',
+  name: 'uiCardHeader',
   slot: 'Action',
   overridesResolver: (props, styles) => styles.action,
 })({
@@ -62,7 +62,7 @@ const CardHeaderAction = styled('div', {
 });
 
 const CardHeaderContent = styled('div', {
-  name: 'UshiiCardHeader',
+  name: 'uiCardHeader',
   slot: 'Content',
   overridesResolver: (props, styles) => styles.content,
 })({
@@ -76,7 +76,7 @@ const CardHeaderContent = styled('div', {
 });
 
 const CardHeader = React.forwardRef(function CardHeader(inProps, ref) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiCardHeader' });
+  const props = useDefaultProps({ props: inProps, name: 'uirdHeader' });
   const {
     action,
     avatar,

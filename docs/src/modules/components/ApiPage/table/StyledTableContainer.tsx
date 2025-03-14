@@ -1,13 +1,28 @@
 import { styled, alpha } from '@u_ui/u-ui/styles';
 import { brandingDarkTheme as darkTheme } from '@u-shii/docs/branding';
 
+export const StyledScrollTableContainer = styled('div')(
+  ({ theme }) => ({
+    overflowX: 'auto',
+    WebkitOverflowScrolling: 'touch',
+    width: '100%',
+    maxWidth: '100%',
+    position: 'relative'
+  })
+)
+
 const StyledTableContainer = styled('div')(
   ({ theme }) => ({
-    borderRadius: 12,
-    overflowX: 'auto',
+    display: 'flex',
+    border: 1,
+    borderStyle: 'solid',
+    borderColor: theme.palette.divider,
+    borderRadius: 8,
+    overflow: 'hidden',
     '& table': {
       marginLeft: -1,
       marginRight: -1,
+      display: 'table',
       background: [
         'linear-gradient(to right, rgb(255, 255, 255) 5%, transparent 90%) local',
         'linear-gradient(to right, transparent, rgb(255, 255, 255) 100%) 100% center local',
@@ -23,11 +38,11 @@ const StyledTableContainer = styled('div')(
       fontSize: theme.typography.pxToRem(14),
     },
     '& tr': {
-      scrollMarginTop: 'calc(var(--UshiiDocs-header-height) + 32px)',
+      scrollMarginTop: 'calc(var(--uidocs-header-height) + 32px)',
       '&:hover': {
         backgroundColor: alpha(darkTheme.palette.grey[50], 0.5),
       },
-      '& .UshiiPropTable-description-column': {
+      '& .uiPropTable-description-column': {
         minWidth: 300,
       },
     },

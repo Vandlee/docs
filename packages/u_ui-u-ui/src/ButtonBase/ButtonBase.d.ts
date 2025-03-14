@@ -34,7 +34,7 @@ export interface ButtonBaseOwnProps {
    * If `true`, the ripple effect is disabled.
    *
    * ⚠️ Without a ripple there is no styling for :focus-visible by default. Be sure
-   * to highlight the element by applying separate styles with the `.Ushii-focusVisible` class.
+   * to highlight the element by applying separate styles with the `.ui--focusVisible` class.
    * @default false
    */
   disableRipple?: boolean;

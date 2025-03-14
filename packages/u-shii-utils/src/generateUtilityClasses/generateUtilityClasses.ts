@@ -3,7 +3,7 @@ import generateUtilityClass from '../generateUtilityClass/generateUtilityClass';
 export default function generateUtilityClasses<T extends string>(
   componentName: string,
   slots: T[],
-  globalStatePrefix = 'Ushii',
+  globalStatePrefix = 'ui',
 ): Record<T, string> {
   const result: Record<string, string> = {};
 

@@ -51,7 +51,7 @@ const useUtilityClasses = (ownerState) => {
 
 const ListItemButtonRoot = styled(ButtonBase, {
   shouldForwardProp: (prop) => rootShouldForwardProp(prop) || prop === 'classes',
-  name: 'UshiiListItemButton',
+  name: 'uiListItemButton',
   slot: 'Root',
   overridesResolver,
 })(
@@ -146,7 +146,7 @@ const ListItemButtonRoot = styled(ButtonBase, {
 );
 
 const ListItemButton = React.forwardRef(function ListItemButton(inProps, ref) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiListItemButton' });
+  const props = useDefaultProps({ props: inProps, name: 'uistItemButton' });
   const {
     alignItems = 'center',
     autoFocus = false,

@@ -29,7 +29,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const CollapseRoot = styled('div', {
-  name: 'UshiiCollapse',
+  name: 'uiCollapse',
   slot: 'Root',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -90,7 +90,7 @@ const CollapseRoot = styled('div', {
 );
 
 const CollapseWrapper = styled('div', {
-  name: 'UshiiCollapse',
+  name: 'uiCollapse',
   slot: 'Wrapper',
   overridesResolver: (props, styles) => styles.wrapper,
 })({
@@ -111,7 +111,7 @@ const CollapseWrapper = styled('div', {
 });
 
 const CollapseWrapperInner = styled('div', {
-  name: 'UshiiCollapse',
+  name: 'uiCollapse',
   slot: 'WrapperInner',
   overridesResolver: (props, styles) => styles.wrapperInner,
 })({
@@ -135,7 +135,7 @@ const CollapseWrapperInner = styled('div', {
  * It uses [react-transition-group](https://github.com/reactjs/react-transition-group) internally.
  */
 const Collapse = React.forwardRef(function Collapse(inProps, ref) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiCollapse' });
+  const props = useDefaultProps({ props: inProps, name: 'uillapse' });
   const {
     addEndListener,
     children,

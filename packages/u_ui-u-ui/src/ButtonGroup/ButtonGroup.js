@@ -78,7 +78,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const ButtonGroupRoot = styled('div', {
-  name: 'UshiiButtonGroup',
+  name: 'uiButtonGroup',
   slot: 'Root',
   overridesResolver,
 })(
@@ -254,7 +254,7 @@ const ButtonGroupRoot = styled('div', {
 );
 
 const ButtonGroup = React.forwardRef(function ButtonGroup(inProps, ref) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiButtonGroup' });
+  const props = useDefaultProps({ props: inProps, name: 'uittonGroup' });
   const {
     children,
     className,

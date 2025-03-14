@@ -13,10 +13,10 @@ export interface CardActionAreaClasses {
 export type CardActionAreaClassKey = keyof CardActionAreaClasses;
 
 export function getCardActionAreaUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiCardActionArea', slot);
+  return generateUtilityClass('uiCardActionArea', slot);
 }
 
-const cardActionAreaClasses: CardActionAreaClasses = generateUtilityClasses('UshiiCardActionArea', [
+const cardActionAreaClasses: CardActionAreaClasses = generateUtilityClasses('uiCardActionArea', [
   'root',
   'focusVisible',
   'focusHighlight',

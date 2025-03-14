@@ -19,10 +19,10 @@ export interface CardHeaderClasses {
 export type CardHeaderClassKey = keyof CardHeaderClasses;
 
 export function getCardHeaderUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiCardHeader', slot);
+  return generateUtilityClass('uiCardHeader', slot);
 }
 
-const cardHeaderClasses: CardHeaderClasses = generateUtilityClasses('UshiiCardHeader', [
+const cardHeaderClasses: CardHeaderClasses = generateUtilityClasses('uiCardHeader', [
   'root',
   'avatar',
   'action',

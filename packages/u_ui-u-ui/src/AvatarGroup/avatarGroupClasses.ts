@@ -11,10 +11,10 @@ export interface AvatarGroupClasses {
 export type AvatarGroupClassKey = keyof AvatarGroupClasses;
 
 export function getAvatarGroupUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiAvatarGroup', slot);
+  return generateUtilityClass('uiAvatarGroup', slot);
 }
 
-const avatarGroupClasses: AvatarGroupClasses = generateUtilityClasses('UshiiAvatarGroup', [
+const avatarGroupClasses: AvatarGroupClasses = generateUtilityClasses('uiAvatarGroup', [
   'root',
   'avatar',
 ]);

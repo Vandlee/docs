@@ -8,7 +8,7 @@ import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt
 import SentimentVerySatisfiedIcon from '@mui/icons-material/SentimentVerySatisfied';
 
 const StyledRating = styled(Rating)(({ theme }) => ({
-  '& .UshiiRating-iconEmpty .MuiSvgIcon-root': {
+  '& .uiRating-iconEmpty .MuiSvgIcon-root': {
     color: theme.palette.action.disabled,
   },
 }));

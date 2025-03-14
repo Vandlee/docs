@@ -27,15 +27,15 @@ const data = [
 ];
 
 const FireNav = styled(List)<{ component?: React.ElementType }>({
-  '& .UshiiListItemButton-root': {
+  '& .uiListItemButton-root': {
     paddingLeft: 24,
     paddingRight: 24,
   },
-  '& .UshiiListItemIcon-root': {
+  '& .uiListItemIcon-root': {
     minWidth: 0,
     marginRight: 16,
   },
-  '& .UshiiSvgIcon-root': {
+  '& .uiSvgIcon-root': {
     fontSize: 20,
   },
 });
@@ -47,7 +47,7 @@ export default function CustomizedList() {
       <ThemeProvider
         theme={createTheme({
           components: {
-            UshiiListItemButton: {
+            uiListItemButton: {
               defaultProps: {
                 disableTouchRipple: true,
               },

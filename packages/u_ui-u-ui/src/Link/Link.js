@@ -45,7 +45,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const LinkRoot = styled(Typography, {
-  name: 'UshiiLink',
+  name: 'uiLink',
   slot: 'Root',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -164,7 +164,7 @@ const LinkRoot = styled(Typography, {
 const Link = React.forwardRef(function Link(inProps, ref) {
   const props = useDefaultProps({
     props: inProps,
-    name: 'UshiiLink',
+    name: 'uiLink',
   });
   const theme = useTheme();
 

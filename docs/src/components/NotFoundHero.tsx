@@ -15,7 +15,7 @@ export default function NotFoundHero() {
       sx={{
         display: 'flex',
         alignItems: 'center',
-        '& .UshiiContainer-root': {
+        '& .uiContainer-root': {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',

@@ -11,10 +11,10 @@ export interface ListItemAvatarClasses {
 export type ListItemAvatarClassKey = keyof ListItemAvatarClasses;
 
 export function getListItemAvatarUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiListItemAvatar', slot);
+  return generateUtilityClass('uiListItemAvatar', slot);
 }
 
-const listItemAvatarClasses: ListItemAvatarClasses = generateUtilityClasses('UshiiListItemAvatar', [
+const listItemAvatarClasses: ListItemAvatarClasses = generateUtilityClasses('uiListItemAvatar', [
   'root',
   'alignItemsFlexStart',
 ]);

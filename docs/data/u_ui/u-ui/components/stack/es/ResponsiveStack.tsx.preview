@@ -1,0 +1,8 @@
+<Stack
+  direction={{ xs: 'column', sm: 'row' }}
+  spacing={{ xs: 1, sm: 2, md: 4 }}
+>
+  <Item>Elemento 1</Item>
+  <Item>Elemento 2</Item>
+  <Item>Elemento 3</Item>
+</Stack>

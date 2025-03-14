@@ -19,7 +19,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const ToolbarRoot = styled('div', {
-  name: 'UshiiToolbar',
+  name: 'uiToolbar',
   slot: 'Root',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -62,7 +62,7 @@ const ToolbarRoot = styled('div', {
 );
 
 const Toolbar = React.forwardRef(function Toolbar(inProps, ref) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiToolbar' });
+  const props = useDefaultProps({ props: inProps, name: 'uiToolbar' });
   const {
     className,
     component = 'div',

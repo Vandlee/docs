@@ -1,7 +1,7 @@
 <Chip
   sx={{
     height: 'auto',
-    '& .UshiiChip-label': {
+    '& .uiChip-label': {
       display: 'block',
       whiteSpace: 'normal',
     },

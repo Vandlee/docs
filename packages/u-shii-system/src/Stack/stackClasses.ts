@@ -9,9 +9,9 @@ export interface StackClasses {
 export type StackClassKey = keyof StackClasses;
 
 export function getStackUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiStack', slot);
+  return generateUtilityClass('uiStack', slot);
 }
 
-const stackClasses: StackClasses = generateUtilityClasses('UshiiStack', ['root']);
+const stackClasses: StackClasses = generateUtilityClasses('uiStack', ['root']);
 
 export default stackClasses;

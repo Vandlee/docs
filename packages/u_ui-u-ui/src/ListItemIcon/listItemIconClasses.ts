@@ -11,10 +11,10 @@ export interface ListItemIconClasses {
 export type ListItemIconClassKey = keyof ListItemIconClasses;
 
 export function getListItemIconUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiListItemIcon', slot);
+  return generateUtilityClass('uiistItemIcon', slot);
 }
 
-const listItemIconClasses: ListItemIconClasses = generateUtilityClasses('UshiiListItemIcon', [
+const listItemIconClasses: ListItemIconClasses = generateUtilityClasses('uiListItemIcon', [
   'root',
   'alignItemsFlexStart',
 ]);

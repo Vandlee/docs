@@ -19,10 +19,10 @@ export interface ListSubheaderClasses {
 export type ListSubheaderClassKey = keyof ListSubheaderClasses;
 
 export function getListSubheaderUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiListSubheader', slot);
+  return generateUtilityClass('uiListSubheader', slot);
 }
 
-const listSubheaderClasses: ListSubheaderClasses = generateUtilityClasses('UshiiListSubheader', [
+const listSubheaderClasses: ListSubheaderClasses = generateUtilityClasses('uiListSubheader', [
   'root',
   'colorPrimary',
   'colorInherit',

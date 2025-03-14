@@ -87,7 +87,7 @@ function DrawerAppBar(props) {
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
-            '& .UshiiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            '& .uiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
           {drawer}

@@ -21,8 +21,8 @@
  *
  * const output = composeClasses(slots, getUtilityClass, classes);
  * // {
- * //   root: 'UshiiButton-root UshiiButton-primary my-root-class',
- * //   label: 'UshiiButton-label',
+ * //   root: 'uiButton-root UshiiButton-primary my-root-class',
+ * //   label: 'uiButton-label',
  * // }
  * ```
  *

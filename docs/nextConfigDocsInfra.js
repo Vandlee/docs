@@ -52,7 +52,7 @@ function withDocsInfra(nextConfig) {
     reactStrictMode: true,
     ...nextConfig,
     env: {
-      BUILD_ONLY_SPANISH_LOCALE: 'true', // disable translations by default
+      BUILD_ONLY_SPANISH_LOCALE: 'false', // disable translations by default
       // production | staging | pull-request | development
       DEPLOY_ENV,
       FEEDBACK_URL: process.env.FEEDBACK_URL,
@@ -67,7 +67,7 @@ function withDocsInfra(nextConfig) {
       // URL representing the unique URL for an individual deploy, e.g.
       // https://5b243e66dd6a547b4fee73ae--petsof.netlify.app
       NETLIFY_DEPLOY_URL: process.env.DEPLOY_URL,
-      // Name of the site, its Netlify subdomain; for example, material-ui-docs
+      // Name of the site, its Netlify subdomain; for example, material-uidocs
       NETLIFY_SITE_NAME: process.env.SITE_NAME,
       // For template images
       TEMPLATE_IMAGE_URL: '',

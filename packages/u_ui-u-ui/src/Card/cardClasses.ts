@@ -9,9 +9,9 @@ export interface CardClasses {
 export type CardClassKey = keyof CardClasses;
 
 export function getCardUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiCard', slot);
+  return generateUtilityClass('uiCard', slot);
 }
 
-const cardClasses: CardClasses = generateUtilityClasses('UshiiCard', ['root']);
+const cardClasses: CardClasses = generateUtilityClasses('uiCard', ['root']);
 
 export default cardClasses;

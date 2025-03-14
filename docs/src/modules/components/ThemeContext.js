@@ -24,67 +24,67 @@ const themeInitialOptions = {
 
 export const highDensity = {
   components: {
-    UshiiButton: {
+    uiButton: {
       defaultProps: {
         size: 'small',
       },
     },
-    UshiiFilledInput: {
+    uiFilledInput: {
       defaultProps: {
         margin: 'dense',
       },
     },
-    UshiiFormControl: {
+    uiFormControl: {
       defaultProps: {
         margin: 'dense',
       },
     },
-    UshiiFormHelperText: {
+    uiFormHelperText: {
       defaultProps: {
         margin: 'dense',
       },
     },
-    UshiiIconButton: {
+    uiIconButton: {
       defaultProps: {
         size: 'small',
       },
     },
-    UshiiInputBase: {
+    uiInputBase: {
       defaultProps: {
         margin: 'dense',
       },
     },
-    UshiiInputLabel: {
+    uiInputLabel: {
       defaultProps: {
         margin: 'dense',
       },
     },
-    UshiiListItem: {
+    uiListItem: {
       defaultProps: {
         dense: true,
       },
     },
-    UshiiOutlinedInput: {
+    uiOutlinedInput: {
       defaultProps: {
         margin: 'dense',
       },
     },
-    UshiiFab: {
+    uiFab: {
       defaultProps: {
         size: 'small',
       },
     },
-    UshiiTable: {
+    uiTable: {
       defaultProps: {
         size: 'small',
       },
     },
-    UshiiTextField: {
+    uiTextField: {
       defaultProps: {
         margin: 'dense',
       },
     },
-    UshiiToolbar: {
+    uiToolbar: {
       defaultProps: {
         variant: 'dense',
       },
@@ -217,7 +217,7 @@ export function ThemeProvider(props) {
         },
         // v5 migration
         props: {
-          UshiiBadge: {
+          uiBadge: {
             overlap: 'rectangular',
           },
         },
@@ -226,7 +226,7 @@ export function ThemeProvider(props) {
       dense ? highDensity : null,
       {
         components: {
-          UshiiCssBaseline: {
+          uiCssBaseline: {
             defaultProps: {
               enableColorScheme: true,
             },

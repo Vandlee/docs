@@ -19,10 +19,10 @@ export interface ListItemTextClasses {
 export type ListItemTextClassKey = keyof ListItemTextClasses;
 
 export function getListItemTextUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiListItemText', slot);
+  return generateUtilityClass('uiListItemText', slot);
 }
 
-const listItemTextClasses: ListItemTextClasses = generateUtilityClasses('UshiiListItemText', [
+const listItemTextClasses: ListItemTextClasses = generateUtilityClasses('uiListItemText', [
   'root',
   'multiline',
   'dense',

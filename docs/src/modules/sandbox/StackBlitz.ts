@@ -110,8 +110,8 @@ function createMaterialTemplate(templateData: {
   const files: Record<string, string> = {
     'index.html': CRA.getHtml({
       title: templateData.title,
-      language: 'en',
-      codeStyling: templateData.codeStyling ?? 'Ushii System',
+      language: 'es',
+      codeStyling: templateData.codeStyling ?? 'u_ui System',
     }),
     [`index.${ext}`]: `import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';

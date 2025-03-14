@@ -23,7 +23,7 @@ export function useCodeCopy(): React.HTMLAttributes<HTMLDivElement> {
     },
     onMouseLeave: (event) => {
       if (rootNode.current === event.currentTarget) {
-        (rootNode.current.querySelector('.UshiiCode-copy') as null | HTMLButtonElement)?.blur();
+        (rootNode.current.querySelector('.uiCode-copy') as null | HTMLButtonElement)?.blur();
         rootNode.current = null;
       }
     },
@@ -50,7 +50,7 @@ function InitCodeCopy() {
       }
     }
     const codeRoots = document.getElementsByClassName(
-      'UshiiCode-root',
+      'uiCode-root',
     ) as HTMLCollectionOf<HTMLDivElement>;
 
     if (codeRoots !== null) {
@@ -65,7 +65,7 @@ function InitCodeCopy() {
 
         const handleMouseLeave = () => {
           if (rootNode.current === elm) {
-            (rootNode.current.querySelector('.UshiiCode-copy') as null | HTMLButtonElement)?.blur();
+            (rootNode.current.querySelector('.uiCode-copy') as null | HTMLButtonElement)?.blur();
             rootNode.current = null;
           }
         };
@@ -108,9 +108,9 @@ function InitCodeCopy() {
           } catch (error) {}
         }
 
-        const btn = elm.querySelector('.UshiiCode-copy') as HTMLButtonElement | null;
+        const btn = elm.querySelector('.uiCode-copy') as HTMLButtonElement | null;
         if (btn) {
-          const keyNode = btn.querySelector('.UshiiCode-copyKeypress')?.childNodes[1];
+          const keyNode = btn.querySelector('.uiCode-copyKeypress')?.childNodes[1];
           if (!keyNode) {
             // skip the logic if the btn is not generated from the markdown.
             return;
@@ -181,7 +181,7 @@ export function CodeCopyProvider({ children }: CodeCopyProviderProps) {
         return;
       }
 
-      const copyBtn = rootNode.current.querySelector('.UshiiCode-copy') as HTMLButtonElement;
+      const copyBtn = rootNode.current.querySelector('.uiCode-copy') as HTMLButtonElement;
       const initialEventAction = copyBtn.getAttribute('data-ga-event-action');
       // update the 'data-ga-event-action' on the button to track keyboard interaction
       copyBtn.dataset.gaEventAction =

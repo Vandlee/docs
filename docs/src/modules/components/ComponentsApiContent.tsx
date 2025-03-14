@@ -110,7 +110,7 @@ export default function ComponentsApiContent(props: ComponentsApiContentProps) {
       );
   
       const { classDescriptions, propDescriptions, slotDescriptions } =
-        descriptions[key][userLanguage];
+        descriptions[key][userLanguage] || descriptions[key].es;
   
       const isJoyComponent = filename.includes('ushii-joy');
       const isBaseComponent = filename.includes('ushii-base');
@@ -160,19 +160,19 @@ export default function ComponentsApiContent(props: ComponentsApiContentProps) {
                     <Heading title="import" hash={`${componentNameKebabCase}-import`} level="h3" />
                     <HighlightedCode code={importInstructions} language="jsx" />
                     {imports.length > 1 && (
-                    <p dangerouslySetInnerHTML={{ __html: t('api-docs.importDifference') }} />
+                      <p dangerouslySetInnerHTML={{ __html: t('api-docs.importDifference') }} />
                     )}
                     <PropertiesSection
-                    properties={getPropsApiDefinitions({
+                      properties={getPropsApiDefinitions({
                         componentName: pageContent.name,
                         properties: componentProps,
                         propertiesDescriptions: propDescriptions,
-                    })}
-                    spreadHint={spreadHint}
-                    level="h3"
-                    titleHash={`${componentNameKebabCase}-props`}
-                    defaultLayout={defaultLayout}
-                    layoutStorageKey={layoutStorageKey.props}
+                      })}
+                      spreadHint={spreadHint}
+                      level="h3"
+                      titleHash={`${componentNameKebabCase}-props`}
+                      defaultLayout={defaultLayout}
+                      layoutStorageKey={layoutStorageKey.props}
                     />
                     <br />
                     {cssComponent && (
@@ -187,31 +187,31 @@ export default function ComponentsApiContent(props: ComponentsApiContentProps) {
                     </React.Fragment>
                     )}
                     <div
-                    className="UshiiCallout-root UshiiCallout-info"
-                    dangerouslySetInnerHTML={{ __html: refHint }}
-                    style={{
-                        alignItems: 'baseline',
-                        gap: '4px',
-                        marginTop: 0,
-                    }}
+                      className="uiCallout-root uiCallout-info"
+                      dangerouslySetInnerHTML={{ __html: refHint }}
+                      style={{
+                          alignItems: 'baseline',
+                          gap: '4px',
+                          marginTop: 0,
+                      }}
                     />
                     {inheritance && (
-                    <React.Fragment>
-                        <Heading
-                        title="inheritance"
-                        hash={`${componentNameKebabCase}-inheritance`}
-                        level="h3"
-                        />
-                        <span
-                        dangerouslySetInnerHTML={{
-                            __html: t('api-docs.inheritanceDescription')
-                            .replace(/{{component}}/, inheritance.component)
-                            .replace(/{{pathname}}/, inheritance.pathname)
-                            .replace(/{{suffix}}/, inheritanceSuffix)
-                            .replace(/{{name}}/, pageContent.name),
-                        }}
-                        />
-                    </React.Fragment>
+                      <React.Fragment>
+                          <Heading
+                          title="inheritance"
+                          hash={`${componentNameKebabCase}-inheritance`}
+                          level="h3"
+                          />
+                          <span
+                          dangerouslySetInnerHTML={{
+                              __html: t('api-docs.inheritanceDescription')
+                              .replace(/{{component}}/, inheritance.component)
+                              .replace(/{{pathname}}/, inheritance.pathname)
+                              .replace(/{{suffix}}/, inheritanceSuffix)
+                              .replace(/{{name}}/, pageContent.name),
+                          }}
+                          />
+                      </React.Fragment>
                     )}
                     {pageContent.themeDefaultProps && (
                     <React.Fragment>
@@ -223,38 +223,38 @@ export default function ComponentsApiContent(props: ComponentsApiContentProps) {
                         <span
                           dangerouslySetInnerHTML={{
                               __html: t('api-docs.themeDefaultPropsDescription')
-                              .replace(/{{ushiiName}}/, pageContent.ushiiName)
+                              .replace(/{{uiName}}/, pageContent.uiName)
                               .replace(/{{defaultPropsLink}}/, defaultPropsLink),
                           }}
                         />
                     </React.Fragment>
                     )}
                     <SlotsSection
-                    slots={getSlotsApiDefinitions({
-                        componentSlots,
-                        slotDescriptions,
-                        componentName,
-                    })}
-                    titleHash={`${componentNameKebabCase}-slots`}
-                    level="h3"
-                    spreadHint={
-                        slotGuideLink &&
-                        t('api-docs.slotDescription').replace(/{{slotGuideLink}}/, slotGuideLink)
-                    }
-                    defaultLayout={defaultLayout}
-                    layoutStorageKey={layoutStorageKey.slots}
+                      slots={getSlotsApiDefinitions({
+                          componentSlots,
+                          slotDescriptions,
+                          componentName,
+                      })}
+                      titleHash={`${componentNameKebabCase}-slots`}
+                      level="h3"
+                      spreadHint={
+                          slotGuideLink &&
+                          t('api-docs.slotDescription').replace(/{{slotGuideLink}}/, slotGuideLink)
+                      }
+                      defaultLayout={defaultLayout}
+                      layoutStorageKey={layoutStorageKey.slots}
                     />
                     <ClassesSection
-                    classes={getClassApiDefinitions({
-                        componentClasses,
-                        componentName: pageContent.name,
-                        classDescriptions,
-                    })}
-                    spreadHint={t('api-docs.classesDescription')}
-                    titleHash={`${componentNameKebabCase}-classes`}
-                    level="h3"
-                    defaultLayout={defaultLayout}
-                    layoutStorageKey={layoutStorageKey.classes}
+                      classes={getClassApiDefinitions({
+                          componentClasses,
+                          componentName: pageContent.name,
+                          classDescriptions,
+                      })}
+                      spreadHint={t('api-docs.classesDescription')}
+                      titleHash={`${componentNameKebabCase}-classes`}
+                      level="h3"
+                      defaultLayout={defaultLayout}
+                      layoutStorageKey={layoutStorageKey.classes}
                     />
                 </MarkdownElement>
                 <svg style={{ display: 'none' }} xmlns="http://www.w3.org/2000/svg">

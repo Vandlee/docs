@@ -41,10 +41,10 @@ export interface RatingClasses {
 export type RatingClassKey = keyof RatingClasses;
 
 export function getRatingUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiRating', slot);
+  return generateUtilityClass('uiRating', slot);
 }
 
-const ratingClasses: RatingClasses = generateUtilityClasses('UshiiRating', [
+const ratingClasses: RatingClasses = generateUtilityClasses('uiRating', [
   'root',
   'sizeSmall',
   'sizeMedium',

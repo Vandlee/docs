@@ -35,7 +35,7 @@ export interface ListItemSecondaryActionProps
 declare const ListItemSecondaryAction: ((
   props: ListItemSecondaryActionProps,
 ) => React.JSX.Element) & {
-  ushiiName: string;
+  uiName: string;
 };
 
 export default ListItemSecondaryAction;

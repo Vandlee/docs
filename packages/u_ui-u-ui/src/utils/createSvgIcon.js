@@ -20,7 +20,7 @@ export default function createSvgIcon(path, displayName) {
     Component.displayName = `${displayName}Icon`;
   }
 
-  Component.ushiiName = SvgIcon.ushiiName;
+  Component.uiName = SvgIcon.uiName;
 
   return React.memo(React.forwardRef(Component));
 }

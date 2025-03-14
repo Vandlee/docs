@@ -6,6 +6,7 @@ import MenuItem from '@u_ui/u-ui/MenuItem';
 import CheckIcon from '@mui/icons-material/Check';
 import ArrowDropDownRoundedIcon from '@mui/icons-material/ArrowDropDownRounded';
 import useEnhancedEffect from '@u-shii/utils/useEnhancedEffect';
+import { useTranslate } from '@u-shii/docs/i18n';
 
 export type ApiDisplayOptions = 'collapsed' | 'expanded' | 'table';
 
@@ -82,6 +83,7 @@ interface ToggleDisplayOptionProps {
 }
 
 export default function ToggleDisplayOption(props: ToggleDisplayOptionProps) {
+  const t = useTranslate();
   const { displayOption, setDisplayOption, sectionType } = props;
 
   const [anchorEl, setAnchorEl] = React.useState<HTMLElement | null>(null);
@@ -117,17 +119,16 @@ export default function ToggleDisplayOption(props: ToggleDisplayOptionProps) {
         sx={{ height: '1.875rem', p: '6px 4px 6px 8px', textTransform: 'capitalize' }}
       >
         <Box component="span" sx={{ fontWeight: 'medium', mr: 0.5 }}>
-          {/* eslint-disable-next-line material-ui/no-hardcoded-labels */}
-          {'View:'}
+          {t('api-docs.view')}:
         </Box>
-        {displayOption}
+        {t(`api-docs.display-option.${displayOption}`)}
       </Button>
       <Menu
         id="view-options-menu"
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        sx={{ mt: 1, '.UshiiMenuItem-root': { pl: 1 } }}
+        sx={{ mt: 1, '.uiMenuItem-root': { pl: 1 } }}
       >
         <MenuItem
           value="table"
@@ -137,8 +138,7 @@ export default function ToggleDisplayOption(props: ToggleDisplayOptionProps) {
           data-ga-event-action={sectionType}
           data-ga-event-label="table"
         >
-          {/* eslint-disable-next-line material-ui/no-hardcoded-labels */}
-          {'Table'}
+          {t('api-docs.display-option.table')}
           <CheckIcon
             sx={{ fontSize: '0.85rem', ml: 'auto', opacity: displayOption === 'table' ? 1 : 0 }}
           />
@@ -151,8 +151,7 @@ export default function ToggleDisplayOption(props: ToggleDisplayOptionProps) {
           data-ga-event-action={sectionType}
           data-ga-event-label="expanded"
         >
-          {/* eslint-disable-next-line material-ui/no-hardcoded-labels */}
-          {'Expanded list'}
+          {t('api-docs.display-option.expanded')}
           <CheckIcon
             sx={{ fontSize: '0.85rem', ml: 'auto', opacity: displayOption === 'expanded' ? 1 : 0 }}
           />
@@ -165,8 +164,7 @@ export default function ToggleDisplayOption(props: ToggleDisplayOptionProps) {
           data-ga-event-action={sectionType}
           data-ga-event-label="collapsed"
         >
-          {/* eslint-disable-next-line material-ui/no-hardcoded-labels */}
-          {'Collapsed list'}
+          {t('api-docs.display-option.collapsed')}
           <CheckIcon
             sx={{ fontSize: '0.85rem', ml: 'auto', opacity: displayOption === 'collapsed' ? 1 : 0 }}
           />

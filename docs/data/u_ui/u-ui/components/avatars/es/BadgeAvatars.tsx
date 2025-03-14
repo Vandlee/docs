@@ -5,7 +5,7 @@ import Avatar from '@u_ui/u-ui/Avatar';
 import Stack from '@u_ui/u-ui/Stack';
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
-  '& .UshiiBadge-badge': {
+  '& .uiBadge-badge': {
     backgroundColor: '#44b700',
     color: '#44b700',
     boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,

@@ -4,11 +4,12 @@ import { InstallDesktopRounded, WebRounded, DrawRounded, PlayCircleFilledWhiteRo
 import { InfoCard } from '@u-shii/docs/InfoCard';
 
 const content = [
-    {
-        title: "Installation",
-        description: "Add u-ui to your project with a few commands.",
-        link: '/u_ui/u-ui/getting-started/installation/'
-    }
+  {
+    title: "Installation",
+    description: "Add u-ui to your project with a few commands.",
+    link: '/u_ui/u-ui/getting-started/installation/',
+    icon: <InstallDesktopRounded color="primary" />,
+  }
 ]
 
 export default function UshiiStartingLinksCollection() {

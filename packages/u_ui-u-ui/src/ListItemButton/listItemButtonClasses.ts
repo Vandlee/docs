@@ -23,10 +23,10 @@ export interface ListItemButtonClasses {
 export type ListItemButtonClassKey = keyof ListItemButtonClasses;
 
 export function getListItemButtonUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiListItemButton', slot);
+  return generateUtilityClass('uiListItemButton', slot);
 }
 
-const listItemButtonClasses: ListItemButtonClasses = generateUtilityClasses('UshiiListItemButton', [
+const listItemButtonClasses: ListItemButtonClasses = generateUtilityClasses('uiListItemButton', [
   'root',
   'focusVisible',
   'dense',

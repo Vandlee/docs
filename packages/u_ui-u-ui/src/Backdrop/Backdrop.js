@@ -20,7 +20,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const BackdropRoot = styled('div', {
-    name: 'UshiiBackdrop',
+    name: 'uiBackdrop',
     slot: 'Root',
     overridesResolver: (props, styles) => {
         const { ownerState } = props;
@@ -49,7 +49,7 @@ const BackdropRoot = styled('div', {
 });
 
 const Backdrop = React.forwardRef(function Backdrop(inProps, ref) {
-    const props = useDefaultProps({ props: inProps, name: 'UshiiBackdrop' });
+    const props = useDefaultProps({ props: inProps, name: 'uiBackdrop' });
     const {
         children,
         className,

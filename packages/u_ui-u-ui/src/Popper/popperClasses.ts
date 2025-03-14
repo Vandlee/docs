@@ -9,9 +9,9 @@ export interface PopperClasses {
 export type PopperClassKey = keyof PopperClasses;
 
 export function getPopperUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiPopper', slot);
+  return generateUtilityClass('uiPopper', slot);
 }
 
-const popperClasses: PopperClasses = generateUtilityClasses('UshiiPopper', ['root']);
+const popperClasses: PopperClasses = generateUtilityClasses('uiPopper', ['root']);
 
 export default popperClasses;

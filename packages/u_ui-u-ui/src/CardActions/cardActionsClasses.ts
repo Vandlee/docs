@@ -11,10 +11,10 @@ export interface CardActionsClasses {
 export type CardActionsClassKey = keyof CardActionsClasses;
 
 export function getCardActionsUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiCardActions', slot);
+  return generateUtilityClass('uiCardActions', slot);
 }
 
-const cardActionsClasses: CardActionsClasses = generateUtilityClasses('UshiiCardActions', [
+const cardActionsClasses: CardActionsClasses = generateUtilityClasses('uiCardActions', [
   'root',
   'spacing',
 ]);

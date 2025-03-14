@@ -51,7 +51,7 @@ export const HighlightedCode = React.forwardRef<HTMLDivElement, HighlightedCodeP
 
     return (
       <Component ref={ref} {...other}>
-        <div className="UshiiCode-root" {...handlers} style={{ height: '100%' }}>
+        <div className="uiCode-root" {...handlers} style={{ height: '100%' }}>
           {copyButtonHidden ? null : (
             <NoSsr>
               <CodeCopyButton code={code} {...copyButtonProps} />

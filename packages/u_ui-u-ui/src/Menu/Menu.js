@@ -38,13 +38,13 @@ const useUtilityClasses = (ownerState) => {
 
 const MenuRoot = styled(Popover, {
     shouldForwardProp: (prop) => rootShouldForwardProp(prop) || prop === 'classes',
-    name: 'UshiiMenu',
+    name: 'uiMenu',
     slot: 'Root',
     overridesResolver: (props, styles) => styles.root,
   })({});
 
 export const MenuPaper = styled(PopoverPaper, {
-    name: 'UshiiMenu',
+    name: 'uiMenu',
     slot: 'Paper',
     overridesResolver: (props, styles) => styles.paper,
 })({
@@ -55,7 +55,7 @@ export const MenuPaper = styled(PopoverPaper, {
     paddingInline: 8,
     // Add iOS momentum scrolling for iOS < 13.0
     WebkitOverflowScrolling: 'touch',
-    '& .UshiiListSubheader-root': {
+    '& .uiListSubheader-root': {
         marginInline: -8,
         marginBlock: 8,
         '&:nth-child(1)': {
@@ -65,7 +65,7 @@ export const MenuPaper = styled(PopoverPaper, {
 });
 
 const MenuMenuList = styled(MenuList, {
-    name: 'UshiiMenu',
+    name: 'uiMenu',
     slot: 'List',
     overridesResolver: (props, styles) => styles.list,
 })({
@@ -73,7 +73,7 @@ const MenuMenuList = styled(MenuList, {
 });
 
 const Menu = React.forwardRef(function Menu(inProps, ref) {
-    const props = useDefaultProps({ props: inProps, name: 'UshiiMenu' });
+    const props = useDefaultProps({ props: inProps, name: 'uiMenu' });
 
     const {
         autoFocus = true,

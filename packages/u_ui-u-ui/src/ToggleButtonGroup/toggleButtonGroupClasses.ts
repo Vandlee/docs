@@ -15,11 +15,11 @@ export interface ToggleButtonGroupClasses {
     /** Styles applied to the children. */
     grouped: string;
     /** Styles applied to the children if `orientation="horizontal"`.
-     *  @deprecated Combine the [.UshiiToggleButtonGroup-horizontal](/material-ui/api/toggle-button-group/#toggle-button-group-classes-horizontal) and [.UshiiToggleButtonGroup-grouped](/material-ui/api/toggle-button-group/#toggle-button-group-classes-grouped) classes instead. See [Migrating from deprecated APIs](/material-ui/migration/migrating-from-deprecated-apis/) for more details.
+     *  @deprecated Combine the [.ui-ToggleButtonGroup-horizontal](/material-ui/api/toggle-button-group/#toggle-button-group-classes-horizontal) and [.ui-ToggleButtonGroup-grouped](/material-ui/api/toggle-button-group/#toggle-button-group-classes-grouped) classes instead. See [Migrating from deprecated APIs](/material-ui/migration/migrating-from-deprecated-apis/) for more details.
      */
     groupedHorizontal: string;
     /** Styles applied to the children if `orientation="vertical"`.
-     * @deprecated Combine the [.UshiiToggleButtonGroup-vertical](/material-ui/api/toggle-button-group/#toggle-button-group-classes-vertical) and [.UshiiToggleButtonGroup-grouped](/material-ui/api/toggle-button-group/#toggle-button-group-classes-grouped) classes instead. See [Migrating from deprecated APIs](/material-ui/migration/migrating-from-deprecated-apis/) for more details.
+     * @deprecated Combine the [.ui-ToggleButtonGroup-vertical](/material-ui/api/toggle-button-group/#toggle-button-group-classes-vertical) and [.ui-ToggleButtonGroup-grouped](/material-ui/api/toggle-button-group/#toggle-button-group-classes-grouped) classes instead. See [Migrating from deprecated APIs](/material-ui/migration/migrating-from-deprecated-apis/) for more details.
      */
     groupedVertical: string;
     /** Styles applied to the root element if `fullWidth={true}`. */
@@ -35,11 +35,11 @@ export interface ToggleButtonGroupClasses {
 export type ToggleButtonGroupClassKey = keyof ToggleButtonGroupClasses;
 
 export function getToggleButtonGroupUtilityClass(slot: string): string {
-  return generateUtilityClass('UshiiToggleButtonGroup', slot);
+  return generateUtilityClass('uiToggleButtonGroup', slot);
 }
 
 const toggleButtonGroupClasses: ToggleButtonGroupClasses = generateUtilityClasses(
-  'UshiiToggleButtonGroup',
+  'uiToggleButtonGroup',
   [
     'root',
     'selected',

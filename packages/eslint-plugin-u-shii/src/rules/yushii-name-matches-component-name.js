@@ -5,7 +5,7 @@ const rule = {
   meta: {
     messages: {
       nameMismatch:
-        "Expected `name` to be 'Ushii{{ componentName }}' but instead got '{{ name }}'.",
+        "Expected `name` to be 'ui{{ componentName }}' but instead got '{{ name }}'.",
       noComponent: 'Unable to find component for this call.',
       noNameProperty: 'Unable to find `name` property. Did you forget to pass `name`?',
       noNameSecondArgument:

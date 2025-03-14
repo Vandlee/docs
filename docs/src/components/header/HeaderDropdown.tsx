@@ -18,7 +18,7 @@ const Dropdown = styled('div')(({ theme }) => [
       '&:hover': {
         backgroundColor: (theme.vars || theme).palette.neutral[50],
       },
-      '.UshiiTypography-root': {
+      '.uiTypography-root': {
         flex: 1,
       },
     },

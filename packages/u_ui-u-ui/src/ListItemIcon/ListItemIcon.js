@@ -20,7 +20,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const ListItemIconRoot = styled('div', {
-  name: 'UshiiListItemIcon',
+  name: 'uiListItemIcon',
   slot: 'Root',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -52,7 +52,7 @@ const ListItemIconRoot = styled('div', {
 const ListItemIcon = React.forwardRef(function ListItemIcon(inProps, ref) {
   const props = useDefaultProps({
     props: inProps,
-    name: 'UshiiListItemIcon',
+    name: 'uiListItemIcon',
   });
 
   const { className, ...other } = props;

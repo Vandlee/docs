@@ -72,7 +72,7 @@ export const styles = (theme, enableColorScheme = false) => {
     ...colorSchemeStyles,
   };
 
-  const themeOverrides = theme.components?.UshiiCssBaseline?.styleOverrides;
+  const themeOverrides = theme.components?.uiCssBaseline?.styleOverrides;
   if (themeOverrides) {
     defaultStyles = [defaultStyles, themeOverrides];
   }
@@ -115,7 +115,7 @@ const GlobalStyles = globalCss(
 );
 
 function CssBaseline(inProps) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiCssBaseline' });
+  const props = useDefaultProps({ props: inProps, name: 'uiCssBaseline' });
   const { children, enableColorScheme = false } = props;
   return (
     <React.Fragment>

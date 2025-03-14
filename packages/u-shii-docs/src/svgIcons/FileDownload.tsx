@@ -9,6 +9,6 @@ function FileDownload(props: SvgIconProps) {
   );
 }
 
-FileDownload.ushiiName = 'SvgIcon';
+FileDownload.uiName = 'SvgIcon';
 
 export default FileDownload;

@@ -124,9 +124,9 @@ export default function MyComponent() {
 El componente Snackbar se compone de una raíz `<div>` que alberga elementos interiores como el `SnackbarContent` y otros componentes opcionales (como botones o decoradores).
 
 ```html
-<div role="presentation" class="UshiiSnackbar-root">
-  <div class="UshiiPaper-root UshiiSnackbarContent-root" role="alert">
-    <div class="UshiiSnackbarContent-message">
+<div role="presentation" class="uiSnackbar-root">
+  <div class="uiPaper-root uiSnackbarContent-root" role="alert">
+    <div class="uiSnackbarContent-message">
       <!-- El contenido de la Snackbar va aquí -->
     </div>
   </div>

@@ -8,13 +8,13 @@ const Root = styled('div')(
   ({ theme }) => ({
     ...lightTheme.typography.body1,
     lineHeight: 1.625, // Rounds up to 26px－increased compared to the 1.5 default to make the docs easier to read.
-    color: `var(--ushiidocs-palette-text-primary, ${lightTheme.palette.text.primary})`,
+    color: `var(--uidocs-palette-text-primary, ${lightTheme.palette.text.primary})`,
     '& :focus-visible': {
       outline: `3px solid ${alpha(lightTheme.palette.primary[500], 0.5)}`,
       outlineOffset: 2,
     },
     '& strong': {
-      color: `var(--ushiidocs-palette-text-primary, ${lightTheme.palette.text.primary})`,
+      color: `var(--uidocs-palette-text-primary, ${lightTheme.palette.text.primary})`,
     },
     wordBreak: 'break-word',
     '& pre': {
@@ -24,11 +24,11 @@ const Root = styled('div')(
       backgroundColor: 'hsl(0, 0%, 10%)', // a special, one-off, color tailored for the code blocks using U-Shii's branding theme blue palette as the starting point. It has a less saturaded color but still maintaining a bit of the blue tint.
       color: 'hsl(60, 30%, 96%)',
       colorScheme: 'dark',
-      borderRadius: `var(--ushiidocs-shape-borderRadius, ${
+      borderRadius: `var(--uidocs-shape-borderRadius, ${
         theme.shape?.borderRadius ?? lightTheme.shape.borderRadius
       }px)`,
       border: '1px solid',
-      borderColor: `var(--ushiidocs-palette-primaryDark-700, ${lightTheme.palette.primaryDark[700]})`,
+      borderColor: `var(--uidocs-palette-primaryDark-700, ${lightTheme.palette.primaryDark[700]})`,
       overflow: 'auto',
       WebkitOverflowScrolling: 'touch',
       fontSize: lightTheme.typography.pxToRem(13),
@@ -48,10 +48,10 @@ const Root = styled('div')(
     // inline code block
     '& :not(pre) > code': {
       padding: '2px 4px',
-      color: `var(--ushiidocs-palette-text-primary, ${lightTheme.palette.text.primary})`,
-      backgroundColor: `var(--ushiidocs-palette-grey-50, ${lightTheme.palette.grey[50]})`,
+      color: `var(--uidocs-palette-text-primary, ${lightTheme.palette.text.primary})`,
+      backgroundColor: `var(--uidocs-palette-grey-50, ${lightTheme.palette.grey[50]})`,
       border: '1px solid',
-      borderColor: `var(--ushiidocs-palette-grey-200, ${lightTheme.palette.grey[200]})`,
+      borderColor: `var(--uidocs-palette-grey-200, ${lightTheme.palette.grey[200]})`,
       borderRadius: 6,
       fontSize: lightTheme.typography.pxToRem(13),
       direction: 'ltr /*! @noflip */',
@@ -62,7 +62,7 @@ const Root = styled('div')(
       fontSize: lightTheme.typography.pxToRem(36),
       fontFamily: `"Quicksand", ${lightTheme.typography.fontFamilySystem}`,
       margin: '10px 0',
-      color: `var(--ushiidocs-palette-primaryDark-900, ${lightTheme.palette.primaryDark[900]})`,
+      color: `var(--uidocs-palette-primaryDark-900, ${lightTheme.palette.primaryDark[900]})`,
       fontWeight: 600,
       letterSpacing: -0.2,
     },
@@ -79,7 +79,7 @@ const Root = styled('div')(
       fontFamily: `"Quicksand", ${lightTheme.typography.fontFamilySystem}`,
       fontSize: theme.typography.pxToRem(26),
       fontWeight: lightTheme.typography.fontWeightSemiBold,
-      color: `var(--ushiidocs-palette-grey-900, ${lightTheme.palette.grey[900]})`,
+      color: `var(--uidocs-palette-grey-900, ${lightTheme.palette.grey[900]})`,
       margin: '40px 0 4px',
     },
     '& h3': {
@@ -87,27 +87,27 @@ const Root = styled('div')(
       fontFamily: `"Quicksand", ${lightTheme.typography.fontFamilySystem}`,
       fontSize: theme.typography.pxToRem(20),
       fontWeight: lightTheme.typography.fontWeightSemiBold,
-      color: `var(--ushiidocs-palette-grey-900, ${lightTheme.palette.grey[900]})`,
+      color: `var(--uidocs-palette-grey-900, ${lightTheme.palette.grey[900]})`,
       margin: '24px 0 4px',
     },
     '& h4': {
       ...lightTheme.typography.subtitle1,
       fontFamily: `"Quicksand", ${lightTheme.typography.fontFamilySystem}`,
       fontWeight: lightTheme.typography.fontWeightSemiBold,
-      color: `var(--ushiidocs-palette-grey-900, ${lightTheme.palette.grey[900]})`,
+      color: `var(--uidocs-palette-grey-900, ${lightTheme.palette.grey[900]})`,
       margin: '20px 0 6px',
     },
     '& h5': {
       ...lightTheme.typography.subtitle2,
       fontFamily: `"Quicksand", ${lightTheme.typography.fontFamilySystem}`,
       fontWeight: lightTheme.typography.fontWeightSemiBold,
-      color: `var(--ushiidocs-palette-grey-900, ${lightTheme.palette.grey[900]})`,
+      color: `var(--uidocs-palette-grey-900, ${lightTheme.palette.grey[900]})`,
       margin: '20px 0 8px',
     },
     '& p': {
       marginTop: 0,
       marginBottom: 16,
-      color: `var(--ushiidocs-palette-grey-900, ${lightTheme.palette.grey[900]})`,
+      color: `var(--uidocs-palette-grey-900, ${lightTheme.palette.grey[900]})`,
     },
     '& ul, & ol': {
       paddingLeft: 30,
@@ -143,7 +143,7 @@ const Root = styled('div')(
     },
     '& a': {
       // Style taken from the Link component
-      color: `var(--ushiidocs-palette-primary-600, ${lightTheme.palette.primary[600]})`,
+      color: `var(--uidocs-palette-primary-600, ${lightTheme.palette.primary[600]})`,
       fontWeight: theme.typography.fontWeightMedium,
       textDecoration: 'underline',
       textDecorationColor: alpha(lightTheme.palette.primary.main, 0.2),
@@ -188,7 +188,7 @@ const Root = styled('div')(
         marginLeft: 8,
         height: 26,
         width: 26,
-        color: `var(--ushiidocs-palette-grey-600, ${lightTheme.palette.grey[600]})`,
+        color: `var(--uidocs-palette-grey-600, ${lightTheme.palette.grey[600]})`,
         backgroundColor: 'transparent',
         border: '1px solid transparent',
         borderRadius: 8,
@@ -200,8 +200,8 @@ const Root = styled('div')(
         ),
         '&:hover': {
           backgroundColor: alpha(lightTheme.palette.primary[100], 0.4),
-          borderColor: `var(--ushiidocs-palette-primary-100, ${lightTheme.palette.primary[100]})`,
-          color: `var(--ushiidocs-palette-primary-main, ${lightTheme.palette.primary.main})`,
+          borderColor: `var(--uidocs-palette-primary-100, ${lightTheme.palette.primary[100]})`,
+          color: `var(--uidocs-palette-primary-main, ${lightTheme.palette.primary.main})`,
         },
         '& svg': {
           height: 14,
@@ -227,7 +227,7 @@ const Root = styled('div')(
       },
     },
     '& h1 code, & h2 code, & h3 code': {
-      color: `var(--ushiidocs-palette-grey-900, ${lightTheme.palette.grey[900]})`,
+      color: `var(--uidocs-palette-grey-900, ${lightTheme.palette.grey[900]})`,
     },
     '& h1 code': {
       fontWeight: lightTheme.typography.fontWeightSemiBold,
@@ -239,15 +239,29 @@ const Root = styled('div')(
     '& h3 code': {
       fontSize: lightTheme.typography.pxToRem(18),
     },
-    '& table': {
-      // Trade display table for scroll overflow
-      display: 'block',
-      wordBreak: 'normal',
-      overflowX: 'auto',
-      WebkitOverflowScrolling: 'touch',
-      borderCollapse: 'collapse',
+    '& .table': {
       marginBottom: '20px',
+      display: 'flex',
+      border: 1,
+      borderStyle: 'solid',
+      borderColor: `var(--uidocs-palette-divider, ${lightTheme.palette.divider})`,
+      borderRadius: 8,
+      overflow: 'hidden',
+      '& .table-scroll': {
+        overflowX: 'auto',
+        WebkitOverflowScrolling: 'touch',
+        width: '100%',
+        maxWidth: '100%',
+        position: 'relative',
+      },
+    },
+    '& table': {
+      display: 'table',
+      wordBreak: 'normal',
+      borderCollapse: 'collapse',
       borderSpacing: 0,
+      tableLayout: 'auto',
+      width: '100%',
       '& .prop-name, & .prop-type, & .prop-default, & .slot-name, & .slot-defaultClass, & .slot-default':
         {
           fontWeight: 400,
@@ -265,16 +279,26 @@ const Root = styled('div')(
         color: '#932981',
       },
       '& .prop-default, & .slot-default': {
-        borderBottom: `1px dotted var(--ushiidocs-palette-divider, ${lightTheme.palette.divider})`,
+        borderBottom: `1px dotted var(--uidocs-palette-divider, ${lightTheme.palette.divider})`,
       },
+    },
+    '& tr:nth-last-child(1) td': {
+      borderBottom: 'transparent'
+    },
+    '& td, & th': {
+      borderRight: `1px solid var(--uidocs-palette-grey-100, ${darkTheme.palette.grey[100]})`,
+      '&:nth-last-child(1)': {
+        borderRight: 0
+      }
     },
     '& td': {
       ...theme.typography.body2,
-      borderBottom: `1px solid var(--ushiidocs-palette-divider, ${lightTheme.palette.divider})`,
+      borderBottom: `1px solid var(--uidocs-palette-divider, ${lightTheme.palette.divider})`,
       paddingRight: 20,
+      paddingLeft: 8,
       paddingTop: 16,
       paddingBottom: 16,
-      color: `var(--ushiidocs-palette-text-secondary, ${lightTheme.palette.text.secondary})`,
+      color: `var(--uidocs-palette-text-secondary, ${lightTheme.palette.text.secondary})`,
     },
     '& td code': {
       lineHeight: 1.6,
@@ -283,19 +307,21 @@ const Root = styled('div')(
       fontSize: theme.typography.pxToRem(14),
       lineHeight: theme.typography.pxToRem(24),
       fontWeight: 500,
-      color: `var(--ushiidocs-palette-text-primary, ${lightTheme.palette.text.primary})`,
+      color: `var(--uidocs-palette-text-primary, ${lightTheme.palette.text.primary})`,
       whiteSpace: 'pre',
-      borderBottom: `1px solid var(--ushiidocs-palette-divider, ${lightTheme.palette.divider})`,
+      borderBottom: `1px solid var(--uidocs-palette-divider, ${lightTheme.palette.divider})`,
       paddingRight: 20,
       paddingTop: 12,
+      paddingLeft: 8,
       paddingBottom: 12,
+      backgroundColor: `var(--uidocs-palette-grey-50, ${darkTheme.palette.grey[50]})`
     },
     '& blockquote': {
       position: 'relative',
       padding: '0 16px',
       margin: 0,
       borderLeft: '1.5px solid',
-      borderColor: `var(--ushiidocs-palette-grey-200, ${lightTheme.palette.grey[200]})`,
+      borderColor: `var(--uidocs-palette-grey-200, ${lightTheme.palette.grey[200]})`,
       '& p': {
         fontSize: theme.typography.pxToRem(12.5),
         fontFamily: lightTheme.typography.fontFamilyCode,
@@ -307,32 +333,32 @@ const Root = styled('div')(
         position: 'absolute',
         // eslint-disable-next-line material-ui/straight-quotes
         content: '"“"',
-        color: `var(--ushiidocs-palette-grey-300, ${lightTheme.palette.grey[300]})`,
+        color: `var(--uidocs-palette-grey-300, ${lightTheme.palette.grey[300]})`,
         fontSize: '2.5rem',
         top: 8,
         marginLeft: -6,
         lineHeight: 0.5,
       },
     },
-    '& .UshiiCallout-root': {
+    '& .uiCallout-root': {
       display: 'flex',
       gap: '8px',
       padding: '12px',
       margin: '16px 0',
       border: '1px solid',
-      color: `var(--ushiidocs-palette-text-secondary, ${lightTheme.palette.text.secondary})`,
-      borderColor: `var(--ushiidocs-palette-grey-100, ${lightTheme.palette.grey[100]})`,
-      borderRadius: `var(--ushiidocs-shape-borderRadius, ${
+      color: `var(--uidocs-palette-text-secondary, ${lightTheme.palette.text.secondary})`,
+      borderColor: `var(--uidocs-palette-grey-100, ${lightTheme.palette.grey[100]})`,
+      borderRadius: `var(--uidocs-shape-borderRadius, ${
         theme.shape?.borderRadius ?? lightTheme.shape.borderRadius
       }px)`,
-      '& .UshiiCallout-content': {
+      '& .uiCallout-content': {
         minWidth: 0, // Allows content to shrink. Useful when callout contains code block
         flexGrow: 1,
       },
       '& code': {
         height: 'fit-content',
-        backgroundColor: `var(--ushiidocs-palette-grey-100, ${lightTheme.palette.grey[100]})`,
-        borderColor: `var(--ushiidocs-palette-grey-300, ${lightTheme.palette.grey[300]})`,
+        backgroundColor: `var(--uidocs-palette-grey-100, ${lightTheme.palette.grey[100]})`,
+        borderColor: `var(--uidocs-palette-grey-300, ${lightTheme.palette.grey[300]})`,
       },
       '& p': {
         fontWeight: 400,
@@ -346,7 +372,7 @@ const Root = styled('div')(
           paddingLeft: 22,
         },
       },
-      '& .UshiiCode-root': {
+      '& .uiCode-root': {
         '& pre': {
           margin: '4px 0 0 0',
           borderRadius: '12px 12px 6px 12px',
@@ -356,7 +382,7 @@ const Root = styled('div')(
           },
         },
       },
-      '& .UshiiCallout-icon-container': {
+      '& .uiCallout-icon-container': {
         width: 26, // to match text's line-height
         height: 26,
         display: 'flex',
@@ -376,65 +402,65 @@ const Root = styled('div')(
       '& ul, li, p': {
         color: 'inherit',
       },
-      '&.UshiiCallout-error': {
-        color: `var(--ushiidocs-palette-error-900, ${lightTheme.palette.error[900]})`,
-        backgroundColor: `var(--ushiidocs-palette-error-50, ${lightTheme.palette.error[50]})`,
-        borderColor: `var(--ushiidocs-palette-error-100, ${lightTheme.palette.error[100]})`,
+      '&.uiCallout-error': {
+        color: `var(--uidocs-palette-error-900, ${lightTheme.palette.error[900]})`,
+        backgroundColor: `var(--uidocs-palette-error-50, ${lightTheme.palette.error[50]})`,
+        borderColor: `var(--uidocs-palette-error-100, ${lightTheme.palette.error[100]})`,
         '& strong': {
-          color: `var(--ushiidocs-palette-error-800, ${lightTheme.palette.error[800]})`,
+          color: `var(--uidocs-palette-error-800, ${lightTheme.palette.error[800]})`,
         },
         '& svg': {
-          fill: `var(--ushiidocs-palette-error-500, ${lightTheme.palette.error[600]})`,
+          fill: `var(--uidocs-palette-error-500, ${lightTheme.palette.error[600]})`,
         },
         '& a': {
-          color: `var(--ushiidocs-palette-error-800, ${lightTheme.palette.error[800]})`,
+          color: `var(--uidocs-palette-error-800, ${lightTheme.palette.error[800]})`,
           textDecorationColor: alpha(lightTheme.palette.error.main, 0.4),
           '&:hover': {
             textDecorationColor: 'inherit',
           },
         },
       },
-      '&.UshiiCallout-info': {
-        color: `var(--ushiidocs-palette-grey-900, ${lightTheme.palette.grey[900]})`,
-        backgroundColor: `var(--ushiidocs-palette-grey-50, ${lightTheme.palette.grey[50]})`,
-        borderColor: `var(--ushiidocs-palette-grey-100, ${lightTheme.palette.grey[100]})`,
+      '&.uiCallout-info': {
+        color: `var(--uidocs-palette-grey-900, ${lightTheme.palette.grey[900]})`,
+        backgroundColor: `var(--uidocs-palette-grey-50, ${lightTheme.palette.grey[50]})`,
+        borderColor: `var(--uidocs-palette-grey-100, ${lightTheme.palette.grey[100]})`,
         '& strong': {
-          color: `var(--ushiidocs-palette-primary-800, ${lightTheme.palette.primary[800]})`,
+          color: `var(--uidocs-palette-primary-800, ${lightTheme.palette.primary[800]})`,
         },
         '& svg': {
-          fill: `var(--ushiidocs-palette-grey-600, ${lightTheme.palette.grey[600]})`,
+          fill: `var(--uidocs-palette-grey-600, ${lightTheme.palette.grey[600]})`,
         },
       },
-      '&.UshiiCallout-success': {
-        color: `var(--ushiidocs-palette-success-900, ${lightTheme.palette.success[900]})`,
-        backgroundColor: `var(--ushiidocs-palette-success-50, ${lightTheme.palette.success[50]})`,
-        borderColor: `var(--ushiidocs-palette-success-100, ${lightTheme.palette.success[100]})`,
+      '&.uiCallout-success': {
+        color: `var(--uidocs-palette-success-900, ${lightTheme.palette.success[900]})`,
+        backgroundColor: `var(--uidocs-palette-success-50, ${lightTheme.palette.success[50]})`,
+        borderColor: `var(--uidocs-palette-success-100, ${lightTheme.palette.success[100]})`,
         '& strong': {
-          color: `var(--ushiidocs-palette-success-900, ${lightTheme.palette.success[900]})`,
+          color: `var(--uidocs-palette-success-900, ${lightTheme.palette.success[900]})`,
         },
         '& svg': {
-          fill: `var(--ushiidocs-palette-success-600, ${lightTheme.palette.success[600]})`,
+          fill: `var(--uidocs-palette-success-600, ${lightTheme.palette.success[600]})`,
         },
         '& a': {
-          color: `var(--ushiidocs-palette-success-900, ${lightTheme.palette.success[900]})`,
+          color: `var(--uidocs-palette-success-900, ${lightTheme.palette.success[900]})`,
           textDecorationColor: alpha(lightTheme.palette.success.main, 0.4),
           '&:hover': {
             textDecorationColor: 'inherit',
           },
         },
       },
-      '&.UshiiCallout-warning': {
-        color: `var(--ushiidocs-palette-grey-900, ${lightTheme.palette.grey[900]})`,
+      '&.uiCallout-warning': {
+        color: `var(--uidocs-palette-grey-900, ${lightTheme.palette.grey[900]})`,
         backgroundColor: alpha(lightTheme.palette.warning[50], 0.5),
         borderColor: alpha(lightTheme.palette.warning[700], 0.15),
         '& strong': {
-          color: `var(--ushiidocs-palette-warning-800, ${lightTheme.palette.warning[800]})`,
+          color: `var(--uidocs-palette-warning-800, ${lightTheme.palette.warning[800]})`,
         },
         '& svg': {
-          fill: `var(--ushiidocs-palette-warning-600, ${lightTheme.palette.warning[600]})`,
+          fill: `var(--uidocs-palette-warning-600, ${lightTheme.palette.warning[600]})`,
         },
         '& a': {
-          color: `var(--ushiidocs-palette-warning-800, ${lightTheme.palette.warning[800]})`,
+          color: `var(--uidocs-palette-warning-800, ${lightTheme.palette.warning[800]})`,
           textDecorationColor: alpha(lightTheme.palette.warning.main, 0.4),
           '&:hover': {
             textDecorationColor: 'inherit',
@@ -460,7 +486,7 @@ const Root = styled('div')(
       margin: theme.spacing(5, 0),
       border: 0,
       flexShrink: 0,
-      backgroundColor: `var(--ushiidocs-palette-divider, ${lightTheme.palette.divider})`,
+      backgroundColor: `var(--uidocs-palette-divider, ${lightTheme.palette.divider})`,
     },
     '& kbd.key': {
       padding: 6,
@@ -469,21 +495,21 @@ const Root = styled('div')(
       margin: '0 1px',
       fontFamily: lightTheme.typography.fontFamilyCode,
       fontSize: lightTheme.typography.pxToRem(11),
-      color: `var(--ushiidocs-palette-text-primary, ${lightTheme.palette.text.primary})`,
+      color: `var(--uidocs-palette-text-primary, ${lightTheme.palette.text.primary})`,
       lineHeight: '10px',
       verticalAlign: 'middle',
       borderRadius: 6,
-      border: `1px solid var(--ushiidocs-palette-grey-300, ${lightTheme.palette.grey[300]})`,
-      backgroundColor: `var(--ushiidocs-palette-grey-50, ${lightTheme.palette.grey[50]})`,
-      boxShadow: `inset 0 -2px 0 var(--ushiidocs-palette-grey-200, ${lightTheme.palette.grey[200]})`,
+      border: `1px solid var(--uidocs-palette-grey-300, ${lightTheme.palette.grey[300]})`,
+      backgroundColor: `var(--uidocs-palette-grey-50, ${lightTheme.palette.grey[50]})`,
+      boxShadow: `inset 0 -2px 0 var(--uidocs-palette-grey-200, ${lightTheme.palette.grey[200]})`,
     },
     '& details': {
       width: '100%',
       padding: theme.spacing(1),
       marginBottom: theme.spacing(1.5),
       border: '1px solid',
-      borderColor: `var(--ushiidocs-palette-divider, ${lightTheme.palette.divider})`,
-      borderRadius: `var(--ushiidocs-shape-borderRadius, ${
+      borderColor: `var(--uidocs-palette-divider, ${lightTheme.palette.divider})`,
+      borderRadius: `var(--uidocs-shape-borderRadius, ${
         theme.shape?.borderRadius ?? lightTheme.shape.borderRadius
       }px)`,
       '& pre': {
@@ -511,35 +537,35 @@ const Root = styled('div')(
         backgroundColor: 'currentColor',
       },
       '&:hover': {
-        backgroundColor: `var(--ushiidocs-palette-grey-100, ${lightTheme.palette.grey[50]})`,
+        backgroundColor: `var(--uidocs-palette-grey-100, ${lightTheme.palette.grey[50]})`,
       },
     },
     '& details[open] > summary::after': {
       content: '""',
       maskImage: `url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 10L8 6L4 10' stroke='black' stroke-width='1.66667' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")`,
     },
-    '& .UshiiCode-root': {
+    '& .uiCode-root': {
       direction: 'ltr /*! @noflip */',
       position: 'relative',
       // Font size reset to fix a bug with Safari 16.0 when letterSpacing is set
       fontSize: 10,
-      '&:has(.UshiiCode-title)': {
+      '&:has(.ui-Code-title)': {
         margin: theme.spacing(2, 'auto'),
-        border: `1px solid var(--ushiidocs-palette-primaryDark-700, ${lightTheme.palette.primaryDark[700]})`,
+        border: `1px solid var(--uidocs-palette-primaryDark-700, ${lightTheme.palette.primaryDark[700]})`,
         borderRadius: theme.shape.borderRadius,
         overflow: 'clip',
-        '& .UshiiCode-copy': {
+        '& .uiCode-copy': {
           top: '56px',
         },
       },
     },
-    '& .UshiiCode-copy-container': {
+    '& .uiCode-copy-container': {
       // This container is only used in demo and highlight code
       position: 'sticky',
       zIndex: 1,
       top: 0,
     },
-    '& .UshiiCode-copy': {
+    '& .uiCode-copy': {
       cursor: 'pointer',
       position: 'absolute',
       top: 12,
@@ -556,21 +582,21 @@ const Root = styled('div')(
       border: '1px solid',
       borderColor: alpha(lightTheme.palette.primaryDark[600], 0.5),
       backgroundColor: alpha(lightTheme.palette.primaryDark[800], 0.5),
-      color: `var(--ushiidocs-palette-grey-300, ${lightTheme.palette.grey[300]})`,
+      color: `var(--uidocs-palette-grey-300, ${lightTheme.palette.grey[300]})`,
       transition: theme.transitions.create(['background', 'borderColor', 'display'], {
         duration: theme.transitions.duration.shortest,
       }),
       '@media (max-width: 640px)': {
         display: 'none',
       },
-      '& .UshiiCode-copied-label': {
+      '& .uiCode-copied-label': {
         display: 'none',
       },
       '&:hover, &:focus': {
-        borderColor: `var(--ushiidocs-palette-primaryDark-400, ${lightTheme.palette.primaryDark[400]})`,
-        backgroundColor: `var(--ushiidocs-palette-primaryDark-700, ${lightTheme.palette.primaryDark[700]})`,
+        borderColor: `var(--uidocs-palette-primaryDark-400, ${lightTheme.palette.primaryDark[400]})`,
+        backgroundColor: `var(--uidocs-palette-primaryDark-700, ${lightTheme.palette.primaryDark[700]})`,
         color: '#FFF',
-        '& .UshiiCode-copyKeypress': {
+        '& .uiCode-copyKeypress': {
           display: 'block',
           // Approximate no hover capabilities with no keyboard
           // https://github.com/w3c/csswg-drafts/issues/3871
@@ -579,27 +605,27 @@ const Root = styled('div')(
           },
         },
       },
-      '& .UshiiCode-copyKeypress': {
+      '& .uiCode-copyKeypress': {
         display: 'none',
         position: 'absolute',
         right: 34,
       },
       '&[data-copied]': {
-        borderColor: `var(--ushiidocs-palette-primaryDark-400, ${lightTheme.palette.primaryDark[400]})`,
-        backgroundColor: `var(--ushiidocs-palette-primaryDark-700, ${lightTheme.palette.primaryDark[700]})`,
+        borderColor: `var(--uidocs-palette-primaryDark-400, ${lightTheme.palette.primaryDark[400]})`,
+        backgroundColor: `var(--uidocs-palette-primaryDark-700, ${lightTheme.palette.primaryDark[700]})`,
         color: '#fff',
-        '& .UshiiCode-copyKeypress': {
+        '& .uiCode-copyKeypress': {
           opacity: 0,
         },
-        '& .UshiiCode-copy-label': {
+        '& .uiCode-copy-label': {
           display: 'none',
         },
-        '& .UshiiCode-copied-label': {
+        '& .uiCode-copied-label': {
           display: 'block',
         },
       },
     },
-    '& .UshiiCode-copyKeypress': {
+    '& .uiCode-copyKeypress': {
       pointerEvents: 'none',
       userSelect: 'none',
       marginRight: theme.spacing(1.2),
@@ -633,17 +659,17 @@ const Root = styled('div')(
         },
       },
     },
-    '& .UshiiCode-title': {
+    '& .uiCode-title': {
       padding: theme.spacing(1.5),
       display: 'flex',
       alignItems: 'center',
       gap: theme.spacing(1.5),
-      borderBottom: `1px solid var(--ushiidocs-palette-primaryDark-700, ${lightTheme.palette.primaryDark[700]})`,
-      backgroundColor: `var(--ushiidocs-palette-primaryDark-900, ${lightTheme.palette.primaryDark[900]})`,
+      borderBottom: `1px solid var(--uidocs-palette-primaryDark-700, ${lightTheme.palette.primaryDark[700]})`,
+      backgroundColor: `var(--uidocs-palette-primaryDark-900, ${lightTheme.palette.primaryDark[900]})`,
       fontFamily: theme.typography.fontFamilyCode,
       fontSize: theme.typography.pxToRem(12),
       fontWeight: theme.typography.fontWeightBold,
-      color: `var(--ushiidocs-palette-grey-200, ${lightTheme.palette.grey[200]})`,
+      color: `var(--uidocs-palette-grey-200, ${lightTheme.palette.grey[200]})`,
       '::before': {
         content: `url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3333 3.99996H8L7.06 3.05996C6.80667 2.80663 6.46667 2.66663 6.11334 2.66663H2.66667C1.93334 2.66663 1.34 3.26663 1.34 3.99996L1.33334 12C1.33334 12.7333 1.93334 13.3333 2.66667 13.3333H13.3333C14.0667 13.3333 14.6667 12.7333 14.6667 12V5.33329C14.6667 4.59996 14.0667 3.99996 13.3333 3.99996ZM12.6667 12H3.33334C2.96667 12 2.66667 11.7 2.66667 11.3333V5.99996C2.66667 5.63329 2.96667 5.33329 3.33334 5.33329H12.6667C13.0333 5.33329 13.3333 5.63329 13.3333 5.99996V11.3333C13.3333 11.7 13.0333 12 12.6667 12Z' fill='%2399CCF3'/%3E%3C/svg%3E%0A");`,
         width: '16px',
@@ -661,38 +687,41 @@ const Root = styled('div')(
       color: 'rgb(255, 255, 255)',
       '& :not(pre) > code': {
         // inline code block
-        color: `var(--ushiidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
+        color: `var(--uidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
         borderColor: alpha(darkTheme.palette.primaryDark[500], 0.6),
-        backgroundColor: `var(--ushiidocs-palette-grey-900, ${darkTheme.palette.grey[700]})`,
+        backgroundColor: `var(--uidocs-palette-grey-900, ${darkTheme.palette.grey[700]})`,
       },
       '& strong': {
-        color: `var(--ushiidocs-palette-grey-200, ${darkTheme.palette.grey[200]})`,
+        color: `var(--uidocs-palette-grey-200, ${darkTheme.palette.grey[200]})`,
       },
       '& hr': {
-        backgroundColor: `var(--ushiidocs-palette-divider, ${darkTheme.palette.divider})`,
+        backgroundColor: `var(--uidocs-palette-divider, ${darkTheme.palette.divider})`,
       },
       '& a': {
-        color: `var(--ushiidocs-palette-primary-300, ${darkTheme.palette.primary[200]})`,
+        color: `var(--uidocs-palette-primary-300, ${darkTheme.palette.primary[200]})`,
       },
       '& a code': {
-        color: `var(--ushiidocs-palette-primary-light, ${darkTheme.palette.primary.light})`,
+        color: `var(--uidocs-palette-primary-light, ${darkTheme.palette.primary.light})`,
       },
       '& h1, & h2, & h3, & h4, & h5': {
-        color: `var(--ushiidocs-palette-grey-50, ${darkTheme.palette.grey[50]})`,
+        color: `var(--uidocs-palette-grey-50, ${darkTheme.palette.grey[50]})`,
         '& .anchor-icon, & .comment-link': {
-          color: `var(--ushiidocs-palette-primary-300, ${darkTheme.palette.primaryDark[400]})`,
+          color: `var(--uidocs-palette-primary-300, ${darkTheme.palette.primaryDark[400]})`,
           '&:hover': {
-            color: `var(--ushiidocs-palette-primary-100, ${darkTheme.palette.primary[100]})`,
-            borderColor: `var(--ushiidocs-palette-primary-900, ${darkTheme.palette.primary[900]})`,
+            color: `var(--uidocs-palette-primary-100, ${darkTheme.palette.primary[100]})`,
+            borderColor: `var(--uidocs-palette-primary-900, ${darkTheme.palette.primary[900]})`,
             backgroundColor: alpha(darkTheme.palette.primary[900], 0.6),
           },
         },
       },
       '& p, & ul, & ol': {
-        color: `var(--ushiidocs-palette-grey-200, ${darkTheme.palette.grey[200]})`,
+        color: `var(--uidocs-palette-grey-200, ${darkTheme.palette.grey[200]})`,
       },
       '& h1 code, & h2 code, & h3 code': {
-        color: `var(--ushiidocs-palette-grey-100, ${darkTheme.palette.grey[100]})`,
+        color: `var(--uidocs-palette-grey-100, ${darkTheme.palette.grey[100]})`,
+      },
+      '& .table': { 
+        borderColor: `var(--uidocs-palette-divider, ${darkTheme.palette.divider})`,
       },
       '& table': {
         '& .required': {
@@ -705,95 +734,99 @@ const Root = styled('div')(
           color: '#ffb6ec',
         },
         '& .prop-default, & .slot-default': {
-          borderColor: `var(--ushiidocs-palette-divider, ${darkTheme.palette.divider})`,
+          borderColor: `var(--uidocs-palette-divider, ${darkTheme.palette.divider})`,
         },
       },
       '& td': {
-        color: `var(--ushiidocs-palette-text-secondary, ${darkTheme.palette.text.secondary})`,
-        borderColor: `var(--ushiidocs-palette-divider, ${darkTheme.palette.divider})`,
+        color: `var(--uidocs-palette-text-secondary, ${darkTheme.palette.text.secondary})`,
+        borderColor: `var(--uidocs-palette-divider, ${darkTheme.palette.divider})`,
       },
       '& th': {
-        color: `var(--ushiidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
-        borderColor: `var(--ushiidocs-palette-divider, ${darkTheme.palette.divider})`,
+        color: `var(--uidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
+        borderColor: `var(--uidocs-palette-divider, ${darkTheme.palette.divider})`,
+        backgroundColor: `var(--uidocs-palette-grey-800, ${darkTheme.palette.grey[800]})`
+      },
+      '& td, & th': {
+        borderRightColor: `var(--uidocs-palette-grey-700, ${darkTheme.palette.grey[700]})`
       },
       '& blockquote': {
-        borderColor: `var(--ushiidocs-palette-primaryDark-700, ${darkTheme.palette.primaryDark[700]})`,
+        borderColor: `var(--uidocs-palette-primaryDark-700, ${darkTheme.palette.primaryDark[700]})`,
         '&::before': {
-          color: `var(--ushiidocs-palette-primaryDark-500, ${darkTheme.palette.primaryDark[500]})`,
+          color: `var(--uidocs-palette-primaryDark-500, ${darkTheme.palette.primaryDark[500]})`,
         },
       },
-      '& .UshiiCallout-root': {
-        borderColor: `var(--ushiidocs-palette-primaryDark-700, ${darkTheme.palette.primaryDark[700]})`,
+      '& .uiCallout-root': {
+        borderColor: `var(--uidocs-palette-primaryDark-700, ${darkTheme.palette.primaryDark[700]})`,
         '& code': {
-          backgroundColor: `var(--ushiidocs-palette-primaryDark-600, ${darkTheme.palette.primaryDark[600]})`,
-          borderColor: `var(--ushiidocs-palette-primaryDark-500, ${darkTheme.palette.primaryDark[500]})`,
+          backgroundColor: `var(--uidocs-palette-primaryDark-600, ${darkTheme.palette.primaryDark[600]})`,
+          borderColor: `var(--uidocs-palette-primaryDark-500, ${darkTheme.palette.primaryDark[500]})`,
         },
-        '&.UshiiCallout-error': {
-          color: `var(--ushiidocs-palette-error-50, ${darkTheme.palette.error[50]})`,
+        '&.uiCallout-error': {
+          color: `var(--uidocs-palette-error-50, ${darkTheme.palette.error[50]})`,
           backgroundColor: alpha(darkTheme.palette.error[700], 0.15),
           borderColor: alpha(darkTheme.palette.error[400], 0.1),
           '& strong': {
-            color: `var(--ushiidocs-palette-error-300, ${darkTheme.palette.error[300]})`,
+            color: `var(--uidocs-palette-error-300, ${darkTheme.palette.error[300]})`,
           },
           '& svg': {
-            fill: `var(--ushiidocs-palette-error-500, ${darkTheme.palette.error[500]})`,
+            fill: `var(--uidocs-palette-error-500, ${darkTheme.palette.error[500]})`,
           },
           '& a': {
-            color: `var(--ushiidocs-palette-error-200, ${darkTheme.palette.error[200]})`,
+            color: `var(--uidocs-palette-error-200, ${darkTheme.palette.error[200]})`,
           },
         },
-        '&.UshiiCallout-info': {
-          color: `var(--ushiidocs-palette-grey-50, ${darkTheme.palette.grey[50]})`,
+        '&.uiCallout-info': {
+          color: `var(--uidocs-palette-grey-50, ${darkTheme.palette.grey[50]})`,
           backgroundColor: alpha(darkTheme.palette.grey[600], 0.4),
           borderColor: alpha(darkTheme.palette.grey[800], 0.5),
           '& strong': {
-            color: `var(--ushiidocs-palette-primary-200, ${darkTheme.palette.primary[200]})`,
+            color: `var(--uidocs-palette-primary-200, ${darkTheme.palette.primary[200]})`,
           },
           '& svg': {
-            fill: `var(--ushiidocs-palette-grey-400, ${darkTheme.palette.grey[400]})`,
+            fill: `var(--uidocs-palette-grey-400, ${darkTheme.palette.grey[400]})`,
           },
         },
-        '&.UshiiCallout-success': {
-          color: `var(--ushiidocs-palette-success-50, ${darkTheme.palette.success[50]})`,
+        '&.uiCallout-success': {
+          color: `var(--uidocs-palette-success-50, ${darkTheme.palette.success[50]})`,
           backgroundColor: alpha(darkTheme.palette.success[700], 0.12),
           borderColor: alpha(lightTheme.palette.success[400], 0.1),
           '& strong': {
-            color: `var(--ushiidocs-palette-success-200, ${darkTheme.palette.success[200]})`,
+            color: `var(--uidocs-palette-success-200, ${darkTheme.palette.success[200]})`,
           },
           '& svg': {
-            fill: `var(--ushiidocs-palette-success-500, ${darkTheme.palette.success[500]})`,
+            fill: `var(--uidocs-palette-success-500, ${darkTheme.palette.success[500]})`,
           },
           '& a': {
-            color: `var(--ushiidocs-palette-success-100, ${darkTheme.palette.success[100]})`,
+            color: `var(--uidocs-palette-success-100, ${darkTheme.palette.success[100]})`,
           },
         },
-        '&.UshiiCallout-warning': {
-          color: `var(--ushiidocs-palette-warning-50, ${darkTheme.palette.warning[50]})`,
+        '&.uiCallout-warning': {
+          color: `var(--uidocs-palette-warning-50, ${darkTheme.palette.warning[50]})`,
           backgroundColor: alpha(darkTheme.palette.warning[700], 0.12),
           borderColor: alpha(darkTheme.palette.warning[400], 0.1),
           '& strong': {
-            color: `var(--ushiidocs-palette-warning-200, ${darkTheme.palette.warning[200]})`,
+            color: `var(--uidocs-palette-warning-200, ${darkTheme.palette.warning[200]})`,
           },
           '& svg': {
-            fill: `var(--ushiidocs-palette-warning-400, ${darkTheme.palette.warning[400]})`,
+            fill: `var(--uidocs-palette-warning-400, ${darkTheme.palette.warning[400]})`,
           },
           '& a': {
-            color: `var(--ushiidocs-palette-warning-100, ${darkTheme.palette.warning[100]})`,
+            color: `var(--uidocs-palette-warning-100, ${darkTheme.palette.warning[100]})`,
           },
         },
       },
       '& kbd.key': {
-        color: `var(--ushiidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
-        backgroundColor: `var(--ushiidocs-palette-primaryDark-800, ${darkTheme.palette.primaryDark[800]})`,
-        border: `1px solid var(--ushiidocs-palette-primaryDark-600, ${darkTheme.palette.primaryDark[600]})`,
-        boxShadow: `inset 0 -2px 0 var(--ushiidocs-palette-primaryDark-700, ${darkTheme.palette.primaryDark[700]})`,
+        color: `var(--uidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
+        backgroundColor: `var(--uidocs-palette-primaryDark-800, ${darkTheme.palette.primaryDark[800]})`,
+        border: `1px solid var(--uidocs-palette-primaryDark-600, ${darkTheme.palette.primaryDark[600]})`,
+        boxShadow: `inset 0 -2px 0 var(--uidocs-palette-primaryDark-700, ${darkTheme.palette.primaryDark[700]})`,
       },
       '& details': {
-        borderColor: `var(--ushiidocs-palette-divider, ${darkTheme.palette.divider})`,
+        borderColor: `var(--uidocs-palette-divider, ${darkTheme.palette.divider})`,
       },
       '& summary': {
         '&:hover': {
-          backgroundColor: `var(--ushiidocs-palette-primaryDark-800, ${darkTheme.palette.primaryDark[800]})`,
+          backgroundColor: `var(--uidocs-palette-primaryDark-800, ${darkTheme.palette.primaryDark[800]})`,
         },
       },
       '& .feature-list': {

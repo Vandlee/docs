@@ -23,7 +23,7 @@ export interface DividerClasses {
     /** Styles applied to the root element if divider have text. */
     withChildren: string;
     /** Styles applied to the root element if divider have text and `orientation="vertical"`.
-     * @deprecated Combine the [.UshiiDivider-withChildren](/material-ui/api/divider/#divider-classes-withChildren) and [.UshiiDivider-vertical](/material-ui/api/divider/#divider-classes-vertical) classes instead.
+     * @deprecated Combine the [.ui-Divider-withChildren](/material-ui/api/divider/#divider-classes-withChildren) and [.ui-Divider-vertical](/material-ui/api/divider/#divider-classes-vertical) classes instead.
      */
     withChildrenVertical: string;
     /** Styles applied to the root element if `textAlign="right" orientation="horizontal"`. */
@@ -39,10 +39,10 @@ export interface DividerClasses {
 export type DividerClassKey = keyof DividerClasses;
 
 export function getDividerUtilityClass(slot: string): string {
-    return generateUtilityClass('UshiiDivider', slot);
+    return generateUtilityClass('uiDivider', slot);
 }
 
-const dividerClasses: DividerClasses = generateUtilityClasses('UshiiDivider', [
+const dividerClasses: DividerClasses = generateUtilityClasses('uiDivider', [
     'root',
     'absolute',
     'fullWidth',

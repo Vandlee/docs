@@ -155,157 +155,157 @@ export type ComponentsProps = {
 };
 
 export interface ComponentsPropsList {
-  UshiiAlert: AlertProps;
+  uiAlert: AlertProps;
   /* 
-  UshiiAlertTitle: AlertTitleProps;
+  uiAlertTitle: AlertTitleProps;
   */
-  UshiiAppBar: AppBarProps;
+  uiAppBar: AppBarProps;
   /*
-  UshiiAutocomplete: AutocompleteProps<any, any, any, any>;
+  uiAutocomplete: AutocompleteProps<any, any, any, any>;
   */
-  UshiiAvatar: AvatarProps;
-  UshiiAvatarGroup: AvatarGroupProps;
-  UshiiBackdrop: BackdropProps;
-  UshiiBadge: BadgeProps;
+  uiAvatar: AvatarProps;
+  uiAvatarGroup: AvatarGroupProps;
+  uiBackdrop: BackdropProps;
+  uiBadge: BadgeProps;
   /*
-  UshiiBottomNavigation: BottomNavigationProps;
-  UshiiBottomNavigationAction: BottomNavigationActionProps;
-  UshiiBreadcrumbs: BreadcrumbsProps;
+  uiBottomNavigation: BottomNavigationProps;
+  uiBottomNavigationAction: BottomNavigationActionProps;
+  uiBreadcrumbs: BreadcrumbsProps;
   */
-  UshiiButton: ButtonProps;
-  UshiiButtonBase: ButtonBaseProps;
-  UshiiButtonGroup: ButtonGroupProps;
-  UshiiCard: CardProps;
+  uiButton: ButtonProps;
+  uiButtonBase: ButtonBaseProps;
+  uiButtonGroup: ButtonGroupProps;
+  uiCard: CardProps;
   /* 
-  UshiiCardActionArea: CardActionAreaProps;
-  UshiiCardActions: CardActionsProps;
-  UshiiCardContent: CardContentProps;
-  UshiiCardHeader: CardHeaderProps;
+  uiCardActionArea: CardActionAreaProps;
+  uiCardActions: CardActionsProps;
+  uiCardContent: CardContentProps;
+  uiCardHeader: CardHeaderProps;
   */ 
-  UshiiCardMedia: CardMediaProps;
+  uiCardMedia: CardMediaProps;
   /*
-  UshiiCheckbox: CheckboxProps;
+  uiCheckbox: CheckboxProps;
   */
-  UshiiChip: ChipProps;
-  UshiiCircularProgress: CircularProgressProps;
-  UshiiCollapse: CollapseProps;
-  UshiiContainer: ContainerProps;
-  UshiiCssBaseline: CssBaselineProps;
+  uiChip: ChipProps;
+  uiCircularProgress: CircularProgressProps;
+  uiCollapse: CollapseProps;
+  uiContainer: ContainerProps;
+  uiCssBaseline: CssBaselineProps;
   /*
-  UshiiDialog: DialogProps;
-  UshiiDialogActions: DialogActionsProps;
-  UshiiDialogContent: DialogContentProps;
-  UshiiDialogContentText: DialogContentTextProps;
-  UshiiDialogTitle: DialogTitleProps;
+  uiDialog: DialogProps;
+  uiDialogActions: DialogActionsProps;
+  uiDialogContent: DialogContentProps;
+  uiDialogContentText: DialogContentTextProps;
+  uiDialogTitle: DialogTitleProps;
   */
-  UshiiDivider: DividerProps;
-  UshiiDrawer: DrawerProps;
+  uiDivider: DividerProps;
+  uiDrawer: DrawerProps;
   /*
-  UshiiAccordion: AccordionProps;
-  UshiiAccordionActions: AccordionActionsProps;
-  UshiiAccordionDetails: AccordionDetailsProps;
-  UshiiAccordionSummary: AccordionSummaryProps;
-  UshiiFab: FabProps;
-  UshiiFilledInput: FilledInputProps;
-  UshiiFormControl: FormControlProps;
-  UshiiFormControlLabel: FormControlLabelProps;
-  UshiiFormGroup: FormGroupProps;
-  UshiiFormHelperText: FormHelperTextProps;
-  UshiiFormLabel: FormLabelProps;
+  uiAccordion: AccordionProps;
+  uiAccordionActions: AccordionActionsProps;
+  uiAccordionDetails: AccordionDetailsProps;
+  uiAccordionSummary: AccordionSummaryProps;
+  uiFab: FabProps;
+  uiFilledInput: FilledInputProps;
+  uiFormControl: FormControlProps;
+  uiFormControlLabel: FormControlLabelProps;
+  uiFormGroup: FormGroupProps;
+  uiFormHelperText: FormHelperTextProps;
+  uiFormLabel: FormLabelProps;
   */
-  UshiiGrid: GridProps;
+  uiGrid: GridProps;
   /*
-  UshiiImageList: ImageListProps;
-  UshiiImageListItem: ImageListItemProps;
+  uiImageList: ImageListProps;
+  uiImageListItem: ImageListItemProps;
   /*
-  UshiiImageListItemBar: ImageListItemBarProps;
-  UshiiIcon: IconProps;
+  uiImageListItemBar: ImageListItemBarProps;
+  uiIcon: IconProps;
   */
-  UshiiIconButton: IconButtonProps;
+  uiIconButton: IconButtonProps;
   /*
-  UshiiInput: InputProps;
-  UshiiInputAdornment: InputAdornmentProps;
-  UshiiInputBase: InputBaseProps;
-  UshiiInputLabel: InputLabelProps;
-  UshiiLinearProgress: LinearProgressProps;
+  uiInput: InputProps;
+  uiInputAdornment: InputAdornmentProps;
+  uiInputBase: InputBaseProps;
+  uiInputLabel: InputLabelProps;
+  uiLinearProgress: LinearProgressProps;
   */
-  UshiiLink: LinkProps;
-  UshiiList: ListProps;
-  UshiiListItem: ListItemProps;
-  UshiiListItemButton: ListItemButtonProps;
-  UshiiListItemAvatar: ListItemAvatarProps;
+  uiLink: LinkProps;
+  uiList: ListProps;
+  uiListItem: ListItemProps;
+  uiListItemButton: ListItemButtonProps;
+  uiListItemAvatar: ListItemAvatarProps;
   /*
-  UshiiListItemIcon: ListItemIconProps;
+  uiListItemIcon: ListItemIconProps;
   */
-  UshiiListItemSecondaryAction: ListItemSecondaryActionProps;
-  UshiiListItemText: ListItemTextProps;
-  UshiiListSubheader: ListSubheaderProps;
-  UshiiMenu: MenuProps;
-  UshiiMenuItem: MenuItemProps;
-  UshiiMenuList: MenuListProps;
+  uiListItemSecondaryAction: ListItemSecondaryActionProps;
+  uiListItemText: ListItemTextProps;
+  uiListSubheader: ListSubheaderProps;
+  uiMenu: MenuProps;
+  uiMenuItem: MenuItemProps;
+  uiMenuList: MenuListProps;
   /*
-  UshiiMobileStepper: MobileStepperProps;
+  uiMobileStepper: MobileStepperProps;
   */
-  UshiiModal: ModalProps;
+  uiModal: ModalProps;
   /*
-  UshiiNativeSelect: NativeSelectProps;
-  UshiiOutlinedInput: OutlinedInputProps;
-  UshiiPagination: PaginationProps;
-  UshiiPaginationItem: PaginationItemProps;
+  uiNativeSelect: NativeSelectProps;
+  uiOutlinedInput: OutlinedInputProps;
+  uiPagination: PaginationProps;
+  uiPaginationItem: PaginationItemProps;
   */
-  UshiiPaper: PaperProps;
-  UshiiPopper: PopperProps;
-  UshiiPopover: PopoverProps;
+  uiPaper: PaperProps;
+  uiPopper: PopperProps;
+  uiPopover: PopoverProps;
   /*
-  UshiiRadio: RadioProps;
-  UshiiRadioGroup: RadioGroupProps;
+  uiRadio: RadioProps;
+  uiRadioGroup: RadioGroupProps;
   */
-  UshiiRating: RatingProps;
+  uiRating: RatingProps;
   /*
-  UshiiScopedCssBaseline: ScopedCssBaselineProps;
-  UshiiSelect: SelectProps;
-  UshiiSkeleton: SkeletonProps;
-  UshiiSlider: SliderProps;
+  uiScopedCssBaseline: ScopedCssBaselineProps;
+  uiSelect: SelectProps;
+  uiSkeleton: SkeletonProps;
+  uiSlider: SliderProps;
   */
-  UshiiSnackbar: SnackbarProps;
-  UshiiSnackbarContent: SnackbarContentProps;
+  uiSnackbar: SnackbarProps;
+  uiSnackbarContent: SnackbarContentProps;
   /*
-  UshiiSpeedDial: SpeedDialProps;
-  UshiiSpeedDialAction: SpeedDialActionProps;
-  UshiiSpeedDialIcon: SpeedDialIconProps;
+  uiSpeedDial: SpeedDialProps;
+  uiSpeedDialAction: SpeedDialActionProps;
+  uiSpeedDialIcon: SpeedDialIconProps;
   */
-  UshiiStack: StackProps;
+  uiStack: StackProps;
   /*
-  UshiiStep: StepProps;
-  UshiiStepButton: StepButtonProps;
-  UshiiStepConnector: StepConnectorProps;
-  UshiiStepContent: StepContentProps;
-  UshiiStepIcon: StepIconProps;
-  UshiiStepLabel: StepLabelProps;
-  UshiiStepper: StepperProps;
+  uiStep: StepProps;
+  uiStepButton: StepButtonProps;
+  uiStepConnector: StepConnectorProps;
+  uiStepContent: StepContentProps;
+  uiStepIcon: StepIconProps;
+  uiStepLabel: StepLabelProps;
+  uiStepper: StepperProps;
   */
-  UshiiSvgIcon: SvgIconProps;
-  UshiiSwipeableDrawer: SwipeableDrawerProps;
+  uiSvgIcon: SvgIconProps;
+  uiSwipeableDrawer: SwipeableDrawerProps;
   /*
-  UshiiSwitch: SwitchProps;
-  UshiiTab: TabProps;
-  UshiiTable: TableProps;
-  UshiiTableBody: TableBodyProps;
-  UshiiTableCell: TableCellProps;
-  UshiiTableContainer: TableContainerProps;
-  UshiiTableFooter: TableFooterProps;
-  UshiiTableHead: TableHeadProps;
-  UshiiTablePagination: TablePaginationProps;
-  UshiiTableRow: TableRowProps;
-  UshiiTableSortLabel: TableSortLabelProps;
-  UshiiTabs: TabsProps;
-  UshiiTextField: TextFieldProps;
+  uiSwitch: SwitchProps;
+  uiTab: TabProps;
+  uiTable: TableProps;
+  uiTableBody: TableBodyProps;
+  uiTableCell: TableCellProps;
+  uiTableContainer: TableContainerProps;
+  uiTableFooter: TableFooterProps;
+  uiTableHead: TableHeadProps;
+  uiTablePagination: TablePaginationProps;
+  uiTableRow: TableRowProps;
+  uiTableSortLabel: TableSortLabelProps;
+  uiTabs: TabsProps;
+  uiTextField: TextFieldProps;
   */
-  UshiiToggleButton: ToggleButtonProps;
-  UshiiToggleButtonGroup: ToggleButtonGroupProps;
-  UshiiToolbar: ToolbarProps;
-  UshiiTooltip: TooltipProps;
-  UshiiTouchRipple: TouchRippleProps;
-  UshiiTypography: TypographyProps;
-  UshiiUseMediaQuery: UseMediaQueryOptions;
+  uiToggleButton: ToggleButtonProps;
+  uiToggleButtonGroup: ToggleButtonGroupProps;
+  uiToolbar: ToolbarProps;
+  uiTooltip: TooltipProps;
+  uiTouchRipple: TouchRippleProps;
+  uiTypography: TypographyProps;
+  uiUseMediaQuery: UseMediaQueryOptions;
 }

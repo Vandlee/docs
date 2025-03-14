@@ -3,625 +3,625 @@ import { ComponentsOverrides } from './overrides';
 import { ComponentsVariants } from './variants';
 
 export interface Components<Theme = unknown> {
-  UshiiAlert?: {
-    defaultProps?: ComponentsProps['UshiiAlert'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiAlert'];
-    variants?: ComponentsVariants<Theme>['UshiiAlert'];
+  uiAlert?: {
+    defaultProps?: ComponentsProps['uiAlert'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiAlert'];
+    variants?: ComponentsVariants<Theme>['uiAlert'];
   };
   /*
-  UshiiAlertTitle?: {
-    defaultProps?: ComponentsProps['UshiiAlertTitle'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiAlertTitle'];
-    variants?: ComponentsVariants<Theme>['UshiiAlertTitle'];
+  uiAlertTitle?: {
+    defaultProps?: ComponentsProps['uiAlertTitle'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiAlertTitle'];
+    variants?: ComponentsVariants<Theme>['uiAlertTitle'];
   };
   */
-  UshiiAppBar?: {
-    defaultProps?: ComponentsProps['UshiiAppBar'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiAppBar'];
-    variants?: ComponentsVariants<Theme>['UshiiAppBar'];
+  uiAppBar?: {
+    defaultProps?: ComponentsProps['uiAppBar'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiAppBar'];
+    variants?: ComponentsVariants<Theme>['uiAppBar'];
   };
   /*
-  UshiiAutocomplete?: {
-    defaultProps?: ComponentsProps['UshiiAutocomplete'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiAutocomplete'];
-    variants?: ComponentsVariants<Theme>['UshiiAutocomplete'];
+  uiAutocomplete?: {
+    defaultProps?: ComponentsProps['uiAutocomplete'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiAutocomplete'];
+    variants?: ComponentsVariants<Theme>['uiAutocomplete'];
   };
   */
-  UshiiAvatar?: {
-    defaultProps?: ComponentsProps['UshiiAvatar'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiAvatar'];
-    variants?: ComponentsVariants<Theme>['UshiiAvatar'];
+  uiAvatar?: {
+    defaultProps?: ComponentsProps['uiAvatar'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiAvatar'];
+    variants?: ComponentsVariants<Theme>['uiAvatar'];
   };
-  UshiiAvatarGroup?: {
-    defaultProps?: ComponentsProps['UshiiAvatarGroup'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiAvatarGroup'];
-    variants?: ComponentsVariants<Theme>['UshiiAvatarGroup'];
+  uiAvatarGroup?: {
+    defaultProps?: ComponentsProps['uiAvatarGroup'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiAvatarGroup'];
+    variants?: ComponentsVariants<Theme>['uiAvatarGroup'];
   };
-  UshiiBackdrop?: {
-    defaultProps?: ComponentsProps['UshiiBackdrop'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiBackdrop'];
-    variants?: ComponentsVariants<Theme>['UshiiBackdrop'];
+  uiBackdrop?: {
+    defaultProps?: ComponentsProps['uiBackdrop'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiBackdrop'];
+    variants?: ComponentsVariants<Theme>['uiBackdrop'];
   };
-  UshiiBadge?: {
-    defaultProps?: ComponentsProps['UshiiBadge'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiBadge'];
-    variants?: ComponentsVariants<Theme>['UshiiBadge'];
+  uiBadge?: {
+    defaultProps?: ComponentsProps['uiBadge'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiBadge'];
+    variants?: ComponentsVariants<Theme>['uiBadge'];
   };
   /*
-  UshiiBottomNavigation?: {
-    defaultProps?: ComponentsProps['UshiiBottomNavigation'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiBottomNavigation'];
-    variants?: ComponentsVariants<Theme>['UshiiBottomNavigation'];
+  uiBottomNavigation?: {
+    defaultProps?: ComponentsProps['uiBottomNavigation'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiBottomNavigation'];
+    variants?: ComponentsVariants<Theme>['uiBottomNavigation'];
   };
-  UshiiBottomNavigationAction?: {
-    defaultProps?: ComponentsProps['UshiiBottomNavigationAction'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiBottomNavigationAction'];
-    variants?: ComponentsVariants<Theme>['UshiiBottomNavigationAction'];
+  uiBottomNavigationAction?: {
+    defaultProps?: ComponentsProps['uiBottomNavigationAction'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiBottomNavigationAction'];
+    variants?: ComponentsVariants<Theme>['uiBottomNavigationAction'];
   };
-  UshiiBreadcrumbs?: {
-    defaultProps?: ComponentsProps['UshiiBreadcrumbs'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiBreadcrumbs'];
-    variants?: ComponentsVariants<Theme>['UshiiBreadcrumbs'];
+  uiBreadcrumbs?: {
+    defaultProps?: ComponentsProps['uiBreadcrumbs'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiBreadcrumbs'];
+    variants?: ComponentsVariants<Theme>['uiBreadcrumbs'];
   };
   */
-  UshiiButton?: {
-    defaultProps?: ComponentsProps['UshiiButton'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiButton'];
-    variants?: ComponentsVariants<Theme>['UshiiButton'];
+  uiButton?: {
+    defaultProps?: ComponentsProps['uiButton'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiButton'];
+    variants?: ComponentsVariants<Theme>['uiButton'];
   };
-  UshiiButtonBase?: {
-    defaultProps?: ComponentsProps['UshiiButtonBase'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiButtonBase'];
-    variants?: ComponentsVariants<Theme>['UshiiButtonBase'];
+  uiButtonBase?: {
+    defaultProps?: ComponentsProps['uiButtonBase'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiButtonBase'];
+    variants?: ComponentsVariants<Theme>['uiButtonBase'];
   };
-  UshiiButtonGroup?: {
-    defaultProps?: ComponentsProps['UshiiButtonGroup'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiButtonGroup'];
-    variants?: ComponentsVariants<Theme>['UshiiButtonGroup'];
+  uiButtonGroup?: {
+    defaultProps?: ComponentsProps['uiButtonGroup'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiButtonGroup'];
+    variants?: ComponentsVariants<Theme>['uiButtonGroup'];
   };
-  UshiiCard?: {
-    defaultProps?: ComponentsProps['UshiiCard'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiCard'];
-    variants?: ComponentsVariants<Theme>['UshiiCard'];
+  uiCard?: {
+    defaultProps?: ComponentsProps['uiCard'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiCard'];
+    variants?: ComponentsVariants<Theme>['uiCard'];
   };
   /*
-  UshiiCardActionArea?: {
-    defaultProps?: ComponentsProps['UshiiCardActionArea'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiCardActionArea'];
-    variants?: ComponentsVariants<Theme>['UshiiCardActionArea'];
+  uiCardActionArea?: {
+    defaultProps?: ComponentsProps['uiCardActionArea'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiCardActionArea'];
+    variants?: ComponentsVariants<Theme>['uiCardActionArea'];
   };
-  UshiiCardActions?: {
-    defaultProps?: ComponentsProps['UshiiCardActions'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiCardActions'];
-    variants?: ComponentsVariants<Theme>['UshiiCardActions'];
+  uiCardActions?: {
+    defaultProps?: ComponentsProps['uiCardActions'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiCardActions'];
+    variants?: ComponentsVariants<Theme>['uiCardActions'];
   };
-  UshiiCardContent?: {
-    defaultProps?: ComponentsProps['UshiiCardContent'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiCardContent'];
-    variants?: ComponentsVariants<Theme>['UshiiCardContent'];
+  uiCardContent?: {
+    defaultProps?: ComponentsProps['uiCardContent'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiCardContent'];
+    variants?: ComponentsVariants<Theme>['uiCardContent'];
   };
-  UshiiCardHeader?: {
-    defaultProps?: ComponentsProps['UshiiCardHeader'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiCardHeader'];
-    variants?: ComponentsVariants<Theme>['UshiiCardHeader'];
+  uiCardHeader?: {
+    defaultProps?: ComponentsProps['uiCardHeader'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiCardHeader'];
+    variants?: ComponentsVariants<Theme>['uiCardHeader'];
   };
   */
-  UshiiCardMedia?: {
-    defaultProps?: ComponentsProps['UshiiCardMedia'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiCardMedia'];
-    variants?: ComponentsVariants<Theme>['UshiiCardMedia'];
+  uiCardMedia?: {
+    defaultProps?: ComponentsProps['uiCardMedia'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiCardMedia'];
+    variants?: ComponentsVariants<Theme>['uiCardMedia'];
   };
   /*
-  UshiiCheckbox?: {
-    defaultProps?: ComponentsProps['UshiiCheckbox'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiCheckbox'];
-    variants?: ComponentsVariants<Theme>['UshiiCheckbox'];
+  uiCheckbox?: {
+    defaultProps?: ComponentsProps['uiCheckbox'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiCheckbox'];
+    variants?: ComponentsVariants<Theme>['uiCheckbox'];
   };
   */
-  UshiiChip?: {
-    defaultProps?: ComponentsProps['UshiiChip'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiChip'];
-    variants?: ComponentsVariants<Theme>['UshiiChip'];
+  uiChip?: {
+    defaultProps?: ComponentsProps['uiChip'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiChip'];
+    variants?: ComponentsVariants<Theme>['uiChip'];
   };
   
-  UshiiCircularProgress?: {
-    defaultProps?: ComponentsProps['UshiiCircularProgress'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiCircularProgress'];
-    variants?: ComponentsVariants<Theme>['UshiiCircularProgress'];
+  uiCircularProgress?: {
+    defaultProps?: ComponentsProps['uiCircularProgress'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiCircularProgress'];
+    variants?: ComponentsVariants<Theme>['uiCircularProgress'];
   };
  
-  UshiiCollapse?: {
-    defaultProps?: ComponentsProps['UshiiCollapse'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiCollapse'];
-    variants?: ComponentsVariants<Theme>['UshiiCollapse'];
+  uiCollapse?: {
+    defaultProps?: ComponentsProps['uiCollapse'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiCollapse'];
+    variants?: ComponentsVariants<Theme>['uiCollapse'];
   };
-  UshiiContainer?: {
-    defaultProps?: ComponentsProps['UshiiContainer'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiContainer'];
-    variants?: ComponentsVariants<Theme>['UshiiContainer'];
+  uiContainer?: {
+    defaultProps?: ComponentsProps['uiContainer'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiContainer'];
+    variants?: ComponentsVariants<Theme>['uiContainer'];
   };
-  UshiiCssBaseline?: {
-    defaultProps?: ComponentsProps['UshiiCssBaseline'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiCssBaseline'];
-    variants?: ComponentsVariants<Theme>['UshiiCssBaseline'];
-  };
-  /*
-  UshiiDialog?: {
-    defaultProps?: ComponentsProps['UshiiDialog'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiDialog'];
-    variants?: ComponentsVariants<Theme>['UshiiDialog'];
-  };
-  UshiiDialogActions?: {
-    defaultProps?: ComponentsProps['UshiiDialogActions'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiDialogActions'];
-    variants?: ComponentsVariants<Theme>['UshiiDialogActions'];
-  };
-  UshiiDialogContent?: {
-    defaultProps?: ComponentsProps['UshiiDialogContent'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiDialogContent'];
-    variants?: ComponentsVariants<Theme>['UshiiDialogContent'];
-  };
-  UshiiDialogContentText?: {
-    defaultProps?: ComponentsProps['UshiiDialogContentText'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiDialogContentText'];
-    variants?: ComponentsVariants<Theme>['UshiiDialogContentText'];
-  };
-  UshiiDialogTitle?: {
-    defaultProps?: ComponentsProps['UshiiDialogTitle'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiDialogTitle'];
-    variants?: ComponentsVariants<Theme>['UshiiDialogTitle'];
-  };
-  */
-  UshiiDivider?: {
-    defaultProps?: ComponentsProps['UshiiDivider'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiDivider'];
-    variants?: ComponentsVariants<Theme>['UshiiDivider'];
-  };
-  UshiiDrawer?: {
-    defaultProps?: ComponentsProps['UshiiDrawer'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiDrawer'];
-    variants?: ComponentsVariants<Theme>['UshiiDrawer'];
+  uiCssBaseline?: {
+    defaultProps?: ComponentsProps['uiCssBaseline'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiCssBaseline'];
+    variants?: ComponentsVariants<Theme>['uiCssBaseline'];
   };
   /*
-  UshiiAccordion?: {
-    defaultProps?: ComponentsProps['UshiiAccordion'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiAccordion'];
-    variants?: ComponentsVariants<Theme>['UshiiAccordion'];
+  uiDialog?: {
+    defaultProps?: ComponentsProps['uiDialog'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiDialog'];
+    variants?: ComponentsVariants<Theme>['uiDialog'];
   };
-  UshiiAccordionActions?: {
-    defaultProps?: ComponentsProps['UshiiAccordionActions'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiAccordionActions'];
-    variants?: ComponentsVariants<Theme>['UshiiAccordionActions'];
+  uiDialogActions?: {
+    defaultProps?: ComponentsProps['uiDialogActions'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiDialogActions'];
+    variants?: ComponentsVariants<Theme>['uiDialogActions'];
   };
-  UshiiAccordionDetails?: {
-    defaultProps?: ComponentsProps['UshiiAccordionDetails'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiAccordionDetails'];
-    variants?: ComponentsVariants<Theme>['UshiiAccordionDetails'];
+  uiDialogContent?: {
+    defaultProps?: ComponentsProps['uiDialogContent'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiDialogContent'];
+    variants?: ComponentsVariants<Theme>['uiDialogContent'];
   };
-  UshiiAccordionSummary?: {
-    defaultProps?: ComponentsProps['UshiiAccordionSummary'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiAccordionSummary'];
-    variants?: ComponentsVariants<Theme>['UshiiAccordionSummary'];
+  uiDialogContentText?: {
+    defaultProps?: ComponentsProps['uiDialogContentText'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiDialogContentText'];
+    variants?: ComponentsVariants<Theme>['uiDialogContentText'];
   };
-  UshiiFab?: {
-    defaultProps?: ComponentsProps['UshiiFab'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiFab'];
-    variants?: ComponentsVariants<Theme>['UshiiFab'];
-  };
-  UshiiFilledInput?: {
-    defaultProps?: ComponentsProps['UshiiFilledInput'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiFilledInput'];
-    variants?: ComponentsVariants<Theme>['UshiiFilledInput'];
-  };
-  UshiiFormControl?: {
-    defaultProps?: ComponentsProps['UshiiFormControl'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiFormControl'];
-    variants?: ComponentsVariants<Theme>['UshiiFormControl'];
-  };
-  UshiiFormControlLabel?: {
-    defaultProps?: ComponentsProps['UshiiFormControlLabel'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiFormControlLabel'];
-    variants?: ComponentsVariants<Theme>['UshiiFormControlLabel'];
-  };
-  UshiiFormGroup?: {
-    defaultProps?: ComponentsProps['UshiiFormGroup'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiFormGroup'];
-    variants?: ComponentsVariants<Theme>['UshiiFormGroup'];
-  };
-  UshiiFormHelperText?: {
-    defaultProps?: ComponentsProps['UshiiFormHelperText'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiFormHelperText'];
-    variants?: ComponentsVariants<Theme>['UshiiFormHelperText'];
-  };
-  UshiiFormLabel?: {
-    defaultProps?: ComponentsProps['UshiiFormLabel'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiFormLabel'];
-    variants?: ComponentsVariants<Theme>['UshiiFormLabel'];
+  uiDialogTitle?: {
+    defaultProps?: ComponentsProps['uiDialogTitle'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiDialogTitle'];
+    variants?: ComponentsVariants<Theme>['uiDialogTitle'];
   };
   */
-  UshiiGrid?: {
-    defaultProps?: ComponentsProps['UshiiGrid'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiGrid'];
-    variants?: ComponentsVariants<Theme>['UshiiGrid'];
+  uiDivider?: {
+    defaultProps?: ComponentsProps['uiDivider'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiDivider'];
+    variants?: ComponentsVariants<Theme>['uiDivider'];
+  };
+  uiDrawer?: {
+    defaultProps?: ComponentsProps['uiDrawer'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiDrawer'];
+    variants?: ComponentsVariants<Theme>['uiDrawer'];
   };
   /*
-  UshiiImageList?: {
-    defaultProps?: ComponentsProps['UshiiImageList'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiImageList'];
-    variants?: ComponentsVariants<Theme>['UshiiImageList'];
+  uiAccordion?: {
+    defaultProps?: ComponentsProps['uiAccordion'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiAccordion'];
+    variants?: ComponentsVariants<Theme>['uiAccordion'];
   };
-  UshiiImageListItem?: {
-    defaultProps?: ComponentsProps['UshiiImageListItem'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiImageListItem'];
-    variants?: ComponentsVariants<Theme>['UshiiImageListItem'];
+  uiAccordionActions?: {
+    defaultProps?: ComponentsProps['uiAccordionActions'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiAccordionActions'];
+    variants?: ComponentsVariants<Theme>['uiAccordionActions'];
   };
-  UshiiImageListItemBar?: {
-    defaultProps?: ComponentsProps['UshiiImageListItemBar'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiImageListItemBar'];
-    variants?: ComponentsVariants<Theme>['UshiiImageListItemBar'];
+  uiAccordionDetails?: {
+    defaultProps?: ComponentsProps['uiAccordionDetails'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiAccordionDetails'];
+    variants?: ComponentsVariants<Theme>['uiAccordionDetails'];
   };
-  UshiiIcon?: {
-    defaultProps?: ComponentsProps['UshiiIcon'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiIcon'];
-    variants?: ComponentsVariants<Theme>['UshiiIcon'];
+  uiAccordionSummary?: {
+    defaultProps?: ComponentsProps['uiAccordionSummary'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiAccordionSummary'];
+    variants?: ComponentsVariants<Theme>['uiAccordionSummary'];
+  };
+  uiFab?: {
+    defaultProps?: ComponentsProps['uiFab'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiFab'];
+    variants?: ComponentsVariants<Theme>['uiFab'];
+  };
+  uiFilledInput?: {
+    defaultProps?: ComponentsProps['uiFilledInput'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiFilledInput'];
+    variants?: ComponentsVariants<Theme>['uiFilledInput'];
+  };
+  uiFormControl?: {
+    defaultProps?: ComponentsProps['uiFormControl'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiFormControl'];
+    variants?: ComponentsVariants<Theme>['uiFormControl'];
+  };
+  uiFormControlLabel?: {
+    defaultProps?: ComponentsProps['uiFormControlLabel'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiFormControlLabel'];
+    variants?: ComponentsVariants<Theme>['uiFormControlLabel'];
+  };
+  uiFormGroup?: {
+    defaultProps?: ComponentsProps['uiFormGroup'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiFormGroup'];
+    variants?: ComponentsVariants<Theme>['uiFormGroup'];
+  };
+  uiFormHelperText?: {
+    defaultProps?: ComponentsProps['uiFormHelperText'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiFormHelperText'];
+    variants?: ComponentsVariants<Theme>['uiFormHelperText'];
+  };
+  uiFormLabel?: {
+    defaultProps?: ComponentsProps['uiFormLabel'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiFormLabel'];
+    variants?: ComponentsVariants<Theme>['uiFormLabel'];
   };
   */
-  UshiiIconButton?: {
-    defaultProps?: ComponentsProps['UshiiIconButton'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiIconButton'];
-    variants?: ComponentsVariants<Theme>['UshiiIconButton'];
+  uiGrid?: {
+    defaultProps?: ComponentsProps['uiGrid'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiGrid'];
+    variants?: ComponentsVariants<Theme>['uiGrid'];
   };
   /*
-  UshiiInput?: {
-    defaultProps?: ComponentsProps['UshiiInput'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiInput'];
-    variants?: ComponentsVariants<Theme>['UshiiInput'];
+  uiImageList?: {
+    defaultProps?: ComponentsProps['uiImageList'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiImageList'];
+    variants?: ComponentsVariants<Theme>['uiImageList'];
   };
-  UshiiInputAdornment?: {
-    defaultProps?: ComponentsProps['UshiiInputAdornment'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiInputAdornment'];
-    variants?: ComponentsVariants<Theme>['UshiiInputAdornment'];
+  uiImageListItem?: {
+    defaultProps?: ComponentsProps['uiImageListItem'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiImageListItem'];
+    variants?: ComponentsVariants<Theme>['uiImageListItem'];
   };
-  UshiiInputBase?: {
-    defaultProps?: ComponentsProps['UshiiInputBase'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiInputBase'];
-    variants?: ComponentsVariants<Theme>['UshiiInputBase'];
+  uiImageListItemBar?: {
+    defaultProps?: ComponentsProps['uiImageListItemBar'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiImageListItemBar'];
+    variants?: ComponentsVariants<Theme>['uiImageListItemBar'];
   };
-  UshiiInputLabel?: {
-    defaultProps?: ComponentsProps['UshiiInputLabel'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiInputLabel'];
-    variants?: ComponentsVariants<Theme>['UshiiInputLabel'];
-  };
-  UshiiLinearProgress?: {
-    defaultProps?: ComponentsProps['UshiiLinearProgress'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiLinearProgress'];
-    variants?: ComponentsVariants<Theme>['UshiiLinearProgress'];
+  uiIcon?: {
+    defaultProps?: ComponentsProps['uiIcon'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiIcon'];
+    variants?: ComponentsVariants<Theme>['uiIcon'];
   };
   */
-  UshiiLink?: {
-    defaultProps?: ComponentsProps['UshiiLink'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiLink'];
-    variants?: ComponentsVariants<Theme>['UshiiLink'];
-  };
-  UshiiList?: {
-    defaultProps?: ComponentsProps['UshiiList'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiList'];
-    variants?: ComponentsVariants<Theme>['UshiiList'];
-  };
-  UshiiListItem?: {
-    defaultProps?: ComponentsProps['UshiiListItem'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiListItem'];
-    variants?: ComponentsVariants<Theme>['UshiiListItem'];
-  };
-  UshiiListItemButton?: {
-    defaultProps?: ComponentsProps['UshiiListItemButton'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiListItemButton'];
-    variants?: ComponentsVariants<Theme>['UshiiListItemButton'];
-  };
-  UshiiListItemAvatar?: {
-    defaultProps?: ComponentsProps['UshiiListItemAvatar'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiListItemAvatar'];
-    variants?: ComponentsVariants<Theme>['UshiiListItemAvatar'];
+  uiIconButton?: {
+    defaultProps?: ComponentsProps['uiIconButton'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiIconButton'];
+    variants?: ComponentsVariants<Theme>['uiIconButton'];
   };
   /*
-  UshiiListItemIcon?: {
-    defaultProps?: ComponentsProps['UshiiListItemIcon'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiListItemIcon'];
-    variants?: ComponentsVariants<Theme>['UshiiListItemIcon'];
+  uiInput?: {
+    defaultProps?: ComponentsProps['uiInput'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiInput'];
+    variants?: ComponentsVariants<Theme>['uiInput'];
   };
-  UshiiListItemSecondaryAction?: {
-    defaultProps?: ComponentsProps['UshiiListItemSecondaryAction'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiListItemSecondaryAction'];
-    variants?: ComponentsVariants<Theme>['UshiiListItemSecondaryAction'];
+  uiInputAdornment?: {
+    defaultProps?: ComponentsProps['uiInputAdornment'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiInputAdornment'];
+    variants?: ComponentsVariants<Theme>['uiInputAdornment'];
+  };
+  uiInputBase?: {
+    defaultProps?: ComponentsProps['uiInputBase'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiInputBase'];
+    variants?: ComponentsVariants<Theme>['uiputBase'];
+  };
+  uiInputLabel?: {
+    defaultProps?: ComponentsProps['uiputLabel'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiInputLabel'];
+    variants?: ComponentsVariants<Theme>['uiInputLabel'];
+  };
+  uiLinearProgress?: {
+    defaultProps?: ComponentsProps['uiLinearProgress'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiLinearProgress'];
+    variants?: ComponentsVariants<Theme>['uiLinearProgress'];
   };
   */
-  UshiiListItemText?: {
-    defaultProps?: ComponentsProps['UshiiListItemText'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiListItemText'];
-    variants?: ComponentsVariants<Theme>['UshiiListItemText'];
+  uiLink?: {
+    defaultProps?: ComponentsProps['uiLink'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiLink'];
+    variants?: ComponentsVariants<Theme>['uiLink'];
   };
-  UshiiListSubheader?: {
-    defaultProps?: ComponentsProps['UshiiListSubheader'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiListSubheader'];
-    variants?: ComponentsVariants<Theme>['UshiiListSubheader'];
+  uiList?: {
+    defaultProps?: ComponentsProps['uiList'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiList'];
+    variants?: ComponentsVariants<Theme>['uiList'];
   };
-  UshiiMenu?: {
-    defaultProps?: ComponentsProps['UshiiMenu'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiMenu'];
-    variants?: ComponentsVariants<Theme>['UshiiMenu'];
+  uiListItem?: {
+    defaultProps?: ComponentsProps['uiListItem'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiListItem'];
+    variants?: ComponentsVariants<Theme>['uiListItem'];
   };
-  UshiiMenuItem?: {
-    defaultProps?: ComponentsProps['UshiiMenuItem'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiMenuItem'];
-    variants?: ComponentsVariants<Theme>['UshiiMenuItem'];
+  uiListItemButton?: {
+    defaultProps?: ComponentsProps['uiListItemButton'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiListItemButton'];
+    variants?: ComponentsVariants<Theme>['uiListItemButton'];
   };
-  UshiiMenuList?: {
-    defaultProps?: ComponentsProps['UshiiMenuList'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiMenuList'];
-    variants?: ComponentsVariants<Theme>['UshiiMenuList'];
+  uiListItemAvatar?: {
+    defaultProps?: ComponentsProps['uiListItemAvatar'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiListItemAvatar'];
+    variants?: ComponentsVariants<Theme>['uiListItemAvatar'];
   };
   /*
-  UshiiMobileStepper?: {
-    defaultProps?: ComponentsProps['UshiiMobileStepper'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiMobileStepper'];
-    variants?: ComponentsVariants<Theme>['UshiiMobileStepper'];
+  uiListItemIcon?: {
+    defaultProps?: ComponentsProps['uiListItemIcon'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiListItemIcon'];
+    variants?: ComponentsVariants<Theme>['uiListItemIcon'];
+  };
+  uiListItemSecondaryAction?: {
+    defaultProps?: ComponentsProps['uiListItemSecondaryAction'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiListItemSecondaryAction'];
+    variants?: ComponentsVariants<Theme>['uiListItemSecondaryAction'];
   };
   */
-  UshiiModal?: {
-    defaultProps?: ComponentsProps['UshiiModal'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiModal'];
-    variants?: ComponentsVariants<Theme>['UshiiModal'];
+  uiListItemText?: {
+    defaultProps?: ComponentsProps['uiListItemText'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiListItemText'];
+    variants?: ComponentsVariants<Theme>['uiListItemText'];
+  };
+  uiListSubheader?: {
+    defaultProps?: ComponentsProps['uiListSubheader'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiListSubheader'];
+    variants?: ComponentsVariants<Theme>['uiListSubheader'];
+  };
+  uiMenu?: {
+    defaultProps?: ComponentsProps['uiMenu'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiMenu'];
+    variants?: ComponentsVariants<Theme>['uiMenu'];
+  };
+  uiMenuItem?: {
+    defaultProps?: ComponentsProps['uiMenuItem'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiMenuItem'];
+    variants?: ComponentsVariants<Theme>['uiMenuItem'];
+  };
+  uiMenuList?: {
+    defaultProps?: ComponentsProps['uiMenuList'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiMenuList'];
+    variants?: ComponentsVariants<Theme>['uiMenuList'];
   };
   /*
-  UshiiNativeSelect?: {
-    defaultProps?: ComponentsProps['UshiiNativeSelect'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiNativeSelect'];
-    variants?: ComponentsVariants<Theme>['UshiiNativeSelect'];
-  };
-  UshiiOutlinedInput?: {
-    defaultProps?: ComponentsProps['UshiiOutlinedInput'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiOutlinedInput'];
-    variants?: ComponentsVariants<Theme>['UshiiOutlinedInput'];
-  };
-  UshiiPagination?: {
-    defaultProps?: ComponentsProps['UshiiPagination'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiPagination'];
-    variants?: ComponentsVariants<Theme>['UshiiPagination'];
-  };
-  UshiiPaginationItem?: {
-    defaultProps?: ComponentsProps['UshiiPaginationItem'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiPaginationItem'];
-    variants?: ComponentsVariants<Theme>['UshiiPaginationItem'];
+  uiMobileStepper?: {
+    defaultProps?: ComponentsProps['uiMobileStepper'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiMobileStepper'];
+    variants?: ComponentsVariants<Theme>['uiMobileStepper'];
   };
   */
-  UshiiPaper?: {
-    defaultProps?: ComponentsProps['UshiiPaper'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiPaper'];
-    variants?: ComponentsVariants<Theme>['UshiiPaper'];
-  };
-  UshiiPopper?: {
-    defaultProps?: ComponentsProps['UshiiPopper'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiPopper'];
-  };
-  UshiiPopover?: {
-    defaultProps?: ComponentsProps['UshiiPopover'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiPopover'];
-    variants?: ComponentsVariants<Theme>['UshiiPopover'];
+  uiModal?: {
+    defaultProps?: ComponentsProps['uiModal'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiModal'];
+    variants?: ComponentsVariants<Theme>['uiModal'];
   };
   /*
-  UshiiRadio?: {
-    defaultProps?: ComponentsProps['UshiiRadio'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiRadio'];
-    variants?: ComponentsVariants<Theme>['UshiiRadio'];
+  uiNativeSelect?: {
+    defaultProps?: ComponentsProps['uiNativeSelect'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiNativeSelect'];
+    variants?: ComponentsVariants<Theme>['uiNativeSelect'];
   };
-  UshiiRadioGroup?: {
-    defaultProps?: ComponentsProps['UshiiRadioGroup'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiRadioGroup'];
-    variants?: ComponentsVariants<Theme>['UshiiRadioGroup'];
+  uiOutlinedInput?: {
+    defaultProps?: ComponentsProps['uiOutlinedInput'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiOutlinedInput'];
+    variants?: ComponentsVariants<Theme>['uiOutlinedInput'];
+  };
+  uiPagination?: {
+    defaultProps?: ComponentsProps['uiPagination'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiPagination'];
+    variants?: ComponentsVariants<Theme>['uiPagination'];
+  };
+  uiPaginationItem?: {
+    defaultProps?: ComponentsProps['uiPaginationItem'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiPaginationItem'];
+    variants?: ComponentsVariants<Theme>['uiPaginationItem'];
   };
   */
-  UshiiRating?: {
-    defaultProps?: ComponentsProps['UshiiRating'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiRating'];
-    variants?: ComponentsVariants<Theme>['UshiiRating'];
+  uiPaper?: {
+    defaultProps?: ComponentsProps['uiPaper'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiPaper'];
+    variants?: ComponentsVariants<Theme>['uiPaper'];
+  };
+  uiPopper?: {
+    defaultProps?: ComponentsProps['uiPopper'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiPopper'];
+  };
+  uiPopover?: {
+    defaultProps?: ComponentsProps['uiPopover'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiPopover'];
+    variants?: ComponentsVariants<Theme>['uiPopover'];
   };
   /*
-  UshiiScopedCssBaseline?: {
-    defaultProps?: ComponentsProps['UshiiScopedCssBaseline'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiScopedCssBaseline'];
-    variants?: ComponentsVariants<Theme>['UshiiScopedCssBaseline'];
+  uiRadio?: {
+    defaultProps?: ComponentsProps['uiRadio'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiRadio'];
+    variants?: ComponentsVariants<Theme>['uiRadio'];
   };
-  UshiiSelect?: {
-    defaultProps?: ComponentsProps['UshiiSelect'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiSelect'];
-    variants?: ComponentsVariants<Theme>['UshiiSelect'];
-  };
-  UshiiSkeleton?: {
-    defaultProps?: ComponentsProps['UshiiSkeleton'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiSkeleton'];
-    variants?: ComponentsVariants<Theme>['UshiiSkeleton'];
-  };
-  UshiiSlider?: {
-    defaultProps?: ComponentsProps['UshiiSlider'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiSlider'];
-    variants?: ComponentsVariants<Theme>['UshiiSlider'];
+  uiRadioGroup?: {
+    defaultProps?: ComponentsProps['uiRadioGroup'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiRadioGroup'];
+    variants?: ComponentsVariants<Theme>['uiRadioGroup'];
   };
   */
-  UshiiSnackbar?: {
-    defaultProps?: ComponentsProps['UshiiSnackbar'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiSnackbar'];
-    variants?: ComponentsVariants<Theme>['UshiiSnackbar'];
-  };
-  UshiiSnackbarContent?: {
-    defaultProps?: ComponentsProps['UshiiSnackbarContent'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiSnackbarContent'];
-    variants?: ComponentsVariants<Theme>['UshiiSnackbarContent'];
+  uiRating?: {
+    defaultProps?: ComponentsProps['uiRating'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiRating'];
+    variants?: ComponentsVariants<Theme>['uiRating'];
   };
   /*
-  UshiiSpeedDial?: {
-    defaultProps?: ComponentsProps['UshiiSpeedDial'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiSpeedDial'];
-    variants?: ComponentsVariants<Theme>['UshiiSpeedDial'];
+  uiScopedCssBaseline?: {
+    defaultProps?: ComponentsProps['uiScopedCssBaseline'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiScopedCssBaseline'];
+    variants?: ComponentsVariants<Theme>['uiScopedCssBaseline'];
   };
-  UshiiSpeedDialAction?: {
-    defaultProps?: ComponentsProps['UshiiSpeedDialAction'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiSpeedDialAction'];
-    variants?: ComponentsVariants<Theme>['UshiiSpeedDialAction'];
+  uiSelect?: {
+    defaultProps?: ComponentsProps['uiSelect'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiSelect'];
+    variants?: ComponentsVariants<Theme>['uiSelect'];
   };
-  UshiiSpeedDialIcon?: {
-    defaultProps?: ComponentsProps['UshiiSpeedDialIcon'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiSpeedDialIcon'];
-    variants?: ComponentsVariants<Theme>['UshiiSpeedDialIcon'];
+  uiSkeleton?: {
+    defaultProps?: ComponentsProps['uiSkeleton'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiSkeleton'];
+    variants?: ComponentsVariants<Theme>['uiSkeleton'];
+  };
+  uiSlider?: {
+    defaultProps?: ComponentsProps['uiSlider'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiSlider'];
+    variants?: ComponentsVariants<Theme>['uiSlider'];
   };
   */
-  UshiiStack?: {
-    defaultProps?: ComponentsProps['UshiiStack'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiStack'];
-    variants?: ComponentsVariants<Theme>['UshiiStack'];
+  uiSnackbar?: {
+    defaultProps?: ComponentsProps['uiSnackbar'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiSnackbar'];
+    variants?: ComponentsVariants<Theme>['uiSnackbar'];
+  };
+  uiSnackbarContent?: {
+    defaultProps?: ComponentsProps['uiSnackbarContent'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiSnackbarContent'];
+    variants?: ComponentsVariants<Theme>['uiSnackbarContent'];
   };
   /*
-  UshiiStep?: {
-    defaultProps?: ComponentsProps['UshiiStep'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiStep'];
-    variants?: ComponentsVariants<Theme>['UshiiStep'];
+  uiSpeedDial?: {
+    defaultProps?: ComponentsProps['uiSpeedDial'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiSpeedDial'];
+    variants?: ComponentsVariants<Theme>['uiSpeedDial'];
   };
-  UshiiStepButton?: {
-    defaultProps?: ComponentsProps['UshiiStepButton'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiStepButton'];
-    variants?: ComponentsVariants<Theme>['UshiiStepButton'];
+  uiSpeedDialAction?: {
+    defaultProps?: ComponentsProps['uiSpeedDialAction'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiSpeedDialAction'];
+    variants?: ComponentsVariants<Theme>['uiSpeedDialAction'];
   };
-  UshiiStepConnector?: {
-    defaultProps?: ComponentsProps['UshiiStepConnector'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiStepConnector'];
-    variants?: ComponentsVariants<Theme>['UshiiStepConnector'];
-  };
-  UshiiStepContent?: {
-    defaultProps?: ComponentsProps['UshiiStepContent'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiStepContent'];
-    variants?: ComponentsVariants<Theme>['UshiiStepContent'];
-  };
-  UshiiStepIcon?: {
-    defaultProps?: ComponentsProps['UshiiStepIcon'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiStepIcon'];
-    variants?: ComponentsVariants<Theme>['UshiiStepIcon'];
-  };
-  UshiiStepLabel?: {
-    defaultProps?: ComponentsProps['UshiiStepLabel'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiStepLabel'];
-    variants?: ComponentsVariants<Theme>['UshiiStepLabel'];
-  };
-  UshiiStepper?: {
-    defaultProps?: ComponentsProps['UshiiStepper'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiStepper'];
-    variants?: ComponentsVariants<Theme>['UshiiStepper'];
+  uiSpeedDialIcon?: {
+    defaultProps?: ComponentsProps['uiSpeedDialIcon'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiSpeedDialIcon'];
+    variants?: ComponentsVariants<Theme>['uiSpeedDialIcon'];
   };
   */
-  UshiiSvgIcon?: {
-    defaultProps?: ComponentsProps['UshiiSvgIcon'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiSvgIcon'];
-    variants?: ComponentsVariants<Theme>['UshiiSvgIcon'];
-  };
-  UshiiSwipeableDrawer?: {
-    defaultProps?: ComponentsProps['UshiiSwipeableDrawer'];
+  uiStack?: {
+    defaultProps?: ComponentsProps['uiStack'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiStack'];
+    variants?: ComponentsVariants<Theme>['uiStack'];
   };
   /*
-  UshiiSwitch?: {
-    defaultProps?: ComponentsProps['UshiiSwitch'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiSwitch'];
-    variants?: ComponentsVariants<Theme>['UshiiSwitch'];
+  uiStep?: {
+    defaultProps?: ComponentsProps['uiStep'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiStep'];
+    variants?: ComponentsVariants<Theme>['uiStep'];
   };
-  UshiiTab?: {
-    defaultProps?: ComponentsProps['UshiiTab'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiTab'];
-    variants?: ComponentsVariants<Theme>['UshiiTab'];
+  uiStepButton?: {
+    defaultProps?: ComponentsProps['uiStepButton'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiStepButton'];
+    variants?: ComponentsVariants<Theme>['uiStepButton'];
   };
-  UshiiTable?: {
-    defaultProps?: ComponentsProps['UshiiTable'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiTable'];
-    variants?: ComponentsVariants<Theme>['UshiiTable'];
+  uiStepConnector?: {
+    defaultProps?: ComponentsProps['uiStepConnector'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiStepConnector'];
+    variants?: ComponentsVariants<Theme>['uiStepConnector'];
   };
-  UshiiTableBody?: {
-    defaultProps?: ComponentsProps['UshiiTableBody'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiTableBody'];
-    variants?: ComponentsVariants<Theme>['UshiiTableBody'];
+  uiStepContent?: {
+    defaultProps?: ComponentsProps['uiStepContent'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiStepContent'];
+    variants?: ComponentsVariants<Theme>['uiStepContent'];
   };
-  UshiiTableCell?: {
-    defaultProps?: ComponentsProps['UshiiTableCell'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiTableCell'];
-    variants?: ComponentsVariants<Theme>['UshiiTableCell'];
+  uiStepIcon?: {
+    defaultProps?: ComponentsProps['uiStepIcon'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiepIcon'];
+    variants?: ComponentsVariants<Theme>['uiStepIcon'];
   };
-  UshiiTableContainer?: {
-    defaultProps?: ComponentsProps['UshiiTableContainer'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiTableContainer'];
-    variants?: ComponentsVariants<Theme>['UshiiTableContainer'];
+  uiStepLabel?: {
+    defaultProps?: ComponentsProps['uiStepLabel'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiStepLabel'];
+    variants?: ComponentsVariants<Theme>['uiStepLabel'];
   };
-  UshiiTableFooter?: {
-    defaultProps?: ComponentsProps['UshiiTableFooter'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiTableFooter'];
-    variants?: ComponentsVariants<Theme>['UshiiTableFooter'];
-  };
-  UshiiTableHead?: {
-    defaultProps?: ComponentsProps['UshiiTableHead'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiTableHead'];
-    variants?: ComponentsVariants<Theme>['UshiiTableHead'];
-  };
-  UshiiTablePagination?: {
-    defaultProps?: ComponentsProps['UshiiTablePagination'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiTablePagination'];
-    variants?: ComponentsVariants<Theme>['UshiiTablePagination'];
-  };
-  UshiiTableRow?: {
-    defaultProps?: ComponentsProps['UshiiTableRow'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiTableRow'];
-    variants?: ComponentsVariants<Theme>['UshiiTableRow'];
-  };
-  UshiiTableSortLabel?: {
-    defaultProps?: ComponentsProps['UshiiTableSortLabel'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiTableSortLabel'];
-    variants?: ComponentsVariants<Theme>['UshiiTableSortLabel'];
-  };
-  UshiiTabs?: {
-    defaultProps?: ComponentsProps['UshiiTabs'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiTabs'];
-    variants?: ComponentsVariants<Theme>['UshiiTabs'];
-  };
-  UshiiTextField?: {
-    defaultProps?: ComponentsProps['UshiiTextField'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiTextField'];
-    variants?: ComponentsVariants<Theme>['UshiiTextField'];
+  uiStepper?: {
+    defaultProps?: ComponentsProps['uiStepper'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiStepper'];
+    variants?: ComponentsVariants<Theme>['uiStepper'];
   };
   */
-  UshiiToggleButton?: {
-    defaultProps?: ComponentsProps['UshiiToggleButton'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiToggleButton'];
-    variants?: ComponentsVariants<Theme>['UshiiToggleButton'];
+  uiSvgIcon?: {
+    defaultProps?: ComponentsProps['uiSvgIcon'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiSvgIcon'];
+    variants?: ComponentsVariants<Theme>['uiSvgIcon'];
   };
-  UshiiToggleButtonGroup?: {
-    defaultProps?: ComponentsProps['UshiiToggleButtonGroup'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiToggleButtonGroup'];
-    variants?: ComponentsVariants<Theme>['UshiiToggleButtonGroup'];
+  uiSwipeableDrawer?: {
+    defaultProps?: ComponentsProps['uiSwipeableDrawer'];
   };
-  UshiiToolbar?: {
-    defaultProps?: ComponentsProps['UshiiToolbar'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiToolbar'];
-    variants?: ComponentsVariants<Theme>['UshiiToolbar'];
+  /*
+  uiSwitch?: {
+    defaultProps?: ComponentsProps['uiSwitch'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiSwitch'];
+    variants?: ComponentsVariants<Theme>['uiSwitch'];
   };
-  UshiiTooltip?: {
-    defaultProps?: ComponentsProps['UshiiTooltip'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiTooltip'];
-    variants?: ComponentsVariants<Theme>['UshiiTooltip'];
+  uiTab?: {
+    defaultProps?: ComponentsProps['uiTab'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiTab'];
+    variants?: ComponentsVariants<Theme>['uiTab'];
   };
-  UshiiTouchRipple?: {
-    defaultProps?: ComponentsProps['UshiiTouchRipple'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiTouchRipple'];
-    variants?: ComponentsVariants<Theme>['UshiiTouchRipple'];
+  uiTable?: {
+    defaultProps?: ComponentsProps['uiTable'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiTable'];
+    variants?: ComponentsVariants<Theme>['uiTable'];
   };
-  UshiiTypography?: {
-    defaultProps?: ComponentsProps['UshiiTypography'];
-    styleOverrides?: ComponentsOverrides<Theme>['UshiiTypography'];
-    variants?: ComponentsVariants<Theme>['UshiiTypography'];
+  uiTableBody?: {
+    defaultProps?: ComponentsProps['uiTableBody'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiTableBody'];
+    variants?: ComponentsVariants<Theme>['uiTableBody'];
   };
-  UshiiUseMediaQuery?: {
-    defaultProps?: ComponentsProps['UshiiUseMediaQuery'];
+  uiTableCell?: {
+    defaultProps?: ComponentsProps['uiTableCell'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiTableCell'];
+    variants?: ComponentsVariants<Theme>['uiTableCell'];
+  };
+  uiTableContainer?: {
+    defaultProps?: ComponentsProps['uiTableContainer'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiTableContainer'];
+    variants?: ComponentsVariants<Theme>['uiTableContainer'];
+  };
+  uiTableFooter?: {
+    defaultProps?: ComponentsProps['uiTableFooter'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiTableFooter'];
+    variants?: ComponentsVariants<Theme>['uiTableFooter'];
+  };
+  uiTableHead?: {
+    defaultProps?: ComponentsProps['uiTableHead'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiTableHead'];
+    variants?: ComponentsVariants<Theme>['uiTableHead'];
+  };
+  uiTablePagination?: {
+    defaultProps?: ComponentsProps['uiTablePagination'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiTablePagination'];
+    variants?: ComponentsVariants<Theme>['uiTablePagination'];
+  };
+  uiTableRow?: {
+    defaultProps?: ComponentsProps['uiTableRow'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiTableRow'];
+    variants?: ComponentsVariants<Theme>['uiTableRow'];
+  };
+  uiTableSortLabel?: {
+    defaultProps?: ComponentsProps['uiTableSortLabel'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiTableSortLabel'];
+    variants?: ComponentsVariants<Theme>['uiTableSortLabel'];
+  };
+  uiTabs?: {
+    defaultProps?: ComponentsProps['uiTabs'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiTabs'];
+    variants?: ComponentsVariants<Theme>['uibs'];
+  };
+  uiTextField?: {
+    defaultProps?: ComponentsProps['uixtField'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiTextField'];
+    variants?: ComponentsVariants<Theme>['uiTextField'];
+  };
+  */
+  uiToggleButton?: {
+    defaultProps?: ComponentsProps['uiToggleButton'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiToggleButton'];
+    variants?: ComponentsVariants<Theme>['uiToggleButton'];
+  };
+  uiToggleButtonGroup?: {
+    defaultProps?: ComponentsProps['uiToggleButtonGroup'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiToggleButtonGroup'];
+    variants?: ComponentsVariants<Theme>['uiToggleButtonGroup'];
+  };
+  uiToolbar?: {
+    defaultProps?: ComponentsProps['uiToolbar'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiToolbar'];
+    variants?: ComponentsVariants<Theme>['uiToolbar'];
+  };
+  uiTooltip?: {
+    defaultProps?: ComponentsProps['uiTooltip'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiTooltip'];
+    variants?: ComponentsVariants<Theme>['uiTooltip'];
+  };
+  uiTouchRipple?: {
+    defaultProps?: ComponentsProps['uiTouchRipple'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiTouchRipple'];
+    variants?: ComponentsVariants<Theme>['uiTouchRipple'];
+  };
+  uiTypography?: {
+    defaultProps?: ComponentsProps['uiTypography'];
+    styleOverrides?: ComponentsOverrides<Theme>['uiTypography'];
+    variants?: ComponentsVariants<Theme>['uiTypography'];
+  };
+  uiUseMediaQuery?: {
+    defaultProps?: ComponentsProps['uiUseMediaQuery'];
   };
 }

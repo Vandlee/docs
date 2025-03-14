@@ -138,7 +138,7 @@ export function unstable_createUseMediaQuery(params: { themeId?: string } = {}) 
       matchMedia = supportMatchMedia ? window.matchMedia : null,
       ssrMatchMedia = null,
       noSsr = false,
-    } = getThemeProps({ name: 'UshiiUseMediaQuery', props: options, theme });
+    } = getThemeProps({ name: 'uiUseMediaQuery', props: options, theme });
 
     if (process.env.NODE_ENV !== 'production') {
       if (typeof queryInput === 'function' && theme === null) {

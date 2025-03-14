@@ -119,7 +119,7 @@ const StyledAppBar = styled(AppBar, {
         props: ({ disablePermanent }) => !disablePermanent,
         style: {
           [theme.breakpoints.up('lg')]: {
-            width: 'calc(100% - var(--UshiiDocs-navDrawer-width))',
+            width: 'calc(100% - var(--uidocs-navDrawer-width))',
           },
         },
       },
@@ -153,7 +153,7 @@ const StyledAppNavDrawer = styled(AppNavDrawer)(({ theme }) => ({
       style: {
         [theme.breakpoints.up('lg')]: {
           flexShrink: 0,
-          width: 'var(--UshiiDocs-navDrawer-width)',
+          width: 'var(--uidocs-navDrawer-width)',
         },
       },
     },
@@ -183,13 +183,14 @@ export default function AppFrame(props) {
       <SkipLink />
       <MarkdownLinks />
       <StyledAppBar
+        elevation={0}
         disablePermanent={disablePermanent}
-        sx={{ minHeight: 'var(--UshiiDocs-header-height)' }}
+        sx={{ minHeight: 'var(--uidocs-header-height)' }}
       >
         <GlobalStyles
           styles={{
             ':root': {
-              '--UshiiDocs-header-height': `${HEIGHT}px`,
+              '--uidocs-header-height': `${HEIGHT}px`,
             },
           }}
         />

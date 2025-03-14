@@ -34,7 +34,7 @@ export default function PermanentDrawerLeft() {
         sx={{
           width: drawerWidth,
           flexShrink: 0,
-          '& .UshiiDrawer-paper': {
+          '& .uiDrawer-paper': {
             width: drawerWidth,
             boxSizing: 'border-box',
           },

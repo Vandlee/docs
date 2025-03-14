@@ -1,0 +1,10 @@
+<Stack
+  spacing={{ xs: 1, sm: 2 }}
+  direction="row"
+  useFlexGap
+  sx={{ flexWrap: 'wrap' }}
+>
+  <Item>Elemento 1</Item>
+  <Item>Elemento 2</Item>
+  <Item>Contenido largo</Item>
+</Stack>

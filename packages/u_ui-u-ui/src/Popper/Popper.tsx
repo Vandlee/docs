@@ -41,7 +41,7 @@ export interface PopperProps extends Omit<BasePopperProps, 'direction'> {
 }
 
 const PopperRoot = styled(BasePopper, {
-  name: 'UshiiPopper',
+  name: 'uiPopper',
   slot: 'root',
   overridesResolver: (props, styles) => styles.root,
 })({});
@@ -53,7 +53,7 @@ const Popper = React.forwardRef(function Popper(
   const isRtl = useRtl();
   const props = useDefaultProps({
     props: inProps,
-    name: 'UshiiPopper',
+    name: 'uiPopper',
   });
 
   const {

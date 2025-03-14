@@ -23,7 +23,7 @@ const useUtilityClasses = (ownerState) => {
 };
 
 const ListItemTextRoot = styled('div', {
-  name: 'UshiiListItemText',
+  name: 'uiListItemText',
   slot: 'Root',
   overridesResolver: (props, styles) => {
     const { ownerState } = props;
@@ -66,7 +66,7 @@ const ListItemTextRoot = styled('div', {
 });
 
 const ListItemText = React.forwardRef(function ListItemText(inProps, ref) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiListItemText' });
+  const props = useDefaultProps({ props: inProps, name: 'uiListItemText' });
   const {
     children,
     className,

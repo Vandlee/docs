@@ -47,7 +47,7 @@ const pulsateKeyframe = keyframes`
 `;
 
 export const TouchRippleRoot = styled('span', {
-  name: 'UshiiTouchRipple',
+  name: 'uiTouchRipple',
   slot: 'Root',
 })({
   overflow: 'hidden',
@@ -64,7 +64,7 @@ export const TouchRippleRoot = styled('span', {
 // This `styled()` function invokes keyframes. `styled-components` only supports keyframes
 // in string templates. Do not convert these styles in JS object as it will break.
 export const TouchRippleRipple = styled(Ripple, {
-  name: 'UshiiTouchRipple',
+  name: 'uiTouchRipple',
   slot: 'Ripple',
 })`
   opacity: 0;
@@ -116,7 +116,7 @@ export const TouchRippleRipple = styled(Ripple, {
  * TODO v5: Make private
  */
 const TouchRipple = React.forwardRef(function TouchRipple(inProps, ref) {
-  const props = useDefaultProps({ props: inProps, name: 'UshiiTouchRipple' });
+  const props = useDefaultProps({ props: inProps, name: 'uiuchRipple' });
 
   const { center: centerProp = false, classes = {}, className, ...other } = props;
   const [ripples, setRipples] = React.useState([]);

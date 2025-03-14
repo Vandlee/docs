@@ -7,7 +7,7 @@ import { useDefaultProps } from '../DefaultPropsProvider';
 
 const Container = createContainer({
   createStyledComponent: styled('div', {
-    name: 'UshiiContainer',
+    name: 'uiContainer',
     slot: 'Root',
     overridesResolver: (props, styles) => {
       const { ownerState } = props;
@@ -20,7 +20,7 @@ const Container = createContainer({
       ];
     },
   }),
-  useThemeProps: (inProps) => useDefaultProps({ props: inProps, name: 'UshiiContainer' }),
+  useThemeProps: (inProps) => useDefaultProps({ props: inProps, name: 'uiContainer' }),
 });
 
 Container.propTypes /* remove-proptypes */ = {

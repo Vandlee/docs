@@ -1,0 +1,5 @@
+<Stack direction="row" spacing={2}>
+  <Item>Elemento 1</Item>
+  <Item>Elemento 2</Item>
+  <Item>Elemento 3</Item>
+</Stack>

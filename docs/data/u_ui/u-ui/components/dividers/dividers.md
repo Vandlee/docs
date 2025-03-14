@@ -92,7 +92,7 @@ Esto asegura que no sea anunciado por los lectores de pantalla mientras se prese
 El componente Separador está compuesto por una raíz `<hr>`.
 
 ```html
-<hr class="UshiiDivider-root">
+<hr class="uiDivider-root">
   <!-- El hijo del separador va aquí -->
 </hr>
 ```
