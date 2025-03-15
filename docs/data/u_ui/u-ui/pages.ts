@@ -84,6 +84,19 @@ const pages: UshiiPage[] = [
           { pathname: '/u_ui/u-ui/react-grid' },
           { pathname: '/u_ui/u-ui/react-stack' },
         ]
+      },
+      {
+        pathname: '/u_ui/u-ui/components/utils',
+        subheader: 'utils',
+        newFeature: true,
+        children: [
+          {
+            pathname: '/u_ui/u-ui/react-click-away-listener',
+            title: 'Click-Away Listener',
+          },
+          { pathname: '/u_ui/u-ui/react-css-baseline', title: 'CSS Baseline' },
+          { pathname: '/u_ui/u-ui/react-modal' },
+        ]
       }
     ]
   }

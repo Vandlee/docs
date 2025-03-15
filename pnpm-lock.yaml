@@ -343,7 +343,7 @@ importers:
         specifier: 2.11.8
         version: 2.11.8
       '@react-spring/web':
-        specifier: 9.7.5
+        specifier: ^9.7.5
         version: 9.7.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@toolpad/core':
         specifier: 0.11.0

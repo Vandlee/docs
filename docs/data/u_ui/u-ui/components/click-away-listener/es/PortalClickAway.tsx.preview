@@ -1,0 +1,14 @@
+<ClickAwayListener onClickAway={handleClickAway}>
+  <div>
+    <Button type="button" onClick={handleClick}>
+      Abrir menú desplegable
+    </Button>
+    {open ? (
+      <Portal>
+        <Box sx={styles}>
+        Haz clic en mí, permaneceré visible hasta que hagas clic fuera.
+        </Box>
+      </Portal>
+    ) : null}
+  </div>
+</ClickAwayListener>

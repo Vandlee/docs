@@ -1,0 +1,16 @@
+<ClickAwayListener
+  mouseEvent="onMouseDown"
+  touchEvent="onTouchStart"
+  onClickAway={handleClickAway}
+>
+  <Box sx={{ position: 'relative' }}>
+    <Button type="button" onClick={handleClick}>
+      Open menu dropdown
+    </Button>
+    {open ? (
+      <Box sx={styles}>
+        Haz clic en mí, permaneceré visible hasta que hagas clic fuera.
+      </Box>
+    ) : null}
+  </Box>
+</ClickAwayListener>

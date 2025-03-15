@@ -39,6 +39,10 @@
     "/u_ui/u-ui/react-box": "Caja",
     "/u_ui/u-ui/react-container": "Contenedor",
     "/u_ui/u-ui/react-grid": "Cuadrícula",
-    "/u_ui/u-ui/react-stack": "Pila"
+    "/u_ui/u-ui/react-stack": "Pila",
+    "utils": "Utilidad",
+    "/u_ui/u-ui/react-click-away-listener": "Detector de Clic Fuera",
+    "/u_ui/u-ui/react-css-baseline": "Base CSS",
+    "/u_ui/u-ui/react-modal": "Modal"
   }
 }

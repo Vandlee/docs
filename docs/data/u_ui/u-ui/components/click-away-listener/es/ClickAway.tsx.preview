@@ -1,0 +1,12 @@
+<ClickAwayListener onClickAway={handleClickAway}>
+  <Box sx={{ position: 'relative' }}>
+    <Button type="button" onClick={handleClick}>
+      Abrir menú desplegable
+    </Button>
+    {open ? (
+      <Box sx={styles}>
+        Haz clic en mí, permaneceré visible hasta que hagas clic fuera.
+      </Box>
+    ) : null}
+  </Box>
+</ClickAwayListener>
