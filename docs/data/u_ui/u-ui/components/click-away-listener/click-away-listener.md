@@ -25,7 +25,7 @@ Click-Away Listener también soporta el componente [Portal](/u_ui/u-ui/react-por
 ## Componente
 
 ```jsx
-import { ClickAwayListener } from '@u_ui/u-ui/ClickAwayListener';
+import ClickAwayListener from '@u_ui/u-ui/ClickAwayListener';
 ```
 
 La siguiente demostración muestra cómo ocultar un menú desplegable cuando los usuarios hacen click en cualquier otro lugar de la página:

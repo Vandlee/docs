@@ -43,6 +43,8 @@
     "utils": "Utilidad",
     "/u_ui/u-ui/react-click-away-listener": "Detector de Clic Fuera",
     "/u_ui/u-ui/react-css-baseline": "Base CSS",
-    "/u_ui/u-ui/react-modal": "Modal"
+    "/u_ui/u-ui/react-modal": "Modal",
+    "/u_ui/u-ui/react-no-ssr": "No SSR",
+    "/u_ui/u-ui/react-popover": "Popover"
   }
 }

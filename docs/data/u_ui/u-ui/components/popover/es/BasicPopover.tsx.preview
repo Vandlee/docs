@@ -1,0 +1,15 @@
+<Button aria-describedby={id} variant="contained" onClick={handleClick}>
+  Abrir Popover
+</Button>
+<Popover
+  id={id}
+  open={open}
+  anchorEl={anchorEl}
+  onClose={handleClose}
+  anchorOrigin={{
+    vertical: 'bottom',
+    horizontal: 'left',
+  }}
+>
+  <Typography sx={{ p: 2 }}>El contenido del Popover.</Typography>
+</Popover>

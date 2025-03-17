@@ -1,0 +1,10 @@
+<Box sx={{ p: 2, bgcolor: 'primary.main', color: 'primary.contrastText' }}>
+  Servidor y Cliente
+</Box>
+<NoSsr>
+  <Box
+    sx={{ p: 2, bgcolor: 'secondary.main', color: 'secondary.contrastText' }}
+  >
+    Solo Cliente
+  </Box>
+</NoSsr>
