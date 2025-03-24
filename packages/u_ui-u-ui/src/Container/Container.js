@@ -1,6 +1,6 @@
 'use client';
 import PropTypes from 'prop-types';
-import { createContainer } from '@u-shii/system';
+import { createContainer } from '@u_ui/system';
 import capitalize from '../utils/capitalize';
 import styled from '../styles/styled';
 import { useDefaultProps } from '../DefaultPropsProvider';

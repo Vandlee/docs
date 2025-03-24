@@ -1,5 +1,5 @@
-import generateUtilityClasses from '@u-shii/utils/generateUtilityClasses';
-import generateUtilityClass from '@u-shii/utils/generateUtilityClass';
+import generateUtilityClasses from '@vandlee/utils/generateUtilityClasses';
+import generateUtilityClass from '@vandlee/utils/generateUtilityClass';
 
 export interface TypographyClasses {
   /** Styles applied to the root element. */

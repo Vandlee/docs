@@ -1,11 +1,11 @@
 /* eslint-disable react/no-danger */
 import * as React from 'react';
 import { styled } from '@u_ui/u-ui/styles';
-import { useTranslate } from '@u-shii/docs/i18n';
+import { useTranslate } from '@vandlee/docs/i18n';
 import {
   brandingDarkTheme as darkTheme,
   brandingLightTheme as lightTheme,
-} from '@u-shii/docs/branding';
+} from '@vandlee/docs/branding';
 import ExpandableApiItem, {
   ApiItemContainer,
 } from 'docs/src/modules/components/ApiPage/list/ExpandableApiItem';
@@ -78,7 +78,7 @@ const StyledApiItem = styled(ExpandableApiItem)(
     },
   }),
   ({ theme }) => ({
-    [`:where(${theme.vars ? '[data-u-shii-color-scheme="dark"]' : '.mode-dark'}) &`]: {
+    [`:where(${theme.vars ? '[data-u-ui-color-scheme="dark"]' : '.mode-dark'}) &`]: {
       '& .prop-list-additional-info': {
         '& .prop-list-title': {
           p: {
@@ -191,7 +191,7 @@ export default function PropertiesList(props: PropertiesListProps) {
             )}
             {additionalInfo?.map((key) => (
               <p
-                className="prop-list-additional-description  UshiiApi-collapsible"
+                className="prop-list-additional-description  VandleeApi-collapsible"
                 key={key}
                 dangerouslySetInnerHTML={{
                   __html: t(`api-docs.additional-info.${key}`)!,
@@ -200,7 +200,7 @@ export default function PropertiesList(props: PropertiesListProps) {
             ))}
             <div className="prop-list-additional-info">
               {typeName && (
-                <p className="prop-list-type UshiiApi-collapsible">
+                <p className="prop-list-type VandleeApi-collapsible">
                   <span className="prop-list-title">{t('api-docs.type')}:</span>
                   <code
                     className="Api-code"
@@ -211,13 +211,13 @@ export default function PropertiesList(props: PropertiesListProps) {
                 </p>
               )}
               {propDefault && (
-                <p className="prop-list-default-props UshiiApi-collapsible">
+                <p className="prop-list-default-props VandleeApi-collapsible">
                   <span className="prop-list-title">{t('api-docs.default')}:</span>
                   <code className="default-value">{propDefault}</code>
                 </p>
               )}
               {signature && (
-                <div className="prop-list-signature UshiiApi-collapsible">
+                <div className="prop-list-signature VandleeApi-collapsible">
                   <span className="prop-list-title">{t('api-docs.signature')}:</span>
                   <div className="prop-list-content">
                     <code

@@ -3,7 +3,7 @@ import Box from '@u_ui/u-ui/Box';
 import Button from '@u_ui/u-ui/Button';
 import ClickAwayListener from '@u_ui/u-ui/ClickAwayListener';
 import Portal from '@u_ui/u-ui/Portal';
-import { SxProps } from '@u-shii/system';
+import { SxProps } from '@u_ui/system';
 
 export default function PortalClickAway() {
   const [open, setOpen] = React.useState(false);

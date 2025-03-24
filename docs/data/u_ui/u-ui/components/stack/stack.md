@@ -18,7 +18,7 @@ El componente Pila (`Stack`) gestiona la disposición de sus hijos inmediatos a 
 Stack es ideal para diseños unidimensionales, mientras que Grid (Cuadrícula) es preferible cuando se necesita una disposición vertical _y_ horizontal.
 :::
 
-{{"component": "@u-shii/docs/ComponentLinkHeader"}}
+{{"component": "@vandlee/docs/ComponentLinkHeader"}}
 
 ## Conceptos básicos
 

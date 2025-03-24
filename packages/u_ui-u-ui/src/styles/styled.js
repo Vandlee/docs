@@ -1,5 +1,5 @@
 'use client';
-import createStyled from '@u-shii/system/createStyled';
+import createStyled from '@u_ui/system/createStyled';
 import defaultTheme from './defaultTheme';
 import THEME_ID from './identifier';
 import rootShouldForwardProp from './rootShouldForwardProp';

@@ -1,7 +1,7 @@
 {
-  "name": "@u-shii/internal-markdown",
-  "version": "0.1.0",
-  "author": "yugashiki",
+  "name": "@vandlee/internal-markdown",
+  "version": "1.0.0",
+  "author": "elchery",
   "description": "",
   "main": "./index.mjs",
   "browser": "./index.mjs",

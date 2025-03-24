@@ -18,7 +18,7 @@ import { useRouter } from 'next/router';
 import { CODE_VARIANTS, CODE_STYLING } from 'docs/src/modules/constants';
 import { useSetCodeVariant } from 'docs/src/modules/utils/codeVariant';
 import { useSetCodeStyling, useCodeStyling } from 'docs/src/modules/utils/codeStylingSolution';
-import { useTranslate } from '@u-shii/docs/i18n';
+import { useTranslate } from '@vandlee/docs/i18n';
 import stylingSolutionMapping from 'docs/src/modules/utils/stylingSolutionMapping';
 import codeSandbox from '../sandbox/CodeSandbox';
 import stackBlitz from '../sandbox/StackBlitz';
@@ -32,7 +32,7 @@ const Root = styled('div')(({ theme }) => [
       alignItems: 'center',
       justifyContent: 'space-between'
     },
-    '& .uiIconButton-root, .MuiIconButton-root': {
+    '& .uiIconButton-root, .uiIconButton-root': {
       '&:hover': {
         backgroundColor: (theme.vars || theme).palette.grey[100],
       },
@@ -43,7 +43,7 @@ const Root = styled('div')(({ theme }) => [
     },
   },
   theme.applyDarkStyles({
-    '& .uiIconButton-root, .MuiIconButton-root': {
+    '& .uiIconButton-root, .uiIconButton-root': {
       '&:hover': {
         backgroundColor: (theme.vars || theme).palette.primaryDark[700],
       },

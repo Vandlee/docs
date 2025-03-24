@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import * as React from 'react';
 import { styled } from '@u_ui/u-ui/styles';
-import { useTranslate } from '@u-shii/docs/i18n';
+import { useTranslate } from '@vandlee/docs/i18n';
 import ExpandableApiItem, {
   ApiItemContainer,
 } from 'docs/src/modules/components/ApiPage/list/ExpandableApiItem';
@@ -9,7 +9,7 @@ import { ClassDefinition } from 'docs/src/modules/components/ApiPage/definitions
 import {
   brandingLightTheme as lightTheme,
   brandingDarkTheme as darkTheme,
-} from '@u-shii/docs/branding';
+} from '@vandlee/docs/branding';
 import ApiWarningAlert from 'docs/src/modules/components/ApiPage/ApiWarningAlert';
 
 const StyledApiItem = styled(ExpandableApiItem)(
@@ -38,7 +38,7 @@ const StyledApiItem = styled(ExpandableApiItem)(
     },
   }),
   ({ theme }) => ({
-    [`:where(${theme.vars ? '[data-u-shii-color-scheme="dark"]' : '.mode-dark'}) &`]: {
+    [`:where(${theme.vars ? '[data-u-ui-color-scheme="dark"]' : '.mode-dark'}) &`]: {
       '& .prop-list-title': {
         color: `var(--uidocs-palette-grey-50, ${darkTheme.palette.grey[50]})`,
       },

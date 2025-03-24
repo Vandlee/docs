@@ -3,8 +3,8 @@ import * as React from 'react';
 import {
   unstable_useEventCallback as useEventCallback,
   unstable_useTimeout as useTimeout,
-} from '@u-shii/utils';
-import extractEventHandlers from '@u-shii/utils/extractEventHandlers';
+} from '@vandlee/utils';
+import extractEventHandlers from '@vandlee/utils/extractEventHandlers';
 import {
   UseSnackbarParameters,
   SnackbarCloseReason,

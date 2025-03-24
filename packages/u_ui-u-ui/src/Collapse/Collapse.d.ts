@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SxProps } from '@u-shii/system';
+import { SxProps } from '@u_ui/system';
 import { InternalStandardProps as StandardProps, Theme } from '..';
 import { TransitionProps } from '../transitions/transition';
 import { CollapseClasses } from './collapseClasses';

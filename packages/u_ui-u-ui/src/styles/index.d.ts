@@ -1,8 +1,8 @@
 export { default as THEME_ID } from './identifier';
 export {
   default as createTheme,
-  default as unstable_createUshiiStrictModeTheme,
-  createUshiiTheme,
+  default as unstable_createVandleeStrictModeTheme,
+  createVandleeTheme,
   ThemeOptions,
   Theme,
   CssThemeVariables,
@@ -47,7 +47,7 @@ export {
   BreakpointOverrides,
   Breakpoints,
   BreakpointsOptions,
-  CreateUshiiStyled,
+  CreateVandleeStyled,
   Interpolation,
   CSSInterpolation,
   CSSObject,
@@ -69,8 +69,8 @@ export {
   ColorObject,
   StyledEngineProvider,
   SxProps,
-} from '@u-shii/system';
-export { unstable_createBreakpoints } from '@u-shii/system/createBreakpoints';
+} from '@u_ui/system';
+export { unstable_createBreakpoints } from '@u_ui/system/createBreakpoints';
 // TODO: Remove this function in v6.
 // eslint-disable-next-line @typescript-eslint/naming-convention
 export function experimental_sx(): any;

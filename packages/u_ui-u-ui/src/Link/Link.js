@@ -2,10 +2,10 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { alpha } from '@u-shii/system/colorManipulator';
-import { elementTypeAcceptingRef } from '@u-shii/utils/elementTypeAcceptingRef';
-import composeClasses from '@u-shii/utils/composeClasses';
-import isFocusVisible from '@u-shii/utils/isFocusVisible';
+import { alpha } from '@u_ui/system/colorManipulator';
+import { elementTypeAcceptingRef } from '@vandlee/utils/elementTypeAcceptingRef';
+import composeClasses from '@vandlee/utils/composeClasses';
+import isFocusVisible from '@vandlee/utils/isFocusVisible';
 import capitalize from '../utils/capitalize';
 import { styled, useTheme } from '../zero-styled';
 import memoTheme from '../utils/memoTheme';

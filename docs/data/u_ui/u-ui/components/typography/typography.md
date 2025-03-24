@@ -11,7 +11,7 @@ githubSource: packages/u_ui-u-ui/src/Typography
 
 <p class="description">Utilice la tipografía para presentar su diseño y contenido de la forma más clara y eficaz posible.</p>
 
-{{"component": "@u-shii/docs/ComponentLinkHeader"}}
+{{"component": "@vandlee/docs/ComponentLinkHeader"}}
 
 ## Fuentes
 

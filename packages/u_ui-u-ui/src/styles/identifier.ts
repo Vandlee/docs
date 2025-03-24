@@ -1,1 +1,1 @@
-export default '$$u-shii';
+export default '$$ui';

@@ -1,0 +1,57 @@
+{
+  "name": "@vandlee/pigment-css",
+  "version": "1.0.0",
+  "author": "elchery",
+  "description": "A wrapper over Pigment CSS that provides the same styled and theming APIs as U-Ui.",
+  "main": "./src/index.ts",
+  "keywords": [
+    "react",
+    "vandlee",
+    "u_ui",
+    "u-ui",
+    "css-in-js",
+    "zero-runtime"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "pnpm build:modern && pnpm build:node && pnpm build:stable && pnpm build:types && pnpm build:copy-files",
+    "build:modern": "node ../../scripts/build.mjs modern",
+    "build:node": "node ../../scripts/build.mjs node",
+    "build:stable": "node ../../scripts/build.mjs stable",
+    "build:copy-files": "node ../../scripts/copyFiles.mjs styles.css",
+    "build:types": "node ../../scripts/buildTypes.mjs",
+    "prebuild": "rimraf build tsconfig.build.tsbuildinfo",
+    "release": "pnpm build && pnpm publish",
+    "test": "cd ../../ && cross-env NODE_ENV=test mocha 'packages/mui-material/**/*.test.?(c|m)[jt]s?(x)'",
+    "typescript": "tsc -p tsconfig.json",
+    "typescript:module-augmentation": "node scripts/testModuleAugmentation.js"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.26.7",
+    "@u_ui/system": "workspace:*"
+  },
+  "peerDependencies": {
+    "@pigment-css/react": "^0.0.30"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public",
+    "directory": "build"
+  },
+  "wyw-in-js": {
+    "tags": {
+      "styled": "@pigment-css/react/exports/styled",
+      "sx": "@pigment-css/react/exports/sx",
+      "keyframes": "@pigment-css/react/exports/keyframes",
+      "generateAtomics": "@pigment-css/react/exports/generateAtomics",
+      "css": "@pigment-css/react/exports/css",
+      "createUseThemeProps": "@pigment-css/react/exports/createUseThemeProps",
+      "internal_createExtendSxProp": "@pigment-css/react/exports/internal_createExtendSxProp",
+      "globalCss": "@pigment-css/react/exports/globalCss",
+      "useTheme": "@pigment-css/react/exports/useTheme"
+    }
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

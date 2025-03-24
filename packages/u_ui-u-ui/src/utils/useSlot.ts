@@ -1,10 +1,10 @@
 'use client';
 import * as React from 'react';
 import { ClassValue } from 'clsx';
-import useForkRef from '@u-shii/utils/useForkRef';
-import appendOwnerState from '@u-shii/utils/appendOwnerState';
-import resolveComponentProps from '@u-shii/utils/resolveComponentProps';
-import mergeSlotProps from '@u-shii/utils/mergeSlotProps';
+import useForkRef from '@vandlee/utils/useForkRef';
+import appendOwnerState from '@vandlee/utils/appendOwnerState';
+import resolveComponentProps from '@vandlee/utils/resolveComponentProps';
+import mergeSlotProps from '@vandlee/utils/mergeSlotProps';
 
 export type WithCommonProps<T> = T & {
   className?: string;
@@ -17,9 +17,9 @@ type EventHandlers = Record<string, React.EventHandler<any>>;
 type ExtractComponentProps<P> = P extends infer T | ((ownerState: any) => infer T) ? T : never;
 
 /**
- * An internal function to create a Material UI slot.
+ * An internal function to create a U-Ui slot.
  *
- * This is an advanced version of Base UI `useSlotProps` because Material UI allows leaf component to be customized via `component` prop
+ * This is an advanced version of Base UI `useSlotProps` because U-Ui allows leaf component to be customized via `component` prop
  * while Base UI does not need to support leaf component customization.
  *
  * @param {string} name: name of the slot
@@ -47,7 +47,7 @@ export default function useSlot<
   SlotOwnerState extends {},
 >(
   /**
-   * The slot's name. All Material UI components should have `root` slot.
+   * The slot's name. All U-Ui components should have `root` slot.
    *
    * If the name is `root`, the logic behaves differently from other slots,
    * e.g. the `externalForwardedProps` are spread to `root` slot but not other slots.
@@ -83,7 +83,7 @@ export default function useSlot<
      */
     internalForwardedProps?: any;
     /**
-     * Set to true if the `elementType` is a styled component of another Material UI component.
+     * Set to true if the `elementType` is a styled component of another U-Ui component.
      *
      * For example, the AlertRoot is a styled component of the Paper component.
      * This flag is used to forward the `component` and `slotProps.root.component` to the Paper component.

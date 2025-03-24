@@ -4,7 +4,7 @@ import {
   SxProps,
   CSSObject,
   SxConfig,
-} from '@u-shii/system';
+} from '@u_ui/system';
 import { Mixins, MixinsOptions } from './createMixins';
 import { Palette, PaletteOptions } from './createPalette';
 import { Typography, TypographyOptions } from './createTypography';
@@ -90,7 +90,7 @@ export interface Theme extends BaseTheme, CssVarsProperties {
  * @deprecated
  * Use `import { createTheme } from '@u_ui/u-ui/styles'` instead.
  */
-export function createUshiiTheme(options?: ThemeOptions, ...args: object[]): Theme;
+export function createVandleeTheme(options?: ThemeOptions, ...args: object[]): Theme;
 
 /**
  * Generate a theme base on the options received.

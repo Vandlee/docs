@@ -12,7 +12,7 @@ githubSource: packages/u_ui-u-ui/src/Snackbar
 
 <p class="description">Las snackbars (también conocdas como toasts) se utilizan para notificar brevemente los procesos que se han realizado o se van a realizar.</p>
 
-{{"component": "@u-shii/docs/ComponentLinkHeader"}}
+{{"component": "@vandlee/docs/ComponentLinkHeader"}}
 
 ## Introducción
 

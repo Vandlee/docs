@@ -1,9 +1,9 @@
-import deepmerge from '@u-shii/utils/deepmerge';
+import deepmerge from '@vandlee/utils/deepmerge';
 import styleFunctionSx, {
   unstable_defaultSxConfig as defaultSxConfig,
-} from '@u-shii/system/styleFunctionSx';
-import systemCreateTheme from '@u-shii/system/createTheme';
-import generateUtilityClass from '@u-shii/utils/generateUtilityClass';
+} from '@u_ui/system/styleFunctionSx';
+import systemCreateTheme from '@u_ui/system/createTheme';
+import generateUtilityClass from '@vandlee/utils/generateUtilityClass';
 import createMixins from './createMixins';
 import createPalette from './createPalette';
 import createTypography from './createTypography';
@@ -26,7 +26,7 @@ function createThemeNoVars(options = {}, ...args) {
 
   if (options.vars) {
     throw /* minify-error */ new Error(
-      'U-SHII: `vars` is a private field used for CSS variables support.\n' +
+      'VANDLEE: `vars` is a private field used for CSS variables support.\n' +
         'Please use another name.',
     );
   }
@@ -34,7 +34,7 @@ function createThemeNoVars(options = {}, ...args) {
   const palette = createPalette(paletteInput);
   const systemTheme = systemCreateTheme(options);
 
-  let ushiiTheme = deepmerge(systemTheme, {
+  let vandleeTheme = deepmerge(systemTheme, {
     mixins: createMixins(systemTheme.breakpoints, mixinsInput),
     palette,
     // Don't use [...shadows] until you've verified its transpiled code is not invoking the iterator protocol.
@@ -44,11 +44,11 @@ function createThemeNoVars(options = {}, ...args) {
     zIndex: { ...zIndex },
   });
 
-  ushiiTheme = deepmerge(ushiiTheme, other);
-  ushiiTheme = args.reduce((acc, argument) => deepmerge(acc, argument), ushiiTheme);
+  vandleeTheme = deepmerge(vandleeTheme, other);
+  vandleeTheme = args.reduce((acc, argument) => deepmerge(acc, argument), vandleeTheme);
 
   if (process.env.NODE_ENV !== 'production') {
-    // TODO v6: Refactor to use globalStateClassesMapping from @u-shii/utils once `readOnly` state class is used in Rating component.
+    // TODO v6: Refactor to use globalStateClassesMapping from @vandlee/utils once `readOnly` state class is used in Rating component.
     const stateClasses = [
       'active',
       'checked',
@@ -73,7 +73,7 @@ function createThemeNoVars(options = {}, ...args) {
             const stateClass = generateUtilityClass('', key);
             console.error(
               [
-                `U-SHII: The \`${component}\` component increases ` +
+                `VANDLEE: The \`${component}\` component increases ` +
                   `the CSS specificity of the \`${key}\` internal state.`,
                 'You can not override it like this: ',
                 JSON.stringify(node, null, 2),
@@ -99,8 +99,8 @@ function createThemeNoVars(options = {}, ...args) {
       }
     };
 
-    Object.keys(ushiiTheme.components).forEach((component) => {
-      const styleOverrides = ushiiTheme.components[component].styleOverrides;
+    Object.keys(vandleeTheme.components).forEach((component) => {
+      const styleOverrides = vandleeTheme.components[component].styleOverrides;
 
       if (styleOverrides && component.startsWith('ui')) {
         traverse(styleOverrides, component);
@@ -108,30 +108,30 @@ function createThemeNoVars(options = {}, ...args) {
     });
   }
 
-  ushiiTheme.unstable_sxConfig = {
+  vandleeTheme.unstable_sxConfig = {
     ...defaultSxConfig,
     ...other?.unstable_sxConfig,
   };
-  ushiiTheme.unstable_sx = function sx(props) {
+  vandleeTheme.unstable_sx = function sx(props) {
     return styleFunctionSx({
       sx: props,
       theme: this,
     });
   };
-  ushiiTheme.toRuntimeSource = stringifyTheme; // for Pigment CSS integration
+  vandleeTheme.toRuntimeSource = stringifyTheme; // for Pigment CSS integration
 
-  return ushiiTheme;
+  return vandleeTheme;
 }
 
 let warnedOnce = false;
 
-export function createUshiiTheme(...args) {
+export function createVandleeTheme(...args) {
   if (process.env.NODE_ENV !== 'production') {
     if (!warnedOnce) {
       warnedOnce = true;
       console.error(
         [
-          'U-SHII: the createUshiiTheme function was renamed to createTheme.',
+          'VANDLEE: the createVandleeTheme function was renamed to createTheme.',
           '',
           "You should use `import { createTheme } from '@u_ui/u-ui/styles'`",
         ].join('\n'),

@@ -1,3 +1,3 @@
-import useForkRef from '@u-shii/utils/useForkRef';
+import useForkRef from '@vandlee/utils/useForkRef';
 
 export default useForkRef;

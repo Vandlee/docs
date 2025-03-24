@@ -1,14 +1,14 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
-import { useTheme } from '@u-shii/system';
-import { exactProp } from '@u-shii/utils';
-import { Ad, AdGuest } from '@u-shii/docs/Ad';
+import { useTheme } from '@u_ui/system';
+import { exactProp } from '@vandlee/utils';
+import { Ad, AdGuest } from '@vandlee/docs/Ad';
 import RichMarkdownElement from 'docs/src/modules/components/RichMarkdownElement';
 import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
 import AppLayoutDocs from 'docs/src/modules/components/AppLayoutDocs';
-import { useUserLanguage } from '@u-shii/docs/i18n';
-import { BrandingProvider } from '@u-shii/docs/branding';
+import { useUserLanguage } from '@vandlee/docs/i18n';
+import { BrandingProvider } from '@vandlee/docs/branding';
 import Box from '@u_ui/u-ui/Box';
 import { styled } from '@u_ui/u-ui/styles';
 

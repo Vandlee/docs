@@ -2,13 +2,13 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import useTimeout, { Timeout } from '@u-shii/utils/useTimeout';
-import elementAcceptingRef from '@u-shii/utils/elementAcceptingRef';
-import composeClasses from '@u-shii/utils/composeClasses';
-import { alpha } from '@u-shii/system/colorManipulator';
-import { useRtl } from '@u-shii/system/RtlProvider';
-import isFocusVisible from '@u-shii/utils/isFocusVisible';
-import getReactElementRef from '@u-shii/utils/getReactElementRef';
+import useTimeout, { Timeout } from '@vandlee/utils/useTimeout';
+import elementAcceptingRef from '@vandlee/utils/elementAcceptingRef';
+import composeClasses from '@vandlee/utils/composeClasses';
+import { alpha } from '@u_ui/system/colorManipulator';
+import { useRtl } from '@u_ui/system/RtlProvider';
+import isFocusVisible from '@vandlee/utils/isFocusVisible';
+import getReactElementRef from '@vandlee/utils/getReactElementRef';
 import { styled, useTheme } from '../zero-styled';
 import memoTheme from '../utils/memoTheme';
 import { useDefaultProps } from '../DefaultPropsProvider';
@@ -170,7 +170,7 @@ const TooltipTooltip = styled('div', {
     padding: '4px 8px',
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: alpha((theme.vars || theme).palette.grey[500], .3),
+    borderColor: alpha(theme.palette.grey[500], .5),
     fontSize: theme.typography.pxToRem(13),
     maxWidth: 300,
     margin: 2,
@@ -282,7 +282,7 @@ const TooltipArrow = styled('span', {
     width: '1em',
     height: '0.71em' /* = width / sqrt(2) = (length of the hypotenuse) */,
     boxSizing: 'border-box',
-    color: theme.vars ? theme.vars.palette.Tooltip.bg : alpha(theme.palette.grey[600], 1),
+    color: alpha(theme.palette.grey[500], .9),
     '&::before': {
       content: '""',
       margin: 'auto',
@@ -391,7 +391,7 @@ const Tooltip = React.forwardRef(function Tooltip(inProps, ref) {
       ) {
         console.warn(
           [
-            'U-SHII: You are providing a disabled `button` child to the Tooltip component.',
+            'VANDLEE: You are providing a disabled `button` child to the Tooltip component.',
             'A disabled element does not fire events.',
             "Tooltip needs to listen to the child element's events to display the title.",
             '',
@@ -602,15 +602,15 @@ const Tooltip = React.forwardRef(function Tooltip(inProps, ref) {
   };
 
   if (process.env.NODE_ENV !== 'production') {
-    childrenProps['data-u-shii-internal-clone-element'] = true;
+    childrenProps['data-u-ui-internal-clone-element'] = true;
 
     // TODO: uncomment once we enable eslint-plugin-react-compiler // eslint-disable-next-line react-compiler/react-compiler
     // eslint-disable-next-line react-hooks/rules-of-hooks -- process.env never changes
     React.useEffect(() => {
-      if (childNode && !childNode.getAttribute('data-u-shii-internal-clone-element')) {
+      if (childNode && !childNode.getAttribute('data-u-ui-internal-clone-element')) {
         console.error(
           [
-            'U-SHII: The `children` component of the Tooltip is not forwarding its props correctly.',
+            'VANDLEE: The `children` component of the Tooltip is not forwarding its props correctly.',
             'Please make sure that props are spread on the same element that the ref is applied to.',
           ].join('\n'),
         );
@@ -649,7 +649,7 @@ const Tooltip = React.forwardRef(function Tooltip(inProps, ref) {
     if (children.props.title) {
       console.error(
         [
-          'U-SHII: You have provided a `title` prop to the child of <Tooltip />.',
+          'VANDLEE: You have provided a `title` prop to the child of <Tooltip />.',
           `Remove this title prop \`${children.props.title}\` or the Tooltip component.`,
         ].join('\n'),
       );

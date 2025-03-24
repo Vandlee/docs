@@ -13,13 +13,13 @@ githubSource: packages/u_ui-u-ui/src/List
 
 Las listas son un conjunto continuo de texto o imágenes. Se componen de elementos que contienen acciones primarias y complementarias, que se representan mediante iconos y texto.
 
-{{"component": "@u-shii/docs/ComponentLinkHeader"}}
+{{"component": "@vandlee/docs/ComponentLinkHeader"}}
 
 ## Introducción
 
 Las listas presentan información en un formato conciso y fácil de seguir mediante un índice vertical continuo de texto o imágenes.
 
-Las listas de Material UI se implementan mediante una colección de componentes relacionados:
+Las listas de U-Ui se implementan mediante una colección de componentes relacionados:
 
 - **Lista (List):** una envoltura para los elementos de lista. Por defecto se muestra como un `<ul>`.
 - **Elemento de lista (ListItem):** un elemento de lsita común. Por defecto se muestra como un `<li>`.

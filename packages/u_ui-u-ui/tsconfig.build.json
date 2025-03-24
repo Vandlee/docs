@@ -13,7 +13,7 @@
   "include": ["./src/**/*.ts*"],
   "exclude": ["src/**/*.spec.ts*", "src/**/*.test.ts*"],
   "references": [
-    { "path": "../u-shii-base/tsconfig.build.json" },
-    { "path": "../u-shii-system/tsconfig.build.json" }
+    { "path": "../u_ui-base/tsconfig.build.json" },
+    { "path": "../u_ui-system/tsconfig.build.json" }
   ]
 }

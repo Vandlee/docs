@@ -1,4 +1,4 @@
-// need to use commonjs export so that @u-shii/internal-markdown can use
+// need to use commonjs export so that @vandlee/internal-markdown can use
 module.exports = {
   enable_website_banner: false,
   enable_toc_banner: true,

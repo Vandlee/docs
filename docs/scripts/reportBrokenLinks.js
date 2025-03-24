@@ -47,8 +47,8 @@ Object.keys(usedLinks)
     //
     // <!-- #default-branch-switch -->
     //
-    write(`- https://u-shii.yugacore.com${linkKey}`);
-    console.log(`https://u-shii.yugacore.com${linkKey}`);
+    write(`- https://docs.vandlee.com${linkKey}`);
+    console.log(`https://docs.vandlee.com${linkKey}`);
 
     console.log(`used in`);
     usedLinks[linkKey].forEach((f) => console.log(`- ${path.relative(docsSpaceRoot, f)}`));

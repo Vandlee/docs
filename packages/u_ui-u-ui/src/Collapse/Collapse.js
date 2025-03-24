@@ -3,9 +3,9 @@ import * as React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { Transition } from 'react-transition-group';
-import useTimeout from '@u-shii/utils/useTimeout';
-import elementTypeAcceptingRef from '@u-shii/utils/elementTypeAcceptingRef';
-import composeClasses from '@u-shii/utils/composeClasses';
+import useTimeout from '@vandlee/utils/useTimeout';
+import elementTypeAcceptingRef from '@vandlee/utils/elementTypeAcceptingRef';
+import composeClasses from '@vandlee/utils/composeClasses';
 import { styled, useTheme } from '../zero-styled';
 import memoTheme from '../utils/memoTheme';
 import { useDefaultProps } from '../DefaultPropsProvider';
@@ -454,7 +454,7 @@ Collapse.propTypes /* remove-proptypes */ = {
 };
 
 if (Collapse) {
-  Collapse.ushiiSupportAuto = true;
+  Collapse.vandleeSupportAuto = true;
 }
 
 export default Collapse;

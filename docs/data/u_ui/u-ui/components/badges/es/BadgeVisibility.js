@@ -19,7 +19,7 @@ export default function BadgeVisibility() {
         '& > *': {
           marginBottom: 2,
         },
-        '& .u-shiiBadge-root': {
+        '& .uiBadge-root': {
           marginRight: 4,
         },
       }}

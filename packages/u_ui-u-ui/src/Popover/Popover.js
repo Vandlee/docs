@@ -2,12 +2,12 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import composeClasses from '@u-shii/utils/composeClasses';
-import HTMLElementType from '@u-shii/utils/HTMLElementType';
-import refType from '@u-shii/utils/refType';
-import elementTypeAcceptingRef from '@u-shii/utils/elementTypeAcceptingRef';
-import integerPropType from '@u-shii/utils/integerPropType';
-import chainPropTypes from '@u-shii/utils/chainPropTypes';
+import composeClasses from '@vandlee/utils/composeClasses';
+import HTMLElementType from '@vandlee/utils/HTMLElementType';
+import refType from '@vandlee/utils/refType';
+import elementTypeAcceptingRef from '@vandlee/utils/elementTypeAcceptingRef';
+import integerPropType from '@vandlee/utils/integerPropType';
+import chainPropTypes from '@vandlee/utils/chainPropTypes';
 import isHostComponent from '../utils/isHostComponent';
 import { styled } from '../zero-styled';
 import { useDefaultProps } from '../DefaultPropsProvider';
@@ -151,7 +151,7 @@ const Popover = React.forwardRef(function Popover(inProps, ref) {
       if (process.env.NODE_ENV !== 'production') {
         if (!anchorPosition) {
           console.error(
-            'U-SHII: You need to provide a `anchorPosition` prop when using ' +
+            'VANDLEE: You need to provide a `anchorPosition` prop when using ' +
               '<Popover anchorReference="anchorPosition" />.',
           );
         }
@@ -180,7 +180,7 @@ const Popover = React.forwardRef(function Popover(inProps, ref) {
       ) {
         console.warn(
           [
-            'U-SHII: The `anchorEl` prop provided to the component is invalid.',
+            'VANDLEE: The `anchorEl` prop provided to the component is invalid.',
             'The anchor element should be part of the document layout.',
             "Make sure the element is present in the document or that it's not display none.",
           ].join('\n'),
@@ -258,7 +258,7 @@ const Popover = React.forwardRef(function Popover(inProps, ref) {
         if (elemRect.height > heightThreshold && elemRect.height && heightThreshold) {
           console.error(
             [
-              'U-SHII: The popover component is too tall.',
+              'VANDLEE: The popover component is too tall.',
               `Some part of it can not be seen on the screen (${
                 elemRect.height - heightThreshold
               }px).`,
@@ -366,7 +366,7 @@ const Popover = React.forwardRef(function Popover(inProps, ref) {
 
   let transitionDuration = transitionDurationProp;
 
-  if (transitionDurationProp === 'auto' && !TransitionComponent.ushiiSupportAuto) {
+  if (transitionDurationProp === 'auto' && !TransitionComponent.vandleeSupportAuto) {
     transitionDuration = undefined;
   }
 
@@ -465,7 +465,7 @@ Popover.propTypes /* remove-proptypes */ = {
         ) {
           return new Error(
             [
-              'U-SHII: The `anchorEl` prop provided to the component is invalid.',
+              'VANDLEE: The `anchorEl` prop provided to the component is invalid.',
               'The anchor element should be part of the document layout.',
               "Make sure the element is present in the document or that it's not display none.",
             ].join('\n'),
@@ -474,7 +474,7 @@ Popover.propTypes /* remove-proptypes */ = {
       } else {
         return new Error(
           [
-            'U-SHII: The `anchorEl` prop provided to the component is invalid.',
+            'VANDLEE: The `anchorEl` prop provided to the component is invalid.',
             `It should be an Element or PopoverVirtualElement instance but it's \`${resolvedAnchorEl}\` instead.`,
           ].join('\n'),
         );
@@ -521,7 +521,7 @@ Popover.propTypes /* remove-proptypes */ = {
   /**
    * A backdrop component. This prop enables custom backdrop rendering.
    * @deprecated Use `slotProps.root.slots.backdrop` instead. While this prop currently works, it will be removed in the next major version.
-   * Use the `slotProps.root.slots.backdrop` prop to make your application ready for the next version of Material UI.
+   * Use the `slotProps.root.slots.backdrop` prop to make your application ready for the next version of U-Ui.
    * @default styled(Backdrop, {
    *   name: 'uiModal',
    *   slot: 'Backdrop',

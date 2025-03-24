@@ -2,7 +2,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import composeClasses from '@u-shii/utils/composeClasses';
+import composeClasses from '@vandlee/utils/composeClasses';
 import { styled } from '../zero-styled';
 import memoTheme from '../utils/memoTheme';
 import { useDefaultProps } from '../DefaultPropsProvider';
@@ -193,7 +193,7 @@ const AppBar = React.forwardRef(function AppBar(inProps, ref) {
       className={clsx(
         classes.root,
         {
-          'u-shii-fixed': position === 'fixed', // Useful for the Dialog
+          'vandlee-fixed': position === 'fixed', // Useful for the Dialog
         },
         className,
       )}

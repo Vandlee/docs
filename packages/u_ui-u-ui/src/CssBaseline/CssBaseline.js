@@ -80,7 +80,7 @@ export const styles = (theme, enableColorScheme = false) => {
   return defaultStyles;
 };
 
-const SELECTOR = 'u-shii-ecs';
+const SELECTOR = 'u-ui-ecs';
 const staticStyles = (theme) => {
   const result = styles(theme, false);
   const baseStyles = Array.isArray(result) ? result[0] : result;

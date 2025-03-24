@@ -2,8 +2,8 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Transition } from 'react-transition-group';
-import elementAcceptingRef from '@u-shii/utils/elementAcceptingRef';
-import getReactElementRef from '@u-shii/utils/getReactElementRef';
+import elementAcceptingRef from '@vandlee/utils/elementAcceptingRef';
+import getReactElementRef from '@vandlee/utils/getReactElementRef';
 import { useTheme } from '../zero-styled';
 import { reflow, getTransitionProps } from '../transitions/utils';
 import useForkRef from '../utils/useForkRef';

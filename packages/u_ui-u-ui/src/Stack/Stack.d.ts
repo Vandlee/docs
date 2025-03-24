@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ResponsiveStyleValue, SxProps, SystemProps } from '@u-shii/system';
+import { ResponsiveStyleValue, SxProps, SystemProps } from '@u_ui/system';
 import { OverrideProps, OverridableComponent } from '../OverridableComponent';
 import { Theme } from '../styles/createTheme';
 

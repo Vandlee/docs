@@ -3,10 +3,10 @@ import * as React from 'react';
 import { isFragment } from 'react-is';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import composeClasses from '@u-shii/utils/composeClasses';
-import HTMLElementType from '@u-shii/utils/HTMLElementType';
-import { useRtl } from '@u-shii/system/RtlProvider';
-import useSlotProps from '@u-shii/utils/useSlotProps';
+import composeClasses from '@vandlee/utils/composeClasses';
+import HTMLElementType from '@vandlee/utils/HTMLElementType';
+import { useRtl } from '@u_ui/system/RtlProvider';
+import useSlotProps from '@vandlee/utils/useSlotProps';
 import MenuList from '../MenuList';
 import Popover, { PopoverPaper } from '../Popover';
 import rootShouldForwardProp from '../styles/rootShouldForwardProp';
@@ -153,7 +153,7 @@ const Menu = React.forwardRef(function Menu(inProps, ref) {
             if (isFragment(child)) {
                 console.error(
                     [
-                        "U-SHII: The Menu component doesn't accept a Fragment as a child.",
+                        "VANDLEE: The Menu component doesn't accept a Fragment as a child.",
                         'Consider providing an array instead.',
                     ].join('\n'),
                 );

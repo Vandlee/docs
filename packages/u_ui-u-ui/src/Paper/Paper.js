@@ -2,9 +2,9 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { integerPropType, chainPropTypes } from '@u-shii/utils';
-import composeClasses from '@u-shii/utils/composeClasses';
-import { alpha } from '@u-shii/system';
+import { integerPropType, chainPropTypes } from '@vandlee/utils';
+import composeClasses from '@vandlee/utils/composeClasses';
+import { alpha } from '@u_ui/system';
 import { styled, useTheme } from '../zero-styled';
 import memoTheme from '../utils/memoTheme';
 import { useDefaultProps } from '../DefaultPropsProvider';
@@ -99,7 +99,7 @@ const Paper = React.forwardRef(function Paper(inProps, ref) {
     if (theme.shadows[elevation] === undefined) {
       console.error(
         [
-          `U-SHII: The elevation provided <Paper elevation={${elevation}}> is not avaible in the theme.`,
+          `VANDLEE: The elevation provided <Paper elevation={${elevation}}> is not avaible in the theme.`,
           `Please make sure that \`theme.shadows[${elevation}]\` is defined.`,
         ].join('\n'),
       );
@@ -164,7 +164,7 @@ Paper.propTypes /* remove-proptypes */ = {
     const { elevation, variant } = props;
     if (elevation > 0 && variant === 'outlined') {
       return new Error(
-        `U-SHII: Combining \`elevation={${elevation}}\` with \`variant="${variant}"\` has no effect. Either use \`elevation={0}\` or use a different \`variant\`.`,
+        `VANDLEE: Combining \`elevation={${elevation}}\` with \`variant="${variant}"\` has no effect. Either use \`elevation={0}\` or use a different \`variant\`.`,
       );
     }
 

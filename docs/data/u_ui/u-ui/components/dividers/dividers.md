@@ -11,7 +11,7 @@ githubSource: packages/u_ui-u-ui/src/Divider
 
 <p class="description">El componente Separador proporciona una línea fina y discreta para agrupar elementos y reforzar la jerarquía visual.</p>
 
-{{"component": "@u-shii/docs/ComponentLinkHeader"}}
+{{"component": "@vandlee/docs/ComponentLinkHeader"}}
 
 ## Introducción
 

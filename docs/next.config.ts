@@ -91,12 +91,12 @@ export default withDocsInfra({
           '@u_ui/u-ui$': path.resolve(workspaceRoot, 'packages/u_ui-u-ui/src/index.js'),
           '@u_ui/u-ui': path.resolve(workspaceRoot, 'packages/u_ui-u-ui/src'),
 
-          '@u-shii/docs': path.resolve(workspaceRoot, 'packages/u-shii-docs/src'),
-          '@u-shii/styled-engine': path.resolve(workspaceRoot, 'packages/u-shii-styled-engine/src'),
-          '@u-shii/system': path.resolve(workspaceRoot, 'packages/u-shii-system/src'),
-          '@u-shii/utils': path.resolve(workspaceRoot, 'packages/u-shii-utils/src'),
-          '@u-shii/base': path.resolve(workspaceRoot, 'packages/u-shii-base/src'),
-          '@u-shii/ui-nextjs': path.resolve(workspaceRoot, 'packages/u-shii-ui-nextjs/src'),
+          '@vandlee/docs': path.resolve(workspaceRoot, 'packages/vandlee-docs/src'),
+          '@u_ui/styled-engine': path.resolve(workspaceRoot, 'packages/u_ui-styled-engine/src'),
+          '@u_ui/system': path.resolve(workspaceRoot, 'packages/u_ui-system/src'),
+          '@vandlee/utils': path.resolve(workspaceRoot, 'packages/vandlee-utils/src'),
+          '@u_ui/base': path.resolve(workspaceRoot, 'packages/u_ui-base/src'),
+          '@u-ui/u-ui-nextjs': path.resolve(workspaceRoot, 'packages/u_ui-u-ui-nextjs/src'),
         },
         extensions: [
           '.tsx',
@@ -111,11 +111,11 @@ export default withDocsInfra({
             test: /\.md$/,
             oneOf: [
               {
-                resourceQuery: /u-shiiMarkdown/,
+                resourceQuery: /vandleeMarkdown/,
                 use: [
                   options.defaultLoaders.babel,
                   {
-                    loader: require.resolve('@u-shii/internal-markdown/loader'),
+                    loader: require.resolve('@vandlee/internal-markdown/loader'),
                     options: {
                       workspaceRoot,
                       ignoreLanguagePages: LANGUAGES_IGNORE_PAGES,
@@ -124,13 +124,13 @@ export default withDocsInfra({
                         {
                           productId: 'u-ui',
                           paths: [
-                            path.join(workspaceRoot, 'packages/u-shii-base/src'),
+                            path.join(workspaceRoot, 'packages/u_ui-base/src'),
                             path.join(workspaceRoot, 'packages/u_ui-u-ui/src'),
                           ],
                         },
                         {
                           productId: 'base-ui',
-                          paths: [path.join(workspaceRoot, 'packages/u-shii-base/src')],
+                          paths: [path.join(workspaceRoot, 'packages/u_ui-base/src')],
                         },
                       ],
                       env: {
@@ -166,7 +166,7 @@ export default withDocsInfra({
   env: {
     // docs-infra
     LIB_VERSION: pkg.version,
-    SOURCE_CODE_REPO: 'https://github.com/yugashiki/u-shii',
+    SOURCE_CODE_REPO: 'https://github.com/Vandlee/docs',
     SOURCE_GITHUB_BRANCH: 'master', // #default-branch-switch
     GITHUB_TEMPLATE_DOCS_FEEDBACK: '4.docs-feedback.yml',
     BUILD_ONLY_SPANISH_LOCALE: String(buildOnlySpanishLocale),

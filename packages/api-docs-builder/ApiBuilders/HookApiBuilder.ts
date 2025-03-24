@@ -24,7 +24,7 @@ async function annotateHookDefinition(
   hookJsdoc: Annotation,
   projectSettings: ProjectSettings,
 ) {
-  const HOST = projectSettings.baseApiUrl ?? 'https://u-shii.yugacore.com';
+  const HOST = projectSettings.baseApiUrl ?? 'https://docs.vandlee.com';
 
   const typesFilename = api.filename.replace(/\.js$/, '.d.ts');
   const fileName = path.parse(api.filename).name;
@@ -42,7 +42,7 @@ async function annotateHookDefinition(
   let end = null;
   traverse(typesAST, {
     ExportDefaultDeclaration(babelPath) {
-      if (api.filename.includes('ushii-base')) {
+      if (api.filename.includes('vandlee-base')) {
         // Base UI does not use default exports.
         return;
       }
@@ -100,7 +100,7 @@ async function annotateHookDefinition(
     },
 
     ExportNamedDeclaration(babelPath) {
-      if (!api.filename.includes('ushii-base')) {
+      if (!api.filename.includes('vandlee-base')) {
         return;
       }
 
@@ -378,13 +378,13 @@ const generateApiJson = async (outputDirectory: string, reactApi: HookReactApi) 
 const defaultGetHookImports = (name: string, filename: string) => {
   const githubPath = toGitHubPath(filename);
   const rootImportPath = githubPath.replace(
-    /\/packages\/u-shii(?:-(.+?))?\/src\/.*/,
-    (match, pkg) => `@u-shii/${pkg}`,
+    /\/packages\/u_ui(?:-(.+?))?\/src\/.*/,
+    (match, pkg) => `@u_ui/${pkg}`,
   );
 
   const subdirectoryImportPath = githubPath.replace(
-    /\/packages\/u-shii(?:-(.+?))?\/src\/([^\\/]+)\/.*/,
-    (match, pkg, directory) => `@u-shii/${pkg}/${directory}`,
+    /\/packages\/u_ui(?:-(.+?))?\/src\/([^\\/]+)\/.*/,
+    (match, pkg, directory) => `@u_ui/${pkg}/${directory}`,
   );
 
   let namedImportName = name;
@@ -394,7 +394,7 @@ const defaultGetHookImports = (name: string, filename: string) => {
     namedImportName = `unstable_${name} as ${name}`;
   }
 
-  const useNamedImports = rootImportPath === '@u-shii/base';
+  const useNamedImports = rootImportPath === '@u_ui/base';
 
   const subpathImport = useNamedImports
     ? `import { ${namedImportName} } from '${subdirectoryImportPath}';`

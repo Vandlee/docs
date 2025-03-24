@@ -7,11 +7,11 @@ import {
   unstable_ownerDocument as ownerDocument,
   unstable_useEnhancedEffect as useEnhancedEffect,
   unstable_useForkRef as useForkRef,
-} from '@u-shii/utils';
+} from '@vandlee/utils';
 import { createPopper, Instance, Modifier, Placement, State, VirtualElement } from '@popperjs/core';
 import PropTypes from 'prop-types';
-import composeClasses from '@u-shii/utils/composeClasses';
-import useSlotProps from '@u-shii/utils/useSlotProps';
+import composeClasses from '@vandlee/utils/composeClasses';
+import useSlotProps from '@vandlee/utils/useSlotProps';
 import Portal from '../Portal';
 import { getPopperUtilityClass } from './popperClasses';
 import { WithOptionalOwnerState } from '../utils/types';
@@ -157,7 +157,7 @@ const PopperTooltip = React.forwardRef<HTMLDivElement, PopperTooltipProps>(funct
         ) {
           console.warn(
             [
-              'U-SHII: The `anchorEl` prop provided to the component is invalid.',
+              'VANDLEE: The `anchorEl` prop provided to the component is invalid.',
               'The anchor element should be part of the document layout.',
               "Make sure the element is present in the document or that it's not display none.",
             ].join('\n'),
@@ -362,7 +362,7 @@ Popper.propTypes /* remove-proptypes */ = {
           ) {
             return new Error(
               [
-                'U-SHII: The `anchorEl` prop provided to the component is invalid.',
+                'VANDLEE: The `anchorEl` prop provided to the component is invalid.',
                 'The anchor element should be part of the document layout.',
                 "Make sure the element is present in the document or that it's not display none.",
               ].join('\n'),
@@ -377,7 +377,7 @@ Popper.propTypes /* remove-proptypes */ = {
         ) {
           return new Error(
             [
-              'U-SHII: The `anchorEl` prop provided to the component is invalid.',
+              'VANDLEE: The `anchorEl` prop provided to the component is invalid.',
               'It should be an HTML element instance or a virtualElement ',
               '(https://popper.js.org/docs/v2/virtual-elements/).',
             ].join('\n'),

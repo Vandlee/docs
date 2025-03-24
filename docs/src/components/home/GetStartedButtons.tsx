@@ -5,7 +5,7 @@ import Button from '@u_ui/u-ui/Button';
 import KeyboardArrowRightRounded from '@mui/icons-material/KeyboardArrowRightRounded';
 import ContentCopyRounded from '@mui/icons-material/ContentCopyRounded';
 import CheckRounded from '@mui/icons-material/CheckRounded';
-import { Link } from '@u-shii/docs/Link';
+import { Link } from '@vandlee/docs/Link';
 
 interface GetStartedButtonsProps extends BoxProps {
   primaryLabel?: string;
@@ -22,7 +22,7 @@ interface GetStartedButtonsProps extends BoxProps {
 export default function GetStartedButtons(props: GetStartedButtonsProps) {
   const [copied, setCopied] = React.useState(false);
   const {
-    primaryLabel = 'Get started',
+    primaryLabel = 'Empezar',
     primaryUrl,
     primaryUrlTarget = '_self',
     primaryColor = 'primary',

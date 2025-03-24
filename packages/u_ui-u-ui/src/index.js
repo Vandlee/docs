@@ -178,7 +178,7 @@ export * from './Zoom';
 export { default as GlobalStyles } from './GlobalStyles';
 export * from './GlobalStyles';
 
-export { unstable_composeClasses } from '@u-shii/utils';
+export { unstable_composeClasses } from '@vandlee/utils';
 
 export { default as generateUtilityClass } from './generateUtilityClass';
 export * from './generateUtilityClass';

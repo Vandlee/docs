@@ -1,3 +1,3 @@
-import useEventCallback from '@u-shii/utils/useEventCallback';
+import useEventCallback from '@vandlee/utils/useEventCallback';
 
 export default useEventCallback;

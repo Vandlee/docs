@@ -1,5 +1,5 @@
-import deepmerge from '@u-shii/utils/deepmerge';
-import { darken, getContrastRatio, lighten } from '@u-shii/system/colorManipulator';
+import deepmerge from '@vandlee/utils/deepmerge';
+import { darken, getContrastRatio, lighten } from '@u_ui/system/colorManipulator';
 import common from '../colors/common';
 import grey from '../colors/grey';
 import purple from '../colors/purple';
@@ -147,9 +147,9 @@ function getDefaultContrast(mode = 'light') {
 function getDefaultNeutral(mode = 'light') {
   if (mode === 'dark') {
     return {
-      main: grey[800],
+      main: grey[700],
       light: grey[50],
-      dark: grey[800],
+      dark: grey[600],
     };
   }
   return {
@@ -245,7 +245,7 @@ export default function createPalette(palette) {
       if (contrast < 3) {
         console.error(
           [
-            `U-SHII: The contrast ratio of ${contrast}:1 for ${contrastText} on ${background}`,
+            `VANDLEE: The contrast ratio of ${contrast}:1 for ${contrastText} on ${background}`,
             'falls below the WCAG recommended absolute minimum contrast ratio of 3:1.',
             'https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-contrast',
           ].join('\n'),
@@ -264,14 +264,14 @@ export default function createPalette(palette) {
 
     if (!color.hasOwnProperty('main')) {
       throw /* minify-error */ new Error(
-        `U-SHII: The color${name ? ` (${name})` : ''} provided to augmentColor(color) is invalid.\n` +
+        `VANDLEE: The color${name ? ` (${name})` : ''} provided to augmentColor(color) is invalid.\n` +
           `The color object needs to have a \`main\` property or a \`${mainShade}\` property.`,
       );
     }
 
     if (typeof color.main !== 'string') {
       throw /* minify-error */ new Error(
-        `U-SHII: The color${name ? ` (${name})` : ''} provided to augmentColor(color) is invalid.\n` +
+        `VANDLEE: The color${name ? ` (${name})` : ''} provided to augmentColor(color) is invalid.\n` +
           `\`color.main\` should be a string, but \`${JSON.stringify(color.main)}\` was provided instead.\n` +
           '\n' +
           'Did you intend to use one of the following approaches?\n' +
@@ -306,7 +306,7 @@ export default function createPalette(palette) {
 
   if (process.env.NODE_ENV !== 'production') {
     if (!modeHydrated) {
-      console.error(`U-SHII: The palette mode \`${mode}\` is not supported.`);
+      console.error(`VANDLEE: The palette mode \`${mode}\` is not supported.`);
     }
   }
 

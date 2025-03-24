@@ -1,4 +1,4 @@
-import type { UshiiProductId } from 'docs/src/modules/utils/getProductInfoFromUrl';
+import type { VandleeProductId } from 'docs/src/modules/utils/getProductInfoFromUrl';
 
 export type CodeStyling = 'Tailwind' | 'u_ui System';
 export type CodeVariant = 'TS' | 'JS';
@@ -13,7 +13,7 @@ export interface DemoData {
   raw: string;
   codeVariant: CodeVariant;
   githubLocation: string;
-  productId?: Exclude<UshiiProductId, 'null'>;
+  productId?: Exclude<VandleeProductId, 'null'>;
   codeStyling: CodeStyling;
   relativeModules?: RelativeModule[];
 }

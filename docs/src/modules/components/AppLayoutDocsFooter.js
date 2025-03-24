@@ -11,36 +11,41 @@ import Typography from '@u_ui/u-ui/Typography';
 import Tooltip from '@u_ui/u-ui/Tooltip';
 import Stack from '@u_ui/u-ui/Stack';
 import IconButton from '@u_ui/u-ui/IconButton';
-//
-import { Link } from '@u-shii/docs/Link';
-import PageContext from 'docs/src/modules/components/PageContext';
-import { useUserLanguage, useTranslate } from '@u-shii/docs/i18n';
-import { getCookie, pageToTitleI18n } from 'docs/src/modules/utils/helpers';
+// Icons
 import { ThumbUpAltRounded } from '@mui/icons-material';
-import { fontSize } from '@u-shii/system';
 import { ThumbDownAltRounded } from '@mui/icons-material';
 import { ChevronRightRounded } from '@mui/icons-material';
 import { ChevronLeftRounded } from '@mui/icons-material';
+import { PanToolRounded } from '@mui/icons-material';
+//
+import { Link } from '@vandlee/docs/Link';
+import PageContext from 'docs/src/modules/components/PageContext';
+import { useUserLanguage, useTranslate } from '@vandlee/docs/i18n';
+import { getCookie, pageToTitleI18n } from 'docs/src/modules/utils/helpers';
+import { fontSize } from '@u_ui/system';
+import { Alert, Box, Snackbar } from '@u_ui/u-ui';
 
 const FooterLink = styled(Link)(({ theme }) => {
-
+    return {
+        display: 'flex',
+    }
 });
 
 /**
  * @typedef {import('docs/src/pages').ui-Page} MuiPage
- * @typedef {import('docs/src/pages').OrderedUshiiPage} OrderedUshiiPage
+ * @typedef {import('docs/src/pages').OrderedVandleePage} OrderedVandleePage
  */
 
 /**
  * This function is flattening the pages tree and extracts all the leaves that are internal pages.
  * To extract the leaves, it skips all the nodes that have at least one child.
- * @param {UshiiPage[]} pages
- * @param {UshiiPage[]} [current]
- * @returns {OrderedUshiiPage[]}
+ * @param {VandleePage[]} pages
+ * @param {VandleePage[]} [current]
+ * @returns {OrderedVandleePage[]}
  */
 
 /**
- * @returns { { prevPage: OrderedUshiiPage | null; nextPage: OrderedUshiiPage | null } }
+ * @returns { { prevPage: OrderedVandleePage | null; nextPage: OrderedVandleePage | null } }
  */
 function usePageNeighbours() {
     const { activePage, pages } = React.useContext(PageContext);
@@ -78,20 +83,88 @@ function orderedPages(pages, current = []) {
     });
 }
 
-async function postFeedback(data) {
-    const env = process.env.DEPLOY_ENV === 'production' ? 'prod' : 'dev';
-    try {
-      const response = await fetch(`${process.env.FEEDBACK_URL}/${env}/feedback`, {
-        method: 'POST',
-        referrerPolicy: 'origin',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      });
-      return response.json();
-    } catch (error) {
-      console.error(error);
-      return null;
+async function postFeedbackOnDiscord(data) {
+    const { rating, comment, commentedSection, productId, language, page } = data;
+
+    const ratingIcon = rating === 1 ? '👍' : '👎';
+
+    let sentData = {
+        "embeds": [{
+            "title": `Feedback para ${productId}`,
+            "description": `${comment}`,
+            "fields": [
+                {
+                    "name": "rating",
+                    "value": ratingIcon,
+                    "inline": false
+                },
+                {
+                    "name": "Lenguaje",
+                    "value": language,
+                    "inline": false
+                },
+                {
+                    "name": "Page",
+                    "value": page,
+                    "inline": false
+                }
+            ]
+        }]
+    };
+
+    if (!comment || comment.length < 10) {
+        sentData = {
+            "embeds": [{
+                "title": `Feedback para ${productId}`,
+                "description": ratingIcon,
+                "fields": [
+                    {
+                        "name": "Lenguaje",
+                        "value": language,
+                        "inline": false
+                    },
+                    {
+                        "name": "Page",
+                        "value": page,
+                        "inline": false
+                    }
+                ]
+            }]
+        };
     }
+
+    try {
+        const rest = await fetch('https://discord.com/api/webhooks/1353593686067511358/iQbNFXK3XI8xTPT_43A1YXNOk72Q0EOmqcYUgZ0ZZOiKm3bw9HQbN0HePWjxX0X1Ern7', {
+            method: 'POST',
+            body: JSON.stringify(sentData),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+
+        if (!rest.ok) {
+            throw new Error(`HTTP ${rest.status}: ${rest.statusText}`);
+        }
+        return 'sent';
+    } catch (error) {
+        console.error(error);
+        return null;
+    }
+}
+
+async function submitFeedback(page, rating, comment, language, commentedSection, productId) {
+    const data = {
+        id: getCookie('feedbackId'),
+        page,
+        rating,
+        comment,
+        version: process.env.LIB_VERSION,
+        language,
+    };
+
+    const resultDiscord = await postFeedbackOnDiscord({ ...data, productId, commentedSection });
+    
+    return resultDiscord;
 }
 
 function getCurrentRating(pathname) {
@@ -116,6 +189,12 @@ export default function AppLayoutDocsFooter(props) {
     const userLanguage = useUserLanguage();
     const { activePage, productId } = React.useContext(PageContext);
     const [rating, setRating] = React.useState();
+    const [comment, setComment] = React.useState("");
+    const [snackbarOpen, setSnackbarOpen] = React.useState(false);
+    const [snackbarMessage, setSnackbarMessage] = React.useState(false);
+    const inputRef = React.useRef();
+    const [commentOpen, setCommentOpen] = React.useState(false);
+    const [commentedSection, setCommentedSection] = React.useState(EMPTY_SECTION);
 
     const { nextPage, prevPage } = usePageNeighbours();
     
@@ -248,22 +327,102 @@ export default function AppLayoutDocsFooter(props) {
                             {t('feedbackMessage')}
                         </Typography>
                         <Tooltip title={t('feedbackYes')}>
-                            <IconButton aria-pressed={rating === 1}>
+                            <IconButton color={rating === 1 ? 'contrast' : 'default'} onClick={handleClickThumb(1)} aria-pressed={rating === 1}>
                                 <ThumbUpAltRounded 
-                                    sx={{ fontSize: 15, color: rating === 0 ? 'error' : 'text.secondary' }}
+                                    sx={{ fontSize: 15 }}
                                 />
                             </IconButton>
                         </Tooltip>
                         <Tooltip title={t('feedbackNo')}>
-                            <IconButton aria-pressed={rating === 0}>
+                            <IconButton color={rating === 0 ? 'contrast' : 'default'} onClick={handleClickThumb(0)} aria-pressed={rating === 0}>
                                 <ThumbDownAltRounded 
-                                    sx={{ fontSize: 15, color: rating === 0 ? 'error' : 'text.secondary' }}
+                                    sx={{ fontSize: 15 }}
                                 />
                             </IconButton>
                         </Tooltip>
                     </Stack>
                 </Stack>
                 {/* Wrapper div to fix Collapse close animation */}
+                <div>
+                    <Collapse
+                        in={commentOpen}
+                        unmountOnExit
+                        onEntered={handleEntered}
+                        timeout={{ enter: 0, exit: theme.transitions.duration.standard }}
+                    >
+                        <Divider sx={{ my: 2, borderStyle: 'dashed' }} />
+                        {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
+                        <form
+                            aria-labelledby="feedback-message"
+                            onReset={handleCancelComment}
+                            onSubmit={handleSubmitComment}
+                            onKeyDown={handleKeyDownForm}
+                        >
+                            <div>
+                                {commentedSection.text ? (
+                                    <Typography 
+                                        variant="body2"
+                                        id="feedback-description"
+                                        dangerouslySetInnerHTML={{
+                                        __html: t('feedbackSectionSpecific').replace(
+                                            '{{sectionName}}',
+                                            `"${commentedSection.text}"`,
+                                        ),
+                                        }}
+                                        sx={{ color: 'text.secondary' }}
+                                    />
+                                ) : (
+                                    <Typography id="feedback-description" sx={{ color: 'text.secondary' }}>
+                                      {rating === 1 ? t('feedbackMessageUp') : t('feedbackMessageDown')}
+                                    </Typography>
+                                )}
+                                <textarea 
+                                    ref={inputRef}
+                                    style={{ 
+                                        width: '100%',
+                                        resize: 'none',
+                                        borderRadius: 12,
+                                        padding: '8px 12px',
+                                        marginTop: 8
+                                    }}
+                                    value={comment}
+                                    onChange={handleChangeTextfield}
+                                    aria-label={t('feedbackCommentLabel')}
+                                    aria-describedby={'feedback-description'}
+                                />
+                                {rating !== 1 && typeof window !== 'undefined' && (
+                                <Alert
+                                    severity="warning"
+                                    color="warning"
+                                    icon={<PanToolRounded fontSize="small" />}
+                                    sx={{ my: 1.5 }}
+                                >
+                                    <Typography id="feedback-description">
+                                    {t('feedbackMessageToGitHub.usecases')}{' '}
+                                    <Link
+                                        href={`${process.env.SOURCE_CODE_REPO}/issues/new?template=${process.env.GITHUB_TEMPLATE_DOCS_FEEDBACK}&page-url=${window.location.href}`}
+                                        target="_blank"
+                                        underline="always"
+                                        sx={{ fontWeight: 'semiBold' }}
+                                    >
+                                        {t('feedbackMessageToGitHub.callToAction.link')}
+                                    </Link>{' '}
+                                    {t('feedbackMessageToGitHub.reasonWhy')}
+                                    </Typography>
+                                </Alert>
+                                )}
+                                <Box sx={{ display: 'flex', justifyContent: 'flex-end', gap: 1}}>
+                                    <Button type="reset" size="small">
+                                        {t('cancel')}
+                                    </Button>
+                                    <Button type="submit" variant="contained" size="small">
+                                        {t('submit')}
+                                    </Button>
+                                </Box>
+                            </div>
+                        </form>
+                    </Collapse>
+                </div>
                 <Divider sx={{ my: 2 }} />
                 {hidePagePagination ? null : (
                     <Stack direction="row" sx={{ justifyContent: 'space-between' }}>
@@ -299,6 +458,17 @@ export default function AppLayoutDocsFooter(props) {
                     </Stack>
                 )}
             </Stack>
+            <Snackbar
+                open={snackbarOpen}
+                autoHideDuration={3000}
+                onClose={handleCloseSnackbar}
+                message={snackbarMessage}
+            />
         </React.Fragment>
     )
 }
+
+AppLayoutDocsFooter.propTypes = {
+    location: PropTypes.string.isRequired,
+    tableOfContents: PropTypes.array,
+};  

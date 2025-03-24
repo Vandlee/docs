@@ -1,4 +1,4 @@
-import { SxProps } from '@u-shii/system';
+import { SxProps } from '@u_ui/system';
 import { OverridableStringUnion } from '@mui/types';
 import * as React from 'react';
 import { Theme } from '..';

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SxProps } from '@u-shii/system';
+import { SxProps } from '@u_ui/system';
 import { OverrideProps } from '@mui/types';
 import { SlotComponentProps } from '../utils/types';
 import { PortalProps } from '../Portal';
@@ -30,7 +30,7 @@ export interface ModalOwnProps {
     /**
      * A backdrop component. This prop enables custom backdrop rendering.
      * @deprecated Use `slots.backdrop` instead. While this prop currently works, it will be removed in the next major version.
-     * Use the `slots.backdrop` prop to make your application ready for the next version of Material UI.
+     * Use the `slots.backdrop` prop to make your application ready for the next version of U-Ui.
      * @default styled(Backdrop, {
      *   name: 'uiModal',
      *   slot: 'Backdrop',

@@ -9,7 +9,7 @@ import {
   unstable_useForkRef as useForkRef,
   unstable_setRef as setRef,
   unstable_getReactElementRef as getReactElementRef,
-} from '@u-shii/utils';
+} from '@vandlee/utils';
 import { PortalProps } from './Portal.types';
 
 function getContainer(container: PortalProps['container']) {

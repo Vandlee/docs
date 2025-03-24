@@ -4,8 +4,8 @@ import NextHead from 'next/head';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
 import uiPkgJson from 'packages/u_ui-u-ui/package.json';
-import systemPkgJson from 'packages/u-shii-system/package.json';
-import basePkgJson from 'packages/u-shii-base/package.json';
+import systemPkgJson from 'packages/u_ui-system/package.json';
+import basePkgJson from 'packages/u_ui-base/package.json';
 import generalDocsPages from 'docs/data/docs/pages';
 
 import uUiPages from 'docs/data/u_ui/u-ui/pages';
@@ -15,7 +15,7 @@ import pythonPages from 'docs/data/u-docs/python/pages';
 
 import PageContext from 'docs/src/modules/components/PageContext';
 
-import { CodeCopyProvider } from '@u-shii/docs/CodeCopy';
+import { CodeCopyProvider } from '@vandlee/docs/CodeCopy';
 import { ThemeProvider } from 'docs/src/modules/components/ThemeContext';
 import { CodeVariantProvider } from 'docs/src/modules/utils/codeVariant';
 import { CodeStylingProvider } from 'docs/src/modules/utils/codeStylingSolution';
@@ -24,9 +24,9 @@ import createEmotionCache from 'docs/src/createEmotionCache';
 import findActivePage from 'docs/src/modules/utils/findActivePage';
 import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
 import getProductInfoFromUrl from 'docs/src/modules/utils/getProductInfoFromUrl';
-import { DocsProvider } from '@u-shii/docs/DocsProvider';
-import { mapTranslations } from '@u-shii/docs/i18n';
-import SvgUshiiLogomark, { UshiiSvgWordmarkString } from 'docs/src/icons/SvgUshiiLogomark';
+import { DocsProvider } from '@vandlee/docs/DocsProvider';
+import { mapTranslations } from '@vandlee/docs/i18n';
+import SvgZuroLogomark, { zuroSvgWordmarkString } from 'docs/src/icons/SvgZuro';
 import './global.css';
 import '../public/static/components-gallery/base-theme.css';
 import * as config from '../config';
@@ -37,6 +37,42 @@ import SvgPythonLogomark from 'docs/src/icons/SvgPython';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
+
+const PRODUCTS_METADATA = {
+  'u-ui': {
+    name: 'U-Ui',
+    url: '/u_ui/u-ui/',
+    logo: SvgU_UiLogomark,
+    logoSvg: U_UiSvgLogoString,
+    wordmarkSvg: U_UiSvgWordmarkString,
+    versions: [{ text: `v${uiPkgJson.version}`, current: true }],
+  },
+  javascript: {
+    name: 'JavaScript',
+    url: '/u-docs/javascript/',
+    logo: SvgJavaScriptLogomark,
+    versions: [{ text: `v1`, current: true }],
+  },
+  php: {
+    name: 'PHP',
+    url: '/u-docs/php/',
+    logo: SvgPHPLogomark,
+    versions: [{ text: `v1`, current: true }],
+  },
+  python: {
+    name: 'Python',
+    url: '/u-docs/python/',
+    logo: SvgPythonLogomark,
+    versions: [{ text: `v1`, current: true }],
+  },
+}
+
+const PRODUCT_PAGES = {
+  'u-ui': uUiPages,
+  javascript: javascriptPages,
+  php: phpPages,
+  python: pythonPages,
+};
 
 let reloadInterval;
 
@@ -95,7 +131,7 @@ async function registerServiceWorker() {
   if (
     'serviceWorker' in navigator &&
     process.env.NODE_ENV === 'production' &&
-    window.location.host.includes('docs.u-shii.com')
+    window.location.host.includes('docs.vandlee.com')
   ) {
     const registration = await navigator.serviceWorker.register('/sw.js');
 
@@ -150,92 +186,27 @@ function AppWrapper(props) {
   const productIdentifier = React.useMemo(() => {
     const languagePrefix = pageProps.userLanguage === 'es' ? '' : `/${pageProps.userLanguage}`;
 
-    if (productCategoryId === 'u_ui') {
-      if (productId === 'u-ui') {
-        return {
-          metadata: '',
-          name: 'U-Ui',
-          url: "/u-ui/",
-          productCategory: productCategoryId,
-          logo: SvgU_UiLogomark,
-          logoSvg: U_UiSvgLogoString,
-          wordmarkSvg: U_UiSvgWordmarkString,
-          versions: [{ text: `v${uiPkgJson.version}`, current: true }],
-        };
-      }
-    }
+    if (!productId || !PRODUCTS_METADATA[productId]) return null;
 
-    if (productCategoryId === 'u-docs') {
-      if (productId === 'javascript') {
-        return {
-          metadata: '',
-          name: 'JavaScript',
-          url: "/u-docs/javascript/",
-          productCategory: productCategoryId,
-          logo: SvgJavaScriptLogomark,
-          logoSvg: U_UiSvgLogoString,
-          wordmarkSvg: U_UiSvgWordmarkString,
-          versions: [{ text: `v1`, current: true }],
-        };
-      }
-      if (productId === 'php') {
-        return {
-          metadata: '',
-          name: 'PHP',
-          url: "/u-docs/php/",
-          productCategory: productCategoryId,
-          logo: SvgPHPLogomark,
-          logoSvg: U_UiSvgLogoString,
-          wordmarkSvg: U_UiSvgWordmarkString,
-          versions: [{ text: `v1`, current: true }],
-        };
-      }
-      if (productId === 'python') {
-        return {
-          metadata: '',
-          name: 'JavaScript',
-          url: "/u-docs/python/",
-          productCategory: productCategoryId,
-          logo: SvgPythonLogomark,
-          logoSvg: U_UiSvgLogoString,
-          wordmarkSvg: U_UiSvgWordmarkString,
-          versions: [{ text: `v1`, current: true }],
-        };
-      }
+    return {
+      ...PRODUCTS_METADATA[productId],
+      productCategoryId: productCategoryId,
     }
-
-    return null;
+    
   }, [pageProps.userLanguage, productId]);
 
   const pageContextValue = React.useMemo(() => {
-    let pages = generalDocsPages;
-    if (productCategoryId === 'u_ui') {
-      if (productId === 'u-ui') {
-        pages = uUiPages;
-      }
-    }
-
-    if (productCategoryId === 'u-docs') {
-      if (productId === 'javascript') {
-        pages = javascriptPages;
-      }
-      if (productId === 'php') {
-        pages = phpPages;
-      }
-      if (productId === 'python') {
-        pages = pythonPages;
-      }
-    }
-
+    let pages = PRODUCT_PAGES[productId] || generalDocsPages;
+    
     const { activePage, activePageParents } = findActivePage(pages, router.pathname);
 
-    return {
-      activePage,
-      activePageParents,
-      pages,
-      productIdentifier,
-      productId,
-      productCategoryId,
+    return { 
+      activePage, 
+      activePageParents, 
+      pages, 
+      productIdentifier, 
+      productId, 
+      productCategoryId
     };
   }, [productId, productCategoryId, productIdentifier, router.pathname]);
 
@@ -253,8 +224,8 @@ function AppWrapper(props) {
         {fonts.map((font) => (
           <link rel="stylesheet" href={font} key={font} />
         ))}
-        <meta name="ushii:productId" content={productId} />
-        <meta name="ushii:productCategoryId" content={productCategoryId} />
+        <meta name="vandlee:productId" content={productId} />
+        <meta name="vandlee:productCategoryId" content={productCategoryId} />
       </NextHead>
       <DocsProvider
         config={config}

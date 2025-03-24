@@ -1,7 +1,7 @@
 import * as React from 'react';
 import copy from 'clipboard-copy';
-import { Link } from '@u-shii/docs/Link';
-import { Portal } from '@u-shii/base/Portal';
+import { Link } from '@vandlee/docs/Link';
+import { Portal } from '@u_ui/base/Portal';
 import Box from '@u_ui/u-ui/Box';
 import Snackbar from '@u_ui/u-ui/Snackbar';
 import Menu from '@u_ui/u-ui/Menu';
@@ -9,12 +9,9 @@ import MenuItem from '@u_ui/u-ui/MenuItem';
 import Slide from '@u_ui/u-ui/Slide';
 import { TextFieldsRounded, CheckCircleRounded } from '@mui/icons-material';
 import { RootSvgProps } from 'docs/src/icons/RootSvg';
-import SvgUshiiLogomark, {
-  UshiiSvgLogoString,
-  UshiiSvgWordmarkString
-} from 'docs/src/icons/SvgUshiiLogomark';
 import { useRouter } from 'next/router';
 import getProductInfoFromUrl from 'docs/src/modules/utils/getProductInfoFromUrl';
+import SvgDocsLogomark, { docsSvgLogoString, docsSvgWordmarkString } from 'docs/src/icons/SvgDocs';
 
 interface LogoWithCopyMenuProps {
   logo?: React.ComponentType<RootSvgProps>;
@@ -25,9 +22,9 @@ interface LogoWithCopyMenuProps {
 }
 
 export default function LogoWithCopyMenu({
-  logo: LogoSvg = SvgUshiiLogomark,
-  logoSvgString = UshiiSvgLogoString,
-  wordmarkSvgString = UshiiSvgWordmarkString,
+  logo: LogoSvg = SvgDocsLogomark,
+  logoSvgString = docsSvgLogoString,
+  wordmarkSvgString = docsSvgWordmarkString,
   url = '/',
   marginLeft,
 }: LogoWithCopyMenuProps) {
@@ -78,7 +75,7 @@ export default function LogoWithCopyMenu({
           '& > svg': { m: '0 !important' },
         }}
       >
-        <LogoSvg height={productCategoryId === 'u-docs' && url !== '/' ? 21 : 30} />
+        <LogoSvg height={url === "/" ? 18 : (productCategoryId === 'u-docs' && url !== '/' ? 21 : 30)} />
       </Box>
       <Menu
         open={contextMenu !== null}

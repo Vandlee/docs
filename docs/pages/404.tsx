@@ -8,7 +8,7 @@ import AppHeaderBanner from 'docs/src/components/banner/AppHeaderBanner';
 export default function Custom404() {
   return (
     <BrandingCssVarsProvider>
-      <Head title="404: Esta página no pudo ser encontrada - u-shii" description="" />
+      <Head title="404: Esta página no pudo ser encontrada - Vandlee" description="" />
       <AppHeaderBanner />
       <AppHeader />
       <main id="main-content">

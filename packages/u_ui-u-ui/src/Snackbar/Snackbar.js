@@ -1,8 +1,8 @@
 'use client';
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import composeClasses from '@u-shii/utils/composeClasses';
-import useSlotProps from '@u-shii/utils/useSlotProps';
+import composeClasses from '@vandlee/utils/composeClasses';
+import useSlotProps from '@vandlee/utils/useSlotProps';
 import useSnackbar from './useSnackbar';
 import ClickAwayListener from '../ClickAwayListener';
 import { styled, useTheme } from '../zero-styled';

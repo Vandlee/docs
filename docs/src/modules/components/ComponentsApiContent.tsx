@@ -3,12 +3,12 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import kebabCase from 'lodash/kebabCase';
 import { useRouter } from 'next/router';
-import exactProp from '@u-shii/utils/exactProp';
-import { Translate, useTranslate, useUserLanguage } from '@u-shii/docs/i18n';
-import { SectionTitle, SectionTitleProps } from '@u-shii/docs/SectionTitle';
-import { HighlightedCode } from '@u-shii/docs/HighlightedCode';
-import { MarkdownElement } from '@u-shii/docs/MarkdownElement';
-import { ComponentApiContent, PropsTranslations } from '@u-shii-internal/api-docs-builder';
+import exactProp from '@vandlee/utils/exactProp';
+import { Translate, useTranslate, useUserLanguage } from '@vandlee/docs/i18n';
+import { SectionTitle, SectionTitleProps } from '@vandlee/docs/SectionTitle';
+import { HighlightedCode } from '@vandlee/docs/HighlightedCode';
+import { MarkdownElement } from '@vandlee/docs/MarkdownElement';
+import { ComponentApiContent, PropsTranslations } from '@vandlee-internal/api-docs-builder';
 import PropertiesSection from 'docs/src/modules/components/ApiPage/sections/PropertiesSection';
 import ClassesSection from 'docs/src/modules/components/ApiPage/sections/ClassesSection';
 import SlotsSection from 'docs/src/modules/components/ApiPage/sections/SlotsSection';
@@ -112,8 +112,8 @@ export default function ComponentsApiContent(props: ComponentsApiContentProps) {
       const { classDescriptions, propDescriptions, slotDescriptions } =
         descriptions[key][userLanguage] || descriptions[key].es;
   
-      const isJoyComponent = filename.includes('ushii-joy');
-      const isBaseComponent = filename.includes('ushii-base');
+      const isJoyComponent = filename.includes('vandlee-joy');
+      const isBaseComponent = filename.includes('vandlee-base');
       const defaultPropsLink = isJoyComponent
         ? '/joy-ui/customization/themed-components/#theme-default-props'
         : '/u-ui/customization/theme-components/#theme-default-props';

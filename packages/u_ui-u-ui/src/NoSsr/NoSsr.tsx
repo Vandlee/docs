@@ -1,7 +1,7 @@
 'use client';
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { exactProp, unstable_useEnhancedEffect as useEnhancedEffect } from '@u-shii/utils';
+import { exactProp, unstable_useEnhancedEffect as useEnhancedEffect } from '@vandlee/utils';
 import { NoSsrProps } from './NoSsr.types';
 
 /**

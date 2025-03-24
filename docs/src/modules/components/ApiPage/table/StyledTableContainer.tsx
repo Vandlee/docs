@@ -1,5 +1,5 @@
 import { styled, alpha } from '@u_ui/u-ui/styles';
-import { brandingDarkTheme as darkTheme } from '@u-shii/docs/branding';
+import { brandingDarkTheme as darkTheme } from '@vandlee/docs/branding';
 
 export const StyledScrollTableContainer = styled('div')(
   ({ theme }) => ({
@@ -48,7 +48,7 @@ const StyledTableContainer = styled('div')(
     },
   }),
   ({ theme }) => ({
-    [`:where(${theme.vars ? '[data-u-shii-color-scheme="dark"]' : '.mode-dark'}) &`]: {
+    [`:where(${theme.vars ? '[data-u-ui-color-scheme="dark"]' : '.mode-dark'}) &`]: {
       '& table': {
         background: [
           `linear-gradient(to right, ${theme.palette.primaryDark[900]} 5%, transparent 80%) local`,

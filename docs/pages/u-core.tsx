@@ -13,7 +13,7 @@ export default function UCore() {
                 description='Get a growing list of React components, ready-to-use, free forever and with accessibility always in mind.'
             />
             <AppHeaderBanner />
-            <AppHeader gitHubRepository='https://github.com/yugashiki/u-shii' />
+            <AppHeader gitHubRepository='https://github.com/vandlee/docs' />
             <main id="main-content">
                 hola
                 <Divider />

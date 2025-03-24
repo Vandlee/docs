@@ -12,7 +12,7 @@ githubSource: packages/u_ui-u-ui/src/Container
 
 Aunque los contenedores pueden anidarse, la mayoría de los diseños no requieren un contenedor anidado.
 
-{{"component": "@u-shii/docs/ComponentLinkHeader", "design": false}}
+{{"component": "@vandlee/docs/ComponentLinkHeader", "design": false}}
 
 ## Fluido
 

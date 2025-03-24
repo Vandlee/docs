@@ -1,7 +1,7 @@
 'use client';
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import composeClasses from '@u-shii/utils/composeClasses';
+import composeClasses from '@vandlee/utils/composeClasses';
 import Typography, { typographyClasses } from '../Typography';
 import { styled } from '../zero-styled';
 import { useDefaultProps } from '../DefaultPropsProvider';

@@ -1,18 +1,18 @@
-import _formatUshiiErrorMessage from '@u-shii/utils/formatUshiiErrorMessage';
+import _formatUiErrorMessage from '@vandlee/utils/formatUiErrorMessage';
 const foo = 'foo';
 const bar = 'bar';
 throw new Error(
   process.env.NODE_ENV !== 'production'
-    ? `U-SHII: ${foo}, ${bar}`
-    : _formatUshiiErrorMessage(1, foo, bar),
+    ? `VANDLEE: ${foo}, ${bar}`
+    : _formatUiErrorMessage(1, foo, bar),
 );
 throw new Error(
   process.env.NODE_ENV !== 'production'
-    ? `U-SHII: ${foo}` + `, ${bar}`
-    : _formatUshiiErrorMessage(1, foo, bar),
+    ? `VANDLEE: ${foo}` + `, ${bar}`
+    : _formatUiErrorMessage(1, foo, bar),
 );
 throw new Error(
   process.env.NODE_ENV !== 'production'
-    ? 'U-SHII: ' + `${foo}, ${bar}`
-    : _formatUshiiErrorMessage(1, foo, bar),
+    ? 'VANDLEE: ' + `${foo}, ${bar}`
+    : _formatUiErrorMessage(1, foo, bar),
 );

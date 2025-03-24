@@ -4,7 +4,7 @@ import {
   GetPropsFromComponentDeclarationOptions,
   getPropsFromComponentNode,
   TypeScriptProject,
-} from '@u-shii/internal-docs-utils';
+} from '@vandlee-internal/docs-utils';
 import {
   createUnionType,
   createUndefinedType,

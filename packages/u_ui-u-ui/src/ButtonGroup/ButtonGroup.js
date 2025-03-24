@@ -2,9 +2,9 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import composeClasses from '@u-shii/utils/composeClasses';
-import { alpha } from '@u-shii/system/colorManipulator';
-import getValidReactChildren from '@u-shii/utils/getValidReactChildren';
+import composeClasses from '@vandlee/utils/composeClasses';
+import { alpha } from '@u_ui/system/colorManipulator';
+import getValidReactChildren from '@vandlee/utils/getValidReactChildren';
 import capitalize from '../utils/capitalize';
 import { styled } from '../zero-styled';
 import memoTheme from '../utils/memoTheme';

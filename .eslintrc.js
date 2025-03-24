@@ -19,7 +19,7 @@ const OneLevelImportMessage = [
 // This only applies to packages published from this monorepo.
 // If you build a library around `@u_ui/u-ui` you can safely use `createStyles` without running into the same issue as we are.
 const forbidCreateStylesMessage =
-  'Use `u-shii Styles<ClassKey, Props>` instead if the styles are exported. Otherwise use `as const` assertions. ' +
+  'Use `Styles<ClassKey, Props>` instead if the styles are exported. Otherwise use `as const` assertions. ' +
   '`createStyles` will lead to inlined, at-compile-time-resolved type-imports. ' +
   'See https://github.com/microsoft/TypeScript/issues/36097#issuecomment-578324386 for more information';
 
@@ -30,24 +30,21 @@ const NO_RESTRICTED_IMPORTS_PATHS_TOP_LEVEL_PACKAGES = [
     name: '@u_ui/u-ui',
     message: OneLevelImportMessage,
   },
-  {
-    name: '@u-shii/lab',
-    message: OneLevelImportMessage,
-  },
 ];
 
 const NO_RESTRICTED_IMPORTS_PATTERNS_DEEPLY_NESTED = [
   {
     group: [
-      '@u-shii/*/*/*',
+      '@u_ui/*/*/*',
+      '@vandlee/*/*/*',
       '@pigment-css/*/*/*',
       '@base-ui/*/*/*',
       // Allow any import depth with any internal packages
-      '!@u-shii/internal-*/**',
+      '!@vandlee/internal-*/**',
       // TODO delete
       '@base-ui-components/*/*/*', // Wait for migration to @base-ui/
       '@base_ui/*/*/*', // Legacy, moved to @base-ui-components/
-      '!@u-shii/docs/**', // @u-shii/docs should be @u-shii/internal-docs
+      '!@vandlee/docs/**', // @vandlee/docs should be @u-shii/internal-docs
     ],
     message: OneLevelImportMessage,
   },
@@ -72,7 +69,7 @@ module.exports = /** @type {Config} */ ({
     ecmaVersion: 7,
   },
   plugins: [
-    'eslint-plugin-u-shii',
+    'eslint-plugin-u_ui',
     'eslint-plugin-react-hooks',
     '@typescript-eslint/eslint-plugin',
     'eslint-plugin-filenames',
@@ -351,7 +348,7 @@ module.exports = /** @type {Config} */ ({
       rules: {
         'material-ui/no-hardcoded-labels': [
           'error',
-          { allow: ['u-shii', 'X', 'GitHub', 'Stack Overflow'] },
+          { allow: ['Vandlee', 'u_ui', 'X', 'GitHub', 'Stack Overflow'] },
         ],
       },
     },
@@ -414,10 +411,9 @@ module.exports = /** @type {Config} */ ({
         '*.spec.*',
         '*.test.*',
         // deprecated library
-        '**/u-shii-base/**/*',
-        '**/u-shii-joy/**/*',
+        '**/u_ui-base/**/*',
         // used internally, not used on app router yet
-        '**/u-shii-docs/**/*',
+        '**/vandlee-docs/**/*',
       ],
       rules: {
         'material-ui/disallow-react-api-in-server-components': 'error',
@@ -437,18 +433,18 @@ module.exports = /** @type {Config} */ ({
                 message: forbidCreateStylesMessage,
               },
               {
-                name: '@u-shii/styles',
+                name: '@u_ui/styles',
                 importNames: ['createStyles'],
                 message: forbidCreateStylesMessage,
               },
               {
-                name: '@u-shii/styles/createStyles',
+                name: '@u_ui/styles/createStyles',
                 message: forbidCreateStylesMessage,
               },
             ],
             patterns: [
               // Allow deeper imports for TypeScript types. TODO?
-              '@u-shii/*/*/*/*',
+              '@u_ui/*/*/*/*',
             ],
           },
         ],
@@ -513,7 +509,7 @@ module.exports = /** @type {Config} */ ({
       files: ['packages/*/src/**/*.?(c|m)[jt]s?(x)'],
       excludedFiles: ['*.d.ts', '*.spec.*'],
       rules: {
-        'u-shii-ui/u-shii-name-matches-component-name': 'error',
+        'u_ui-u-ui/u-ui-name-matches-component-name': 'error',
       },
     },
     {
@@ -530,7 +526,7 @@ module.exports = /** @type {Config} */ ({
       },
     },
     {
-      files: ['packages/u-shii-base/src/**/**{.ts,.tsx}'],
+      files: ['packages/u_ui-base/src/**/**{.ts,.tsx}'],
       rules: {
         'import/no-default-export': 'error',
         'import/prefer-default-export': 'off',

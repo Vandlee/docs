@@ -12,7 +12,7 @@ export default function JavaScript() {
         description="ui is an open-source React component library"
       />
       <AppHeaderBanner />
-      <AppHeader gitHubRepository="https://github.com/yugashiki/u-shii" />
+      <AppHeader gitHubRepository="https://github.com/vandlee/docs" />
       <main id="main-content">
         <JavaScriptHero />
       </main>

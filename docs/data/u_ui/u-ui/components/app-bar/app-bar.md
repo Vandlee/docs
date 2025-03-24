@@ -15,7 +15,7 @@ La barra de aplicación superior proporciona contenido y acciones relacionadas c
 
 Puede transformarse en una barra de acción contextual o utilizarse como barra de navegación.
 
-{{"component": "@u-shii/docs/ComponentLinkHeader"}}
+{{"component": "@vandlee/docs/ComponentLinkHeader"}}
 
 ## Barra de aplicación básica
 

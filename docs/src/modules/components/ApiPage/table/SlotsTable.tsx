@@ -1,11 +1,11 @@
 /* eslint-disable react/no-danger */
 import * as React from 'react';
-import { useTranslate } from '@u-shii/docs/i18n';
+import { useTranslate } from '@vandlee/docs/i18n';
 import { styled, alpha } from '@u_ui/u-ui/styles';
 import {
   brandingDarkTheme as darkTheme,
   brandingLightTheme as lightTheme,
-} from '@u-shii/docs/branding';
+} from '@vandlee/docs/branding';
 import StyledTableContainer, { StyledScrollTableContainer } from 'docs/src/modules/components/ApiPage/table/StyledTableContainer';
 import { SlotDefinition } from 'docs/src/modules/components/ApiPage/definitions/slots';
 
@@ -50,7 +50,7 @@ const StyledTable = styled('table')(
     },
   }),
   ({ theme }) => ({
-    [`:where(${theme.vars ? '[data-u-shii-color-scheme="dark"]' : '.mode-dark'}) &`]: {
+    [`:where(${theme.vars ? '[data-u-ui-color-scheme="dark"]' : '.mode-dark'}) &`]: {
       '& .slot-name': {
         color: `var(--uidocs-palette-primary-200, ${darkTheme.palette.primary[200]})`,
       },

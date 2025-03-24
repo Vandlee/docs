@@ -1,0 +1,9 @@
+<Button variant="contained" onClick={handleChange}>
+  {checked ? 'Ocultar' : 'Mostrar'}
+</Button>
+<Box sx={{ display: 'flex' }}>
+  <Zoom in={checked}>{icon}</Zoom>
+  <Zoom in={checked} style={{ transitionDelay: checked ? '500ms' : '0ms' }}>
+    {icon}
+  </Zoom>
+</Box>

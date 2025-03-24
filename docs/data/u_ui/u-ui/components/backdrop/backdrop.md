@@ -13,7 +13,7 @@ githubSource: packages/u_ui-u-ui/src/Backdrop
 El Backdrop señala un cambio de estado dentro de la aplicación y puede ser usado para crear cargadores, diálogos y más.
 En su forma más simple, el componente Backdrop añadirá una capa atenuada sobre su aplicación.
 
-{{"component": "@u-shii/docs/ComponentLinkHeader"}}
+{{"component": "@vandlee/docs/ComponentLinkHeader"}}
 
 ## Ejemplo
 

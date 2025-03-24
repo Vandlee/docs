@@ -1,6 +1,6 @@
 'use client';
 import * as React from 'react';
-import { DefaultTheme } from '@u-shii/system';
+import { DefaultTheme } from '@u_ui/system';
 import ThemeProviderNoVars from './ThemeProviderNoVars';
 import { CssThemeVariables } from './createThemeNoVars';
 import { CssVarsProvider } from './ThemeProviderWithVars';
@@ -49,12 +49,12 @@ export interface ThemeProviderProps<Theme = DefaultTheme> extends ThemeProviderC
   storageWindow?: Window | null;
   /**
    * localStorage key used to store application `mode`
-   * @default 'u-shii-mode'
+   * @default 'u-ui-mode'
    */
   modeStorageKey?: string;
   /**
    * localStorage key used to store `colorScheme`
-   * @default 'u-shii-color-scheme'
+   * @default 'u-ui-color-scheme'
    */
   colorSchemeStorageKey?: string;
   /*
@@ -77,8 +77,8 @@ export default function ThemeProvider<Theme = DefaultTheme>({
   if (typeof theme === 'function') {
     return <ThemeProviderNoVars theme={theme} {...props} />;
   }
-  const ushiiTheme = (THEME_ID in theme ? theme[THEME_ID] : theme) as ThemeProviderProps['theme'];
-  if (!('colorSchemes' in ushiiTheme)) {
+  const vandleeTheme = (THEME_ID in theme ? theme[THEME_ID] : theme) as ThemeProviderProps['theme'];
+  if (!('colorSchemes' in vandleeTheme)) {
     return <ThemeProviderNoVars theme={theme} {...props} />;
   }
   return <CssVarsProvider theme={theme as unknown as CssVarsTheme} {...props} />;

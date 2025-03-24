@@ -4,15 +4,15 @@ import copy from 'clipboard-copy';
 import { useRouter } from 'next/router';
 import { debounce } from '@u_ui/u-ui/utils';
 import { alpha, styled } from '@u_ui/u-ui/styles';
-import { Tabs } from '@u-shii/base/Tabs';
-import { TabPanel } from '@u-shii/base/TabPanel';
-import { unstable_useId as useId } from '@u-shii/utils';
+import { Tabs } from '@u_ui/base/Tabs';
+import { TabPanel } from '@u_ui/base/TabPanel';
+import { unstable_useId as useId } from '@vandlee/utils';
 import IconButton from '@u_ui/u-ui/IconButton';
 import Box from '@u_ui/u-ui/Box';
 import Collapse from '@u_ui/u-ui/Collapse';
 import NoSsr from '@u_ui/u-ui/NoSsr';
-import { HighlightedCode } from '@u-shii/docs/HighlightedCode';
-import { CodeTab, CodeTabList } from '@u-shii/docs/HighlightedCodeWithTabs';
+import { HighlightedCode } from '@vandlee/docs/HighlightedCode';
+import { CodeTab, CodeTabList } from '@vandlee/docs/HighlightedCodeWithTabs';
 import { ContentCopyRounded } from '@mui/icons-material';
 import { LibraryAddCheckRounded } from '@mui/icons-material';
 import DemoSandbox from 'docs/src/modules/components/DemoSandbox';
@@ -23,10 +23,10 @@ import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
 import { useCodeVariant } from 'docs/src/modules/utils/codeVariant';
 import { useCodeStyling } from 'docs/src/modules/utils/codeStylingSolution';
 import { CODE_VARIANTS, CODE_STYLING } from 'docs/src/modules/constants';
-import { useUserLanguage, useTranslate } from '@u-shii/docs/i18n';
+import { useUserLanguage, useTranslate } from '@vandlee/docs/i18n';
 import stylingSolutionMapping from 'docs/src/modules/utils/stylingSolutionMapping';
 import DemoToolbarRoot from 'docs/src/modules/components/DemoToolbarRoot';
-import { grey } from '@u-shii/docs/branding';
+import { grey } from '@vandlee/docs/branding';
 import { useTheme } from '@u_ui/u-ui/styles';
 
 function trimLeadingSpaces(input = '') {
@@ -250,8 +250,6 @@ function useDemoElement({ demoData, editorCode, setDebouncedError, liveDemoActiv
     ),
     [demoData, debouncedSetError, editorCode.isPreview, editorCode.value],
   );
-
-  console.log('demoData', demoData)
 
   if (demoData.codeVariant === CODE_VARIANTS.HTML) {
     return <IframeLayout editorCode={editorCode} />

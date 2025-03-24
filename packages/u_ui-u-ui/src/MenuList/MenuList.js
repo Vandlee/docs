@@ -4,7 +4,7 @@ import { isFragment } from 'react-is';
 import PropTypes from 'prop-types';
 import ownerDocument from '../utils/ownerDocument';
 import List from '../List';
-import getScrollbarSize from '@u-shii/utils/getScrollbarSize';
+import getScrollbarSize from '@vandlee/utils/getScrollbarSize';
 import useForkRef from '../utils/useForkRef';
 import useEnhancedEffect from '../utils/useEnhancedEffect';
 import { ownerWindow } from '../utils';
@@ -237,7 +237,7 @@ const MenuList = React.forwardRef(function MenuList(props, ref) {
             if (isFragment(child)) {
                 console.error(
                     [
-                        "U-SHII: The Menu component doesn't accept a Fragment as a child.",
+                        "VANDLEE: The Menu component doesn't accept a Fragment as a child.",
                         'Consider providing an array instead.',
                     ].join('\n'),
                 );
@@ -254,7 +254,7 @@ const MenuList = React.forwardRef(function MenuList(props, ref) {
     
         if (
             activeItemIndex === index &&
-            (child.props.disabled || child.props.ushiiSkipListHighlight || child.type.ushiiSkipListHighlight)
+            (child.props.disabled || child.props.vandleeSkipListHighlight || child.type.vandleeSkipListHighlight)
         ) {
             activeItemIndex += 1;
             if (activeItemIndex >= children.length) {

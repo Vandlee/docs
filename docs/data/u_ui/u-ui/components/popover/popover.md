@@ -15,7 +15,7 @@ Cosas a saber cuando se utiliza el componente `Popover`:
 - El componente está construido sobre el componente [`Modal`](/u_ui/u-ui/react-modal/).
 - A diferencia del componente [`Popper`](/u_ui/u-ui/react-popper/), el desplazamiento y el clic están bloqueados.
 
-{{"component": "@u-shii/docs/ComponentLinkHeader", "design": false}}
+{{"component": "@vandlee/docs/ComponentLinkHeader", "design": false}}
 
 ## Popover básico
 

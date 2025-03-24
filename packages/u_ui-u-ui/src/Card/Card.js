@@ -2,8 +2,8 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import chainPropTypes from '@u-shii/utils/chainPropTypes';
-import composeClasses from '@u-shii/utils/composeClasses';
+import chainPropTypes from '@vandlee/utils/chainPropTypes';
+import composeClasses from '@vandlee/utils/composeClasses';
 import { styled } from '../zero-styled';
 import { useDefaultProps } from '../DefaultPropsProvider';
 import Paper from '../Paper';
@@ -73,7 +73,7 @@ Card.propTypes /* remove-proptypes */ = {
    */
   raised: chainPropTypes(PropTypes.bool, (props) => {
     if (props.raised && props.variant === 'outlined') {
-      return new Error('U-SHII: Combining `raised={true}` with `variant="outlined"` has no effect.');
+      return new Error('VANDLEE: Combining `raised={true}` with `variant="outlined"` has no effect.');
     }
 
     return null;

@@ -15,7 +15,7 @@ Para resaltar grupos de botones de alternancia relacionados,
 un grupo debe compartir un contenedor común.
 El `ToggleButtonGroup` controla el estado seleccionado de sus botones hijos cuando se le da su propio prop `value`.
 
-{{"component": "@u-shii/docs/ComponentLinkHeader"}}
+{{"component": "@vandlee/docs/ComponentLinkHeader"}}
 
 ## Selección exclusiva
 

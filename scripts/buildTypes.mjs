@@ -13,14 +13,14 @@ const $$ = $({ stdio: 'inherit' });
  * @param {string} importPath - POSIX path
  */
 function rewriteImportPath(importPath) {
-  const coreSrcPath = path.posix.join('..', 'u-shii-ui', 'src');
+  const coreSrcPath = path.posix.join('..', 'u_ui-u-ui', 'src');
   if (importPath.startsWith(coreSrcPath)) {
     return importPath.replace(coreSrcPath, '@u_ui/u-ui');
   }
 
-  const systemSrcPath = path.posix.join('..', 'u-shii-system', 'src');
+  const systemSrcPath = path.posix.join('..', 'u_ui-system', 'src');
   if (importPath.startsWith(systemSrcPath)) {
-    return importPath.replace(systemSrcPath, '@u-shii/system');
+    return importPath.replace(systemSrcPath, '@u_ui/system');
   }
 
   throw new Error(`Don't know where to rewrite '${importPath}' to`);

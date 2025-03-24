@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { OverridableStringUnion } from '@mui/types';
-import { SxProps, SystemProps } from '@u-shii/system';
+import { SxProps, SystemProps } from '@u_ui/system';
 import { Theme, TypeText } from '../styles';
 import { OverrideProps, OverridableComponent } from '../OverridableComponent';
 import { Variant } from '../styles/createTypography';

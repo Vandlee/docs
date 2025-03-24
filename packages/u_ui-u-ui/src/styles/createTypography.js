@@ -1,4 +1,4 @@
-import deepmerge from '@u-shii/utils/deepmerge';
+import deepmerge from '@vandlee/utils/deepmerge';
 
 function round(value) {
   return Math.round(value * 1e5) / 1e5;
@@ -34,11 +34,11 @@ export default function createTypography(palette, typography) {
 
   if (process.env.NODE_ENV !== 'production') {
     if (typeof fontSize !== 'number') {
-      console.error('U-SHII: `fontSize` is required to be a number.');
+      console.error('VANDLEE: `fontSize` is required to be a number.');
     }
 
     if (typeof htmlFontSize !== 'number') {
-      console.error('U-SHII: `htmlFontSize` is required to be a number.');
+      console.error('VANDLEE: `htmlFontSize` is required to be a number.');
     }
   }
 
@@ -73,7 +73,7 @@ export default function createTypography(palette, typography) {
     button: buildVariant(fontWeightMedium, 14, 1.75, 1.25, caseAllCaps, robotoFontFamily),
     caption: buildVariant(fontWeightRegular, 12, 1.66, 0.4, undefined, robotoFontFamily),
     overline: buildVariant(fontWeightRegular, 10, 2.66, 1.5, caseAllCaps, robotoFontFamily),
-    // TODO v6: Remove handling of 'inherit' variant from the theme as it is already handled in Material UI's Typography component. Also, remember to remove the associated types.
+    // TODO v6: Remove handling of 'inherit' variant from the theme as it is already handled in U-Ui's Typography component. Also, remember to remove the associated types.
     inherit: {
       fontFamily: 'inherit',
       fontWeight: 'inherit',

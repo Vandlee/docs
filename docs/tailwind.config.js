@@ -6,7 +6,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ['class', '[data-u-shii-color-scheme="dark"]'],
+  darkMode: ['class', '[data-u-ui-color-scheme="dark"]'],
   content: [
     './data/**/*.{js,ts,jsx,tsx,mdx}',
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -56,7 +56,7 @@ module.exports = {
     },
   },
   corePlugins: {
-    // Remove the Tailwind CSS preflight styles so it can use Material UI's preflight instead (CssBaseline).
+    // Remove the Tailwind CSS preflight styles so it can use U-Ui's preflight instead (CssBaseline).
     preflight: false,
   },
   plugins: [
@@ -73,9 +73,9 @@ module.exports = {
         'required',
         'selected',
       ].forEach((state) => {
-        addVariant(`ui-${state}`, [`&[class~="u-shii-${state}"]`, `&[class~="base--${state}"]`]);
+        addVariant(`ui-${state}`, [`&[class~="u-ui-${state}"]`, `&[class~="base--${state}"]`]);
         addVariant(`ui-not-${state}`, [
-          `&:not([class~="u-shii-${state}"])`,
+          `&:not([class~="u-ui-${state}"])`,
           `&:not([class~="base--${state}"])`,
         ]);
       });
@@ -83,12 +83,12 @@ module.exports = {
       // for focus-visible, use the same selector as headlessui
       // https://github.com/tailwindlabs/headlessui/blob/main/packages/%40headlessui-tailwindcss/src/index.ts#LL35C11-L35C11
       addVariant(`ui-focus-visible`, [
-        `&[class~="u-shii-focusVisible"]`,
+        `&[class~="u-ui-focusVisible"]`,
         `&[class~="base--focusVisible"]`,
         `&:focus-visible`,
       ]);
       addVariant(`ui-not-focus-visible`, [
-        `&:not([class~="u-shii-focusVisible"])`,
+        `&:not([class~="u-ui-focusVisible"])`,
         `&:not([class~="base--focusVisible"])`,
       ]);
     }),

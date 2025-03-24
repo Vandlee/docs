@@ -1,10 +1,10 @@
-import type { UshiiPage } from 'docs/src/u-shiiPage';
+import type { VandleePage } from 'docs/src/vandleePage';
 import standardNavIcons from 'docs/src/modules/components/AppNavIcons';
 
-const pages: readonly UshiiPage[] = [
-  { pathname: 'https://u-shii.yugacore.com/versions/' },
+const pages: readonly VandleePage[] = [
+  { pathname: 'https://docs.vandlee.com/versions/' },
   {
-    pathname: 'https://u-shii.yugacore.com/store/',
+    pathname: 'https://docs.vandlee.com/store/',
     title: 'Templates',
     icon: standardNavIcons.ReaderIcon,
     linkProps: {
@@ -13,7 +13,7 @@ const pages: readonly UshiiPage[] = [
       'data-ga-event-label': 'sidenav',
     },
   },
-  { pathname: 'https://u-shii.yugacore.com/blog/', title: 'Blog', icon: standardNavIcons.BookIcon },
+  { pathname: 'https://docs.vandlee.com/blog/', title: 'Blog', icon: standardNavIcons.BookIcon },
 ];
 
 export default pages;

@@ -23,7 +23,7 @@ export type StandardProps<
   
 /**
  * @internal
- * ONLY USE FROM WITHIN u-shii/u-ui
+ * ONLY USE FROM WITHIN u-ui/u-ui
  *
  * Internal helper type for conform (describeConformance) components
  * However, we don't declare classes on this type.
@@ -230,7 +230,7 @@ export * from './GlobalStyles';
  */
 export { StyledEngineProvider } from './styles';
 
-export { unstable_composeClasses } from '@u-shii/utils';
+export { unstable_composeClasses } from '@vandlee/utils';
 
 export { default as generateUtilityClass } from './generateUtilityClass';
 export * from './generateUtilityClass';

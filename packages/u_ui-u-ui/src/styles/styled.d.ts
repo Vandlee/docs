@@ -1,4 +1,4 @@
-import { CreateUshiiStyled } from '@u-shii/system';
+import { CreateVandleeStyled } from '@u_ui/system';
 import { Theme } from './createTheme';
 
 export { default as slotShouldForwardProp } from './slotShouldForwardProp';
@@ -10,6 +10,6 @@ export { default as rootShouldForwardProp } from './rootShouldForwardProp';
  * @param options Styled options for the created component.
  * @returns React component that has styles attached to it.
  */
-declare const styled: CreateUshiiStyled<Theme>;
+declare const styled: CreateVandleeStyled<Theme>;
 
 export default styled;

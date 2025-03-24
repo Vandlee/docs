@@ -2,8 +2,8 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import chainPropTypes from '@u-shii/utils/chainPropTypes';
-import composeClasses from '@u-shii/utils/composeClasses';
+import chainPropTypes from '@vandlee/utils/chainPropTypes';
+import composeClasses from '@vandlee/utils/composeClasses';
 import { styled } from '../zero-styled';
 import { useDefaultProps } from '../DefaultPropsProvider';
 import { getCardMediaUtilityClass } from './cardMediaClasses';
@@ -95,7 +95,7 @@ CardMedia.propTypes /* remove-proptypes */ = {
   children: chainPropTypes(PropTypes.node, (props) => {
     if (!props.children && !props.image && !props.src && !props.component) {
       return new Error(
-        'U-SHII: Either `children`, `image`, `src` or `component` prop must be specified.',
+        'VANDLEE: Either `children`, `image`, `src` or `component` prop must be specified.',
       );
     }
     return null;

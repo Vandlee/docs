@@ -3,7 +3,7 @@ import path from 'path';
 import * as ts from 'typescript';
 import * as prettier from 'prettier';
 import kebabCase from 'lodash/kebabCase';
-import { getLineFeed } from '@u-shii/internal-docs-utils';
+import { getLineFeed } from '@vandlee-internal/docs-utils';
 import { replaceComponentLinks } from './utils/replaceUrl';
 import { TypeScriptProject } from './utils/createTypeScriptProject';
 
@@ -65,7 +65,7 @@ let systemComponents: string[] | undefined;
 export function getSystemComponents() {
   if (!systemComponents) {
     systemComponents = fs
-      .readdirSync(path.resolve('packages', 'ushii-system', 'src'))
+      .readdirSync(path.resolve('packages', 'vandlee-system', 'src'))
       // Normalization, the Unstable_ prefix doesn't count.
       .map((pathname) => pathname.replace('Unstable_', ''))
       .filter((pathname) => pathname.match(/^[A-Z][a-zA-Z]+$/));
@@ -73,8 +73,8 @@ export function getSystemComponents() {
   return systemComponents;
 }
 
-export function getUshiiName(name: string) {
-  return `Ushii${name.replace('Styled', '')}`;
+export function getVandleeName(name: string) {
+  return `Vandlee${name.replace('Styled', '')}`;
 }
 
 export function extractPackageFile(filePath: string) {
@@ -88,7 +88,7 @@ export function extractPackageFile(filePath: string) {
   };
   return {
     ...result,
-    ushiiPackage: result.packagePath?.replace('x-', 'u-shii-'),
+    vandleePackage: result.packagePath?.replace('x-', 'u_ui-'),
   };
 }
 

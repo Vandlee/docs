@@ -7,15 +7,18 @@ import Typography from '@u_ui/u-ui/Typography';
 import GradientText from 'docs/src/components/typography/GradientText';
 import GetStartedButtons from 'docs/src/components/home/GetStartedButtons';
 import ROUTES from 'docs/src/route';
-import { getDesignTokens } from '@u-shii/docs/branding';
-import { Link } from '@u-shii/docs/Link';
+import { getDesignTokens } from '@vandlee/docs/branding';
+import { Link } from '@vandlee/docs/Link';
+import { Alert, Avatar, Button, Divider, List, ListItem, ListItemAvatar, ListItemText, Stack } from '@u_ui/u-ui';
+import { CheckCircleRounded } from '@mui/icons-material';
+import { DownloadRounded } from '@mui/icons-material';
 
 const { palette: lightPalette } = getDesignTokens('light');
 const { palette: darkPalette } = getDesignTokens('dark');
 
 const customTheme = extendTheme({
   cssVarPrefix: 'hero',
-  colorSchemeSelector: 'data-u-shii-color-scheme',
+  colorSchemeSelector: 'data-u-ui-color-scheme',
   colorSchemes: {
     light: {
       palette: {
@@ -59,7 +62,7 @@ export default function UIHero() {
             ]}
           >
             {/* <IconImage loading="eager" width={28} height={28} name="product-core" />{' '}
-            */}<Link href={ROUTES.productCore}>U-Core</Link>{' '}
+            */}<Link href={ROUTES.productu_ui}>u_ui</Link>{' '}
             <Typography component="span" variant="inherit" sx={{ color: 'grey.400' }}>
               /
             </Typography>
@@ -68,10 +71,10 @@ export default function UIHero() {
             </Typography>
           </Typography>
           <Typography variant="h1" sx={{ my: 2, maxWidth: 500 }}>
-            Ready to use <br />
-            <GradientText color="primary">Ushii</GradientText>
+            Componentes <br />
+            <GradientText color="primary">React</GradientText>
             <br />
-            components
+            Listos para usar
           </Typography>
           <GetStartedButtons
             primaryUrl={ROUTES['docs-u_ui-u-ui']}
@@ -89,19 +92,6 @@ export default function UIHero() {
       }}
       right={
         <CssVarsProvider theme={customTheme}>
-          <Paper sx={{ maxWidth: 780, p: 2, mb: 4 }}>
-                        {/* <Stepper activeStep={1}>
-                            <Step>
-                                <StepLabel>Search for React UI libraries</StepLabel>
-                            </Step>
-                            <Step>
-                                <StepLabel>Spot Material UI</StepLabel>
-                            </Step>
-                            <Step>
-                                <StepLabel>Choose Material UI</StepLabel>
-                            </Step>
-                        </Stepper> */}
-          </Paper>
           <Box
             sx={{
               '& > div': {
@@ -111,196 +101,70 @@ export default function UIHero() {
               },
             }}
           >
-            {/* <Stack spacing={4} useFlexGap>
-                        <div>
-                            <Accordion
-                            elevation={0}
-                            variant="outlined"
-                            defaultExpanded
-                            disableGutters
-                            sx={{ borderBottom: 0 }}
-                            >
-                            <AccordionSummary
-                                expandIcon={<ExpandMoreRoundedIcon fontSize="small" />}
-                                aria-controls="panel1a-content"
-                                id="panel1a-header"
-                            >
-                                <Typography variant="body2">Usage</Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography variant="body2">
-                                Material UI components work in isolation. They are self-contained, and will
-                                only inject the styles they need to display.
-                                </Typography>
-                            </AccordionDetails>
-                            </Accordion>
-                            <Accordion elevation={0} variant="outlined" disableGutters>
-                            <AccordionSummary
-                                expandIcon={<ExpandMoreRoundedIcon fontSize="small" />}
-                                aria-controls="panel2a-content"
-                                id="panel2a-header"
-                            >
-                                <Typography variant="body2">Globals</Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography variant="body2">
-                                Material UI understands a handful of important globals that you&apos;ll need
-                                to be aware of.
-                                </Typography>
-                            </AccordionDetails>
-                            </Accordion>
-                            <Accordion disabled elevation={0} disableGutters>
-                            <AccordionSummary
-                                expandIcon={<ExpandMoreRoundedIcon fontSize="small" />}
-                                aria-controls="panel3a-content"
-                                id="panel3a-header"
-                            >
-                                <Typography variant="body2">Secret Files</Typography>
-                            </AccordionSummary>
-                            </Accordion>
-                        </div>
-                        <Alert variant="filled" color="info" icon={<CheckCircleRounded fontSize="small" />}>
-                            Check Material UI out now!
-                        </Alert>
-                        <SwitchToggleDemo />
-                        <TabsDemo />
-                        <Paper elevation={0} variant="outlined" sx={{ overflow: 'hidden' }}>
-                            <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-                            <ListItem alignItems="flex-start">
-                                <ListItemAvatar>
-                                <Avatar alt="elcheryu-u" src="/static/images/avatar/1.jpg" />
-                                </ListItemAvatar>
-                                <ListItemText
-                                primary="Brunch this weekend?"
-                                secondary={
-                                    <React.Fragment>
-                                    <Typography
-                                        component="span"
-                                        variant="body2"
-                                        sx={{ color: 'text.primary', display: 'inline' }}
-                                    >
-                                        Michael Scott
-                                    </Typography>
-                                    {" — I'll be in your neighborhood doing errands this…"}
-                                    </React.Fragment>
-                                }
-                                />
-                            </ListItem>
-                            <Divider variant="inset" component="li" />
-                            <ListItem alignItems="flex-start">
-                                <ListItemAvatar>
-                                <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
-                                </ListItemAvatar>
-                                <ListItemText
-                                primary="Summer BBQ"
-                                secondary={
-                                    <React.Fragment>
-                                    <Typography
-                                        component="span"
-                                        variant="body2"
-                                        sx={{ color: 'text.primary', display: 'inline' }}
-                                    >
-                                        to Jim, Pam and Ryan
-                                    </Typography>
-                                    {" — Wish I could come, but I'm out of town this…"}
-                                    </React.Fragment>
-                                }
-                                />
-                            </ListItem>
-                            </List>
-                        </Paper>
-                        </Stack> */}
-            {/* <Stack
-                        spacing={4}
-                        useFlexGap
-                        sx={{ ml: 4, '& > .MuiPaper-root': { maxWidth: 'none' } }}
-                        >
-                        <Box sx={{ display: 'flex', gap: 2, '& button': { textWrap: 'nowrap' } }}>
-                            <Button variant="contained" startIcon={<DownloadIcon fontSize="small" />} fullWidth>
-                            Install library
-                            </Button>
-                            <Button variant="outlined" startIcon={<DownloadIcon fontSize="small" />} fullWidth>
-                            Install library
-                            </Button>
-                        </Box>
-                        <Paper elevation={0} variant="outlined" sx={{ p: 2 }}>
-                            <Typography
-                            id="temperature-slider"
-                            component="div"
-                            variant="subtitle2"
-                            sx={{ mb: 1, fontWeight: 400 }}
-                            >
-                            Temperature range
-                            </Typography>
-                            <SlideDemo />
-                        </Paper>
-                        <TextField
-                            id="core-hero-input"
-                            defaultValue="Material UI"
-                            label="Component library"
-                        />
-                        <Box
-                            sx={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            justifyContent: 'space-between',
-                            gap: 2,
-                            }}
-                        >
-                            <BadgeVisibilityDemo />
-                            <Paper
-                            variant="outlined"
-                            elevation={0}
-                            sx={{
-                                width: '100%',
-                                py: 2,
-                                px: 2,
-                                display: 'flex',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                            }}
-                            >
-                            <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
-                            </Paper>
-                        </Box>
-                        <Card sx={{ maxWidth: 345 }}>
-                            <CardHeader
-                            avatar={
-                                <Avatar
-                                sx={{ bgcolor: 'primary.50', color: 'primary.600', fontWeight: 'bold' }}
-                                >
-                                YN
-                                </Avatar>
-                            }
-                            title="Yosemite National Park"
-                            subheader="California, United States"
-                            />
-                            <CardMedia
-                            height={125}
-                            alt=""
-                            component="img"
-                            image="/static/images/cards/yosemite.jpeg"
-                            />
-                            <CardContent sx={{ pb: 0 }}>
-                            <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                                Not just a great valley, but a shrine to human foresight, the strength of
-                                granite, the power of glaciers, the persistence of life, and the tranquility of
-                                the High Sierra.
-                            </Typography>
-                            </CardContent>
-                            <CardActions disableSpacing>
-                            <IconButton aria-label="add to favorites">
-                                <FavoriteBorderRounded fontSize="small" />
-                            </IconButton>
-                            <IconButton aria-label="share">
-                                <ShareRounded fontSize="small" />
-                            </IconButton>
-                            <IconButton aria-label="share" sx={{ ml: 'auto' }}>
-                                <RateReviewOutlined fontSize="small" />
-                            </IconButton>
-                            </CardActions>
-                        </Card>
-                        </Stack> */}
+            <Stack spacing={4}>
+              <Alert variant="filled" color="info" icon={<CheckCircleRounded fontSize="small" />}>
+                ¡Dale un vistazo a U-Ui ahora!
+              </Alert>
+              <Paper elevation={0} variant='outlined' sx={{ overflow: 'hidden'}}>
+                <List sx={{ width: '100%', maxWidth: 360, bgColor: 'background.paper'}}>
+                  <ListItem alignItems='flex-start'>
+                    <ListItemAvatar>
+                      <Avatar alt="elchery" src="/static/images/avatar/1.jpg" />
+                    </ListItemAvatar>
+                    <ListItemText
+                      primary="¿Almuerzo este fin de semana?"
+                      secondary={ 
+                        <React.Fragment>
+                          <Typography
+                            component="span"
+                            variant="body2"
+                            sx={{ color: 'text.primary', display: 'inline'}}
+                          >
+                            El Chery
+                          </Typography>
+                          {" — Estaré en tu vecindario haciendo recados este..."}
+                        </React.Fragment>
+                      }
+                    />
+                  </ListItem>
+                  <Divider variant="inset" component="li" />
+                  <ListItem alignItems="flex-start">
+                    <ListItemAvatar>
+                      <Avatar alt="Colp Code" src="/static/images/avatar/3.jpg" />
+                    </ListItemAvatar>
+                    <ListItemText
+                      primary="Barbacoa de verano"
+                      secondary={
+                        <React.Fragment>
+                          <Typography
+                            component="span"
+                            variant="body2"
+                            sx={{ color: 'text.primary', display: 'inline' }}
+                          >
+                            para elchery
+                          </Typography>
+                          {" — Ojalá pudiera ir, pero estoy fuera de la ciudad..."}
+                        </React.Fragment>
+                      }
+                    />
+                  </ListItem>
+                </List>
+              </Paper>
+            </Stack>
+            <Stack
+              spacing={4}
+              useFlexGap
+              sx={{ ml: 4, '& > .uiPaper-root': { maxWidth: 'none' }}}
+            >
+              <Box sx={{ display: 'flex', gap: 2, '& button': { textWrap: 'nowrap' } }}>
+                <Button variant="contained" startIcon={<DownloadRounded fontSize="small" />} fullWidth>
+                  Instalar libreria
+                </Button>
+                <Button variant="outlined" startIcon={<DownloadRounded fontSize="small" />} fullWidth>
+                  Instalar libreria
+                </Button>
+              </Box>
+            </Stack>
           </Box>
         </CssVarsProvider>
       }

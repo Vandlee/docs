@@ -2,8 +2,8 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import composeClasses from '@u-shii/utils/composeClasses';
-import { alpha } from '@u-shii/system/colorManipulator';
+import composeClasses from '@vandlee/utils/composeClasses';
+import { alpha } from '@u_ui/system/colorManipulator';
 import { styled } from '../zero-styled';
 import memoTheme from '../utils/memoTheme';
 import { useDefaultProps } from '../DefaultPropsProvider';
@@ -278,10 +278,10 @@ const Divider = React.forwardRef(function Divider(inProps, ref) {
 
 /**
  * The following flag is used to ensure that this component isn't tabbable i.e.
- * does not get highlight/focus inside of Ushii List.
+ * does not get highlight/focus inside of Vandlee List.
  */
 if (Divider) {
-  Divider.ushiiSkipListHighlight = true;
+  Divider.vandleeSkipListHighlight = true;
 }
 
 Divider.propTypes /* remove-proptypes */ = {

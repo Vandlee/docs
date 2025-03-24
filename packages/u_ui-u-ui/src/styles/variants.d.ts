@@ -1,4 +1,4 @@
-import { Interpolation } from '@u-shii/system';
+import { Interpolation } from '@u_ui/system';
 import { ComponentsPropsList } from './props';
 
 export type ComponentsVariants<Theme = unknown> = {

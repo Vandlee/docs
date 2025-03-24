@@ -1,7 +1,7 @@
 'use client';
 import PropTypes from "prop-types";
-import { createGrid as createGrid } from '@u-shii/system/Grid';
-import { SxProps, SystemProps } from '@u-shii/system';
+import { createGrid as createGrid } from '@u_ui/system/Grid';
+import { SxProps, SystemProps } from '@u_ui/system';
 import { OverridableComponent, OverrideProps } from "@mui/types";
 import requirePropFactory from '../utils/requirePropFactory';
 import { Theme, styled, Breakpoint } from '../styles';

@@ -6,13 +6,13 @@ import Chip from '@u_ui/u-ui/Chip';
 import ButtonBase from '@u_ui/u-ui/ButtonBase';
 import Popper from '@u_ui/u-ui/Popper';
 import Paper from '@u_ui/u-ui/Paper';
-import { unstable_debounce as debounce } from '@u-shii/utils';
+import { unstable_debounce as debounce } from '@vandlee/utils';
 import Fade from '@u_ui/u-ui/Fade';
 import Typography from '@u_ui/u-ui/Typography';
 import IconImage from 'docs/src/components/icon/IconImage';
 import ROUTES from 'docs/src/route';
-import { Link } from '@u-shii/docs/Link';
-import UshiiProductSelector from 'docs/src/modules/components/u-shiiProductSelector';
+import { Link } from '@vandlee/docs/Link';
+import VandleeProductSelector from 'docs/src/modules/components/vandleeProductSelector';
 
 const Navigation = styled('nav')(({ theme }) => [
   {
@@ -283,7 +283,7 @@ export default function HeaderNavBar() {
                     }),
                   })}
                 >
-                  <UshiiProductSelector type='u_ui' ref={productSelectorRef} />
+                  <VandleeProductSelector type='u_ui' ref={productSelectorRef} />
                   <ul>
                     <li>
                       <ProductSubMenu
@@ -351,7 +351,7 @@ export default function HeaderNavBar() {
                     }),
                   })}
                 >
-                  <UshiiProductSelector type="u-docs" ref={productSelectorRef} />
+                  <VandleeProductSelector type="u-docs" ref={productSelectorRef} />
                 </Paper>
               </Fade>
             )}

@@ -1,0 +1,12 @@
+<ThemeProvider
+  theme={{
+    components: {
+      uiUseMediaQuery: {
+        // Change the default options of useMediaQuery
+        defaultProps: { ssrMatchMedia },
+      },
+    },
+  }}
+>
+  <MiComponent />
+</ThemeProvider>

@@ -1,2 +1,2 @@
-export { unstable_generateUtilityClass as default } from '@u-shii/utils';
-export type { GlobalStateSlot } from '@u-shii/utils';
+export { unstable_generateUtilityClass as default } from '@vandlee/utils';
+export type { GlobalStateSlot } from '@vandlee/utils';

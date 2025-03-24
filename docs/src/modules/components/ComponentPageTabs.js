@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
 import { styled, alpha } from '@u_ui/u-ui/styles';
 import Box from '@u_ui/u-ui/Box';
-import { useTranslate } from '@u-shii/docs/i18n';
-import { Link } from '@u-shii/docs/Link';
+import { useTranslate } from '@vandlee/docs/i18n';
+import { Link } from '@vandlee/docs/Link';
 
 export const HEIGHT = 50;
 

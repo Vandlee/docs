@@ -2,7 +2,7 @@ import * as React from 'react';
 import Badge from '@u_ui/u-ui/Badge';
 import Box from '@u_ui/u-ui/Box';
 import MailIcon from '@mui/icons-material/Mail';
-import { HighlightedCode } from '@u-shii/docs/HighlightedCode';
+import { HighlightedCode } from '@vandlee/docs/HighlightedCode';
 
 export default function BadgeAlignment() {
   const [horizontal, setHorizontal] = React.useState('left');

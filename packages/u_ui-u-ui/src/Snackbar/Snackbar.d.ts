@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SxProps } from '@u-shii/system';
+import { SxProps } from '@u_ui/system';
 import { ClickAwayListenerProps } from '../ClickAwayListener';
 import { Theme } from '../styles';
 import { InternalStandardProps as StandardProps } from '..';

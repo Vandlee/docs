@@ -1,7 +1,7 @@
 {
-  "name": "@u-shii/internal-babel-plugin-minify-errors",
+  "name": "@vandlee-internal/babel-plugin-minify-errors",
   "version": "1.0.0",
-  "author": "yugashiki",
+  "author": "elchery",
   "description": "This is an internal package not meant for general use.",
   "license": "MIT",
   "scripts": {

@@ -2,14 +2,14 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import kebabCase from 'lodash/kebabCase';
-import exactProp from '@u-shii/utils/exactProp';
-import { Translate, useTranslate, useUserLanguage } from '@u-shii/docs/i18n';
-import { SectionTitle, SectionTitleProps } from '@u-shii/docs/SectionTitle';
-import { HookApiContent, HooksTranslations } from '@u-shii-internal/api-docs-builder';
+import exactProp from '@vandlee/utils/exactProp';
+import { Translate, useTranslate, useUserLanguage } from '@vandlee/docs/i18n';
+import { SectionTitle, SectionTitleProps } from '@vandlee/docs/SectionTitle';
+import { HookApiContent, HooksTranslations } from '@vandlee-internal/api-docs-builder';
 import PropertiesSection from 'docs/src/modules/components/ApiPage/sections/PropertiesSection';
 import { getHookApiDefinitions } from 'docs/src/modules/components/ApiPage/definitions/properties';
-import { HighlightedCode } from '@u-shii/docs/HighlightedCode';
-import { MarkdownElement } from '@u-shii/docs/MarkdownElement';
+import { HighlightedCode } from '@vandlee/docs/HighlightedCode';
+import { MarkdownElement } from '@vandlee/docs/MarkdownElement';
 import {
   ApiDisplayOptions,
   DEFAULT_API_LAYOUT_STORAGE_KEYS,

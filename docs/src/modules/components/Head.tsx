@@ -2,12 +2,12 @@ import * as React from 'react';
 import NextHead from 'next/head';
 import { useRouter } from 'next/router';
 import { LANGUAGES_SSR } from 'docs/config';
-import { useUserLanguage, useTranslate } from '@u-shii/docs/i18n';
+import { useUserLanguage, useTranslate } from '@vandlee/docs/i18n';
 import { pathnameToLanguage } from '../utils/helpers';
 
 const HOST = process.env.PULL_REQUEST_ID
-  ? 'https://test-docs.u-shii.com'
-  : 'https://docs.u-shii.com';
+  ? 'https://test-docs.vandlee.com'
+  : 'https://docs.vandlee.com';
 
 interface HeadProps {
   card?: string;
@@ -42,7 +42,7 @@ export default function Head(props: HeadProps) {
       {/* X */}
       <meta name="twitter:card" content={largeCard ? 'summary_large_image' : 'summary'} />
       {/* https://x.com/MUI_hq */}
-      <meta name="twitter:site" content="@u-shii" />
+      <meta name="twitter:site" content="@vandlee" />
       {/* #default-branch-switch */}
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
@@ -65,7 +65,7 @@ export default function Head(props: HeadProps) {
             <link
               key={userLanguage2}
               rel="alternate"
-              href={`https://u-shii.yugacore.com${
+              href={`https://docs.zuro.com${
                 userLanguage2 === 'es' ? '' : `/${userLanguage2}`
               }${canonicalAs}`}
               hrefLang={userLanguage2}

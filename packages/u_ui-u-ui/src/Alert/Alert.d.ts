@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { OverridableStringUnion } from '@mui/types';
-import { SxProps } from '@u-shii/system';
+import { SxProps } from '@u_ui/system';
 import { IconButtonProps, InternalStandardProps as StandardProps, SvgIconProps, Theme } from '..';
 import { PaperProps } from '../Paper';
 import { AlertClasses } from './alertClasses';
@@ -60,7 +60,7 @@ export type AlertSlotsAndSlotProps = CreateSlotsAndSlotProps<
   {
     /**
      * Props forwarded to the root slot.
-     * By default, the avaible props are based on the [Paper](https://mui.com/material-ui/api/paper/#props) component.
+     * By default, the avaible props are based on the [Paper](https://docs.vandlee.com/u_ui/u-ui/api/paper/#props) component.
      */
     root: SlotProps<React.ElementType<PaperProps>, AlertRootSlotPropsOverrides, AlertOwnerState>;
     /**
@@ -92,7 +92,7 @@ export type AlertSlotsAndSlotProps = CreateSlotsAndSlotProps<
     >;
     /**
      * Props forwarded to the closeButton slot.
-     * By default, the avaible props are based on the [IconButton](https://mui.com/material-ui/api/icon-button/#props) component.
+     * By default, the avaible props are based on the [IconButton](https://docs.vandlee.com/u_ui/u-ui/api/icon-button/#props) component.
      */
     closeButton: SlotProps<
       React.ElementType<IconButtonProps>,
@@ -101,7 +101,7 @@ export type AlertSlotsAndSlotProps = CreateSlotsAndSlotProps<
     >;
     /**
      * Props forwarded to the closeIcon slot.
-     * By default, the avaible props are based on the [SvgIcon](https://mui.com/material-ui/api/svg-icon/#props) component.
+     * By default, the avaible props are based on the [SvgIcon](https://docs.vandlee.com/u_ui/u-ui/api/svg-icon/#props) component.
      */
     closeIcon: SlotProps<
       React.ElementType<SvgIconProps>,
@@ -123,14 +123,13 @@ export interface AlertProps extends StandardProps<PaperProps, 'variant'>, AlertS
   /**
    * Override the default label for the *close popup* icon button.
    *
-   * For localization purposes, you can use the provided [translations](https://mui.com/material-ui/guides/localization/).
    * @default 'Close'
    */
   closeText?: string;
   /**
    * The color of the component. Unless provided, the value is taken from the `severity` prop.
    * It supports both default and custom theme colors, which can be added as shown in the
-   * [palette customization guide](https://mui.com/material-ui/customization/palette/#custom-colors).
+   * [palette customization guide](https://docs.vandlee.com/u_ui/u-ui/customization/palette/#colores-personalizados).
    */
   color?: OverridableStringUnion<AlertColor, AlertPropsColorOverrides>;
   /**

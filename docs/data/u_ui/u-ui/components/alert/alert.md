@@ -11,7 +11,7 @@ githubSource: packages/u_ui-u-ui/src/Alert
 
 <p class="description">Las alertas muestran mensajes breves al usuario sin interrumpir su uso de la aplicación.</p>
 
-{{"component": "@u-shii/docs/ComponentLinkHeader"}}
+{{"component": "@vandlee/docs/ComponentLinkHeader"}}
 
 ## Introducción
 
@@ -119,7 +119,7 @@ Estos son algunos factores a tener en cuenta para garantizar que tu Alerta sea a
 El componente Alerta está compuesto por un componente raíz [Paper](/u_ui/u-ui/react-paper) (que se representa como un `<div>`) que contiene un icono, un mensaje y una [acción](#acciones) opcional.
 
 ```html
-<div class="uiPaper-root UshiiAlert-root" role="alert">
+<div class="uiPaper-root VandleeAlert-root" role="alert">
   <div class="uiAlert-icon">
     <!-- icono svg aquí -->
   </div>

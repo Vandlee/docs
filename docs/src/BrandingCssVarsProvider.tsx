@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { deepmerge } from '@u-shii/utils';
+import { deepmerge } from '@vandlee/utils';
 import { CssVarsProvider, extendTheme, PaletteColorOptions } from '@u_ui/u-ui/styles';
 import CssBaseline from '@u_ui/u-ui/CssBaseline';
 import { NextNProgressBar } from 'docs/src/modules/components/AppFrame';
-import { getDesignTokens, getThemedComponents } from '@u-shii/docs/branding';
+import { getDesignTokens, getThemedComponents } from '@vandlee/docs/branding';
 import SkipLink from 'docs/src/modules/components/SkipLink';
 import MarkdownLinks from 'docs/src/modules/components/MarkdownLinks';
 
@@ -18,7 +18,7 @@ const { palette: darkPalette } = getDesignTokens('dark');
 
 const theme = extendTheme({
   cssVarPrefix: 'uidocs',
-  colorSchemeSelector: 'data-u-shii-color-scheme',
+  colorSchemeSelector: 'data-u-ui-color-scheme',
   colorSchemes: {
     light: {
       palette: lightPalette,
@@ -30,17 +30,17 @@ const theme = extendTheme({
   ...designTokens,
   typography: deepmerge(typography, {
     h1: {
-      ':where([data-u-shii-color-scheme="dark"]) &': {
+      ':where([data-u-ui-color-scheme="dark"]) &': {
         color: 'var(--uidocs-palette-common-white)',
       },
     },
     h2: {
-      ':where([data-u-shii-color-scheme="dark"]) &': {
+      ':where([data-u-ui-color-scheme="dark"]) &': {
         color: 'var(--uidocs-palette-grey-100)',
       },
     },
     h5: {
-      ':where([data-u-shii-color-scheme="dark"]) &': {
+      ':where([data-u-ui-color-scheme="dark"]) &': {
         color: 'var(--uidocs-palette-primary-300)',
       },
     },

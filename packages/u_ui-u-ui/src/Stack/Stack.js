@@ -1,6 +1,6 @@
 'use client';
 import PropTypes from 'prop-types';
-import { createStack } from '@u-shii/system';
+import { createStack } from '@u_ui/system';
 import styled from '../styles/styled';
 import { useDefaultProps } from '../DefaultPropsProvider';
 

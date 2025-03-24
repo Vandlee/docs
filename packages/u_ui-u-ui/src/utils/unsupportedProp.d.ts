@@ -1,3 +1,3 @@
-import unsupportedProp from '@u-shii/utils/unsupportedProp';
+import unsupportedProp from '@vandlee/utils/unsupportedProp';
 
 export default unsupportedProp;

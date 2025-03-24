@@ -9,7 +9,7 @@ githubSource: packages/u_ui-u-ui/src/CssBaseline
 
 <p class="description">El componente CssBaseline ayuda a poner en marcha una línea de base elegante, coherente y sencilla sobre la que construir.</p>
 
-{{"component": "@u-shii/docs/ComponentLinkHeader", "design": false}}
+{{"component": "@vandlee/docs/ComponentLinkHeader", "design": false}}
 
 ## Restablecimiento global
 

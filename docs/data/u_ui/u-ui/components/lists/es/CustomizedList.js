@@ -27,15 +27,15 @@ const data = [
 ];
 
 const FireNav = styled(List)({
-  '& .MuiListItemButton-root': {
+  '& .uiListItemButton-root': {
     paddingLeft: 24,
     paddingRight: 24,
   },
-  '& .MuiListItemIcon-root': {
+  '& .uiListItemIcon-root': {
     minWidth: 0,
     marginRight: 16,
   },
-  '& .MuiSvgIcon-root': {
+  '& .uiSvgIcon-root': {
     fontSize: 20,
   },
 });
@@ -47,7 +47,7 @@ export default function CustomizedList() {
       <ThemeProvider
         theme={createTheme({
           components: {
-            MuiListItemButton: {
+            uiListItemButton: {
               defaultProps: {
                 disableTouchRipple: true,
               },

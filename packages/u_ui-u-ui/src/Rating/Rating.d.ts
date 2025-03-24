@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SxProps } from '@u-shii/system';
+import { SxProps } from '@u_ui/system';
 import { OverridableStringUnion } from '@mui/types';
 import { Theme } from '..';
 import { RatingClasses } from './ratingClasses';

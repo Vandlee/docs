@@ -2,7 +2,7 @@ import {
     unstable_ownerWindow as ownerWindow,
     unstable_ownerDocument as ownerDocument,
     unstable_getScrollbarSize as getScrollbarSize,
-  } from '@u-shii/utils';
+  } from '@vandlee/utils';
 
   export interface ManagedModalProps {
     disableScrollLock?: boolean;
@@ -110,8 +110,8 @@ function handleContainer(containerInfo: Container, props: ManagedModalProps) {
         // Use computed style, here to get the real padding to add our scrollbar width.
         container.style.paddingRight = `${getPaddingRight(container) + scrollbarSize}px`;
   
-        // .ushii-fixed is a global helper.
-        const fixedElements = ownerDocument(container).querySelectorAll('.ushii-fixed');
+        // .vandlee-fixed is a global helper.
+        const fixedElements = ownerDocument(container).querySelectorAll('.vandlee-fixed');
         [].forEach.call(fixedElements, (element: HTMLElement | SVGElement) => {
           restoreStyle.push({
             value: element.style.paddingRight,

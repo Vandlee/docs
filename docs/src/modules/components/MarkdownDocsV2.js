@@ -2,23 +2,23 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
 import kebabCase from 'lodash/kebabCase';
-import { useTheme } from '@u-shii/system';
-import { exactProp } from '@u-shii/utils';
+import { useTheme } from '@u_ui/system';
+import { exactProp } from '@vandlee/utils';
 /* import { CssVarsProvider as JoyCssVarsProvider, useColorScheme } from '@mui/joy/styles'; */
-import { Ad, AdGuest } from '@u-shii/docs/Ad';
+import { Ad, AdGuest } from '@vandlee/docs/Ad';
 import ComponentsApiContent from 'docs/src/modules/components/ComponentsApiContent';
 import HooksApiContent from 'docs/src/modules/components/HooksApiContent';
 import { getTranslatedHeader as getComponentTranslatedHeader } from 'docs/src/modules/components/ApiPage';
 import RichMarkdownElement from 'docs/src/modules/components/RichMarkdownElement';
 import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
 import AppLayoutDocs from 'docs/src/modules/components/AppLayoutDocs';
-import { useTranslate, useUserLanguage } from '@u-shii/docs/i18n';
-import { BrandingProvider } from '@u-shii/docs/branding';
+import { useTranslate, useUserLanguage } from '@vandlee/docs/i18n';
+import { BrandingProvider } from '@vandlee/docs/branding';
 import { HEIGHT as AppFrameHeight } from 'docs/src/modules/components/AppFrame';
 import { HEIGHT as TabsHeight } from 'docs/src/modules/components/ComponentPageTabs';
 import { getPropsToC } from 'docs/src/modules/components/ApiPage/sections/PropertiesSection';
 import { getClassesToC } from 'docs/src/modules/components/ApiPage/sections/ClassesSection';
-import UshiiBaseDeprecation from 'docs/src/components/productBaseUI/u-shiiBaseDeprecation';
+import VandleeBaseDeprecation from 'docs/src/components/productBaseUI/vandleeBaseDeprecation';
 
 function JoyModeObserver({ mode }) {
   const { setMode } = useColorScheme();
@@ -275,7 +275,7 @@ export default function MarkdownDocsV2(props) {
         <CssVarsProvider>
           {isJoy && <JoyModeObserver mode={theme.palette.mode} />}
           {isBase && (
-            <UshiiBaseDeprecation
+            <VandleeBaseDeprecation
               newComponentUrl={localizedDoc.headers.newUrl}
               newComponentName={localizedDoc.headers.newName}
             />

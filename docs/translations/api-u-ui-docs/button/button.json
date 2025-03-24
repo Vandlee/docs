@@ -4,13 +4,14 @@
     "children": { "description": "El contenido del componente" },
     "className": { "description": "Nombre de clase aplicado al elemento raíz." },
     "color": {
-      "description": "El color del componente. Admite tanto colores de tema predeterminados como personalizados, que pueden añadirse como se muestra en la <a href=\"https://mui.com/material-ui/customization/palette/#custom-colors\">guía de personalización de la paleta</a>."
+      "description": "El color del componente. Admite tanto colores de tema predeterminados como personalizados, que pueden añadirse como se muestra en la <a href=\"https://docs.vandlee.com/u_ui/u-ui/customization/palette/#colores-personalizados\">guía de personalización de la paleta</a>."
     },
     "component": {
       "description": "El componente utilizado para el nodo raíz. Puede ser una cadena de texto para utilizar un elemento HTML o un componente."
     },
     "disabled": { "description": "Si es <code>true</code>, el componente está desactivado." },
     "enableElevation": { "description": "Si es <code>true</code>, se utiliza la elevación." },
+    "disableIconAnimation": { "description": "Si es <code>true</code>, el icono no tendrá animación al pasar el mouse por el botón." },
     "disableFocusRipple": {
       "description": "Si es <code>true</code>, se desactiva el efecto de ripple al enfocar con el teclado."
     },

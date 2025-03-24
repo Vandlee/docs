@@ -7,8 +7,28 @@ La biblioteca no implementa necesariamente las especificaciones exactas de cada 
 
 ## Entradas
 
-{{"component": "modules/components/U-UiComponents/UInputComponents.js"}}
+{{"component": "modules/components/U-UiComponents/UiInputComponents.js"}}
 
 ## Visualización de datos
 
-{{"component": "modules/components/U-UiComponents/UDataDisplayComponents.js"}}
+{{"component": "modules/components/U-UiComponents/UiDataDisplayComponents.js"}}
+
+## Retroalimentación
+
+{{"component": "modules/components/U-UiComponents/UiFeedbackComponents.js"}}
+
+## Superficies
+
+{{"component": "modules/components/U-UiComponents/UiSurfaceComponents.js"}}
+
+## Navegación
+
+{{"component": "modules/components/U-UiComponents/UiNavigationComponents.js"}}
+
+## Maquetación
+
+{{"component": "modules/components/U-UiComponents/UiLayoutComponents.js"}}
+
+## Utilidad
+
+{{"component": "modules/components/U-UiComponents/UiUtilComponents.js"}}

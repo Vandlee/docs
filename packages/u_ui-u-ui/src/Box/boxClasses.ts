@@ -1,4 +1,4 @@
-import generateUtilityClasses from '@u-shii/utils/generateUtilityClasses';
+import generateUtilityClasses from '@vandlee/utils/generateUtilityClasses';
 
 export interface BoxClasses {
   root: string;

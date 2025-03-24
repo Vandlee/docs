@@ -15,7 +15,7 @@ Un cajón de navegación puede estar permanentemente en pantalla o controlarse m
 
 Las [hojas laterales (Inglés)](https://m2.material.io/components/sheets-side) son superficies suplementarias que se utilizan principalmente en tabletas y ordenadores de sobremesa.
 
-{{"component": "@u-shii/docs/ComponentLinkHeader"}}
+{{"component": "@vandlee/docs/ComponentLinkHeader"}}
 
 ## Cajón temporal
 

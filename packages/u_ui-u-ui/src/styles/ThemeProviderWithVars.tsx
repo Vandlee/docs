@@ -1,7 +1,7 @@
 'use client';
 import * as React from 'react';
-import styleFunctionSx from '@u-shii/system/styleFunctionSx';
-import { unstable_createCssVarsProvider as createCssVarsProvider, SxProps } from '@u-shii/system';
+import styleFunctionSx from '@u_ui/system/styleFunctionSx';
+import { unstable_createCssVarsProvider as createCssVarsProvider, SxProps } from '@u_ui/system';
 import { SupportedColorScheme, CssVarsTheme } from './createThemeWithVars';
 import createTheme from './createTheme';
 import createTypography from './createTypography';
@@ -45,7 +45,7 @@ function Experimental_CssVarsProvider(props: any) {
     if (!warnedOnce) {
       console.warn(
         [
-          'U-SHII: The Experimental_CssVarsProvider component has been ported into ThemeProvider.',
+          'VANDLEE: The Experimental_CssVarsProvider component has been ported into ThemeProvider.',
           '',
           "You should use `import { ThemeProvider } from '@u_ui/u-ui/styles` instead.",
         ].join('\n'),
@@ -65,7 +65,7 @@ const getInitColorSchemeScript: typeof deprecatedGetInitColorSchemeScript = (par
   if (!warnedInitScriptOnce) {
     console.warn(
       [
-        'U-SHII: The getInitColorSchemeScript function has been deprecated.',
+        'VANDLEE: The getInitColorSchemeScript function has been deprecated.',
         '',
         "You should use `import InitColorSchemeScript from '@u_ui/u-ui/InitColorSchemeScript'`",
         'and replace the function call with `<InitColorSchemeScript />` instead.',

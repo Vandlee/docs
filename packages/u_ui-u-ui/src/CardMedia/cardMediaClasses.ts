@@ -1,5 +1,5 @@
-import generateUtilityClasses from '@u-shii/utils/generateUtilityClasses';
-import generateUtilityClass from '@u-shii/utils/generateUtilityClass';
+import generateUtilityClasses from '@vandlee/utils/generateUtilityClasses';
+import generateUtilityClass from '@vandlee/utils/generateUtilityClass';
 
 export interface CardMediaClasses {
   /** Styles applied to the root element. */
@@ -16,7 +16,7 @@ export function getCardMediaUtilityClass(slot: string): string {
   return generateUtilityClass('uiCardMedia', slot);
 }
 
-const cardMediaClasses: CardMediaClasses = generateUtilityClasses('MuiCardMedia', [
+const cardMediaClasses: CardMediaClasses = generateUtilityClasses('uiCardMedia', [
   'root',
   'media',
   'img',

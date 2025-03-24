@@ -45,6 +45,9 @@
     "/u_ui/u-ui/react-css-baseline": "Base CSS",
     "/u_ui/u-ui/react-modal": "Modal",
     "/u_ui/u-ui/react-no-ssr": "No SSR",
-    "/u_ui/u-ui/react-popover": "Popover"
+    "/u_ui/u-ui/react-popover": "Popover",
+    "/u_ui/u-ui/react-popper": "Popper",
+    "/u_ui/u-ui/react-portal": "Portal",
+    "/u_ui/u-ui/transitions": "Transiciones"
   }
 }

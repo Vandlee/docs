@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { styled, useTheme, Theme, CSSObject } from '@u_ui/u-ui/styles';
 import Box from '@u_ui/u-ui/Box';
-import MuiDrawer from '@u_ui/u-ui/Drawer';
-import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@u_ui/u-ui/AppBar';
+import uiDrawer from '@u_ui/u-ui/Drawer';
+import uiAppBar, { AppBarProps as uiAppBarProps } from '@u_ui/u-ui/AppBar';
 import Toolbar from '@u_ui/u-ui/Toolbar';
 import List from '@u_ui/u-ui/List';
 import CssBaseline from '@u_ui/u-ui/CssBaseline';
@@ -51,11 +51,11 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   ...theme.mixins.toolbar,
 }));
 
-interface AppBarProps extends MuiAppBarProps {
+interface AppBarProps extends uiAppBarProps {
   open?: boolean;
 }
 
-const AppBar = styled(MuiAppBar, {
+const AppBar = styled(uiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
 })<AppBarProps>(({ theme }) => ({
   zIndex: theme.zIndex.drawer + 1,
@@ -78,7 +78,7 @@ const AppBar = styled(MuiAppBar, {
   ],
 }));
 
-const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
+const Drawer = styled(uiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme }) => ({
     width: drawerWidth,
     flexShrink: 0,

@@ -1,3 +1,3 @@
-import debounce from '@u-shii/utils/debounce';
+import debounce from '@vandlee/utils/debounce';
 
 export default debounce;

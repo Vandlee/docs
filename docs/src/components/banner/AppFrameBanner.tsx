@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { alpha } from '@u_ui/u-ui/styles';
-import { Link } from '@u-shii/docs/Link';
+import { Link } from '@vandlee/docs/Link';
 import FEATURE_TOGGLE from 'docs/src/featureToggle';
 import PageContext from 'docs/src/modules/components/PageContext';
 import { convertProductIdToName } from 'docs/src/modules/components/AppSearch';

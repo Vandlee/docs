@@ -2,12 +2,12 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import clamp from '@u-shii/utils/clamp';
-import visuallyHidden from '@u-shii/utils/visuallyHidden';
-import chainPropTypes from '@u-shii/utils/chainPropTypes';
-import composeClasses from '@u-shii/utils/composeClasses';
-import { useRtl } from '@u-shii/system/RtlProvider';
-import isFocusVisible from '@u-shii/utils/isFocusVisible';
+import clamp from '@vandlee/utils/clamp';
+import visuallyHidden from '@vandlee/utils/visuallyHidden';
+import chainPropTypes from '@vandlee/utils/chainPropTypes';
+import composeClasses from '@vandlee/utils/composeClasses';
+import { useRtl } from '@u_ui/system/RtlProvider';
+import isFocusVisible from '@vandlee/utils/isFocusVisible';
 import { capitalize, useForkRef, useControlled, unstable_useId as useId } from '../utils';
 import Star from '../internal/svg-icons/Star';
 import StarBorder from '../internal/svg-icons/StarBorder';
@@ -533,7 +533,7 @@ const Rating = React.forwardRef(function Rating(inProps, ref) {
       className={clsx(
         classes.root,
         {
-          // TODO v6: remove this class as it duplicates with the global state class Ushii-readOnly
+          // TODO v6: remove this class as it duplicates with the global state class Vandlee-readOnly
           'uiRating-readOnly': readOnly,
         },
         className,
@@ -753,7 +753,7 @@ Rating.propTypes /* remove-proptypes */ = {
     if (props.precision < 0.1) {
       return new Error(
         [
-          'U-SHII: The prop `precision` should be above 0.1.',
+          'VANDLEE: The prop `precision` should be above 0.1.',
           'A value below this limit has an imperceptible impact.',
         ].join('\n'),
       );

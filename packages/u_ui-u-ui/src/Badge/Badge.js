@@ -2,9 +2,9 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import usePreviousProps from '@u-shii/utils/usePreviousProps';
-import composeClasses from '@u-shii/utils/composeClasses';
-import useSlotProps from '@u-shii/utils/useSlotProps';
+import usePreviousProps from '@vandlee/utils/usePreviousProps';
+import composeClasses from '@vandlee/utils/composeClasses';
+import useSlotProps from '@vandlee/utils/useSlotProps';
 import useBadge from './useBadge';
 import { styled } from '../zero-styled';
 import memoTheme from '../utils/memoTheme';

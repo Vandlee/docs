@@ -1,4 +1,4 @@
-import { createRender } from '@u-shii/internal-markdown';
+import { createRender } from '@vandlee/internal-markdown';
 import { LANGUAGES_IGNORE_PAGES } from '../../../config';
 
 const notSpanishJsonRegExp = /-([a-z]{2})\.json$/;
@@ -19,9 +19,7 @@ export default function mapApiPageTranslations(req) {
   });
 
   filenames.forEach((filename) => {
-    console.log('filename', filename)
     const matchNotSpanishMarkdown = filename.match(notSpanishJsonRegExp);
-    console.log('matchNotSpanishMarkdown', matchNotSpanishMarkdown)
     const userLanguage = matchNotSpanishMarkdown !== null ? matchNotSpanishMarkdown[1] : 'es';
     const translation = req(filename) || null;
 
@@ -39,8 +37,6 @@ export default function mapApiPageTranslations(req) {
           },
         },
       });
-
-      console.log('translation', translation.componentDescription)
 
       translation.componentDescription = render(translation.componentDescription);
       translation.componentDescriptionToc = componentDescriptionToc;

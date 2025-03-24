@@ -5,7 +5,7 @@ import Card from '@u_ui/u-ui/Card';
 import CardMedia from '@u_ui/u-ui/CardMedia';
 import Typography from '@u_ui/u-ui/Typography';
 import Chip from '@u_ui/u-ui/Chip';
-import { Link } from '@u-shii/docs/Link';
+import { Link } from '@vandlee/docs/Link';
 
 interface ComponentShowcaseCardProps {
   imgLoading?: 'eager';

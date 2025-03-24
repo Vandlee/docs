@@ -1,4 +1,4 @@
 'use client';
-import useId from '@u-shii/utils/useId';
+import useId from '@vandlee/utils/useId';
 
 export default useId;

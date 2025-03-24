@@ -1,8 +1,8 @@
 /* eslint-disable react/no-danger */
 import * as React from 'react';
 import Box from '@u_ui/u-ui/Box';
-import { Translate, useTranslate } from '@u-shii/docs/i18n';
-import { SectionTitle, SectionTitleProps } from '@u-shii/docs/SectionTitle';
+import { Translate, useTranslate } from '@vandlee/docs/i18n';
+import { SectionTitle, SectionTitleProps } from '@vandlee/docs/SectionTitle';
 import ToggleDisplayOption, {
   ApiDisplayOptions,
   useApiPageOption,
@@ -18,7 +18,7 @@ import {
   ComponentApiContent,
   PropsTableItem,
   PropsTranslations,
-} from '@u-shii-internal/api-docs-builder';
+} from '@vandlee-internal/api-docs-builder';
 import kebabCase from 'lodash/kebabCase';
 
 interface GetPropsToCParams extends Pick<ComponentApiContent, 'inheritance' | 'themeDefaultProps'> {

@@ -10,7 +10,7 @@ githubSource: packages/u_ui-u-ui/src/Avatar
 
 <p class="description">Los avatares están presentes en todo el material design, desde las tablas hasta los menús de diálogo.</p>
 
-{{"component": "@u-shii/docs/ComponentLinkHeader"}}
+{{"component": "@vandlee/docs/ComponentLinkHeader"}}
 
 ## Avatares de imagen
 

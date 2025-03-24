@@ -5,10 +5,10 @@ import { ServerStyleSheets as JSSServerStyleSheets } from '@mui/styles';
 import { ServerStyleSheet } from 'styled-components';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import GlobalStyles from '@u_ui/u-ui/GlobalStyles';
-import UshiiInitColorSchemeScript from '@u_ui/u-ui/InitColorSchemeScript';
+import VandleeInitColorSchemeScript from '@u_ui/u-ui/InitColorSchemeScript';
 import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
 import createEmotionCache from 'docs/src/createEmotionCache';
-import { getMetaThemeColor } from '@u-shii/docs/branding';
+import { getMetaThemeColor } from '@vandlee/docs/branding';
 
 // You can find a benchmark of the available CSS minifiers under
 // https://github.com/GoalSmashers/css-minification-benchmark
@@ -35,7 +35,7 @@ export default class MyDocument extends Document {
     const { canonicalAsServer, userLanguage } = this.props;
 
     return (
-      <Html lang={userLanguage} data-u-shii-color-scheme="light">
+      <Html lang={userLanguage} data-u-ui-color-scheme="light">
         <Head>
           {/*
               manifest.json provides metadata used when your web app is added to the
@@ -58,11 +58,11 @@ export default class MyDocument extends Document {
           {/* SEO */}
           <link
             rel="canonical"
-            href={`https://docs.u-shii.com${
+            href={`https://docs.vandlee.com${
               userLanguage === 'es' ? '' : `/${userLanguage}`
             }${canonicalAsServer}`}
           />
-          <link rel="alternate" href={`https://docs.u-shii.com${canonicalAsServer}`} hrefLang="x-default" />
+          <link rel="alternate" href={`https://docs.vandlee.com${canonicalAsServer}`} hrefLang="x-default" />
           {/*
             Preconnect allows the browser to setup early connections before an HTTP request
             is actually sent to the server.
@@ -155,10 +155,10 @@ export default class MyDocument extends Document {
                 display: 'block',
               },
               // TODO migrate to .only-dark-mode to .only-dark-mode-v2
-              '[data-u-shii-color-scheme="light"] .only-dark-mode-v2': {
+              '[data-u-ui-color-scheme="light"] .only-dark-mode-v2': {
                 display: 'none',
               },
-              '[data-u-shii-color-scheme="dark"] .only-light-mode-v2': {
+              '[data-u-ui-color-scheme="dark"] .only-light-mode-v2': {
                 display: 'none',
               },
               '.plan-pro, .plan-premium': {
@@ -176,7 +176,7 @@ export default class MyDocument extends Document {
           />
         </Head>
         <body>
-          <UshiiInitColorSchemeScript defaultMode="system" />
+          <VandleeInitColorSchemeScript defaultMode="system" />
           <Main />
           <NextScript />
         </body>

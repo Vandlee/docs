@@ -10,7 +10,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LogoWithCopyMenu from 'docs/src/components/action/LogoWithCopyMenu';
 import HeaderNavBar from 'docs/src/components/header/HeaderNavBar';
 import LogoWithDropdown from 'docs/src/components/action/LogoWithDropdown';
-import { useTranslate } from '@u-shii/docs/i18n';
+import { useTranslate } from '@vandlee/docs/i18n';
 
 const Header = styled('header')(({ theme }) => [
   {
@@ -34,7 +34,7 @@ interface AppHeaderProps {
 }
 
 export default function AppHeader(props: AppHeaderProps) {
-  const { gitHubRepository = 'https://github.com/yugashiki' } = props;
+  const { gitHubRepository = 'https://github.com/Vandlee' } = props;
   const t = useTranslate();
   return (
     <Header>
@@ -56,8 +56,8 @@ export default function AppHeader(props: AppHeaderProps) {
             <Tooltip title={t('appFrame.github')} enterDelay={300}>
               <IconButton
                 component="a"
-                color="primary"
                 size="small"
+                color='contrast'
                 href={gitHubRepository}
                 target="_blank"
                 rel="noopener"

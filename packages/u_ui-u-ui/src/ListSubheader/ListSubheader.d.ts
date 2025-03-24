@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SxProps } from '@u-shii/system';
+import { SxProps } from '@u_ui/system';
 import { Theme } from '..';
 import { OverridableComponent, OverrideProps } from '../OverridableComponent';
 import { ListSubheaderClasses } from './listSubheaderClasses';

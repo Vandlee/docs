@@ -1,3 +1,3 @@
-import ownerWindow from '@u-shii/utils/ownerWindow';
+import ownerWindow from '@vandlee/utils/ownerWindow';
 
 export default ownerWindow;

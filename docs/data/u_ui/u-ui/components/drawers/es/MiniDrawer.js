@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { styled, useTheme } from '@u_ui/u-ui/styles';
 import Box from '@u_ui/u-ui/Box';
-import MuiDrawer from '@u_ui/u-ui/Drawer';
-import MuiAppBar from '@u_ui/u-ui/AppBar';
+import uiDrawer from '@u_ui/u-ui/Drawer';
+import uiAppBar from '@u_ui/u-ui/AppBar';
 import Toolbar from '@u_ui/u-ui/Toolbar';
 import List from '@u_ui/u-ui/List';
 import CssBaseline from '@u_ui/u-ui/CssBaseline';
@@ -51,7 +51,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   ...theme.mixins.toolbar,
 }));
 
-const AppBar = styled(MuiAppBar, {
+const AppBar = styled(uiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
 })(({ theme }) => ({
   zIndex: theme.zIndex.drawer + 1,
@@ -74,7 +74,7 @@ const AppBar = styled(MuiAppBar, {
   ],
 }));
 
-const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
+const Drawer = styled(uiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme }) => ({
     width: drawerWidth,
     flexShrink: 0,
@@ -85,14 +85,14 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
         props: ({ open }) => open,
         style: {
           ...openedMixin(theme),
-          '& .MuiDrawer-paper': openedMixin(theme),
+          '& .uiDrawer-paper': openedMixin(theme),
         },
       },
       {
         props: ({ open }) => !open,
         style: {
           ...closedMixin(theme),
-          '& .MuiDrawer-paper': closedMixin(theme),
+          '& .uiDrawer-paper': closedMixin(theme),
         },
       },
     ],

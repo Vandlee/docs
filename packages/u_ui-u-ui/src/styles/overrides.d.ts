@@ -1,4 +1,4 @@
-import { CSSObject, CSSInterpolation, Interpolation } from '@u-shii/system';
+import { CSSObject, CSSInterpolation, Interpolation } from '@u_ui/system';
 import { PopperClassKey } from '../Popper';
 import { ComponentsPropsList } from './props';
 /* import { AccordionActionsClassKey } from '../AccordionActions';

@@ -10,7 +10,7 @@ githubSource: packages/u_ui-u-ui/src/Link
 
 <p class="description">El componente Enlace le permite personalizar fácilmente los elementos de anclaje con los colores y estilos tipográficos de su tema.</p>
 
-{{"component": "@u-shii/docs/ComponentLinkHeader"}}
+{{"component": "@vandlee/docs/ComponentLinkHeader"}}
 
 ## Enlaces básicos
 

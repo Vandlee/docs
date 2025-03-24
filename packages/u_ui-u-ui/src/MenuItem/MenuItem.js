@@ -2,8 +2,8 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import composeClasses from '@u-shii/utils/composeClasses';
-import { alpha } from '@u-shii/system/colorManipulator';
+import composeClasses from '@vandlee/utils/composeClasses';
+import { alpha } from '@u_ui/system/colorManipulator';
 import rootShouldForwardProp from '../styles/rootShouldForwardProp';
 import { styled } from '../zero-styled';
 import memoTheme from '../utils/memoTheme';
@@ -198,7 +198,7 @@ const MenuItem = React.forwardRef(function MenuItem(inProps, ref) {
         menuItemRef.current.focus();
       } else if (process.env.NODE_ENV !== 'production') {
         console.error(
-          'U-SHII: Unable to set focus to a MenuItem whose component has not been rendered.',
+          'VANDLEE: Unable to set focus to a MenuItem whose component has not been rendered.',
         );
       }
     }

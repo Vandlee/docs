@@ -46,7 +46,7 @@ function escape(html, encode) {
 }
 
 function checkUrlHealth(href, linkText, context) {
-  const url = new URL(href, 'https://u-shii.yugacore.com/');
+  const url = new URL(href, 'https://docs.vandlee.com/');
 
   if (/\/{2,}$/.test(url.pathname)) {
     throw new Error(
@@ -60,8 +60,8 @@ function checkUrlHealth(href, linkText, context) {
     );
   }
 
-  // External links to Ushii, ignore
-  if (url.host !== 'docs.u-shii.com') {
+  // External links to Vandlee, ignore
+  if (url.host !== 'docs.vandlee.com') {
     return;
   }
 
@@ -259,7 +259,7 @@ function renderMarkdown(markdown) {
     .replace(/\r?\n/g, ' ');
 }
 
-// Help rank docs.u-shii.com on component searches first.
+// Help rank docs.vandlee.com on component searches first.
 const noSEOadvantage = [
   'https://m2.material.io/',
   'https://m3.material.io/',
@@ -400,9 +400,9 @@ function createRender(context) {
       }
 
       // This logic turns link like:
-      // https://github.com/u-shii/material-ui/blob/-/packages/u-shii-joy/src/styles/components.d.ts
+      // https://github.com/mui/material-ui/blob/-/packages/mui-joy/src/styles/components.d.ts
       // into a permalink:
-      // https://github.com/u-shii/material-ui/blob/v5.11.15/packages/u-shii-joy/src/styles/components.d.ts
+      // https://github.com/mui/material-ui/blob/v5.11.15/packages/mui-joy/src/styles/components.d.ts
       if (finalHref.startsWith(`${options.env.SOURCE_CODE_REPO}/blob/-/`)) {
         finalHref = finalHref.replace(
           `${options.env.SOURCE_CODE_REPO}/blob/-/`,

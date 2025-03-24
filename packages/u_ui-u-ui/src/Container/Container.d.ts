@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SxProps, Breakpoint } from '@u-shii/system';
+import { SxProps, Breakpoint } from '@u_ui/system';
 import { Theme } from '../styles';
 import { OverridableComponent, OverrideProps } from '../OverridableComponent';
 import { ContainerClasses } from './containerClasses';

@@ -4,8 +4,8 @@ import { styled, alpha } from '@u_ui/u-ui/styles';
 import {
   brandingLightTheme as lightTheme,
   brandingDarkTheme as darkTheme,
-} from '@u-shii/docs/branding';
-import { useTranslate } from '@u-shii/docs/i18n';
+} from '@vandlee/docs/branding';
+import { useTranslate } from '@vandlee/docs/i18n';
 import ExpandableApiItem, {
   ApiItemContainer,
 } from 'docs/src/modules/components/ApiPage/list/ExpandableApiItem';
@@ -35,7 +35,7 @@ const StyledApiItem = styled(ExpandableApiItem)(
     },
   }),
   ({ theme }) => ({
-    [`:where(${theme.vars ? '[data-u-shii-color-scheme="dark"]' : '.mode-dark'}) &`]: {
+    [`:where(${theme.vars ? '[data-u-ui-color-scheme="dark"]' : '.mode-dark'}) &`]: {
       '& .global-class-value': {
         borderColor: alpha(darkTheme.palette.primary[400], 0.1),
         backgroundColor: alpha(darkTheme.palette.primary[900], 0.4),

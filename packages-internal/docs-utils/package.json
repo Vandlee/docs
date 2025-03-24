@@ -1,8 +1,8 @@
 {
-  "name": "@u-shii/internal-docs-utils",
+  "name": "@vandlee-internal/docs-utils",
   "version": "1.0.0",
-  "author": "yugashiki",
-  "description": "Utilities for u-shii docs. This is an internal package not meant for general use.",
+  "author": "elchery",
+  "description": "Utilities for Vandlee docs. This is an internal package not meant for general use.",
   "main": "./build/index.js",
   "exports": {
     ".": "./build/index.js"

@@ -2,10 +2,10 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import chainPropTypes from '@u-shii/utils/chainPropTypes';
-import composeClasses from '@u-shii/utils/composeClasses';
+import chainPropTypes from '@vandlee/utils/chainPropTypes';
+import composeClasses from '@vandlee/utils/composeClasses';
 import { unstable_useId as useId } from '@u_ui/u-ui/utils';
-import { alpha } from '@u-shii/system/colorManipulator';
+import { alpha } from '@u_ui/system/colorManipulator';
 import { styled } from '../zero-styled';
 import memoTheme from '../utils/memoTheme';
 import createSimplePaletteValueFilter from '../utils/createSimplePaletteValueFilter';
@@ -131,9 +131,11 @@ const IconButtonRoot = styled(ButtonBase, {
                 style: {
                     backgroundColor: (theme.vars || theme).palette.text.primary,
                     color: (theme.vars || theme).palette.background.default,
+                    outline: '2px solid',
                     '&:hover': {
-                        backgroundColor: (theme.vars || theme).palette.text.secondary,
-                        color: (theme.vars || theme).palette.background.paper,
+                        backgroundColor: (theme.vars || theme).palette.background,
+                        color: (theme.vars || theme).palette.text.primary,
+                        outlineColor: (theme.vars || theme).palette.text.primary
                     }
                 }
             },
@@ -261,7 +263,7 @@ IconButton.propTypes /* remove-proptypes */ = {
             if (found) {
                 return new Error(
                 [
-                    'U-SHII: You are providing an onClick event listener to a child of a button element.',
+                    'VANDLEE: You are providing an onClick event listener to a child of a button element.',
                     'Prefer applying it to the IconButton directly.',
                     'This guarantees that the whole <button> will be responsive to click events.',
                 ].join('\n'),
@@ -311,7 +313,7 @@ IconButton.propTypes /* remove-proptypes */ = {
          * If `true`, the ripple effect is disabled.
          *
          * ⚠️ Without a ripple there is no styling for :focus-visible by default. Be sure
-         * to highlight the element by applying separate styles with the `.Mui-focusVisible` class.
+         * to highlight the element by applying separate styles with the `.ui-focusVisible` class.
          * @default false
          */
         disableRipple: PropTypes.bool,

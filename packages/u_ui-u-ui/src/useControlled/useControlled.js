@@ -14,7 +14,7 @@ export default function useControlled({ controlled, default: defaultProp, name, 
       if (isControlled !== (controlled !== undefined)) {
         console.error(
           [
-            `U-SHII: A component is changing the ${
+            `VANDLEE: A component is changing the ${
               isControlled ? '' : 'un'
             }controlled ${state} state of ${name} to be ${isControlled ? 'un' : ''}controlled.`,
             'Elements should not switch from uncontrolled to controlled (or vice versa).',
@@ -35,7 +35,7 @@ export default function useControlled({ controlled, default: defaultProp, name, 
       if (!isControlled && !Object.is(defaultValue, defaultProp)) {
         console.error(
           [
-            `U-SHII: A component is changing the default ${state} state of an uncontrolled ${name} after being initialized. ` +
+            `VANDLEE: A component is changing the default ${state} state of an uncontrolled ${name} after being initialized. ` +
               `To suppress this warning opt to use a controlled ${name}.`,
           ].join('\n'),
         );

@@ -15,15 +15,15 @@ import Menu from '@u_ui/u-ui/Menu';
 import MenuItem from '@u_ui/u-ui/MenuItem';
 import useMediaQuery from '@u_ui/u-ui/useMediaQuery';
 import Box from '@u_ui/u-ui/Box';
-import { unstable_useEnhancedEffect as useEnhancedEffect } from '@u-shii/utils';
+import { unstable_useEnhancedEffect as useEnhancedEffect } from '@vandlee/utils';
 import { ArrowDropDownRounded, 
     DoneRounded } from '@mui/icons-material';
 import LogoWithCopyMenu from 'docs/src/components/action/LogoWithCopyMenu';
 import AppNavDrawerItem from 'docs/src/modules/components/AppNavDrawerItem';
 import { pageToTitleI18n } from '../utils/helpers';
 import PageContext from './PageContext';
-import { useTranslate } from '@u-shii/docs/i18n';
-import UshiiProductSelector from 'docs/src/modules/components/u-shiiProductSelector';
+import { useTranslate } from '@vandlee/docs/i18n';
+import VandleeProductSelector from 'docs/src/modules/components/vandleeProductSelector';
 
 // TODO: Collapse should expose an API to customize the duration based on the height.
 function transitionTheme(theme) {
@@ -79,12 +79,12 @@ function ProductDrawerButton(props) {
         setOpen(false);
       }
     }
-  
+
     return (
       <React.Fragment>
         <Button
           size="small"
-          id="ushii-product-selector"
+          id="vandlee-product-selector"
           ref={anchorRef}
           aria-haspopup="true"
           aria-controls={open ? 'drawer-open-button' : undefined}
@@ -119,11 +119,11 @@ function ProductDrawerButton(props) {
                 })}
               >
                 <ClickAwayListener onClickAway={handleClose}>
-                  <UshiiProductSelector
+                  <VandleeProductSelector
                     autoFocusItem={open}
                     type={props.productCategory}
-                    id="ushii-product-menu"
-                    aria-labelledby="ushii-product-selector"
+                    id="vandlee-product-menu"
+                    aria-labelledby="vandlee-product-selector"
                     onKeyDown={handleListKeyDown}
                   />
                 </ClickAwayListener>
@@ -365,7 +365,7 @@ export default function AppNavDrawer(props) {
                         variant="text"
                         color="secondary"
                         size="small"
-                        id="ushii-version-selector"
+                        id="vandlee-version-selector"
                         onClick={(event) => {
                         setAnchorEl(event.currentTarget);
                         }}
@@ -379,7 +379,7 @@ export default function AppNavDrawer(props) {
                         {currentVersion.text}
                     </Button>
                     <Menu
-                        id="ushii-version-menu"
+                        id="vandlee-version-menu"
                         anchorEl={anchorEl}
                         open={Boolean(anchorEl)}
                         onClose={() => setAnchorEl(null)}
@@ -430,7 +430,7 @@ export default function AppNavDrawer(props) {
                         marginLeft
                     />
                     <ProductIdentifier
-                        productCategory={productIdentifier.productCategory}
+                        productCategory={productIdentifier.productCategoryId}
                         name={productIdentifier.name}
                         metadata={productIdentifier.metadata}
                         versionSelector={renderVersionSelector(productIdentifier.versions)}

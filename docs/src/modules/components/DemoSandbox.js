@@ -11,10 +11,10 @@ import { jssPreset, StylesProvider } from '@mui/styles';
 import { useTheme, styled, createTheme, ThemeProvider } from '@u_ui/u-ui/styles';
 import rtl from 'jss-rtl';
 import DemoErrorBoundary from 'docs/src/modules/components/DemoErrorBoundary';
-import { useTranslate } from '@u-shii/docs/i18n';
-import { getDesignTokens } from '@u-shii/docs/branding';
+import { useTranslate } from '@vandlee/docs/i18n';
+import { getDesignTokens } from '@vandlee/docs/branding';
 import { highDensity } from 'docs/src/modules/components/ThemeContext';
-import { deepmerge, unstable_useEnhancedEffect as useEnhancedEffect } from '@u-shii/utils';
+import { deepmerge, unstable_useEnhancedEffect as useEnhancedEffect } from '@vandlee/utils';
 
 let globalInjectThemeCache;
 
@@ -136,7 +136,7 @@ DemoIframe.propTypes = {
   usesCssVarsTheme: PropTypes.bool,
 };
 
-// Use the default Material UI theme for the demos
+// Use the default U-Ui theme for the demos
 function getTheme(outerTheme, injectTheme) {
   const brandingDesignTokens = getDesignTokens(outerTheme.palette.mode);
   const isCustomized =
@@ -203,7 +203,7 @@ function DemoSandbox(props) {
   const children = <Sandbox {...sandboxProps}>{childrenProp}</Sandbox>;
 
   useEnhancedEffect(() => {
-    async function setupUshiiUITheme() {
+    async function setupVandleeUITheme() {
       if (typeof window.getInjectTheme === 'function') {
         if (!globalInjectThemeCache) {
           window.React = React;
@@ -214,7 +214,7 @@ function DemoSandbox(props) {
         setInjectTheme(globalInjectThemeCache);
       }
     }
-    setupUshiiUITheme();
+    setupVandleeUITheme();
   }, []);
 
   return (

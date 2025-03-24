@@ -2,8 +2,8 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import chainPropTypes from '@u-shii/utils/chainPropTypes';
-import composeClasses from '@u-shii/utils/composeClasses';
+import chainPropTypes from '@vandlee/utils/chainPropTypes';
+import composeClasses from '@vandlee/utils/composeClasses';
 import { keyframes, css, styled } from '../zero-styled';
 import memoTheme from '../utils/memoTheme';
 import { useDefaultProps } from '../DefaultPropsProvider';
@@ -185,7 +185,7 @@ const CircularProgressSVG = styled('svg', {
     const props = useDefaultProps({ props: inProps, name: 'uiCircularProgress' });
     const {
       className,
-      color = 'primary',
+      color = 'contrast',
       disableShrink = false,
       size = 40,
       style,
@@ -268,7 +268,7 @@ const CircularProgressSVG = styled('svg', {
      * The color of the component.
      * It supports both default and custom theme colors, which can be added as shown in the
      * [palette customization guide](https://mui.com/material-ui/customization/palette/#custom-colors).
-     * @default 'primary'
+     * @default 'contrast'
      */
     color: PropTypes /* @typescript-to-proptypes-ignore */.oneOfType([
       PropTypes.oneOf(['inherit', 'primary', 'secondary', 'contrast', 'neutral', 'error', 'info', 'success', 'warning']),
@@ -282,7 +282,7 @@ const CircularProgressSVG = styled('svg', {
     disableShrink: chainPropTypes(PropTypes.bool, (props) => {
       if (props.disableShrink && props.variant && props.variant !== 'indeterminate') {
         return new Error(
-          'U-SHII: You have provided the `disableShrink` prop ' +
+          'VANDLEE: You have provided the `disableShrink` prop ' +
             'with a variant other than `indeterminate`. This will have no effect.',
         );
       }

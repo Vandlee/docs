@@ -22,7 +22,7 @@ El `Modal` ofrece características importantes:
   y manteniéndolo ahí hasta que se cierre el modal.
 - ♿️ Añade los roles ARIA apropiados automáticamente.
 
-{{"component": "@u-shii/docs/ComponentLinkHeader", "design": false}}
+{{"component": "@vandlee/docs/ComponentLinkHeader", "design": false}}
 
 :::info
 El término «modal» se utiliza a veces para referirse a «diálogo», pero es un término equivocado.

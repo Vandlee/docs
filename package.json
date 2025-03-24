@@ -1,5 +1,5 @@
 {
-  "name": "@u-shii/monorepo",
+  "name": "@vandlee/monorepo",
   "version": "1.0.0",
   "private": true,
   "main": "index.js",
@@ -24,7 +24,7 @@
     "docs:typescript:check": "pnpm --filter docs typescript",
     "docs:typescript:formatted": "tsx ./docs/scripts/formattedTSDemos",
     "docs:mdicons:synonyms": "cross-env BABEL_ENV=development babel-node --extensions \".tsx,.ts,.js,.mjs\" ./docs/scripts/updateIconSynonyms && pnpm prettier",
-    "docs:zipRules": "cd docs && rm u-shii-vale.zip && zip -r u-shii-vale.zip u-shii-vale && cd ../ && vale sync",
+    "docs:zipRules": "cd docs && rm u-ui-vale.zip && zip -r u-ui-vale.zip u-ui-vale && cd ../ && vale sync",
     "markdownlint": "markdownlint-cli2 \"**/*.md\"",
     "prettier": "pretty-quick --ignore-path .eslintignore --branch master",
     "prettier:all": "prettier --write . --ignore-path .eslintignore",
@@ -45,13 +45,13 @@
     "@babel/preset-react": "^7.26.3",
     "@babel/preset-typescript": "^7.26.0",
     "@babel/register": "^7.25.9",
-    "@u-shii/internal-babel-plugin-minify-errors": "workspace:^",
-    "@u-shii/internal-babel-plugin-resolve-imports": "workspace:^",
-    "@u-shii-internal/api-docs-builder": "workspace:^",
-    "@u-shii/internal-docs-utils": "workspace:^",
-    "@u-shii/internal-scripts": "workspace:^",
+    "@vandlee-internal/babel-plugin-minify-errors": "workspace:^",
+    "@vandlee-internal/babel-plugin-resolve-imports": "workspace:^",
+    "@vandlee-internal/api-docs-builder": "workspace:^",
+    "@vandlee-internal/docs-utils": "workspace:^",
+    "@vandlee-internal/scripts": "workspace:^",
     "@u_ui/u-ui": "workspace:^",
-    "@u-shii/utils": "workspace:^",
+    "@vandlee/utils": "workspace:^",
     "@next/eslint-plugin-next": "^15.1.2",
     "@octokit/rest": "^21.0.2",
     "@pigment-css/react": "0.0.28",
@@ -89,7 +89,7 @@
     "eslint-plugin-filenames": "^1.3.2",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-u-shii": "workspace:^",
+    "eslint-plugin-u_ui": "workspace:^",
     "eslint-plugin-mocha": "^10.5.0",
     "eslint-plugin-react": "^7.37.3",
     "eslint-plugin-react-compiler": "0.0.0-experimental-75b9fd4-20240912",
@@ -152,7 +152,7 @@
   },
   "nyc": {
     "include": [
-      "packages/u-shii*/src/**/*.?(c|m)[jt]s?(x)"
+      "packages/u_ui*/src/**/*.?(c|m)[jt]s?(x)"
     ],
     "exclude": [
       "**/*.test.?(c|m)[jt]s?(x)",

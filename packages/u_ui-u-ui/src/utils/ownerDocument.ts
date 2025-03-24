@@ -1,3 +1,3 @@
-import ownerDocument from '@u-shii/utils/ownerDocument';
+import ownerDocument from '@vandlee/utils/ownerDocument';
 
 export default ownerDocument;

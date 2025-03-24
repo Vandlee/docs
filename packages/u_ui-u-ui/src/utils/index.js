@@ -1,5 +1,5 @@
 'use client';
-import { unstable_ClassNameGenerator as ClassNameGenerator } from '@u-shii/utils';
+import { unstable_ClassNameGenerator as ClassNameGenerator } from '@vandlee/utils';
 
 export { default as capitalize } from './capitalize';
 /* export { default as createChainedFunction } from './createChainedFunction';
@@ -33,7 +33,7 @@ export const unstable_ClassNameGenerator = {
     if (process.env.NODE_ENV !== 'production') {
       console.warn(
         [
-          'U-SHII: `ClassNameGenerator` import from `@u_ui/u-ui/utils` is outdated and might cause unexpected issues.',
+          'VANDLEE: `ClassNameGenerator` import from `@u_ui/u-ui/utils` is outdated and might cause unexpected issues.',
           '',
           "You should use `import { unstable_ClassNameGenerator } from '@u_ui/u-ui/className'` instead",
           '',

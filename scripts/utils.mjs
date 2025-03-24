@@ -31,10 +31,10 @@ export async function getVersionEnvVariables() {
   }
 
   return {
-    USHII_VERSION: version,
-    USHII_MAJOR_VERSION: major,
-    USHII_MINOR_VERSION: minor,
-    USHII_PATCH_VERSION: patch,
-    USHII_PRERELEASE: prerelease,
+    VANDLEE_VERSION: version,
+    VANDLEE_MAJOR_VERSION: major,
+    VANDLEE_MINOR_VERSION: minor,
+    VANDLEE_PATCH_VERSION: patch,
+    VANDLEE_PRERELEASE: prerelease,
   };
 }

@@ -6,7 +6,7 @@ import Collapse from '@u_ui/u-ui/Collapse';
 import Box from '@u_ui/u-ui/Box';
 import Chip from '@u_ui/u-ui/Chip';
 import { samePageLinkNavigation } from 'docs/src/modules/components/MarkdownLinks';
-import { Link } from '@u-shii/docs/Link';
+import { Link } from '@vandlee/docs/Link';
 import standardNavIcons from './AppNavIcons';
 
 const Item = styled(

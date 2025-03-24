@@ -14,7 +14,7 @@ githubSource: packages/u_ui-u-ui/src/Grid
 El componente cuadrícula (`<Grid>`) funciona bien para un diseño con un número conocido de columnas.
 Las columnas pueden configurarse con varios puntos de ruptura para especificar el espacio entre columnas.
 
-{{"component": "@u-shii/docs/ComponentLinkHeader", "design": false}}
+{{"component": "@vandlee/docs/ComponentLinkHeader", "design": false}}
 
 ## Cómo funciona
 
@@ -195,7 +195,7 @@ Los puntos de ruptura personalizados afectan a todos los [valores responsivos](#
 Tienes que configurar el aumento del módulo en la interfaz de puntos de ruptura del tema.
 
 ```ts
-declare module '@u-shii/system' {
+declare module '@u_ui/system' {
   interface BreakpointOverrides {
     // Tus puntos de ruptura personalizados
     laptop: true;

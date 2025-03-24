@@ -1,3 +1,3 @@
-import useControlled from '@u-shii/utils/useControlled';
+import useControlled from '@vandlee/utils/useControlled';
 
 export default useControlled;

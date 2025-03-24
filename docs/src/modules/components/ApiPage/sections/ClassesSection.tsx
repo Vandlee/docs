@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import * as React from 'react';
-import { Translate, useTranslate } from '@u-shii/docs/i18n';
-import { SectionTitle } from '@u-shii/docs/SectionTitle';
+import { Translate, useTranslate } from '@vandlee/docs/i18n';
+import { SectionTitle } from '@vandlee/docs/SectionTitle';
 import Box from '@u_ui/u-ui/Box';
 import ToggleDisplayOption, {
   ApiDisplayOptions,
@@ -13,7 +13,7 @@ import {
   ClassDefinition,
   getClassApiDefinitions,
 } from 'docs/src/modules/components/ApiPage/definitions/classes';
-import { PropsTranslations, ComponentClassDefinition } from '@u-shii-internal/api-docs-builder';
+import { PropsTranslations, ComponentClassDefinition } from '@vandlee-internal/api-docs-builder';
 import kebabCase from 'lodash/kebabCase';
 
 export type GetCssToCParams = {

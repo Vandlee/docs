@@ -66,34 +66,34 @@ export default function createTransitions(inputTransitions) {
       const isString = (value) => typeof value === 'string';
       const isNumber = (value) => !Number.isNaN(parseFloat(value));
       if (!isString(props) && !Array.isArray(props)) {
-        console.error('U-SHII: Argument "props" must be a string or Array.');
+        console.error('VANDLEE: Argument "props" must be a string or Array.');
       }
 
       if (!isNumber(durationOption) && !isString(durationOption)) {
         console.error(
-          `U-SHII: Argument "duration" must be a number or a string but found ${durationOption}.`,
+          `VANDLEE: Argument "duration" must be a number or a string but found ${durationOption}.`,
         );
       }
 
       if (!isString(easingOption)) {
-        console.error('U-SHII: Argument "easing" must be a string.');
+        console.error('VANDLEE: Argument "easing" must be a string.');
       }
 
       if (!isNumber(delay) && !isString(delay)) {
-        console.error('U-SHII: Argument "delay" must be a number or a string.');
+        console.error('VANDLEE: Argument "delay" must be a number or a string.');
       }
 
       if (typeof options !== 'object') {
         console.error(
           [
-            'U-SHII: Secong argument of transition.create must be an object.',
+            'VANDLEE: Secong argument of transition.create must be an object.',
             "Arguments should be either `create('prop1', options)` or `create(['prop1', 'prop2'], options)`",
           ].join('\n'),
         );
       }
 
       if (Object.keys(other).length !== 0) {
-        console.error(`U-SHII: Unrecognized argument(s) [${Object.keys(other).join(',')}].`);
+        console.error(`VANDLEE: Unrecognized argument(s) [${Object.keys(other).join(',')}].`);
       }
     }
 

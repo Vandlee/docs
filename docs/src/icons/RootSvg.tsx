@@ -1,5 +1,5 @@
 import { styled, Theme } from '@u_ui/u-ui/styles';
-import { SxProps } from '@u-shii/system';
+import { SxProps } from '@u_ui/system';
 
 export type RootSvgProps<P = unknown> = Omit<React.SVGProps<SVGSVGElement>, 'ref'> & {
   sx?: SxProps<Theme>;

@@ -21,7 +21,7 @@ Los botones comunican acciones que los usuarios pueden realizar. Suelen colocars
 - Tarjetas
 - Barras de herramientas
 
-{{"component": "@u-shii/docs/ComponentLinkHeader"}}
+{{"component": "@vandlee/docs/ComponentLinkHeader"}}
 
 {{"component": "modules/components/ComponentPageTabs.js"}}
 
@@ -150,6 +150,6 @@ Puedes usar el componente [`Badge`](/u-ui/react-badge/) para añadir una insigni
 
 ## Subir fichero
 
-Para crear un botón de carga de archivos, convierta el botón en una etiqueta utilizando `component=«label»` y, a continuación, cree una entrada oculta visualmente con el tipo `file`.
+Para crear un botón de carga de archivos, convierta el botón en una etiqueta utilizando `component="label"` y, a continuación, cree una entrada oculta visualmente con el tipo `file`.
 
 {{"demo": "es/InputFileUpload.js" }}

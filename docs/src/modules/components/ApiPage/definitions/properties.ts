@@ -3,8 +3,8 @@ import {
   PropsTranslations,
   HookApiContent,
   HooksTranslations,
-} from '@u-shii-internal/api-docs-builder';
-import { Translate } from '@u-shii/docs/i18n';
+} from '@vandlee-internal/api-docs-builder';
+import { Translate } from '@vandlee/docs/i18n';
 import kebabCase from 'lodash/kebabCase';
 import type { TableOfContentsParams } from 'docs/src/modules/components/ApiPage';
 

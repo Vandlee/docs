@@ -1,9 +1,9 @@
 'use client';
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import useTimeout from '@u-shii/utils/useTimeout';
-import elementAcceptingRef from '@u-shii/utils/elementAcceptingRef';
-import getReactElementRef from '@u-shii/utils/getReactElementRef';
+import useTimeout from '@vandlee/utils/useTimeout';
+import elementAcceptingRef from '@vandlee/utils/elementAcceptingRef';
+import getReactElementRef from '@vandlee/utils/getReactElementRef';
 import { Transition } from 'react-transition-group';
 import { useTheme } from '../zero-styled';
 import { getTransitionProps, reflow } from '../transitions/utils';
@@ -291,7 +291,7 @@ Grow.propTypes /* remove-proptypes */ = {
 };
 
 if (Grow) {
-  Grow.ushiiSupportAuto = true;
+  Grow.vandleeSupportAuto = true;
 }
 
 export default Grow;

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SxProps } from '@u-shii/system';
+import { SxProps } from '@u_ui/system';
 import { OverridableStringUnion } from '@mui/types';
 import { InternalStandardProps as StandardProps, Theme } from '..';
 import { CircularProgressClasses } from './circularProgressClasses';
@@ -16,7 +16,7 @@ export interface CircularProgressProps
    * The color of the component.
    * It supports both default and custom theme colors, which can be added as shown in the
    * [palette customization guide](https://mui.com/material-ui/customization/palette/#custom-colors).
-   * @default 'primary'
+   * @default 'contrast'
    */
   color?: OverridableStringUnion<
     'primary' | 'secondary' | 'contrast' | 'neutral' | 'error' | 'info' | 'success' | 'warning' | 'inherit',

@@ -11,7 +11,7 @@ githubSource: packages/u_ui-u-ui/src/Card
 
 <p class="description">Las tarjetas contienen contenidos y acciones sobre un mismo tema.</p>
 
-{{"component": "@u-shii/docs/ComponentLinkHeader"}}
+{{"component": "@vandlee/docs/ComponentLinkHeader"}}
 
 ## Introducción
 

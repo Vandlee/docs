@@ -1,5 +1,5 @@
-import { getPath } from '@u-shii/system/style';
-import { alpha } from '@u-shii/system/colorManipulator';
+import { getPath } from '@u_ui/system/style';
+import { alpha } from '@u_ui/system/colorManipulator';
 import type { Theme } from '../styles';
 
 const getTextDecoration = <T extends Theme>({

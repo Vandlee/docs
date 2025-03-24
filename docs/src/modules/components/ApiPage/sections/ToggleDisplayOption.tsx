@@ -5,8 +5,8 @@ import Menu from '@u_ui/u-ui/Menu';
 import MenuItem from '@u_ui/u-ui/MenuItem';
 import CheckIcon from '@mui/icons-material/Check';
 import ArrowDropDownRoundedIcon from '@mui/icons-material/ArrowDropDownRounded';
-import useEnhancedEffect from '@u-shii/utils/useEnhancedEffect';
-import { useTranslate } from '@u-shii/docs/i18n';
+import useEnhancedEffect from '@vandlee/utils/useEnhancedEffect';
+import { useTranslate } from '@vandlee/docs/i18n';
 
 export type ApiDisplayOptions = 'collapsed' | 'expanded' | 'table';
 

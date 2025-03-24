@@ -9,7 +9,7 @@ githubLabel: 'component: ClickAwayListener'
 
 <p class="description">El componente Click-Away Listener detecta cuando se produce un evento de clic fuera de su elemento hijo.</p>
 
-{{"component": "@u-shii/docs/ComponentLinkHeader", "design": false}}
+{{"component": "@vandlee/docs/ComponentLinkHeader", "design": false}}
 
 {{"component": "modules/components/ComponentPageTabs.js"}}
 

@@ -2,9 +2,9 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import integerPropType from '@u-shii/utils/integerPropType';
-import composeClasses from '@u-shii/utils/composeClasses';
-import { useRtl } from '@u-shii/system/RtlProvider';
+import integerPropType from '@vandlee/utils/integerPropType';
+import composeClasses from '@vandlee/utils/composeClasses';
+import { useRtl } from '@u_ui/system/RtlProvider';
 import Modal from '../Modal';
 import Slide from '../Slide';
 import Paper from '../Paper';

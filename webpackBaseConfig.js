@@ -9,16 +9,16 @@ module.exports = {
   resolve: {
     modules: [__dirname, 'node_modules'],
     alias: {
-      '@u-shii/internal-markdown': path.resolve(__dirname, './packages/markdown'),
+      '@vandlee/internal-markdown': path.resolve(__dirname, './packages/markdown'),
       '@u_ui/u-ui': path.resolve(__dirname, './packages/u_ui-u-ui/src'),
-      '@u-shii/docs': path.resolve(__dirname, './packages/u-shii-docs/src'),
-      '@u-shii/styled-engine': path.resolve(__dirname, './packages/u-shii-styled-engine/src'),
-      '@u-shii/system': path.resolve(__dirname, './packages/u-shii-system/src'),
-      '@u-shii/base': path.resolve(__dirname, './packages/u-shii-base/src'),
-      '@u-shii/utils': path.resolve(__dirname, './packages/u-shii-utils/src'),
-      '@u_ui/u-ui-nextjs': path.resolve(__dirname, './packages/u-shii-ui-nextjs/src'),
-      '@u-shii/internal-docs-utils': path.resolve(__dirname, './packages-internal/docs-utils/src'),
-      '@u-shii/internal-scripts/typescript-to-proptypes': path.resolve(
+      '@vandlee/docs': path.resolve(__dirname, './packages/vandlee-docs/src'),
+      '@u_ui/styled-engine': path.resolve(__dirname, './packages/u_ui-styled-engine/src'),
+      '@u_ui/system': path.resolve(__dirname, './packages/u_ui-system/src'),
+      '@u_ui/base': path.resolve(__dirname, './packages/u_ui-base/src'),
+      '@vandlee/utils': path.resolve(__dirname, './packages/vandlee-utils/src'),
+      '@u_ui/u-ui-nextjs': path.resolve(__dirname, './packages/u_ui-u-ui-nextjs/src'),
+      '@vandlee-internal/docs-utils': path.resolve(__dirname, './packages-internal/docs-utils/src'),
+      '@vandlee/internal-scripts/typescript-to-proptypes': path.resolve(
         __dirname,
         './packages-internal/scripts/typescript-to-proptypes/src',
       ),

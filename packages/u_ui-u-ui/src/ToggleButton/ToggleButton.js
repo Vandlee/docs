@@ -3,9 +3,9 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import resolveProps from '@u-shii/utils/resolveProps';
-import composeClasses from '@u-shii/utils/composeClasses';
-import { alpha } from '@u-shii/system/colorManipulator';
+import resolveProps from '@vandlee/utils/resolveProps';
+import composeClasses from '@vandlee/utils/composeClasses';
+import { alpha } from '@u_ui/system/colorManipulator';
 import ButtonBase from '../ButtonBase';
 import capitalize from '../utils/capitalize';
 import { styled } from '../zero-styled';
@@ -251,7 +251,7 @@ ToggleButton.propTypes /* remove-proptypes */ = {
      * If `true`, the ripple effect is disabled.
      *
      * ⚠️ Without a ripple there is no styling for :focus-visible by default. Be sure
-     * to highlight the element by applying separate styles with the `.Mui-focusVisible` class.
+     * to highlight the element by applying separate styles with the `.ui-focusVisible` class.
      * @default false
      */
     disableRipple: PropTypes.bool,

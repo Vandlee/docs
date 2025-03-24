@@ -6,7 +6,7 @@ const path = require('path');
  */
 
 const errorCodesPath = path.resolve(__dirname, './docs/public/static/error-codes.json');
-const missingError = process.env.USHII_EXTRACT_ERROR_CODES === 'true' ? 'write' : 'annotate';
+const missingError = process.env.VANDLEE_EXTRACT_ERROR_CODES === 'true' ? 'write' : 'annotate';
 
 /**
  * @param {string} relativeToBabelConf
@@ -19,7 +19,7 @@ function resolveAliasPath(relativeToBabelConf) {
 
 /** @type {babel.PluginItem[]} */
 const productionPlugins = [
-  ['babel-plugin-react-remove-properties', { properties: ['data-u-shii-test'] }],
+  ['babel-plugin-react-remove-properties', { properties: ['data-u-ui-test'] }],
 ];
 
 /** @type {babel.ConfigFunction} */
@@ -28,13 +28,13 @@ module.exports = function getBabelConfig(api) {
 
   const defaultAlias = {
     '@u_ui/u-ui': resolveAliasPath('./packages/u_ui-u-ui/src'),
-    '@u-shii/docs': resolveAliasPath('./packages/u-shii-docs/src'),
-    '@u-shii/internal-markdown': resolveAliasPath('./packages/markdown'),
-    '@u-shii/styled-engine': resolveAliasPath('./packages/u-shii-styled-engine/src'),
-    '@u-shii/system': resolveAliasPath('./packages/u-shii-system/src'),
-    '@u-shii/base': resolveAliasPath('./packages/u-shii-base/src'),
-    '@u-shii/utils': resolveAliasPath('./packages/u-shii-utils/src'),
-    '@u-shii/internal-docs-utils': resolveAliasPath('./packages-internal/docs-utils/src'),
+    '@vandlee/docs': resolveAliasPath('./packages/vandlee-docs/src'),
+    '@vandlee/internal-markdown': resolveAliasPath('./packages/markdown'),
+    '@u_ui/styled-engine': resolveAliasPath('./packages/u_ui-styled-engine/src'),
+    '@u_ui/system': resolveAliasPath('./packages/u_ui-system/src'),
+    '@u_ui/base': resolveAliasPath('./packages/u_ui-base/src'),
+    '@vandlee/utils': resolveAliasPath('./packages/vandlee-utils/src'),
+    '@vandlee-internal/docs-utils': resolveAliasPath('./packages-internal/docs-utils/src'),
     docs: resolveAliasPath('./docs'),
   };
 
@@ -44,7 +44,7 @@ module.exports = function getBabelConfig(api) {
       {
         bugfixes: true,
         browserslistEnv: process.env.BABEL_ENV || process.env.NODE_ENV,
-        debug: process.env.USHII_BUILD_VERBOSE === 'true',
+        debug: process.env.VANDLEE_BUILD_VERBOSE === 'true',
         modules: useESModules ? false : 'commonjs',
         shippedProposals: api.env('modern'),
       },
@@ -72,7 +72,7 @@ module.exports = function getBabelConfig(api) {
       '@babel/plugin-transform-runtime',
       {
         useESModules,
-        version: process.env.USHII_BABEL_RUNTIME_VERSION || '^7.25.0',
+        version: process.env.VANDLEE_BABEL_RUNTIME_VERSION || '^7.25.0',
       },
     ],
     [
@@ -85,16 +85,16 @@ module.exports = function getBabelConfig(api) {
       'transform-inline-environment-variables',
       {
         include: [
-          'USHII_VERSION',
-          'USHII_MAJOR_VERSION',
-          'USHII_MINOR_VERSION',
-          'USHII_PATCH_VERSION',
-          'USHII_PRERELEASE',
+          'VANDLEE_VERSION',
+          'VANDLEE_MAJOR_VERSION',
+          'VANDLEE_MINOR_VERSION',
+          'VANDLEE_PATCH_VERSION',
+          'VANDLEE_PRERELEASE',
         ],
       },
     ],
     [
-      '@u-shii/internal-babel-plugin-minify-errors',
+      '@vandlee-internal/babel-plugin-minify-errors',
       {
         missingError,
         errorCodesPath,
@@ -103,7 +103,7 @@ module.exports = function getBabelConfig(api) {
     ...(useESModules
       ? [
           [
-            '@u-shii/internal-babel-plugin-resolve-imports',
+            '@vandlee-internal/babel-plugin-resolve-imports',
             {
               outExtension: usesAliases ? null : outFileExtension,
             },
@@ -139,7 +139,7 @@ module.exports = function getBabelConfig(api) {
       },
       {
         test: /(\.test\.[^.]+$|\.test\/)/,
-        plugins: [['@u-shii/internal-babel-plugin-resolve-imports', false]]
+        plugins: [['@vandlee-internal/babel-plugin-resolve-imports', false]]
       }
     ],
     env: {

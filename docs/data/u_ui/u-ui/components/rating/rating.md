@@ -11,7 +11,7 @@ githubSource: packages/u_ui-u-ui/src/Rating
 
 <p class="description">Las valoraciones proporcionan información sobre las opiniones y experiencias de los demás, y pueden permitir al usuario enviar su propia valoración.</p>
 
-{{"component": "@u-shii/docs/ComponentLinkHeader"}}
+{{"component": "@vandlee/docs/ComponentLinkHeader"}}
 
 ## Valoración básica
 

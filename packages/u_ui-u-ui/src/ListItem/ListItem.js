@@ -2,14 +2,14 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import composeClasses from '@u-shii/utils/composeClasses';
-import elementTypeAcceptingRef from '@u-shii/utils/elementTypeAcceptingRef';
-import chainPropTypes from '@u-shii/utils/chainPropTypes';
+import composeClasses from '@vandlee/utils/composeClasses';
+import elementTypeAcceptingRef from '@vandlee/utils/elementTypeAcceptingRef';
+import chainPropTypes from '@vandlee/utils/chainPropTypes';
 import isHostComponent from '../utils/isHostComponent';
 import { styled } from '../zero-styled';
 import memoTheme from '../utils/memoTheme';
 import { useDefaultProps } from '../DefaultPropsProvider';
-import isUshiiElement from '../utils/isUshiiElement';
+import isUiElement from '../utils/isUiElement';
 import useForkRef from '../utils/useForkRef';
 import ListContext from '../List/ListContext';
 import { getListItemUtilityClass } from './listItemClasses';
@@ -200,7 +200,7 @@ const ListItem = React.forwardRef(function ListItem(inProps, ref) {
 
   // v4 implementation, deprecated in v6, will be removed in v7
   const hasSecondaryAction =
-    children.length && isUshiiElement(children[children.length - 1], ['ListItemSecondaryAction']);
+    children.length && isUiElement(children[children.length - 1], ['ListItemSecondaryAction']);
 
   const ownerState = {
     ...props,
@@ -304,7 +304,7 @@ ListItem.propTypes /* remove-proptypes */ = {
     let secondaryActionIndex = -1;
     for (let i = children.length - 1; i >= 0; i -= 1) {
       const child = children[i];
-      if (isUshiiElement(child, ['ListItemSecondaryAction'])) {
+      if (isUiElement(child, ['ListItemSecondaryAction'])) {
         secondaryActionIndex = i;
         break;
       }
@@ -313,7 +313,7 @@ ListItem.propTypes /* remove-proptypes */ = {
     //  is ListItemSecondaryAction the last child of ListItem
     if (secondaryActionIndex !== -1 && secondaryActionIndex !== children.length - 1) {
       return new Error(
-        'USHII: You used an element after ListItemSecondaryAction. ' +
+        'VANDLEE: You used an element after ListItemSecondaryAction. ' +
           'For ListItem to detect that it has a secondary action ' +
           'you must pass it as the last child to ListItem.',
       );

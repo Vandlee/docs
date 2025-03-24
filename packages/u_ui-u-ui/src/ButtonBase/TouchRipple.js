@@ -3,7 +3,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { TransitionGroup } from 'react-transition-group';
 import clsx from 'clsx';
-import useTimeout from '@u-shii/utils/useTimeout';
+import useTimeout from '@vandlee/utils/useTimeout';
 import { keyframes, styled } from '../zero-styled';
 import { useDefaultProps } from '../DefaultPropsProvider';
 import Ripple from './Ripple';

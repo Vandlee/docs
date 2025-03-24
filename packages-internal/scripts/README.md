@@ -1,6 +1,6 @@
-# @u-shii/internal-scripts
+# @vandlee-internal/scripts
 
-This is that code infra scripts for the u-shii organization repositories.
+This is that code infra scripts for the Vandlee organization repositories.
 It is not meant for general use.
 
 ## Scripts

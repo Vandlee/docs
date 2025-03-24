@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { UshiiStyledCommonProps, SxProps } from '@u-shii/system';
+import { VandleeStyledCommonProps, SxProps } from '@u_ui/system';
 import { PopperProps } from '@u_ui/u-ui/Popper';
 import { InternalStandardProps as StandardProps, Theme } from '..';
 import { CreateSlotsAndSlotProps, SlotProps } from '../utils/types';
@@ -105,10 +105,10 @@ export interface TooltipProps
     popper?: Partial<PopperProps> & TooltipComponentsPropsOverrides;
     transition?: TransitionProps & TooltipComponentsPropsOverrides;
     tooltip?: React.HTMLProps<HTMLDivElement> &
-      UshiiStyledCommonProps &
+      VandleeStyledCommonProps &
       TooltipComponentsPropsOverrides;
     arrow?: React.HTMLProps<HTMLSpanElement> &
-      UshiiStyledCommonProps &
+      VandleeStyledCommonProps &
       TooltipComponentsPropsOverrides;
   };
   /**

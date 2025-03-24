@@ -5,8 +5,8 @@ import throttle from 'lodash/throttle';
 import { styled, alpha } from '@u_ui/u-ui/styles';
 import Typography from '@u_ui/u-ui/Typography';
 import NoSsr from '@u_ui/u-ui/NoSsr';
-import { Link } from '@u-shii/docs/Link';
-import { useTranslate } from '@u-shii/docs/i18n';
+import { Link } from '@vandlee/docs/Link';
+import { useTranslate } from '@vandlee/docs/i18n';
 import { samePageLinkNavigation } from 'docs/src/modules/components/MarkdownLinks';
 
 const Nav = styled('nav')(({ theme }) => ({

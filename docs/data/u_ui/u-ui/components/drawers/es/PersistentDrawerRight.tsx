@@ -2,7 +2,7 @@ import * as React from 'react';
 import { styled, useTheme } from '@u_ui/u-ui/styles';
 import Box from '@u_ui/u-ui/Box';
 import Drawer from '@u_ui/u-ui/Drawer';
-import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@u_ui/u-ui/AppBar';
+import uiAppBar, { AppBarProps as uiAppBarProps } from '@u_ui/u-ui/AppBar';
 import Toolbar from '@u_ui/u-ui/Toolbar';
 import CssBaseline from '@u_ui/u-ui/CssBaseline';
 import List from '@u_ui/u-ui/List';
@@ -52,11 +52,11 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
   ],
 }));
 
-interface AppBarProps extends MuiAppBarProps {
+interface AppBarProps extends uiAppBarProps {
   open?: boolean;
 }
 
-const AppBar = styled(MuiAppBar, {
+const AppBar = styled(uiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
 })<AppBarProps>(({ theme }) => ({
   transition: theme.transitions.create(['margin', 'width'], {

@@ -3,7 +3,7 @@ import * as React from 'react';
 import SvgIcon from '../SvgIcon';
 
 /**
- * Private module reserved for @u-shii packages.
+ * Private module reserved for @u_ui | @vandlee packages.
  */
 export default function createSvgIcon(path, displayName) {
   function Component(props, ref) {

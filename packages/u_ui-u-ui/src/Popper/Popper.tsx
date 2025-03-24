@@ -1,8 +1,8 @@
 'use client';
-import { SxProps } from '@u-shii/system';
-import { useRtl } from '@u-shii/system/RtlProvider';
-import refType from '@u-shii/utils/refType';
-import HTMLElementType from '@u-shii/utils/HTMLElementType';
+import { SxProps } from '@u_ui/system';
+import { useRtl } from '@u_ui/system/RtlProvider';
+import refType from '@vandlee/utils/refType';
+import HTMLElementType from '@vandlee/utils/HTMLElementType';
 import PropTypes from 'prop-types';
 import * as React from 'react';
 import BasePopper from './BasePopper';

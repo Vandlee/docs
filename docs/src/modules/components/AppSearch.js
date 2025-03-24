@@ -1,7 +1,11 @@
-const productNameProductId = {
+export const productNameProductId = {
   'u-ui': 'U-Ui',
   'joy-ui': 'Joy UI',
   'base-ui': 'Base UI',
+  'html': "HTML",
+  'javascript': 'JavaScript',
+  'php': 'PHP',
+  'python': 'Python',
   x: 'MUI X',
   system: 'MUI System',
   toolpad: 'Toolpad',
@@ -13,6 +17,7 @@ const productNameProductId = {
 export function convertProductIdToName(productInfo) {
   return (
     productNameProductId[productInfo.productId] ||
-    productNameProductId[productInfo.productCategoryId]
+    productNameProductId[productInfo.productCategoryId] ||
+    productNameProductId[productInfo]
   );
 }

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SxProps } from '@u-shii/system';
+import { SxProps } from '@u_ui/system';
 import { OverridableStringUnion, Simplify } from '@mui/types';
 import { SlotComponentProps } from '../utils/types';
 import { Theme } from '../styles';

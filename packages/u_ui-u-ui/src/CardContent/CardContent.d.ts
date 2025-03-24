@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SxProps } from '@u-shii/system';
+import { SxProps } from '@u_ui/system';
 import { OverridableComponent, OverrideProps } from '../OverridableComponent';
 import { Theme } from '..';
 import { CardContentClasses } from './cardContentClasses';

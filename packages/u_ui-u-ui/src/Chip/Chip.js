@@ -2,8 +2,8 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import composeClasses from '@u-shii/utils/composeClasses';
-import { alpha } from '@u-shii/system';
+import composeClasses from '@vandlee/utils/composeClasses';
+import { alpha } from '@u_ui/system';
 import CancelIcon from '../internal/svg-icons/Cancel';
 import useForkRef from '../utils/useForkRef';
 import unsupportedProp from '../utils/unsupportedProp';
@@ -497,7 +497,7 @@ const Chip = React.forwardRef(function Chip(inProps, ref) {
   if (process.env.NODE_ENV !== 'production') {
     if (avatar && icon) {
       console.error(
-        'U-SHII: The Chip component can not handle the avatar ' +
+        'VANDLEE: The Chip component can not handle the avatar ' +
           'and the icon prop at the same time. Pick one.',
       );
     }

@@ -5,7 +5,7 @@ import {
   OverrideProps,
   PartiallyRequired,
 } from '@mui/types';
-import { SxProps } from '@u-shii/system';
+import { SxProps } from '@u_ui/system';
 import { Theme } from '@u_ui/u-ui';
 import { AvatarGroupClasses } from './avatarGroupClasses';
 import Avatar from '../Avatar';

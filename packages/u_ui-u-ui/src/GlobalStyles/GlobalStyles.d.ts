@@ -1,4 +1,4 @@
-import { GlobalStylesProps as StyledGlobalStylesProps } from '@u-shii/system';
+import { GlobalStylesProps as StyledGlobalStylesProps } from '@u_ui/system';
 import { Theme } from '../styles';
 
 export interface GlobalStylesProps {

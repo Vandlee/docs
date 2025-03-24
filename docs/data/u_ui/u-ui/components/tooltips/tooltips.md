@@ -14,7 +14,7 @@ githubSource: packages/u_ui-u-ui/src/Tooltip
 
 Cuando se activan, los tooltips muestran una etiqueta de texto que identifica un elemento, como una descripción de su función.
 
-{{"component": "@u-shii/docs/ComponentLinkHeader"}}
+{{"component": "@vandlee/docs/ComponentLinkHeader"}}
 
 ## Tooltip básico
 

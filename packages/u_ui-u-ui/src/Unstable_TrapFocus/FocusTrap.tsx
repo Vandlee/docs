@@ -8,7 +8,7 @@ import {
   unstable_useForkRef as useForkRef,
   unstable_ownerDocument as ownerDocument,
   unstable_getReactElementRef as getReactElementRef,
-} from '@u-shii/utils';
+} from '@vandlee/utils';
 import { FocusTrapProps } from './FocusTrap.types';
 
 // Inspired by https://github.com/focus-trap/tabbable
@@ -170,7 +170,7 @@ function FocusTrap(props: FocusTrapProps): React.JSX.Element {
         if (process.env.NODE_ENV !== 'production') {
           console.error(
             [
-              'U-SHII: The modal content node does not accept focus.',
+              'VANDLEE: The modal content node does not accept focus.',
               'For the benefit of assistive technologies, ' +
                 'the tabIndex of the node is being set to "-1".',
             ].join('\n'),

@@ -14,7 +14,7 @@
     "strict": true,
     "baseUrl": "./",
     "paths": {
-      "@u-shii/internal-docs-utils": ["../../packages-internal/docs-utils/src"]
+      "@vandlee-internal/docs-utils": ["../../packages-internal/docs-utils/src"]
     }
   },
   "include": ["./**/*.ts", "./**/*.js"],

@@ -1,3 +1,3 @@
-import useEnhancedEffect from '@u-shii/utils/useEnhancedEffect';
+import useEnhancedEffect from '@vandlee/utils/useEnhancedEffect';
 
 export default useEnhancedEffect;

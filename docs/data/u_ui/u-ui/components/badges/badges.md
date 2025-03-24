@@ -11,7 +11,7 @@ githubSource: packages/u_ui-u-ui/src/Badge
 
 <p class="description">Insignia genera una pequeña insignia en la parte superior derecha de su(s) hijo(s).</p>
 
-{{"component": "@u-shii/docs/ComponentLinkHeader"}}
+{{"component": "@vandlee/docs/ComponentLinkHeader"}}
 
 ## Insignia básica
 

@@ -1,6 +1,6 @@
 import { OverridableStringUnion } from '@mui/types';
-import { SxConfig, SxProps, CSSObject, ApplyStyles } from '@u-shii/system';
-import { ExtractTypographyTokens } from '@u-shii/system/cssVars';
+import { SxConfig, SxProps, CSSObject, ApplyStyles } from '@u_ui/system';
+import { ExtractTypographyTokens } from '@u_ui/system/cssVars';
 import { ThemeOptions, Theme } from './createThemeNoVars';
 import { Palette, PaletteOptions } from './createPalette';
 import { Shadows } from './shadows';
@@ -293,7 +293,7 @@ export interface CssVarsThemeOptions extends Omit<ThemeOptions, 'palette' | 'com
   defaultColorScheme?: SupportedColorScheme;
   /**
    * Prefix of the generated CSS variables
-   * @default 'u-shii'
+   * @default 'ui'
    */
   cssVarPrefix?: string;
   /**

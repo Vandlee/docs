@@ -11,7 +11,7 @@ githubSource: packages/u_ui-u-ui/src/Paper
 
 <p class="description">El componente Papel es un contenedor para mostrar contenidos en una superficie elevada.</p>
 
-{{"component": "@u-shii/docs/ComponentLinkHeader"}}
+{{"component": "@vandlee/docs/ComponentLinkHeader"}}
 
 ## Introducción
 

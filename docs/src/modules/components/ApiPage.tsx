@@ -1,19 +1,19 @@
 /* eslint-disable react/no-danger */
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { ComponentApiContent, PropsTranslations } from '@u-shii-internal/api-docs-builder';
-import exactProp from '@u-shii/utils/exactProp';
+import { ComponentApiContent, PropsTranslations } from '@vandlee-internal/api-docs-builder';
+import exactProp from '@vandlee/utils/exactProp';
 import Typography from '@u_ui/u-ui/Typography';
 import Alert from '@u_ui/u-ui/Alert';
-import { TableOfContentsEntry } from '@u-shii/internal-markdown';
-import { Ad, AdGuest } from '@u-shii/docs/Ad';
+import { TableOfContentsEntry } from '@vandlee/internal-markdown';
+import { Ad, AdGuest } from '@vandlee/docs/Ad';
 import VerifiedRoundedIcon from '@mui/icons-material/VerifiedRounded';
 import WarningRoundedIcon from '@mui/icons-material/WarningRounded';
-import { Translate, useTranslate, useUserLanguage } from '@u-shii/docs/i18n';
-import { HighlightedCode } from '@u-shii/docs/HighlightedCode';
-import { BrandingProvider } from '@u-shii/docs/branding';
-import { SectionTitle, SectionTitleProps } from '@u-shii/docs/SectionTitle';
-import { MarkdownElement } from '@u-shii/docs/MarkdownElement';
+import { Translate, useTranslate, useUserLanguage } from '@vandlee/docs/i18n';
+import { HighlightedCode } from '@vandlee/docs/HighlightedCode';
+import { BrandingProvider } from '@vandlee/docs/branding';
+import { SectionTitle, SectionTitleProps } from '@vandlee/docs/SectionTitle';
+import { MarkdownElement } from '@vandlee/docs/MarkdownElement';
 import AppLayoutDocs from 'docs/src/modules/components/AppLayoutDocs';
 import PropertiesSection from 'docs/src/modules/components/ApiPage/sections/PropertiesSection';
 import ClassesSection from 'docs/src/modules/components/ApiPage/sections/ClassesSection';
@@ -138,7 +138,7 @@ export default function ApiPage(props: ApiPageProps) {
     : [];
 
   const isJoyComponent = filename.includes('mui-joy');
-  const isBaseComponent = filename.includes('ushii-base');
+  const isBaseComponent = filename.includes('vandlee-base');
   const defaultPropsLink = isJoyComponent
     ? '/joy-ui/customization/themed-components/#theme-default-props'
     : '/material-ui/customization/theme-components/#theme-default-props';

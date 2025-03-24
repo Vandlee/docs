@@ -1,9 +1,9 @@
 import * as React from 'react';
-import UshiiLink from '@u_ui/u-ui/Link';
+import VandleeLink from '@u_ui/u-ui/Link';
 import { styled } from '@u_ui/u-ui/styles';
-import { useTranslate } from '@u-shii/docs/i18n';
+import { useTranslate } from '@vandlee/docs/i18n';
 
-const StyledLink = styled(UshiiLink)(({ theme }) => ({
+const StyledLink = styled(VandleeLink)(({ theme }) => ({
   position: 'fixed',
   padding: theme.spacing(1, 2),
   backgroundColor: (theme.vars || theme).palette.primary[50],

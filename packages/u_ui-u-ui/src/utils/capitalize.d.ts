@@ -1,3 +1,3 @@
-import capitalize from '@u-shii/utils/capitalize';
+import capitalize from '@vandlee/utils/capitalize';
 
 export default capitalize;

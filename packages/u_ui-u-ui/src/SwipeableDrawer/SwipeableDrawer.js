@@ -2,7 +2,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import elementTypeAcceptingRef from '@u-shii/utils/elementTypeAcceptingRef';
+import elementTypeAcceptingRef from '@vandlee/utils/elementTypeAcceptingRef';
 import NoSsr from '../NoSsr';
 import Drawer, { getAnchor, isHorizontal } from '../Drawer/Drawer';
 import useForkRef from '../utils/useForkRef';
@@ -486,7 +486,7 @@ const SwipeableDrawer = React.forwardRef(function SwipeableDrawer(inProps, ref) 
     }
 
     // We can only have one node at the time claiming ownership for handling the swipe.
-    if (nativeEvent.defaultUshiiPrevented) {
+    if (nativeEvent.defaultVandleePrevented) {
       return;
     }
 
@@ -540,7 +540,7 @@ const SwipeableDrawer = React.forwardRef(function SwipeableDrawer(inProps, ref) 
       }
     }
 
-    nativeEvent.defaultUshiiPrevented = true;
+    nativeEvent.defaultVandleePrevented = true;
     claimedSwipeInstance = null;
     swipeInstance.current.startX = currentX;
     swipeInstance.current.startY = currentY;

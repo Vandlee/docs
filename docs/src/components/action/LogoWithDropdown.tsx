@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Box, Slide } from '@u_ui/u-ui';
+import { Box, Drawer, Slide } from '@u_ui/u-ui';
 import { RootSvgProps } from 'docs/src/icons/RootSvg';
-import SvgYugashikiLogomark from 'docs/src/icons/SvgYugashikiLogomark';
+import SvgZuroLogomark from 'docs/src/icons/SvgZuro';
 import { ExpandMoreRounded, ExpandLessRounded } from '@mui/icons-material';
 import HeaderDropdown from 'docs/src/components/header/HeaderDropdown';
 
@@ -13,7 +13,7 @@ interface LogoWithDropdownProps {
 }
 
 export default function LogoWithDropdown({
-  logo: LogoSvg = SvgYugashikiLogomark,
+  logo: LogoSvg = SvgZuroLogomark,
   marginLeft,
 }: LogoWithDropdownProps) {
   const [dropdown, setDropdown] = React.useState(false);
@@ -48,11 +48,11 @@ export default function LogoWithDropdown({
         onClick={handleDropDown}
         sx={{
           mr: 1,
-          ml: marginLeft ? 1.5 : undefined,
+          ml: marginLeft ? 1 : undefined,
           alignItems: 'center',
           display: 'flex',
           color: dropdown ? '#000' : 'text.primary',
-          padding: '.25rem .75rem',
+          padding: '.25rem',
           borderRadius: '100px',
           zIndex: 100,
           '&:hover': {
@@ -65,17 +65,7 @@ export default function LogoWithDropdown({
         <LogoSvg />
         {dropdown ? <ExpandLessRounded /> : <ExpandMoreRounded />}
       </Box>
-      <Slide
-        style={{ position: 'fixed', top: 0, left: 0, zIndex: 99 }}
-        direction="down"
-        in={dropdown}
-        mountOnEnter
-        unmountOnExit
-      >
-        <Box sx={{ width: '100%' }}>
-          <HeaderDropdown />
-        </Box>
-      </Slide>
+      <HeaderDropdown open={dropdown} onClose={() => setDropdown((prev) => !prev)} />
     </React.Fragment>
   );
 }

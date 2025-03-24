@@ -15,7 +15,7 @@ Los chips permiten a los usuarios introducir información, realizar selecciones,
 
 Aunque se incluyen aquí como un componente independiente, el uso más común será en alguna forma de entrada. más común será en alguna forma de entrada, por lo que algunos de los comportamientos no se muestra en contexto.
 
-{{"component": "@u-shii/docs/ComponentLinkHeader"}}
+{{"component": "@vandlee/docs/ComponentLinkHeader"}}
 
 ## Chip básico
 

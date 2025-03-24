@@ -2,7 +2,7 @@ import * as React from 'react';
 import Box from '@u_ui/u-ui/Box';
 import Grid from '@u_ui/u-ui/Grid';
 import Paper from '@u_ui/u-ui/Paper';
-import { HighlightedCode } from '@u-shii/docs/HighlightedCode';
+import { HighlightedCode } from '@vandlee/docs/HighlightedCode';
 
 export default function SpacingGrid() {
   const [spacing, setSpacing] = React.useState(2);

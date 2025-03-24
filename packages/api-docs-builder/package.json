@@ -1,5 +1,5 @@
 {
-  "name": "@u-shii-internal/api-docs-builder",
+  "name": "@vandlee-internal/api-docs-builder",
   "version": "1.0.0",
   "private": "true",
   "main": "./index.ts",
@@ -11,8 +11,8 @@
     "@babel/core": "^7.26.0",
     "@babel/preset-typescript": "^7.26.0",
     "@babel/traverse": "^7.26.4",
-    "@u-shii/internal-docs-utils": "workspace:^",
-    "@u-shii/internal-markdown": "workspace:^",
+    "@vandlee-internal/docs-utils": "workspace:^",
+    "@vandlee/internal-markdown": "workspace:^",
     "ast-types": "^0.14.2",
     "doctrine": "^3.0.0",
     "fast-glob": "^3.3.2",

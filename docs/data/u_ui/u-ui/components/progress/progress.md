@@ -18,7 +18,7 @@ Los indicadores de progreso informan a los usuarios sobre el estado de los proce
 
 Las animaciones de los componentes se basan en CSS en la medida de lo posible para funcionar incluso antes de que se cargue JavaScript.
 
-{{"component": "@u-shii/docs/ComponentLinkHeader"}}
+{{"component": "@vandlee/docs/ComponentLinkHeader"}}
 
 ## Circular
 

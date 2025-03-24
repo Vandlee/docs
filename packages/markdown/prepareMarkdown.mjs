@@ -18,7 +18,7 @@ const BaseUIReexportedComponents = ['ClickAwayListener', 'NoSsr', 'Portal', 'Tex
  * @param {string} productId
  * @example 'u-ui'
  * @param {string} componentPkg
- * @example 'u-shii-base'
+ * @example 'u_ui-base'
  * @param {string} component
  * @example 'Button'
  * @returns {string}
@@ -39,7 +39,7 @@ function resolveComponentApiUrl(productId, categoryId, componentPkg, component) 
   if (productId === 'x-data-grid') {
     return `/x/api/data-grid/${kebabCase(component)}/`;
   }
-  if (componentPkg === 'u-shii-base' || BaseUIReexportedComponents.includes(component)) {
+  if (componentPkg === 'u_ui-base' || BaseUIReexportedComponents.includes(component)) {
     return `/base-ui/react-${kebabCase(component)}/components-api/#${kebabCase(component)}`;
   }
   if (productId === 'toolpad-core') {
@@ -173,8 +173,6 @@ function prepareMarkdown(config) {
         const codeblock = getCodeblock(content);
 
         if (codeblock) {
-          console.log('codeblock', content)
-          console.log('codeblock-cosnst', codeblock)
           return codeblock;
         }
 
@@ -261,7 +259,7 @@ function prepareMarkdown(config) {
     if (!exists) {
       throw new Error(
         [
-          `U-SHII: the card image for the blog post "${slug}" is missing.`,
+          `VANDLEE: the card image for the blog post "${slug}" is missing.`,
           `Add a docs/public/static/blog/${slug}/card.png file and then restart Next.js or else remove card: true from the headers.`,
         ].join('\n'),
       );

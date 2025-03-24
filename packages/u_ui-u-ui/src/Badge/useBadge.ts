@@ -1,6 +1,6 @@
 'use client';
 import * as React from 'react';
-import { usePreviousProps } from '@u-shii/utils';
+import { usePreviousProps } from '@vandlee/utils';
 import { UseBadgeParameters, UseBadgeReturnValue } from './useBadge.types';
 
 /**

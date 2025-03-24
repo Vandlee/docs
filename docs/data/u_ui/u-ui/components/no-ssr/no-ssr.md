@@ -8,7 +8,7 @@ components: NoSsr
 
 <p class="description">El componente No-SSR difiere la renderización de los componentes hijos del servidor al cliente.</p>
 
-{{"component": "@u-shii/docs/ComponentLinkHeader", "design": false}}
+{{"component": "@vandlee/docs/ComponentLinkHeader", "design": false}}
 
 {{"component": "modules/components/ComponentPageTabs.js"}}
 

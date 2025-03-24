@@ -1,6 +1,6 @@
-import { UshiiPage } from 'docs/src/u-shiiPage';
+import { VandleePage } from 'docs/src/vandleePage';
 
-const pages: UshiiPage[] = [
+const pages: VandleePage[] = [
   {
     pathname: '/u-docs/javascript/grupo-ejemplo',
     title: 'Grupo de ejemplo',

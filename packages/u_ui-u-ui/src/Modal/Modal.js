@@ -2,9 +2,9 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import HTMLElementType from '@u-shii/utils/HTMLElementType';
-import elementAcceptingRef from '@u-shii/utils/elementAcceptingRef';
-import composeClasses from '@u-shii/utils/composeClasses';
+import HTMLElementType from '@vandlee/utils/HTMLElementType';
+import elementAcceptingRef from '@vandlee/utils/elementAcceptingRef';
+import composeClasses from '@vandlee/utils/composeClasses';
 import FocusTrap from '../Unstable_TrapFocus';
 import Portal from '../Portal';
 import { styled } from '../zero-styled';
@@ -239,7 +239,7 @@ Modal.propTypes /* remove-proptypes */ = {
     /**
      * A backdrop component. This prop enables custom backdrop rendering.
      * @deprecated Use `slots.backdrop` instead. While this prop currently works, it will be removed in the next major version.
-     * Use the `slots.backdrop` prop to make your application ready for the next version of Material UI.
+     * Use the `slots.backdrop` prop to make your application ready for the next version of U-ui.
      * @default styled(Backdrop, {
      *   name: 'uiModal',
      *   slot: 'Backdrop',

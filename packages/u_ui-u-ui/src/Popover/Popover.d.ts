@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SxProps } from '@u-shii/system';
+import { SxProps } from '@u_ui/system';
 import { BackdropProps } from '../Backdrop';
 import { InternalStandardProps as StandardProps } from '..';
 import Paper, { PaperProps } from '../Paper';
@@ -89,7 +89,7 @@ export interface PopoverProps
   /**
    * A backdrop component. This prop enables custom backdrop rendering.
    * @deprecated Use `slotProps.root.slots.backdrop` instead. While this prop currently works, it will be removed in the next major version.
-   * Use the `slotProps.root.slots.backdrop` prop to make your application ready for the next version of Material UI.
+   * Use the `slotProps.root.slots.backdrop` prop to make your application ready for the next version of U-Ui.
    * @default styled(Backdrop, {
    *   name: 'uiModal',
    *   slot: 'Backdrop',

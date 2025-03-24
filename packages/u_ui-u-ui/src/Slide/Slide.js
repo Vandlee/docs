@@ -2,10 +2,10 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Transition } from 'react-transition-group';
-import chainPropTypes from '@u-shii/utils/chainPropTypes';
-import HTMLElementType from '@u-shii/utils/HTMLElementType';
-import elementAcceptingRef from '@u-shii/utils/elementAcceptingRef';
-import getReactElementRef from '@u-shii/utils/getReactElementRef';
+import chainPropTypes from '@vandlee/utils/chainPropTypes';
+import HTMLElementType from '@vandlee/utils/HTMLElementType';
+import elementAcceptingRef from '@vandlee/utils/elementAcceptingRef';
+import getReactElementRef from '@vandlee/utils/getReactElementRef';
 import debounce from '../utils/debounce';
 import useForkRef from '../utils/useForkRef';
 import { useTheme } from '../zero-styled';
@@ -309,7 +309,7 @@ Slide.propTypes /* remove-proptypes */ = {
         ) {
           return new Error(
             [
-              'U-SHII: The `container` prop provided to the component is invalid.',
+              'VANDLEE: The `container` prop provided to the component is invalid.',
               'The anchor element should be part of the document layout.',
               "Make sure the element is present in the document or that it's not display none.",
             ].join('\n'),
@@ -323,7 +323,7 @@ Slide.propTypes /* remove-proptypes */ = {
       ) {
         return new Error(
           [
-            'U-SHII: The `container` prop provided to the component is invalid.',
+            'VANDLEE: The `container` prop provided to the component is invalid.',
             'It should be an HTML element instance.',
           ].join('\n'),
         );

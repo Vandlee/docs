@@ -7,8 +7,8 @@ import {
   unstable_ownerDocument as ownerDocument,
   unstable_useForkRef as useForkRef,
   unstable_useEventCallback as useEventCallback,
-} from '@u-shii/utils';
-import getReactElementRef from '@u-shii/utils/getReactElementRef';
+} from '@vandlee/utils';
+import getReactElementRef from '@vandlee/utils/getReactElementRef';
 
 // TODO: return `EventHandlerName extends `on${infer EventName}` ? Lowercase<EventName> : never` once generatePropTypes runs with TS 4.1
 function mapEventPropToEvent(

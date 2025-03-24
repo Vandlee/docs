@@ -22,7 +22,7 @@ export type ComponentInfo = {
    */
   name: string;
   /**
-   * Component name with `Ushii` prefix, in the global HTML page namespace.
+   * Component name with `Vandlee` prefix, in the global HTML page namespace.
    */
   uiName: string;
   /**
@@ -55,7 +55,7 @@ export type ComponentInfo = {
   layoutConfigPath?: string;
   skipApiGeneration?: boolean;
   /**
-   * If `true`, the component's name match one of the Ushii System components.
+   * If `true`, the component's name match one of the Vandlee System components.
    */
   isSystemComponent?: boolean;
   /**
@@ -70,7 +70,7 @@ export type HookInfo = {
    */
   filename: string;
   /**
-   * Hook name as imported in the docs, in the global Ushii namespace.
+   * Hook name as imported in the docs, in the global Vandlee namespace.
    */
   name: string;
   apiPathname: string;

@@ -5,7 +5,7 @@ const CODE_VARIANTS = {
 };
 
 const CODE_STYLING = {
-  SYSTEM: 'u-shii System',
+  SYSTEM: 'u-ui System',
   TAILWIND: 'Tailwind',
   CSS: 'CSS',
 };

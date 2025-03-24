@@ -2,7 +2,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
 import { styled } from '@u_ui/u-ui/styles';
-import { exactProp } from '@u-shii/utils';
+import { exactProp } from '@vandlee/utils';
 import GlobalStyles from '@u_ui/u-ui/GlobalStyles';
 import {
   AdManager,
@@ -10,7 +10,7 @@ import {
   AD_HEIGHT,
   AD_HEIGHT_MOBILE,
   AD_MARGIN_BOTTOM,
-} from '@u-shii/docs/Ad';
+} from '@vandlee/docs/Ad';
 import Head from 'docs/src/modules/components/Head';
 import AppFrame from 'docs/src/modules/components/AppFrame';
 import AppContainer from 'docs/src/modules/components/AppContainer';

@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { getHeaders } from '@u-shii/internal-markdown';
+import { getHeaders } from '@vandlee/internal-markdown';
 
 const blogDir = path.join(process.cwd(), 'pages/blog');
 
@@ -38,9 +38,8 @@ const ALLOWED_TAGS = [
   'Product',
   // Product tags
   'U-Ui',
-  'Base UI',
+  'U-Ui Base',
   'Pigment CSS',
-  'Joy UI',
   'MUI X',
   'Toolpad',
 ];

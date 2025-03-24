@@ -3,8 +3,8 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { isFragment } from 'react-is';
 import clsx from 'clsx';
-import chainPropTypes from '@u-shii/utils/chainPropTypes';
-import composeClasses from '@u-shii/utils/composeClasses';
+import chainPropTypes from '@vandlee/utils/chainPropTypes';
+import composeClasses from '@vandlee/utils/composeClasses';
 import { styled } from '../zero-styled';
 import memoTheme from '../utils/memoTheme';
 import { useDefaultProps } from '../DefaultPropsProvider';
@@ -86,7 +86,7 @@ const AvatarGroup = React.forwardRef(function AvatarGroup(inProps, ref) {
       if (isFragment(child)) {
         console.error(
           [
-            "USHII: The AvatarGroup component doesn't accept a Fragment as a child.",
+            "VANDLEE: The AvatarGroup component doesn't accept a Fragment as a child.",
             'Consider providing an array instead.',
           ].join('\n'),
         );
@@ -199,7 +199,7 @@ AvatarGroup.propTypes /* remove-proptypes */ = {
     if (props.max < 2) {
       return new Error(
         [
-          'USHII: The prop `max` should be equal to 2 or above.',
+          'VANDLEE: The prop `max` should be equal to 2 or above.',
           'A value below is clamped to 2.',
         ].join('\n'),
       );

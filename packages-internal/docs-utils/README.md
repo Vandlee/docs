@@ -1,4 +1,4 @@
-# @u-shii/internal-docs-utils
+# @vandlee-internal/docs-utils
 
 This package contains utilities shared between MUI docs generation scripts.
 This is an internal package not meant for general use.

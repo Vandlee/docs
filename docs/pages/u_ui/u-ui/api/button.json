@@ -12,6 +12,7 @@
       "component": { "type": { "name": "elementType" } },
       "disabled": { "type": { "name": "bool" }, "default": "false" },
       "disableFocusRipple": { "type": { "name": "bool" }, "default": "false" },
+      "disableIconAnimation": { "type": { "name": "bool" }, "default": "false" },
       "disableRipple": { "type": { "name": "bool" }, "default": "false" },
       "enableElevation": { "type": { "name": "bool" }, "default": "false" },
       "endIcon": { "type": { "name": "node" } },

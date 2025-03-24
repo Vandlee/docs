@@ -10,7 +10,7 @@ githubSource: packages/u_ui-u-ui/src/ButtonGroup
 
 <p class="description">El componente ButtonGroup puede utilizarse para agrupar botones relacionados.</p>
 
-{{"component": "@u-shii/docs/ComponentLinkHeader"}}
+{{"component": "@vandlee/docs/ComponentLinkHeader"}}
 
 ## Grupo de botones básico
 

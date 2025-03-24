@@ -1,4 +1,4 @@
-export { unstable_ClassNameGenerator } from '@u-shii/utils';
+export { unstable_ClassNameGenerator } from '@vandlee/utils';
 export { default as capitalize } from './capitalize';
 /* export { default as createChainedFunction } from './createChainedFunction';
 */

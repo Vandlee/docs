@@ -2,9 +2,9 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import resolveProps from '@u-shii/utils/resolveProps';
-import composeClasses from '@u-shii/utils/composeClasses';
-import { alpha } from '@u-shii/system/colorManipulator';
+import resolveProps from '@vandlee/utils/resolveProps';
+import composeClasses from '@vandlee/utils/composeClasses';
+import { alpha } from '@u_ui/system/colorManipulator';
 import { unstable_useId as useId } from '@u_ui/u-ui/utils';
 import rootShouldForwardProp from '../styles/rootShouldForwardProp';
 import { styled } from '../zero-styled';
@@ -108,7 +108,7 @@ const ButtonRoot = styled(ButtonBase, {
     return {
       ...theme.typography.button,
       minWidth: 64,
-      padding: '8px 16px',
+      padding: '10px 12px',
       border: 0,
       borderRadius: (theme.vars || theme).shape.borderRadius,
       transition: theme.transitions.create(
@@ -132,10 +132,10 @@ const ButtonRoot = styled(ButtonBase, {
         )
       },
       '&:hover .uiButton-startIcon': {
-        transform: 'translateX(-3px)',
+        transform: 'translateX(-2px)',
       },
       '&:hover .uiButton-endIcon': {
-        transform: 'translateX(3px)',
+        transform: 'translateX(2px)',
       },
       [`&.${buttonClasses.disabled}`]: {
         color: (theme.vars || theme).palette.action.disabled,
@@ -187,7 +187,7 @@ const ButtonRoot = styled(ButtonBase, {
         {
           props: { variant: 'outlined' },
           style: {
-            padding: '5px 15px',
+            padding: '10px 12px',
             border: '1px solid currentColor',
             borderColor: `var(--variant-outlinedBorder, currentColor)`,
             backgroundColor: `var(--variant-outlinedBg)`,
@@ -200,7 +200,7 @@ const ButtonRoot = styled(ButtonBase, {
         {
           props: { variant: 'text' },
           style: {
-            padding: '8px 8px 6px',
+            padding: '10px 12px',
             color: `var(--variant-textColor)`,
             backgroundColor: `var(--variant-textBg)`,
           },
@@ -279,7 +279,7 @@ const ButtonRoot = styled(ButtonBase, {
             variant: 'text',
           },
           style: {
-            padding: '8px 11px',
+            padding: '12px 22px',
             fontSize: theme.typography.pxToRem(15),
           },
         },
@@ -299,7 +299,7 @@ const ButtonRoot = styled(ButtonBase, {
             variant: 'outlined',
           },
           style: {
-            padding: '7px 21px',
+            padding: '11px 22px',
             fontSize: theme.typography.pxToRem(15),
           },
         },
@@ -319,7 +319,7 @@ const ButtonRoot = styled(ButtonBase, {
             variant: 'contained',
           },
           style: {
-            padding: '8px 22px',
+            padding: '12px 22px',
             fontSize: theme.typography.pxToRem(15),
           },
         },
@@ -413,7 +413,8 @@ const ButtonStartIcon = styled('span', {
     {
       props: { size: 'small' },
       style: {
-        marginLeft: -2,
+        marginLeft: 0,
+        marginRight: 2
       },
     },
     {
@@ -449,7 +450,8 @@ const ButtonEndIcon = styled('span', {
     {
       props: { size: 'small' },
       style: {
-        marginRight: -2,
+        marginLeft: 2,
+        marginRight: 0,
       },
     },
     {
@@ -553,7 +555,7 @@ const Button = React.forwardRef(function Button(inProps, ref) {
   const props = useDefaultProps({ props: resolvedProps, name: 'uiButton' });
   const {
     children,
-    color = 'primary',
+    color = 'contrast',
     component = 'button',
     className,
     justify = 'center',
@@ -571,6 +573,7 @@ const Button = React.forwardRef(function Button(inProps, ref) {
     startIcon: startIconProp,
     type,
     variant = 'text',
+    disableIconAnimation = false,
     ...other
   } = props;
 
@@ -593,6 +596,7 @@ const Button = React.forwardRef(function Button(inProps, ref) {
     size,
     type,
     variant,
+    disableIconAnimation
   };
 
   const classes = useUtilityClasses(ownerState);
@@ -681,7 +685,7 @@ Button.propTypes /* remove-proptypes */ = {
    * The color of the component.
    * It supports both default and custom theme colors, which can be added as shown in the
    * [palette customization guide](https://mui.com/material-ui/customization/palette/#custom-colors).
-   * @default 'primary'
+   * @default 'contrast'
    */
   color: PropTypes /* @typescript-to-proptypes-ignore */.oneOfType([
     PropTypes.oneOf(['inherit', 'primary', 'secondary', 'contrast', 'neutral', 'success', 'error', 'info', 'warning']),
@@ -793,6 +797,11 @@ Button.propTypes /* remove-proptypes */ = {
    * @default false
    */
   isRounded: PropTypes.bool,
+  /**
+   *  If `true`, the button will not animate the icon.
+   * @default false
+   */
+  disableIconAnimation: PropTypes.bool,
   /**
    * Defines the `justify-content` style property.
    * @default 'center'

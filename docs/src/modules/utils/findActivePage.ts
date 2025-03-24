@@ -1,18 +1,18 @@
-import type { UshiiPage } from 'docs/src/u-shiiPage';
+import type { VandleePage } from 'docs/src/vandleePage';
 
 export default function findActivePage(
-  currentPages: UshiiPage[],
+  currentPages: VandleePage[],
   currentPathname: string,
-): { activePage: UshiiPage | null; activePageParents: UshiiPage[] } {
-  const map: Record<string, UshiiPage> = {};
-  const mapParent: Record<string, UshiiPage> = {};
+): { activePage: VandleePage | null; activePageParents: VandleePage[] } {
+  const map: Record<string, VandleePage> = {};
+  const mapParent: Record<string, VandleePage> = {};
 
   const pathname = currentPathname
     .replace('/[docsTab]', '')
     .replace('components-api', '')
     .replace('hooks-api', '');
 
-  const traverse = (parent: UshiiPage) => {
+  const traverse = (parent: VandleePage) => {
     (parent.children || []).forEach((child) => {
       const childPathname = child.pathname
         .replace('/[docsTab]', '')

@@ -8,7 +8,7 @@ import IconButton from '@u_ui/u-ui/IconButton';
 import {
   brandingDarkTheme as darkTheme,
   brandingLightTheme as lightTheme,
-} from '@u-shii/docs/branding';
+} from '@vandlee/docs/branding';
 
 type DescriptionType = 'props' | 'classes' | 'CSS' | 'slots';
 
@@ -110,7 +110,7 @@ const Root = styled('div')<{ ownerState: { type?: DescriptionType } }>(
     },
   }),
   ({ theme }) => ({
-    [`:where(${theme.vars ? '[data-u-shii-color-scheme="dark"]' : '.mode-dark'}) &`]: {
+    [`:where(${theme.vars ? '[data-u-ui-color-scheme="dark"]' : '.mode-dark'}) &`]: {
       '& .uiApi-item-header': {
         '&>span, &>div': {
           borderColor: `var(--uidocs-palette-divider, ${darkTheme.palette.divider})`,
@@ -188,7 +188,7 @@ export default function ExpandableApiItem(props: ExpandableApiItemProps) {
       ownerState={{ type }}
       {...other}
       className={clsx(
-        `UshiiApi-item-root${isExtendable ? ' UshiiApi-item-header-extendable' : ''}`,
+        `VandleeApi-item-root${isExtendable ? ' VandleeApi-item-header-extendable' : ''}`,
         className,
       )}
     >
@@ -222,7 +222,7 @@ export default function ExpandableApiItem(props: ExpandableApiItemProps) {
           </IconButton>
         )}
       </div>
-      {isExtended && <div className={`UshiiApi-item-content`}>{isExtended && children}</div>}
+      {isExtended && <div className={`VandleeApi-item-content`}>{isExtended && children}</div>}
       <Divider />
     </Root>
   );

@@ -1,14 +1,14 @@
-import deepmerge from '@u-shii/utils/deepmerge';
-import { unstable_createGetCssVar as systemCreateGetCssVar, createSpacing } from '@u-shii/system';
-import { createUnarySpacing } from '@u-shii/system/spacing';
+import deepmerge from '@vandlee/utils/deepmerge';
+import { unstable_createGetCssVar as systemCreateGetCssVar, createSpacing } from '@u_ui/system';
+import { createUnarySpacing } from '@u_ui/system/spacing';
 import {
   prepareCssVars,
   prepareTypographyVars,
   createGetColorSchemeSelector,
-} from '@u-shii/system/cssVars';
+} from '@u_ui/system/cssVars';
 import styleFunctionSx, {
   unstable_defaultSxConfig as defaultSxConfig,
-} from '@u-shii/system/styleFunctionSx';
+} from '@u_ui/system/styleFunctionSx';
 
 import {
   private_safeColorChannel as safeColorChannel,
@@ -17,7 +17,7 @@ import {
   private_safeLighten as safeLighten,
   private_safeEmphasize as safeEmphasize,
   hslToRgb,
-} from '@u-shii/system/colorManipulator';
+} from '@u_ui/system/colorManipulator';
 
 import createThemeNoVars from './createThemeNoVars';
 import createColorScheme, { getOpacity, getOverlays } from './createColorScheme';
@@ -52,7 +52,7 @@ function setColorChannel(obj, key) {
     // if channel token can't be generated, show a warning.
     obj[`${key}Channel`] = safeColorChannel(
       toRgb(obj[key]),
-      `U-SHII: Can't create \`palette.${key}Channel\` because \`palette.${key}\` is not one of these formats: #nnn, #nnnnnn, rgb(), rgba(), hsl(), hsla(), color().` +
+      `VANDLEE: Can't create \`palette.${key}Channel\` because \`palette.${key}\` is not one of these formats: #nnn, #nnnnnn, rgb(), rgba(), hsl(), hsla(), color().` +
         '\n' +
         `To suppress this warning, you need to explicitly provide the \`palette.${key}Channel\` as a string (in rgb format, for example "12 12 12") or undefined if you want to remove the channel token.`,
     );
@@ -82,7 +82,7 @@ const silent = (fn) => {
   return undefined;
 };
 
-export const createGetCssVar = (cssVarPrefix = 'u-shii') => systemCreateGetCssVar(cssVarPrefix);
+export const createGetCssVar = (cssVarPrefix = 'ui') => systemCreateGetCssVar(cssVarPrefix);
 
 function attachColorScheme(colorSchemes, scheme, restTheme, colorScheme) {
   if (!scheme) {
@@ -97,7 +97,7 @@ function attachColorScheme(colorSchemes, scheme, restTheme, colorScheme) {
     });
     return undefined;
   }
-  const { palette, ...ushiiTheme } = createThemeNoVars({
+  const { palette, ...vandleeTheme } = createThemeNoVars({
     ...restTheme,
     palette: { mode, ...scheme?.palette },
   });
@@ -110,7 +110,7 @@ function attachColorScheme(colorSchemes, scheme, restTheme, colorScheme) {
     },
     overlays: scheme?.overlays || getOverlays(mode),
   };
-  return ushiiTheme;
+  return vandleeTheme;
 }
 
 /**
@@ -126,7 +126,7 @@ export default function createThemeWithVars(options = {}, ...args) {
     colorSchemes: colorSchemesInput = { light: true },
     defaultColorScheme: defaultColorSchemeInput,
     disableCssColorScheme = false,
-    cssVarPrefix = 'u-shii',
+    cssVarPrefix = 'ui',
     shouldSkipGeneratingVar = defaultShouldSkipGeneratingVar,
     colorSchemeSelector: selector = colorSchemesInput.light && colorSchemesInput.dark
       ? 'media'
@@ -158,12 +158,12 @@ export default function createThemeWithVars(options = {}, ...args) {
 
   if (!defaultScheme) {
     throw /* minify-error */ new Error(
-      `U-SHII: The \`colorSchemes.${defaultColorScheme}\` option is either missing or invalid.`,
+      `VANDLEE: The \`colorSchemes.${defaultColorScheme}\` option is either missing or invalid.`,
     );
   }
 
   // Create the palette for the default color scheme, either `light`, `dark`, or custom color scheme.
-  const ushiiTheme = attachColorScheme(colorSchemes, defaultScheme, input, defaultColorScheme);
+  const vandleeTheme = attachColorScheme(colorSchemes, defaultScheme, input, defaultColorScheme);
 
   if (builtInLight && !colorSchemes.light) {
     attachColorScheme(colorSchemes, builtInLight, undefined, 'light');
@@ -175,13 +175,13 @@ export default function createThemeWithVars(options = {}, ...args) {
 
   let theme = {
     defaultColorScheme,
-    ...ushiiTheme,
+    ...vandleeTheme,
     cssVarPrefix,
     colorSchemeSelector: selector,
     rootSelector,
     getCssVar,
     colorSchemes,
-    font: { ...prepareTypographyVars(ushiiTheme.typography), ...ushiiTheme.font },
+    font: { ...prepareTypographyVars(vandleeTheme.typography), ...vandleeTheme.font },
     spacing: getSpacingVal(input.spacing),
   };
 

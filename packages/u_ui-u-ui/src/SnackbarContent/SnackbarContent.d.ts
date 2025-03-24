@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SxProps } from '@u-shii/system';
+import { SxProps } from '@u_ui/system';
 import { Theme } from '../styles';
 import { InternalStandardProps as StandardProps } from '..';
 import { PaperProps } from '../Paper';

@@ -10,7 +10,7 @@ import ToggleButtonGroup from '@u_ui/u-ui/ToggleButtonGroup';
 import ToggleButton from '@u_ui/u-ui/ToggleButton';
 import IconButton from '@u_ui/u-ui/IconButton';
 import { useColorSchemeShim, useChangeTheme } from 'docs/src/modules/components/ThemeContext';
-import { UserLanguageProvider, useSetUserLanguage, useTranslate, useUserLanguage } from '@u-shii/docs/i18n';
+import { UserLanguageProvider, useSetUserLanguage, useTranslate, useUserLanguage } from '@vandlee/docs/i18n';
 import { 
     Brightness6Rounded, 
     CloseRounded, 

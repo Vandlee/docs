@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { Interpolation } from '@u-shii/system';
-import { extendSxProp } from '@u-shii/system/styleFunctionSx';
+import { Interpolation } from '@u_ui/system';
+import { extendSxProp } from '@u_ui/system/styleFunctionSx';
 import { Theme } from '../styles/createTheme';
 import useTheme from '../styles/useTheme';
 import GlobalStyles, { GlobalStylesProps } from '../GlobalStyles';
 
-export { css, keyframes } from '@u-shii/system';
+export { css, keyframes } from '@u_ui/system';
 
 export { default as styled } from '../styles/styled';
 

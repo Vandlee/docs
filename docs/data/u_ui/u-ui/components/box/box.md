@@ -10,7 +10,7 @@ githubSource: packages/u_ui/u-ui/src/Box
 
 <p class="description">El componente Caja es un contenedor genérico temático con acceso a las utilidades CSS del Sistema U-Ui.</p>
 
-{{"component": "@u-shii/docs/ComponentLinkHeader", "design": false}}
+{{"component": "@vandlee/docs/ComponentLinkHeader", "design": false}}
 
 ## Introducción
 
@@ -38,7 +38,7 @@ La demo de abajo reemplaza el `<div>` por un elemento `<section>`:
 
 ### Con la propiedad sx
 
-Use la [propiedad `sx`](/system/getting-started/the-sx-prop/) para personalizar rápidamente cualquier instancia de Box usando un superconjunto de CSS que tiene acceso a todas las funciones de estilo y propiedades temáticas expuestas en el paquete u-shii system.
+Use la [propiedad `sx`](/system/getting-started/the-sx-prop/) para personalizar rápidamente cualquier instancia de Box usando un superconjunto de CSS que tiene acceso a todas las funciones de estilo y propiedades temáticas expuestas en el paquete u-ui system.
 El demo de abajo muestra como aplicar colores del tema usando esta propiedad:
 
 {{"demo": "es/BoxSx.js", "defaultCodeOpen": true }}

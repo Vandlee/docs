@@ -1,0 +1,12 @@
+<Button type="button" onClick={handleClick}>
+  {show ? 'Desmontar hijos' : 'Montar hijos'}
+</Button>
+<Box sx={{ p: 1, my: 1, border: '1px solid' }}>
+  Parece que voy a renderizar aquí.
+  {show ? (
+    <Portal container={() => container.current!}>
+      <span>¡Pero en realidad renderizo aquí!</span>
+    </Portal>
+  ) : null}
+</Box>
+<Box sx={{ p: 1, my: 1, border: '1px solid' }} ref={container} />

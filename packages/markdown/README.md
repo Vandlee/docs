@@ -1,6 +1,6 @@
-# @u-shii-internal/markdown
+# @vandlee/internal-markdown
 
-u-shii markdown parser and webpack loader.
+vandlee markdown parser and webpack loader.
 This is an internal package not meant for general use.
 
 ## Release

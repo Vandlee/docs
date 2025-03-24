@@ -1,5 +1,5 @@
-import generateUtilityClasses from '@u-shii/utils/generateUtilityClasses';
-import generateUtilityClass from '@u-shii/utils/generateUtilityClass';
+import generateUtilityClasses from '@vandlee/utils/generateUtilityClasses';
+import generateUtilityClass from '@vandlee/utils/generateUtilityClass';
 
 export interface CircularProgressClasses {
   /** Styles applied to the root element. */
@@ -12,6 +12,10 @@ export interface CircularProgressClasses {
   colorPrimary: string;
   /** Styles applied to the root element if `color="secondary"`. */
   colorSecondary: string;
+  /** Styles applied to the root element if `color="contrast"`. */
+  colorContrast: string;
+  /** Styles applied to the root element if `color="neutral"`. */
+  colorNeutral: string;
   /** Styles applied to the svg element. */
   svg: string;
   /** Styles applied to the `circle` svg path. */
@@ -42,6 +46,8 @@ const circularProgressClasses: CircularProgressClasses = generateUtilityClasses(
     'indeterminate',
     'colorPrimary',
     'colorSecondary',
+    'colorContrast',
+    'colorNeutral',
     'svg',
     'circle',
     'circleDeterminate',

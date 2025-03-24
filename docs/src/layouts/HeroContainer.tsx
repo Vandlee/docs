@@ -2,7 +2,7 @@ import * as React from 'react';
 import Box, { BoxProps } from '@u_ui/u-ui/Box';
 import Container from '@u_ui/u-ui/Container';
 import Grid from '@u_ui/u-ui/Grid';
-import { unstable_useEnhancedEffect as useEnhancedEffect } from '@u-shii/utils';
+import { unstable_useEnhancedEffect as useEnhancedEffect } from '@vandlee/utils';
 import { alpha } from '@u_ui/u-ui/styles';
 
 interface HeroContainerProps {

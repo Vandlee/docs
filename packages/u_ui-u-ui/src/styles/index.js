@@ -14,17 +14,17 @@ export {
   lighten,
   css,
   keyframes,
-} from '@u-shii/system';
-export { unstable_createBreakpoints } from '@u-shii/system/createBreakpoints';
+} from '@u_ui/system';
+export { unstable_createBreakpoints } from '@u_ui/system/createBreakpoints';
 // TODO: Remove this function in v6.
 // eslint-disable-next-line @typescript-eslint/naming-convention
 export function experimental_sx() {
   throw /* minify-error */ new Error(
-    'U-SHII: The `experimental_sx` has been moved to `theme.unstable_sx`.' +
+    'VANDLEE: The `experimental_sx` has been moved to `theme.unstable_sx`.' +
       'For more details, see https://github.com/mui/material-ui/pull/35150.',
   );
 }
-export { default as createTheme, createUshiiTheme } from './createTheme';
+export { default as createTheme, createVandleeTheme } from './createTheme';
 // export { default as unstable_createMuiStrictModeTheme } from './createMuiStrictModeTheme';
 // export { default as createStyles } from './createStyles';
 // export { getUnit as unstable_getUnit, toUnitless as unstable_toUnitless } from './cssUtils';
@@ -36,8 +36,8 @@ export { default as useTheme } from './useTheme';
 export { default as styled } from './styled';
 export { default as experimentalStyled } from './styled';
 export { default as ThemeProvider } from './ThemeProvider';
-export { StyledEngineProvider } from '@u-shii/system';
-// The legacy utilities from @u-shii/styles
+export { StyledEngineProvider } from '@u_ui/system';
+// The legacy utilities from @u_ui/u-ui/styles
 // These are just empty functions that throws when invoked
 // export { default as makeStyles } from './makeStyles';
 // export { default as withStyles } from './withStyles';

@@ -9,7 +9,7 @@ const packagesWithBundledTypes = [
   'clsx',
   '@react-spring/web',
 ];
-const ushiiNpmOrgs = ['@u-shii', '@base_ui', '@pigment-css', '@toolpad'];
+const vandleeNpmOrgs = ['@u_ui', '@vandlee', '@pigment-css', '@toolpad'];
 
 /**
  * WARNING: Always uses `latest` typings.
@@ -22,8 +22,8 @@ const ushiiNpmOrgs = ['@u-shii', '@base_ui', '@pigment-css', '@toolpad'];
 function addTypeDeps(deps: Record<string, string>): void {
   const packagesWithDTPackage = Object.keys(deps)
     .filter((name) => !packagesWithBundledTypes.includes(name))
-    // All the Ushii packages come with bundled types
-    .filter((name) => !ushiiNpmOrgs.some((org) => name.startsWith(org)));
+    // All the Vandlee packages come with bundled types
+    .filter((name) => !vandleeNpmOrgs.some((org) => name.startsWith(org)));
 
   packagesWithDTPackage.forEach((name) => {
     let resolvedName = name;
@@ -46,10 +46,10 @@ export default function SandboxDependencies(demo: Demo, options?: { commitRef?: 
    * @param packageName - The name of a package living inside this repository.
    * @return string - A valid version for a dependency entry in a package.json
    */
-  function getUshiiPackageVersion(packageName: string): string {
+  function getVandleePackageVersion(packageName: string): string {
     if (
       commitRef === undefined ||
-      process.env.SOURCE_CODE_REPO !== 'https://github.com/yugashiki/u-shii'
+      process.env.SOURCE_CODE_REPO !== 'https://github.com/Vandlee/docs'
     ) {
       // #default-branch-switch
       return 'latest';
@@ -59,7 +59,7 @@ export default function SandboxDependencies(demo: Demo, options?: { commitRef?: 
   }
 
   function extractDependencies() {
-    const ushiiDocConfig = (window as any).ushiiDocConfig;
+    const vandleeDocConfig = (window as any).vandleeDocConfig;
 
     function includePeerDependencies(
       deps: Record<string, string>,
@@ -82,8 +82,8 @@ export default function SandboxDependencies(demo: Demo, options?: { commitRef?: 
       }
 
       // TODO: consider if this configuration could be injected in a "cleaner" way.
-      if (ushiiDocConfig && ushiiDocConfig.csbIncludePeerDependencies) {
-        newDeps = ushiiDocConfig.csbIncludePeerDependencies(newDeps, {
+      if (vandleeDocConfig && vandleeDocConfig.csbIncludePeerDependencies) {
+        newDeps = vandleeDocConfig.csbIncludePeerDependencies(newDeps, {
           versions,
         });
       }
@@ -96,23 +96,23 @@ export default function SandboxDependencies(demo: Demo, options?: { commitRef?: 
       'react-dom': 'latest',
       '@emotion/react': 'latest',
       '@emotion/styled': 'latest',
-      '@u_ui/u-ui': getUshiiPackageVersion('u-ui'),
-      '@mui/icons-material': getUshiiPackageVersion('icons-material'),
-      '@u-shii/lab': getUshiiPackageVersion('lab'),
-      '@u-shii/styled-engine': getUshiiPackageVersion('styled-engine'),
-      '@u-shii/styles': getUshiiPackageVersion('styles'),
-      '@u-shii/system': getUshiiPackageVersion('system'),
-      '@u-shii/private-theming': getUshiiPackageVersion('theming'),
-      '@u-shii/private-classnames': getUshiiPackageVersion('classnames'),
-      '@u-shii/base': getUshiiPackageVersion('base'),
-      '@u-shii/utils': getUshiiPackageVersion('utils'),
-      '@u-shii/ui-nextjs': getUshiiPackageVersion('ui-nextjs'),
-      '@u-shii/joy': getUshiiPackageVersion('joy'),
+      '@u_ui/u-ui': getVandleePackageVersion('u-ui'),
+      '@mui/icons-material': getVandleePackageVersion('icons-material'),
+      '@u-shii/lab': getVandleePackageVersion('lab'),
+      '@u_ui/styled-engine': getVandleePackageVersion('styled-engine'),
+      '@u-shii/styles': getVandleePackageVersion('styles'),
+      '@u_ui/system': getVandleePackageVersion('system'),
+      '@u-shii/private-theming': getVandleePackageVersion('theming'),
+      '@u-shii/private-classnames': getVandleePackageVersion('classnames'),
+      '@u_ui/base': getVandleePackageVersion('base'),
+      '@vandlee/utils': getVandleePackageVersion('utils'),
+      '@u-shii/ui-nextjs': getVandleePackageVersion('ui-nextjs'),
+      '@u-shii/joy': getVandleePackageVersion('joy'),
     };
 
     // TODO: consider if this configuration could be injected in a "cleaner" way.
-    if (ushiiDocConfig && ushiiDocConfig.csbGetVersions) {
-      versions = ushiiDocConfig.csbGetVersions(versions, { ushiiDocConfig: commitRef });
+    if (vandleeDocConfig && vandleeDocConfig.csbGetVersions) {
+      versions = vandleeDocConfig.csbGetVersions(versions, { vandleeDocConfig: commitRef });
     }
 
     const re = /^import\s'([^']+)'|import\s[\s\S]*?\sfrom\s+'([^']+)/gm;
@@ -129,8 +129,8 @@ export default function SandboxDependencies(demo: Demo, options?: { commitRef?: 
           deps[name] = versions[name] ?? 'latest';
         }
 
-        if (ushiiDocConfig && ushiiDocConfig.postProcessImport) {
-          const resolvedDep = ushiiDocConfig.postProcessImport(fullName);
+        if (vandleeDocConfig && vandleeDocConfig.postProcessImport) {
+          const resolvedDep = vandleeDocConfig.postProcessImport(fullName);
           if (resolvedDep) {
             deps = { ...deps, ...resolvedDep };
           }
@@ -157,7 +157,7 @@ export default function SandboxDependencies(demo: Demo, options?: { commitRef?: 
     // The `index.js` imports StyledEngineProvider from '@u_ui/u-ui', so we need to make sure we have it as a dependency
     const name = '@u_ui/u-ui';
     const versions = {
-      [name]: getUshiiPackageVersion('u-ui'),
+      [name]: getVandleePackageVersion('u-ui'),
     };
     dependencies[name] = versions[name] ? versions[name] : 'latest';
   }

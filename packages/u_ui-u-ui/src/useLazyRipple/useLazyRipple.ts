@@ -1,6 +1,6 @@
 'use client';
 import * as React from 'react';
-import useLazyRef from '@u-shii/utils/useLazyRef';
+import useLazyRef from '@vandlee/utils/useLazyRef';
 import { TouchRippleActions } from '../ButtonBase/TouchRipple';
 
 type ControlledPromise<T = unknown> = Promise<T> & {

@@ -1,0 +1,6 @@
+<Button variant="contained" onClick={handleChange}>
+  {checked ? 'Ocultar' : 'Mostrar'}
+</Button>
+<Slide direction="up" in={checked} mountOnEnter unmountOnExit>
+  {icon}
+</Slide>

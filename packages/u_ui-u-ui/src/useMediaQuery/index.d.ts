@@ -1,7 +1,7 @@
-import { UseMediaQueryOptions } from '@u-shii/system/useMediaQuery';
+import { UseMediaQueryOptions } from '@u_ui/system/useMediaQuery';
 import { Theme } from '../styles/createTheme';
 
-export * from '@u-shii/system/useMediaQuery';
+export * from '@u_ui/system/useMediaQuery';
 
 // TODO v7: remove the generic. It's only used to prevent a breaking change in v6 from system's useMediaQuery in https://github.com/mui/material-ui/pull/44339.
 declare function useMediaQuery<T = Theme>(

@@ -39,8 +39,8 @@ async function run(argv) {
   const env = {
     NODE_ENV: 'production',
     BABEL_ENV: bundle,
-    USHII_BUILD_VERBOSE: verbose,
-    USHII_BABEL_RUNTIME_VERSION: babelRuntimeVersion,
+    VANDLEE_BUILD_VERBOSE: verbose,
+    VANDLEE_BABEL_RUNTIME_VERSION: babelRuntimeVersion,
     ...(await getVersionEnvVariables()),
   };
 
@@ -66,8 +66,8 @@ async function run(argv) {
   const outDir = path.resolve(
     relativeOutDir,
     // We generally support top level path imports e.g.
-    // 1. `import ArrowDownIcon from '@u-shii/icons-material/ArrowDown'`.
-    // 2. `import Typography from '@u-shii/material/Typography'`.
+    // 1. `import ArrowDownIcon from '@mui/icons-material/ArrowDown'`.
+    // 2. `import Typography from '@u_ui/u-ui/Typography'`.
     // The first case resolves to a file while the second case resolves to a package first i.e. a package.json
     // This means that only in the second case the bundler can decide whether it uses ES modules or CommonJS modules.
     // Different extensions are not viable yet since they require additional bundler config for users and additional transpilation steps in our repo.

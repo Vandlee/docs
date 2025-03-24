@@ -15,7 +15,7 @@ githubSource: packages/mui-material/src/Menu
 
 Un menú muestra una lista de opciones en una superficie temporal. Aparece cuando el usuario interactúa con un botón u otro control.
 
-{{"component": "@u-shii/docs/ComponentLinkHeader"}}
+{{"component": "@vandlee/docs/ComponentLinkHeader"}}
 
 ## Introducción
 

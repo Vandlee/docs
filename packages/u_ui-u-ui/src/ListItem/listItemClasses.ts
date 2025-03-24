@@ -1,5 +1,5 @@
-import generateUtilityClasses from '@u-shii/utils/generateUtilityClasses';
-import generateUtilityClass from '@u-shii/utils/generateUtilityClass';
+import generateUtilityClasses from '@vandlee/utils/generateUtilityClasses';
+import generateUtilityClass from '@vandlee/utils/generateUtilityClass';
 
 export interface ListItemClasses {
   /** Styles applied to the (normally root) `component` element. May be wrapped by a `container`. */

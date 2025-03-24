@@ -5,8 +5,8 @@ import {
   unstable_useForkRef as useForkRef,
   unstable_useEventCallback as useEventCallback,
   unstable_createChainedFunction as createChainedFunction,
-} from '@u-shii/utils';
-import extractEventHandlers from '@u-shii/utils/extractEventHandlers';
+} from '@vandlee/utils';
+import extractEventHandlers from '@vandlee/utils/extractEventHandlers';
 import { EventHandlers } from '../utils/types';
 import { ModalManager, ariaHidden } from './ModalManager';
 import {

@@ -1,5 +1,5 @@
 'use client';
-import { createBox } from '@u-shii/system';
+import { createBox } from '@u_ui/system';
 import PropTypes from 'prop-types';
 import { unstable_ClassNameGenerator as ClassNameGenerator } from '../className';
 import { createTheme } from '../styles';

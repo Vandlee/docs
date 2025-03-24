@@ -1,63 +1,36 @@
 import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
 
-export type UshiiProductId = 
+export type VandleeProductId = 
   | 'null' 
   | 'base-ui'
   | 'u-ui'
+  | 'html'
   | 'javascript'
   | 'php'
   | 'python';
 
-type UshiiProductCategoryId = 'null' | 'u_ui' | 'u-docs' |'core';
+type VandleeProductCategoryId = 'null' | 'u_ui' | 'u-docs' |'core';
 
-interface UshiiProductInfo {
-  productId: UshiiProductId;
-  productCategoryId: UshiiProductCategoryId;
+interface VandleeProductInfo {
+  productId: VandleeProductId;
+  productCategoryId: VandleeProductCategoryId;
 }
 
-export default function getProductInfoFromUrl(asPath: string): UshiiProductInfo {
+const PRODUCT_CATEGORIES: Record<string, { productCategoryId: VandleeProductCategoryId; productId?: VandleeProductId }> = {
+  'u-ui': { productCategoryId: 'u_ui', productId: 'u-ui' },
+  'u_ui': { productCategoryId: 'u_ui' },
+  'u-docs': { productCategoryId: 'u-docs' },
+}
+
+export default function getProductInfoFromUrl(asPath: string): VandleeProductInfo {
   const asPathWithoutLang = pathnameToLanguage(asPath).canonicalAsServer;
   const firstFolder = asPathWithoutLang.replace(/^\/+([^/]+)\/.*/, '$1');
   const secondFolder = asPathWithoutLang.replace(/^\/+[^/]+\/([^/]+).*/, '$1');
 
-
-  let productCategoryId = 'null';
-  let productId = 'null';
-
-  if (
-    firstFolder === 'u-ui' ||
-    firstFolder === 'base-ui'
-  ) {
-    productCategoryId = 'u-core';
-    productId = firstFolder;
-  }
-
-  if (firstFolder === 'u_ui') {
-    productCategoryId = 'u_ui';
-    productId = secondFolder;
-  }
-
-  if (firstFolder === 'u-docs') {
-    if (secondFolder) {
-      productCategoryId = 'u-docs';
-      productId = secondFolder;
-    }
-  }
-
-  if (firstFolder === 'docs') {
-    productId = firstFolder;
-  }
-
-  if (firstFolder === 'versions' || firstFolder === 'production-error') {
-    productId = 'docs';
-  }
-
-  if (asPathWithoutLang.startsWith('/emperiments/docs/')) {
-    productId = 'docs-infra';
-  }
+  const categoryInfo = PRODUCT_CATEGORIES[firstFolder] || { productCategoryId: 'null', productId: 'null' };
 
   return {
-    productCategoryId,
-    productId,
-  } as UshiiProductInfo;
+    productCategoryId: categoryInfo.productCategoryId,
+    productId: categoryInfo.productId || (categoryInfo.productCategoryId !== 'null' ? secondFolder as VandleeProductId : 'null')
+  }
 }

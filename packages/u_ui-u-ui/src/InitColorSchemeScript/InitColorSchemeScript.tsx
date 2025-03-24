@@ -1,12 +1,12 @@
 import * as React from 'react';
-import SystemInitColorSchemeScript from '@u-shii/system/InitColorSchemeScript';
+import SystemInitColorSchemeScript from '@u_ui/system/InitColorSchemeScript';
 
 export const defaultConfig = {
-  attribute: 'data-u-shii-color-scheme',
-  colorSchemeStorageKey: 'u-shii-color-scheme',
+  attribute: 'data-u-ui-color-scheme',
+  colorSchemeStorageKey: 'u-ui-color-scheme',
   defaultLightColorScheme: 'light',
   defaultDarkColorScheme: 'dark',
-  modeStorageKey: 'u-shii-mode',
+  modeStorageKey: 'u-ui-mode',
 } as const;
 
 export default (function InitColorSchemeScript(props) {

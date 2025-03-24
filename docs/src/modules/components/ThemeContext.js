@@ -1,18 +1,18 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import {
-  ThemeProvider as UshiiThemeProvider,
-  createTheme as createUshiiTheme,
+  ThemeProvider as VandleeThemeProvider,
+  createTheme as createVandleeTheme,
 } from '@u_ui/u-ui/styles';
-import { deepmerge } from '@u-shii/utils';
-// import { enUS, zhCN, ptBR } from '@u-shii/material/locale';
+import { deepmerge } from '@vandlee/utils';
+// import { enUS, zhCN, ptBR } from '@u_ui/u-ui/locale';
 import { unstable_useEnhancedEffect as useEnhancedEffect } from '@u_ui/u-ui/utils';
 import { getCookie } from 'docs/src/modules/utils/helpers';
 import useLazyCSS from 'docs/src/modules/utils/useLazyCSS';
-import { useUserLanguage } from '@u-shii/docs/i18n';
-import { getDesignTokens, getThemedComponents, getMetaThemeColor } from '@u-shii/docs/branding';
+import { useUserLanguage } from '@vandlee/docs/i18n';
+import { getDesignTokens, getThemedComponents, getMetaThemeColor } from '@vandlee/docs/branding';
 import useMediaQuery from '@u_ui/u-ui/useMediaQuery';
-import useLocalStorageState from '@u-shii/utils/useLocalStorageState';
+import useLocalStorageState from '@vandlee/utils/useLocalStorageState';
 
 const themeInitialOptions = {
   dense: false,
@@ -207,7 +207,7 @@ export function ThemeProvider(props) {
   const theme = React.useMemo(() => {
     const brandingDesignTokens = getDesignTokens(paletteMode);
     const nextPalette = deepmerge(brandingDesignTokens.palette, paletteColors);
-    let nextTheme = createUshiiTheme(
+    let nextTheme = createVandleeTheme(
       {
         direction,
         ...brandingDesignTokens,
@@ -244,13 +244,13 @@ export function ThemeProvider(props) {
   React.useEffect(() => {
     // Expose the theme as a global variable so people can play with it.
     window.theme = theme;
-    window.createTheme = createUshiiTheme;
+    window.createTheme = createVandleeTheme;
   }, [theme]);
 
   return (
-    <UshiiThemeProvider theme={theme}>
+    <VandleeThemeProvider theme={theme}>
       <DispatchContext.Provider value={dispatch}>{children}</DispatchContext.Provider>
-    </UshiiThemeProvider>
+    </VandleeThemeProvider>
   );
 }
 
@@ -268,7 +268,7 @@ export function useChangeTheme() {
 
 // TODO: remove once all pages support css vars and replace call sites with useColorScheme()
 export function useColorSchemeShim() {
-  const [mode, setMode] = useLocalStorageState('ushii-mode', 'system');
+  const [mode, setMode] = useLocalStorageState('vandlee-mode', 'system');
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)', { noSsr: true });
   const systemMode = prefersDarkMode ? 'dark' : 'light';
 
