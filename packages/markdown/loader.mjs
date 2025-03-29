@@ -252,17 +252,15 @@ export default async function demoLoader() {
 
         try {
           const previewFilePath = moduleFilePath.replace(/\.html$/, '.html.preview');
-      
           const htmlPreview = await fs.readFile(previewFilePath, { encoding: 'utf8' });
           this.addDependency(previewFilePath);
-      
+        
           demos[demoName].preview = htmlPreview;
         } catch (error) {
-          console.error(error)
-          // No preview exists. Esto es válido.
+          console.warn(`Preview file not found: ${previewFilePath}`);
+        } finally {
+          return;
         }
-
-        return;
       }
 
       const moduleFilepath = path.join(
@@ -270,11 +268,15 @@ export default async function demoLoader() {
         moduleID.replace(/\//g, path.sep),
       );
       this.addDependency(moduleFilepath);
-      demos[demoName] = {
-        module: moduleID,
-        raw: await fs.readFile(moduleFilepath, { encoding: 'utf8' }),
-      };
-      demoModuleIDs.add(moduleID);
+
+      if (!demoName.endsWith('.html')){ 
+        demos[demoName] = {
+          module: moduleID,
+          raw: await fs.readFile(moduleFilepath, { encoding: 'utf8' }),
+        };
+        demoModuleIDs.add(moduleID);
+      }
+
 
       // Skip non-editable demos
       if (!nonEditableDemos.has(demoName)) {

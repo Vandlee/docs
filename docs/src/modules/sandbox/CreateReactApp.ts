@@ -92,17 +92,6 @@ export function getRootIndex(demoData: DemoData) {
   // document.querySelector returns 'Element | null' but createRoot expects 'Element | DocumentFragment'.
   const type = demoData.codeVariant === 'TS' ? '!' : '';
 
-  if (demoData.productId === 'base-ui') {
-    return `import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import Demo from './Demo';
-
-ReactDOM.createRoot(document.querySelector("#root")${type}).render(
-  <React.StrictMode>
-    <Demo />
-  </React.StrictMode>
-);`;
-  }
   return `import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { StyledEngineProvider } from '@u_ui/u-ui/styles';

@@ -35,7 +35,7 @@ Utilice la propiedad `spacing` para controlar el espacio entre los elementos sec
 
 ### Stack vs. Grid
 
-`Stack` se ocupa de diseños unidimensionales, mientras que [`Grid`](/u_ui/u-ui/react-grid) maneja diseños bidimensionales. La dirección por defecto es `column` que apila los hijos verticalmente.
+`Stack` se ocupa de diseños unidimensionales, mientras que [`Grid`](/u_ui/u-ui/react-grid/) maneja diseños bidimensionales. La dirección por defecto es `column` que apila los hijos verticalmente.
 
 ## Dirección
 
@@ -47,7 +47,7 @@ Utilice la propiedad `direction` para colocar los elementos horizontalmente en u
 ## Divisores
 
 Utilice la propiedad `divider` para insertar un elemento entre cada hijo.
-Esto funciona particularmente bien con el componente [Divider](/u_ui/u-ui/react-divider), como se muestra a continuación:
+Esto funciona particularmente bien con el componente [Divider](/u_ui/u-ui/react-divider/), como se muestra a continuación:
 
 {{"demo": "es/DividerStack.js", "bg": true}}
 

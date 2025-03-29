@@ -5,11 +5,7 @@ import Paper from '@u_ui/u-ui/Paper';
 import { HighlightedCode } from '@vandlee/docs/HighlightedCode';
 
 export default function SpacingGrid() {
-  const [spacing, setSpacing] = React.useState(2);
-
-  const handleChange = (event) => {
-    setSpacing(Number(event.target.value));
-  };
+  const [spacing] = React.useState(2);
 
   const jsx = `
 <Grid container spacing={${spacing}}>

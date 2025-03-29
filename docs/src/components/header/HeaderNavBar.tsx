@@ -1,15 +1,15 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import * as React from 'react';
 import { styled, alpha } from '@u_ui/u-ui/styles';
-import Box from '@u_ui/u-ui/Box';
-import Chip from '@u_ui/u-ui/Chip';
+/* import Box from '@u_ui/u-ui/Box';
+import Chip from '@u_ui/u-ui/Chip'; */
 import ButtonBase from '@u_ui/u-ui/ButtonBase';
 import Popper from '@u_ui/u-ui/Popper';
 import Paper from '@u_ui/u-ui/Paper';
 import { unstable_debounce as debounce } from '@vandlee/utils';
 import Fade from '@u_ui/u-ui/Fade';
-import Typography from '@u_ui/u-ui/Typography';
-import IconImage from 'docs/src/components/icon/IconImage';
+/* import Typography from '@u_ui/u-ui/Typography';
+import IconImage from 'docs/src/components/icon/IconImage'; */
 import ROUTES from 'docs/src/route';
 import { Link } from '@vandlee/docs/Link';
 import VandleeProductSelector from 'docs/src/modules/components/vandleeProductSelector';
@@ -71,15 +71,15 @@ const PRODUCT_IDS = [
   'u-docs'
 ];
 
-type ProductSubMenuProps = {
+/* type ProductSubMenuProps = {
   icon: React.ReactElement<unknown>;
   name: React.ReactNode;
   description: React.ReactNode;
   chip?: React.ReactNode;
   href: string;
-} & Omit<React.JSX.IntrinsicElements['a'], 'ref'>;
+} & Omit<React.JSX.IntrinsicElements['a'], 'ref'>; */
 
-const ProductSubMenu = React.forwardRef<HTMLAnchorElement, ProductSubMenuProps>(
+/* const ProductSubMenu = React.forwardRef<HTMLAnchorElement, ProductSubMenuProps>(
   function ProductSubMenu({ icon, name, description, chip, href, ...props }, ref) {
     return (
       <Box
@@ -129,7 +129,7 @@ const ProductSubMenu = React.forwardRef<HTMLAnchorElement, ProductSubMenuProps>(
       </Box>
     );
   },
-);
+); */
 
 export default function HeaderNavBar() {
   const [subMenuOpen, setSubMenuOpen] = React.useState<null | 'products' | 'docs'>(null);

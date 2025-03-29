@@ -31,7 +31,7 @@ export default function NotFoundHero() {
             Página no encontrada
           </Typography>
         }
-        description="Apologies, but the page you were looking for wasn't found. Try reaching for the search button on the nav bar above to look for another one."
+        description="Disculpe, pero la página que buscaba no se ha encontrado. Intente buscar otra con el botón de búsqueda de la barra de navegación."
       />
     </Section>
   );

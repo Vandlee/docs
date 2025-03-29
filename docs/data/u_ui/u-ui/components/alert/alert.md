@@ -116,7 +116,7 @@ Estos son algunos factores a tener en cuenta para garantizar que tu Alerta sea a
 
 ## Anatomía
 
-El componente Alerta está compuesto por un componente raíz [Paper](/u_ui/u-ui/react-paper) (que se representa como un `<div>`) que contiene un icono, un mensaje y una [acción](#acciones) opcional.
+El componente Alerta está compuesto por un componente raíz [Paper](/u_ui/u-ui/react-paper/) (que se representa como un `<div>`) que contiene un icono, un mensaje y una [acción](#acciones) opcional.
 
 ```html
 <div class="uiPaper-root VandleeAlert-root" role="alert">

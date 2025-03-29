@@ -5,13 +5,13 @@ import Box from '@u_ui/u-ui/Box';
 import Typography from '@u_ui/u-ui/Typography';
 import MenuList, { MenuListProps } from '@u_ui/u-ui/MenuList';
 import MenuItem, { MenuItemProps } from '@u_ui/u-ui/MenuItem';
-import ROUTES from 'docs/src/route';
+/* import ROUTES from 'docs/src/route'; */
 import PageContext from 'docs/src/modules/components/PageContext';
 import { Link } from '@vandlee/docs/Link';
 import SvgU_UiLogomark from 'docs/src/icons/SvgU-Ui';
-import SvgJavaScriptLogomark from 'docs/src/icons/SvgJavascript';
+/* import SvgJavaScriptLogomark from 'docs/src/icons/SvgJavascript';
 import SvgPythonLogomark from 'docs/src/icons/SvgPython';
-import SvgPHPLogomark from 'docs/src/icons/SvgPHP';
+import SvgPHPLogomark from 'docs/src/icons/SvgPHP'; */
 import SvgHTMLLogomark from 'docs/src/icons/SvgHTML';
 /* import SvgBaseUiLogo from 'docs/src/icons/SvgBaseUiLogo';
 import SvgToolpadCoreLogo from 'docs/src/icons/SvgToolpadCoreLogo'; */

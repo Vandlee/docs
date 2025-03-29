@@ -48,7 +48,7 @@ const Section = React.forwardRef<HTMLDivElement, SelectionProps>(function Sectio
                 ...theme.applyDarkStyles({
                   background: `linear-gradient(${
                     (theme.vars || theme).palette.primaryDark[900]
-                  } 0%, ${alpha(theme.palette.contrast[900], 0.2)} 100%)`,
+                  } 0%, ${alpha(theme.palette.contrast[700], 0.2)} 100%)`,
                 }),
               }
             : {

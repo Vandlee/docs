@@ -18,9 +18,9 @@ githubLabel: 'component: ClickAwayListener'
 El detector de Clic fuera (`Click-Away Listener`) es un componente de utilidad que escucha eventos de clic fuera de su hijo.
 (Tenga en cuenta que sólo acepta _un_ elemento hijo).
 
-Esto es útil para componentes como [Popper](/u_ui/u-ui/react-popper) que debe cerrarse cuando el usuario hace clic en cualquier otra parte del documento.
+Esto es útil para componentes como [Popper](/u_ui/u-ui/react-popper/) que debe cerrarse cuando el usuario hace clic en cualquier otra parte del documento.
 
-Click-Away Listener también soporta el componente [Portal](/u_ui/u-ui/react-portal).
+Click-Away Listener también soporta el componente [Portal](/u_ui/u-ui/react-portal/).
 
 ## Componente
 
@@ -34,7 +34,7 @@ La siguiente demostración muestra cómo ocultar un menú desplegable cuando los
 
 ### Uso con Portal
 
-La siguiente demo utiliza el componente [Portal](/u_ui/u-ui/react-portal) para renderizar el desplegable en un nuevo subárbol fuera de la jerarquía DOM actual:
+La siguiente demo utiliza el componente [Portal](/u_ui/u-ui/react-portal/) para renderizar el desplegable en un nuevo subárbol fuera de la jerarquía DOM actual:
 
 {{"demo": "es/PortalClickAway.js"}}
 

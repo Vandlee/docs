@@ -131,12 +131,14 @@ function getDefaultSecondary(mode = 'light') {
 function getDefaultContrast(mode = 'light') {
   if (mode === 'dark') {
     return {
+      ...grey,
       main: grey[50],
       light: grey[50],
       dark: grey[400],
     };
   }
   return {
+    ...grey,
     main: grey[900],
     light: grey[700],
     dark: grey[800],
@@ -146,12 +148,14 @@ function getDefaultContrast(mode = 'light') {
 function getDefaultNeutral(mode = 'light') {
   if (mode === 'dark') {
     return {
+      ...grey,
       main: grey[700],
       light: grey[50],
       dark: grey[600],
     };
   }
   return {
+    ...grey,
     main: grey[500],
     light: grey[50],
     dark: grey[100],

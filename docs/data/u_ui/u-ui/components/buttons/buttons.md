@@ -6,7 +6,6 @@ components: Button, IconButton, ButtonBase
 materialDesign: https://m2.material.io/components/buttons
 githubLabel: 'component: button'
 waiAria: https://www.w3.org/WAI/ARIA/apg/patterns/button/
-unstyled: /base-ui/react-button/
 githubSource: packages/u-ui/src/Button
 ---
 
@@ -22,8 +21,6 @@ Los botones comunican acciones que los usuarios pueden realizar. Suelen colocars
 - Barras de herramientas
 
 {{"component": "@vandlee/docs/ComponentLinkHeader"}}
-
-{{"component": "modules/components/ComponentPageTabs.js"}}
 
 ## Botón básico
 

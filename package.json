@@ -48,6 +48,7 @@
     "@vandlee-internal/babel-plugin-minify-errors": "workspace:^",
     "@vandlee-internal/babel-plugin-resolve-imports": "workspace:^",
     "@vandlee-internal/api-docs-builder": "workspace:^",
+    "@vandlee-internal/api-docs-builder-core": "workspace:^",
     "@vandlee-internal/docs-utils": "workspace:^",
     "@vandlee-internal/scripts": "workspace:^",
     "@u_ui/u-ui": "workspace:^",

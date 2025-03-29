@@ -111,8 +111,6 @@ export default function RichMarkdownElement(props) {
   splitLocationBySlash.pop();
   const fileNameWithLocation = `${splitLocationBySlash.join('/')}/${name}`;
 
-  console.log('demo', demo)
-
   return (
     <Demo
       {...wrapperProps}
