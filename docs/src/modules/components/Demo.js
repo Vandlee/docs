@@ -28,6 +28,7 @@ import stylingSolutionMapping from 'docs/src/modules/utils/stylingSolutionMappin
 import DemoToolbarRoot from 'docs/src/modules/components/DemoToolbarRoot';
 import { grey } from '@vandlee/docs/branding';
 import { useTheme } from '@u_ui/u-ui/styles';
+import { useColorSchemeShim } from './ThemeContext';
 
 function trimLeadingSpaces(input = '') {
   return input.replace(/^\s+/gm, '');
@@ -141,6 +142,7 @@ function useDemoData(codeVariant, demo, githubLocation, codeStyling) {
     }
 
     let jsxPreview = demo.jsxPreview;
+
     if (codeStyling === CODE_STYLING.TAILWIND && demo.tailwindJsxPreview) {
       jsxPreview = demo.tailwindJsxPreview;
     } else if (codeStyling === CODE_STYLING.CSS && demo.cssJsxPreview) {
@@ -170,6 +172,7 @@ const Iframe = styled('iframe')(({ theme }) => ({
 const IframeLayout = ({ editorCode }) => {
   const frameRef = React.useRef(null);
   const theme = useTheme();
+  const { mode } = useColorSchemeShim();
 
   const applyStyles = () => {
     const doc = frameRef.current?.contentDocument;
@@ -181,6 +184,9 @@ const IframeLayout = ({ editorCode }) => {
     let style = doc.getElementById('injected-styles');
     if (style) {
       style.innerHTML = `
+        html {
+          color-scheme: ${mode}
+        }
         body {
           background-color: ${theme.palette.background.default};
           color: ${theme.palette.text.primary};
@@ -193,6 +199,9 @@ const IframeLayout = ({ editorCode }) => {
       style = doc.createElement('style');
       style.id = 'injected-styles';
       style.innerHTML = `
+        html {
+          color-scheme: ${mode}
+        }
         body {
           background-color: ${theme.palette.background.default};
           color: ${theme.palette.text.primary};
@@ -212,7 +221,7 @@ const IframeLayout = ({ editorCode }) => {
     doc.body.innerHTML = editorCode.value; // Solo actualiza el contenido, no el iframe
 
     applyStyles(); // Reaplicar estilos en cada actualización
-  }, [editorCode.value, theme]);
+  }, [editorCode.value, theme, mode]);
 
   return <Iframe ref={frameRef} onLoad={applyStyles} />;
 };
@@ -272,7 +281,7 @@ const Root = styled('div')(({ theme }) => ({
 }));
 
 const DemoRootUI = styled('div', {
-  shouldForwardProp: (prop) => prop !== 'hideToolbar' && prop !== 'bg',
+  shouldForwardProp: (prop) => prop !== 'hideToolbar' && prop !== 'bg' && prop !== 'noPadding' && prop !== 'codeVariant',
 })(({ theme }) => ({
   position: 'relative',
   margin: 'auto',
@@ -342,6 +351,24 @@ const DemoRootUI = styled('div', {
           backgroundColor: alpha(theme.palette.primaryDark[700], 0.1),
         }),
       },
+    },
+    {
+      props: {
+        noPadding: true,
+      },
+      style: {
+        padding: '0 !important',
+        overflow: 'hidden'
+      }
+    },
+    {
+      props: {
+        codeVariant: CODE_VARIANTS.HTML,
+      },
+      style: {
+        padding: '0 !important',
+        overflow: 'hidden'
+      }
     },
     {
       props: {
@@ -639,7 +666,7 @@ export default function Demo(props) {
   return (
     <Root>
       <AnchorLink id={demoName} />
-      <DemoRoot hideToolbar={demoOptions.hideToolbar} bg={demoOptions.bg} id={demoId}>
+      <DemoRoot hideToolbar={demoOptions.hideToolbar} bg={demoOptions.bg} noPadding={demoOptions.noPadding} codeVariant={demoData.codeVariant} id={demoId}>
         <Wrapper>
           <InitialFocus
             aria-label={t('initialFocusLabel')}

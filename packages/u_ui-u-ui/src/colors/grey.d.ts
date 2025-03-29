@@ -29,7 +29,7 @@ declare const grey: {
   /**
    * Preview: ![grey 600](https://mui.com/static/colors-preview/grey-600-24x24.png)
    */
-  600: '#757575';
+  600: 'hsl(0, 0%, 15%)';
   /**
    * Preview: ![grey 700](https://mui.com/static/colors-preview/grey-700-24x24.png)
    */
@@ -41,7 +41,7 @@ declare const grey: {
   /**
    * Preview: ![grey 900](https://mui.com/static/colors-preview/grey-900-24x24.png)
    */
-  900: '#080808';
+  900: 'hsl(0, 0%, 3%)';
   /**
    * Preview: ![grey A100](https://mui.com/static/colors-preview/grey-A100-24x24.png)
    */

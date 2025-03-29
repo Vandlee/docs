@@ -139,8 +139,27 @@ function ProductItem({
 // Función para generar el href dinámicamente
 const generateHref = (productCategory: string, productId: string) => `/${productCategory}/${productId}`;
 
-
 const products = [
+  {
+    id: 'u-ui',
+    name: 'U-Ui',
+    description: 'Diseño original.',
+    icon: <SvgU_UiLogomark height={24} sx={logoColor} />,
+    category: 'u_ui',
+  },
+  {
+    id: 'html',
+    name: 'HTML',
+    description: 'Estructura y semántica web.',
+    icon: <SvgHTMLLogomark height={21} />, // Reemplazar con el ícono correcto
+    category: 'u-docs',
+    subcategory: 'markup-languages',
+  },
+];
+
+// TODO: Añadir toda la wea
+
+/* const products = [
   {
     id: 'u-ui',
     name: 'U-Ui',
@@ -180,7 +199,7 @@ const products = [
     category: 'u-docs',
     subcategory: 'programming-languages',
   },
-];
+]; */
 
 const contentMap: Record<string, { label: string, href: string, content: typeof products }[]> = {
   'u-docs': [
@@ -226,30 +245,34 @@ const VandleeProductSelector = React.forwardRef(function VandleeProductSelector(
       
       {selectedContent.map(({ label, href, content}) => (
         <React.Fragment key={label}> 
-          <Box
-            key={`${label} Components`}
-            role="none"
-            sx={{
-              gridColumn: {
-                xs: '1 / span 1',
-                sm: '1 / span 2',
-              },
-            }}
-          >
-            <Link href={href}>
-              <NavLabel>{label}</NavLabel>
-            </Link>
-          </Box>
-          {content.map(({ id, name, description, icon, category }) => (
-            <ProductItem
-              key={id}
-              name={name}
-              description={description}
-              href={generateHref(category, id)}
-              icon={icon}
-              active={pageContext.productId === id}
-            />
-          ))}
+          {content.length > 0 &&
+            <React.Fragment>
+              <Box
+                key={`${label} Components`}
+                role="none"
+                sx={{
+                  gridColumn: {
+                    xs: '1 / span 1',
+                    sm: '1 / span 2',
+                  },
+                }}
+              >
+                <Link href={href}>
+                  <NavLabel>{label}</NavLabel>
+                </Link>
+              </Box>
+              {content.map(({ id, name, description, icon, category }) => (
+                <ProductItem
+                  key={id}
+                  name={name}
+                  description={description}
+                  href={generateHref(category, id)}
+                  icon={icon}
+                  active={pageContext.productId === id}
+                />
+              ))}
+            </React.Fragment>
+          }
         </React.Fragment>
       ))}
     </MenuList>

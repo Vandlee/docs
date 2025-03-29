@@ -1,7 +1,7 @@
 import * as React from 'react';
-/* import Alert from '@u_ui/u-ui/Alert'; */
-/* import WarningRoundedIcon from '@mui/icons-material/WarningRounded';
- */
+import Alert from '@u_ui/u-ui/Alert';
+import WarningRoundedIcon from '@mui/icons-material/WarningRounded';
+
 interface ApiWarningAlertProps {
   children?: React.ReactNode;
   className?: string;
@@ -9,18 +9,13 @@ interface ApiWarningAlertProps {
 
 export default function ApiWarningAlert({ children, className }: ApiWarningAlertProps) {
   return (
-    <div>
-        alerta
-        {children}
-    </div>
-  );
-}
-
-{/* <Alert
+    <Alert
       severity="warning"
       className={className}
       icon={<WarningRoundedIcon fontSize="small" />}
       sx={{ fontSize: '0.875rem', mt: '12px' }}
     >
       {children}
-    </Alert> */}
+    </Alert>
+  );
+}

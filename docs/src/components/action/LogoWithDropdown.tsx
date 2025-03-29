@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Box, Drawer, Slide } from '@u_ui/u-ui';
+import { Box } from '@u_ui/u-ui';
 import { RootSvgProps } from 'docs/src/icons/RootSvg';
-import SvgZuroLogomark from 'docs/src/icons/SvgZuro';
+import SvgVandleeLogomark from 'docs/src/icons/SvgVandlee';
 import { ExpandMoreRounded, ExpandLessRounded } from '@mui/icons-material';
 import HeaderDropdown from 'docs/src/components/header/HeaderDropdown';
 
@@ -13,7 +13,7 @@ interface LogoWithDropdownProps {
 }
 
 export default function LogoWithDropdown({
-  logo: LogoSvg = SvgZuroLogomark,
+  logo: LogoSvg = SvgVandleeLogomark,
   marginLeft,
 }: LogoWithDropdownProps) {
   const [dropdown, setDropdown] = React.useState(false);

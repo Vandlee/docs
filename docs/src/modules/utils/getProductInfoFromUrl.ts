@@ -2,12 +2,19 @@ import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
 
 export type VandleeProductId = 
   | 'null' 
+  | 'u-ui'
+  | 'html'
+
+// TODO: Añadir estas cosas
+
+/* export type VandleeProductId = 
+  | 'null' 
   | 'base-ui'
   | 'u-ui'
   | 'html'
   | 'javascript'
   | 'php'
-  | 'python';
+  | 'python'; */
 
 type VandleeProductCategoryId = 'null' | 'u_ui' | 'u-docs' |'core';
 

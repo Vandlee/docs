@@ -111,6 +111,8 @@ export default function RichMarkdownElement(props) {
   splitLocationBySlash.pop();
   const fileNameWithLocation = `${splitLocationBySlash.join('/')}/${name}`;
 
+  console.log('demo', demo)
+
   return (
     <Demo
       {...wrapperProps}
@@ -120,7 +122,7 @@ export default function RichMarkdownElement(props) {
         type: demo.type,
         js: demoComponents[demo.module] ?? noComponent(demo.module),
         scope: demos.scope,
-        jsxPreview: demo.jsxPreview,
+        jsxPreview: demo.jsxPreview || demo.preview,
         tailwindJsxPreview: demo.tailwindJsxPreview,
         cssJsxPreview: demo.cssJsxPreview,
         rawTS: demo.rawTS,

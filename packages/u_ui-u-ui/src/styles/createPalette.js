@@ -2,7 +2,6 @@ import deepmerge from '@vandlee/utils/deepmerge';
 import { darken, getContrastRatio, lighten } from '@u_ui/system/colorManipulator';
 import common from '../colors/common';
 import grey from '../colors/grey';
-import purple from '../colors/purple';
 import red from '../colors/red';
 import orange from '../colors/orange';
 import blue from '../colors/blue';
@@ -61,7 +60,7 @@ function getDark() {
       disabled: 'rgba(255, 255, 255, 0.5)',
       icon: 'rgba(255, 255, 255, 0.5)',
     },
-    divider: 'rgba(128, 128, 128, 0.33)',
+    divider: 'rgba(128, 128, 128, 0.18)',
     background: {
       paper: common.black,
       default: common.black,

@@ -48,6 +48,12 @@
     "/u_ui/u-ui/react-popover": "Popover",
     "/u_ui/u-ui/react-popper": "Popper",
     "/u_ui/u-ui/react-portal": "Portal",
-    "/u_ui/u-ui/transitions": "Transiciones"
+    "/u_ui/u-ui/transitions": "Transiciones",
+    "/u-docs/html/getting-started-group": "Primeros pasos",
+    "/u-docs/html/getting-started": "Introducción",
+    "/u-docs/html/getting-started/basic": "Conceptos básicos",
+    "/u-docs/html/element-": "Elementos",
+    "/u-docs/html/element-a": "<a> - Enlace",
+    "/u-docs/javascript/grupo-ejemplo": "Grupo de ejemplo"
   }
 }

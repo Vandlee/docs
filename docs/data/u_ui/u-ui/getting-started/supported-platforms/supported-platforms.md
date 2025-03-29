@@ -9,15 +9,9 @@ No es necesario proporcionar ningún polyfill de JavaScript, ya que gestiona int
 
 <!-- #stable snapshot -->
 
-<div class="table">
-<div class="table-scroll">
-
 | Edge   | Firefox | Chrome | Safari (macOS) | Safari (iOS) |
 | :----- | :------ | :----- | :------------- | :----------- |
 | >= 121 | >= 115  | >= 109 | >= 15.4        | >= 15.4      |
-
-</div>
-</div>
 
 <!-- #default-branch-switch -->
 

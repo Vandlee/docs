@@ -250,6 +250,18 @@ export default async function demoLoader() {
           type: 'html',
         };
 
+        try {
+          const previewFilePath = moduleFilePath.replace(/\.html$/, '.html.preview');
+      
+          const htmlPreview = await fs.readFile(previewFilePath, { encoding: 'utf8' });
+          this.addDependency(previewFilePath);
+      
+          demos[demoName].preview = htmlPreview;
+        } catch (error) {
+          console.error(error)
+          // No preview exists. Esto es válido.
+        }
+
         return;
       }
 

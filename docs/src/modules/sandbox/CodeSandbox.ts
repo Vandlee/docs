@@ -27,8 +27,8 @@ function openSandbox({ files, codeVariant, initialFile }: any) {
   addHiddenInput(form, 'embed', '1');
   addHiddenInput(
     form,
-    'query',
-    `module=${initialFile}${initialFile.match(/(\.tsx|\.ts|\.js)$/) ? '' : extension}&fontsize=12`,
+    'query', 
+    `module=${initialFile}${initialFile.match(/(\.tsx|\.ts|\.js|\.html)$/) ? '' : extension}&fontsize=12`,
   );
   document.body.appendChild(form);
   form.submit();
@@ -38,6 +38,23 @@ function openSandbox({ files, codeVariant, initialFile }: any) {
 function createReactApp(demoData: DemoData) {
   const ext = getFileExtension(demoData.codeVariant);
   const { title, githubLocation: description } = demoData;
+
+  if (ext === 'html') {
+    const files: Record<string, { content: string }> = {
+      'index.html': { content: demoData.raw },
+    };
+  
+    return {
+      title,
+      description,
+      files,
+      dependencies: {},
+      devDependencies: {},
+      openSandbox: (initialFile: string = 'index.html') => {
+        openSandbox({ files, codeVariant: demoData.codeVariant, initialFile });
+      },
+    };
+  }
 
   const files: Record<string, object> = {
     'public/index.html': {
@@ -101,7 +118,7 @@ function createReactApp(demoData: DemoData) {
      * @description should start with `/`, for example `/Demo.tsx`. If the extension is not provided,
      * it will be appended based on the code variant.
      */
-    openSandbox: (initialFile: string = `/src/Demo.${ext}`) =>
+    openSandbox: (initialFile: string = `/index.${ext}`) =>
       openSandbox({ files, codeVariant: demoData.codeVariant, initialFile }),
   };
 }

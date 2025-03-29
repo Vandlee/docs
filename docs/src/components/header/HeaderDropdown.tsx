@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { styled } from '@u_ui/u-ui/styles';
 import { Box, Button, Divider, Drawer, ThemeProvider, Typography } from '@u_ui/u-ui';
-import { PortraitRounded } from '@mui/icons-material';
 import getTheme from 'docs/src/modules/utils/getLightTheme';
+import { ArticleRounded } from '@mui/icons-material';
+import Link from 'next/link';
 
 const Dropdown = styled('div')(({ theme }) => [
   {
@@ -43,20 +44,9 @@ export default function HeaderDropdown({ open, onClose }: HeaderDropdownProps) {
               <Typography variant='h2' fontSize={18} fontWeight={600}>Nosotros</Typography>
               <Divider sx={{ my: 1}} />
               <Box sx={{ display: 'flex', flexFlow: 'column', marginLeft: -1.6, marginRight: -1.2 }}>
-                <Button color="neutral" justify="start" endIcon={<PortraitRounded />}>
-                  <Typography variant="button">Cuentas</Typography>
+                <Button LinkComponent={Link} target="_blank" rel="noreferrer noopener" href="https://docs.vandlee.com/" color="neutral" justify="start" endIcon={<ArticleRounded />}>
+                  <Typography sx={{ flex: 1 }} variant="button">U-Docs</Typography>
                 </Button>
-                <Button justify="start">Yügashiki</Button>
-              </Box>
-            </Box>
-            <Box sx={{ maxWidth: '300px', width: '100%' }}>
-              <Typography variant='h2' fontSize={18} fontWeight={600}>Nosotros</Typography>
-              <Divider sx={{ my: 1}} />
-              <Box sx={{ display: 'flex', flexFlow: 'column', marginLeft: -1.6, marginRight: -1.2 }}>
-                <Button color="neutral" justify="start" endIcon={<PortraitRounded />}>
-                  <Typography variant="button">Cuentas</Typography>
-                </Button>
-                <Button justify="start">Yügashiki</Button>
               </Box>
             </Box>
           </Box>

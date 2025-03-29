@@ -409,7 +409,7 @@ export default function DemoToolbar(props) {
             {hasNonSystemDemos && (
               <Divider orientation='vertical' variant='middle' sx={{ mx: 1, height: '24px' }} />
             )}
-              {codeVariant !== CODE_VARIANTS.HTML &&
+              {demoData.codeVariant !== CODE_VARIANTS.HTML &&
                 <ToggleButtonGroup
                   sx={{ margin: '8px 0' }}
                   exclusive

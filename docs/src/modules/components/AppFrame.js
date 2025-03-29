@@ -22,6 +22,7 @@ import LogoWithCopyMenu from 'docs/src/components/action/LogoWithCopyMenu';
 import AppFrameBanner from 'docs/src/components/banner/AppFrameBanner';
 import { GitHub, MenuRounded, SettingsRounded } from '@mui/icons-material';
 import { Divider } from '@u_ui/u-ui';
+import AppSearchInput from 'docs/src/modules/components/AppSearchInput';
 
 const nProgressStart = debounce(() => {
   NProgress.start();
@@ -220,6 +221,7 @@ export default function AppFrame(props) {
           </Box>
           <Stack direction="row" spacing={1} useFlexGap sx={{ ml: 'auto' }}>
             <BannerComponent />
+            <AppSearchInput />
             <Tooltip title={t('appFrame.github')} enterDelay={300}>
               <IconButton
                 component="a"

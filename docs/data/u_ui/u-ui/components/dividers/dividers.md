@@ -77,7 +77,7 @@ Si lo está utilizando como un elemento puramente estilístico, le recomendamos 
 <Divider aria-hidden="true" />
 ```
 
-Si utilizas el separador para envolver otros elementos, como texto o [chips](/u_ui/u-ui/react-chip), te recomendamos que cambies su elemento renderizado por un simple `<div>` utilizando la propiedad `component` y estableciendo `role="presentation"`.
+Si utilizas el separador para envolver otros elementos, como texto o [chips](/u_ui/u-ui/react-chip/), te recomendamos que cambies su elemento renderizado por un simple `<div>` utilizando la propiedad `component` y estableciendo `role="presentation"`.
 Esto asegura que no sea anunciado por los lectores de pantalla mientras se preserva la semántica de los elementos dentro de él.
 
 ```js

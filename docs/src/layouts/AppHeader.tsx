@@ -11,6 +11,8 @@ import LogoWithCopyMenu from 'docs/src/components/action/LogoWithCopyMenu';
 import HeaderNavBar from 'docs/src/components/header/HeaderNavBar';
 import LogoWithDropdown from 'docs/src/components/action/LogoWithDropdown';
 import { useTranslate } from '@vandlee/docs/i18n';
+import HeaderNavDropdown from '../components/header/HeaderNavDropdown';
+import ThemeModeToggle from '../components/header/ThemeModeToggle';
 
 const Header = styled('header')(({ theme }) => [
   {
@@ -51,23 +53,25 @@ export default function AppHeader(props: AppHeaderProps) {
         <Box sx={{ display: { xs: 'none', md: 'initial' } }}>
           <HeaderNavBar />
         </Box>
-        <Box sx={{ ml: 'auto' }}>
-          <Stack direction="row" spacing={1}>
-            <Tooltip title={t('appFrame.github')} enterDelay={300}>
-              <IconButton
-                component="a"
-                size="small"
-                color='contrast'
-                href={gitHubRepository}
-                target="_blank"
-                rel="noopener"
-                data-ga-event-category="header"
-                data-ga-event-action="github"
-              >
-                <GitHubIcon fontSize="small" />
-              </IconButton>
-            </Tooltip>
-          </Stack>
+        <Box sx={{ ml: 'auto' }} />
+        <Stack direction="row" spacing={1}>
+          <Tooltip title={t('appFrame.github')} enterDelay={300}>
+            <IconButton
+              component="a"
+              size="small"
+              href={gitHubRepository}
+              target="_blank"
+              rel="noopener"
+              data-ga-event-category="header"
+              data-ga-event-action="github"
+            >
+              <GitHubIcon fontSize="small" />
+            </IconButton>
+          </Tooltip>
+          <ThemeModeToggle />
+        </Stack>
+        <Box sx={{ display: { md: 'none' }, ml: 1}}>
+          <HeaderNavDropdown />
         </Box>
       </Container>
     </Header>

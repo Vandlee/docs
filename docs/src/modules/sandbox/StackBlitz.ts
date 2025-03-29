@@ -31,7 +31,7 @@ function openStackBlitz({
   form.action = `https://stackblitz.com/run?file=${initialFile}${
     initialFile.match(/(\.tsx|\.ts|\.js)$/) ? '' : extension
   }`;
-  addHiddenInput(form, 'project[template]', 'create-react-app');
+  addHiddenInput(form, 'project[template]', codeVariant === 'HTML' ? 'html' : 'create-react-app');
   addHiddenInput(form, 'project[title]', title);
   addHiddenInput(form, 'project[description]', `# ${title}\n${description}`);
   addHiddenInput(form, 'project[dependencies]', JSON.stringify(dependencies));
@@ -48,6 +48,31 @@ function openStackBlitz({
 function createReactApp(demoData: DemoData) {
   const ext = getFileExtension(demoData.codeVariant);
   const { title, githubLocation: description } = demoData;
+
+  if (ext === "html") {
+    const files: Record<string, string> = {
+      "index.html": demoData.raw, // Contenido HTML sin ningún otro archivo
+    };
+
+    return {
+      title,
+      description,
+      files,
+      dependencies: {},
+      devDependencies: {},
+      openSandbox: () => {
+        openStackBlitz({
+          title,
+          description,
+          dependencies: {},
+          devDependencies: {},
+          files,
+          codeVariant: "HTML",
+          initialFile: "index.html",
+        });
+      },
+    };
+  }
 
   const files: Record<string, string> = {
     'index.html': CRA.getHtml(demoData),

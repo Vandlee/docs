@@ -437,6 +437,18 @@ function createRender(context) {
         '<span class="uiCode-copyKeypress"><span>(or</span> $keyC<span>)</span></span></button></div>',
       ].join('')}\n`;
     };
+    renderer.table = function(header, body) {
+      // Only wrap if there's actual content
+      if (header || body) {
+        const tableHtml = marked.Renderer.prototype.table.call(this, header, body);
+        return `<div class="table">
+  <div class="table-scroll">
+    ${tableHtml}
+  </div>
+</div>`;
+      }
+      return '';
+    };
 
     marked.use({
       extensions: [

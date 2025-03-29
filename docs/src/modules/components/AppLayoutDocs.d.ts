@@ -15,4 +15,5 @@ export interface AppLayoutDocsProps {
   toc: any[];
 }
 
+
 export default React.ComponentType<AppLayoutDocsProps>;

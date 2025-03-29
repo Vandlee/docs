@@ -216,6 +216,9 @@ const ButtonRoot = styled(ButtonBase, {
               '--variant-outlinedBorder': theme.vars
                 ? `rgba(${theme.vars.palette[color].mainChannel} / 0.5)`
                 : alpha(theme.palette[color].main, 0.5),
+              '--variant-outlinedBorderNeutral': theme.vars
+                ? `rgba(${theme.vars.palette[color].mainChannel} / 0.2)`
+                : alpha(theme.palette[color].main, 0.2),
               '--variant-containedColor': (theme.vars || theme).palette[color].contrastText,
               '--variant-containedBg': (theme.vars || theme).palette[color].main,
               '@media (hover: hover)': {
@@ -225,6 +228,9 @@ const ButtonRoot = styled(ButtonBase, {
                     ? `rgba(${theme.vars.palette[color].mainChannel} / ${theme.vars.palette.action.hoverOpacity})`
                     : alpha(theme.palette[color].main, theme.palette.action.hoverOpacity),
                   '--variant-outlinedBorder': (theme.vars || theme).palette[color].main,
+                  '--variant-outlinedBorderNeutral': theme.vars
+                    ? `rgba(${theme.vars.palette[color].mainChannel} / 0.5)`
+                    : alpha(theme.palette[color].main, 0.5),
                   '--variant-outlinedBg': theme.vars
                     ? `rgba(${theme.vars.palette[color].mainChannel} / ${theme.vars.palette.action.hoverOpacity})`
                     : alpha(theme.palette[color].main, theme.palette.action.hoverOpacity),
@@ -261,6 +267,7 @@ const ButtonRoot = styled(ButtonBase, {
           props: { color: 'neutral' },
           style: {
             color: `var(--textNeutralColor)`,
+            borderColor: `var(--variant-outlinedBorderNeutral)`
           }
         },
         {

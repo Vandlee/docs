@@ -46,11 +46,13 @@ function getPath(obj: Translations, path: string): string | null {
 interface UserLanguageContextValue {
   userLanguage: string;
   setUserLanguage: React.Dispatch<React.SetStateAction<string>>;
+  translations: Translations | undefined;
 }
 
 const UserLanguageContext = React.createContext<UserLanguageContextValue>({
   userLanguage: '',
   setUserLanguage: () => {},
+  translations: {}
 });
 if (process.env.NODE_ENV !== 'production') {
   UserLanguageContext.displayName = 'UserLanguage';
@@ -70,7 +72,7 @@ export function UserLanguageProvider(props: UserLanguageProviderProps) {
   const [userLanguage, setUserLanguage] = React.useState(defaultUserLanguage);
 
   const contextValue = React.useMemo(() => {
-    return { userLanguage, setUserLanguage };
+    return { userLanguage, setUserLanguage, translations };
   }, [userLanguage]);
 
   React.useEffect(() => {
@@ -95,6 +97,10 @@ UserLanguageProvider.propTypes = {
 
 export function useUserLanguage() {
   return React.useContext(UserLanguageContext).userLanguage;
+}
+
+export function useTranslations() {
+  return React.useContext(UserLanguageContext).translations;
 }
 
 export function useSetUserLanguage() {

@@ -284,7 +284,8 @@ export default function HeaderNavBar() {
                   })}
                 >
                   <VandleeProductSelector type='u_ui' ref={productSelectorRef} />
-                  <ul>
+                  {/* TODO: Agregar esta wea */}
+                  {/* <ul>
                     <li>
                       <ProductSubMenu
                         id={PRODUCT_IDS[0]}
@@ -303,7 +304,7 @@ export default function HeaderNavBar() {
                         description="Documentación para todo"
                       />
                     </li>
-                  </ul>
+                  </ul> */}
                 </Paper>
               </Fade>
             )}
@@ -357,9 +358,10 @@ export default function HeaderNavBar() {
             )}
           </Popper>
         </li>
-        <li>
+        {/* TODO: Añadir el about */}
+        {/* <li>
           <Link href={ROUTES.about}>Nosotros</Link>
-        </li>
+        </li> */}
       </ul>
     </Navigation>
   );

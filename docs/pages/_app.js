@@ -9,6 +9,7 @@ import basePkgJson from 'packages/u_ui-base/package.json';
 import generalDocsPages from 'docs/data/docs/pages';
 
 import uUiPages from 'docs/data/u_ui/u-ui/pages';
+import htmlPages from 'docs/data/u-docs/html/pages';
 import javascriptPages from 'docs/data/u-docs/javascript/pages';
 import phpPages from 'docs/data/u-docs/php/pages';
 import pythonPages from 'docs/data/u-docs/python/pages';
@@ -26,7 +27,7 @@ import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
 import getProductInfoFromUrl from 'docs/src/modules/utils/getProductInfoFromUrl';
 import { DocsProvider } from '@vandlee/docs/DocsProvider';
 import { mapTranslations } from '@vandlee/docs/i18n';
-import SvgZuroLogomark, { zuroSvgWordmarkString } from 'docs/src/icons/SvgZuro';
+import SvgVandleeLogomark, { vandleeSvgWordmarkString } from 'docs/src/icons/SvgVandlee';
 import './global.css';
 import '../public/static/components-gallery/base-theme.css';
 import * as config from '../config';
@@ -34,6 +35,7 @@ import SvgU_UiLogomark, { U_UiSvgLogoString, U_UiSvgWordmarkString } from 'docs/
 import SvgJavaScriptLogomark from 'docs/src/icons/SvgJavascript';
 import SvgPHPLogomark from 'docs/src/icons/SvgPHP';
 import SvgPythonLogomark from 'docs/src/icons/SvgPython';
+import SvgHTMLLogomark from 'docs/src/icons/SvgHTML';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -41,25 +43,36 @@ const clientSideEmotionCache = createEmotionCache();
 const PRODUCTS_METADATA = {
   'u-ui': {
     name: 'U-Ui',
+    id: 'u-ui',
     url: '/u_ui/u-ui/',
     logo: SvgU_UiLogomark,
     logoSvg: U_UiSvgLogoString,
     wordmarkSvg: U_UiSvgWordmarkString,
     versions: [{ text: `v${uiPkgJson.version}`, current: true }],
   },
+  html: {
+    id: 'html',
+    name: 'HTML',
+    url: '/u-docs/html/',
+    logo: SvgHTMLLogomark,
+    versions: [{ text: 'v1', current: true }]
+  },
   javascript: {
+    id: 'javascript',
     name: 'JavaScript',
     url: '/u-docs/javascript/',
     logo: SvgJavaScriptLogomark,
     versions: [{ text: `v1`, current: true }],
   },
   php: {
+    id: 'php',
     name: 'PHP',
     url: '/u-docs/php/',
     logo: SvgPHPLogomark,
     versions: [{ text: `v1`, current: true }],
   },
   python: {
+    id: 'python',
     name: 'Python',
     url: '/u-docs/python/',
     logo: SvgPythonLogomark,
@@ -69,6 +82,7 @@ const PRODUCTS_METADATA = {
 
 const PRODUCT_PAGES = {
   'u-ui': uUiPages,
+  html: htmlPages,
   javascript: javascriptPages,
   php: phpPages,
   python: pythonPages,
@@ -262,6 +276,8 @@ AppWrapper.propTypes = {
 export default function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   const getLayout = Component.getLayout ?? ((page) => page);
+
+  console.log(pageProps)
 
   return (
     <AppWrapper emotionCache={emotionCache} pageProps={pageProps}>

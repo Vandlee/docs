@@ -96,11 +96,11 @@ export const blue = {
   300: 'hsl(210, 100%, 70%)',
   400: 'hsl(210, 100%, 60%)',
   main: 'hsl(210, 100%, 45%)',
-  500: 'hsl(210, 100%, 45%)',
-  600: 'hsl(210, 100%, 42%)',
-  700: 'hsl(210, 100%, 38%)',
-  800: 'hsl(210, 100%, 30%)',
-  900: 'hsl(210, 100%, 23%)',
+  500: 'hsl(210, 50%, 45%)',
+  600: 'hsl(210, 50%, 42%)',
+  700: 'hsl(210, 50%, 38%)',
+  800: 'hsl(210, 50%, 30%)',
+  900: 'hsl(210, 50%, 23%)',
 };
 export const blueDark = {
   50: 'hsl(210, 14%, 92%)',
@@ -129,13 +129,13 @@ export const deepPurple = {
   900: '#311b92',
 };
 export const grey = {
-  50: 'hsl(0, 0%, 97%)',
-  100: 'hsl(0, 0%, 90%)',
-  200: 'hsl(0, 0%, 80%)',
-  300: 'hsl(0, 0%, 50%)',
-  main: 'hsl(0, 0%, 50%)',
-  400: 'hsl(0, 0%, 40%)',
-  500: 'hsl(0, 0%, 30%)',
+  50: '#fafafa',
+  100: '#f5f5f5',
+  200: '#eeeeee',
+  300: '#e0e0e0',
+  main: '#e0e0e0',
+  400: '#bdbdbd',
+  500: '#9e9e9e',
   600: 'hsl(0, 0%, 15%)',
   700: 'hsl(0, 0%, 10%)',
   800: 'hsl(0, 0%, 5%)',
@@ -195,8 +195,8 @@ const systemFont = [
 
 export const getMetaThemeColor = (mode: 'light' | 'dark') => {
   const themeColor = {
-    light: blue[600],
-    dark: blueDark[900],
+    light: grey[100],
+    dark: grey[900],
   };
   return themeColor[mode];
 };
@@ -206,43 +206,29 @@ export const getDesignTokens = (mode: 'light' | 'dark') =>
     palette: {
       primary: {
         ...deepPurple,
-        ...(mode === 'light' && {
-          main: deepPurple[300],
-        }),
-        ...(mode === 'dark' && {
+        ...(mode === 'dark') && {
           main: deepPurple[200],
           dark: deepPurple[300],
-        }),
+          light: deepPurple[50]
+        }
       },
       secondary: {
         ...blue,
-        ...(mode === 'light' && {
-          main: blue[50],
-        }),
-        ...(mode === 'dark' && {
+        ...(mode === 'dark') && {
           main: blue[200],
-        }),
-      },
-      contrast: {
-        ...grey,
-        ...(mode === 'light' && {
-          main: grey[300],
-        }),
-        ...(mode === 'dark' && {
-          main: grey[200],
-          dark: grey[300],
-        }),
+          dark: blue[300],
+          light: blue[50]
+        }
       },
       neutral: {
         ...grey,
       },
-      divider: mode === 'dark' ? alpha(grey[300], .325) : grey[200],
       primaryDark: grey,
       mode,
       ...(mode === 'dark' && {
         background: {
           default: grey[900],
-          paper: alpha(grey[800], 0.8),
+          paper: alpha(grey[800], 1),
         },
       }),
       common: {
@@ -253,8 +239,6 @@ export const getDesignTokens = (mode: 'light' | 'dark') =>
           primary: grey[900],
           secondary: grey[800],
           tertiary: grey[700],
-          contrast: grey[800],
-          neutral: grey[700]
         }),
         ...(mode === 'dark' && {
           primary: grey[50],
@@ -270,7 +254,7 @@ export const getDesignTokens = (mode: 'light' | 'dark') =>
         }),
         ...(mode === 'dark' && {
           main: grey[700],
-          contrastText: grey[600],
+          contrastText: grey[100],
         }),
       },
       error,
@@ -296,7 +280,7 @@ export const getDesignTokens = (mode: 'light' | 'dark') =>
       },
     },
     shape: {
-      borderRadius: 12,
+      borderRadius: 11.6,
     },
     spacing: 8,
     typography: {

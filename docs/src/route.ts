@@ -6,6 +6,8 @@ const ROUTES = {
   about: '/about',
   careers: '/careers/',
   // U Docs pages
+  docsHTML: '/u-docs/html',
+  htmlDocs: '/u-docs/html/getting-started',
   docsJavascript: '/u-docs/javascript/',
   javascriptDocs: '/u-docs/javascript/getting-started',
   docsPHP: '/u-docs/php/',

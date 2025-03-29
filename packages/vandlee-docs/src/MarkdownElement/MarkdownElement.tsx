@@ -422,7 +422,7 @@ const Root = styled('div')(
       },
       '&.uiCallout-info': {
         color: `var(--uidocs-palette-grey-900, ${lightTheme.palette.grey[900]})`,
-        backgroundColor: `var(--uidocs-palette-grey-50, ${lightTheme.palette.grey[50]})`,
+        backgroundColor: `var(--uidocs-palette-secondary-50, ${lightTheme.palette.secondary[50]})`,
         borderColor: `var(--uidocs-palette-grey-100, ${lightTheme.palette.grey[100]})`,
         '& strong': {
           color: `var(--uidocs-palette-primary-800, ${lightTheme.palette.primary[800]})`,
@@ -501,7 +501,7 @@ const Root = styled('div')(
       borderRadius: 6,
       border: `1px solid var(--uidocs-palette-grey-300, ${lightTheme.palette.grey[300]})`,
       backgroundColor: `var(--uidocs-palette-grey-50, ${lightTheme.palette.grey[50]})`,
-      boxShadow: `inset 0 -2px 0 var(--uidocs-palette-grey-200, ${lightTheme.palette.grey[200]})`,
+      boxShadow: `inset 0 -2px 0 var(--uidocs-palette-grey-300, ${lightTheme.palette.grey[300]})`,
     },
     '& details': {
       width: '100%',
@@ -740,14 +740,14 @@ const Root = styled('div')(
       '& td': {
         color: `var(--uidocs-palette-text-secondary, ${darkTheme.palette.text.secondary})`,
         borderColor: `var(--uidocs-palette-divider, ${darkTheme.palette.divider})`,
+        borderRightColor: `var(--uidocs-palette-grey-700, ${darkTheme.palette.grey[700]})`,
+        backgroundColor: `var(--uidocs-palette-grey-700, ${darkTheme.palette.grey[900]})`,
       },
       '& th': {
         color: `var(--uidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
-        borderColor: `var(--uidocs-palette-divider, ${darkTheme.palette.divider})`,
-        backgroundColor: `var(--uidocs-palette-grey-800, ${darkTheme.palette.grey[800]})`
-      },
-      '& td, & th': {
-        borderRightColor: `var(--uidocs-palette-grey-700, ${darkTheme.palette.grey[700]})`
+        borderColor: `var(--uidocs-palette-grey-600, ${darkTheme.palette.grey[600]})`,
+        backgroundColor: `var(--uidocs-palette-grey-700, ${darkTheme.palette.grey[800]})`,
+        borderRightColor: `var(--uidocs-palette-grey-500, ${darkTheme.palette.grey[600]})`
       },
       '& blockquote': {
         borderColor: `var(--uidocs-palette-primaryDark-700, ${darkTheme.palette.primaryDark[700]})`,
@@ -777,8 +777,8 @@ const Root = styled('div')(
         },
         '&.uiCallout-info': {
           color: `var(--uidocs-palette-grey-50, ${darkTheme.palette.grey[50]})`,
-          backgroundColor: alpha(darkTheme.palette.grey[600], 0.4),
-          borderColor: alpha(darkTheme.palette.grey[800], 0.5),
+          backgroundColor: alpha(darkTheme.palette.secondary[800], 0.1),
+          borderColor: alpha(darkTheme.palette.secondary[900], 0.5),
           '& strong': {
             color: `var(--uidocs-palette-primary-200, ${darkTheme.palette.primary[200]})`,
           },
@@ -819,7 +819,7 @@ const Root = styled('div')(
         color: `var(--uidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
         backgroundColor: `var(--uidocs-palette-primaryDark-800, ${darkTheme.palette.primaryDark[800]})`,
         border: `1px solid var(--uidocs-palette-primaryDark-600, ${darkTheme.palette.primaryDark[600]})`,
-        boxShadow: `inset 0 -2px 0 var(--uidocs-palette-primaryDark-700, ${darkTheme.palette.primaryDark[700]})`,
+        boxShadow: `inset 0 -2px 0 var(--uidocs-palette-primaryDark-600, ${darkTheme.palette.primaryDark[600]})`,
       },
       '& details': {
         borderColor: `var(--uidocs-palette-divider, ${darkTheme.palette.divider})`,
