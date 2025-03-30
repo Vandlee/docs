@@ -1,6 +1,6 @@
 import type { Translations } from '../i18n';
-import es from './es.json';
-import en from './en.json';
+import es from './translations.json';
+import en from './translations-en.json';
 
 export default {
   es,

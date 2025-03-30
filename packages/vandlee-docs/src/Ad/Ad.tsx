@@ -5,6 +5,7 @@ import Paper from '@u_ui/u-ui/Paper';
 import { useTranslate } from '../i18n';
 import AdCarbon from './AdCarbon';
 import AdInHouse from './AdInHouse';
+import AdSense from './AdSense';
 import { AdContext, adShape } from './AdManager';
 import { useAdConfig } from './AdProvider';
 
@@ -111,8 +112,8 @@ export function Ad() {
     children = <AdInHouse ad={inHouseAds[Math.floor(inHouseAds.length * randomInHouse)]} />;
     label = 'in-house-carbon';
   } else {
-    children = <AdCarbon />;
-    label = 'carbon';
+    children = <AdSense />;
+    label = 'adsense';
   }
 
   const ad = React.useContext(AdContext);
