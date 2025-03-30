@@ -240,6 +240,7 @@ function AppWrapper(props) {
         ))}
         <meta name="vandlee:productId" content={productId} />
         <meta name="vandlee:productCategoryId" content={productCategoryId} />
+        <meta name="google-adsense-account" content="ca-pub-8301556662915539"></meta>
       </NextHead>
       <DocsProvider
         config={config}

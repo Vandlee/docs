@@ -98,9 +98,9 @@ export function Ad() {
   let children;
   let label;
   // Hide the content to google bot to avoid its indexation.
-  if ((typeof window !== 'undefined' && isBot()) || disableAd) {
+ /*  if ((typeof window !== 'undefined' && isBot()) || disableAd) {
     children = <span />;
-  } else if (adblock) {
+  } else  */if (adblock) {
     if (randomAdblock < 0.2) {
       children = <PleaseDisableAdblock />;
       label = 'in-house-adblock';
@@ -127,6 +127,7 @@ export function Ad() {
         document.querySelector('.ea-placement') ||
         document.querySelector('#carbonads') ||
         document.querySelector('.carbonads') ||
+        document.querySelector('.adsbygoogle') ||
         carbonOut
       ) {
         if (
