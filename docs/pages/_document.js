@@ -30,6 +30,12 @@ if (process.env.NODE_ENV === 'production') {
   cleanCSS = new CleanCSS();
 }
 
+const PRODUCTION_GA =
+  process.env.DEPLOY_ENV === 'production' || process.env.DEPLOY_ENV === 'staging';
+
+
+const GOOGLE_ANALYTICS_ID_V4 = PRODUCTION_GA ? 'G-1YBBDHK7SJ' : 'G-1YBBDHK7SJ';
+
 export default class MyDocument extends Document {
   render() {
     const { canonicalAsServer, userLanguage } = this.props;
@@ -178,6 +184,24 @@ export default class MyDocument extends Document {
         <body>
           <VandleeInitColorSchemeScript defaultMode="system" />
           <Main />
+          <script
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{
+              __html: `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+window.gtag = gtag;
+gtag('js', new Date());
+gtag('config', '${GOOGLE_ANALYTICS_ID_V4}', {
+  send_page_view: false,
+});
+`,
+            }}
+          />
+          <Script
+            strategy="afterInteractive"
+            src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID_V4}`}
+          />
           <NextScript />
         </body>
       </Html>

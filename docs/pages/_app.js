@@ -15,6 +15,7 @@ import phpPages from 'docs/data/u-docs/php/pages';
 import pythonPages from 'docs/data/u-docs/python/pages';
 
 import PageContext from 'docs/src/modules/components/PageContext';
+import GoogleAnalytics from 'docs/src/modules/components/GoogleAnalytics';
 
 import { CodeCopyProvider } from '@vandlee/docs/CodeCopy';
 import { ThemeProvider } from 'docs/src/modules/components/ThemeContext';
@@ -36,6 +37,7 @@ import SvgJavaScriptLogomark from 'docs/src/icons/SvgJavascript';
 import SvgPHPLogomark from 'docs/src/icons/SvgPHP';
 import SvgPythonLogomark from 'docs/src/icons/SvgPython';
 import SvgHTMLLogomark from 'docs/src/icons/SvgHTML';
+import Script from 'next/script';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -241,6 +243,12 @@ function AppWrapper(props) {
         <meta name="vandlee:productId" content={productId} />
         <meta name="vandlee:productCategoryId" content={productCategoryId} />
         <meta name="google-adsense-account" content="ca-pub-8301556662915539"></meta>
+
+        <Script
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8301556662915539"
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+        />
       </NextHead>
       <DocsProvider
         config={config}
@@ -256,7 +264,7 @@ function AppWrapper(props) {
                   <ThemeProvider>
                       <DocsStyledEngineProvider cacheLtr={emotionCache}>
                         {children}
-                        {/* <GoogleAnalytics /> */}
+                        <GoogleAnalytics />
                       </DocsStyledEngineProvider>
                   </ThemeProvider>
                 </PageContext.Provider>
@@ -277,8 +285,6 @@ AppWrapper.propTypes = {
 export default function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   const getLayout = Component.getLayout ?? ((page) => page);
-
-  console.log(pageProps)
 
   return (
     <AppWrapper emotionCache={emotionCache} pageProps={pageProps}>
