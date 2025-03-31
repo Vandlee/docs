@@ -26,6 +26,28 @@ El elemento _HTML_ `Anchor` `<a>` crea un enlace a otras páginas de internet, a
 
 Este elemento incluye los atributos globales.
 
+### `attributionsrc` {experimental}
+
+Especifica que desea que el navegador envíe una cabecera `Attribution-Reporting-Eligible`. En el lado del servidor, esto se utiliza para activar el envío de una cabecera `Attribution-Reporting-Register-Source` en la respuesta, para registrar una fuente de atribución basada en la navegación.
+
+El navegador almacena los datos de origen asociados a la fuente de atribución basada en la navegación (como se indica en la cabecera de respuesta `Attribution-Reporting-Register-Source`) cuando el usuario hace clic en el enlace. Consulte la API de informes de atribución para obtener más información.
+
+Hay dos versiones de este atributo que puedes configurar:
+
+- Booleano, es decir, sólo el nombre `attributionsrc`. Especifica que desea que la cabecera `Attribution-Reporting-Eligible` se envíe al mismo servidor al que apunta el atributo `href`. Esto está bien cuando se gestiona el registro de la fuente de atribución en el mismo servidor.
+- Valor que contiene una o varias URL, por ejemplo: 
+```html
+attributionsrc="https://a.example/register-source
+https://b.example/register-source"
+```
+Esto es útil en los casos en que el recurso solicitado no se encuentra en un servidor que usted controla, o simplemente desea gestionar el registro de la fuente de atribución en un servidor diferente. En este caso, puede especificar una o varias URL como valor de `attributionsrc`. Cuando se produzca la solicitud del recurso, la cabecera `Attribution-Reporting-Eligible` se enviará a la(s) URL(s) especificada(s) en `attributionsrc` además del origen del recurso. A continuación, estas URL pueden responder con `Attribution-Reporting-Register-Source` para completar el registro.
+
+:::info
+Especificar varias URL significa que se pueden registrar varias fuentes de atribución en la misma función. Por ejemplo, puede tener diferentes campañas cuyo éxito desea medir, lo que implica generar diferentes informes sobre diferentes datos.
+:::
+
+Los elementos `<a>` no pueden utilizarse como activadores de atribución, sólo las fuentes.
+
 ### `download`
 
 Hace que el navegador trate la URL enlazada como una descarga. Puede utilizarse con o sin un valor de nombre de archiv:
@@ -47,27 +69,41 @@ Hace que el navegador trate la URL enlazada como una descarga. Puede utilizarse 
 
 ### `href`
 
-Contiene una URL o un fragmento de URL al cual apunta el enlace. Un fragmento de URL es un nombre (_name_) precedido por el símbolo de número (`#`), que especifica una ubicación dentro del mismo documento (como el ID de un elemento HTML).
+La URL a la que apunta el hipervínculo. Los enlaces no están restrigidos a URL basadas en HTTP, pueden utilizar cualquier esquema de URL soportado por los navegadores:
 
-Las URLs no están limitadas sólo a documentos de internet basados en HTTP, sino que pueden utilizar cualquier protocolo soportado por el navegador. Por ejemplo `file:`, `ftp:` y `mailto:` funcionan en la mayoría de los navegadores. 
+- Números de telefono con URL `tel:`
+- Direcciones de correo electrónico con URL `mailto:`
+- Mensajes de texto SMS con URL `sms:`
+- Código ejecutable con URL `javascript:`
+- Aunque los navegadores web pueden no admitir otros esquemas de URL, los sitios web pueden hacerlo con `registerProtocolHandler()`.
 
-A partir de HTML5, este atributo puede omitirse para crear un enlace de marcador de posición. Este tipo de enlace se parece a un enlace tradicional, pero no dirige a ninguna parte.
+Además, otras funciones de URL pueden localizar partes específicas del recurso, entre ellas:
 
-:::info
-Puede ser utilizado `href="#top"` o un fragmento vacío (`href="#"`) para enlazar a la parte superior de la página actual.
-
-[Este comportamiento está especificado en HTML5](https://www.w3.org/TR/html5/single-page.html#scroll-to-fragid).
-:::
+- Secciones de una página con fragmentos de documentos
+- Partes específicas de texto con fragmentos de texto
+- Partes de archivos multimedia con fragmentos multimedia
 
 ### `hreflang`
 
-Este atributo indica el lenguaje humano del recurso al que se enlaza.
-Este es únicamente informativo, sin ninguna funcionalidad incorporada. Los valores permitidos están determinados por [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt)
+Indica el lenguaje humano de la URL enlazada. No tiene funcionalidad integrada. Los valores permitidos son los mismos que los del atributo global `lang`.
+
+### `ping`
+
+Una lista de URLs separadas por espacios. Cuando se sigue el enlace, el navegador enviará peticiones `POST` con el cuerpo `PING` a las URLs. Típicamente para rastreo.
 
 ### `referrerpolicy`
 
-Indica que referencia (_referer_) enviar cuando la URL es recuperada.
+Cuánto del referente enviar al seguir el enlace.
 
-- `'no-referrer'` significa `Referer:` el encabezado no será enviado.
-- `'no-referrer-when-downgrade'` significa sin `Referer:` el encabezado será enviado cuando se navega a un origen (`origin`) sin HTTPS. Este es un comportamiento por defecto.
-- `'origin'` significaque
+- `no-referrer`: No se enviará la cabecera `Referer`.
+- `no-referrer-when-downgrade`: La cabecera `Referer` no se enviará a orígenes sin TLS (HTTPS).
+- `origin`: El `Referer` enviado se limitará al origen de la página de referencia: su esquema, host y puerto.
+- `origin-when-cross-origin`: El referrer enviado a otros orígenes se limitará al esquema, el host y el puerto. Las navegeaciones en el mismo origen seguirán incluyendo la ruta.
+- `same-origin`: Se enviará un referrer para el mismo origen, pero las peticiones cross-origin no contendrán información del referrer.
+- `strict-origin`: Soló envía el origen del documento como referrer cuando el nivel de seguridad del protocolo permanece igual a (HTTPS→HTTPS), pero no lo envía a un destino menos seguro (HTTPS→HTTP).
+- `strict-origin-when-cross-origin (por defecto)`: Envía una URL completa cuando se realiza una petición con el mismo origen, sólo envía el origen cuando el nivel de seguridad del protocolo se mantiene igual (HTTPS→HTTPS), y no envía ninguna cabecera a un destino menos seguro (HTTPS→HTTP).
+- `unsafe-url`: El referrer incluirá el origen y la ruta (pero no el fragmento, la contraseña o el nombre de usuario). Este valor es inseguro, porque filtra orígenes y rutas de recrusos protegidos port TLS a orígenes inseguros.
+
+### `rel`
+
+La relación de la URL enlazada como tipos de enlace separados por espacios.

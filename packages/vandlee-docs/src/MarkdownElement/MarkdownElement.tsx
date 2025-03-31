@@ -114,7 +114,7 @@ const Root = styled('div')(
       marginTop: 0,
       marginBottom: 16,
       '& ul, & ol': {
-        marginBottom: 6,
+        marginBottom: 16,
       },
     },
     '& a[target="_blank"]::after': {
@@ -635,7 +635,7 @@ const Root = styled('div')(
     },
     '& li': {
       // tight lists https://spec.commonmark.org/0.30/#tight
-      marginBottom: 4,
+      marginBottom: 12,
       '& pre': {
         marginTop: theme.spacing(1),
       },
@@ -643,6 +643,9 @@ const Root = styled('div')(
       '& > p': {
         marginBottom: theme.spacing(1),
       },
+      '& > ul': {
+        marginTop: '8px !important'
+      }
     },
     '& .feature-list': {
       padding: 0,
@@ -715,7 +718,7 @@ const Root = styled('div')(
         },
       },
       '& p, & ul, & ol': {
-        color: `var(--uidocs-palette-grey-200, ${darkTheme.palette.grey[200]})`,
+        color: `var(--uidocs-palette-grey-300, ${darkTheme.palette.grey[300]})`,
       },
       '& h1 code, & h2 code, & h3 code': {
         color: `var(--uidocs-palette-grey-100, ${darkTheme.palette.grey[100]})`,
@@ -738,7 +741,7 @@ const Root = styled('div')(
         },
       },
       '& td': {
-        color: `var(--uidocs-palette-text-secondary, ${darkTheme.palette.text.secondary})`,
+        color: `var(--uidocs-palette-text-tertiary, ${darkTheme.palette.text.tertiary})`,
         borderColor: `var(--uidocs-palette-divider, ${darkTheme.palette.divider})`,
         borderRightColor: `var(--uidocs-palette-grey-700, ${darkTheme.palette.grey[700]})`,
         backgroundColor: `var(--uidocs-palette-grey-700, ${darkTheme.palette.grey[900]})`,
@@ -776,7 +779,7 @@ const Root = styled('div')(
           },
         },
         '&.uiCallout-info': {
-          color: `var(--uidocs-palette-grey-50, ${darkTheme.palette.grey[50]})`,
+          color: `var(--uidocs-palette-grey-300, ${darkTheme.palette.grey[300]})`,
           backgroundColor: alpha(darkTheme.palette.secondary[800], 0.1),
           borderColor: alpha(darkTheme.palette.secondary[900], 0.5),
           '& strong': {

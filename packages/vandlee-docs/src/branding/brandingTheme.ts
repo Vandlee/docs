@@ -193,6 +193,9 @@ const systemFont = [
   '"Segoe UI Symbol"',
 ];
 
+const robotoFontFamily = '"Roboto", "Helvetica", "Arial", sans-serif';
+
+
 export const getMetaThemeColor = (mode: 'light' | 'dark') => {
   const themeColor = {
     light: grey[100],
@@ -284,7 +287,7 @@ export const getDesignTokens = (mode: 'light' | 'dark') =>
     },
     spacing: 8,
     typography: {
-      fontFamily: ['"IBM Plex Sans"', ...systemFont].join(','),
+      fontFamily: ['"Roboto"', ...systemFont].join(','),
       // Match VS Code
       // https://github.com/microsoft/vscode/blob/b38691f611d1ce3ef437c67a1b047c757b7b4e53/src/vs/editor/common/config/editorOptions.ts#L4578-L4580
       // https://github.com/microsoft/vscode/blob/d950552131d7350a45dac8b59bf179469c36c2ac/src/vs/editor/standalone/browser/standalone-tokens.css#L10
@@ -294,7 +297,7 @@ export const getDesignTokens = (mode: 'light' | 'dark') =>
         '"Droid Sans Mono"', // Linux
         'monospace', // fallback
       ].join(','),
-      fontFamilyTagline: ['"IBM Plex Sans"', ...systemFont].join(','),
+      fontFamilyTagline: ['"Roboto"', ...systemFont].join(','),
       fontFamilySystem: systemFont.join(','),
       fontWeightSemiBold: 600,
       fontWeightExtraBold: 800,
@@ -338,7 +341,7 @@ export const getDesignTokens = (mode: 'light' | 'dark') =>
       button: {
         fontFamily: ['"Quicksand"', ...systemFont].join(','),
         textTransform: 'initial',
-        fontWeight: 600,
+        fontWeight: 500,
         letterSpacing: 0,
       },
       subtitle1: {
@@ -348,16 +351,19 @@ export const getDesignTokens = (mode: 'light' | 'dark') =>
         fontWeight: 500,
       },
       body1: {
-        fontFamily: ['"Quicksand"', ...systemFont].join(','),
+        fontFamily: [robotoFontFamily].join(','),
         fontSize: defaultTheme.typography.pxToRem(16),
-        lineHeight: 24 / 16,
-        letterSpacing: 0,
+        lineHeight: 1.75,
+        letterSpacing: 0.5,
+        fontWeight: 400,
+        fontOpticalSizing: 'auto',
       },
       body2: {
-        fontFamily: ['"Quicksand"', ...systemFont].join(','),
+        fontFamily: [...robotoFontFamily].join(','),
         fontSize: defaultTheme.typography.pxToRem(14),
-        lineHeight: 21 / 14,
-        letterSpacing: 0,
+        lineHeight: 1.43,
+        letterSpacing: 0.25,
+        fontWeight: 400,
       },
       caption: {
         display: 'inline-block',

@@ -8,6 +8,7 @@ import AdInHouse from './AdInHouse';
 import AdSense from './AdSense';
 import { AdContext, adShape } from './AdManager';
 import { useAdConfig } from './AdProvider';
+import AdsTerra from './AdsTerra';
 
 function PleaseDisableAdblock() {
   const t = useTranslate();
@@ -98,9 +99,9 @@ export function Ad() {
   let children;
   let label;
   // Hide the content to google bot to avoid its indexation.
- /*  if ((typeof window !== 'undefined' && isBot()) || disableAd) {
+  if ((typeof window !== 'undefined' && isBot()) || disableAd) {
     children = <span />;
-  } else  */if (adblock) {
+  } else if (adblock) {
     if (randomAdblock < 0.2) {
       children = <PleaseDisableAdblock />;
       label = 'in-house-adblock';

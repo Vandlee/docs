@@ -38,6 +38,7 @@ import SvgPHPLogomark from 'docs/src/icons/SvgPHP';
 import SvgPythonLogomark from 'docs/src/icons/SvgPython';
 import SvgHTMLLogomark from 'docs/src/icons/SvgHTML';
 import Script from 'next/script';
+import { GoogleAdSense } from 'nextjs-google-adsense';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -243,12 +244,7 @@ function AppWrapper(props) {
         <meta name="vandlee:productId" content={productId} />
         <meta name="vandlee:productCategoryId" content={productCategoryId} />
         <meta name="google-adsense-account" content="ca-pub-8301556662915539"></meta>
-
-        <Script
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8301556662915539"
-          strategy="afterInteractive"
-          crossOrigin="anonymous"
-        />
+        <GoogleAdSense strategy='lazyOnload' publisherId='pub-8301556662915539' />
       </NextHead>
       <DocsProvider
         config={config}

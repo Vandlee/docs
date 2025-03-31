@@ -310,75 +310,70 @@ function createRender(context) {
   function render(markdown) {
     const renderer = new marked.Renderer();
     renderer.heading = function heading({ tokens, depth: level }) {
-      // Main title, no need for an anchor.
-      // It adds noises to the URL.
-      //
-      // Small title, no need for an anchor.
-      // It reduces the risk of duplicated id and it's fewer elements in the DOM.
       const headingHtml = this.parser.parseInline(tokens);
       if (level === 1 || level >= 4) {
         return `<h${level}>${headingHtml}</h${level}>`;
       }
-
-      // Remove links to avoid nested links in the TOCs
+    
       let headingText = headingHtml.replace(/<a\b[^>]*>/gi, '').replace(/<\/a>/gi, '');
-      // Remove `code` tags
-      headingText = headingText.replace(/<code\b[^>]*>/gi, '').replace(/<\/code>/gi, '');
-
-      // Standardizes the hash from the default location (en) to different locations
-      // Need spanish.md file parsed first
-      let hash;
-      if (userLanguage === 'es') {
-        hash = textToHash(headingText, headingHashes);
-      } else {
-        headingIndex += 1;
-        hash = Object.keys(headingHashes)[headingIndex];
-        if (!hash) {
-          hash = textToHash(headingText, headingHashesFallbackTranslated);
+    
+      // Detectar etiquetas al final del título (ej: `{experimental}`)
+      const tagMatch = headingText.match(/\{(.*?)\}$/);
+      let tagHtml = '';
+      let cleanHeadingText = headingText; // Variable sin la etiqueta
+    
+      if (tagMatch) {
+        const tagText = tagMatch[1].trim().toLowerCase();
+        cleanHeadingText = headingText.replace(tagMatch[0], '').trim(); // Remover la etiqueta del título
+    
+        // Mapeo de etiquetas a emojis y titles
+        const tagMap = {
+          experimental: { emoji: '🧪', title: 'Experimental' },
+          deprecated: { emoji: '⚠️', title: 'Deprecated' },
+          new: { emoji: '✨', title: 'New' },
+          beta: { emoji: '🔵', title: 'Beta' },
+        };
+    
+        if (tagMap[tagText]) {
+          tagHtml = `<span class="heading-tag" title="${tagMap[tagText].title}">${tagMap[tagText].emoji}</span>`;
         }
       }
 
-      // enable splitting of long words from function name + first arg name
-      // Closing parens are less interesting since this would only allow breaking one character earlier.
-      // Applying the same mechanism would also allow breaking of non-function signatures like "Community help (free)".
-      // To detect that we enabled breaking of open/closing parens we'd need a context-sensitive parser.
-      const displayText = headingText.replace(/([^\s]\()/g, '$1&#8203;');
-
-      // create a nested structure with 2 levels starting with level 2 e.g.
-      // [{...level2, children: [level3, level3, level3]}, level2]
+      let cleanTextForHash = cleanHeadingText.replace(/<code\b[^>]*>/gi, '').replace(/<\/code>/gi, '');
+    
+      // Generar hash limpio (sin la etiqueta `{experimental}`)
+      let hash;
+      if (userLanguage === 'es') {
+        hash = textToHash(cleanTextForHash, headingHashes);
+      } else {
+        headingIndex += 1;
+        hash = Object.keys(headingHashes)[headingIndex] || textToHash(cleanTextForHash, headingHashesFallbackTranslated);
+      }
+    
       if (level === 2) {
-        toc.push({
-          text: displayText,
-          level,
-          hash,
-          children: [],
-        });
+        toc.push({ text: cleanHeadingText, level, hash, children: [] });
       } else if (level === 3) {
         if (!toc[toc.length - 1]) {
-          throw new Error(`docs-infra: Missing parent level for: ${headingText}\n`);
+          throw new Error(`docs-infra: Missing parent level for: ${cleanHeadingText}\n`);
         }
-
-        toc[toc.length - 1].children.push({
-          text: displayText,
-          level,
-          hash,
-        });
+        toc[toc.length - 1].children.push({ text: cleanHeadingText, level, hash });
       }
 
       return [
         headingHtml.includes('<a ')
           ? [
               // Avoid breaking the anchor link button
-              `<h${level} id="${hash}">${headingHtml}`,
+              `<h${level} id="${hash}">${cleanHeadingText} ${tagHtml}`,
               `<a href="#${hash}" class="title-link-to-anchor" aria-labelledby="${hash}"><span class="anchor-icon"><svg><use xlink:href="#anchor-link-icon" /></svg></span></a>`,
             ].join('')
-          : `<h${level} id="${hash}"><a href="#${hash}" class="title-link-to-anchor">${headingHtml}<span class="anchor-icon"><svg><use xlink:href="#anchor-link-icon" /></svg></span></a>`,
+          : `<h${level} id="${hash}"><a href="#${hash}" class="title-link-to-anchor">${cleanHeadingText} ${tagHtml}<span class="anchor-icon"><svg><use xlink:href="#anchor-link-icon" /></svg></span></a>`,
         `<button title="Post a comment" class="comment-link" data-feedback-hash="${hash}">`,
         '<svg><use xlink:href="#comment-link-icon" /></svg>',
         `</button>`,
         `</h${level}>`,
       ].join('');
     };
+    
     renderer.link = function link({ href, title, tokens }) {
       const linkText = this.parser.parseInline(tokens);
       let more = '';

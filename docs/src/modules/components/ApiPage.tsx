@@ -256,16 +256,16 @@ export default function ApiPage(props: ApiPageProps) {
         ) : null}
         <Typography variant="h5" component="p" className="description" gutterBottom>
           {description}
-          {disableAd ? null : (
-            <BrandingProvider>
-              <AdGuest>
-                <Ad />
-              </AdGuest>
-            </BrandingProvider>
-          )}
         </Typography>
+        
+        {/* {disableAd ? null : (
+          <BrandingProvider>
+            <AdGuest>
+              <Ad />
+            </AdGuest>
+          </BrandingProvider>
+        )} */}
         <Heading hash="demos" />
-        Alert Success
         <Alert severity="success" icon={<VerifiedRoundedIcon fontSize="small" />}>
           <span
             dangerouslySetInnerHTML={{
