@@ -61,6 +61,10 @@ export interface VandleePage {
    * Indicates if the pages are regarding some deprecated API.
    */
   deprecated?: boolean;
+  /**
+   * Indicates if the page has new data.
+   */
+  updated?: boolean;
 }
 
 export interface OrderedMuiPage extends VandleePage {

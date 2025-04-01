@@ -107,3 +107,77 @@ Cuánto del referente enviar al seguir el enlace.
 ### `rel`
 
 La relación de la URL enlazada como tipos de enlace separados por espacios.
+
+### `target`
+
+Dónde mostrar la URL enlazada, como nombre para un _contexto de navegación_ (una pestaña, ventana o `<iframe>`). Las siguientes palabras clave tienen significados especiales para dónde cargar la URL:
+
+- `_self`: El contexto de navegación actual. (Predeterminado)
+- `_blank`: Suele ser una pestaña nueva, pero los usuarios pueden configurar los navegadores para que abran una ventana nueva en su lugar.
+- `_parent`: El contexto de navegación padre del actual. Si no tiene padre, se comporta como `_self`.
+- `_top`: El contexto de navegación más alto. Para ser específicos, esto significa el contexto «más alto» que es un antepasado del actual. Si no hay ancestros, se comporta como `_self`.
+- `_unfencedTop`: Permite a los marcos cercados incrustados navegar por el marco de nivel superior (es decir, atravesar más allá de la raíz del marco cercado, a diferencia de otros destinos reservados). Ten en cuenta que la navegación seguirá teniendo éxito si se utiliza fuera del contexto de un marco vallado, pero no actuará como una palabra clave reservada.
+
+:::info
+Establecer `target="_blank"` en elementos `<a>` proporciona implícitamente el mismo comportamiento `rel` que establecer `rel="noopener"`, que no establece `window.open`.
+:::
+
+### `type`
+
+Sugiere el formato de la URL enlazada con un tipo MIME. No tiene funcionalidad integrada.
+
+## Atributos obsoletos {deprecated}
+
+Obsoleto. No debe utilizarse en sitios web nuevos.
+
+### `charset` {deprecated}
+
+Indica la codificación de caracteres de la URL enlazada.
+
+:::info
+Este atributo está obsoleto y **no debe ser utilizado por los autores**. Utilice el encabezado HTTP `Content-Type` en la URL enlazada.
+:::
+
+### `coords` {deprecated}
+
+Usado con [el atributo `shape`](#shape). Una lista de coordenadas separadas por comas.
+
+### `name` {deprecated}
+
+Era necesario para definir una posible ubicación de destino en una página. En HTML 4.01, tanto id como name podían utilizarse en `<a>`, siempre que tuvieran valores idénticos.
+
+:::info
+Usa el atributo global `id` en su lugar.
+:::
+
+### `rev` {deprecated}
+
+Especifica un enlace inverso; lo contrario del atributo rel. Desaprobado por ser muy confuso.
+
+### `shape` {deprecated}
+
+La forma de la región del hipervínculo en un mapa de imagen.
+
+:::info
+Utilice en su lugar el elemento `<area>` para los mapas de imágenes.
+:::
+
+## Accesibilidad
+
+### Texto de enlace fuerte
+
+El contenido de un enlace debe indicar a dónde va, incluso fuera de contexto.
+
+#### Texto inaccesible, enlace débil
+
+Un error tristemente común es enlazar únicamente las palabras «haga clic aquí» o «aquí»:
+
+{{"demo": "es/Weak.js", "bg": "error", "hideToolbar": true}}
+
+#### Texto de enlace fuerte
+
+Por suerte, esto es fácil de arreglar y, de hecho, es más corto que la versión inaccesible.
+
+{{"demo": "es/Strong.js", "bg": "success", "hideToolbar": true}}
+
+El software de apoyo dispone de atajos para listar todos los enlaces de una página. Sin embargo, un texto de enlace fuerte beneficia a todos los usuarios: el atajo «listar todos los enlaces» emula la forma en que los usuarios videntes escanean rápidamente las páginas.

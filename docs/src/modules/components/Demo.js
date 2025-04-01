@@ -395,6 +395,32 @@ const DemoRootUI = styled('div', {
     },
     {
       props: {
+        bg: 'success',
+      },
+      style: {
+        padding: theme.spacing(3),
+        backgroundColor: alpha(theme.palette.success[50], 1),
+        border: `1px solid ${(theme.vars || theme).palette.divider}`,
+        ...theme.applyDarkStyles({
+          backgroundColor: alpha(theme.palette.success[400], .05),
+        }),
+      }
+    },
+    {
+      props: {
+        bg: 'error',
+      },
+      style: {
+        padding: theme.spacing(3),
+        backgroundColor: alpha(theme.palette.error[50], 1),
+        border: `1px solid ${(theme.vars || theme).palette.divider}`,
+        ...theme.applyDarkStyles({
+          backgroundColor: alpha(theme.palette.error[400], .05),
+        }),
+      }
+    },
+    {
+      props: {
         bg: true,
       },
       style: {

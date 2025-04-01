@@ -286,6 +286,7 @@ function reduceChildRoutes(context) {
                 }}
                 legacy={page.legacy}
                 newFeature={page.newFeature}
+                updated={page.updated}
                 planned={page.planned}
                 unstable={page.unstable}
                 beta={page.beta}
@@ -321,6 +322,7 @@ function reduceChildRoutes(context) {
                 }}
                 legacy={page.legacy}
                 newFeature={page.newFeature}
+                updated={page.updated}
                 planned={page.planned}
                 unstable={page.unstable}
                 beta={page.beta}
