@@ -200,4 +200,4 @@ Las personas con problemas de visión, que navegan con la ayuda de la tecnologí
 
 ### Enlace que abre una nueva pestaña/ventana
 
-{{"demo": "es/newTab.html"}}
+{{"demo": "es/NewTab.html"}}
