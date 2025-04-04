@@ -213,7 +213,6 @@ const IframeLayout = ({ editorCode }) => {
     }
   };
 
-  // Actualiza el contenido del iframe sin recrearlo
   React.useEffect(() => {
     const doc = frameRef.current?.contentDocument;
     if (!doc) return;
@@ -223,11 +222,20 @@ const IframeLayout = ({ editorCode }) => {
     applyStyles(); // Reaplicar estilos en cada actualización
   }, [editorCode.value, theme, mode]);
 
+  // Actualiza el contenido del iframe sin recrearlo
+  React.useEffect(() => {
+    const doc = frameRef.current?.contentDocument;
+    if (doc && editorCode.value === editorCode.initialEditorCode) {
+      doc.body.innerHTML = editorCode.initialEditorCode;
+      applyStyles();
+    }
+  }, [editorCode.initialEditorCode]);
+
   return <Iframe ref={frameRef} onLoad={applyStyles} />;
 };
 
 
-function useDemoElement({ demoData, editorCode, setDebouncedError, liveDemoActive }) {
+function useDemoElement({ demoData, demoKey, editorCode, setDebouncedError, liveDemoActive }) {
   const debouncedSetError = React.useMemo(
     () => debounce(setDebouncedError, 300),
     [setDebouncedError],
@@ -261,7 +269,7 @@ function useDemoElement({ demoData, editorCode, setDebouncedError, liveDemoActiv
   );
 
   if (demoData.codeVariant === CODE_VARIANTS.HTML) {
-    return <IframeLayout editorCode={editorCode} />
+    return <IframeLayout key={demoKey} editorCode={editorCode} />
   }
 
   // No need for a live environment if the code matches with the component rendered server-side.
@@ -639,6 +647,7 @@ export default function Demo(props) {
 
   const demoElement = useDemoElement({
     demoData,
+    demoKey,
     editorCode,
     setDebouncedError,
     liveDemoActive,

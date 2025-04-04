@@ -113,8 +113,8 @@ export function Ad() {
     children = <AdInHouse ad={inHouseAds[Math.floor(inHouseAds.length * randomInHouse)]} />;
     label = 'in-house-carbon';
   } else {
-    children = <AdSense />;
-    label = 'adsense';
+    children = <AdsTerra />;
+    label = 'adsterra';
   }
 
   const ad = React.useContext(AdContext);

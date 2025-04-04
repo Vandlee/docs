@@ -40,6 +40,10 @@ export interface VandleePage {
    */
   title?: string;
   /**
+   * Miniheader to display
+   */
+  miniheader?: string;
+  /**
    * Indicates if the feature has been recently released.
    * @default false
    */

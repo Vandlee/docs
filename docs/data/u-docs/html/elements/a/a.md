@@ -77,6 +77,8 @@ La URL a la que apunta el hipervínculo. Los enlaces no están restrigidos a URL
 - Código ejecutable con URL `javascript:`
 - Aunque los navegadores web pueden no admitir otros esquemas de URL, los sitios web pueden hacerlo con `registerProtocolHandler()`.
 
+{{"demo": "es/Href.html"}}
+
 Además, otras funciones de URL pueden localizar partes específicas del recurso, entre ellas:
 
 - Secciones de una página con fragmentos de documentos
@@ -181,3 +183,21 @@ Por suerte, esto es fácil de arreglar y, de hecho, es más corto que la versió
 {{"demo": "es/Strong.js", "bg": "success", "hideToolbar": true}}
 
 El software de apoyo dispone de atajos para listar todos los enlaces de una página. Sin embargo, un texto de enlace fuerte beneficia a todos los usuarios: el atajo «listar todos los enlaces» emula la forma en que los usuarios videntes escanean rápidamente las páginas.
+
+## Eventos onclick
+
+A menudo se abusa de los elementos de anclaje (enlaces) como falsos botones estableciendo su `href` a `#` o `javascript:void(0)` para eviter que la página se actualice, y luego escuchando sus eventos de clic.
+
+Estos valores `href` falsos provocan comportamientos inesperados al copiar/arrastrar enlaces, abrir enlaces en una nueva pestaña/ventana, marcar como favoritos o cuando JavaScript se está cargando, tiene errores o está desactivado. También transmiten una semántica incorrecta a las tecnologías de asistencia, como los lectores de pantalla.
+
+En su lugar, utilice `<button> (Botón)`. En general, sólo debe utilizar un hipervínculo para navegar a una URL real.
+
+## Enlaces externos y enlaces a recursos no HTML
+
+Los enlaces que se abren en una nueva pestaña/ventana mediante `target="_blank"`, o los que apuntan a un archivo de descarga deben indicar qué ocurrirá cuando se siga el enlace.
+
+Las personas con problemas de visión, que navegan con la ayuda de la tecnología de lectura de pantalla o con problemas cognitivos pueden sentirse confusas cuando se abre inesperadamente una nueva pestaña, ventana o aplicación. Es posible que el software de lectura de pantalla más antiguo ni siquiera anuncie el comportamiento.
+
+### Enlace que abre una nueva pestaña/ventana
+
+{{"demo": "es/newTab.html"}}

@@ -13,7 +13,14 @@ const pages: VandleePage[] = [
         pathname: '/u-docs/html/element-',
         title: "Elements",
         children: [
-            { pathname: '/u-docs/html/element-a', updated: true }
+            { 
+                pathname: '/u-docs/html/element-a-group',
+                subheader: 'html-a',
+                updated: true,
+                children: [
+                    { pathname: '/u-docs/html/element-a' },
+                ]
+            },
         ]
     }
 ]

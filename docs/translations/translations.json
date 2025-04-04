@@ -53,7 +53,9 @@
     "/u-docs/html/getting-started": "Introducción",
     "/u-docs/html/getting-started/basic": "Conceptos básicos",
     "/u-docs/html/element-": "Elementos",
-    "/u-docs/html/element-a": "<a> - Enlace",
+    "html-a": "<a> - Enlace",
+    "/u-docs/html/element-a": "Conceptos básicos",
+    "/u-docs/html/element-a-attributes": "Atributos",
     "/u-docs/javascript/grupo-ejemplo": "Grupo de ejemplo"
   }
 }

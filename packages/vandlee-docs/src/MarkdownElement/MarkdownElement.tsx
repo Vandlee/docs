@@ -144,7 +144,7 @@ const Root = styled('div')(
     '& a': {
       // Style taken from the Link component
       color: `var(--uidocs-palette-primary-600, ${lightTheme.palette.primary[600]})`,
-      fontWeight: theme.typography.fontWeightMedium,
+      fontWeight: theme.typography.fontWeightBold,
       textDecoration: 'underline',
       textDecorationColor: alpha(lightTheme.palette.primary.main, 0.2),
       '&:hover': {
@@ -152,7 +152,8 @@ const Root = styled('div')(
       },
     },
     '& a code': {
-      color: darken(lightTheme.palette.primary.main, 0.2),
+      color: darken(lightTheme.palette.primary.main, 0.5),
+      fontWeight: theme.typography.fontWeightBold,
     },
     '& h1, & h2, & h3, & h4': {
       display: 'flex',
@@ -704,7 +705,7 @@ const Root = styled('div')(
         color: `var(--uidocs-palette-primary-300, ${darkTheme.palette.primary[200]})`,
       },
       '& a code': {
-        color: `var(--uidocs-palette-primary-light, ${darkTheme.palette.primary.light})`,
+        color: `var(--uidocs-palette-primary-light, ${darkTheme.palette.primary[200]})`,
       },
       '& h1, & h2, & h3, & h4, & h5': {
         color: `var(--uidocs-palette-grey-50, ${darkTheme.palette.grey[50]})`,
