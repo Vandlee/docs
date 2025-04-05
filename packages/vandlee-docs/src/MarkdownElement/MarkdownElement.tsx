@@ -107,12 +107,14 @@ const Root = styled('div')(
     '& p': {
       marginTop: 0,
       marginBottom: 16,
+      textIndent: '1.75rem',
       color: `var(--uidocs-palette-grey-900, ${lightTheme.palette.grey[900]})`,
     },
     '& ul, & ol': {
       paddingLeft: 30,
       marginTop: 0,
       marginBottom: 16,
+      marginLeft: 16,
       '& ul, & ol': {
         marginBottom: 16,
       },
@@ -364,6 +366,7 @@ const Root = styled('div')(
       '& p': {
         fontWeight: 400,
         marginBottom: '8px',
+        textIndent: '0 !important',
         '& > p:last-child, & > ul:last-child': {
           // Avoid margin on last child
           marginBottom: 0,
@@ -692,8 +695,8 @@ const Root = styled('div')(
       '& :not(pre) > code': {
         // inline code block
         color: `var(--uidocs-palette-text-primary, ${darkTheme.palette.text.primary})`,
-        borderColor: alpha(darkTheme.palette.primaryDark[500], 0.6),
-        backgroundColor: `var(--uidocs-palette-grey-900, ${darkTheme.palette.grey[700]})`,
+        borderColor: alpha(darkTheme.palette.primaryDark[500], .3),
+        backgroundColor: `var(--uidocs-palette-grey-800, ${alpha(darkTheme.palette.primary[800], .5)})`,
       },
       '& strong': {
         color: `var(--uidocs-palette-grey-200, ${darkTheme.palette.grey[200]})`,
@@ -702,7 +705,8 @@ const Root = styled('div')(
         backgroundColor: `var(--uidocs-palette-divider, ${darkTheme.palette.divider})`,
       },
       '& a': {
-        color: `var(--uidocs-palette-primary-300, ${darkTheme.palette.primary[200]})`,
+        textDecoration: 'underline',
+        color: `var(--uidocs-palette-primary-300, ${darkTheme.palette.secondary[200]})`,
       },
       '& a code': {
         color: `var(--uidocs-palette-primary-light, ${darkTheme.palette.primary[200]})`,
@@ -719,10 +723,10 @@ const Root = styled('div')(
         },
       },
       '& p, & ul, & ol': {
-        color: `var(--uidocs-palette-grey-300, ${darkTheme.palette.grey[300]})`,
+        color: `var(--uidocs-palette-grey-300, ${darkTheme.palette.grey[400]})`,
       },
       '& h1 code, & h2 code, & h3 code': {
-        color: `var(--uidocs-palette-grey-100, ${darkTheme.palette.grey[100]})`,
+        color: `var(--uidocs-palette-grey-100, ${darkTheme.palette.grey[200]})`,
       },
       '& .table': { 
         borderColor: `var(--uidocs-palette-divider, ${darkTheme.palette.divider})`,

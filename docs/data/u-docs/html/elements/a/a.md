@@ -50,40 +50,19 @@ Los elementos `<a>` no pueden utilizarse como activadores de atribución, sólo 
 
 ### `download`
 
-Hace que el navegador trate la URL enlazada como una descarga. Puede utilizarse con o sin un valor de nombre de archiv:
+Hace que el navegador trate la URL enlazada como una descarga.
 
-- Sin un valor, el navegador sugerirá un nombre de archivo/extensión, generado a partir de diversas fuentes:
-    - La cabecera HTTP `Content-Disposition`
-    - El segmento final de la ruta URL
-    - El tipo de medio (de la cabecera `Content-Type`, el inicio de una `data:` URL, o Blob.type para una `blob:` URL)
-- `filename`: la definición de un valor lo sugiere como nombre de archivo. Los caracteres `/` y `\` se convierten en guiones bajos (`_`). Los sistemas de archivos pueden prohibir otros caracteres en los nombres de archivo, por lo que los navegadores ajustarán el nombre sugerido si es necesario.
+Visita [atributo `download`](/u-docs/html/element-a-attributes/download/) para más información.
 
-
-:::info
-- `download` sólo funciona para URLs del mismo origen, o los esquemas `blob:` y `data:`.
-- La forma en que los navegadores tratan las descargas varía según el navegador, la configuración del usuario y otros factores. Es posible que se pregunte al usuario antes de iniciar una descarga, que el archivo se guarde automáticamente o que se abra automáticamente, ya sea en una aplicación externa o en el propio navegador.
-- Si la cabecera `Content-Disposition` tiene información diferente del atributo `download`, el comportamiento resultante puede diferir:
-    - Si la cabecera especifica un nombre de archivo, tiene prioridad sobre un nombre de archivo especificado en el atributo `download`.
-    - Si la cabecera especifica una disposición de en línea (`inline`), Chrome y Firefox dan prioridad al atributo y lo tratan como una descarga. Las versiones antiguas de Firefox (anteriores a la 82) dan prioridad a la cabecera y mostrarán el contenido en línea.
-:::
+{{"demo": "../a-attributes/download/es/Download.html" }}
 
 ### `href`
 
-La URL a la que apunta el hipervínculo. Los enlaces no están restrigidos a URL basadas en HTTP, pueden utilizar cualquier esquema de URL soportado por los navegadores:
+La URL a la que apunta el hipervínculo. Los enlaces no están restrigidos a URL basadas en HTTP, pueden utilizar cualquier esquema de URL soportado por los navegadores.
 
-- Números de telefono con URL `tel:`
-- Direcciones de correo electrónico con URL `mailto:`
-- Mensajes de texto SMS con URL `sms:`
-- Código ejecutable con URL `javascript:`
-- Aunque los navegadores web pueden no admitir otros esquemas de URL, los sitios web pueden hacerlo con `registerProtocolHandler()`.
+Visita [atributo `href`](/u-docs/html/element-a-attributes/href/) para más información.
 
 {{"demo": "es/Href.html"}}
-
-Además, otras funciones de URL pueden localizar partes específicas del recurso, entre ellas:
-
-- Secciones de una página con fragmentos de documentos
-- Partes específicas de texto con fragmentos de texto
-- Partes de archivos multimedia con fragmentos multimedia
 
 ### `hreflang`
 
@@ -201,3 +180,9 @@ Las personas con problemas de visión, que navegan con la ayuda de la tecnologí
 ### Enlace que abre una nueva pestaña/ventana
 
 {{"demo": "es/NewTab.html"}}
+
+## Seguridad y Privacidad
+
+Los elementos `<a>` pueden tener consecuencias para la seguridad y la privacidad de los usuarios. Para más información, consulte [Referer header: privacy and security concerns (Inglés)](https://developer.mozilla.org/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns).
+
+El uso de `target="_blank"` sin `rel="noreferrer"` y `rel="noopener"` hace que el sitio web sea vulnerable a ataques de explotación de la API window.opener, aunque tenga en cuenta que, en las versiones más recientes del navegador, establecer `target="_blank"` proporciona implícitamente la misma protección que establecer `rel="noopener"`. Consulte la compatibilidad de navegadores para obtener más información.

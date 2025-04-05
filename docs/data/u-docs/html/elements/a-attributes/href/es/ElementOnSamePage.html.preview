@@ -1,0 +1,8 @@
+<!-- El elemento <a> enlaza con la sección siguiente -->
+<p><a href="#seccion_mas_abajo">Saltar al siguiente título</a></p>
+
+<!-- Elemento para separar el enlace del encabezado -->
+<br />
+
+<!-- Encabezamiento al que enlazar -->
+<h2 id="seccion_mas_abajo">Sección más abajo</h2>

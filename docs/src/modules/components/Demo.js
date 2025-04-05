@@ -172,7 +172,7 @@ const Iframe = styled('iframe')(({ theme }) => ({
 const IframeLayout = ({ editorCode }) => {
   const frameRef = React.useRef(null);
   const theme = useTheme();
-  const { mode } = useColorSchemeShim();
+  const { mode, systemMode } = useColorSchemeShim();
 
   const applyStyles = () => {
     const doc = frameRef.current?.contentDocument;
@@ -185,7 +185,7 @@ const IframeLayout = ({ editorCode }) => {
     if (style) {
       style.innerHTML = `
         html {
-          color-scheme: ${mode}
+          color-scheme: ${mode === 'system' ? systemMode : mode}
         }
         body {
           background-color: ${theme.palette.background.default};
@@ -200,7 +200,7 @@ const IframeLayout = ({ editorCode }) => {
       style.id = 'injected-styles';
       style.innerHTML = `
         html {
-          color-scheme: ${mode}
+          color-scheme: ${mode === 'system' ? systemMode : mode}
         }
         body {
           background-color: ${theme.palette.background.default};
@@ -220,7 +220,7 @@ const IframeLayout = ({ editorCode }) => {
     doc.body.innerHTML = editorCode.value; // Solo actualiza el contenido, no el iframe
 
     applyStyles(); // Reaplicar estilos en cada actualización
-  }, [editorCode.value, theme, mode]);
+  }, [editorCode.value, theme, mode, systemMode]);
 
   // Actualiza el contenido del iframe sin recrearlo
   React.useEffect(() => {

@@ -268,7 +268,7 @@ export function useChangeTheme() {
 
 // TODO: remove once all pages support css vars and replace call sites with useColorScheme()
 export function useColorSchemeShim() {
-  const [mode, setMode] = useLocalStorageState('vandlee-mode', 'system');
+  const [mode, setMode] = useLocalStorageState('u-ui-mode', 'system');
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)', { noSsr: true });
   const systemMode = prefersDarkMode ? 'dark' : 'light';
 

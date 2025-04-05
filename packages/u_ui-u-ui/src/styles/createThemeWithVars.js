@@ -456,8 +456,6 @@ export default function createThemeWithVars(options = {}, ...args) {
           // Text colors: text.primary, text.secondary
           setColorChannel(palette[color], 'primary');
           setColorChannel(palette[color], 'secondary');
-          setColorChannel(palette[color], 'contrast');
-          setColorChannel(palette[color], 'neutral');
         }
 
         if (color === 'action') {

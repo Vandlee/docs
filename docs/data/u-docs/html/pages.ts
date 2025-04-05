@@ -19,6 +19,12 @@ const pages: VandleePage[] = [
                 updated: true,
                 children: [
                     { pathname: '/u-docs/html/element-a' },
+                    { 
+                        pathname: '/u-docs/html/element-a-attributes',
+                        children: [
+                        { pathname: '/u-docs/html/element-a-attributes/download' },
+                        { pathname: '/u-docs/html/element-a-attributes/href' }
+                    ]}
                 ]
             },
         ]

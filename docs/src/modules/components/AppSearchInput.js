@@ -182,6 +182,7 @@ const PageThread = (props) => {
 
 export default function AppSearchInput() {
     const lang = useUserLanguage();
+    const inputRef = React.useRef(null);
     const [query, setQuery] = React.useState("");
     const translationsData = useTranslations();
 
@@ -225,6 +226,14 @@ export default function AppSearchInput() {
         });
     }, [flattenedPages, inputValue]);
 
+    React.useEffect(() => {
+        setTimeout(() => {
+            if (open && inputRef.current) {
+                inputRef.current.focus();
+            }
+        }, 100)
+    }, [open])
+
     return (
         <React.Fragment>
             <Button onClick={handleOpen} sx={{ minWidth: 175 }} endIcon={<Search />} variant="outlined" size="small">
@@ -236,6 +245,8 @@ export default function AppSearchInput() {
                 open={open}
                 onClose={handleClose}
                 closeAfterTransition
+                disableAutoFocus={false}
+                disableEnforceFocus={false}
                 slots={{ backdrop: Backdrop }}
                 slotProps={{
                     backdrop: {
@@ -259,7 +270,12 @@ export default function AppSearchInput() {
                                     outline: 0,
                                     boxSizing: 'border-box',
                                     colorScheme: 'dark',
+                                    ':focus': {
+                                        outline: '2px solid #FFF'
+                                    }
                                 }} 
+                                autoFocus
+                                ref={inputRef}
                                 type="search" 
                                 value={inputValue}
                                 onChange={handleInputChange}

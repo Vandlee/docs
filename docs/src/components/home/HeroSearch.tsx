@@ -37,7 +37,7 @@ export default function HeroSearch() {
     const [inputValue, setInputValue] = React.useState('');
     const [filteredProducts, setFilteredProducts] = React.useState<typeof products>([]);
 
-    const { mode } = useColorSchemeShim();
+    const { mode, systemMode } = useColorSchemeShim();
 
     const normalizeText = (text: string | undefined | null) => (text ?? '').toLowerCase().replace(/\s+/g, '-');
 
@@ -60,8 +60,16 @@ export default function HeroSearch() {
         setAnchorEl(query.length > 0 ? boxRef.current : null);
     };
     
+    const reverseTheme = (theme: string | null) => {
+        if (theme === 'dark') {
+            return 'light';
+        }
+
+        return 'dark';
+    }
+
     return (
-        <ThemeProvider theme={(outerTheme) => getTheme(mode === 'dark' ? 'light' : 'dark', outerTheme)}>
+        <ThemeProvider theme={(outerTheme) => getTheme(mode === 'system' ? reverseTheme(systemMode) : reverseTheme(mode), outerTheme)}>
             <Box
                 sx={{
                     maxWidth: 600,
