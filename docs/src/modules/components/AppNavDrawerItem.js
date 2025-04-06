@@ -85,30 +85,30 @@ const Item = styled(
                     fontWeight: theme.typography.fontWeightSemiBold,
                     fontSize: theme.typography.pxToRem(11),
                     '&::before': {
-                    content: '""',
-                    display: 'block',
-                    position: 'absolute',
-                    zIndex: 1,
-                    left: 9.5,
-                    height: '55%',
-                    top: 16,
-                    width: 1,
-                    opacity: 0,
-                    background: (theme.vars || theme).palette.grey[100],
+                        content: '""',
+                        display: 'block',
+                        position: 'absolute',
+                        zIndex: 1,
+                        left: 9.5,
+                        height: '55%',
+                        top: 16,
+                        width: 1,
+                        opacity: 0,
+                        background: (theme.vars || theme).palette.grey[100],
                     },
                     '&::after': {
-                    content: '""',
-                    display: 'block',
-                    position: 'absolute',
-                    zIndex: 5,
-                    left: 6,
-                    height: 8,
-                    width: 8,
-                    borderRadius: 3,
-                    opacity: 0,
-                    background: alpha(theme.palette.grey[50], 0.75),
-                    border: '1px solid',
-                    borderColor: (theme.vars || theme).palette.grey[200],
+                        content: '""',
+                        display: 'block',
+                        position: 'absolute',
+                        zIndex: 5,
+                        left: 6,
+                        height: 8,
+                        width: 8,
+                        borderRadius: 3,
+                        opacity: 0,
+                        background: alpha(theme.palette.grey[50], 0.75),
+                        border: '1px solid',
+                        borderColor: (theme.vars || theme).palette.grey[200],
                     },
                 },
                 },
@@ -230,7 +230,7 @@ const ItemButtonIcon = styled(KeyboardArrowRightRounded, {
     ],
 });
 
-const StyledLi = styled('li', { shouldForwardProp: (prop) => prop !== 'depth' })(({ theme }) => ({
+const StyledLi = styled('li', { shouldForwardProp: (prop) => prop !== 'depth'})(({ theme }) => ({
     display: 'block',
     variants: [
         {
@@ -247,6 +247,18 @@ const StyledLi = styled('li', { shouldForwardProp: (prop) => prop !== 'depth' })
                 padding: 0,
             },
         },
+        {
+            props: {
+                subheader: true
+            },
+            style: {
+                background: theme.palette.background.paper,
+                borderRadius: theme.shape.borderRadius,
+                marginBottom: 8,
+                paddingTop: theme.spacing(.25),
+                paddingBottom: theme.spacing(1)
+            }
+        }
     ],
 }));
 
@@ -350,7 +362,7 @@ export default function AppNavDrawerItem(props) {
     ) : null;
 
     return (
-        <StyledLi {...other} depth={depth}>
+        <StyledLi {...other} subheader={subheader} depth={depth}>
             {/* Fix overloading with prefetch={false}, only prefetch on hover */}
             <Item
                 component={subheader ? DeadLink : Link}

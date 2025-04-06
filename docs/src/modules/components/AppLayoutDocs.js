@@ -18,6 +18,7 @@ import AppLayoutDocsFooter from 'docs/src/modules/components/AppLayoutDocsFooter
 import getProductInfoFromUrl from 'docs/src/modules/utils/getProductInfoFromUrl';
 import { convertProductIdToName } from 'docs/src/modules/components/AppSearch';
 import AppContainer from 'docs/src/modules/components/AppContainer';
+import { alpha, Box } from '@u_ui/u-ui';
 
 const TOC_WIDTH = 242;
 
@@ -50,6 +51,77 @@ const Main = styled('main', {
   ],
 }));
 
+const SnackTitleBorder = styled(Box)(({ theme }) => ({
+  overflowX: 'hidden',
+  top: -11,
+  borderBottomStyle: 'solid',
+  borderBottomColor: theme.palette.divider,
+  height: 12,
+  borderBottomWidth: 0.5,
+  width: '100%',
+  overflowY: 'hidden',
+  left: 0,
+  position: 'absolute',
+  zIndex: 1,
+  '& .uiBox-root': {
+      width: '100%',
+      top: '100%',
+      height: '100%',
+      position: 'relative',
+      boxShadow: `0 0 12px 0 ${alpha(theme.palette.divider, .1)}`
+  }
+}))
+
+const SnackTitleBorderRadius = styled(Box, {
+  shouldForwardProp: (prop) => prop !== 'direction'
+})(({ theme, direction = 'rtl' }) => ({
+  height: 36,
+  overflowX: 'hidden',
+  top: -13,
+  width: 36,
+  overflowY: 'hidden',
+  zIndex: 1,
+  left: direction === 'rtl' ?  -12 :'unset',
+  right: direction === 'ltr' ? -12 : 'unset',
+  position: 'absolute',
+  zIndex: 3,
+  '& .uiBox-root': {
+      borderTopWidth: .5,
+      height: 48,
+      width: 48,
+      top: 12,
+      borderBottomStyle: 'solid',
+      borderBottomColor: theme.palette.divider,
+      borderBottomWidth: .5,
+      borderTopColor: theme.palette.divider,
+      borderTopStyle: 'solid',
+      borderRightStyle: 'solid',
+      left: direction === 'rtl' ? 12 : 'unset',
+      borderTopRightRadius: theme.shape.borderRadius * 2,
+      borderRightWidth: direction === 'ltr' ? .5 : 'unset',
+      borderBottomLeftRadius: theme.shape.borderRadius * 2,
+      borderRightColor: theme.palette.divider,
+      borderLeftWidth: .5,
+      borderLeftStyle: 'solid',
+      borderTopLeftRadius: theme.shape.borderRadius * 2,
+      boxShadow: `0 0 12px 0 ${alpha(theme.palette.divider, .05)}, 0 0 0 8px ${theme.palette.background.default}`,
+      borderBottomRightRadius: theme.shape.borderRadius * 2,
+      borderLeftColor: theme.palette.divider,
+      position: 'absolute',
+      right: direction === 'ltr' ? 12 : 'unset',
+  }
+}))
+
+const DefaultSnackTitleBorder = () => {
+  return (
+      <Box sx={{ position: 'sticky', top: 'var(--uidocs-header-height)', zIndex: 1 }}>
+          <SnackTitleBorderRadius><Box/></SnackTitleBorderRadius>
+          <SnackTitleBorder><Box /></SnackTitleBorder>
+          <SnackTitleBorderRadius direction='ltr'><Box/></SnackTitleBorderRadius>
+      </Box>
+  )
+}
+
 const StyledAppContainer = styled(AppContainer, {
   shouldForwardProp: (prop) => prop !== 'disableAd' && prop !== 'hasTabs' && prop !== 'disableToc',
 })(({ theme }) => {
@@ -58,9 +130,13 @@ const StyledAppContainer = styled(AppContainer, {
     // By default, a grid item cannot be smaller than the size of its content.
     // https://stackoverflow.com/questions/43311943/prevent-content-from-expanding-grid-items
     minWidth: 0,
+    marginTop: 'var(--uidocs-header-height)',
+    borderTop: 0,
     [theme.breakpoints.up('lg')]: {
-      paddingLeft: '60px',
-      paddingRight: '60px',
+      '> .content-container': {
+        paddingLeft: '60px',
+        paddingRight: '60px',
+      },
     },
     variants: [
       {
@@ -158,7 +234,18 @@ export default function AppLayoutDocs(props) {
         <Head title={`${title} - ${productName}`} description={description} card={card} />
         <Main disableToc={disableToc}>
           <StyledAppContainer disableAd={disableAd} hasTabs={hasTabs} disableToc={disableToc}>
-            {children}
+            <DefaultSnackTitleBorder />
+            <Box 
+              className="content-container" 
+              sx={(theme) => ({
+                backgroundColor: theme.palette.background.paper,
+                border: '1px solid',
+                borderColor: theme.palette.divider,
+                borderTop: 0
+              })}
+            >
+              {children}
+            </Box>
             <AppLayoutDocsFooter tableOfContents={toc} location={location} />
           </StyledAppContainer>
           {disableToc ? null : <AppTableOfContents toc={toc} />}

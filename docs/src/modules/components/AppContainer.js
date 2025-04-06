@@ -4,14 +4,21 @@ import Container from '@u_ui/u-ui/Container';
 
 const StyledAppContainer = styled(Container)(({ theme }) => {
   return {
-    paddingTop: `calc(var(--uidocs-header-height) + ${theme.spacing(4)})`,
     // We're mostly hosting text content so max-width by px does not make sense considering font-size is system-adjustable.
     // 105ch ≈ 930px
     fontFamily: 'Arial',
     maxWidth: '105ch',
+    padding: '0 !important',
+    '> .content-container': {
+      paddingTop: theme.spacing(3),
+      paddingLeft: theme.spacing(3),
+      paddingRight: theme.spacing(3),
+    },
     [theme.breakpoints.up('lg')]: {
-      paddingLeft: theme.spacing(8),
-      paddingRight: theme.spacing(8),
+      '> .content-container': {
+        paddingLeft: theme.spacing(8),
+        paddingRight: theme.spacing(8),
+      },
     },
   };
 });

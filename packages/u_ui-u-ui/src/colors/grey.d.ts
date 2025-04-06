@@ -37,7 +37,7 @@ declare const grey: {
   /**
    * Preview: ![grey 800](https://mui.com/static/colors-preview/grey-800-24x24.png)
    */
-  800: 'hsl(0, 0%, 5%)';
+  800: 'hsl(0, 0%, 7%)';
   /**
    * Preview: ![grey 900](https://mui.com/static/colors-preview/grey-900-24x24.png)
    */

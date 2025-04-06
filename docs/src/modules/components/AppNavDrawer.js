@@ -219,8 +219,6 @@ const ToolbarDiv = styled('div')(({ theme }) => ({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    borderBottom: '1px solid',
-    borderColor: (theme.vars || theme).palette.divider,
 }));
 
 const StyledDrawer = styled(Drawer)(({ theme }) => ({
@@ -445,11 +443,12 @@ export default function AppNavDrawer(props) {
                         overflowY: 'auto',
                         flexGrow: 1,
                         ...(swipeableDrawer
-                        ? {}
-                        : {
+                        ? {
                             borderRight: '1px solid',
                             borderColor: 'divider',
-                            }),
+                          }
+                        : {}
+                        ),
                     }}
                 >
                     <PersistScroll slot="side" enabled>

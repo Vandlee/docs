@@ -89,12 +89,11 @@ export default function HeroSearch() {
                     style={{
                         flex: 1,
                         fontSize: '1rem',
-                        color: mode === 'dark' ? '#000' : '#FFF',
                         background: 'transparent',
                         border: 0,
                         outline: 0,
                         boxSizing: 'border-box',
-                        colorScheme: mode === 'dark' ? 'light' : 'dark'
+                        colorScheme: mode === 'system' ? reverseTheme(systemMode) : reverseTheme(mode),
                     }} 
                     type="search" 
                     value={inputValue}

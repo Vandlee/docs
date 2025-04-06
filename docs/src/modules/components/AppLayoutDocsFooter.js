@@ -429,7 +429,7 @@ export default function AppLayoutDocsFooter(props) {
                         {prevPage !== null ? (
                         <Button
                             size="small"
-                            variant="text"
+                            variant="contained"
                             component={Link}
                             noLinkStyle
                             prefetch={false}
@@ -445,6 +445,7 @@ export default function AppLayoutDocsFooter(props) {
                         {nextPage !== null ? (
                         <Button
                             size="small"
+                            variant="contained"
                             component={Link}
                             noLinkStyle
                             prefetch={false}

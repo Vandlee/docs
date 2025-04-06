@@ -102,7 +102,7 @@ const StyledAppBar = styled(AppBar, {
     justifyContent: 'center',
     boxShadow: 'none',
     backdropFilter: 'blur(8px)',
-    borderBottom: `1px solid ${(theme.vars || theme).palette.divider}`,
+    height: 'var(--uidocs-header-height)',
     backgroundColor: 'hsla(0, 0%, 100%, 0.6)',
     color: (theme.vars || theme).palette.grey[800],
     ...theme.applyDarkStyles({
@@ -209,7 +209,6 @@ export default function AppFrame(props) {
           <Box sx={{ display: { md: 'flex', lg: 'none' } }}>
             <LogoWithCopyMenu />
           </Box>
-          <Divider orientation='vertical' sx={{ height: 24}} />
           <Box sx={{ display: { md: 'flex', lg: 'none' } }}>
             <LogoWithCopyMenu 
               logo={productIdentifier.logo}
